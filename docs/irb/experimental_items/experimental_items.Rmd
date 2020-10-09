@@ -1,0 +1,25 @@
+---
+output: 
+  rmarkdown::word_document: 
+    reference_docx: "../templates/ref.docx"
+bibliography: "../lit/empathy.bib"
+csl: "../lit/apa.csl"
+---
+
+# Sample target stimuli for all conditions [@bustin_2020]
+
+
+| Condition                | Aural stimuli                  | Visual stimuli         |
+| :----------------------- | :----------------------------- | :--------------------- |
+| Broad focus match        | Daniel iba a Bolivia.          | Daniel iba a Bolivia.  |
+| Broad focus mismatch     | Daniel iba a Bolivia.          | ¿Daniel iba a Bolivia? |
+| Narrow focus match       | Daniel iba a Bolivia.          | Daniel iba a Bolivia.  |
+| Narrow focus mismatch    | Daniel iba a Bolivia.          | ¿Daniel iba a Bolivia? |
+| Yes-no question match    | ¿Daniel iba a Bolivia?         | ¿Daniel iba a Bolivia? |
+| Yes-no question mismatch | ¿Daniel iba a Bolivia?         | Daniel iba a Bolivia.  |
+| Wh-question match        | ¿Por qué iba Daniel a Bolivia? | ¿Daniel iba a Bolivia? |
+| Wh-question mismatch     | ¿Por qué iba Daniel a Bolivia? | Daniel iba a Bolivia.  |
+
+
+# References
+

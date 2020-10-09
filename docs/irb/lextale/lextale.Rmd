@@ -1,0 +1,104 @@
+---
+output: 
+  rmarkdown::word_document: 
+    reference_docx: "../../templates/ref.docx"
+bibliography: "../../lit/empathy.bib"
+csl: "../../lit/apa.csl"
+---
+
+# LexTALE [@lemhofer2012introducing; @izura2014lextale]
+
+#### Items
+
+- terzo
+- pellizcar
+- pulmones
+- batillón
+- zapato
+- tergiversar
+- pésimo
+- cadeña
+- hacha
+- antar
+- cenefa
+- asesinato
+- helar
+- yunque
+- regar
+- abracer
+- floroso
+- arsa
+- brecedad
+- ávido
+- capillo
+- lacayo
+- lampera
+- látigo
+- bisagra
+- secuestro
+- acutación
+- merodear
+- decar
+- alardio
+- pandilla
+- fatacidad
+- pauca
+- aviso
+- rompido
+- loro
+- granuja
+- estornudar
+- torpe
+- alfombra
+- rebuscar
+- cadallo
+- canela
+- cuchara
+- jilguero
+- martillo
+- cartinar
+- ladrón
+- ganar
+- flamida
+- candado
+- camisa
+- vegada
+- fomentar
+- nevar
+- musgo
+- tacaño
+- plaudir
+- besar
+- matar
+- seda
+- flaco
+- esposante
+- orgulloso
+- bizcocho
+- hacido
+- cabello
+- alegre
+- engatusar
+- temblo
+- polvoriento
+- pemición
+- hervidor
+- cintro
+- yacer
+- atar
+- tiburón
+- frondoso
+- tropaje
+- hormiga
+- pozo
+- empirador
+- guante
+- escuto
+- laúd
+- barato
+- grodo
+- acantilado
+- prisa
+- clavel
+
+# References
