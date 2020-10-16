@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.4">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant':'', 'session':'001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="(1024, 768)" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="empathy_intonation_perc" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <TextComponent name="text_eq_question_trial">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.06" valType="code"/>
+        <Param name="name" updates="None" val="text_eq_question_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$item" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <SliderComponent name="slider_eq_trial">
+        <Param name="color" updates="constant" val="LightGray" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="False" valType="bool"/>
+        <Param name="font" updates="constant" val="HelveticaBold" valType="str"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="granularity" updates="constant" val="1" valType="code"/>
+        <Param name="labels" updates="constant" val="'strongly agree', 'slightly agree', 'slightly disagree', 'strongly disagree'" valType="list"/>
+        <Param name="name" updates="None" val="slider_eq_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="(0.8, 0.02)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="False" valType="bool"/>
+        <Param name="styles" updates="constant" val="('rating', 'triangleMarker')" valType="fixedList"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="ticks" updates="constant" val="" valType="list"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </SliderComponent>
+      <KeyboardComponent name="key_resp_eq_trial">
+        <Param name="allowedKeys" updates="constant" val="'return'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_eq_trial" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="eq_trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('item_num', 1), ('item', 'I can easily tell if someone else wants to enter a conversation.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 2), ('item', 'I prefer animals to humans.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 3), ('item', 'I try to keep up with the current trends and fashions.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 4), ('item', 'I find it difficult to explain to others things that I understand easily, \n  when they don’t understand it first time.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 5), ('item', 'I dream most nights.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 6), ('item', 'I really enjoy caring for other people.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 7), ('item', 'I try to solve my own problems rather than discussing them with others.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 8), ('item', 'I find it hard to know what to do in a social situation.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 9), ('item', 'I am at my best first thing in the morning.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 10), ('item', 'People often tell me that I went too far in driving my point home in a \n  discussion.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 11), ('item', 'It doesn’t bother me too much if I am late meeting a friend.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 12), ('item', 'Friendships and relationships are just too difficult, so I tend not to \n  bother with them.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 13), ('item', 'I would never break a law, no matter how minor.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 14), ('item', 'I often find it difficult to judge if something is rude or polite.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 15), ('item', 'In a conversation, I tend to focus on my own thoughts rather than on what \n  my listener might be thinking.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 16), ('item', 'I prefer practical jokes to verbal humor.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 17), ('item', 'I live life for today rather than the future.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 18), ('item', 'When I was a child, I enjoyed cutting up worms to see what would happen.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 19), ('item', 'I can pick up quickly if someone says one thing but means another.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 20), ('item', 'I tend to have very strong opinions about morality.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 21), ('item', 'It is hard for me to see why some things upset people so much.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 22), ('item', 'I find it easy to put myself in somebody else’s shoes.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 23), ('item', 'I think that good manners are the most important thing a parent can teach \n  their child.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 24), ('item', 'I like to do things on the spur of the moment.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 25), ('item', 'I am good at predicting how someone will feel.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 26), ('item', 'I am quick to spot when someone in a group is feeling awkward or \n  uncomfortable.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 27), ('item', 'If I say something that someone else is offended by, I think that that’s \n  their problem, not mine.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 28), ('item', 'If anyone asked me if I liked their haircut, I would reply truthfully, even \n  if I didn’t like it.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 29), ('item', 'I can’t always see why someone should have felt offended by a remark.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 30), ('item', 'People often tell me that I am very unpredictable.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 31), ('item', 'I enjoy being the center of attention at any social gathering.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 32), ('item', 'Seeing people cry doesn’t really upset me.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 33), ('item', 'I enjoy having discussions about politics.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 34), ('item', 'I am very blunt, which some people take to be rudeness, even though this is \n  unintentional.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 35), ('item', 'I don’t tend to find social situations confusing.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 36), ('item', 'Other people tell me I am good at understanding how they are feeling and \n  what they are thinking.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 37), ('item', 'When I talk to people, I tend to talk about their experiences rather than \n  my own.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 38), ('item', 'It upsets me to see an animal in pain.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 39), ('item', 'I am able to make decisions without being influenced by people’s feelings.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 40), ('item', 'I can’t relax until I have done everything I had planned to do that day.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 41), ('item', 'I can easily tell if someone else is interested or bored with what I am \n  saying.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 42), ('item', 'I get upset if I see people suffering on news programmes.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 43), ('item', 'Friends usually talk to me about their problems as they say that I am very \n  understanding.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 44), ('item', 'I can sense if I am intruding, even if the other person doesn’t tell me.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 45), ('item', 'I often start new hobbies but quickly become bored with them and move on to \n  something else.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 46), ('item', 'People sometimes tell me that I have gone too far with teasing.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 47), ('item', 'I would be too nervous to go on a big rollercoaster.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 48), ('item', 'Other people, often say that I am insensitive, though I don’t always see \n  why.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 49), ('item', 'If I see a stranger in a group, I think that it is up to them to make an \n  effort to join in.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 50), ('item', 'I usually stay emotionally detached when watching a film.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)]), OrderedDict([('item_num', 51), ('item', 'I like to be very organized in day-to-day life and often make lists of the \n  chores I have to do.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 52), ('item', 'I can tune into how someone else feels rapidly and intuitively.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 53), ('item', 'I don’t like to take risks.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 54), ('item', 'I can easily work out what another person might want to talk about.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 55), ('item', 'I can tell if someone is masking their true emotion.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 56), ('item', 'Before making a decision I always weigh up the pros and cons.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)]), OrderedDict([('item_num', 57), ('item', 'I don’t consciously work out the rules of social situations.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 58), ('item', 'I am good at predicting what someone will do.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 59), ('item', 'I tend to get emotionally involved with a friend’s problems.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)]), OrderedDict([('item_num', 60), ('item', 'I can usually appreciate the other person’s viewpoint, even if I don’t \n  agree with it.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials/eq_trials.csv" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="eq_trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <LoopTerminator name="eq_trials"/>
+  </Flow>
+</PsychoPy2experiment>

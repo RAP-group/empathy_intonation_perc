@@ -1,0 +1,79 @@
+﻿item_num,item,is_test_item,is_distractor,is_agree_score,is_disagree_score,eq_trials.thisRepN,eq_trials.thisTrialN,eq_trials.thisN,eq_trials.thisIndex,text_eq_question_trial.started,text_eq_question_trial.stopped,slider_eq_trial.response,participant,session,date,expName,psychopyVersion,frameRate,
+1,I can easily tell if someone else wants to enter a conversation.,1,0,1,0,0,0,0,0,7.608792168961372,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+2,I prefer animals to humans.,0,1,0,0,0,1,1,1,13.732150213967543,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+3,I try to keep up with the current trends and fashions.,0,1,0,0,0,2,2,2,17.731901980994735,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+4,"I find it difficult to explain to others things that I understand easily, 
+  when they don’t understand it first time.",1,0,0,1,0,3,3,3,20.465432649012655,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+5,I dream most nights.,0,1,0,0,0,4,4,4,26.381614696991164,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+6,I really enjoy caring for other people.,1,0,1,0,0,5,5,5,28.498310577997472,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+7,I try to solve my own problems rather than discussing them with others.,0,1,0,0,0,6,6,6,34.031494425958954,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+8,I find it hard to know what to do in a social situation.,1,0,0,1,0,7,7,7,36.54770441696746,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+9,I am at my best first thing in the morning.,0,1,0,0,0,8,8,8,39.78124201699393,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+10,"People often tell me that I went too far in driving my point home in a 
+  discussion.",1,0,0,1,0,9,9,9,43.080938589992,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+11,It doesn’t bother me too much if I am late meeting a friend.,1,0,0,1,0,10,10,10,49.8643625699915,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+12,"Friendships and relationships are just too difficult, so I tend not to 
+  bother with them.",1,0,0,1,0,11,11,11,54.19729311496485,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+13,"I would never break a law, no matter how minor.",0,1,0,0,0,12,12,12,58.946821323013864,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+14,I often find it difficult to judge if something is rude or polite.,1,0,0,1,0,13,13,13,61.914138394000474,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+15,"In a conversation, I tend to focus on my own thoughts rather than on what 
+  my listener might be thinking.",1,0,0,1,0,14,14,14,66.84710664401064,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+16,I prefer practical jokes to verbal humor.,0,1,0,0,0,15,15,15,74.14687930495711,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+17,I live life for today rather than the future.,0,1,0,0,0,16,16,16,78.91345475899288,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+18,"When I was a child, I enjoyed cutting up worms to see what would happen.",1,0,0,1,0,17,17,17,82.91352427599486,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+19,I can pick up quickly if someone says one thing but means another.,1,0,1,0,0,18,18,18,89.04610093100928,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+20,I tend to have very strong opinions about morality.,0,1,0,0,0,19,19,19,94.39612796501024,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+21,It is hard for me to see why some things upset people so much.,1,0,0,1,0,20,20,20,98.39613362797536,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+22,I find it easy to put myself in somebody else’s shoes.,1,0,1,0,0,21,21,21,105.12934488098836,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+23,"I think that good manners are the most important thing a parent can teach 
+  their child.",0,1,0,0,0,22,22,22,109.91247250098968,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+24,I like to do things on the spur of the moment.,0,1,0,0,0,23,23,23,115.39530061098048,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+25,I am good at predicting how someone will feel.,1,0,1,0,0,24,24,24,119.52895540400641,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+26,"I am quick to spot when someone in a group is feeling awkward or 
+  uncomfortable.",1,0,1,0,0,25,25,25,122.92882547801128,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+27,"If I say something that someone else is offended by, I think that that’s 
+  their problem, not mine.",1,0,0,1,0,26,26,26,128.1117541649728,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+28,"If anyone asked me if I liked their haircut, I would reply truthfully, even 
+  if I didn’t like it.",1,0,0,1,0,27,27,27,134.86156416800804,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+29,I can’t always see why someone should have felt offended by a remark.,1,0,0,1,0,28,28,28,140.4946389149991,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+30,People often tell me that I am very unpredictable.,0,1,0,0,0,29,29,29,147.04438432096504,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+31,I enjoy being the center of attention at any social gathering.,0,1,0,0,0,30,30,30,150.54453853098676,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+32,Seeing people cry doesn’t really upset me.,1,0,0,1,0,31,31,31,153.62770940701012,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+33,I enjoy having discussions about politics.,0,1,0,0,0,32,32,32,157.99407499301014,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+34,"I am very blunt, which some people take to be rudeness, even though this is 
+  unintentional.",1,0,0,1,0,33,33,33,161.1774198510102,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+35,I don’t tend to find social situations confusing.,1,0,1,0,0,34,34,34,171.9939996599569,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+36,"Other people tell me I am good at understanding how they are feeling and 
+  what they are thinking.",1,0,1,0,0,35,35,35,177.9106124700047,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+37,"When I talk to people, I tend to talk about their experiences rather than 
+  my own.",1,0,1,0,0,36,36,36,182.0267249449971,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+38,It upsets me to see an animal in pain.,1,0,1,0,0,37,37,37,185.61023323098198,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+39,I am able to make decisions without being influenced by people’s feelings.,1,0,0,1,0,38,38,38,188.59334799996577,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+40,I can’t relax until I have done everything I had planned to do that day.,0,1,0,0,0,39,39,39,193.84305922698695,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+41,"I can easily tell if someone else is interested or bored with what I am 
+  saying.",1,0,1,0,0,40,40,40,197.69328417099314,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+42,I get upset if I see people suffering on news programmes.,1,0,1,0,0,41,41,41,202.57642150396714,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+43,"Friends usually talk to me about their problems as they say that I am very 
+  understanding.",1,0,1,0,0,42,42,42,205.65989003196592,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+44,"I can sense if I am intruding, even if the other person doesn’t tell me.",1,0,1,0,0,43,43,43,210.75953192898305,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+45,"I often start new hobbies but quickly become bored with them and move on to 
+  something else.",0,1,0,0,0,44,44,44,215.27594876498915,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+46,People sometimes tell me that I have gone too far with teasing.,1,0,0,1,0,45,45,45,219.69274381699506,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+47,I would be too nervous to go on a big rollercoaster.,0,1,0,0,0,46,46,46,223.0260963169858,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+48,"Other people, often say that I am insensitive, though I don’t always see 
+  why.",1,0,0,1,0,47,47,47,227.64242686197395,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+49,"If I see a stranger in a group, I think that it is up to them to make an 
+  effort to join in.",1,0,0,1,0,48,48,48,232.75913810700877,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+50,I usually stay emotionally detached when watching a film.,1,0,0,1,0,49,49,49,237.82570346898865,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+51,"I like to be very organized in day-to-day life and often make lists of the 
+  chores I have to do.",0,1,0,0,0,50,50,50,243.10926765197655,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+52,I can tune into how someone else feels rapidly and intuitively.,1,0,1,0,0,51,51,51,247.24169042595895,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+53,I don’t like to take risks.,0,1,0,0,0,52,52,52,252.52462108398322,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+54,I can easily work out what another person might want to talk about.,1,0,1,0,0,53,53,53,256.51215322798816,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+55,I can tell if someone is masking their true emotion.,1,0,1,0,0,54,54,54,260.27456246700604,None,slightly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+56,Before making a decision I always weigh up the pros and cons.,0,1,0,0,0,55,55,55,266.0589869709802,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+57,I don’t consciously work out the rules of social situations.,1,0,1,0,0,56,56,56,269.7746472309809,None,strongly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+58,I am good at predicting what someone will do.,1,0,1,0,0,57,57,57,275.07448197097983,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+59,I tend to get emotionally involved with a friend’s problems.,1,0,1,0,0,58,58,58,278.0572218929883,None,strongly disagree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
+60,"I can usually appreciate the other person’s viewpoint, even if I don’t 
+  agree with it.",1,0,1,0,0,59,59,59,282.0903177569853,None,slightly agree,,001,2020_Oct_15_2324,empathy_intonation_perc,2020.2.4,59.870511114395775,
