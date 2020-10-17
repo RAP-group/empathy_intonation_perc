@@ -1,0 +1,2273 @@
+0.3867 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'pyo', 'pygame'] (in that order).
+6.9078 	WARNING 	User requested fullscreen with size [1024  768], but screen is actually [1680, 1050]. Using actual size
+7.6741 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x11316fa58>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x112f40fd0>, multiSample=False, name='window1', numSamples=2, pos=[420.0, 262.5], screen=0, size=array([3360, 2100]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.6744 	EXP 	window1: mouseVisible = True
+7.6744 	EXP 	window1: recordFrameIntervals = False
+7.8611 	EXP 	window1: recordFrameIntervals = True
+8.0457 	EXP 	window1: recordFrameIntervals = False
+8.5244 	EXP 	Created text_lextale_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_lextale_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=0.8)
+8.8977 	EXP 	Created text_lextale_instructions_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_lextale_instructions_continue', opacity=1.0, ori=0, pos=array([ 0.  , -0.35]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+8.9044 	EXP 	Created text_lextale_practice_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='red', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_practice_label', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255.,   0.,   0.]), text='PRÁCTICA', units='height', win=Window(...), wrapWidth=1)
+8.9118 	EXP 	Created text_lextale_practice_word = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='blue', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_practice_word', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([  0.,   0., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.2765 	EXP 	Created text_lextale_practice_real_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_practice_real_label', opacity=1.0, ori=0, pos=array([-0.3, -0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.2783 	EXP 	Created text_lextale_practice_false_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_practice_false_label', opacity=1.0, ori=0, pos=array([ 0.3, -0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.2802 	EXP 	Created text_lextale_practice_feedback = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_practice_feedback', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+9.6594 	EXP 	Created text_lextale_check = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_check', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.0421 	EXP 	Created text_lextale_trial_word = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='blue', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_trial_word', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([  0.,   0., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.4267 	EXP 	Created text_lextale_trial_real_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_trial_real_label', opacity=1.0, ori=0, pos=array([-0.3, -0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.4287 	EXP 	Created text_lextale_trial_false_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_lextale_trial_false_label', opacity=1.0, ori=0, pos=array([ 0.3, -0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.8201 	EXP 	Created text_eq_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_eq_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='instructions here', units='height', win=Window(...), wrapWidth=1)
+10.8247 	EXP 	Created text_eq_question_trial = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text_eq_question_trial', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.8340 	EXP 	window1: mouseVisible = True
+10.8528 	EXP 	Created slider_eq_trial = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, color='LightGray', depth=0, flip=False, font='HelveticaBold', granularity=1.0, labelHeight=0.02, labelWrapWidth=None, labels=list(...), name='slider_eq_trial', pos=(0, -0.2), readOnly=False, self=UNKNOWN, size=(0.8, 0.02), style=method-wrapper(...), ticks=array([0, 1, 2, 3]), units='height', win=Window(...))
+11.2345 	EXP 	Imported instructions/lextale_instructions_text.csv as conditions, 4 conditions, 2 params
+11.2347 	EXP 	Created sequence: sequential, trialTypes=4, nReps=1, seed=None
+11.2349 	EXP 	New trial (rep=0, index=0): OrderedDict([('instructions_text', 'Este es un test de vocabulario en español. \n  \n  A continuación vas a ver 90 secuencias de letras que parecen palabras españolas.\n  \n  Algunas son palabras de verdad y otras son palabras inventadas.'), ('continue_text', '(presiona la barra espaciadora para continuar)')])
+11.2811 	EXP 	slider_eq_trial: autoLog = True
+11.2811 	EXP 	slider_eq_trial: markerPos = None
+11.2811 	EXP 	slider_eq_trial: rating = None
+11.2811 	EXP 	slider_eq_trial: markerPos = None
+11.2811 	EXP 	slider_eq_trial: contrast = 1.0
+11.2811 	EXP 	slider_eq_trial: autoLog = True
+11.2811 	EXP 	slider_eq_trial: style = ['rating', 'triangleMarker']
+11.2811 	EXP 	text_lextale_instructions: text = 'Este es un test de vocabulario en español. \n  \n  A continuación vas a ver 90 secuencias de letras que parecen palabras españolas.\n  \n  Algunas son palabras de verdad y otras son palabras inventadas.'
+11.2811 	EXP 	text_lextale_instructions_continue: text = '(presiona la barra espaciadora para continuar)'
+11.2811 	EXP 	text_lextale_instructions: autoDraw = True
+12.7789 	EXP 	New trial (rep=0, index=1): OrderedDict([('instructions_text', 'Por favor, señala las palabras que creas que son reales aunque no conozcas su significado.'), ('continue_text', '(presiona la barra espaciadora para continuar)')])
+12.7945 	DATA 	Keypress: space
+12.8109 	EXP 	text_lextale_instructions: autoDraw = False
+12.8109 	EXP 	text_lextale_instructions_continue: autoDraw = False
+12.8109 	EXP 	text_lextale_instructions: text = 'Por favor, señala las palabras que creas que son reales aunque no conozcas su significado.'
+12.8109 	EXP 	text_lextale_instructions_continue: text = '(presiona la barra espaciadora para continuar)'
+12.8109 	EXP 	text_lextale_instructions: autoDraw = True
+15.2616 	EXP 	New trial (rep=0, index=2): OrderedDict([('instructions_text', 'Pero cuidado: los errores se penalizan, así que no tiene sentido tratar de incrementar tu puntuación marcando como reales palabras que nunca has visto.'), ('continue_text', '(presiona la barra espaciadora para continuar)')])
+15.2797 	DATA 	Keypress: space
+15.2947 	EXP 	text_lextale_instructions: autoDraw = False
+15.2947 	EXP 	text_lextale_instructions_continue: autoDraw = False
+15.2947 	EXP 	text_lextale_instructions: text = 'Pero cuidado: los errores se penalizan, así que no tiene sentido tratar de incrementar tu puntuación marcando como reales palabras que nunca has visto.'
+15.2947 	EXP 	text_lextale_instructions_continue: text = '(presiona la barra espaciadora para continuar)'
+15.2947 	EXP 	text_lextale_instructions: autoDraw = True
+17.2948 	EXP 	New trial (rep=0, index=3): OrderedDict([('instructions_text', 'Presiona la tecla 1 si piensas que es una palabra real y la tecla \n  0 si piensas que es una palabra falsa. \n  \n  Vamos a practicar un poco...'), ('continue_text', '(presiona la barra espaciadora para continuar)')])
+17.3088 	DATA 	Keypress: space
+17.3275 	EXP 	text_lextale_instructions: autoDraw = False
+17.3275 	EXP 	text_lextale_instructions_continue: autoDraw = False
+17.3275 	EXP 	text_lextale_instructions: text = 'Presiona la tecla 1 si piensas que es una palabra real y la tecla \n  0 si piensas que es una palabra falsa. \n  \n  Vamos a practicar un poco...'
+17.3275 	EXP 	text_lextale_instructions_continue: text = '(presiona la barra espaciadora para continuar)'
+17.3275 	EXP 	text_lextale_instructions: autoDraw = True
+19.8120 	EXP 	text_lextale_instructions_continue: autoDraw = True
+21.5352 	EXP 	Imported trials/lextale_practice_trials.csv as conditions, 12 conditions, 5 params
+21.5356 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+21.5360 	EXP 	New trial (rep=0, index=0): OrderedDict([('stim', 0), ('word', 'depiste'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+21.5517 	DATA 	Keypress: space
+21.5779 	EXP 	text_lextale_instructions: autoDraw = False
+21.5779 	EXP 	text_lextale_instructions_continue: autoDraw = False
+21.5779 	EXP 	text_lextale_practice_word: text = 'depiste'
+21.5779 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+21.5779 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+21.5779 	EXP 	text_lextale_practice_label: autoDraw = True
+21.7957 	EXP 	text_lextale_practice_real_label: autoDraw = True
+21.7957 	EXP 	text_lextale_practice_false_label: autoDraw = True
+22.0480 	EXP 	text_lextale_practice_word: autoDraw = True
+23.1400 	DATA 	Keypress: 0
+23.1609 	EXP 	text_lextale_practice_label: autoDraw = False
+23.1609 	EXP 	text_lextale_practice_word: autoDraw = False
+23.1609 	EXP 	text_lextale_practice_real_label: autoDraw = False
+23.1609 	EXP 	text_lextale_practice_false_label: autoDraw = False
+23.1609 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+23.1609 	EXP 	text_lextale_practice_feedback: autoDraw = True
+24.1452 	EXP 	New trial (rep=0, index=1): OrderedDict([('stim', 0), ('word', 'sí'), ('correct_response', 1), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+24.1641 	EXP 	text_lextale_practice_feedback: autoDraw = False
+24.1641 	EXP 	text_lextale_practice_word: text = 'sí'
+24.1641 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+24.1641 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+24.1641 	EXP 	text_lextale_practice_label: autoDraw = True
+24.3950 	EXP 	text_lextale_practice_real_label: autoDraw = True
+24.3950 	EXP 	text_lextale_practice_false_label: autoDraw = True
+24.6489 	EXP 	text_lextale_practice_word: autoDraw = True
+24.7197 	DATA 	Keypress: 1
+24.7441 	EXP 	text_lextale_practice_label: autoDraw = False
+24.7441 	EXP 	text_lextale_practice_word: autoDraw = False
+24.7441 	EXP 	text_lextale_practice_real_label: autoDraw = False
+24.7441 	EXP 	text_lextale_practice_false_label: autoDraw = False
+24.7441 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+24.7441 	EXP 	text_lextale_practice_feedback: autoDraw = True
+25.7285 	EXP 	New trial (rep=0, index=2): OrderedDict([('stim', 0), ('word', 'coné'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+25.7478 	EXP 	text_lextale_practice_feedback: autoDraw = False
+25.7478 	EXP 	text_lextale_practice_word: text = 'coné'
+25.7478 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+25.7478 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+25.7478 	EXP 	text_lextale_practice_label: autoDraw = True
+25.9782 	EXP 	text_lextale_practice_real_label: autoDraw = True
+25.9782 	EXP 	text_lextale_practice_false_label: autoDraw = True
+26.0678 	DATA 	Keypress: 0
+26.2290 	EXP 	text_lextale_practice_word: autoDraw = True
+26.6322 	DATA 	Keypress: 0
+26.6465 	EXP 	text_lextale_practice_label: autoDraw = False
+26.6465 	EXP 	text_lextale_practice_word: autoDraw = False
+26.6465 	EXP 	text_lextale_practice_real_label: autoDraw = False
+26.6465 	EXP 	text_lextale_practice_false_label: autoDraw = False
+26.6465 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+26.6465 	EXP 	text_lextale_practice_feedback: autoDraw = True
+27.6451 	EXP 	New trial (rep=0, index=3): OrderedDict([('stim', 0), ('word', 'calpar'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+27.6649 	EXP 	text_lextale_practice_feedback: autoDraw = False
+27.6649 	EXP 	text_lextale_practice_word: text = 'calpar'
+27.6649 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+27.6649 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+27.6649 	EXP 	text_lextale_practice_label: autoDraw = True
+27.8960 	EXP 	text_lextale_practice_real_label: autoDraw = True
+27.8960 	EXP 	text_lextale_practice_false_label: autoDraw = True
+28.0999 	DATA 	Keypress: 1
+28.1492 	EXP 	text_lextale_practice_word: autoDraw = True
+28.8947 	DATA 	Keypress: 1
+28.9103 	EXP 	text_lextale_practice_label: autoDraw = False
+28.9103 	EXP 	text_lextale_practice_word: autoDraw = False
+28.9103 	EXP 	text_lextale_practice_real_label: autoDraw = False
+28.9103 	EXP 	text_lextale_practice_false_label: autoDraw = False
+28.9103 	EXP 	text_lextale_practice_feedback: text = 'Ooo! Te has equivocado!'
+28.9103 	EXP 	text_lextale_practice_feedback: autoDraw = True
+29.8949 	EXP 	New trial (rep=0, index=4): OrderedDict([('stim', 0), ('word', 'joten'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+29.9141 	EXP 	text_lextale_practice_feedback: autoDraw = False
+29.9141 	EXP 	text_lextale_practice_word: text = 'joten'
+29.9141 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+29.9141 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+29.9141 	EXP 	text_lextale_practice_label: autoDraw = True
+30.1449 	EXP 	text_lextale_practice_real_label: autoDraw = True
+30.1449 	EXP 	text_lextale_practice_false_label: autoDraw = True
+30.4107 	EXP 	text_lextale_practice_word: autoDraw = True
+30.8698 	DATA 	Keypress: 0
+30.8937 	EXP 	text_lextale_practice_label: autoDraw = False
+30.8937 	EXP 	text_lextale_practice_word: autoDraw = False
+30.8937 	EXP 	text_lextale_practice_real_label: autoDraw = False
+30.8937 	EXP 	text_lextale_practice_false_label: autoDraw = False
+30.8937 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+30.8937 	EXP 	text_lextale_practice_feedback: autoDraw = True
+31.8780 	EXP 	New trial (rep=0, index=5): OrderedDict([('stim', 0), ('word', 'sacapuntas'), ('correct_response', 1), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+31.8964 	EXP 	text_lextale_practice_feedback: autoDraw = False
+31.8964 	EXP 	text_lextale_practice_word: text = 'sacapuntas'
+31.8964 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+31.8964 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+31.8964 	EXP 	text_lextale_practice_label: autoDraw = True
+32.1283 	EXP 	text_lextale_practice_real_label: autoDraw = True
+32.1283 	EXP 	text_lextale_practice_false_label: autoDraw = True
+32.3941 	EXP 	text_lextale_practice_word: autoDraw = True
+33.0834 	DATA 	Keypress: 1
+33.0977 	EXP 	text_lextale_practice_label: autoDraw = False
+33.0977 	EXP 	text_lextale_practice_word: autoDraw = False
+33.0977 	EXP 	text_lextale_practice_real_label: autoDraw = False
+33.0977 	EXP 	text_lextale_practice_false_label: autoDraw = False
+33.0977 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+33.0977 	EXP 	text_lextale_practice_feedback: autoDraw = True
+34.0945 	EXP 	New trial (rep=0, index=6): OrderedDict([('stim', 0), ('word', 'priba'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+34.1137 	EXP 	text_lextale_practice_feedback: autoDraw = False
+34.1137 	EXP 	text_lextale_practice_word: text = 'priba'
+34.1137 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+34.1137 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+34.1137 	EXP 	text_lextale_practice_label: autoDraw = True
+34.3440 	EXP 	text_lextale_practice_real_label: autoDraw = True
+34.3440 	EXP 	text_lextale_practice_false_label: autoDraw = True
+34.6108 	EXP 	text_lextale_practice_word: autoDraw = True
+34.9188 	DATA 	Keypress: 0
+34.9440 	EXP 	text_lextale_practice_label: autoDraw = False
+34.9440 	EXP 	text_lextale_practice_word: autoDraw = False
+34.9440 	EXP 	text_lextale_practice_real_label: autoDraw = False
+34.9440 	EXP 	text_lextale_practice_false_label: autoDraw = False
+34.9440 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+34.9440 	EXP 	text_lextale_practice_feedback: autoDraw = True
+35.9272 	EXP 	New trial (rep=0, index=7): OrderedDict([('stim', 0), ('word', 'pelasula'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+35.9451 	EXP 	text_lextale_practice_feedback: autoDraw = False
+35.9451 	EXP 	text_lextale_practice_word: text = 'pelasula'
+35.9451 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+35.9451 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+35.9451 	EXP 	text_lextale_practice_label: autoDraw = True
+36.1777 	EXP 	text_lextale_practice_real_label: autoDraw = True
+36.1777 	EXP 	text_lextale_practice_false_label: autoDraw = True
+36.4318 	EXP 	text_lextale_practice_word: autoDraw = True
+36.8202 	DATA 	Keypress: 1
+36.8438 	EXP 	text_lextale_practice_label: autoDraw = False
+36.8438 	EXP 	text_lextale_practice_word: autoDraw = False
+36.8438 	EXP 	text_lextale_practice_real_label: autoDraw = False
+36.8438 	EXP 	text_lextale_practice_false_label: autoDraw = False
+36.8438 	EXP 	text_lextale_practice_feedback: text = 'Ooo! Te has equivocado!'
+36.8438 	EXP 	text_lextale_practice_feedback: autoDraw = True
+37.8273 	EXP 	New trial (rep=0, index=8): OrderedDict([('stim', 0), ('word', 'bien'), ('correct_response', 1), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+37.8445 	EXP 	text_lextale_practice_feedback: autoDraw = False
+37.8445 	EXP 	text_lextale_practice_word: text = 'bien'
+37.8445 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+37.8445 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+37.8445 	EXP 	text_lextale_practice_label: autoDraw = True
+38.0777 	EXP 	text_lextale_practice_real_label: autoDraw = True
+38.0777 	EXP 	text_lextale_practice_false_label: autoDraw = True
+38.3316 	EXP 	text_lextale_practice_word: autoDraw = True
+38.5671 	DATA 	Keypress: 0
+38.5815 	EXP 	text_lextale_practice_label: autoDraw = False
+38.5815 	EXP 	text_lextale_practice_word: autoDraw = False
+38.5815 	EXP 	text_lextale_practice_real_label: autoDraw = False
+38.5815 	EXP 	text_lextale_practice_false_label: autoDraw = False
+38.5815 	EXP 	text_lextale_practice_feedback: text = 'Ooo! Te has equivocado!'
+38.5815 	EXP 	text_lextale_practice_feedback: autoDraw = True
+39.5780 	EXP 	New trial (rep=0, index=9): OrderedDict([('stim', 0), ('word', 'casa'), ('correct_response', 1), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+39.5958 	EXP 	text_lextale_practice_feedback: autoDraw = False
+39.5958 	EXP 	text_lextale_practice_word: text = 'casa'
+39.5958 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+39.5958 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+39.5958 	EXP 	text_lextale_practice_label: autoDraw = True
+39.8279 	EXP 	text_lextale_practice_real_label: autoDraw = True
+39.8279 	EXP 	text_lextale_practice_false_label: autoDraw = True
+40.0940 	EXP 	text_lextale_practice_word: autoDraw = True
+40.3369 	DATA 	Keypress: 1
+40.3798 	EXP 	text_lextale_practice_label: autoDraw = False
+40.3798 	EXP 	text_lextale_practice_word: autoDraw = False
+40.3798 	EXP 	text_lextale_practice_real_label: autoDraw = False
+40.3798 	EXP 	text_lextale_practice_false_label: autoDraw = False
+40.3798 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+40.3798 	EXP 	text_lextale_practice_feedback: autoDraw = True
+41.3779 	EXP 	New trial (rep=0, index=10): OrderedDict([('stim', 0), ('word', 'lejo'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+41.3958 	EXP 	text_lextale_practice_feedback: autoDraw = False
+41.3958 	EXP 	text_lextale_practice_word: text = 'lejo'
+41.3958 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+41.3958 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+41.3958 	EXP 	text_lextale_practice_label: autoDraw = True
+41.6271 	EXP 	text_lextale_practice_real_label: autoDraw = True
+41.6271 	EXP 	text_lextale_practice_false_label: autoDraw = True
+41.8825 	EXP 	text_lextale_practice_word: autoDraw = True
+42.0689 	DATA 	Keypress: 0
+42.0938 	EXP 	text_lextale_practice_label: autoDraw = False
+42.0938 	EXP 	text_lextale_practice_word: autoDraw = False
+42.0938 	EXP 	text_lextale_practice_real_label: autoDraw = False
+42.0938 	EXP 	text_lextale_practice_false_label: autoDraw = False
+42.0938 	EXP 	text_lextale_practice_feedback: text = 'Correcto!'
+42.0938 	EXP 	text_lextale_practice_feedback: autoDraw = True
+43.0775 	EXP 	New trial (rep=0, index=11): OrderedDict([('stim', 0), ('word', 'pretantas'), ('correct_response', 0), ('prac_button_real', 'REAL'), ('prac_button_false', 'FALSA')])
+43.0955 	EXP 	text_lextale_practice_feedback: autoDraw = False
+43.0955 	EXP 	text_lextale_practice_word: text = 'pretantas'
+43.0955 	EXP 	text_lextale_practice_real_label: text = 'REAL'
+43.0955 	EXP 	text_lextale_practice_false_label: text = 'FALSA'
+43.0955 	EXP 	text_lextale_practice_label: autoDraw = True
+43.3274 	EXP 	text_lextale_practice_real_label: autoDraw = True
+43.3274 	EXP 	text_lextale_practice_false_label: autoDraw = True
+43.5815 	EXP 	text_lextale_practice_word: autoDraw = True
+43.7031 	DATA 	Keypress: 1
+43.7270 	EXP 	text_lextale_practice_label: autoDraw = False
+43.7270 	EXP 	text_lextale_practice_word: autoDraw = False
+43.7270 	EXP 	text_lextale_practice_real_label: autoDraw = False
+43.7270 	EXP 	text_lextale_practice_false_label: autoDraw = False
+43.7270 	EXP 	text_lextale_practice_feedback: text = 'Ooo! Te has equivocado!'
+43.7270 	EXP 	text_lextale_practice_feedback: autoDraw = True
+44.7289 	EXP 	text_lextale_practice_feedback: autoDraw = False
+44.7289 	EXP 	text_lextale_check: autoDraw = True
+47.4939 	EXP 	Imported trials/lextale_trials.csv as conditions, 90 conditions, 5 params
+47.4947 	EXP 	Created sequence: random, trialTypes=90, nReps=1, seed=None
+47.4952 	EXP 	New trial (rep=0, index=0): OrderedDict([('stim', 41), ('word', 'rebuscar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+47.5041 	DATA 	Keypress: space
+47.5266 	EXP 	text_lextale_check: autoDraw = False
+47.5266 	EXP 	text_lextale_trial_word: text = 'rebuscar'
+47.5266 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+47.5266 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+47.7442 	EXP 	text_lextale_trial_real_label: autoDraw = True
+47.7442 	EXP 	text_lextale_trial_false_label: autoDraw = True
+47.9966 	EXP 	text_lextale_trial_word: autoDraw = True
+48.9959 	EXP 	New trial (rep=0, index=1): OrderedDict([('stim', 85), ('word', 'laúd'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+49.0018 	DATA 	Keypress: 0
+49.0266 	EXP 	text_lextale_trial_word: autoDraw = False
+49.0266 	EXP 	text_lextale_trial_real_label: autoDraw = False
+49.0266 	EXP 	text_lextale_trial_false_label: autoDraw = False
+49.0266 	EXP 	text_lextale_trial_word: text = 'laúd'
+49.0266 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+49.0266 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+49.2431 	EXP 	text_lextale_trial_real_label: autoDraw = True
+49.2431 	EXP 	text_lextale_trial_false_label: autoDraw = True
+49.4959 	EXP 	text_lextale_trial_word: autoDraw = True
+49.7479 	EXP 	New trial (rep=0, index=2): OrderedDict([('stim', 76), ('word', 'atar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+49.7519 	DATA 	Keypress: 1
+49.7764 	EXP 	text_lextale_trial_word: autoDraw = False
+49.7764 	EXP 	text_lextale_trial_real_label: autoDraw = False
+49.7764 	EXP 	text_lextale_trial_false_label: autoDraw = False
+49.7764 	EXP 	text_lextale_trial_word: text = 'atar'
+49.7764 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+49.7764 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+49.9936 	EXP 	text_lextale_trial_real_label: autoDraw = True
+49.9936 	EXP 	text_lextale_trial_false_label: autoDraw = True
+50.2459 	EXP 	text_lextale_trial_word: autoDraw = True
+50.4449 	EXP 	New trial (rep=0, index=3): OrderedDict([('stim', 32), ('word', 'fatacidad'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+50.4523 	DATA 	Keypress: 0
+50.4764 	EXP 	text_lextale_trial_word: autoDraw = False
+50.4764 	EXP 	text_lextale_trial_real_label: autoDraw = False
+50.4764 	EXP 	text_lextale_trial_false_label: autoDraw = False
+50.4764 	EXP 	text_lextale_trial_word: text = 'fatacidad'
+50.4764 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+50.4764 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+50.6934 	EXP 	text_lextale_trial_real_label: autoDraw = True
+50.6934 	EXP 	text_lextale_trial_false_label: autoDraw = True
+50.9463 	EXP 	text_lextale_trial_word: autoDraw = True
+51.0793 	EXP 	New trial (rep=0, index=4): OrderedDict([('stim', 24), ('word', 'látigo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+51.0876 	DATA 	Keypress: 1
+51.1098 	EXP 	text_lextale_trial_word: autoDraw = False
+51.1098 	EXP 	text_lextale_trial_real_label: autoDraw = False
+51.1098 	EXP 	text_lextale_trial_false_label: autoDraw = False
+51.1098 	EXP 	text_lextale_trial_word: text = 'látigo'
+51.1098 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+51.1098 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+51.3267 	EXP 	text_lextale_trial_real_label: autoDraw = True
+51.3267 	EXP 	text_lextale_trial_false_label: autoDraw = True
+51.5797 	EXP 	text_lextale_trial_word: autoDraw = True
+51.7112 	EXP 	New trial (rep=0, index=5): OrderedDict([('stim', 27), ('word', 'acutación'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+51.7174 	DATA 	Keypress: 0
+51.7433 	EXP 	text_lextale_trial_word: autoDraw = False
+51.7433 	EXP 	text_lextale_trial_real_label: autoDraw = False
+51.7433 	EXP 	text_lextale_trial_false_label: autoDraw = False
+51.7433 	EXP 	text_lextale_trial_word: text = 'acutación'
+51.7433 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+51.7433 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+51.9601 	EXP 	text_lextale_trial_real_label: autoDraw = True
+51.9601 	EXP 	text_lextale_trial_false_label: autoDraw = True
+52.2128 	EXP 	text_lextale_trial_word: autoDraw = True
+52.3157 	EXP 	New trial (rep=0, index=6): OrderedDict([('stim', 20), ('word', 'ávido'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+52.3201 	DATA 	Keypress: 1
+52.3431 	EXP 	text_lextale_trial_word: autoDraw = False
+52.3431 	EXP 	text_lextale_trial_real_label: autoDraw = False
+52.3431 	EXP 	text_lextale_trial_false_label: autoDraw = False
+52.3431 	EXP 	text_lextale_trial_word: text = 'ávido'
+52.3431 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+52.3431 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+52.5601 	EXP 	text_lextale_trial_real_label: autoDraw = True
+52.5601 	EXP 	text_lextale_trial_false_label: autoDraw = True
+52.8126 	EXP 	text_lextale_trial_word: autoDraw = True
+52.8988 	EXP 	New trial (rep=0, index=7): OrderedDict([('stim', 56), ('word', 'musgo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+52.9043 	DATA 	Keypress: 0
+52.9264 	EXP 	text_lextale_trial_word: autoDraw = False
+52.9264 	EXP 	text_lextale_trial_real_label: autoDraw = False
+52.9264 	EXP 	text_lextale_trial_false_label: autoDraw = False
+52.9264 	EXP 	text_lextale_trial_word: text = 'musgo'
+52.9264 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+52.9264 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+53.1434 	EXP 	text_lextale_trial_real_label: autoDraw = True
+53.1434 	EXP 	text_lextale_trial_false_label: autoDraw = True
+53.3959 	EXP 	text_lextale_trial_word: autoDraw = True
+53.5117 	EXP 	New trial (rep=0, index=8): OrderedDict([('stim', 13), ('word', 'helar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+53.5163 	DATA 	Keypress: 1
+53.5305 	EXP 	text_lextale_trial_word: autoDraw = False
+53.5305 	EXP 	text_lextale_trial_real_label: autoDraw = False
+53.5305 	EXP 	text_lextale_trial_false_label: autoDraw = False
+53.5305 	EXP 	text_lextale_trial_word: text = 'helar'
+53.5305 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+53.5305 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+53.7601 	EXP 	text_lextale_trial_real_label: autoDraw = True
+53.7601 	EXP 	text_lextale_trial_false_label: autoDraw = True
+54.0114 	EXP 	text_lextale_trial_word: autoDraw = True
+54.0951 	EXP 	New trial (rep=0, index=9): OrderedDict([('stim', 14), ('word', 'yunque'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+54.1015 	DATA 	Keypress: 0
+54.1268 	EXP 	text_lextale_trial_word: autoDraw = False
+54.1268 	EXP 	text_lextale_trial_real_label: autoDraw = False
+54.1268 	EXP 	text_lextale_trial_false_label: autoDraw = False
+54.1268 	EXP 	text_lextale_trial_word: text = 'yunque'
+54.1268 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+54.1268 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+54.3432 	EXP 	text_lextale_trial_real_label: autoDraw = True
+54.3432 	EXP 	text_lextale_trial_false_label: autoDraw = True
+54.5963 	EXP 	text_lextale_trial_word: autoDraw = True
+54.6164 	EXP 	New trial (rep=0, index=10): OrderedDict([('stim', 69), ('word', 'engatusar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+54.6218 	DATA 	Keypress: 1
+54.6431 	EXP 	text_lextale_trial_word: autoDraw = False
+54.6431 	EXP 	text_lextale_trial_real_label: autoDraw = False
+54.6431 	EXP 	text_lextale_trial_false_label: autoDraw = False
+54.6431 	EXP 	text_lextale_trial_word: text = 'engatusar'
+54.6431 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+54.6431 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+54.8601 	EXP 	text_lextale_trial_real_label: autoDraw = True
+54.8601 	EXP 	text_lextale_trial_false_label: autoDraw = True
+55.1128 	EXP 	text_lextale_trial_word: autoDraw = True
+55.1148 	EXP 	New trial (rep=0, index=11): OrderedDict([('stim', 70), ('word', 'temblo'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+55.1197 	DATA 	Keypress: 0
+55.1435 	EXP 	text_lextale_trial_word: autoDraw = False
+55.1435 	EXP 	text_lextale_trial_real_label: autoDraw = False
+55.1435 	EXP 	text_lextale_trial_false_label: autoDraw = False
+55.1435 	EXP 	text_lextale_trial_word: text = 'temblo'
+55.1435 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+55.1435 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+55.3601 	EXP 	text_lextale_trial_real_label: autoDraw = True
+55.3601 	EXP 	text_lextale_trial_false_label: autoDraw = True
+55.6127 	EXP 	text_lextale_trial_word: autoDraw = True
+55.6982 	EXP 	New trial (rep=0, index=12): OrderedDict([('stim', 18), ('word', 'arsa'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+55.7026 	DATA 	Keypress: 1
+55.7267 	EXP 	text_lextale_trial_word: autoDraw = False
+55.7267 	EXP 	text_lextale_trial_real_label: autoDraw = False
+55.7267 	EXP 	text_lextale_trial_false_label: autoDraw = False
+55.7267 	EXP 	text_lextale_trial_word: text = 'arsa'
+55.7267 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+55.7267 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+55.9435 	EXP 	text_lextale_trial_real_label: autoDraw = True
+55.9435 	EXP 	text_lextale_trial_false_label: autoDraw = True
+56.1628 	DATA 	Keypress: 0
+56.1950 	EXP 	text_lextale_trial_word: autoDraw = True
+56.1963 	EXP 	New trial (rep=0, index=13): OrderedDict([('stim', 5), ('word', 'zapato'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+56.2144 	EXP 	text_lextale_trial_word: autoDraw = False
+56.2144 	EXP 	text_lextale_trial_real_label: autoDraw = False
+56.2144 	EXP 	text_lextale_trial_false_label: autoDraw = False
+56.2144 	EXP 	text_lextale_trial_word: text = 'zapato'
+56.2144 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+56.2144 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+56.4432 	EXP 	text_lextale_trial_real_label: autoDraw = True
+56.4432 	EXP 	text_lextale_trial_false_label: autoDraw = True
+56.6125 	DATA 	Keypress: 1
+56.6947 	EXP 	text_lextale_trial_word: autoDraw = True
+56.6961 	EXP 	New trial (rep=0, index=14): OrderedDict([('stim', 88), ('word', 'acantilado'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+56.7134 	EXP 	text_lextale_trial_word: autoDraw = False
+56.7134 	EXP 	text_lextale_trial_real_label: autoDraw = False
+56.7134 	EXP 	text_lextale_trial_false_label: autoDraw = False
+56.7134 	EXP 	text_lextale_trial_word: text = 'acantilado'
+56.7134 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+56.7134 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+56.9443 	EXP 	text_lextale_trial_real_label: autoDraw = True
+56.9443 	EXP 	text_lextale_trial_false_label: autoDraw = True
+57.0975 	DATA 	Keypress: 0
+57.1950 	EXP 	text_lextale_trial_word: autoDraw = True
+57.1963 	EXP 	New trial (rep=0, index=15): OrderedDict([('stim', 29), ('word', 'decar'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+57.2128 	EXP 	text_lextale_trial_word: autoDraw = False
+57.2128 	EXP 	text_lextale_trial_real_label: autoDraw = False
+57.2128 	EXP 	text_lextale_trial_false_label: autoDraw = False
+57.2128 	EXP 	text_lextale_trial_word: text = 'decar'
+57.2128 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+57.2128 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+57.4434 	EXP 	text_lextale_trial_real_label: autoDraw = True
+57.4434 	EXP 	text_lextale_trial_false_label: autoDraw = True
+57.5305 	DATA 	Keypress: 1
+57.6952 	EXP 	text_lextale_trial_word: autoDraw = True
+57.6965 	EXP 	New trial (rep=0, index=16): OrderedDict([('stim', 33), ('word', 'pauca'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+57.7132 	EXP 	text_lextale_trial_word: autoDraw = False
+57.7132 	EXP 	text_lextale_trial_real_label: autoDraw = False
+57.7132 	EXP 	text_lextale_trial_false_label: autoDraw = False
+57.7132 	EXP 	text_lextale_trial_word: text = 'pauca'
+57.7132 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+57.7132 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+57.9435 	EXP 	text_lextale_trial_real_label: autoDraw = True
+57.9435 	EXP 	text_lextale_trial_false_label: autoDraw = True
+57.9957 	DATA 	Keypress: 0
+58.1956 	EXP 	text_lextale_trial_word: autoDraw = True
+58.1972 	EXP 	New trial (rep=0, index=17): OrderedDict([('stim', 55), ('word', 'nevar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+58.2141 	EXP 	text_lextale_trial_word: autoDraw = False
+58.2141 	EXP 	text_lextale_trial_real_label: autoDraw = False
+58.2141 	EXP 	text_lextale_trial_false_label: autoDraw = False
+58.2141 	EXP 	text_lextale_trial_word: text = 'nevar'
+58.2141 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+58.2141 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+58.4434 	EXP 	text_lextale_trial_real_label: autoDraw = True
+58.4434 	EXP 	text_lextale_trial_false_label: autoDraw = True
+58.4628 	DATA 	Keypress: 1
+58.6959 	EXP 	text_lextale_trial_word: autoDraw = True
+58.6974 	EXP 	New trial (rep=0, index=18): OrderedDict([('stim', 74), ('word', 'cintro'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+58.7152 	EXP 	text_lextale_trial_word: autoDraw = False
+58.7152 	EXP 	text_lextale_trial_real_label: autoDraw = False
+58.7152 	EXP 	text_lextale_trial_false_label: autoDraw = False
+58.7152 	EXP 	text_lextale_trial_word: text = 'cintro'
+58.7152 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+58.7152 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+58.9433 	EXP 	text_lextale_trial_real_label: autoDraw = True
+58.9433 	EXP 	text_lextale_trial_false_label: autoDraw = True
+58.9466 	DATA 	Keypress: 0
+59.1956 	EXP 	text_lextale_trial_word: autoDraw = True
+59.1971 	EXP 	New trial (rep=0, index=19): OrderedDict([('stim', 64), ('word', 'orgulloso'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+59.2148 	EXP 	text_lextale_trial_word: autoDraw = False
+59.2148 	EXP 	text_lextale_trial_real_label: autoDraw = False
+59.2148 	EXP 	text_lextale_trial_false_label: autoDraw = False
+59.2148 	EXP 	text_lextale_trial_word: text = 'orgulloso'
+59.2148 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+59.2148 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+59.4434 	EXP 	text_lextale_trial_real_label: autoDraw = True
+59.4434 	EXP 	text_lextale_trial_false_label: autoDraw = True
+59.4475 	DATA 	Keypress: 1
+59.6962 	EXP 	text_lextale_trial_word: autoDraw = True
+59.6978 	EXP 	New trial (rep=0, index=20): OrderedDict([('stim', 59), ('word', 'besar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+59.7152 	EXP 	text_lextale_trial_word: autoDraw = False
+59.7152 	EXP 	text_lextale_trial_real_label: autoDraw = False
+59.7152 	EXP 	text_lextale_trial_false_label: autoDraw = False
+59.7152 	EXP 	text_lextale_trial_word: text = 'besar'
+59.7152 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+59.7152 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+59.9433 	EXP 	text_lextale_trial_real_label: autoDraw = True
+59.9433 	EXP 	text_lextale_trial_false_label: autoDraw = True
+59.9466 	DATA 	Keypress: 0
+60.1954 	EXP 	text_lextale_trial_word: autoDraw = True
+60.1970 	EXP 	New trial (rep=0, index=21): OrderedDict([('stim', 68), ('word', 'alegre'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+60.2145 	EXP 	text_lextale_trial_word: autoDraw = False
+60.2145 	EXP 	text_lextale_trial_real_label: autoDraw = False
+60.2145 	EXP 	text_lextale_trial_false_label: autoDraw = False
+60.2145 	EXP 	text_lextale_trial_word: text = 'alegre'
+60.2145 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+60.2145 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+60.3952 	DATA 	Keypress: 1
+60.4423 	EXP 	text_lextale_trial_real_label: autoDraw = True
+60.4423 	EXP 	text_lextale_trial_false_label: autoDraw = True
+60.6956 	EXP 	text_lextale_trial_word: autoDraw = True
+60.6972 	EXP 	New trial (rep=0, index=22): OrderedDict([('stim', 3), ('word', 'pulmones'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+60.7150 	EXP 	text_lextale_trial_word: autoDraw = False
+60.7150 	EXP 	text_lextale_trial_real_label: autoDraw = False
+60.7150 	EXP 	text_lextale_trial_false_label: autoDraw = False
+60.7150 	EXP 	text_lextale_trial_word: text = 'pulmones'
+60.7150 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+60.7150 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+60.8957 	DATA 	Keypress: 0
+60.9432 	EXP 	text_lextale_trial_real_label: autoDraw = True
+60.9432 	EXP 	text_lextale_trial_false_label: autoDraw = True
+61.1961 	EXP 	text_lextale_trial_word: autoDraw = True
+61.1977 	EXP 	New trial (rep=0, index=23): OrderedDict([('stim', 36), ('word', 'loro'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+61.2151 	EXP 	text_lextale_trial_word: autoDraw = False
+61.2151 	EXP 	text_lextale_trial_real_label: autoDraw = False
+61.2151 	EXP 	text_lextale_trial_false_label: autoDraw = False
+61.2151 	EXP 	text_lextale_trial_word: text = 'loro'
+61.2151 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+61.2151 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+61.3621 	DATA 	Keypress: 1
+61.4430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+61.4430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+61.6950 	EXP 	text_lextale_trial_word: autoDraw = True
+61.6966 	EXP 	New trial (rep=0, index=24): OrderedDict([('stim', 78), ('word', 'frondoso'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+61.7143 	EXP 	text_lextale_trial_word: autoDraw = False
+61.7143 	EXP 	text_lextale_trial_real_label: autoDraw = False
+61.7143 	EXP 	text_lextale_trial_false_label: autoDraw = False
+61.7143 	EXP 	text_lextale_trial_word: text = 'frondoso'
+61.7143 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+61.7143 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+61.8617 	DATA 	Keypress: 0
+61.9436 	EXP 	text_lextale_trial_real_label: autoDraw = True
+61.9436 	EXP 	text_lextale_trial_false_label: autoDraw = True
+62.1958 	EXP 	text_lextale_trial_word: autoDraw = True
+62.1974 	EXP 	New trial (rep=0, index=25): OrderedDict([('stim', 48), ('word', 'ladrón'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+62.2149 	EXP 	text_lextale_trial_word: autoDraw = False
+62.2149 	EXP 	text_lextale_trial_real_label: autoDraw = False
+62.2149 	EXP 	text_lextale_trial_false_label: autoDraw = False
+62.2149 	EXP 	text_lextale_trial_word: text = 'ladrón'
+62.2149 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+62.2149 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+62.3118 	DATA 	Keypress: 1
+62.4430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+62.4430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+62.6962 	EXP 	text_lextale_trial_word: autoDraw = True
+62.6974 	EXP 	New trial (rep=0, index=26): OrderedDict([('stim', 10), ('word', 'antar'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+62.7144 	EXP 	text_lextale_trial_word: autoDraw = False
+62.7144 	EXP 	text_lextale_trial_real_label: autoDraw = False
+62.7144 	EXP 	text_lextale_trial_false_label: autoDraw = False
+62.7144 	EXP 	text_lextale_trial_word: text = 'antar'
+62.7144 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+62.7144 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+62.7953 	DATA 	Keypress: 0
+62.9428 	EXP 	text_lextale_trial_real_label: autoDraw = True
+62.9428 	EXP 	text_lextale_trial_false_label: autoDraw = True
+63.1943 	EXP 	text_lextale_trial_word: autoDraw = True
+63.1958 	EXP 	New trial (rep=0, index=27): OrderedDict([('stim', 40), ('word', 'alfombra'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+63.2137 	EXP 	text_lextale_trial_word: autoDraw = False
+63.2137 	EXP 	text_lextale_trial_real_label: autoDraw = False
+63.2137 	EXP 	text_lextale_trial_false_label: autoDraw = False
+63.2137 	EXP 	text_lextale_trial_word: text = 'alfombra'
+63.2137 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+63.2137 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+63.2422 	DATA 	Keypress: 1
+63.4433 	EXP 	text_lextale_trial_real_label: autoDraw = True
+63.4433 	EXP 	text_lextale_trial_false_label: autoDraw = True
+63.6962 	EXP 	text_lextale_trial_word: autoDraw = True
+63.6973 	EXP 	New trial (rep=0, index=28): OrderedDict([('stim', 25), ('word', 'bisagra'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+63.7022 	DATA 	Keypress: 0
+63.7266 	EXP 	text_lextale_trial_word: autoDraw = False
+63.7266 	EXP 	text_lextale_trial_real_label: autoDraw = False
+63.7266 	EXP 	text_lextale_trial_false_label: autoDraw = False
+63.7266 	EXP 	text_lextale_trial_word: text = 'bisagra'
+63.7266 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+63.7266 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+63.9432 	EXP 	text_lextale_trial_real_label: autoDraw = True
+63.9432 	EXP 	text_lextale_trial_false_label: autoDraw = True
+64.1459 	DATA 	Keypress: 1
+64.1946 	EXP 	text_lextale_trial_word: autoDraw = True
+64.1960 	EXP 	New trial (rep=0, index=29): OrderedDict([('stim', 45), ('word', 'jilguero'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+64.2132 	EXP 	text_lextale_trial_word: autoDraw = False
+64.2132 	EXP 	text_lextale_trial_real_label: autoDraw = False
+64.2132 	EXP 	text_lextale_trial_false_label: autoDraw = False
+64.2132 	EXP 	text_lextale_trial_word: text = 'jilguero'
+64.2132 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+64.2132 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+64.4431 	EXP 	text_lextale_trial_real_label: autoDraw = True
+64.4431 	EXP 	text_lextale_trial_false_label: autoDraw = True
+64.5463 	DATA 	Keypress: 0
+64.6942 	EXP 	text_lextale_trial_word: autoDraw = True
+64.6957 	EXP 	New trial (rep=0, index=30): OrderedDict([('stim', 35), ('word', 'rompido'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+64.7130 	EXP 	text_lextale_trial_word: autoDraw = False
+64.7130 	EXP 	text_lextale_trial_real_label: autoDraw = False
+64.7130 	EXP 	text_lextale_trial_false_label: autoDraw = False
+64.7130 	EXP 	text_lextale_trial_word: text = 'rompido'
+64.7130 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+64.7130 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+64.9432 	EXP 	text_lextale_trial_real_label: autoDraw = True
+64.9432 	EXP 	text_lextale_trial_false_label: autoDraw = True
+64.9628 	DATA 	Keypress: 1
+65.1959 	EXP 	text_lextale_trial_word: autoDraw = True
+65.1975 	EXP 	New trial (rep=0, index=31): OrderedDict([('stim', 54), ('word', 'fomentar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+65.2264 	EXP 	text_lextale_trial_word: autoDraw = False
+65.2264 	EXP 	text_lextale_trial_real_label: autoDraw = False
+65.2264 	EXP 	text_lextale_trial_false_label: autoDraw = False
+65.2264 	EXP 	text_lextale_trial_word: text = 'fomentar'
+65.2264 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+65.2264 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+65.4429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+65.4429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+65.4462 	DATA 	Keypress: 0
+65.6964 	EXP 	text_lextale_trial_word: autoDraw = True
+65.6980 	EXP 	New trial (rep=0, index=32): OrderedDict([('stim', 12), ('word', 'asesinato'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+65.7264 	EXP 	text_lextale_trial_word: autoDraw = False
+65.7264 	EXP 	text_lextale_trial_real_label: autoDraw = False
+65.7264 	EXP 	text_lextale_trial_false_label: autoDraw = False
+65.7264 	EXP 	text_lextale_trial_word: text = 'asesinato'
+65.7264 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+65.7264 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+65.9294 	DATA 	Keypress: 1
+65.9436 	EXP 	text_lextale_trial_real_label: autoDraw = True
+65.9436 	EXP 	text_lextale_trial_false_label: autoDraw = True
+66.1955 	EXP 	text_lextale_trial_word: autoDraw = True
+66.1970 	EXP 	New trial (rep=0, index=33): OrderedDict([('stim', 79), ('word', 'tropaje'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+66.2147 	EXP 	text_lextale_trial_word: autoDraw = False
+66.2147 	EXP 	text_lextale_trial_real_label: autoDraw = False
+66.2147 	EXP 	text_lextale_trial_false_label: autoDraw = False
+66.2147 	EXP 	text_lextale_trial_word: text = 'tropaje'
+66.2147 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+66.2147 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+66.4308 	DATA 	Keypress: 0
+66.4453 	EXP 	text_lextale_trial_real_label: autoDraw = True
+66.4453 	EXP 	text_lextale_trial_false_label: autoDraw = True
+66.6955 	EXP 	text_lextale_trial_word: autoDraw = True
+66.6970 	EXP 	New trial (rep=0, index=34): OrderedDict([('stim', 7), ('word', 'pésimo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+66.7144 	EXP 	text_lextale_trial_word: autoDraw = False
+66.7144 	EXP 	text_lextale_trial_real_label: autoDraw = False
+66.7144 	EXP 	text_lextale_trial_false_label: autoDraw = False
+66.7144 	EXP 	text_lextale_trial_word: text = 'pésimo'
+66.7144 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+66.7144 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+66.9298 	DATA 	Keypress: 1
+66.9443 	EXP 	text_lextale_trial_real_label: autoDraw = True
+66.9443 	EXP 	text_lextale_trial_false_label: autoDraw = True
+67.1961 	EXP 	text_lextale_trial_word: autoDraw = True
+67.1976 	EXP 	New trial (rep=0, index=35): OrderedDict([('stim', 62), ('word', 'flaco'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+67.2149 	EXP 	text_lextale_trial_word: autoDraw = False
+67.2149 	EXP 	text_lextale_trial_real_label: autoDraw = False
+67.2149 	EXP 	text_lextale_trial_false_label: autoDraw = False
+67.2149 	EXP 	text_lextale_trial_word: text = 'flaco'
+67.2149 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+67.2149 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+67.4115 	DATA 	Keypress: 0
+67.4426 	EXP 	text_lextale_trial_real_label: autoDraw = True
+67.4426 	EXP 	text_lextale_trial_false_label: autoDraw = True
+67.6933 	EXP 	text_lextale_trial_word: autoDraw = True
+67.6948 	EXP 	New trial (rep=0, index=36): OrderedDict([('stim', 17), ('word', 'floroso'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+67.7123 	EXP 	text_lextale_trial_word: autoDraw = False
+67.7123 	EXP 	text_lextale_trial_real_label: autoDraw = False
+67.7123 	EXP 	text_lextale_trial_false_label: autoDraw = False
+67.7123 	EXP 	text_lextale_trial_word: text = 'floroso'
+67.7123 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+67.7123 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+67.8782 	DATA 	Keypress: 1
+67.9429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+67.9429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+68.1954 	EXP 	text_lextale_trial_word: autoDraw = True
+68.1969 	EXP 	New trial (rep=0, index=37): OrderedDict([('stim', 46), ('word', 'martillo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+68.2145 	EXP 	text_lextale_trial_word: autoDraw = False
+68.2145 	EXP 	text_lextale_trial_real_label: autoDraw = False
+68.2145 	EXP 	text_lextale_trial_false_label: autoDraw = False
+68.2145 	EXP 	text_lextale_trial_word: text = 'martillo'
+68.2145 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+68.2145 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+68.3949 	DATA 	Keypress: 0
+68.4398 	EXP 	text_lextale_trial_real_label: autoDraw = True
+68.4398 	EXP 	text_lextale_trial_false_label: autoDraw = True
+68.6901 	EXP 	text_lextale_trial_word: autoDraw = True
+68.6916 	EXP 	New trial (rep=0, index=38): OrderedDict([('stim', 1), ('word', 'terzo'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+68.7066 	EXP 	text_lextale_trial_word: autoDraw = False
+68.7066 	EXP 	text_lextale_trial_real_label: autoDraw = False
+68.7066 	EXP 	text_lextale_trial_false_label: autoDraw = False
+68.7066 	EXP 	text_lextale_trial_word: text = 'terzo'
+68.7066 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+68.7066 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+68.8452 	DATA 	Keypress: 1
+68.9429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+68.9429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+69.1955 	EXP 	text_lextale_trial_word: autoDraw = True
+69.1970 	EXP 	New trial (rep=0, index=39): OrderedDict([('stim', 90), ('word', 'clavel'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+69.2142 	EXP 	text_lextale_trial_word: autoDraw = False
+69.2142 	EXP 	text_lextale_trial_real_label: autoDraw = False
+69.2142 	EXP 	text_lextale_trial_false_label: autoDraw = False
+69.2142 	EXP 	text_lextale_trial_word: text = 'clavel'
+69.2142 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+69.2142 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+69.4124 	DATA 	Keypress: 0
+69.4431 	EXP 	text_lextale_trial_real_label: autoDraw = True
+69.4431 	EXP 	text_lextale_trial_false_label: autoDraw = True
+69.6947 	EXP 	text_lextale_trial_word: autoDraw = True
+69.6963 	EXP 	New trial (rep=0, index=40): OrderedDict([('stim', 23), ('word', 'lampera'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+69.7140 	EXP 	text_lextale_trial_word: autoDraw = False
+69.7140 	EXP 	text_lextale_trial_real_label: autoDraw = False
+69.7140 	EXP 	text_lextale_trial_false_label: autoDraw = False
+69.7140 	EXP 	text_lextale_trial_word: text = 'lampera'
+69.7140 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+69.7140 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+69.8618 	DATA 	Keypress: 1
+69.9428 	EXP 	text_lextale_trial_real_label: autoDraw = True
+69.9428 	EXP 	text_lextale_trial_false_label: autoDraw = True
+70.1962 	EXP 	text_lextale_trial_word: autoDraw = True
+70.1977 	EXP 	New trial (rep=0, index=41): OrderedDict([('stim', 71), ('word', 'polvoriento'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+70.2263 	EXP 	text_lextale_trial_word: autoDraw = False
+70.2263 	EXP 	text_lextale_trial_real_label: autoDraw = False
+70.2263 	EXP 	text_lextale_trial_false_label: autoDraw = False
+70.2263 	EXP 	text_lextale_trial_word: text = 'polvoriento'
+70.2263 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+70.2263 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+70.3465 	DATA 	Keypress: 0
+70.4433 	EXP 	text_lextale_trial_real_label: autoDraw = True
+70.4433 	EXP 	text_lextale_trial_false_label: autoDraw = True
+70.6962 	EXP 	text_lextale_trial_word: autoDraw = True
+70.6978 	EXP 	New trial (rep=0, index=42): OrderedDict([('stim', 4), ('word', 'batillón'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+70.7268 	EXP 	text_lextale_trial_word: autoDraw = False
+70.7268 	EXP 	text_lextale_trial_real_label: autoDraw = False
+70.7268 	EXP 	text_lextale_trial_false_label: autoDraw = False
+70.7268 	EXP 	text_lextale_trial_word: text = 'batillón'
+70.7268 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+70.7268 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+70.7956 	DATA 	Keypress: 1
+70.9428 	EXP 	text_lextale_trial_real_label: autoDraw = True
+70.9428 	EXP 	text_lextale_trial_false_label: autoDraw = True
+71.1978 	EXP 	text_lextale_trial_word: autoDraw = True
+71.1994 	EXP 	New trial (rep=0, index=43): OrderedDict([('stim', 63), ('word', 'esposante'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+71.2267 	EXP 	text_lextale_trial_word: autoDraw = False
+71.2267 	EXP 	text_lextale_trial_real_label: autoDraw = False
+71.2267 	EXP 	text_lextale_trial_false_label: autoDraw = False
+71.2267 	EXP 	text_lextale_trial_word: text = 'esposante'
+71.2267 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+71.2267 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+71.2617 	DATA 	Keypress: 0
+71.4399 	EXP 	text_lextale_trial_real_label: autoDraw = True
+71.4399 	EXP 	text_lextale_trial_false_label: autoDraw = True
+71.6947 	EXP 	text_lextale_trial_word: autoDraw = True
+71.6963 	EXP 	New trial (rep=0, index=44): OrderedDict([('stim', 16), ('word', 'abracer'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+71.7142 	EXP 	text_lextale_trial_word: autoDraw = False
+71.7142 	EXP 	text_lextale_trial_real_label: autoDraw = False
+71.7142 	EXP 	text_lextale_trial_false_label: autoDraw = False
+71.7142 	EXP 	text_lextale_trial_word: text = 'abracer'
+71.7142 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+71.7142 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+71.7166 	DATA 	Keypress: 1
+71.9430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+71.9430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+72.1960 	EXP 	text_lextale_trial_word: autoDraw = True
+72.1975 	EXP 	New trial (rep=0, index=45): OrderedDict([('stim', 34), ('word', 'aviso'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+72.2145 	EXP 	text_lextale_trial_word: autoDraw = False
+72.2145 	EXP 	text_lextale_trial_real_label: autoDraw = False
+72.2145 	EXP 	text_lextale_trial_false_label: autoDraw = False
+72.2145 	EXP 	text_lextale_trial_word: text = 'aviso'
+72.2145 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+72.2145 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+72.2166 	DATA 	Keypress: 0
+72.4430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+72.4430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+72.6808 	DATA 	Keypress: 1
+72.6953 	EXP 	text_lextale_trial_word: autoDraw = True
+72.6963 	EXP 	New trial (rep=0, index=46): OrderedDict([('stim', 82), ('word', 'empirador'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+72.7135 	EXP 	text_lextale_trial_word: autoDraw = False
+72.7135 	EXP 	text_lextale_trial_real_label: autoDraw = False
+72.7135 	EXP 	text_lextale_trial_false_label: autoDraw = False
+72.7135 	EXP 	text_lextale_trial_word: text = 'empirador'
+72.7135 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+72.7135 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+72.9430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+72.9430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+73.1952 	EXP 	text_lextale_trial_word: autoDraw = True
+73.1964 	EXP 	New trial (rep=0, index=47): OrderedDict([('stim', 6), ('word', 'tergiversar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+73.2019 	DATA 	Keypress: 0
+73.2260 	EXP 	text_lextale_trial_word: autoDraw = False
+73.2260 	EXP 	text_lextale_trial_real_label: autoDraw = False
+73.2260 	EXP 	text_lextale_trial_false_label: autoDraw = False
+73.2260 	EXP 	text_lextale_trial_word: text = 'tergiversar'
+73.2260 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+73.2260 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+73.4429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+73.4429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+73.6824 	DATA 	Keypress: 1
+73.6970 	EXP 	text_lextale_trial_word: autoDraw = True
+73.6980 	EXP 	New trial (rep=0, index=48): OrderedDict([('stim', 52), ('word', 'camisa'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+73.7261 	EXP 	text_lextale_trial_word: autoDraw = False
+73.7261 	EXP 	text_lextale_trial_real_label: autoDraw = False
+73.7261 	EXP 	text_lextale_trial_false_label: autoDraw = False
+73.7261 	EXP 	text_lextale_trial_word: text = 'camisa'
+73.7261 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+73.7261 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+73.9430 	EXP 	text_lextale_trial_real_label: autoDraw = True
+73.9430 	EXP 	text_lextale_trial_false_label: autoDraw = True
+74.1290 	DATA 	Keypress: 0
+74.1942 	EXP 	text_lextale_trial_word: autoDraw = True
+74.1958 	EXP 	New trial (rep=0, index=49): OrderedDict([('stim', 51), ('word', 'candado'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+74.2129 	EXP 	text_lextale_trial_word: autoDraw = False
+74.2129 	EXP 	text_lextale_trial_real_label: autoDraw = False
+74.2129 	EXP 	text_lextale_trial_false_label: autoDraw = False
+74.2129 	EXP 	text_lextale_trial_word: text = 'candado'
+74.2129 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+74.2129 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+74.4429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+74.4429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+74.5459 	DATA 	Keypress: 1
+74.6937 	EXP 	text_lextale_trial_word: autoDraw = True
+74.6954 	EXP 	New trial (rep=0, index=50): OrderedDict([('stim', 89), ('word', 'prisa'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+74.7125 	EXP 	text_lextale_trial_word: autoDraw = False
+74.7125 	EXP 	text_lextale_trial_real_label: autoDraw = False
+74.7125 	EXP 	text_lextale_trial_false_label: autoDraw = False
+74.7125 	EXP 	text_lextale_trial_word: text = 'prisa'
+74.7125 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+74.7125 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+74.9428 	EXP 	text_lextale_trial_real_label: autoDraw = True
+74.9428 	EXP 	text_lextale_trial_false_label: autoDraw = True
+75.0294 	DATA 	Keypress: 0
+75.1936 	EXP 	text_lextale_trial_word: autoDraw = True
+75.1949 	EXP 	New trial (rep=0, index=51): OrderedDict([('stim', 26), ('word', 'secuestro'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+75.2126 	EXP 	text_lextale_trial_word: autoDraw = False
+75.2126 	EXP 	text_lextale_trial_real_label: autoDraw = False
+75.2126 	EXP 	text_lextale_trial_false_label: autoDraw = False
+75.2126 	EXP 	text_lextale_trial_word: text = 'secuestro'
+75.2126 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+75.2126 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+75.4429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+75.4429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+75.4792 	DATA 	Keypress: 1
+75.6944 	EXP 	text_lextale_trial_word: autoDraw = True
+75.6957 	EXP 	New trial (rep=0, index=52): OrderedDict([('stim', 61), ('word', 'seda'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+75.7125 	EXP 	text_lextale_trial_word: autoDraw = False
+75.7125 	EXP 	text_lextale_trial_real_label: autoDraw = False
+75.7125 	EXP 	text_lextale_trial_false_label: autoDraw = False
+75.7125 	EXP 	text_lextale_trial_word: text = 'seda'
+75.7125 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+75.7125 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+75.9429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+75.9429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+75.9957 	DATA 	Keypress: 0
+76.1942 	EXP 	text_lextale_trial_word: autoDraw = True
+76.1957 	EXP 	New trial (rep=0, index=53): OrderedDict([('stim', 81), ('word', 'pozo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+76.2128 	EXP 	text_lextale_trial_word: autoDraw = False
+76.2128 	EXP 	text_lextale_trial_real_label: autoDraw = False
+76.2128 	EXP 	text_lextale_trial_false_label: autoDraw = False
+76.2128 	EXP 	text_lextale_trial_word: text = 'pozo'
+76.2128 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+76.2128 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+76.4294 	DATA 	Keypress: 1
+76.4439 	EXP 	text_lextale_trial_real_label: autoDraw = True
+76.4439 	EXP 	text_lextale_trial_false_label: autoDraw = True
+76.6943 	EXP 	text_lextale_trial_word: autoDraw = True
+76.6956 	EXP 	New trial (rep=0, index=54): OrderedDict([('stim', 77), ('word', 'tiburón'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+76.7131 	EXP 	text_lextale_trial_word: autoDraw = False
+76.7131 	EXP 	text_lextale_trial_real_label: autoDraw = False
+76.7131 	EXP 	text_lextale_trial_false_label: autoDraw = False
+76.7131 	EXP 	text_lextale_trial_word: text = 'tiburón'
+76.7131 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+76.7131 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+76.9294 	DATA 	Keypress: 0
+76.9438 	EXP 	text_lextale_trial_real_label: autoDraw = True
+76.9438 	EXP 	text_lextale_trial_false_label: autoDraw = True
+77.1961 	EXP 	text_lextale_trial_word: autoDraw = True
+77.1977 	EXP 	New trial (rep=0, index=55): OrderedDict([('stim', 65), ('word', 'bizcocho'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+77.2262 	EXP 	text_lextale_trial_word: autoDraw = False
+77.2262 	EXP 	text_lextale_trial_real_label: autoDraw = False
+77.2262 	EXP 	text_lextale_trial_false_label: autoDraw = False
+77.2262 	EXP 	text_lextale_trial_word: text = 'bizcocho'
+77.2262 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+77.2262 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+77.4424 	EXP 	text_lextale_trial_real_label: autoDraw = True
+77.4424 	EXP 	text_lextale_trial_false_label: autoDraw = True
+77.4456 	DATA 	Keypress: 1
+77.6958 	EXP 	text_lextale_trial_word: autoDraw = True
+77.6973 	EXP 	New trial (rep=0, index=56): OrderedDict([('stim', 19), ('word', 'brecedad'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+77.7261 	EXP 	text_lextale_trial_word: autoDraw = False
+77.7261 	EXP 	text_lextale_trial_real_label: autoDraw = False
+77.7261 	EXP 	text_lextale_trial_false_label: autoDraw = False
+77.7261 	EXP 	text_lextale_trial_word: text = 'brecedad'
+77.7261 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+77.7261 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+77.9429 	EXP 	text_lextale_trial_real_label: autoDraw = True
+77.9429 	EXP 	text_lextale_trial_false_label: autoDraw = True
+77.9791 	DATA 	Keypress: 0
+78.1964 	EXP 	text_lextale_trial_word: autoDraw = True
+78.1979 	EXP 	New trial (rep=0, index=57): OrderedDict([('stim', 44), ('word', 'cuchara'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+78.2262 	EXP 	text_lextale_trial_word: autoDraw = False
+78.2262 	EXP 	text_lextale_trial_real_label: autoDraw = False
+78.2262 	EXP 	text_lextale_trial_false_label: autoDraw = False
+78.2262 	EXP 	text_lextale_trial_word: text = 'cuchara'
+78.2262 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+78.2262 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+78.4428 	EXP 	text_lextale_trial_real_label: autoDraw = True
+78.4428 	EXP 	text_lextale_trial_false_label: autoDraw = True
+78.4625 	DATA 	Keypress: 1
+78.6938 	EXP 	text_lextale_trial_word: autoDraw = True
+78.6953 	EXP 	New trial (rep=0, index=58): OrderedDict([('stim', 53), ('word', 'vegada'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+78.7144 	EXP 	text_lextale_trial_word: autoDraw = False
+78.7144 	EXP 	text_lextale_trial_real_label: autoDraw = False
+78.7144 	EXP 	text_lextale_trial_false_label: autoDraw = False
+78.7144 	EXP 	text_lextale_trial_word: text = 'vegada'
+78.7144 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+78.7144 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+78.9427 	EXP 	text_lextale_trial_real_label: autoDraw = True
+78.9427 	EXP 	text_lextale_trial_false_label: autoDraw = True
+78.9967 	DATA 	Keypress: 0
+79.1952 	EXP 	text_lextale_trial_word: autoDraw = True
+79.1967 	EXP 	New trial (rep=0, index=59): OrderedDict([('stim', 28), ('word', 'merodear'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+79.2141 	EXP 	text_lextale_trial_word: autoDraw = False
+79.2141 	EXP 	text_lextale_trial_real_label: autoDraw = False
+79.2141 	EXP 	text_lextale_trial_false_label: autoDraw = False
+79.2141 	EXP 	text_lextale_trial_word: text = 'merodear'
+79.2141 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+79.2141 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+79.4426 	EXP 	text_lextale_trial_real_label: autoDraw = True
+79.4426 	EXP 	text_lextale_trial_false_label: autoDraw = True
+79.4794 	DATA 	Keypress: 1
+79.6953 	EXP 	text_lextale_trial_word: autoDraw = True
+79.6968 	EXP 	New trial (rep=0, index=60): OrderedDict([('stim', 86), ('word', 'barato'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+79.7141 	EXP 	text_lextale_trial_word: autoDraw = False
+79.7141 	EXP 	text_lextale_trial_real_label: autoDraw = False
+79.7141 	EXP 	text_lextale_trial_false_label: autoDraw = False
+79.7141 	EXP 	text_lextale_trial_word: text = 'barato'
+79.7141 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+79.7141 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+79.9425 	EXP 	text_lextale_trial_real_label: autoDraw = True
+79.9425 	EXP 	text_lextale_trial_false_label: autoDraw = True
+79.9788 	DATA 	Keypress: 0
+80.1954 	EXP 	text_lextale_trial_word: autoDraw = True
+80.1969 	EXP 	New trial (rep=0, index=61): OrderedDict([('stim', 73), ('word', 'hervidor'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+80.2142 	EXP 	text_lextale_trial_word: autoDraw = False
+80.2142 	EXP 	text_lextale_trial_real_label: autoDraw = False
+80.2142 	EXP 	text_lextale_trial_false_label: autoDraw = False
+80.2142 	EXP 	text_lextale_trial_word: text = 'hervidor'
+80.2142 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+80.2142 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+80.4425 	EXP 	text_lextale_trial_real_label: autoDraw = True
+80.4425 	EXP 	text_lextale_trial_false_label: autoDraw = True
+80.4625 	DATA 	Keypress: 1
+80.6942 	EXP 	text_lextale_trial_word: autoDraw = True
+80.6958 	EXP 	New trial (rep=0, index=62): OrderedDict([('stim', 43), ('word', 'canela'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+80.7598 	EXP 	text_lextale_trial_word: autoDraw = False
+80.7598 	EXP 	text_lextale_trial_real_label: autoDraw = False
+80.7598 	EXP 	text_lextale_trial_false_label: autoDraw = False
+80.7598 	EXP 	text_lextale_trial_word: text = 'canela'
+80.7598 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+80.7598 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+80.9924 	EXP 	text_lextale_trial_real_label: autoDraw = True
+80.9924 	EXP 	text_lextale_trial_false_label: autoDraw = True
+81.0298 	DATA 	Keypress: 0
+81.2436 	EXP 	text_lextale_trial_word: autoDraw = True
+81.2452 	EXP 	New trial (rep=0, index=63): OrderedDict([('stim', 67), ('word', 'cabello'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+81.2626 	EXP 	text_lextale_trial_word: autoDraw = False
+81.2626 	EXP 	text_lextale_trial_real_label: autoDraw = False
+81.2626 	EXP 	text_lextale_trial_false_label: autoDraw = False
+81.2626 	EXP 	text_lextale_trial_word: text = 'cabello'
+81.2626 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+81.2626 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+81.4925 	EXP 	text_lextale_trial_real_label: autoDraw = True
+81.4925 	EXP 	text_lextale_trial_false_label: autoDraw = True
+81.7460 	EXP 	text_lextale_trial_word: autoDraw = True
+81.8446 	EXP 	New trial (rep=0, index=64): OrderedDict([('stim', 57), ('word', 'tacaño'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+81.8505 	DATA 	Keypress: 1
+81.8756 	EXP 	text_lextale_trial_word: autoDraw = False
+81.8756 	EXP 	text_lextale_trial_real_label: autoDraw = False
+81.8756 	EXP 	text_lextale_trial_false_label: autoDraw = False
+81.8756 	EXP 	text_lextale_trial_word: text = 'tacaño'
+81.8756 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+81.8756 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+82.0926 	EXP 	text_lextale_trial_real_label: autoDraw = True
+82.0926 	EXP 	text_lextale_trial_false_label: autoDraw = True
+82.3444 	EXP 	text_lextale_trial_word: autoDraw = True
+82.9285 	EXP 	New trial (rep=0, index=65): OrderedDict([('stim', 8), ('word', 'cadeña'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+82.9334 	DATA 	Keypress: 0
+82.9476 	EXP 	text_lextale_trial_word: autoDraw = False
+82.9476 	EXP 	text_lextale_trial_real_label: autoDraw = False
+82.9476 	EXP 	text_lextale_trial_false_label: autoDraw = False
+82.9476 	EXP 	text_lextale_trial_word: text = 'cadeña'
+82.9476 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+82.9476 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+83.1758 	EXP 	text_lextale_trial_real_label: autoDraw = True
+83.1758 	EXP 	text_lextale_trial_false_label: autoDraw = True
+83.4278 	EXP 	text_lextale_trial_word: autoDraw = True
+83.7598 	EXP 	New trial (rep=0, index=66): OrderedDict([('stim', 31), ('word', 'pandilla'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+83.7644 	DATA 	Keypress: 0
+83.7788 	EXP 	text_lextale_trial_word: autoDraw = False
+83.7788 	EXP 	text_lextale_trial_real_label: autoDraw = False
+83.7788 	EXP 	text_lextale_trial_false_label: autoDraw = False
+83.7788 	EXP 	text_lextale_trial_word: text = 'pandilla'
+83.7788 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+83.7788 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+84.0090 	EXP 	text_lextale_trial_real_label: autoDraw = True
+84.0090 	EXP 	text_lextale_trial_false_label: autoDraw = True
+84.2611 	EXP 	text_lextale_trial_word: autoDraw = True
+84.4105 	EXP 	New trial (rep=0, index=67): OrderedDict([('stim', 58), ('word', 'plaudir'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+84.4152 	DATA 	Keypress: 1
+84.4295 	EXP 	text_lextale_trial_word: autoDraw = False
+84.4295 	EXP 	text_lextale_trial_real_label: autoDraw = False
+84.4295 	EXP 	text_lextale_trial_false_label: autoDraw = False
+84.4295 	EXP 	text_lextale_trial_word: text = 'plaudir'
+84.4295 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+84.4295 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+84.6591 	EXP 	text_lextale_trial_real_label: autoDraw = True
+84.6591 	EXP 	text_lextale_trial_false_label: autoDraw = True
+84.9105 	EXP 	text_lextale_trial_word: autoDraw = True
+85.0812 	EXP 	New trial (rep=0, index=68): OrderedDict([('stim', 11), ('word', 'cenefa'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+85.0857 	DATA 	Keypress: 0
+85.1091 	EXP 	text_lextale_trial_word: autoDraw = False
+85.1091 	EXP 	text_lextale_trial_real_label: autoDraw = False
+85.1091 	EXP 	text_lextale_trial_false_label: autoDraw = False
+85.1091 	EXP 	text_lextale_trial_word: text = 'cenefa'
+85.1091 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+85.1091 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+85.3258 	EXP 	text_lextale_trial_real_label: autoDraw = True
+85.3258 	EXP 	text_lextale_trial_false_label: autoDraw = True
+85.5784 	EXP 	text_lextale_trial_word: autoDraw = True
+85.7107 	EXP 	New trial (rep=0, index=69): OrderedDict([('stim', 38), ('word', 'estornudar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+85.7158 	DATA 	Keypress: 1
+85.7301 	EXP 	text_lextale_trial_word: autoDraw = False
+85.7301 	EXP 	text_lextale_trial_real_label: autoDraw = False
+85.7301 	EXP 	text_lextale_trial_false_label: autoDraw = False
+85.7301 	EXP 	text_lextale_trial_word: text = 'estornudar'
+85.7301 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+85.7301 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+85.9591 	EXP 	text_lextale_trial_real_label: autoDraw = True
+85.9591 	EXP 	text_lextale_trial_false_label: autoDraw = True
+86.2104 	EXP 	text_lextale_trial_word: autoDraw = True
+86.2935 	EXP 	New trial (rep=0, index=70): OrderedDict([('stim', 87), ('word', 'grodo'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+86.2983 	DATA 	Keypress: 0
+86.3126 	EXP 	text_lextale_trial_word: autoDraw = False
+86.3126 	EXP 	text_lextale_trial_real_label: autoDraw = False
+86.3126 	EXP 	text_lextale_trial_false_label: autoDraw = False
+86.3126 	EXP 	text_lextale_trial_word: text = 'grodo'
+86.3126 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+86.3126 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+86.5425 	EXP 	text_lextale_trial_real_label: autoDraw = True
+86.5425 	EXP 	text_lextale_trial_false_label: autoDraw = True
+86.7946 	EXP 	text_lextale_trial_word: autoDraw = True
+86.9453 	EXP 	New trial (rep=0, index=71): OrderedDict([('stim', 9), ('word', 'hacha'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+86.9492 	DATA 	Keypress: 1
+86.9635 	EXP 	text_lextale_trial_word: autoDraw = False
+86.9635 	EXP 	text_lextale_trial_real_label: autoDraw = False
+86.9635 	EXP 	text_lextale_trial_false_label: autoDraw = False
+86.9635 	EXP 	text_lextale_trial_word: text = 'hacha'
+86.9635 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+86.9635 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+87.1934 	EXP 	text_lextale_trial_real_label: autoDraw = True
+87.1934 	EXP 	text_lextale_trial_false_label: autoDraw = True
+87.4430 	EXP 	text_lextale_trial_word: autoDraw = True
+87.5304 	EXP 	New trial (rep=0, index=72): OrderedDict([('stim', 37), ('word', 'granuja'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+87.5352 	DATA 	Keypress: 0
+87.5591 	EXP 	text_lextale_trial_word: autoDraw = False
+87.5591 	EXP 	text_lextale_trial_real_label: autoDraw = False
+87.5591 	EXP 	text_lextale_trial_false_label: autoDraw = False
+87.5591 	EXP 	text_lextale_trial_word: text = 'granuja'
+87.5591 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+87.5591 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+87.7758 	EXP 	text_lextale_trial_real_label: autoDraw = True
+87.7758 	EXP 	text_lextale_trial_false_label: autoDraw = True
+88.0278 	EXP 	text_lextale_trial_word: autoDraw = True
+88.1472 	EXP 	New trial (rep=0, index=73): OrderedDict([('stim', 15), ('word', 'regar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+88.1521 	DATA 	Keypress: 1
+88.1755 	EXP 	text_lextale_trial_word: autoDraw = False
+88.1755 	EXP 	text_lextale_trial_real_label: autoDraw = False
+88.1755 	EXP 	text_lextale_trial_false_label: autoDraw = False
+88.1755 	EXP 	text_lextale_trial_word: text = 'regar'
+88.1755 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+88.1755 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+88.3924 	EXP 	text_lextale_trial_real_label: autoDraw = True
+88.3924 	EXP 	text_lextale_trial_false_label: autoDraw = True
+88.6450 	EXP 	text_lextale_trial_word: autoDraw = True
+88.7114 	EXP 	New trial (rep=0, index=74): OrderedDict([('stim', 50), ('word', 'flamida'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+88.7165 	DATA 	Keypress: 0
+88.7308 	EXP 	text_lextale_trial_word: autoDraw = False
+88.7308 	EXP 	text_lextale_trial_real_label: autoDraw = False
+88.7308 	EXP 	text_lextale_trial_false_label: autoDraw = False
+88.7308 	EXP 	text_lextale_trial_word: text = 'flamida'
+88.7308 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+88.7308 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+88.9592 	EXP 	text_lextale_trial_real_label: autoDraw = True
+88.9592 	EXP 	text_lextale_trial_false_label: autoDraw = True
+89.2115 	EXP 	text_lextale_trial_word: autoDraw = True
+89.3814 	EXP 	New trial (rep=0, index=75): OrderedDict([('stim', 21), ('word', 'capillo'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+89.3861 	DATA 	Keypress: 1
+89.4091 	EXP 	text_lextale_trial_word: autoDraw = False
+89.4091 	EXP 	text_lextale_trial_real_label: autoDraw = False
+89.4091 	EXP 	text_lextale_trial_false_label: autoDraw = False
+89.4091 	EXP 	text_lextale_trial_word: text = 'capillo'
+89.4091 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+89.4091 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+89.6257 	EXP 	text_lextale_trial_real_label: autoDraw = True
+89.6257 	EXP 	text_lextale_trial_false_label: autoDraw = True
+89.8775 	EXP 	text_lextale_trial_word: autoDraw = True
+89.9153 	EXP 	New trial (rep=0, index=76): OrderedDict([('stim', 80), ('word', 'hormiga'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+89.9202 	DATA 	Keypress: 0
+89.9420 	EXP 	text_lextale_trial_word: autoDraw = False
+89.9420 	EXP 	text_lextale_trial_real_label: autoDraw = False
+89.9420 	EXP 	text_lextale_trial_false_label: autoDraw = False
+89.9420 	EXP 	text_lextale_trial_word: text = 'hormiga'
+89.9420 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+89.9420 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+90.1592 	EXP 	text_lextale_trial_real_label: autoDraw = True
+90.1592 	EXP 	text_lextale_trial_false_label: autoDraw = True
+90.4117 	EXP 	text_lextale_trial_word: autoDraw = True
+90.6769 	EXP 	New trial (rep=0, index=77): OrderedDict([('stim', 49), ('word', 'ganar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+90.6815 	DATA 	Keypress: 1
+90.6958 	EXP 	text_lextale_trial_word: autoDraw = False
+90.6958 	EXP 	text_lextale_trial_real_label: autoDraw = False
+90.6958 	EXP 	text_lextale_trial_false_label: autoDraw = False
+90.6958 	EXP 	text_lextale_trial_word: text = 'ganar'
+90.6958 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+90.6958 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+90.9258 	EXP 	text_lextale_trial_real_label: autoDraw = True
+90.9258 	EXP 	text_lextale_trial_false_label: autoDraw = True
+91.1777 	EXP 	text_lextale_trial_word: autoDraw = True
+91.2434 	EXP 	New trial (rep=0, index=78): OrderedDict([('stim', 39), ('word', 'torpe'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+91.2477 	DATA 	Keypress: 0
+91.2619 	EXP 	text_lextale_trial_word: autoDraw = False
+91.2619 	EXP 	text_lextale_trial_real_label: autoDraw = False
+91.2619 	EXP 	text_lextale_trial_false_label: autoDraw = False
+91.2619 	EXP 	text_lextale_trial_word: text = 'torpe'
+91.2619 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+91.2619 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+91.4923 	EXP 	text_lextale_trial_real_label: autoDraw = True
+91.4923 	EXP 	text_lextale_trial_false_label: autoDraw = True
+91.7441 	EXP 	text_lextale_trial_word: autoDraw = True
+91.8461 	EXP 	New trial (rep=0, index=79): OrderedDict([('stim', 84), ('word', 'escuto'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+91.8512 	DATA 	Keypress: 1
+91.8759 	EXP 	text_lextale_trial_word: autoDraw = False
+91.8759 	EXP 	text_lextale_trial_real_label: autoDraw = False
+91.8759 	EXP 	text_lextale_trial_false_label: autoDraw = False
+91.8759 	EXP 	text_lextale_trial_word: text = 'escuto'
+91.8759 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+91.8759 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+92.0924 	EXP 	text_lextale_trial_real_label: autoDraw = True
+92.0924 	EXP 	text_lextale_trial_false_label: autoDraw = True
+92.3443 	EXP 	text_lextale_trial_word: autoDraw = True
+92.4468 	EXP 	New trial (rep=0, index=80): OrderedDict([('stim', 47), ('word', 'cartinar'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+92.4515 	DATA 	Keypress: 0
+92.4753 	EXP 	text_lextale_trial_word: autoDraw = False
+92.4753 	EXP 	text_lextale_trial_real_label: autoDraw = False
+92.4753 	EXP 	text_lextale_trial_false_label: autoDraw = False
+92.4753 	EXP 	text_lextale_trial_word: text = 'cartinar'
+92.4753 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+92.4753 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+92.6923 	EXP 	text_lextale_trial_real_label: autoDraw = True
+92.6923 	EXP 	text_lextale_trial_false_label: autoDraw = True
+92.9438 	EXP 	text_lextale_trial_word: autoDraw = True
+93.0273 	EXP 	New trial (rep=0, index=81): OrderedDict([('stim', 22), ('word', 'lacayo'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+93.0323 	DATA 	Keypress: 1
+93.0465 	EXP 	text_lextale_trial_word: autoDraw = False
+93.0465 	EXP 	text_lextale_trial_real_label: autoDraw = False
+93.0465 	EXP 	text_lextale_trial_false_label: autoDraw = False
+93.0465 	EXP 	text_lextale_trial_word: text = 'lacayo'
+93.0465 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+93.0465 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+93.2756 	EXP 	text_lextale_trial_real_label: autoDraw = True
+93.2756 	EXP 	text_lextale_trial_false_label: autoDraw = True
+93.5282 	EXP 	text_lextale_trial_word: autoDraw = True
+93.6439 	EXP 	New trial (rep=0, index=82): OrderedDict([('stim', 72), ('word', 'pemición'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+93.6493 	DATA 	Keypress: 0
+93.6636 	EXP 	text_lextale_trial_word: autoDraw = False
+93.6636 	EXP 	text_lextale_trial_real_label: autoDraw = False
+93.6636 	EXP 	text_lextale_trial_false_label: autoDraw = False
+93.6636 	EXP 	text_lextale_trial_word: text = 'pemición'
+93.6636 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+93.6636 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+93.8924 	EXP 	text_lextale_trial_real_label: autoDraw = True
+93.8924 	EXP 	text_lextale_trial_false_label: autoDraw = True
+94.1453 	EXP 	text_lextale_trial_word: autoDraw = True
+94.1645 	EXP 	New trial (rep=0, index=83): OrderedDict([('stim', 66), ('word', 'hacido'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+94.1693 	DATA 	Keypress: 1
+94.1919 	EXP 	text_lextale_trial_word: autoDraw = False
+94.1919 	EXP 	text_lextale_trial_real_label: autoDraw = False
+94.1919 	EXP 	text_lextale_trial_false_label: autoDraw = False
+94.1919 	EXP 	text_lextale_trial_word: text = 'hacido'
+94.1919 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+94.1919 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+94.4088 	EXP 	text_lextale_trial_real_label: autoDraw = True
+94.4088 	EXP 	text_lextale_trial_false_label: autoDraw = True
+94.6606 	EXP 	text_lextale_trial_word: autoDraw = True
+94.7433 	EXP 	New trial (rep=0, index=84): OrderedDict([('stim', 42), ('word', 'cadallo'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+94.7479 	DATA 	Keypress: 0
+94.7620 	EXP 	text_lextale_trial_word: autoDraw = False
+94.7620 	EXP 	text_lextale_trial_real_label: autoDraw = False
+94.7620 	EXP 	text_lextale_trial_false_label: autoDraw = False
+94.7620 	EXP 	text_lextale_trial_word: text = 'cadallo'
+94.7620 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+94.7620 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+94.9923 	EXP 	text_lextale_trial_real_label: autoDraw = True
+94.9923 	EXP 	text_lextale_trial_false_label: autoDraw = True
+95.2438 	EXP 	text_lextale_trial_word: autoDraw = True
+95.2628 	EXP 	New trial (rep=0, index=85): OrderedDict([('stim', 30), ('word', 'alardio'), ('correct_response', 0), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+95.2672 	DATA 	Keypress: 1
+95.2918 	EXP 	text_lextale_trial_word: autoDraw = False
+95.2918 	EXP 	text_lextale_trial_real_label: autoDraw = False
+95.2918 	EXP 	text_lextale_trial_false_label: autoDraw = False
+95.2918 	EXP 	text_lextale_trial_word: text = 'alardio'
+95.2918 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+95.2918 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+95.5089 	EXP 	text_lextale_trial_real_label: autoDraw = True
+95.5089 	EXP 	text_lextale_trial_false_label: autoDraw = True
+95.7610 	EXP 	text_lextale_trial_word: autoDraw = True
+95.8448 	EXP 	New trial (rep=0, index=86): OrderedDict([('stim', 2), ('word', 'pellizcar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+95.8501 	DATA 	Keypress: 0
+95.8759 	EXP 	text_lextale_trial_word: autoDraw = False
+95.8759 	EXP 	text_lextale_trial_real_label: autoDraw = False
+95.8759 	EXP 	text_lextale_trial_false_label: autoDraw = False
+95.8759 	EXP 	text_lextale_trial_word: text = 'pellizcar'
+95.8759 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+95.8759 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+96.0922 	EXP 	text_lextale_trial_real_label: autoDraw = True
+96.0922 	EXP 	text_lextale_trial_false_label: autoDraw = True
+96.3452 	EXP 	text_lextale_trial_word: autoDraw = True
+96.3939 	EXP 	New trial (rep=0, index=87): OrderedDict([('stim', 75), ('word', 'yacer'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+96.3989 	DATA 	Keypress: 1
+96.4131 	EXP 	text_lextale_trial_word: autoDraw = False
+96.4131 	EXP 	text_lextale_trial_real_label: autoDraw = False
+96.4131 	EXP 	text_lextale_trial_false_label: autoDraw = False
+96.4131 	EXP 	text_lextale_trial_word: text = 'yacer'
+96.4131 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+96.4131 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+96.6422 	EXP 	text_lextale_trial_real_label: autoDraw = True
+96.6422 	EXP 	text_lextale_trial_false_label: autoDraw = True
+96.8964 	EXP 	text_lextale_trial_word: autoDraw = True
+97.0104 	EXP 	New trial (rep=0, index=88): OrderedDict([('stim', 83), ('word', 'guante'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+97.0156 	DATA 	Keypress: 0
+97.0300 	EXP 	text_lextale_trial_word: autoDraw = False
+97.0300 	EXP 	text_lextale_trial_real_label: autoDraw = False
+97.0300 	EXP 	text_lextale_trial_false_label: autoDraw = False
+97.0300 	EXP 	text_lextale_trial_word: text = 'guante'
+97.0300 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+97.0300 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+97.2590 	EXP 	text_lextale_trial_real_label: autoDraw = True
+97.2590 	EXP 	text_lextale_trial_false_label: autoDraw = True
+97.4787 	DATA 	Keypress: 1
+97.5112 	EXP 	text_lextale_trial_word: autoDraw = True
+97.5125 	EXP 	New trial (rep=0, index=89): OrderedDict([('stim', 60), ('word', 'matar'), ('correct_response', 1), ('button_real', 'REAL'), ('button_false', 'FALSA')])
+97.5293 	EXP 	text_lextale_trial_word: autoDraw = False
+97.5293 	EXP 	text_lextale_trial_real_label: autoDraw = False
+97.5293 	EXP 	text_lextale_trial_false_label: autoDraw = False
+97.5293 	EXP 	text_lextale_trial_word: text = 'matar'
+97.5293 	EXP 	text_lextale_trial_real_label: text = 'REAL'
+97.5293 	EXP 	text_lextale_trial_false_label: text = 'FALSA'
+97.7589 	EXP 	text_lextale_trial_real_label: autoDraw = True
+97.7589 	EXP 	text_lextale_trial_false_label: autoDraw = True
+98.0113 	EXP 	text_lextale_trial_word: autoDraw = True
+98.0162 	DATA 	Keypress: 0
+98.0309 	EXP 	text_lextale_trial_word: autoDraw = False
+98.0309 	EXP 	text_lextale_trial_real_label: autoDraw = False
+98.0309 	EXP 	text_lextale_trial_false_label: autoDraw = False
+98.0309 	EXP 	text_eq_instructions: autoDraw = True
+99.4020 	EXP 	Imported trials/eq_trials.csv as conditions, 60 conditions, 6 params
+99.4024 	EXP 	Created sequence: sequential, trialTypes=60, nReps=1, seed=None
+99.4027 	EXP 	New trial (rep=0, index=0): OrderedDict([('item_num', 1), ('item', 'I can easily tell if someone else wants to enter a conversation.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+99.4169 	DATA 	Keypress: space
+99.4416 	EXP 	text_eq_instructions: autoDraw = False
+99.4416 	EXP 	text_eq_question_trial: text = 'I can easily tell if someone else wants to enter a conversation.'
+99.4416 	EXP 	slider_eq_trial: markerPos = None
+99.4416 	EXP 	slider_eq_trial: markerPos = None
+99.4416 	EXP 	slider_eq_trial: rating = None
+99.4416 	EXP 	text_eq_question_trial: autoDraw = True
+99.4416 	EXP 	slider_eq_trial: autoDraw = True
+101.6470 	DATA 	Mouse: Left button down, pos=(416,308)
+101.6764 	EXP 	slider_eq_trial: markerPos = -0.014285714285714235
+101.6962 	EXP 	slider_eq_trial: markerPos = -0.014285714285714235
+101.7252 	EXP 	slider_eq_trial: markerPos = -0.014285714285714235
+101.7452 	EXP 	slider_eq_trial: markerPos = -0.014285714285714235
+101.7470 	DATA 	Mouse:  Left button up, pos=(416,308)
+101.7752 	EXP 	slider_eq_trial: markerPos = 0.0
+101.7752 	EXP 	slider_eq_trial: rating = 0.0
+101.7769 	EXP 	New trial (rep=0, index=1): OrderedDict([('item_num', 2), ('item', 'I prefer animals to humans.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+101.8087 	EXP 	text_eq_question_trial: autoDraw = False
+101.8087 	EXP 	slider_eq_trial: autoDraw = False
+101.8087 	EXP 	text_eq_question_trial: text = 'I prefer animals to humans.'
+101.8087 	EXP 	slider_eq_trial: markerPos = None
+101.8087 	EXP 	slider_eq_trial: markerPos = None
+101.8087 	EXP 	slider_eq_trial: rating = None
+101.8087 	EXP 	text_eq_question_trial: autoDraw = True
+101.8087 	EXP 	slider_eq_trial: autoDraw = True
+102.3480 	DATA 	Mouse: Left button down, pos=(653,328)
+102.4605 	DATA 	Mouse:  Left button up, pos=(653,328)
+102.8805 	DATA 	Mouse: Left button down, pos=(699,321)
+102.9086 	EXP 	slider_eq_trial: markerPos = 1.0
+102.9286 	EXP 	slider_eq_trial: markerPos = 1.0
+102.9586 	EXP 	slider_eq_trial: markerPos = 1.0
+102.9790 	EXP 	slider_eq_trial: markerPos = 1.0
+102.9809 	DATA 	Mouse:  Left button up, pos=(700,321)
+103.0086 	EXP 	slider_eq_trial: markerPos = 1.0
+103.0086 	EXP 	slider_eq_trial: rating = 1.0
+103.0101 	EXP 	New trial (rep=0, index=2): OrderedDict([('item_num', 3), ('item', 'I try to keep up with the current trends and fashions.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+103.0421 	EXP 	text_eq_question_trial: autoDraw = False
+103.0421 	EXP 	slider_eq_trial: autoDraw = False
+103.0421 	EXP 	text_eq_question_trial: text = 'I try to keep up with the current trends and fashions.'
+103.0421 	EXP 	slider_eq_trial: markerPos = None
+103.0421 	EXP 	slider_eq_trial: markerPos = None
+103.0421 	EXP 	slider_eq_trial: rating = None
+103.0421 	EXP 	text_eq_question_trial: autoDraw = True
+103.0421 	EXP 	slider_eq_trial: autoDraw = True
+103.6606 	DATA 	Mouse: Left button down, pos=(959,318)
+103.6797 	EXP 	slider_eq_trial: markerPos = 1.9249999999999998
+103.7085 	EXP 	slider_eq_trial: markerPos = 1.9249999999999998
+103.7289 	EXP 	slider_eq_trial: markerPos = 1.9249999999999998
+103.7352 	DATA 	Mouse:  Left button up, pos=(959,318)
+103.7586 	EXP 	slider_eq_trial: markerPos = 1.9249999999999998
+103.7793 	EXP 	slider_eq_trial: markerPos = 2.0
+103.7793 	EXP 	slider_eq_trial: rating = 2.0
+103.7808 	EXP 	New trial (rep=0, index=3): OrderedDict([('item_num', 4), ('item', 'I find it difficult to explain to others things that I understand easily, \n  when they don’t understand it first time.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+103.8123 	EXP 	text_eq_question_trial: autoDraw = False
+103.8123 	EXP 	slider_eq_trial: autoDraw = False
+103.8123 	EXP 	text_eq_question_trial: text = 'I find it difficult to explain to others things that I understand easily, \n  when they don’t understand it first time.'
+103.8123 	EXP 	slider_eq_trial: markerPos = None
+103.8123 	EXP 	slider_eq_trial: markerPos = None
+103.8123 	EXP 	slider_eq_trial: rating = None
+103.8123 	EXP 	text_eq_question_trial: autoDraw = True
+103.8123 	EXP 	slider_eq_trial: autoDraw = True
+104.5653 	DATA 	Mouse: Left button down, pos=(1254,321)
+104.5918 	EXP 	slider_eq_trial: markerPos = 2.9785714285714286
+104.6127 	EXP 	slider_eq_trial: markerPos = 2.9785714285714286
+104.6418 	EXP 	slider_eq_trial: markerPos = 2.9785714285714286
+104.6623 	EXP 	slider_eq_trial: markerPos = 2.9785714285714286
+104.6693 	DATA 	Mouse:  Left button up, pos=(1254,321)
+104.6918 	EXP 	slider_eq_trial: markerPos = 2.9785714285714286
+104.7131 	EXP 	slider_eq_trial: markerPos = 3.0
+104.7131 	EXP 	slider_eq_trial: rating = 3.0
+104.7146 	EXP 	New trial (rep=0, index=4): OrderedDict([('item_num', 5), ('item', 'I dream most nights.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+104.7419 	EXP 	text_eq_question_trial: autoDraw = False
+104.7419 	EXP 	slider_eq_trial: autoDraw = False
+104.7419 	EXP 	text_eq_question_trial: text = 'I dream most nights.'
+104.7419 	EXP 	slider_eq_trial: markerPos = None
+104.7419 	EXP 	slider_eq_trial: markerPos = None
+104.7419 	EXP 	slider_eq_trial: rating = None
+104.7419 	EXP 	text_eq_question_trial: autoDraw = True
+104.7419 	EXP 	slider_eq_trial: autoDraw = True
+105.2469 	DATA 	Mouse: Left button down, pos=(942,343)
+105.3771 	DATA 	Mouse:  Left button up, pos=(942,343)
+105.7311 	DATA 	Mouse: Left button down, pos=(971,322)
+105.7585 	EXP 	slider_eq_trial: markerPos = 1.967857142857143
+105.7794 	EXP 	slider_eq_trial: markerPos = 1.967857142857143
+105.8085 	EXP 	slider_eq_trial: markerPos = 1.967857142857143
+105.8284 	EXP 	slider_eq_trial: markerPos = 1.967857142857143
+105.8585 	EXP 	slider_eq_trial: markerPos = 1.967857142857143
+105.8604 	DATA 	Mouse:  Left button up, pos=(971,322)
+105.8919 	EXP 	slider_eq_trial: markerPos = 2.0
+105.8919 	EXP 	slider_eq_trial: rating = 2.0
+105.8931 	EXP 	New trial (rep=0, index=5): OrderedDict([('item_num', 6), ('item', 'I really enjoy caring for other people.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+105.9252 	EXP 	text_eq_question_trial: autoDraw = False
+105.9252 	EXP 	slider_eq_trial: autoDraw = False
+105.9252 	EXP 	text_eq_question_trial: text = 'I really enjoy caring for other people.'
+105.9252 	EXP 	slider_eq_trial: markerPos = None
+105.9252 	EXP 	slider_eq_trial: markerPos = None
+105.9252 	EXP 	slider_eq_trial: rating = None
+105.9252 	EXP 	text_eq_question_trial: autoDraw = True
+105.9252 	EXP 	slider_eq_trial: autoDraw = True
+106.4938 	DATA 	Mouse: Left button down, pos=(694,320)
+106.5133 	EXP 	slider_eq_trial: markerPos = 0.9785714285714286
+106.5416 	EXP 	slider_eq_trial: markerPos = 0.9785714285714286
+106.5626 	EXP 	slider_eq_trial: markerPos = 0.9785714285714286
+106.5917 	EXP 	slider_eq_trial: markerPos = 0.9785714285714286
+106.5936 	DATA 	Mouse:  Left button up, pos=(694,320)
+106.6120 	EXP 	slider_eq_trial: markerPos = 1.0
+106.6120 	EXP 	slider_eq_trial: rating = 1.0
+106.6135 	EXP 	New trial (rep=0, index=6): OrderedDict([('item_num', 7), ('item', 'I try to solve my own problems rather than discussing them with others.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+106.6419 	EXP 	text_eq_question_trial: autoDraw = False
+106.6419 	EXP 	slider_eq_trial: autoDraw = False
+106.6419 	EXP 	text_eq_question_trial: text = 'I try to solve my own problems rather than discussing them with others.'
+106.6419 	EXP 	slider_eq_trial: markerPos = None
+106.6419 	EXP 	slider_eq_trial: markerPos = None
+106.6419 	EXP 	slider_eq_trial: rating = None
+106.6419 	EXP 	text_eq_question_trial: autoDraw = True
+106.6419 	EXP 	slider_eq_trial: autoDraw = True
+107.2647 	DATA 	Mouse: Left button down, pos=(448,311)
+107.3084 	EXP 	slider_eq_trial: markerPos = 0.09999999999999998
+107.3283 	EXP 	slider_eq_trial: markerPos = 0.09999999999999998
+107.3585 	EXP 	slider_eq_trial: markerPos = 0.09999999999999998
+107.3787 	EXP 	slider_eq_trial: markerPos = 0.09999999999999998
+107.4085 	EXP 	slider_eq_trial: markerPos = 0.09999999999999998
+107.4108 	DATA 	Mouse:  Left button up, pos=(448,311)
+107.4416 	EXP 	slider_eq_trial: markerPos = 0.0
+107.4416 	EXP 	slider_eq_trial: rating = 0.0
+107.4428 	EXP 	New trial (rep=0, index=7): OrderedDict([('item_num', 8), ('item', 'I find it hard to know what to do in a social situation.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+107.4753 	EXP 	text_eq_question_trial: autoDraw = False
+107.4753 	EXP 	slider_eq_trial: autoDraw = False
+107.4753 	EXP 	text_eq_question_trial: text = 'I find it hard to know what to do in a social situation.'
+107.4753 	EXP 	slider_eq_trial: markerPos = None
+107.4753 	EXP 	slider_eq_trial: markerPos = None
+107.4753 	EXP 	slider_eq_trial: rating = None
+107.4753 	EXP 	text_eq_question_trial: autoDraw = True
+107.4753 	EXP 	slider_eq_trial: autoDraw = True
+108.0805 	DATA 	Mouse: Left button down, pos=(685,316)
+108.1085 	EXP 	slider_eq_trial: markerPos = 0.9464285714285714
+108.1287 	EXP 	slider_eq_trial: markerPos = 0.9464285714285714
+108.1585 	EXP 	slider_eq_trial: markerPos = 0.9464285714285714
+108.1794 	EXP 	slider_eq_trial: markerPos = 0.9464285714285714
+108.1815 	DATA 	Mouse:  Left button up, pos=(685,316)
+108.2085 	EXP 	slider_eq_trial: markerPos = 1.0
+108.2085 	EXP 	slider_eq_trial: rating = 1.0
+108.2099 	EXP 	New trial (rep=0, index=8): OrderedDict([('item_num', 9), ('item', 'I am at my best first thing in the morning.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+108.2416 	EXP 	text_eq_question_trial: autoDraw = False
+108.2416 	EXP 	slider_eq_trial: autoDraw = False
+108.2416 	EXP 	text_eq_question_trial: text = 'I am at my best first thing in the morning.'
+108.2416 	EXP 	slider_eq_trial: markerPos = None
+108.2416 	EXP 	slider_eq_trial: markerPos = None
+108.2416 	EXP 	slider_eq_trial: rating = None
+108.2416 	EXP 	text_eq_question_trial: autoDraw = True
+108.2416 	EXP 	slider_eq_trial: autoDraw = True
+108.8687 	DATA 	Mouse: Left button down, pos=(970,325)
+108.9129 	EXP 	slider_eq_trial: markerPos = 1.9642857142857144
+108.9418 	EXP 	slider_eq_trial: markerPos = 1.9642857142857144
+108.9613 	EXP 	slider_eq_trial: markerPos = 1.9642857142857144
+108.9917 	EXP 	slider_eq_trial: markerPos = 1.9642857142857144
+109.0125 	EXP 	slider_eq_trial: markerPos = 1.9642857142857144
+109.0145 	DATA 	Mouse:  Left button up, pos=(970,325)
+109.0418 	EXP 	slider_eq_trial: markerPos = 2.0
+109.0418 	EXP 	slider_eq_trial: rating = 2.0
+109.0433 	EXP 	New trial (rep=0, index=9): OrderedDict([('item_num', 10), ('item', 'People often tell me that I went too far in driving my point home in a \n  discussion.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+109.0750 	EXP 	text_eq_question_trial: autoDraw = False
+109.0750 	EXP 	slider_eq_trial: autoDraw = False
+109.0750 	EXP 	text_eq_question_trial: text = 'People often tell me that I went too far in driving my point home in a \n  discussion.'
+109.0750 	EXP 	slider_eq_trial: markerPos = None
+109.0750 	EXP 	slider_eq_trial: markerPos = None
+109.0750 	EXP 	slider_eq_trial: rating = None
+109.0750 	EXP 	text_eq_question_trial: autoDraw = True
+109.0750 	EXP 	slider_eq_trial: autoDraw = True
+109.7284 	DATA 	Mouse: Left button down, pos=(1251,315)
+109.7581 	EXP 	slider_eq_trial: markerPos = 2.9678571428571425
+109.7787 	EXP 	slider_eq_trial: markerPos = 2.9678571428571425
+109.8083 	EXP 	slider_eq_trial: markerPos = 2.9678571428571425
+109.8289 	EXP 	slider_eq_trial: markerPos = 2.9678571428571425
+109.8582 	EXP 	slider_eq_trial: markerPos = 2.9678571428571425
+109.8602 	DATA 	Mouse:  Left button up, pos=(1251,315)
+109.8794 	EXP 	slider_eq_trial: markerPos = 3.0
+109.8794 	EXP 	slider_eq_trial: rating = 3.0
+109.8809 	EXP 	New trial (rep=0, index=10): OrderedDict([('item_num', 11), ('item', 'It doesn’t bother me too much if I am late meeting a friend.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+109.9083 	EXP 	text_eq_question_trial: autoDraw = False
+109.9083 	EXP 	slider_eq_trial: autoDraw = False
+109.9083 	EXP 	text_eq_question_trial: text = 'It doesn’t bother me too much if I am late meeting a friend.'
+109.9083 	EXP 	slider_eq_trial: markerPos = None
+109.9083 	EXP 	slider_eq_trial: markerPos = None
+109.9083 	EXP 	slider_eq_trial: rating = None
+109.9083 	EXP 	text_eq_question_trial: autoDraw = True
+109.9083 	EXP 	slider_eq_trial: autoDraw = True
+110.4099 	DATA 	Mouse: Left button down, pos=(956,327)
+110.5101 	DATA 	Mouse:  Left button up, pos=(956,327)
+110.9598 	DATA 	Mouse: Left button down, pos=(974,322)
+110.9797 	EXP 	slider_eq_trial: markerPos = 1.9821428571428572
+111.0082 	EXP 	slider_eq_trial: markerPos = 1.9821428571428572
+111.0287 	EXP 	slider_eq_trial: markerPos = 1.9821428571428572
+111.0583 	EXP 	slider_eq_trial: markerPos = 1.9821428571428572
+111.0656 	DATA 	Mouse:  Left button up, pos=(975,322)
+111.0797 	EXP 	slider_eq_trial: markerPos = 1.9821428571428572
+111.1081 	EXP 	slider_eq_trial: markerPos = 2.0
+111.1081 	EXP 	slider_eq_trial: rating = 2.0
+111.1093 	EXP 	New trial (rep=0, index=11): OrderedDict([('item_num', 12), ('item', 'Friendships and relationships are just too difficult, so I tend not to \n  bother with them.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+111.1418 	EXP 	text_eq_question_trial: autoDraw = False
+111.1418 	EXP 	slider_eq_trial: autoDraw = False
+111.1418 	EXP 	text_eq_question_trial: text = 'Friendships and relationships are just too difficult, so I tend not to \n  bother with them.'
+111.1418 	EXP 	slider_eq_trial: markerPos = None
+111.1418 	EXP 	slider_eq_trial: markerPos = None
+111.1418 	EXP 	slider_eq_trial: rating = None
+111.1418 	EXP 	text_eq_question_trial: autoDraw = True
+111.1418 	EXP 	slider_eq_trial: autoDraw = True
+111.6437 	DATA 	Mouse: Left button down, pos=(679,323)
+111.6626 	EXP 	slider_eq_trial: markerPos = 0.925
+111.6917 	EXP 	slider_eq_trial: markerPos = 0.925
+111.7124 	EXP 	slider_eq_trial: markerPos = 0.925
+111.7196 	DATA 	Mouse:  Left button up, pos=(679,323)
+111.7416 	EXP 	slider_eq_trial: markerPos = 0.925
+111.7622 	EXP 	slider_eq_trial: markerPos = 1.0
+111.7622 	EXP 	slider_eq_trial: rating = 1.0
+111.7637 	EXP 	New trial (rep=0, index=12): OrderedDict([('item_num', 13), ('item', 'I would never break a law, no matter how minor.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+111.7918 	EXP 	text_eq_question_trial: autoDraw = False
+111.7918 	EXP 	slider_eq_trial: autoDraw = False
+111.7918 	EXP 	text_eq_question_trial: text = 'I would never break a law, no matter how minor.'
+111.7918 	EXP 	slider_eq_trial: markerPos = None
+111.7918 	EXP 	slider_eq_trial: markerPos = None
+111.7918 	EXP 	slider_eq_trial: rating = None
+111.7918 	EXP 	text_eq_question_trial: autoDraw = True
+111.7918 	EXP 	slider_eq_trial: autoDraw = True
+112.4606 	DATA 	Mouse: Left button down, pos=(418,317)
+112.4915 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.5123 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.5416 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.5436 	DATA 	Mouse:  Left button up, pos=(418,317)
+112.5628 	EXP 	slider_eq_trial: markerPos = 0.0
+112.5628 	EXP 	slider_eq_trial: rating = 0.0
+112.5643 	EXP 	New trial (rep=0, index=13): OrderedDict([('item_num', 14), ('item', 'I often find it difficult to judge if something is rude or polite.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+112.5916 	EXP 	text_eq_question_trial: autoDraw = False
+112.5916 	EXP 	slider_eq_trial: autoDraw = False
+112.5916 	EXP 	text_eq_question_trial: text = 'I often find it difficult to judge if something is rude or polite.'
+112.5916 	EXP 	slider_eq_trial: markerPos = None
+112.5916 	EXP 	slider_eq_trial: markerPos = None
+112.5916 	EXP 	slider_eq_trial: rating = None
+112.5916 	EXP 	text_eq_question_trial: autoDraw = True
+112.5916 	EXP 	slider_eq_trial: autoDraw = True
+112.6435 	DATA 	Mouse: Left button down, pos=(418,317)
+112.6628 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.6916 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.7119 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.7415 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.7435 	DATA 	Mouse:  Left button up, pos=(418,317)
+112.7749 	EXP 	slider_eq_trial: markerPos = 0.0
+112.7749 	EXP 	slider_eq_trial: rating = 0.0
+112.7763 	EXP 	New trial (rep=0, index=14): OrderedDict([('item_num', 15), ('item', 'In a conversation, I tend to focus on my own thoughts rather than on what \n  my listener might be thinking.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+112.8083 	EXP 	text_eq_question_trial: autoDraw = False
+112.8083 	EXP 	slider_eq_trial: autoDraw = False
+112.8083 	EXP 	text_eq_question_trial: text = 'In a conversation, I tend to focus on my own thoughts rather than on what \n  my listener might be thinking.'
+112.8083 	EXP 	slider_eq_trial: markerPos = None
+112.8083 	EXP 	slider_eq_trial: markerPos = None
+112.8083 	EXP 	slider_eq_trial: rating = None
+112.8083 	EXP 	text_eq_question_trial: autoDraw = True
+112.8083 	EXP 	slider_eq_trial: autoDraw = True
+112.8301 	DATA 	Mouse: Left button down, pos=(418,317)
+112.8581 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.8785 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.9081 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.9288 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+112.9307 	DATA 	Mouse:  Left button up, pos=(418,317)
+112.9582 	EXP 	slider_eq_trial: markerPos = 0.0
+112.9582 	EXP 	slider_eq_trial: rating = 0.0
+112.9597 	EXP 	New trial (rep=0, index=15): OrderedDict([('item_num', 16), ('item', 'I prefer practical jokes to verbal humor.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+112.9915 	EXP 	text_eq_question_trial: autoDraw = False
+112.9915 	EXP 	slider_eq_trial: autoDraw = False
+112.9915 	EXP 	text_eq_question_trial: text = 'I prefer practical jokes to verbal humor.'
+112.9915 	EXP 	slider_eq_trial: markerPos = None
+112.9915 	EXP 	slider_eq_trial: markerPos = None
+112.9915 	EXP 	slider_eq_trial: rating = None
+112.9915 	EXP 	text_eq_question_trial: autoDraw = True
+112.9915 	EXP 	slider_eq_trial: autoDraw = True
+112.9977 	DATA 	Mouse: Left button down, pos=(418,317)
+113.0416 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.0622 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.0914 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.1120 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.1137 	DATA 	Mouse:  Left button up, pos=(418,317)
+113.1416 	EXP 	slider_eq_trial: markerPos = 0.0
+113.1416 	EXP 	slider_eq_trial: rating = 0.0
+113.1431 	EXP 	New trial (rep=0, index=16): OrderedDict([('item_num', 17), ('item', 'I live life for today rather than the future.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+113.1757 	EXP 	text_eq_question_trial: autoDraw = False
+113.1757 	EXP 	slider_eq_trial: autoDraw = False
+113.1757 	EXP 	text_eq_question_trial: text = 'I live life for today rather than the future.'
+113.1757 	EXP 	slider_eq_trial: markerPos = None
+113.1757 	EXP 	slider_eq_trial: markerPos = None
+113.1757 	EXP 	slider_eq_trial: rating = None
+113.1757 	EXP 	text_eq_question_trial: autoDraw = True
+113.1757 	EXP 	slider_eq_trial: autoDraw = True
+113.1975 	DATA 	Mouse: Left button down, pos=(418,317)
+113.2248 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.2454 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.2749 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.2950 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.2971 	DATA 	Mouse:  Left button up, pos=(418,317)
+113.3248 	EXP 	slider_eq_trial: markerPos = 0.0
+113.3248 	EXP 	slider_eq_trial: rating = 0.0
+113.3260 	EXP 	New trial (rep=0, index=17): OrderedDict([('item_num', 18), ('item', 'When I was a child, I enjoyed cutting up worms to see what would happen.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+113.3583 	EXP 	text_eq_question_trial: autoDraw = False
+113.3583 	EXP 	slider_eq_trial: autoDraw = False
+113.3583 	EXP 	text_eq_question_trial: text = 'When I was a child, I enjoyed cutting up worms to see what would happen.'
+113.3583 	EXP 	slider_eq_trial: markerPos = None
+113.3583 	EXP 	slider_eq_trial: markerPos = None
+113.3583 	EXP 	slider_eq_trial: rating = None
+113.3583 	EXP 	text_eq_question_trial: autoDraw = True
+113.3583 	EXP 	slider_eq_trial: autoDraw = True
+113.3809 	DATA 	Mouse: Left button down, pos=(418,317)
+113.4083 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.4284 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.4583 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.4781 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.4797 	DATA 	Mouse:  Left button up, pos=(418,317)
+113.5083 	EXP 	slider_eq_trial: markerPos = 0.0
+113.5083 	EXP 	slider_eq_trial: rating = 0.0
+113.5098 	EXP 	New trial (rep=0, index=18): OrderedDict([('item_num', 19), ('item', 'I can pick up quickly if someone says one thing but means another.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+113.5416 	EXP 	text_eq_question_trial: autoDraw = False
+113.5416 	EXP 	slider_eq_trial: autoDraw = False
+113.5416 	EXP 	text_eq_question_trial: text = 'I can pick up quickly if someone says one thing but means another.'
+113.5416 	EXP 	slider_eq_trial: markerPos = None
+113.5416 	EXP 	slider_eq_trial: markerPos = None
+113.5416 	EXP 	slider_eq_trial: rating = None
+113.5416 	EXP 	text_eq_question_trial: autoDraw = True
+113.5416 	EXP 	slider_eq_trial: autoDraw = True
+113.5674 	DATA 	Mouse: Left button down, pos=(418,317)
+113.6118 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.6415 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.6623 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.6692 	DATA 	Mouse:  Left button up, pos=(418,317)
+113.6915 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.7128 	EXP 	slider_eq_trial: markerPos = 0.0
+113.7128 	EXP 	slider_eq_trial: rating = 0.0
+113.7142 	EXP 	New trial (rep=0, index=19): OrderedDict([('item_num', 20), ('item', 'I tend to have very strong opinions about morality.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+113.7416 	EXP 	text_eq_question_trial: autoDraw = False
+113.7416 	EXP 	slider_eq_trial: autoDraw = False
+113.7416 	EXP 	text_eq_question_trial: text = 'I tend to have very strong opinions about morality.'
+113.7416 	EXP 	slider_eq_trial: markerPos = None
+113.7416 	EXP 	slider_eq_trial: markerPos = None
+113.7416 	EXP 	slider_eq_trial: rating = None
+113.7416 	EXP 	text_eq_question_trial: autoDraw = True
+113.7416 	EXP 	slider_eq_trial: autoDraw = True
+113.7624 	DATA 	Mouse: Left button down, pos=(418,317)
+113.7914 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.8121 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.8413 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.8619 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+113.8638 	DATA 	Mouse:  Left button up, pos=(418,317)
+113.8915 	EXP 	slider_eq_trial: markerPos = 0.0
+113.8915 	EXP 	slider_eq_trial: rating = 0.0
+113.8930 	EXP 	New trial (rep=0, index=20): OrderedDict([('item_num', 21), ('item', 'It is hard for me to see why some things upset people so much.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+113.9258 	EXP 	text_eq_question_trial: autoDraw = False
+113.9258 	EXP 	slider_eq_trial: autoDraw = False
+113.9258 	EXP 	text_eq_question_trial: text = 'It is hard for me to see why some things upset people so much.'
+113.9258 	EXP 	slider_eq_trial: markerPos = None
+113.9258 	EXP 	slider_eq_trial: markerPos = None
+113.9258 	EXP 	slider_eq_trial: rating = None
+113.9258 	EXP 	text_eq_question_trial: autoDraw = True
+113.9258 	EXP 	slider_eq_trial: autoDraw = True
+113.9476 	DATA 	Mouse: Left button down, pos=(418,317)
+113.9748 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.0082 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.0289 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.0582 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.0602 	DATA 	Mouse:  Left button up, pos=(418,317)
+114.0916 	EXP 	slider_eq_trial: markerPos = 0.0
+114.0916 	EXP 	slider_eq_trial: rating = 0.0
+114.0930 	EXP 	New trial (rep=0, index=21): OrderedDict([('item_num', 22), ('item', 'I find it easy to put myself in somebody else’s shoes.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+114.1249 	EXP 	text_eq_question_trial: autoDraw = False
+114.1249 	EXP 	slider_eq_trial: autoDraw = False
+114.1249 	EXP 	text_eq_question_trial: text = 'I find it easy to put myself in somebody else’s shoes.'
+114.1249 	EXP 	slider_eq_trial: markerPos = None
+114.1249 	EXP 	slider_eq_trial: markerPos = None
+114.1249 	EXP 	slider_eq_trial: rating = None
+114.1249 	EXP 	text_eq_question_trial: autoDraw = True
+114.1249 	EXP 	slider_eq_trial: autoDraw = True
+114.1768 	DATA 	Mouse: Left button down, pos=(418,317)
+114.1958 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.2249 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.2454 	EXP 	slider_eq_trial: markerPos = -0.0071428571428571175
+114.2474 	DATA 	Mouse:  Left button up, pos=(418,317)
+114.2748 	EXP 	slider_eq_trial: markerPos = 0.0
+114.2748 	EXP 	slider_eq_trial: rating = 0.0
+114.2763 	EXP 	New trial (rep=0, index=22): OrderedDict([('item_num', 23), ('item', 'I think that good manners are the most important thing a parent can teach \n  their child.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+114.3083 	EXP 	text_eq_question_trial: autoDraw = False
+114.3083 	EXP 	slider_eq_trial: autoDraw = False
+114.3083 	EXP 	text_eq_question_trial: text = 'I think that good manners are the most important thing a parent can teach \n  their child.'
+114.3083 	EXP 	slider_eq_trial: markerPos = None
+114.3083 	EXP 	slider_eq_trial: markerPos = None
+114.3083 	EXP 	slider_eq_trial: rating = None
+114.3083 	EXP 	text_eq_question_trial: autoDraw = True
+114.3083 	EXP 	slider_eq_trial: autoDraw = True
+114.9600 	DATA 	Mouse: Left button down, pos=(699,316)
+114.9796 	EXP 	slider_eq_trial: markerPos = 1.0
+115.0083 	EXP 	slider_eq_trial: markerPos = 1.0
+115.0284 	EXP 	slider_eq_trial: markerPos = 1.0
+115.0306 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.0583 	EXP 	slider_eq_trial: markerPos = 1.0
+115.0583 	EXP 	slider_eq_trial: rating = 1.0
+115.0594 	EXP 	New trial (rep=0, index=23): OrderedDict([('item_num', 24), ('item', 'I like to do things on the spur of the moment.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+115.0915 	EXP 	text_eq_question_trial: autoDraw = False
+115.0915 	EXP 	slider_eq_trial: autoDraw = False
+115.0915 	EXP 	text_eq_question_trial: text = 'I like to do things on the spur of the moment.'
+115.0915 	EXP 	slider_eq_trial: markerPos = None
+115.0915 	EXP 	slider_eq_trial: markerPos = None
+115.0915 	EXP 	slider_eq_trial: rating = None
+115.0915 	EXP 	text_eq_question_trial: autoDraw = True
+115.0915 	EXP 	slider_eq_trial: autoDraw = True
+115.1139 	DATA 	Mouse: Left button down, pos=(700,316)
+115.1416 	EXP 	slider_eq_trial: markerPos = 1.0
+115.1626 	EXP 	slider_eq_trial: markerPos = 1.0
+115.1916 	EXP 	slider_eq_trial: markerPos = 1.0
+115.2118 	EXP 	slider_eq_trial: markerPos = 1.0
+115.2137 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.2415 	EXP 	slider_eq_trial: markerPos = 1.0
+115.2415 	EXP 	slider_eq_trial: rating = 1.0
+115.2427 	EXP 	New trial (rep=0, index=24): OrderedDict([('item_num', 25), ('item', 'I am good at predicting how someone will feel.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+115.2751 	EXP 	text_eq_question_trial: autoDraw = False
+115.2751 	EXP 	slider_eq_trial: autoDraw = False
+115.2751 	EXP 	text_eq_question_trial: text = 'I am good at predicting how someone will feel.'
+115.2751 	EXP 	slider_eq_trial: markerPos = None
+115.2751 	EXP 	slider_eq_trial: markerPos = None
+115.2751 	EXP 	slider_eq_trial: rating = None
+115.2751 	EXP 	text_eq_question_trial: autoDraw = True
+115.2751 	EXP 	slider_eq_trial: autoDraw = True
+115.3270 	DATA 	Mouse: Left button down, pos=(700,316)
+115.3464 	EXP 	slider_eq_trial: markerPos = 1.0
+115.3750 	EXP 	slider_eq_trial: markerPos = 1.0
+115.3960 	EXP 	slider_eq_trial: markerPos = 1.0
+115.3979 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.4250 	EXP 	slider_eq_trial: markerPos = 1.0
+115.4250 	EXP 	slider_eq_trial: rating = 1.0
+115.4265 	EXP 	New trial (rep=0, index=25): OrderedDict([('item_num', 26), ('item', 'I am quick to spot when someone in a group is feeling awkward or \n  uncomfortable.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+115.4583 	EXP 	text_eq_question_trial: autoDraw = False
+115.4583 	EXP 	slider_eq_trial: autoDraw = False
+115.4583 	EXP 	text_eq_question_trial: text = 'I am quick to spot when someone in a group is feeling awkward or \n  uncomfortable.'
+115.4583 	EXP 	slider_eq_trial: markerPos = None
+115.4583 	EXP 	slider_eq_trial: markerPos = None
+115.4583 	EXP 	slider_eq_trial: rating = None
+115.4583 	EXP 	text_eq_question_trial: autoDraw = True
+115.4583 	EXP 	slider_eq_trial: autoDraw = True
+115.5102 	DATA 	Mouse: Left button down, pos=(700,316)
+115.5416 	EXP 	slider_eq_trial: markerPos = 1.0
+115.5626 	EXP 	slider_eq_trial: markerPos = 1.0
+115.5912 	EXP 	slider_eq_trial: markerPos = 1.0
+115.5925 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.6099 	EXP 	slider_eq_trial: markerPos = 1.0
+115.6099 	EXP 	slider_eq_trial: rating = 1.0
+115.6114 	EXP 	New trial (rep=0, index=26): OrderedDict([('item_num', 27), ('item', 'If I say something that someone else is offended by, I think that that’s \n  their problem, not mine.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+115.6418 	EXP 	text_eq_question_trial: autoDraw = False
+115.6418 	EXP 	slider_eq_trial: autoDraw = False
+115.6418 	EXP 	text_eq_question_trial: text = 'If I say something that someone else is offended by, I think that that’s \n  their problem, not mine.'
+115.6418 	EXP 	slider_eq_trial: markerPos = None
+115.6418 	EXP 	slider_eq_trial: markerPos = None
+115.6418 	EXP 	slider_eq_trial: rating = None
+115.6418 	EXP 	text_eq_question_trial: autoDraw = True
+115.6418 	EXP 	slider_eq_trial: autoDraw = True
+115.6642 	DATA 	Mouse: Left button down, pos=(700,316)
+115.6916 	EXP 	slider_eq_trial: markerPos = 1.0
+115.7122 	EXP 	slider_eq_trial: markerPos = 1.0
+115.7417 	EXP 	slider_eq_trial: markerPos = 1.0
+115.7620 	EXP 	slider_eq_trial: markerPos = 1.0
+115.7640 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.7917 	EXP 	slider_eq_trial: markerPos = 1.0
+115.7917 	EXP 	slider_eq_trial: rating = 1.0
+115.7932 	EXP 	New trial (rep=0, index=27): OrderedDict([('item_num', 28), ('item', 'If anyone asked me if I liked their haircut, I would reply truthfully, even \n  if I didn’t like it.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+115.8247 	EXP 	text_eq_question_trial: autoDraw = False
+115.8247 	EXP 	slider_eq_trial: autoDraw = False
+115.8247 	EXP 	text_eq_question_trial: text = 'If anyone asked me if I liked their haircut, I would reply truthfully, even \n  if I didn’t like it.'
+115.8247 	EXP 	slider_eq_trial: markerPos = None
+115.8247 	EXP 	slider_eq_trial: markerPos = None
+115.8247 	EXP 	slider_eq_trial: rating = None
+115.8247 	EXP 	text_eq_question_trial: autoDraw = True
+115.8247 	EXP 	slider_eq_trial: autoDraw = True
+115.8764 	DATA 	Mouse: Left button down, pos=(700,316)
+115.8956 	EXP 	slider_eq_trial: markerPos = 1.0
+115.9247 	EXP 	slider_eq_trial: markerPos = 1.0
+115.9435 	EXP 	slider_eq_trial: markerPos = 1.0
+115.9449 	DATA 	Mouse:  Left button up, pos=(700,316)
+115.9629 	EXP 	slider_eq_trial: markerPos = 1.0
+115.9629 	EXP 	slider_eq_trial: rating = 1.0
+115.9641 	EXP 	New trial (rep=0, index=28): OrderedDict([('item_num', 29), ('item', 'I can’t always see why someone should have felt offended by a remark.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+115.9917 	EXP 	text_eq_question_trial: autoDraw = False
+115.9917 	EXP 	slider_eq_trial: autoDraw = False
+115.9917 	EXP 	text_eq_question_trial: text = 'I can’t always see why someone should have felt offended by a remark.'
+115.9917 	EXP 	slider_eq_trial: markerPos = None
+115.9917 	EXP 	slider_eq_trial: markerPos = None
+115.9917 	EXP 	slider_eq_trial: rating = None
+115.9917 	EXP 	text_eq_question_trial: autoDraw = True
+115.9917 	EXP 	slider_eq_trial: autoDraw = True
+116.0436 	DATA 	Mouse: Left button down, pos=(700,316)
+116.0749 	EXP 	slider_eq_trial: markerPos = 1.0
+116.0943 	EXP 	slider_eq_trial: markerPos = 1.0
+116.1247 	EXP 	slider_eq_trial: markerPos = 1.0
+116.1265 	DATA 	Mouse:  Left button up, pos=(700,316)
+116.1451 	EXP 	slider_eq_trial: markerPos = 1.0
+116.1451 	EXP 	slider_eq_trial: rating = 1.0
+116.1466 	EXP 	New trial (rep=0, index=29): OrderedDict([('item_num', 30), ('item', 'People often tell me that I am very unpredictable.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+116.1750 	EXP 	text_eq_question_trial: autoDraw = False
+116.1750 	EXP 	slider_eq_trial: autoDraw = False
+116.1750 	EXP 	text_eq_question_trial: text = 'People often tell me that I am very unpredictable.'
+116.1750 	EXP 	slider_eq_trial: markerPos = None
+116.1750 	EXP 	slider_eq_trial: markerPos = None
+116.1750 	EXP 	slider_eq_trial: rating = None
+116.1750 	EXP 	text_eq_question_trial: autoDraw = True
+116.1750 	EXP 	slider_eq_trial: autoDraw = True
+116.2270 	DATA 	Mouse: Left button down, pos=(700,316)
+116.2582 	EXP 	slider_eq_trial: markerPos = 1.0
+116.2791 	EXP 	slider_eq_trial: markerPos = 1.0
+116.3082 	EXP 	slider_eq_trial: markerPos = 1.0
+116.3277 	EXP 	slider_eq_trial: markerPos = 1.0
+116.3300 	DATA 	Mouse:  Left button up, pos=(700,316)
+116.3583 	EXP 	slider_eq_trial: markerPos = 1.0
+116.3583 	EXP 	slider_eq_trial: rating = 1.0
+116.3598 	EXP 	New trial (rep=0, index=30): OrderedDict([('item_num', 31), ('item', 'I enjoy being the center of attention at any social gathering.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+116.3917 	EXP 	text_eq_question_trial: autoDraw = False
+116.3917 	EXP 	slider_eq_trial: autoDraw = False
+116.3917 	EXP 	text_eq_question_trial: text = 'I enjoy being the center of attention at any social gathering.'
+116.3917 	EXP 	slider_eq_trial: markerPos = None
+116.3917 	EXP 	slider_eq_trial: markerPos = None
+116.3917 	EXP 	slider_eq_trial: rating = None
+116.3917 	EXP 	text_eq_question_trial: autoDraw = True
+116.3917 	EXP 	slider_eq_trial: autoDraw = True
+116.4436 	DATA 	Mouse: Left button down, pos=(700,316)
+116.4749 	EXP 	slider_eq_trial: markerPos = 1.0
+116.4948 	EXP 	slider_eq_trial: markerPos = 1.0
+116.5250 	EXP 	slider_eq_trial: markerPos = 1.0
+116.5449 	EXP 	slider_eq_trial: markerPos = 1.0
+116.5469 	DATA 	Mouse:  Left button up, pos=(700,316)
+116.5750 	EXP 	slider_eq_trial: markerPos = 1.0
+116.5750 	EXP 	slider_eq_trial: rating = 1.0
+116.5765 	EXP 	New trial (rep=0, index=31): OrderedDict([('item_num', 32), ('item', 'Seeing people cry doesn’t really upset me.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+116.6082 	EXP 	text_eq_question_trial: autoDraw = False
+116.6082 	EXP 	slider_eq_trial: autoDraw = False
+116.6082 	EXP 	text_eq_question_trial: text = 'Seeing people cry doesn’t really upset me.'
+116.6082 	EXP 	slider_eq_trial: markerPos = None
+116.6082 	EXP 	slider_eq_trial: markerPos = None
+116.6082 	EXP 	slider_eq_trial: rating = None
+116.6082 	EXP 	text_eq_question_trial: autoDraw = True
+116.6082 	EXP 	slider_eq_trial: autoDraw = True
+116.6305 	DATA 	Mouse: Left button down, pos=(700,316)
+116.6582 	EXP 	slider_eq_trial: markerPos = 1.0
+116.6785 	EXP 	slider_eq_trial: markerPos = 1.0
+116.7083 	EXP 	slider_eq_trial: markerPos = 1.0
+116.7291 	EXP 	slider_eq_trial: markerPos = 1.0
+116.7310 	DATA 	Mouse:  Left button up, pos=(700,316)
+116.7582 	EXP 	slider_eq_trial: markerPos = 1.0
+116.7582 	EXP 	slider_eq_trial: rating = 1.0
+116.7597 	EXP 	New trial (rep=0, index=32): OrderedDict([('item_num', 33), ('item', 'I enjoy having discussions about politics.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+116.7917 	EXP 	text_eq_question_trial: autoDraw = False
+116.7917 	EXP 	slider_eq_trial: autoDraw = False
+116.7917 	EXP 	text_eq_question_trial: text = 'I enjoy having discussions about politics.'
+116.7917 	EXP 	slider_eq_trial: markerPos = None
+116.7917 	EXP 	slider_eq_trial: markerPos = None
+116.7917 	EXP 	slider_eq_trial: rating = None
+116.7917 	EXP 	text_eq_question_trial: autoDraw = True
+116.7917 	EXP 	slider_eq_trial: autoDraw = True
+117.4443 	DATA 	Mouse: Left button down, pos=(960,318)
+117.4750 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.4954 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.5248 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.5456 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.5476 	DATA 	Mouse:  Left button up, pos=(961,318)
+117.5750 	EXP 	slider_eq_trial: markerPos = 2.0
+117.5750 	EXP 	slider_eq_trial: rating = 2.0
+117.5764 	EXP 	New trial (rep=0, index=33): OrderedDict([('item_num', 34), ('item', 'I am very blunt, which some people take to be rudeness, even though this is \n  unintentional.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+117.6083 	EXP 	text_eq_question_trial: autoDraw = False
+117.6083 	EXP 	slider_eq_trial: autoDraw = False
+117.6083 	EXP 	text_eq_question_trial: text = 'I am very blunt, which some people take to be rudeness, even though this is \n  unintentional.'
+117.6083 	EXP 	slider_eq_trial: markerPos = None
+117.6083 	EXP 	slider_eq_trial: markerPos = None
+117.6083 	EXP 	slider_eq_trial: rating = None
+117.6083 	EXP 	text_eq_question_trial: autoDraw = True
+117.6083 	EXP 	slider_eq_trial: autoDraw = True
+117.6301 	DATA 	Mouse: Left button down, pos=(961,318)
+117.6581 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.6924 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.7127 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.7148 	DATA 	Mouse:  Left button up, pos=(961,318)
+117.7416 	EXP 	slider_eq_trial: markerPos = 2.0
+117.7416 	EXP 	slider_eq_trial: rating = 2.0
+117.7431 	EXP 	New trial (rep=0, index=34): OrderedDict([('item_num', 35), ('item', 'I don’t tend to find social situations confusing.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+117.7748 	EXP 	text_eq_question_trial: autoDraw = False
+117.7748 	EXP 	slider_eq_trial: autoDraw = False
+117.7748 	EXP 	text_eq_question_trial: text = 'I don’t tend to find social situations confusing.'
+117.7748 	EXP 	slider_eq_trial: markerPos = None
+117.7748 	EXP 	slider_eq_trial: markerPos = None
+117.7748 	EXP 	slider_eq_trial: rating = None
+117.7748 	EXP 	text_eq_question_trial: autoDraw = True
+117.7748 	EXP 	slider_eq_trial: autoDraw = True
+117.8268 	DATA 	Mouse: Left button down, pos=(961,318)
+117.8453 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.8749 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.8948 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.9248 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+117.9269 	DATA 	Mouse:  Left button up, pos=(961,318)
+117.9583 	EXP 	slider_eq_trial: markerPos = 2.0
+117.9583 	EXP 	slider_eq_trial: rating = 2.0
+117.9598 	EXP 	New trial (rep=0, index=35): OrderedDict([('item_num', 36), ('item', 'Other people tell me I am good at understanding how they are feeling and \n  what they are thinking.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+117.9916 	EXP 	text_eq_question_trial: autoDraw = False
+117.9916 	EXP 	slider_eq_trial: autoDraw = False
+117.9916 	EXP 	text_eq_question_trial: text = 'Other people tell me I am good at understanding how they are feeling and \n  what they are thinking.'
+117.9916 	EXP 	slider_eq_trial: markerPos = None
+117.9916 	EXP 	slider_eq_trial: markerPos = None
+117.9916 	EXP 	slider_eq_trial: rating = None
+117.9916 	EXP 	text_eq_question_trial: autoDraw = True
+117.9916 	EXP 	slider_eq_trial: autoDraw = True
+118.0148 	DATA 	Mouse: Left button down, pos=(961,318)
+118.0416 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.0749 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.1081 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.1102 	DATA 	Mouse:  Left button up, pos=(961,318)
+118.1416 	EXP 	slider_eq_trial: markerPos = 2.0
+118.1416 	EXP 	slider_eq_trial: rating = 2.0
+118.1431 	EXP 	New trial (rep=0, index=36): OrderedDict([('item_num', 37), ('item', 'When I talk to people, I tend to talk about their experiences rather than \n  my own.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+118.1750 	EXP 	text_eq_question_trial: autoDraw = False
+118.1750 	EXP 	slider_eq_trial: autoDraw = False
+118.1750 	EXP 	text_eq_question_trial: text = 'When I talk to people, I tend to talk about their experiences rather than \n  my own.'
+118.1750 	EXP 	slider_eq_trial: markerPos = None
+118.1750 	EXP 	slider_eq_trial: markerPos = None
+118.1750 	EXP 	slider_eq_trial: rating = None
+118.1750 	EXP 	text_eq_question_trial: autoDraw = True
+118.1750 	EXP 	slider_eq_trial: autoDraw = True
+118.2269 	DATA 	Mouse: Left button down, pos=(961,318)
+118.2582 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.2791 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.3081 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.3097 	DATA 	Mouse:  Left button up, pos=(961,318)
+118.3288 	EXP 	slider_eq_trial: markerPos = 2.0
+118.3288 	EXP 	slider_eq_trial: rating = 2.0
+118.3303 	EXP 	New trial (rep=0, index=37): OrderedDict([('item_num', 38), ('item', 'It upsets me to see an animal in pain.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+118.3584 	EXP 	text_eq_question_trial: autoDraw = False
+118.3584 	EXP 	slider_eq_trial: autoDraw = False
+118.3584 	EXP 	text_eq_question_trial: text = 'It upsets me to see an animal in pain.'
+118.3584 	EXP 	slider_eq_trial: markerPos = None
+118.3584 	EXP 	slider_eq_trial: markerPos = None
+118.3584 	EXP 	slider_eq_trial: rating = None
+118.3584 	EXP 	text_eq_question_trial: autoDraw = True
+118.3584 	EXP 	slider_eq_trial: autoDraw = True
+118.4103 	DATA 	Mouse: Left button down, pos=(961,318)
+118.4415 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.4620 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.4915 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.4936 	DATA 	Mouse:  Left button up, pos=(961,318)
+118.5249 	EXP 	slider_eq_trial: markerPos = 2.0
+118.5249 	EXP 	slider_eq_trial: rating = 2.0
+118.5261 	EXP 	New trial (rep=0, index=38): OrderedDict([('item_num', 39), ('item', 'I am able to make decisions without being influenced by people’s feelings.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+118.5582 	EXP 	text_eq_question_trial: autoDraw = False
+118.5582 	EXP 	slider_eq_trial: autoDraw = False
+118.5582 	EXP 	text_eq_question_trial: text = 'I am able to make decisions without being influenced by people’s feelings.'
+118.5582 	EXP 	slider_eq_trial: markerPos = None
+118.5582 	EXP 	slider_eq_trial: markerPos = None
+118.5582 	EXP 	slider_eq_trial: rating = None
+118.5582 	EXP 	text_eq_question_trial: autoDraw = True
+118.5582 	EXP 	slider_eq_trial: autoDraw = True
+118.5806 	DATA 	Mouse: Left button down, pos=(961,318)
+118.6082 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.6289 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.6582 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.6655 	DATA 	Mouse:  Left button up, pos=(961,318)
+118.6916 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.7248 	EXP 	slider_eq_trial: markerPos = 2.0
+118.7248 	EXP 	slider_eq_trial: rating = 2.0
+118.7263 	EXP 	New trial (rep=0, index=39): OrderedDict([('item_num', 40), ('item', 'I can’t relax until I have done everything I had planned to do that day.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+118.7584 	EXP 	text_eq_question_trial: autoDraw = False
+118.7584 	EXP 	slider_eq_trial: autoDraw = False
+118.7584 	EXP 	text_eq_question_trial: text = 'I can’t relax until I have done everything I had planned to do that day.'
+118.7584 	EXP 	slider_eq_trial: markerPos = None
+118.7584 	EXP 	slider_eq_trial: markerPos = None
+118.7584 	EXP 	slider_eq_trial: rating = None
+118.7584 	EXP 	text_eq_question_trial: autoDraw = True
+118.7584 	EXP 	slider_eq_trial: autoDraw = True
+118.7606 	DATA 	Mouse: Left button down, pos=(961,318)
+118.7795 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.8082 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.8284 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.8582 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+118.8603 	DATA 	Mouse:  Left button up, pos=(961,318)
+118.8794 	EXP 	slider_eq_trial: markerPos = 2.0
+118.8794 	EXP 	slider_eq_trial: rating = 2.0
+118.8808 	EXP 	New trial (rep=0, index=40): OrderedDict([('item_num', 41), ('item', 'I can easily tell if someone else is interested or bored with what I am \n  saying.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+118.9081 	EXP 	text_eq_question_trial: autoDraw = False
+118.9081 	EXP 	slider_eq_trial: autoDraw = False
+118.9081 	EXP 	text_eq_question_trial: text = 'I can easily tell if someone else is interested or bored with what I am \n  saying.'
+118.9081 	EXP 	slider_eq_trial: markerPos = None
+118.9081 	EXP 	slider_eq_trial: markerPos = None
+118.9081 	EXP 	slider_eq_trial: rating = None
+118.9081 	EXP 	text_eq_question_trial: autoDraw = True
+118.9081 	EXP 	slider_eq_trial: autoDraw = True
+118.9603 	DATA 	Mouse: Left button down, pos=(961,318)
+118.9915 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.0125 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.0413 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.0621 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.0641 	DATA 	Mouse:  Left button up, pos=(961,318)
+119.0913 	EXP 	slider_eq_trial: markerPos = 2.0
+119.0913 	EXP 	slider_eq_trial: rating = 2.0
+119.0928 	EXP 	New trial (rep=0, index=41): OrderedDict([('item_num', 42), ('item', 'I get upset if I see people suffering on news programmes.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+119.1251 	EXP 	text_eq_question_trial: autoDraw = False
+119.1251 	EXP 	slider_eq_trial: autoDraw = False
+119.1251 	EXP 	text_eq_question_trial: text = 'I get upset if I see people suffering on news programmes.'
+119.1251 	EXP 	slider_eq_trial: markerPos = None
+119.1251 	EXP 	slider_eq_trial: markerPos = None
+119.1251 	EXP 	slider_eq_trial: rating = None
+119.1251 	EXP 	text_eq_question_trial: autoDraw = True
+119.1251 	EXP 	slider_eq_trial: autoDraw = True
+119.1767 	DATA 	Mouse: Left button down, pos=(961,318)
+119.2081 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.2288 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.2581 	EXP 	slider_eq_trial: markerPos = 1.932142857142857
+119.2604 	DATA 	Mouse:  Left button up, pos=(961,318)
+119.2915 	EXP 	slider_eq_trial: markerPos = 2.0
+119.2915 	EXP 	slider_eq_trial: rating = 2.0
+119.2931 	EXP 	New trial (rep=0, index=42): OrderedDict([('item_num', 43), ('item', 'Friends usually talk to me about their problems as they say that I am very \n  understanding.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+119.3249 	EXP 	text_eq_question_trial: autoDraw = False
+119.3249 	EXP 	slider_eq_trial: autoDraw = False
+119.3249 	EXP 	text_eq_question_trial: text = 'Friends usually talk to me about their problems as they say that I am very \n  understanding.'
+119.3249 	EXP 	slider_eq_trial: markerPos = None
+119.3249 	EXP 	slider_eq_trial: markerPos = None
+119.3249 	EXP 	slider_eq_trial: rating = None
+119.3249 	EXP 	text_eq_question_trial: autoDraw = True
+119.3249 	EXP 	slider_eq_trial: autoDraw = True
+120.1604 	DATA 	Mouse: Left button down, pos=(1249,324)
+120.1914 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.2118 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.2136 	DATA 	Mouse:  Left button up, pos=(1249,324)
+120.2414 	EXP 	slider_eq_trial: markerPos = 3.0
+120.2414 	EXP 	slider_eq_trial: rating = 3.0
+120.2430 	EXP 	New trial (rep=0, index=43): OrderedDict([('item_num', 44), ('item', 'I can sense if I am intruding, even if the other person doesn’t tell me.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+120.2748 	EXP 	text_eq_question_trial: autoDraw = False
+120.2748 	EXP 	slider_eq_trial: autoDraw = False
+120.2748 	EXP 	text_eq_question_trial: text = 'I can sense if I am intruding, even if the other person doesn’t tell me.'
+120.2748 	EXP 	slider_eq_trial: markerPos = None
+120.2748 	EXP 	slider_eq_trial: markerPos = None
+120.2748 	EXP 	slider_eq_trial: rating = None
+120.2748 	EXP 	text_eq_question_trial: autoDraw = True
+120.2748 	EXP 	slider_eq_trial: autoDraw = True
+120.3017 	DATA 	Mouse: Left button down, pos=(1249,324)
+120.3462 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.3749 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.3951 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.4249 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.4271 	DATA 	Mouse:  Left button up, pos=(1249,324)
+120.4580 	EXP 	slider_eq_trial: markerPos = 3.0
+120.4580 	EXP 	slider_eq_trial: rating = 3.0
+120.4595 	EXP 	New trial (rep=0, index=44): OrderedDict([('item_num', 45), ('item', 'I often start new hobbies but quickly become bored with them and move on to \n  something else.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+120.4916 	EXP 	text_eq_question_trial: autoDraw = False
+120.4916 	EXP 	slider_eq_trial: autoDraw = False
+120.4916 	EXP 	text_eq_question_trial: text = 'I often start new hobbies but quickly become bored with them and move on to \n  something else.'
+120.4916 	EXP 	slider_eq_trial: markerPos = None
+120.4916 	EXP 	slider_eq_trial: markerPos = None
+120.4916 	EXP 	slider_eq_trial: rating = None
+120.4916 	EXP 	text_eq_question_trial: autoDraw = True
+120.4916 	EXP 	slider_eq_trial: autoDraw = True
+120.4938 	DATA 	Mouse: Left button down, pos=(1249,324)
+120.5127 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.5414 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.5625 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.5914 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.5935 	DATA 	Mouse:  Left button up, pos=(1249,324)
+120.6247 	EXP 	slider_eq_trial: markerPos = 3.0
+120.6247 	EXP 	slider_eq_trial: rating = 3.0
+120.6263 	EXP 	New trial (rep=0, index=45): OrderedDict([('item_num', 46), ('item', 'People sometimes tell me that I have gone too far with teasing.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+120.6583 	EXP 	text_eq_question_trial: autoDraw = False
+120.6583 	EXP 	slider_eq_trial: autoDraw = False
+120.6583 	EXP 	text_eq_question_trial: text = 'People sometimes tell me that I have gone too far with teasing.'
+120.6583 	EXP 	slider_eq_trial: markerPos = None
+120.6583 	EXP 	slider_eq_trial: markerPos = None
+120.6583 	EXP 	slider_eq_trial: rating = None
+120.6583 	EXP 	text_eq_question_trial: autoDraw = True
+120.6583 	EXP 	slider_eq_trial: autoDraw = True
+120.7103 	DATA 	Mouse: Left button down, pos=(1249,324)
+120.7413 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.7624 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.7914 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.7930 	DATA 	Mouse:  Left button up, pos=(1249,324)
+120.8123 	EXP 	slider_eq_trial: markerPos = 3.0
+120.8123 	EXP 	slider_eq_trial: rating = 3.0
+120.8141 	EXP 	New trial (rep=0, index=46): OrderedDict([('item_num', 47), ('item', 'I would be too nervous to go on a big rollercoaster.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+120.8415 	EXP 	text_eq_question_trial: autoDraw = False
+120.8415 	EXP 	slider_eq_trial: autoDraw = False
+120.8415 	EXP 	text_eq_question_trial: text = 'I would be too nervous to go on a big rollercoaster.'
+120.8415 	EXP 	slider_eq_trial: markerPos = None
+120.8415 	EXP 	slider_eq_trial: markerPos = None
+120.8415 	EXP 	slider_eq_trial: rating = None
+120.8415 	EXP 	text_eq_question_trial: autoDraw = True
+120.8415 	EXP 	slider_eq_trial: autoDraw = True
+120.8633 	DATA 	Mouse: Left button down, pos=(1249,324)
+120.8913 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.9127 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.9414 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.9616 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+120.9636 	DATA 	Mouse:  Left button up, pos=(1249,324)
+120.9912 	EXP 	slider_eq_trial: markerPos = 3.0
+120.9912 	EXP 	slider_eq_trial: rating = 3.0
+120.9927 	EXP 	New trial (rep=0, index=47): OrderedDict([('item_num', 48), ('item', 'Other people, often say that I am insensitive, though I don’t always see \n  why.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+121.0249 	EXP 	text_eq_question_trial: autoDraw = False
+121.0249 	EXP 	slider_eq_trial: autoDraw = False
+121.0249 	EXP 	text_eq_question_trial: text = 'Other people, often say that I am insensitive, though I don’t always see \n  why.'
+121.0249 	EXP 	slider_eq_trial: markerPos = None
+121.0249 	EXP 	slider_eq_trial: markerPos = None
+121.0249 	EXP 	slider_eq_trial: rating = None
+121.0249 	EXP 	text_eq_question_trial: autoDraw = True
+121.0249 	EXP 	slider_eq_trial: autoDraw = True
+121.0776 	DATA 	Mouse: Left button down, pos=(1249,324)
+121.1081 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.1285 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.1580 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.1611 	DATA 	Mouse:  Left button up, pos=(1249,324)
+121.1914 	EXP 	slider_eq_trial: markerPos = 3.0
+121.1914 	EXP 	slider_eq_trial: rating = 3.0
+121.1929 	EXP 	New trial (rep=0, index=48): OrderedDict([('item_num', 49), ('item', 'If I see a stranger in a group, I think that it is up to them to make an \n  effort to join in.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+121.2248 	EXP 	text_eq_question_trial: autoDraw = False
+121.2248 	EXP 	slider_eq_trial: autoDraw = False
+121.2248 	EXP 	text_eq_question_trial: text = 'If I see a stranger in a group, I think that it is up to them to make an \n  effort to join in.'
+121.2248 	EXP 	slider_eq_trial: markerPos = None
+121.2248 	EXP 	slider_eq_trial: markerPos = None
+121.2248 	EXP 	slider_eq_trial: rating = None
+121.2248 	EXP 	text_eq_question_trial: autoDraw = True
+121.2248 	EXP 	slider_eq_trial: autoDraw = True
+121.2514 	DATA 	Mouse: Left button down, pos=(1249,324)
+121.2955 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.3248 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.3449 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.3747 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.3768 	DATA 	Mouse:  Left button up, pos=(1249,324)
+121.3956 	EXP 	slider_eq_trial: markerPos = 3.0
+121.3956 	EXP 	slider_eq_trial: rating = 3.0
+121.3971 	EXP 	New trial (rep=0, index=49): OrderedDict([('item_num', 50), ('item', 'I usually stay emotionally detached when watching a film.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 0), ('is_disagree_score', 1)])
+121.4247 	EXP 	text_eq_question_trial: autoDraw = False
+121.4247 	EXP 	slider_eq_trial: autoDraw = False
+121.4247 	EXP 	text_eq_question_trial: text = 'I usually stay emotionally detached when watching a film.'
+121.4247 	EXP 	slider_eq_trial: markerPos = None
+121.4247 	EXP 	slider_eq_trial: markerPos = None
+121.4247 	EXP 	slider_eq_trial: rating = None
+121.4247 	EXP 	text_eq_question_trial: autoDraw = True
+121.4247 	EXP 	slider_eq_trial: autoDraw = True
+121.4472 	DATA 	Mouse: Left button down, pos=(1249,324)
+121.4747 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.4952 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.5247 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.5453 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.5471 	DATA 	Mouse:  Left button up, pos=(1249,324)
+121.5747 	EXP 	slider_eq_trial: markerPos = 3.0
+121.5747 	EXP 	slider_eq_trial: rating = 3.0
+121.5762 	EXP 	New trial (rep=0, index=50): OrderedDict([('item_num', 51), ('item', 'I like to be very organized in day-to-day life and often make lists of the \n  chores I have to do.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+121.6079 	EXP 	text_eq_question_trial: autoDraw = False
+121.6079 	EXP 	slider_eq_trial: autoDraw = False
+121.6079 	EXP 	text_eq_question_trial: text = 'I like to be very organized in day-to-day life and often make lists of the \n  chores I have to do.'
+121.6079 	EXP 	slider_eq_trial: markerPos = None
+121.6079 	EXP 	slider_eq_trial: markerPos = None
+121.6079 	EXP 	slider_eq_trial: rating = None
+121.6079 	EXP 	text_eq_question_trial: autoDraw = True
+121.6079 	EXP 	slider_eq_trial: autoDraw = True
+121.6602 	DATA 	Mouse: Left button down, pos=(1249,324)
+121.6794 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.7082 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.7291 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.7582 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.7606 	DATA 	Mouse:  Left button up, pos=(1249,324)
+121.7913 	EXP 	slider_eq_trial: markerPos = 3.0
+121.7913 	EXP 	slider_eq_trial: rating = 3.0
+121.7930 	EXP 	New trial (rep=0, index=51): OrderedDict([('item_num', 52), ('item', 'I can tune into how someone else feels rapidly and intuitively.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+121.8250 	EXP 	text_eq_question_trial: autoDraw = False
+121.8250 	EXP 	slider_eq_trial: autoDraw = False
+121.8250 	EXP 	text_eq_question_trial: text = 'I can tune into how someone else feels rapidly and intuitively.'
+121.8250 	EXP 	slider_eq_trial: markerPos = None
+121.8250 	EXP 	slider_eq_trial: markerPos = None
+121.8250 	EXP 	slider_eq_trial: rating = None
+121.8250 	EXP 	text_eq_question_trial: autoDraw = True
+121.8250 	EXP 	slider_eq_trial: autoDraw = True
+121.8481 	DATA 	Mouse: Left button down, pos=(1249,324)
+121.8748 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.8948 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.9246 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.9454 	EXP 	slider_eq_trial: markerPos = 2.960714285714286
+121.9476 	DATA 	Mouse:  Left button up, pos=(1249,324)
+121.9749 	EXP 	slider_eq_trial: markerPos = 3.0
+121.9749 	EXP 	slider_eq_trial: rating = 3.0
+121.9764 	EXP 	New trial (rep=0, index=52): OrderedDict([('item_num', 53), ('item', 'I don’t like to take risks.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+122.0082 	EXP 	text_eq_question_trial: autoDraw = False
+122.0082 	EXP 	slider_eq_trial: autoDraw = False
+122.0082 	EXP 	text_eq_question_trial: text = 'I don’t like to take risks.'
+122.0082 	EXP 	slider_eq_trial: markerPos = None
+122.0082 	EXP 	slider_eq_trial: markerPos = None
+122.0082 	EXP 	slider_eq_trial: rating = None
+122.0082 	EXP 	text_eq_question_trial: autoDraw = True
+122.0082 	EXP 	slider_eq_trial: autoDraw = True
+122.8099 	DATA 	Mouse: Left button down, pos=(979,317)
+122.8299 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+122.8579 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+122.8791 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+122.8859 	DATA 	Mouse:  Left button up, pos=(979,317)
+122.9081 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+122.9288 	EXP 	slider_eq_trial: markerPos = 2.0
+122.9288 	EXP 	slider_eq_trial: rating = 2.0
+122.9305 	EXP 	New trial (rep=0, index=53): OrderedDict([('item_num', 54), ('item', 'I can easily work out what another person might want to talk about.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+122.9582 	EXP 	text_eq_question_trial: autoDraw = False
+122.9582 	EXP 	slider_eq_trial: autoDraw = False
+122.9582 	EXP 	text_eq_question_trial: text = 'I can easily work out what another person might want to talk about.'
+122.9582 	EXP 	slider_eq_trial: markerPos = None
+122.9582 	EXP 	slider_eq_trial: markerPos = None
+122.9582 	EXP 	slider_eq_trial: rating = None
+122.9582 	EXP 	text_eq_question_trial: autoDraw = True
+122.9582 	EXP 	slider_eq_trial: autoDraw = True
+122.9652 	DATA 	Mouse: Left button down, pos=(979,317)
+123.0079 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.0415 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.0614 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.0638 	DATA 	Mouse:  Left button up, pos=(979,317)
+123.0915 	EXP 	slider_eq_trial: markerPos = 2.0
+123.0915 	EXP 	slider_eq_trial: rating = 2.0
+123.0930 	EXP 	New trial (rep=0, index=54): OrderedDict([('item_num', 55), ('item', 'I can tell if someone is masking their true emotion.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+123.1248 	EXP 	text_eq_question_trial: autoDraw = False
+123.1248 	EXP 	slider_eq_trial: autoDraw = False
+123.1248 	EXP 	text_eq_question_trial: text = 'I can tell if someone is masking their true emotion.'
+123.1248 	EXP 	slider_eq_trial: markerPos = None
+123.1248 	EXP 	slider_eq_trial: markerPos = None
+123.1248 	EXP 	slider_eq_trial: rating = None
+123.1248 	EXP 	text_eq_question_trial: autoDraw = True
+123.1248 	EXP 	slider_eq_trial: autoDraw = True
+123.1517 	DATA 	Mouse: Left button down, pos=(979,317)
+123.1950 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.2248 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.2453 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.2474 	DATA 	Mouse:  Left button up, pos=(979,317)
+123.2747 	EXP 	slider_eq_trial: markerPos = 2.0
+123.2747 	EXP 	slider_eq_trial: rating = 2.0
+123.2762 	EXP 	New trial (rep=0, index=55): OrderedDict([('item_num', 56), ('item', 'Before making a decision I always weigh up the pros and cons.'), ('is_test_item', 0), ('is_distractor', 1), ('is_agree_score', 0), ('is_disagree_score', 0)])
+123.3081 	EXP 	text_eq_question_trial: autoDraw = False
+123.3081 	EXP 	slider_eq_trial: autoDraw = False
+123.3081 	EXP 	text_eq_question_trial: text = 'Before making a decision I always weigh up the pros and cons.'
+123.3081 	EXP 	slider_eq_trial: markerPos = None
+123.3081 	EXP 	slider_eq_trial: markerPos = None
+123.3081 	EXP 	slider_eq_trial: rating = None
+123.3081 	EXP 	text_eq_question_trial: autoDraw = True
+123.3081 	EXP 	slider_eq_trial: autoDraw = True
+123.3610 	DATA 	Mouse: Left button down, pos=(979,317)
+123.3914 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.4248 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.4461 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.4486 	DATA 	Mouse:  Left button up, pos=(979,317)
+123.4747 	EXP 	slider_eq_trial: markerPos = 2.0
+123.4747 	EXP 	slider_eq_trial: rating = 2.0
+123.4764 	EXP 	New trial (rep=0, index=56): OrderedDict([('item_num', 57), ('item', 'I don’t consciously work out the rules of social situations.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+123.5079 	EXP 	text_eq_question_trial: autoDraw = False
+123.5079 	EXP 	slider_eq_trial: autoDraw = False
+123.5079 	EXP 	text_eq_question_trial: text = 'I don’t consciously work out the rules of social situations.'
+123.5079 	EXP 	slider_eq_trial: markerPos = None
+123.5079 	EXP 	slider_eq_trial: markerPos = None
+123.5079 	EXP 	slider_eq_trial: rating = None
+123.5079 	EXP 	text_eq_question_trial: autoDraw = True
+123.5079 	EXP 	slider_eq_trial: autoDraw = True
+123.5597 	DATA 	Mouse: Left button down, pos=(979,317)
+123.5791 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.6079 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.6282 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.6581 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.6601 	DATA 	Mouse:  Left button up, pos=(979,317)
+123.6915 	EXP 	slider_eq_trial: markerPos = 2.0
+123.6915 	EXP 	slider_eq_trial: rating = 2.0
+123.6933 	EXP 	New trial (rep=0, index=57): OrderedDict([('item_num', 58), ('item', 'I am good at predicting what someone will do.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+123.7246 	EXP 	text_eq_question_trial: autoDraw = False
+123.7246 	EXP 	slider_eq_trial: autoDraw = False
+123.7246 	EXP 	text_eq_question_trial: text = 'I am good at predicting what someone will do.'
+123.7246 	EXP 	slider_eq_trial: markerPos = None
+123.7246 	EXP 	slider_eq_trial: markerPos = None
+123.7246 	EXP 	slider_eq_trial: rating = None
+123.7246 	EXP 	text_eq_question_trial: autoDraw = True
+123.7246 	EXP 	slider_eq_trial: autoDraw = True
+123.7266 	DATA 	Mouse: Left button down, pos=(979,317)
+123.7457 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.7746 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.7957 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.8246 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.8311 	DATA 	Mouse:  Left button up, pos=(979,317)
+123.8452 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.8747 	EXP 	slider_eq_trial: markerPos = 2.0
+123.8747 	EXP 	slider_eq_trial: rating = 2.0
+123.8760 	EXP 	New trial (rep=0, index=58): OrderedDict([('item_num', 59), ('item', 'I tend to get emotionally involved with a friend’s problems.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+123.9082 	EXP 	text_eq_question_trial: autoDraw = False
+123.9082 	EXP 	slider_eq_trial: autoDraw = False
+123.9082 	EXP 	text_eq_question_trial: text = 'I tend to get emotionally involved with a friend’s problems.'
+123.9082 	EXP 	slider_eq_trial: markerPos = None
+123.9082 	EXP 	slider_eq_trial: markerPos = None
+123.9082 	EXP 	slider_eq_trial: rating = None
+123.9082 	EXP 	text_eq_question_trial: autoDraw = True
+123.9082 	EXP 	slider_eq_trial: autoDraw = True
+123.9308 	DATA 	Mouse: Left button down, pos=(979,317)
+123.9589 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+123.9914 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.0116 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.0413 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.0436 	DATA 	Mouse:  Left button up, pos=(979,317)
+124.0748 	EXP 	slider_eq_trial: markerPos = 2.0
+124.0748 	EXP 	slider_eq_trial: rating = 2.0
+124.0763 	EXP 	New trial (rep=0, index=59): OrderedDict([('item_num', 60), ('item', 'I can usually appreciate the other person’s viewpoint, even if I don’t \n  agree with it.'), ('is_test_item', 1), ('is_distractor', 0), ('is_agree_score', 1), ('is_disagree_score', 0)])
+124.1081 	EXP 	text_eq_question_trial: autoDraw = False
+124.1081 	EXP 	slider_eq_trial: autoDraw = False
+124.1081 	EXP 	text_eq_question_trial: text = 'I can usually appreciate the other person’s viewpoint, even if I don’t \n  agree with it.'
+124.1081 	EXP 	slider_eq_trial: markerPos = None
+124.1081 	EXP 	slider_eq_trial: markerPos = None
+124.1081 	EXP 	slider_eq_trial: rating = None
+124.1081 	EXP 	text_eq_question_trial: autoDraw = True
+124.1081 	EXP 	slider_eq_trial: autoDraw = True
+124.1299 	DATA 	Mouse: Left button down, pos=(979,317)
+124.1580 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.1792 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.2079 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.2290 	EXP 	slider_eq_trial: markerPos = 1.9964285714285714
+124.2310 	DATA 	Mouse:  Left button up, pos=(979,317)
+124.2580 	EXP 	slider_eq_trial: markerPos = 2.0
+124.2580 	EXP 	slider_eq_trial: rating = 2.0
+124.2747 	EXP 	text_eq_question_trial: autoDraw = False
+124.2747 	EXP 	slider_eq_trial: autoDraw = False
+124.6027 	EXP 	window1: mouseVisible = True
