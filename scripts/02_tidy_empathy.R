@@ -29,6 +29,7 @@ source(here::here("scripts", "01_helpers.R"))
 
 dir_ls(here("exp", "data"), regexp = "\\.csv$", ) %>%
   map_dfr(read_csv, .id = "source") %>% 
+  filter(!is.na(slider_eq_trial.response)) %>% 
   mutate(eq_response = slider_eq_trial.response, 
     score = case_when(
     is_agree_score == 1 & eq_response == "strongly agree" ~ 2, 
