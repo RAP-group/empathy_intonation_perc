@@ -2,6 +2,7 @@
 
 library("here")
 library("fs")
+library("purrr")
 library("dplyr")
 library("tidyr")
 library("readr")
