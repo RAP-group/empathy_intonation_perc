@@ -43,8 +43,8 @@ dir_ls(here("exp", "data"), regexp = "\\.csv$", ) %>%
          is_correct = key_resp_lextale_trial.corr, 
          is_incorrect = if_else(is_correct == 0, 1, 0), 
          type = case_when(
-           is_real == "real" & is_correct == 1 ~ "real_correct", 
-           is_real == "real" & is_correct == 0 ~ "real_incorrect", 
+           is_real == "real"  & is_correct == 1 ~ "real_correct", 
+           is_real == "real"  & is_correct == 0 ~ "real_incorrect", 
            is_real == "nonse" & is_correct == 1 ~ "nonse_correct", 
            is_real == "nonse" & is_correct == 0 ~ "nonse_incorrect" 
          )) %>% 
@@ -57,6 +57,6 @@ dir_ls(here("exp", "data"), regexp = "\\.csv$", ) %>%
          score_avg = score_lextale(n_real = n_real, n_nonse = n_nonse,
            n_real_correct = real_correct, n_nonse_correct = nonse_correct), 
          score_tra = score_lextale(n_real_correct = real_correct,
-           n_nonse_incorrect = nonse_incorrect))
+           n_nonse_incorrect = nonse_incorrect)) 
 
 # -----------------------------------------------------------------------------
