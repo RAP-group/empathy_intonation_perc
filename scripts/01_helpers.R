@@ -37,3 +37,21 @@ score_lextale <- function(n_real, n_nonse, n_real_correct, n_nonse_correct,
 }
 
 # -----------------------------------------------------------------------------
+
+
+
+
+# Plotting functions ----------------------------------------------------------
+
+minimal_adj <- function(...) {
+  list(
+    theme_minimal(base_size = 12, base_family = "Times"), 
+    theme(
+      axis.title.y = element_text(size = rel(.9), hjust = 0.95), 
+      axis.title.x = element_text(size = rel(.9), hjust = 0.95),
+      panel.grid.major = element_line(colour = 'grey90', size = 0.15),
+      panel.grid.minor = element_line(colour = 'grey90', size = 0.15))
+  )
+}
+
+# -----------------------------------------------------------------------------
