@@ -99,7 +99,8 @@ contributor_df <- tribble(
 
 p_project_contributors <- contributor_df%>% 
   ggplot(., aes(x = names, y = `Contributor role`)) + 
-    geom_point(aes(alpha = if_else(vals == 1, 1, 0)), show.legend = F) + 
+    geom_point(aes(alpha = if_else(vals == 1, 1, 0)), size = 3.5, pch = 18, 
+      show.legend = F) + 
     scale_x_discrete(position = "top") + 
     labs(x = "Contributors", 
          caption = "Author contributions based on CRediT taxonomy") + 
