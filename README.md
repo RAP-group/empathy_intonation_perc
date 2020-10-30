@@ -8,4 +8,10 @@ learning a new language. Specifically, we look at the role of empathy in
 the development of L2 prosody by analyzing the perception of intonation
 in questions and statements in L2 Spanish.
 
+## Project timeline
+
 ![](./figs/project_timeline.png)
+
+## Contributor roles
+
+![](./figs/project_contributors.png)
