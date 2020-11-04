@@ -57,54 +57,19 @@ p_project_timeline <- ganttrify(
 
 # Contributors plot -----------------------------------------------------------
 
-# Vector of researchers
-researchers <- c("JVC", "JGP", "NR", "KP", "LFA", "RE", "IC", "KG")
-
-# Vector of contributor roles
-contributor_roles <- c(
-  "Conceptualization", "Methodology", "Software", "Validation", 
-  "Formal analysis", "Investigation", "Resources", "Data curation", 
-  "Writing - original draft preparation", "Writing - review and editing", 
-  "Visualization", "Supervision", "Project Administration", 
-  "Funding acquisition"
+# Create df 
+contributor_list <- list(
+  "JVC" = c(1), 
+  "JGP" = c(1), 
+  "NR"  = c(1), 
+  "KP"  = c(1), 
+  "LFA" = c(1), 
+  "RE"  = c(1), 
+  "IC"  = c(1), 
+  "KG"  = c(1)
 )
 
-# Create df and tidy
-contributor_df <- tribble(
-~"Contributor role",                    ~"JVC", ~"JGP", ~"NR", ~"KP", ~"LFA", ~"RE", ~"IC", ~"KG", 
-  "Conceptualization",                       1,      1,     1,     1,      1,     1,     1,     1,
-  "Methodology",                             1,      1,     1,     1,      1,     1,     0,     0,
-  "Software",                                1,      0,     0,     0,      0,     0,     0,     0,
-  "Validation",                              1,      0,     0,     0,      0,     0,     0,     0,
-  "Formal analysis",                         1,      1,     1,     1,      1,     1,     0,     0,
-  "Investigation",                           0,      1,     1,     1,      1,     1,     0,     0,
-  "Resources",                               1,      1,     1,     1,      1,     1,     1,     1,
-  "Data curation",                           1,      0,     0,     1,      0,     0,     0,     0,
-  "Writing - original draft preparation",    1,      1,     1,     1,      1,     0,     1,     1,
-  "Writing - review and editing",            0,      1,     1,     1,      1,     1,     1,     1,
-  "Visualization",                           1,      0,     0,     0,      0,     0,     0,     0,
-  "Supervision",                             1,      0,     0,     0,      0,     0,     0,     0,
-  "Project Administration",                  1,      0,     0,     0,      0,     0,     0,     0,
-  "Funding acquisition",                     1,      0,     0,     0,      0,     0,     0,     0
-  ) %>% 
-  pivot_longer(cols = JVC:KG, names_to = "names", values_to = "vals") %>% 
-  group_by(`Contributor role`) %>% 
-  mutate(order_x = seq_along(names)) %>% 
-  group_by(names) %>% 
-  mutate(order_y = seq_along(`Contributor role`)) %>% 
-  ungroup() %>% 
-  mutate(
-    `Contributor role` = fct_reorder2(`Contributor role`, order_y, order_y),
-     names = fct_reorder(names, order_x, min))
-
-p_project_contributors <- contributor_df%>% 
-  ggplot(., aes(x = names, y = `Contributor role`)) + 
-    geom_point(aes(alpha = if_else(vals == 1, 1, 0)), size = 3.5, pch = 18, 
-      show.legend = F) + 
-    scale_x_discrete(position = "top") + 
-    labs(x = "Contributors", 
-         caption = "Author contributions based on CRediT taxonomy") + 
-    minimal_adj()
+p_project_contributors <- contributor(contributor_list)
 
 # -----------------------------------------------------------------------------
 

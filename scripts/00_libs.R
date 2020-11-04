@@ -12,5 +12,6 @@ library("writexl")
 library("glue")
 library("ggplot2")
 library("ganttrify")
+library("contributoR")
 
 # -----------------------------------------------------------------------------
