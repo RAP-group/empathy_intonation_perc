@@ -87,8 +87,9 @@ Radomization of sentences being played as auditory stimuli.
 ### Explanation of existing data
 If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.
 
-**answer text here** 
- 
+ Using existing data from Brandl, Gonzalez and Bustin- Development of intonation in L2 Spanish
+ Have stimuli from Brandl study
+ Using data from empathy influences how listeners interpret intonation by D'Imperio et al
 ### Data collection procedures*
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
