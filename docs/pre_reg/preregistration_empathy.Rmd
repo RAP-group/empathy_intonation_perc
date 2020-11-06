@@ -20,7 +20,7 @@ Description: Specifically, we look at the role of empathy in the development of 
 the perception of intonation in questions and statements in L2 Spanish.
 Contributers: *We can add those with an account at osf.io*
 
-License: attach it from file 
+License: attach it from file; MIT License
 
 Subjects: **Will select from drop-down menu** 
 
@@ -75,6 +75,7 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 If you are doing a randomized study, state how you will randomize, and at what level. Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
 Radomization of sentences being played as auditory stimuli.
 
+The order in which sets of auditory and visual stimuli are presented may be randomized.
 
 # Sampling Plan 
 
@@ -104,7 +105,8 @@ If you indicate that you will be using some data that already exist in this stud
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
 
-Not sure about this 
+
+**answer text here** 
  
 You may attach up to 5 file(s) to this question.
 
@@ -112,7 +114,7 @@ You may attach up to 5 file(s) to this question.
 
 Describe the sample size of your study. How many units will be analyzed in the study? This could be the number of people, birds, classrooms, plots, or countries included. If the units are not individuals, then describe the size requirements for each unit. If you are using a clustered or multilevel design, describe how many units are you collecting at each level of the analysis. This might be the number of samples or a range, minimum, or maximum.
 
-Sample size will be determined by how many people decide to particpate in Prolific
+**answer text here** 
  
 ### Sample size rationale
 
@@ -133,8 +135,9 @@ We don't know what this means
 ### Manipulated variables
 
 Precisely define all variables you plan to manipulate and the levels or treatment arms of each variable. This is not applicable to any observational study.
-The types of sentences they hear, Declarative vs. Interrogative 
-- Interrogative sentences: y/n or wh-questions 
+
+- Sentences (presented in auditory and visual format): delcarative and interrogative
+  - Interrogative sentences: y/n or wh-questions 
  
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
@@ -142,7 +145,7 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 
 Precisely define each variable that you will measure. This will include outcome measures, as well as any measured predictors or covariates.
 
-- Empathy Score 
+- Empathy score 
 - Proficiency level 
 
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
@@ -151,12 +154,12 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 
 If applicable, please define how measures will be combined into an index (or even a mean) and what measures will be used. Include either a formula or a precise description of the method. If you are using a more complicated statistical method to combine measures (e.g. a factor analysis), please note that here but describe the exact method in the analysis plan section.
 
-Not sure what this means 
+**answer text here** 
 
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
 # Analysis Plan 
-
+STOP+++++KSAPOJ
 ### Statistical models*
 
 What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, RMANOVA, MANOVA, multiple regression, SEM, etc) and the specification of the model. This includes each variable that will be included, all interactions, subgroup analyses, pairwise or complex contrasts, and any follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Provide enough detail so that another person could run the same analysis with the information provided. Remember that in your final article any test not included here must be noted as exploratory and that you must report the results of all tests.
