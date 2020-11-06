@@ -124,8 +124,8 @@ We don't know what this means
 ### Manipulated variables
 
 Precisely define all variables you plan to manipulate and the levels or treatment arms of each variable. This is not applicable to any observational study.
-
-**answer text here** 
+The types of sentences they hear, Declarative vs. Interrogative 
+- Interrogative sentences: y/n or wh-questions 
  
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
@@ -133,7 +133,8 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 
 Precisely define each variable that you will measure. This will include outcome measures, as well as any measured predictors or covariates.
 
-**answer text here** 
+- Empathy Score 
+- Proficiency level 
 
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
