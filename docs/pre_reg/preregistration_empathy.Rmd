@@ -29,6 +29,7 @@ Tags:
 # Study Information
 
 ### Hypotheses
+
 H1. L2 learners of Spanish with a higher empathy quotient have a higher sensitivity to intonation in 
 Spanish phrases than L2 learners of Spanish with a lower empathy quotient.
 
@@ -37,7 +38,9 @@ sensitivity and accuracy, as well as a quicker reaction time, to rising intonati
 than L2 learners of Spanish with a lower proficiency level.
 
 # Design Plan
-- Cohort Design 
+
+Cohort Design
+
 ### Study type
 
 2. Observational Study - Data is collected from study subjects that are not randomly assigned to a treatment. This includes surveys, “natural experiments,” and regression discontinuity designs.
@@ -74,7 +77,8 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 ### Randomization
 
 If you are doing a randomized study, state how you will randomize, and at what level. Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
-Radomization of sentences being played as auditory stimuli.
+
+Randomization of sentences being played as auditory stimuli.
 
 The order in which sets of auditory and visual stimuli are presented may be randomized.
 
@@ -102,6 +106,7 @@ If you indicate that you will be using some data that already exist in this stud
  Using existing data from Brandl, Gonzalez and Bustin- Development of intonation in L2 Spanish
  Have stimuli from Brandl study
  Using data from empathy influences how listeners interpret intonation by D'Imperio et al
+ 
 ### Data collection procedures*
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
@@ -111,7 +116,7 @@ Participants will be Spanish speakers of various proficiency levels.
 Participants will be recruited via Prolific (and maybe other methods).
 Participants will be compensated at a rate of ___.
 
-(attach study timeline here)
+attach study timeline here
  
 You may attach up to 5 file(s) to this question.
 
@@ -119,8 +124,8 @@ You may attach up to 5 file(s) to this question.
 
 Describe the sample size of your study. How many units will be analyzed in the study? This could be the number of people, birds, classrooms, plots, or countries included. If the units are not individuals, then describe the size requirements for each unit. If you are using a clustered or multilevel design, describe how many units are you collecting at each level of the analysis. This might be the number of samples or a range, minimum, or maximum.
 
-**answer text here** 
- 
+Not sure yet
+
 ### Sample size rationale
 
 This could include a power analysis or an arbitrary constraint such as time, money, or personnel.
@@ -133,15 +138,14 @@ If your data collection procedures do not give you full control over your exact 
 
 We don't know what this means 
 
-
 # Variables 
 
 ### Manipulated variables
 
 Precisely define all variables you plan to manipulate and the levels or treatment arms of each variable. This is not applicable to any observational study.
 
-- Sentences (presented in auditory and visual format): delcarative and interrogative
-  - Interrogative sentences: y/n or wh-questions 
+1. Sentences (presented in auditory and visual format): delcarative and interrogative
+   a. Interrogative sentences: y/n or wh-questions 
  
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
@@ -149,8 +153,8 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 
 Precisely define each variable that you will measure. This will include outcome measures, as well as any measured predictors or covariates.
 
-- Empathy score 
-- Proficiency level 
+1. Empathy score 
+2. Proficiency level 
 
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
@@ -163,7 +167,9 @@ If applicable, please define how measures will be combined into an index (or eve
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
 # Analysis Plan 
-- Don't know what this means 
+
+We don't know what this means yet
+
 ### Statistical models*
 
 What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, RMANOVA, MANOVA, multiple regression, SEM, etc) and the specification of the model. This includes each variable that will be included, all interactions, subgroup analyses, pairwise or complex contrasts, and any follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Provide enough detail so that another person could run the same analysis with the information provided. Remember that in your final article any test not included here must be noted as exploratory and that you must report the results of all tests.
