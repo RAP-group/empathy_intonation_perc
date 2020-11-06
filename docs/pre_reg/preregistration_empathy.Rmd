@@ -94,6 +94,7 @@ If you indicate that you will be using some data that already exist in this stud
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
 
+
 **answer text here** 
  
 You may attach up to 5 file(s) to this question.
@@ -107,6 +108,7 @@ Describe the sample size of your study. How many units will be analyzed in the s
 ### Sample size rationale
 
 This could include a power analysis or an arbitrary constraint such as time, money, or personnel.
+*We don't know what this means *
 
 **answer text here** 
  
@@ -114,7 +116,8 @@ This could include a power analysis or an arbitrary constraint such as time, mon
 
 If your data collection procedures do not give you full control over your exact sample size, specify how you will decide when to terminate your data collection. If you are using sequential analysis, include your pre-specified thresholds.
 
-**answer text here** 
+We don't know what this means 
+
 
 # Variables 
 
