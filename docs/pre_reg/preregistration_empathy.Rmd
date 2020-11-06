@@ -55,7 +55,7 @@ than L2 learners of Spanish with a lower proficiency level.
 
 Describe your study design. The key is to be as detailed as is necessary given the specific parameters of the design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required.
 
-**answer text here** 
+
  
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
@@ -63,8 +63,8 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 ### Randomization
 
 If you are doing a randomized study, state how you will randomize, and at what level. Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
+Radomization of sentences being played as auditory stimuli.
 
-**answer text here** 
 
 # Sampling Plan 
 
@@ -74,7 +74,7 @@ If you are doing a randomized study, state how you will randomize, and at what l
 *Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. See https://cos.io/prereg for more information.*
 
 
-1. Registration prior to creation of data 
+1. Registration prior to creation of data-- We think 
 
 2. Registration prior to any human observation of the data 
 
@@ -142,7 +142,7 @@ If applicable, please define how measures will be combined into an index (or eve
 You may attach up to 5 file(s) to this question. You may attach files that you already have in OSF Storage in this project or upload (drag and drop) a new file from your computer. Uploaded files will automatically be added to this project so that they can be registered. To attach files from other components or an add-on, first add them to this project.
 
 # Analysis Plan 
-
+STOP+++++KSAPOJ
 ### Statistical models*
 
 What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, RMANOVA, MANOVA, multiple regression, SEM, etc) and the specification of the model. This includes each variable that will be included, all interactions, subgroup analyses, pairwise or complex contrasts, and any follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Provide enough detail so that another person could run the same analysis with the information provided. Remember that in your final article any test not included here must be noted as exploratory and that you must report the results of all tests.
