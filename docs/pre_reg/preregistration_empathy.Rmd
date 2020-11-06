@@ -104,8 +104,7 @@ If you indicate that you will be using some data that already exist in this stud
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
 
-
-**answer text here** 
+Not sure about this 
  
 You may attach up to 5 file(s) to this question.
 
@@ -113,7 +112,7 @@ You may attach up to 5 file(s) to this question.
 
 Describe the sample size of your study. How many units will be analyzed in the study? This could be the number of people, birds, classrooms, plots, or countries included. If the units are not individuals, then describe the size requirements for each unit. If you are using a clustered or multilevel design, describe how many units are you collecting at each level of the analysis. This might be the number of samples or a range, minimum, or maximum.
 
-**answer text here** 
+Sample size will be determined by how many people decide to particpate in Prolific
  
 ### Sample size rationale
 
