@@ -45,7 +45,7 @@ Cohort Design
 
 2. Observational Study - Data is collected from study subjects that are not randomly assigned to a treatment. This includes surveys, “natural experiments,” and regression discontinuity designs.
 
-3. Meta-Analysis - A systematic review of published studies.
+3. Meta-Analysis - A systematic review of published studies. <!-- is this accurate? are we doing a meta-analysis? or is this referring to the lit review that we're including? -->
 
 
 ### Blinding*
@@ -59,9 +59,9 @@ Cohort Design
 
 Describe your study design. The key is to be as detailed as is necessary given the specific parameters of the design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required.
 
-Participants take the empathy quotient assessment
-Participants take a Spanish proficiency assessment
-   Assessment will ask participants to recognize on-screen text as “a word” or “not a word”
+Participants take the empathy quotient assessment <!-- Should we explain this further? Describe the task, how they'll complete it, etc. -->
+Participants take a Spanish proficiency assessment <!-- add ", the lextale. It is a measure of vocabulary knowledge that we're using as a proxy for proficiency." -->
+   Assessment will ask participants to recognize on-screen text as “a word” or “not a word” 
 Participants will distinguish between matched and mismatched auditory and visual stimuli
    Auditory stimuli: pre-recorded sentences obtained from Brandl et. al study
    Visual stimuli: sentences obtained from Brandl et. al study
@@ -78,7 +78,7 @@ You may attach up to 5 file(s) to this question. You may attach files that you a
 
 If you are doing a randomized study, state how you will randomize, and at what level. Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
 
-Randomization of sentences being played as auditory stimuli.
+Randomization of sentences being played as auditory stimuli. 
 
 The order in which sets of auditory and visual stimuli are presented may be randomized.
 
@@ -90,7 +90,7 @@ The order in which sets of auditory and visual stimuli are presented may be rand
 *Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. See https://cos.io/prereg for more information.*
 
 
-1. Registration prior to creation of data-- We think 
+1. Registration prior to creation of data-- We think <!-- This is correct (as far as I remember) -->
 
 2. Registration prior to any human observation of the data 
 
@@ -104,14 +104,14 @@ The order in which sets of auditory and visual stimuli are presented may be rand
 If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.
 
  Using existing data from Brandl, Gonzalez and Bustin- Development of intonation in L2 Spanish
- Have stimuli from Brandl study
+ Have stimuli from Brandl study <!-- Clarify that we're re-recording the sentences and its not the exact same speakers they they used but the same items -->
  Using data from empathy influences how listeners interpret intonation by D'Imperio et al
  
 ### Data collection procedures*
 
 Please describe the process by which you will collect your data and your inclusion and exclusion criteria. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool, and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
 
-We will be recruiting human participants.
+We will be recruiting human participants. 
 Participants will be Spanish speakers of various proficiency levels.
 Participants will be recruited via Prolific (and maybe other methods).
 Participants will be compensated at a rate of ___.
