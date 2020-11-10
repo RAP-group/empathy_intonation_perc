@@ -18,7 +18,7 @@ Title: The role of empathy in the perceptual development of intonation
 
 Description: Specifically, we look at the role of empathy in the development of L2 prosody by analyzing 
 the perception of intonation in questions and statements in L2 Spanish.
-Contributers: *We can add those with an account at osf.io*
+Contributors: *We can add those with an account at osf.io*
 
 License: attach it from file; MIT License
 
