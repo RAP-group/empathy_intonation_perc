@@ -1,0 +1,66 @@
+stim_n,sentence_type,condition,prompt,sentence,color
+0, , ,Instrucciones,Por favor lea las siguientes frases.,blue
+1,match,declarative_broad_focus, ,Daniel iba a Bolivia,white
+2,match,declarative_broad_focus, ,David leía el libro.,white
+3,match,declarative_broad_focus, ,Emilio ama la navidad.,white
+4,match,declarative_broad_focus, ,Mariano hablaba del agua.,white
+5,match,declarative_broad_focus, ,Ana lleva el abrigo.,white
+6,match,declarative_broad_focus, ,María bebía el vino.,white
+7,match,declarative_broad_focus, ,Olivia abre el regalo.,white
+8,match,declarative_broad_focus, ,Manuela vendía el huevo.,white
+9,match,declarative_narrow_focus,¿A dónde iba Daniel?,Daniel iba a Bolivia,blue
+10,match,declarative_narrow_focus,¿Qué leía David?,David leía el libro.,blue
+11,match,declarative_narrow_focus,¿Qué ama Emilio?,Emilio ama la navidad.,blue
+12,match,declarative_narrow_focus,¿De qué hablaba Mariano?,Mariano hablaba del agua.,blue
+13,match,declarative_narrow_focus,¿Qué lleva Ana?,Ana lleva el abrigo.,blue
+14,match,declarative_narrow_focus,¿Qué bebía María?,María bebía el vino.,blue
+15,match,declarative_narrow_focus,¿Qué abre Olivia?,Olivia abre el regalo.,blue
+16,match,declarative_narrow_focus,¿Qué vendía Manuela?,Manuela vendía el huevo.,blue
+17,match,interrogative_total_yn, ,¿Daniel iba a Bolivia?,white
+18,match,interrogative_total_yn, ,¿David leía el libro?,white
+19,match,interrogative_total_yn, ,¿Emilio ama la navidad?,white
+20,match,interrogative_total_yn, ,¿Mariano hablaba del agua?,white
+21,match,interrogative_total_yn, ,¿Ana lleva el abrigo?,white
+22,match,interrogative_total_yn, ,¿María bebía el vino?,white
+23,match,interrogative_total_yn, ,¿Olivia abre el regalo?,white
+24,match,interrogative_total_yn, ,¿Manuela vendía el huevo?,white
+25,match,interrogative_partial_wh, ,¿Por qué iba Daniel a Bolivia?,white
+26,match,interrogative_partial_wh, ,¿Cuándo leía David el libro?,white
+27,match,interrogative_partial_wh, ,¿Por qué ama Emilio la navidad?,white
+28,match,interrogative_partial_wh, ,¿Por qué hablaba Mariano del agua?,white
+29,match,interrogative_partial_wh, ,¿Cuándo lleva Ana el abrigo?,white
+30,match,interrogative_partial_wh, ,¿Cuándo bebía María el vino?,white
+31,match,interrogative_partial_wh, ,¿Por qué abre Olivia el regalo?,white
+32,match,interrogative_partial_wh, ,¿Cuándo vendía Manuela el huevo?,white
+33,mismatch,declarative_broad_focus, ,El hombre mira la luna.,white
+34,mismatch,declarative_broad_focus, ,La hermana lavaba el vidrio.,white
+35,mismatch,declarative_broad_focus, ,Mi madre llama al niñero.,white
+36,mismatch,declarative_broad_focus, ,El niño oía el río.,white
+37,mismatch,declarative_broad_focus, ,Mi abuela odia a la reina.,white
+38,mismatch,declarative_broad_focus, ,El bebé bailaba muy bien.,white
+39,mismatch,declarative_broad_focus, ,La amiga vive en Orlando.,white
+40,mismatch,declarative_broad_focus, ,Mi novio venía al lago.,white
+41,mismatch,declarative_narrow_focus,¿Qué mira el hombre?,El hombre mira la luna.,blue
+42,mismatch,declarative_narrow_focus,¿Qué lava la hermana?,La hermana lavaba el vidrio.,blue
+43,mismatch,declarative_narrow_focus,¿A quién llama tu madre?,Mi madre llama al niñero.,blue
+44,mismatch,declarative_narrow_focus,¿Qué oía el niño?,El niño oía el río.,blue
+45,mismatch,declarative_narrow_focus,¿A quién odia tu abuela?,Mi abuela odia a la reina.,blue
+46,mismatch,declarative_narrow_focus,¿Cómo bailaba el bebé? ,El bebé bailaba muy bien.,blue
+47,mismatch,declarative_narrow_focus,¿En dónde vive la amiga?,La amiga vive en Orlando.,blue
+48,mismatch,declarative_narrow_focus,¿A dónde venía tu novio?,Mi novio venía al lago.,blue
+49,mismatch,interrogative_total_yn, ,¿El hombre mira la luna?,white
+50,mismatch,interrogative_total_yn, ,¿La hermana lavaba el vidrio?,white
+51,mismatch,interrogative_total_yn, ,¿Mi madre llama al niñero?,white
+52,mismatch,interrogative_total_yn, ,¿El niño oía el río?,white
+53,mismatch,interrogative_total_yn, ,¿Mi abuela odia a la reina?,white
+54,mismatch,interrogative_total_yn, ,¿El bebé bailaba muy bien?,white
+55,mismatch,interrogative_total_yn, ,¿La amiga vive en Orlando?,white
+56,mismatch,interrogative_total_yn, ,¿Mi novio venía al lago?,white
+57,mismatch,interrogative_partial_wh, ,¿Cuándo mira el hombre la luna?,white
+58,mismatch,interrogative_partial_wh, ,¿Cuándo lavaba la hermana el vidrio?,white
+59,mismatch,interrogative_partial_wh, ,¿Cuándo llama mi madre al niñero?,white
+60,mismatch,interrogative_partial_wh, ,¿Por qué oía el niño el río?,white
+61,mismatch,interrogative_partial_wh, ,¿Por qué odia mi abuela a la reina?,white
+62,mismatch,interrogative_partial_wh, ,¿Cuándo bailaba el bebé muy bien?,white
+63,mismatch,interrogative_partial_wh, ,¿Por qué vive la amiga en Orlando?,white
+64,mismatch,interrogative_partial_wh, ,¿Por qué venía mi novio al lago?,white
