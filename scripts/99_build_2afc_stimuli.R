@@ -1,12 +1,11 @@
-# Build lexTALE trials --------------------------------------------------------
+# Build 2afc stim trials ------------------------------------------------------
 #
 # Last update: 2020/11/13
 #
 # - Create .csv and .xlsx files for the following: 
-#    - instructions
-#    - practice trials
-#    - trials
-# - Save files to exp dir
+#    - targets
+#    - filler
+# - Save files to exp/stim dir
 #
 # -----------------------------------------------------------------------------
 
