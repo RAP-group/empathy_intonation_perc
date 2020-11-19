@@ -1,304 +1,275 @@
 Open Science Pre-Registration for Empathy project
 ================
 
-# Preregistration RMarkdown
-
-We can edit this document as we make determinations in regard to the
-design of our project and prior to data collection. At least some of
-this information has overlap with the IRB.
-
-# General notes
-
-Preregistration done via Open Science: <https://osf.io/prereg/>
-
 # Registration Metadata
 
-Title: The role of empathy in the perceptual development of intonation
+**Title**: The role of empathy in the perceptual development of
+intonation
 
-Description: **answer text here**
+**Description**: Specifically, we look at the role of empathy in the
+development of L2 prosody by analyzing the perception of intonation in
+questions and statements in L2 Spanish.
 
-Contributers: *We can add those with an account at osf.io*
+**Contributors**: *to be added via osf.io*
 
-License: **answer text here**
+**Category**: Project
 
-Subjects: **Will select from drop-down menu**
+**Affiliated institutions**:
 
-Tags:
+**License**: TBD
+
+**Subjects**: Social and Behavioral Sciences
+
+**Tags**:
 
 # Study Information
 
+<!--
+Isabelle and Kim: this is some cut and paste mashup from the IRB. 
+Feel free to take whatever you want from here and use it for a 3/4 paragraph background/motivation type description of the project. (you can literally use any of it word for word, if you want, but you have free reign). Also see https://osf.io/qvjzy for an example of what this description should look like more or less. 
+
+The purpose of this project is to study the production, perception, and processing of prosody in second language acquisition. 
+This research looks at the role of individual pragmatic skills in the process of learning a new language. 
+Specifically, we look at the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
+
+The objectives of this research are twofold. 
+First, the project intends contribute to cumulative science by replicating the Brandl et al. (2020) finding demonstrating that perception and processing of L2 intonation improves in conjunction with L2 proficiency and as a function of intonation type. 
+Second, this research will extend the current findings on perceptual development to include pragmatic skills, specifically empathy. 
+
+The purpose of this project is to study the production, perception, and processing of prosody in second language acquisition. 
+This research looks at the role of individual pragmatic skills in the process of learning a new language. 
+Specifically, we look at the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
+L2 learners gradually acquire Spanish prosody as they gain proficiency in the language. 
+The extant literature shows that 'yes/no'-type questions harder to process and acquire, when compared with simple statements (Brandl et al., 2020). 
+Recent research has also shown that empathy influences language processing in how listeners interpret intonation and meaning when words are ambiguous (Esteve-Gilbert et al., 2020). 
+Specifically, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
+In short, individuals with more pragmatic skill (higher empathy) are able to use intonation to resolve temporary lexical ambiguity that can lead to confirmatory vs. contrasting interpretations. 
+This research underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension. 
+Thus, we extend this research to second language acquisition in order to determine if individual differences in pragmatic skill affect the development of intonation in L2 processing and sentence comprehension.
+-->
+
+Using existing data from Brandl, Gonzalez and Bustin- Development of
+intonation in L2 Spanish Have stimuli from Brandl study
+<!-- Clarify that we're re-recording the sentences and its not the exact same speakers they they used but the same items -->
+Using data from empathy influences how listeners interpret intonation by
+D’Imperio et al
+
 ### Hypotheses
 
-List specific, concise, and testable hypotheses. Please state if the
-hypotheses are directional or non-directional. If directional, state the
-direction. A predicted effect is also appropriate here. If a specific
-interaction or moderation is important to your research, you can list
-that as a separate hypothesis.
+H1. L2 learners of Spanish with a higher empathy quotient have a higher
+sensitivity to intonation in Spanish phrases than L2 learners of Spanish
+with a lower empathy quotient.
 
-**answer text here**
+H2. Native speakers and L2 learners of Spanish with a higher proficiency
+level have a higher sensitivity and accuracy, as well as a quicker
+reaction time, to rising intonation in Spanish phrases than L2 learners
+of Spanish with a lower proficiency level.
+
+<!-- 
+Draft but something to this effect: 
+
+Research question 1: Is perceptional development in L2 Spanish modulated by proficiency and intonation type (i.e., Brandl et al., 2020). 
+Hypothesis: Accuracy will increase and processing time will decrease as a function of proficiency and intonation type. Yes-no questions will present the most difficulty for L2 learners of Spanish.
+
+Research question 2: Do pragmatic skills modulate rate of development in L2 prosody?
+Hypothesis: Based on the findings of Esteve-Gilbert et al. (2020), we posit that prosodic development will occur sooner and at a faster rate in higher empathy individuals.
+
+-->
 
 # Design Plan
 
 ### Study type
 
-*Please check one of the following statements*
+Observational Study - Data is collected from study subjects that are not
+randomly assigned to a treatment. This includes surveys, “natural
+experiments,” and regression discontinuity designs.
 
-1.  Experiment - A researcher randomly assigns treatments to study
-    subjects, this includes field or lab experiments. This is also known
-    as an intervention experiment and includes randomized controlled
-    trials.
+### Blinding
 
-2.  Observational Study - Data is collected from study subjects that are
-    not randomly assigned to a treatment. This includes surveys,
-    “natural experiments,” and regression discontinuity designs.
-
-3.  Meta-Analysis - A systematic review of published studies.
-
-4.  Other
-
-### Blinding\*
-
-*Blinding describes who is aware of the experimental manipulations
-within a study. Mark all that apply.*
-
-1.  No blinding is involved in this study.
-
-2.  For studies that involve human subjects, they will not know the
-    treatment group to which they have been assigned.
-
-3.  Personnel who interact directly with the study subjects (either
-    human or non-human subjects) will not be aware of the assigned
-    treatments. (Commonly known as “double blind”)
-
-4.  Personnel who analyze the data collected from the study are not
-    aware of the treatment applied to any given group.
+No blinding is involved in this study.
 
 ### Is there any additional blinding in this study?
 
-Blinding (Other)
+There is no additional blinding in this study.
 
-**answer text here**
+### Study design
 
-### Study design\*
+<!--
+Describe your study design. The key is to be as detailed as is necessary given the specific parameters of the design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required.
+-->
 
-Describe your study design. The key is to be as detailed as is necessary
-given the specific parameters of the design. There may be some overlap
-between this question and the following questions. That is OK, as long
-as sufficient detail is given in one of the areas to provide all of the
-requested information. Examples include two-group, factorial, randomized
-block, and repeated measures. Is it a between (unpaired), within-subject
-(paired), or mixed design? Describe any counterbalancing required.
+Participants take the empathy quotient assessment
+<!-- Should we explain this further? Describe the task, how they'll complete it, etc. -->
+Participants take a Spanish proficiency assessment
+<!-- add ", the lextale. It is a measure of vocabulary knowledge that we're using as a proxy for proficiency." -->
 
-**answer text here**
-
-You may attach up to 5 file(s) to this question. You may attach files
-that you already have in OSF Storage in this project or upload (drag and
-drop) a new file from your computer. Uploaded files will automatically
-be added to this project so that they can be registered. To attach files
-from other components or an add-on, first add them to this project.
+Assessment will ask participants to recognize on-screen text as “a word”
+or “not a word” Participants will distinguish between matched and
+mismatched auditory and visual stimuli Auditory stimuli: pre-recorded
+sentences obtained from Brandl et. al study Visual stimuli: sentences
+obtained from Brandl et. al study Fillers: the “mismatched” ones
+(i.e. sentences that, at surface level, could be either declarative or
+interrogative) e.g. “¿Cuándo llegaron a Málaga?” vs. “Cuando llegaron a
+Málaga.” Participants will be asked to identify a match or mismatch
+between each set of auditory and visual stimuli Auditory and visual
+stimuli will/ will not (not sure which one it is) be presented
+simultaneously
 
 ### Randomization
 
-If you are doing a randomized study, state how you will randomize, and
-at what level. Typical randomization techniques include: simple, block,
-stratified, and adaptive covariate randomization. If randomization is
-required for the study, the method should be specified here, not simply
-the source of random numbers.
-
-**answer text here**
+Target items for all tasks (2AFC, LexTALE, Empathy quotient) are
+presented randomly via PsychoPy. In the case of the 2AFC task, target
+items (auditory stimuli) are drawn randomly from 8 distinct varieties of
+Spanish. No other randomization is necessary.
 
 # Sampling Plan
 
 ### Existing Data
 
-*Preregistration is designed to make clear the distinction between
-confirmatory tests, specified prior to seeing the data, and exploratory
-analyses conducted after observing the data. Therefore, creating a
-research plan in which existing data will be used presents unique
-challenges. Please select the description that best describes your
-situation. See <https://cos.io/prereg> for more information.*
-
-1.  Registration prior to creation of data
-
-2.  Registration prior to any human observation of the data
-
-3.  Registration prior to accessing the data
-
-4.  Registration prior to analysis of the data
-
-5.  Registration following analysis of the data
+Registration prior to creation of data
 
 ### Explanation of existing data
 
-If you indicate that you will be using some data that already exist in
-this study, please describe the steps you have taken to assure that you
-are unaware of any patterns or summary statistics in the data. This may
-include an explanation of how access to the data has been limited, who
-has observed the data, or how you have avoided observing any analysis of
-the specific data you will use in your study.
-
-**answer text here**
+NA
 
 ### Data collection procedures\*
 
-Please describe the process by which you will collect your data and your
-inclusion and exclusion criteria. If you are using human subjects, this
-should include the population from which you obtain subjects,
-recruitment efforts, payment for participation, how subjects will be
-selected for eligibility from the initial pool, and your study timeline.
-For studies that don’t include human subjects, include information about
-how you will collect samples, duration of data gathering efforts, source
-or location of samples, or batch numbers you will use.
-
-**answer text here**
-
-You may attach up to 5 file(s) to this question.
+We will recruit XXX human participants for this study. Participants will
+be native English speakers L2 learners of Spanish with varying levels of
+proficiency. Participants will be recruited via ProlificAC and will be
+compensated at a rate of XXX for their time.
 
 ### Sample size\*
 
-Describe the sample size of your study. How many units will be analyzed
-in the study? This could be the number of people, birds, classrooms,
-plots, or countries included. If the units are not individuals, then
-describe the size requirements for each unit. If you are using a
-clustered or multilevel design, describe how many units are you
-collecting at each level of the analysis. This might be the number of
-samples or a range, minimum, or maximum.
-
-**answer text here**
+All participants will be native speakers of American English who range
+from functionally monolingual to highly proficient in Spanish
+(bilinguals). All participants with knowledge of Spanish will be second
+language learners, operationally defined as having begun the endeavor of
+learning Spanish after the age of 13.
 
 ### Sample size rationale
 
-This could include a power analysis or an arbitrary constraint such as
-time, money, or personnel.
-
-**answer text here**
+Following Brandl et al. (2020), we assume the effect size for perceptual
+learning to be moderate in terms of the criteria set forth for L2
+research by Plonsky et al. (2015?) (D = 0.6). Based on this assumption,
+we estimate that we will need XXX participants to have and 80% chance of
+capturing the effect with a type II error rate of 5%. Our hypotheses
+related to empathy as a possible mediator of perceptual learning is
+exploratory and thus we do not base our sample size estimate on any
+parameter estimates related to this effect.
 
 ### Stopping rule
 
-If your data collection procedures do not give you full control over
-your exact sample size, specify how you will decide when to terminate
-your data collection. If you are using sequential analysis, include your
-pre-specified thresholds.
-
-**answer text here**
+We will stop data collection once XXX participants have completed all
+tasks or time runs out.
 
 # Variables
 
 ### Manipulated variables
 
-Precisely define all variables you plan to manipulate and the levels or
-treatment arms of each variable. This is not applicable to any
-observational study.
-
-**answer text here**
-
-You may attach up to 5 file(s) to this question. You may attach files
-that you already have in OSF Storage in this project or upload (drag and
-drop) a new file from your computer. Uploaded files will automatically
-be added to this project so that they can be registered. To attach files
-from other components or an add-on, first add them to this project.
+Our experiment will manipulate a ‘condition’ variable that refers to the
+sentence type. Specifically, we will present auditory stimuli that
+include declarative (broad focus, narrow focus) and interrogative
+(yes-no/polar/total, wh-/non-polar/partial) sentences. The sentence
+stimuli are audio recordings spoken by native Spanish speakers of
+different varieties.
 
 ### Measured variables\*
 
-Precisely define each variable that you will measure. This will include
-outcome measures, as well as any measured predictors or covariates.
+For the 2AFC task there are two measured variables: response and
+response time. The first outcome variable is participants’ responses to
+the auditory stimuli, i.e., if they respond ‘X’ or ‘Y’. The measured
+variable is categorical and will be coded as 0 for ‘X’ responses and 1
+for ‘Y’ responses. Th second outcome variable is participants’ response
+time, that is, the time in ms a participant takes to make a response.
 
-**answer text here**
-
-You may attach up to 5 file(s) to this question. You may attach files
-that you already have in OSF Storage in this project or upload (drag and
-drop) a new file from your computer. Uploaded files will automatically
-be added to this project so that they can be registered. To attach files
-from other components or an add-on, first add them to this project.
+Our experiment will measure vocabulary size via the LexTALE task, which
+will be used as a proxy for language proficiency and entered into our
+analysis as a continuous predictor. Finally, we will include measure of
+the construct *empathy* based on the Empathy Quotient (CITE). The
+empathy score for each participant will also be entered into our
+analysis as a continuous predictor.
 
 ### Indices
 
-If applicable, please define how measures will be combined into an index
-(or even a mean) and what measures will be used. Include either a
-formula or a precise description of the method. If you are using a more
-complicated statistical method to combine measures (e.g. a factor
-analysis), please note that here but describe the exact method in the
-analysis plan section.
-
-**answer text here**
-
-You may attach up to 5 file(s) to this question. You may attach files
-that you already have in OSF Storage in this project or upload (drag and
-drop) a new file from your computer. Uploaded files will automatically
-be added to this project so that they can be registered. To attach files
-from other components or an add-on, first add them to this project.
+NA
 
 # Analysis Plan
 
 ### Statistical models\*
 
-What statistical model will you use to test each hypothesis? Please
-include the type of model (e.g. ANOVA, RMANOVA, MANOVA, multiple
-regression, SEM, etc) and the specification of the model. This includes
-each variable that will be included, all interactions, subgroup
-analyses, pairwise or complex contrasts, and any follow-up tests from
-omnibus tests. If you plan on using any positive controls, negative
-controls, or manipulation checks you may mention that here. Provide
-enough detail so that another person could run the same analysis with
-the information provided. Remember that in your final article any test
-not included here must be noted as exploratory and that you must report
-the results of all tests.
-
-**answer text here**
-
-You may attach up to 5 file(s) to this question. You may attach files
-that you already have in OSF Storage in this project or upload (drag and
-drop) a new file from your computer. Uploaded files will automatically
-be added to this project so that they can be registered. To attach files
-from other components or an add-on, first add them to this project.
+We utilize Bayesian data analysis for statistical inferences. For the
+response data we will fit a hierarchical logistic regression model in
+which the response (‘X’, ‘Y’) is fit as a function of *condition* (broad
+focus, narrow focus, yes-no question, wh-question), *empathy* (empathy
+quotient score), and *proficiency* (LexTALE score). The random effects
+structure will include by-participant random intercepts with random
+slopes for condition, as well as random intercepts for items and speaker
+variety, i.e., `response ~ condition * empathy * proficiency + (1 +
+condition | id) + (1 | item) + (1 | speaker_variety)`. The model will
+use regularizing, weakly informative priors.
 
 ### Transformations
 
-If you plan on transforming, centering, recoding the data, or requiring
-a coding scheme for categorical variables, please describe that process.
-
-**answer text here**
+The proficiency and empathy predictors will be standardized to have a
+mean of 0 and scale 1. The *condition* predictor will be dummy coded
+with wh-questions set as the reference level.
 
 ### Inference criteria
 
-What criteria will you use to make inferences? Please describe the
-information you’ll use (e.g. specify the p-values, Bayes factors,
-specific model fit indices), as well as cut-off criterion, where
-appropriate. Will you be using one or two tailed tests for each of your
-analyses? If you are comparing multiple conditions or testing multiple
-hypotheses, will you account for this?
+We will sample the posterior distribution of the model for statistical
+inferences. A region of practical equivalence (ROPE) will be established
+around a point null value of 0 (Kruschke, 2018) using the following
+formula:
 
-**answer text here**
+\[\frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}\]
+
+For all models, median posterior point estimates are reported for each
+parameter of interest, along with the 95% highest density interval
+(HDI), the percent of the region of the HDI contained within the ROPE,
+and the maximum probability of effect (MPE). For statistical inferences,
+a posterior distribution for a parameter β in which 95% of the HDI falls
+outside the ROPE and a high MPE (i.e., values close to 1) were taken as
+compelling evidence for a given effect. The analyses will be conducted
+in R and models fit using `stan` via the R package `brms` (Bürkner,
+2018).
 
 ### Data exclusion
 
-How will you determine which data points or samples if any to exclude
-from your analyses? How will outliers be handled? Will you use any
-awareness check?
+We will exclude data according to the following criteria:
 
-**answer text here**
+  - Error during data collection
+  - Clear lack of understanding or engagement during the task, i.e., all
+    1 responses.
 
 ### Missing data
 
-How will you deal with incomplete or missing data?
-
-**answer text here**
+Our models are robust to missing data, thus no specific measures will be
+taken to account for this possibility.
 
 ### Exploratory analysis
 
-If you plan to explore your data to look for unspecified differences or
-relationships, you may include those plans here. If you list an
-exploratory test here, you are not obligated to report its results. But
-if you do report it you are obligated to describe it as an exploratory
-result.
-
-**answer text here**
+Given that the construct *empathy* is particularly understudied in SLA
+research, our analysis of this construct is exploratory in nature. Based
+on D’Imperio et al. (CITE), we posit that learners with higher empathy
+levels may be more attuned to intonational variability. Specifically, we
+hypothesize that the effect of empathy on perceptual learning will be
+additive, thus higher empathy learners may perform better on the 2AFC
+task at lower levels of proficiency.
 
 # Other
 
-If there is any additional information that you feel needs to be
-included in your preregistration, please enter it here. Literature
-cited, disclosures of any related work such as replications or work that
-uses the same data, or other helpful context would be appropriate here.
+NA
 
-**answer text here**
+# References
+
+Brandl, A., González, C., & Bustin, A. (2020). The development of
+intonation in l2 spanish: A perceptual study. In A. Morales-Front, M. J.
+Ferreira, R. P. Leow, & C. Sanz (Eds.), Hispanic linguistics: Current
+issues and new directions (pp. 12–31). John Benjamins Publishing
+Company.
+
+Baron-Cohen, S., & Wheelwright, S. (2004). The empathy quotient: An
+investigation of adults with asperger syndrome or high functioning
+autism, and normal sex differences. Journal of Autism and Developmental
+Disorders, 34(2), 163–175.
