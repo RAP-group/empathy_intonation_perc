@@ -1,0 +1,2356 @@
+0.9726 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+10.2142 	INFO 	Loaded monitor calibration from ['2019_11_06 10:16']
+12.1389 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1., 1., 1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x137a7a9e8>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x1389f0400>, multiSample=False, name='window1', numSamples=2, pos=[195.0, 75.0], screen=0, size=array([1050,  750]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.1392 	EXP 	window1: mouseVisible = True
+12.1392 	EXP 	window1: recordFrameIntervals = False
+12.3023 	EXP 	window1: recordFrameIntervals = True
+12.4555 	WARNING 	t of last frame was 32.81ms (=1/30)
+12.7896 	WARNING 	t of last frame was 21.12ms (=1/47)
+13.5040 	DEBUG 	Screen (0) actual frame rate measured at 59.38
+13.5041 	EXP 	window1: recordFrameIntervals = False
+13.6350 	EXP 	Created text_stim_stim_n = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_stim_n', opacity=1.0, ori=0, pos=array([-0.67, -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6383 	EXP 	Created text_stim_sentence_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_sentence_type', opacity=1.0, ori=0, pos=array([-0.57, -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6416 	EXP 	Created text_stim_condition = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_condition', opacity=1.0, ori=0, pos=array([ 0.  , -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6507 	EXP 	Created text_stim_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='text_stim_prompt', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6650 	EXP 	Created text_stim_sentence = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.09, italic=False, languageStyle='LTR', name='text_stim_sentence', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6932 	EXP 	Created text_stim_stim_n = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_stim_n', opacity=1.0, ori=0, pos=array([-0.67, -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.6970 	EXP 	Created text_stim_sentence_type = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_sentence_type', opacity=1.0, ori=0, pos=array([-0.57, -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.7000 	EXP 	Created text_stim_condition = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='grey', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='text_stim_condition', opacity=1.0, ori=0, pos=array([ 0.  , -0.47]), rgb=array([128., 128., 128.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.7075 	EXP 	Created text_stim_prompt = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.07, italic=False, languageStyle='LTR', name='text_stim_prompt', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.7112 	EXP 	Created text_stim_sentence = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.09, italic=False, languageStyle='LTR', name='text_stim_sentence', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+13.7394 	DEBUG 	Read csv file with pandas: trials/stim_list.csv
+13.7425 	DEBUG 	Clearing unnamed columns from trials/stim_list.csv
+13.7472 	EXP 	Imported trials/stim_list.csv as conditions, 65 conditions, 6 params
+13.7478 	EXP 	Created sequence: sequential, trialTypes=65, nReps=1, seed=None
+13.7488 	EXP 	New trial (rep=0, index=0): OrderedDict([('stim_n', 0), ('sentence_type', ' '), ('condition', ' '), ('prompt', 'Instrucciones'), ('sentence', 'Por favor lea las siguientes frases.'), ('color', 'blue')])
+13.8038 	EXP 	text_stim_stim_n: text = 0
+13.8038 	EXP 	text_stim_sentence_type: text = ' '
+13.8038 	EXP 	text_stim_condition: text = ' '
+13.8038 	EXP 	text_stim_prompt: color = 'blue (named)'
+13.8038 	EXP 	text_stim_prompt: text = 'Instrucciones'
+13.8038 	EXP 	text_stim_sentence: text = 'Por favor lea las siguientes frases.'
+13.8038 	EXP 	text_stim_stim_n: autoDraw = True
+13.8038 	EXP 	text_stim_sentence_type: autoDraw = True
+13.8038 	EXP 	text_stim_condition: autoDraw = True
+13.8038 	EXP 	text_stim_prompt: autoDraw = True
+13.8194 	EXP 	text_stim_sentence: autoDraw = True
+18.7039 	DATA 	Mouse: Left button down, pos=(1047,3)
+19.5903 	DATA 	Mouse:  Left button up, pos=(1439,-104)
+266.3468 	EXP 	New trial (rep=0, index=1): OrderedDict([('stim_n', 1), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Daniel iba a Bolivia.'), ('color', 'white')])
+266.4026 	DATA 	Keypress: right
+266.4614 	EXP 	text_stim_stim_n: autoDraw = False
+266.4614 	EXP 	text_stim_sentence_type: autoDraw = False
+266.4614 	EXP 	text_stim_condition: autoDraw = False
+266.4614 	EXP 	text_stim_prompt: autoDraw = False
+266.4614 	EXP 	text_stim_sentence: autoDraw = False
+266.4614 	EXP 	text_stim_stim_n: text = 1
+266.4614 	EXP 	text_stim_sentence_type: text = 'match'
+266.4614 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+266.4614 	EXP 	text_stim_prompt: color = 'white (named)'
+266.4614 	EXP 	text_stim_prompt: text = ' '
+266.4614 	EXP 	text_stim_sentence: text = 'Daniel iba a Bolivia.'
+266.4614 	EXP 	text_stim_stim_n: autoDraw = True
+266.4614 	EXP 	text_stim_sentence_type: autoDraw = True
+266.4614 	EXP 	text_stim_condition: autoDraw = True
+266.4614 	EXP 	text_stim_prompt: autoDraw = True
+266.4866 	EXP 	text_stim_sentence: autoDraw = True
+280.7083 	EXP 	New trial (rep=0, index=2): OrderedDict([('stim_n', 2), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'David leía el libro.'), ('color', 'white')])
+280.7276 	DATA 	Keypress: right
+280.7374 	EXP 	text_stim_stim_n: autoDraw = False
+280.7374 	EXP 	text_stim_sentence_type: autoDraw = False
+280.7374 	EXP 	text_stim_condition: autoDraw = False
+280.7374 	EXP 	text_stim_prompt: autoDraw = False
+280.7374 	EXP 	text_stim_sentence: autoDraw = False
+280.7374 	EXP 	text_stim_stim_n: text = 2
+280.7374 	EXP 	text_stim_sentence_type: text = 'match'
+280.7374 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+280.7374 	EXP 	text_stim_prompt: color = 'white (named)'
+280.7374 	EXP 	text_stim_prompt: text = ' '
+280.7374 	EXP 	text_stim_sentence: text = 'David leía el libro.'
+280.7374 	EXP 	text_stim_stim_n: autoDraw = True
+280.7374 	EXP 	text_stim_sentence_type: autoDraw = True
+280.7374 	EXP 	text_stim_condition: autoDraw = True
+280.7374 	EXP 	text_stim_prompt: autoDraw = True
+280.7711 	EXP 	text_stim_sentence: autoDraw = True
+284.6578 	EXP 	New trial (rep=0, index=3): OrderedDict([('stim_n', 3), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Emilio ama la marcha.'), ('color', 'white')])
+284.6905 	DATA 	Keypress: right
+284.7047 	EXP 	text_stim_stim_n: autoDraw = False
+284.7047 	EXP 	text_stim_sentence_type: autoDraw = False
+284.7047 	EXP 	text_stim_condition: autoDraw = False
+284.7047 	EXP 	text_stim_prompt: autoDraw = False
+284.7047 	EXP 	text_stim_sentence: autoDraw = False
+284.7047 	EXP 	text_stim_stim_n: text = 3
+284.7047 	EXP 	text_stim_sentence_type: text = 'match'
+284.7047 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+284.7047 	EXP 	text_stim_prompt: color = 'white (named)'
+284.7047 	EXP 	text_stim_prompt: text = ' '
+284.7047 	EXP 	text_stim_sentence: text = 'Emilio ama la marcha.'
+284.7047 	EXP 	text_stim_stim_n: autoDraw = True
+284.7047 	EXP 	text_stim_sentence_type: autoDraw = True
+284.7047 	EXP 	text_stim_condition: autoDraw = True
+284.7047 	EXP 	text_stim_prompt: autoDraw = True
+284.7287 	EXP 	text_stim_sentence: autoDraw = True
+288.4598 	EXP 	New trial (rep=0, index=4): OrderedDict([('stim_n', 4), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mariano habla del tiempo.'), ('color', 'white')])
+288.4809 	DATA 	Keypress: right
+288.4896 	EXP 	text_stim_stim_n: autoDraw = False
+288.4896 	EXP 	text_stim_sentence_type: autoDraw = False
+288.4896 	EXP 	text_stim_condition: autoDraw = False
+288.4896 	EXP 	text_stim_prompt: autoDraw = False
+288.4896 	EXP 	text_stim_sentence: autoDraw = False
+288.4896 	EXP 	text_stim_stim_n: text = 4
+288.4896 	EXP 	text_stim_sentence_type: text = 'match'
+288.4896 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+288.4896 	EXP 	text_stim_prompt: color = 'white (named)'
+288.4896 	EXP 	text_stim_prompt: text = ' '
+288.4896 	EXP 	text_stim_sentence: text = 'Mariano habla del tiempo.'
+288.4896 	EXP 	text_stim_stim_n: autoDraw = True
+288.4896 	EXP 	text_stim_sentence_type: autoDraw = True
+288.4896 	EXP 	text_stim_condition: autoDraw = True
+288.4896 	EXP 	text_stim_prompt: autoDraw = True
+288.5220 	EXP 	text_stim_sentence: autoDraw = True
+292.8070 	EXP 	New trial (rep=0, index=5): OrderedDict([('stim_n', 5), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Ana lleva el abrigo.'), ('color', 'white')])
+292.8289 	DATA 	Keypress: right
+292.8567 	EXP 	text_stim_stim_n: autoDraw = False
+292.8567 	EXP 	text_stim_sentence_type: autoDraw = False
+292.8567 	EXP 	text_stim_condition: autoDraw = False
+292.8567 	EXP 	text_stim_prompt: autoDraw = False
+292.8567 	EXP 	text_stim_sentence: autoDraw = False
+292.8567 	EXP 	text_stim_stim_n: text = 5
+292.8567 	EXP 	text_stim_sentence_type: text = 'match'
+292.8567 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+292.8567 	EXP 	text_stim_prompt: color = 'white (named)'
+292.8567 	EXP 	text_stim_prompt: text = ' '
+292.8567 	EXP 	text_stim_sentence: text = 'Ana lleva el abrigo.'
+292.8567 	EXP 	text_stim_stim_n: autoDraw = True
+292.8567 	EXP 	text_stim_sentence_type: autoDraw = True
+292.8567 	EXP 	text_stim_condition: autoDraw = True
+292.8567 	EXP 	text_stim_prompt: autoDraw = True
+292.8718 	EXP 	text_stim_sentence: autoDraw = True
+296.6079 	EXP 	New trial (rep=0, index=6): OrderedDict([('stim_n', 6), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'María bebe el vino.'), ('color', 'white')])
+296.6258 	DATA 	Keypress: right
+296.6475 	EXP 	text_stim_stim_n: autoDraw = False
+296.6475 	EXP 	text_stim_sentence_type: autoDraw = False
+296.6475 	EXP 	text_stim_condition: autoDraw = False
+296.6475 	EXP 	text_stim_prompt: autoDraw = False
+296.6475 	EXP 	text_stim_sentence: autoDraw = False
+296.6475 	EXP 	text_stim_stim_n: text = 6
+296.6475 	EXP 	text_stim_sentence_type: text = 'match'
+296.6475 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+296.6475 	EXP 	text_stim_prompt: color = 'white (named)'
+296.6475 	EXP 	text_stim_prompt: text = ' '
+296.6475 	EXP 	text_stim_sentence: text = 'María bebe el vino.'
+296.6475 	EXP 	text_stim_stim_n: autoDraw = True
+296.6475 	EXP 	text_stim_sentence_type: autoDraw = True
+296.6475 	EXP 	text_stim_condition: autoDraw = True
+296.6475 	EXP 	text_stim_prompt: autoDraw = True
+296.6906 	EXP 	text_stim_sentence: autoDraw = True
+300.0417 	EXP 	New trial (rep=0, index=7): OrderedDict([('stim_n', 7), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Marta abre el regalo.'), ('color', 'white')])
+300.0582 	DATA 	Keypress: right
+300.0739 	EXP 	text_stim_stim_n: autoDraw = False
+300.0739 	EXP 	text_stim_sentence_type: autoDraw = False
+300.0739 	EXP 	text_stim_condition: autoDraw = False
+300.0739 	EXP 	text_stim_prompt: autoDraw = False
+300.0739 	EXP 	text_stim_sentence: autoDraw = False
+300.0739 	EXP 	text_stim_stim_n: text = 7
+300.0739 	EXP 	text_stim_sentence_type: text = 'match'
+300.0739 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+300.0739 	EXP 	text_stim_prompt: color = 'white (named)'
+300.0739 	EXP 	text_stim_prompt: text = ' '
+300.0739 	EXP 	text_stim_sentence: text = 'Marta abre el regalo.'
+300.0739 	EXP 	text_stim_stim_n: autoDraw = True
+300.0739 	EXP 	text_stim_sentence_type: autoDraw = True
+300.0739 	EXP 	text_stim_condition: autoDraw = True
+300.0739 	EXP 	text_stim_prompt: autoDraw = True
+300.1060 	EXP 	text_stim_sentence: autoDraw = True
+304.6508 	EXP 	New trial (rep=0, index=8): OrderedDict([('stim_n', 8), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Manuela vende el carro.'), ('color', 'white')])
+304.6727 	DATA 	Keypress: right
+304.6912 	EXP 	text_stim_stim_n: autoDraw = False
+304.6912 	EXP 	text_stim_sentence_type: autoDraw = False
+304.6912 	EXP 	text_stim_condition: autoDraw = False
+304.6912 	EXP 	text_stim_prompt: autoDraw = False
+304.6912 	EXP 	text_stim_sentence: autoDraw = False
+304.6912 	EXP 	text_stim_stim_n: text = 8
+304.6912 	EXP 	text_stim_sentence_type: text = 'match'
+304.6912 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+304.6912 	EXP 	text_stim_prompt: color = 'white (named)'
+304.6912 	EXP 	text_stim_prompt: text = ' '
+304.6912 	EXP 	text_stim_sentence: text = 'Manuela vende el carro.'
+304.6912 	EXP 	text_stim_stim_n: autoDraw = True
+304.6912 	EXP 	text_stim_sentence_type: autoDraw = True
+304.6912 	EXP 	text_stim_condition: autoDraw = True
+304.6912 	EXP 	text_stim_prompt: autoDraw = True
+304.7066 	EXP 	text_stim_sentence: autoDraw = True
+308.3450 	EXP 	New trial (rep=0, index=9): OrderedDict([('stim_n', 9), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿A dónde iba Daniel?'), ('sentence', 'Daniel iba a Bolivia.'), ('color', 'blue')])
+308.3803 	DATA 	Keypress: right
+308.3895 	EXP 	text_stim_stim_n: autoDraw = False
+308.3895 	EXP 	text_stim_sentence_type: autoDraw = False
+308.3895 	EXP 	text_stim_condition: autoDraw = False
+308.3895 	EXP 	text_stim_prompt: autoDraw = False
+308.3895 	EXP 	text_stim_sentence: autoDraw = False
+308.3895 	EXP 	text_stim_stim_n: text = 9
+308.3895 	EXP 	text_stim_sentence_type: text = 'match'
+308.3895 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+308.3895 	EXP 	text_stim_prompt: color = 'blue (named)'
+308.3895 	EXP 	text_stim_prompt: text = '¿A dónde iba Daniel?'
+308.3895 	EXP 	text_stim_sentence: text = 'Daniel iba a Bolivia.'
+308.3895 	EXP 	text_stim_stim_n: autoDraw = True
+308.3895 	EXP 	text_stim_sentence_type: autoDraw = True
+308.3895 	EXP 	text_stim_condition: autoDraw = True
+308.3895 	EXP 	text_stim_prompt: autoDraw = True
+308.4403 	EXP 	text_stim_sentence: autoDraw = True
+314.2777 	EXP 	New trial (rep=0, index=10): OrderedDict([('stim_n', 10), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué leía David?'), ('sentence', 'David leía el libro.'), ('color', 'blue')])
+314.3029 	DATA 	Keypress: right
+314.3243 	EXP 	text_stim_stim_n: autoDraw = False
+314.3243 	EXP 	text_stim_sentence_type: autoDraw = False
+314.3243 	EXP 	text_stim_condition: autoDraw = False
+314.3243 	EXP 	text_stim_prompt: autoDraw = False
+314.3243 	EXP 	text_stim_sentence: autoDraw = False
+314.3243 	EXP 	text_stim_stim_n: text = 10
+314.3243 	EXP 	text_stim_sentence_type: text = 'match'
+314.3243 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+314.3243 	EXP 	text_stim_prompt: color = 'blue (named)'
+314.3243 	EXP 	text_stim_prompt: text = '¿Qué leía David?'
+314.3243 	EXP 	text_stim_sentence: text = 'David leía el libro.'
+314.3243 	EXP 	text_stim_stim_n: autoDraw = True
+314.3243 	EXP 	text_stim_sentence_type: autoDraw = True
+314.3243 	EXP 	text_stim_condition: autoDraw = True
+314.3243 	EXP 	text_stim_prompt: autoDraw = True
+314.3430 	EXP 	text_stim_sentence: autoDraw = True
+319.3944 	EXP 	New trial (rep=0, index=11): OrderedDict([('stim_n', 11), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué ama Emilio?'), ('sentence', 'Emilio ama la marcha.'), ('color', 'blue')])
+319.4144 	DATA 	Keypress: right
+319.4230 	EXP 	text_stim_stim_n: autoDraw = False
+319.4230 	EXP 	text_stim_sentence_type: autoDraw = False
+319.4230 	EXP 	text_stim_condition: autoDraw = False
+319.4230 	EXP 	text_stim_prompt: autoDraw = False
+319.4230 	EXP 	text_stim_sentence: autoDraw = False
+319.4230 	EXP 	text_stim_stim_n: text = 11
+319.4230 	EXP 	text_stim_sentence_type: text = 'match'
+319.4230 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+319.4230 	EXP 	text_stim_prompt: color = 'blue (named)'
+319.4230 	EXP 	text_stim_prompt: text = '¿Qué ama Emilio?'
+319.4230 	EXP 	text_stim_sentence: text = 'Emilio ama la marcha.'
+319.4230 	EXP 	text_stim_stim_n: autoDraw = True
+319.4230 	EXP 	text_stim_sentence_type: autoDraw = True
+319.4230 	EXP 	text_stim_condition: autoDraw = True
+319.4230 	EXP 	text_stim_prompt: autoDraw = True
+319.4581 	EXP 	text_stim_sentence: autoDraw = True
+324.0788 	EXP 	New trial (rep=0, index=12): OrderedDict([('stim_n', 12), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿De qué habla Mariano?'), ('sentence', 'Mariano habla del tiempo.'), ('color', 'blue')])
+324.1065 	DATA 	Keypress: right
+324.1250 	EXP 	text_stim_stim_n: autoDraw = False
+324.1250 	EXP 	text_stim_sentence_type: autoDraw = False
+324.1250 	EXP 	text_stim_condition: autoDraw = False
+324.1250 	EXP 	text_stim_prompt: autoDraw = False
+324.1250 	EXP 	text_stim_sentence: autoDraw = False
+324.1250 	EXP 	text_stim_stim_n: text = 12
+324.1250 	EXP 	text_stim_sentence_type: text = 'match'
+324.1250 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+324.1250 	EXP 	text_stim_prompt: color = 'blue (named)'
+324.1250 	EXP 	text_stim_prompt: text = '¿De qué habla Mariano?'
+324.1250 	EXP 	text_stim_sentence: text = 'Mariano habla del tiempo.'
+324.1250 	EXP 	text_stim_stim_n: autoDraw = True
+324.1250 	EXP 	text_stim_sentence_type: autoDraw = True
+324.1250 	EXP 	text_stim_condition: autoDraw = True
+324.1250 	EXP 	text_stim_prompt: autoDraw = True
+324.1576 	EXP 	text_stim_sentence: autoDraw = True
+329.0125 	EXP 	New trial (rep=0, index=13): OrderedDict([('stim_n', 13), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué lleva Ana?'), ('sentence', 'Ana lleva el abrigo.'), ('color', 'blue')])
+329.0355 	DATA 	Keypress: right
+329.0625 	EXP 	text_stim_stim_n: autoDraw = False
+329.0625 	EXP 	text_stim_sentence_type: autoDraw = False
+329.0625 	EXP 	text_stim_condition: autoDraw = False
+329.0625 	EXP 	text_stim_prompt: autoDraw = False
+329.0625 	EXP 	text_stim_sentence: autoDraw = False
+329.0625 	EXP 	text_stim_stim_n: text = 13
+329.0625 	EXP 	text_stim_sentence_type: text = 'match'
+329.0625 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+329.0625 	EXP 	text_stim_prompt: color = 'blue (named)'
+329.0625 	EXP 	text_stim_prompt: text = '¿Qué lleva Ana?'
+329.0625 	EXP 	text_stim_sentence: text = 'Ana lleva el abrigo.'
+329.0625 	EXP 	text_stim_stim_n: autoDraw = True
+329.0625 	EXP 	text_stim_sentence_type: autoDraw = True
+329.0625 	EXP 	text_stim_condition: autoDraw = True
+329.0625 	EXP 	text_stim_prompt: autoDraw = True
+329.0913 	EXP 	text_stim_sentence: autoDraw = True
+333.8277 	EXP 	New trial (rep=0, index=14): OrderedDict([('stim_n', 14), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué bebe María?'), ('sentence', 'María bebe el vino.'), ('color', 'blue')])
+333.8574 	DATA 	Keypress: right
+333.8764 	EXP 	text_stim_stim_n: autoDraw = False
+333.8764 	EXP 	text_stim_sentence_type: autoDraw = False
+333.8764 	EXP 	text_stim_condition: autoDraw = False
+333.8764 	EXP 	text_stim_prompt: autoDraw = False
+333.8764 	EXP 	text_stim_sentence: autoDraw = False
+333.8764 	EXP 	text_stim_stim_n: text = 14
+333.8764 	EXP 	text_stim_sentence_type: text = 'match'
+333.8764 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+333.8764 	EXP 	text_stim_prompt: color = 'blue (named)'
+333.8764 	EXP 	text_stim_prompt: text = '¿Qué bebe María?'
+333.8764 	EXP 	text_stim_sentence: text = 'María bebe el vino.'
+333.8764 	EXP 	text_stim_stim_n: autoDraw = True
+333.8764 	EXP 	text_stim_sentence_type: autoDraw = True
+333.8764 	EXP 	text_stim_condition: autoDraw = True
+333.8764 	EXP 	text_stim_prompt: autoDraw = True
+333.8916 	EXP 	text_stim_sentence: autoDraw = True
+338.4862 	EXP 	New trial (rep=0, index=15): OrderedDict([('stim_n', 15), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué abre Marta?'), ('sentence', 'Marta abre el regalo.'), ('color', 'blue')])
+338.5110 	DATA 	Keypress: right
+338.5272 	EXP 	text_stim_stim_n: autoDraw = False
+338.5272 	EXP 	text_stim_sentence_type: autoDraw = False
+338.5272 	EXP 	text_stim_condition: autoDraw = False
+338.5272 	EXP 	text_stim_prompt: autoDraw = False
+338.5272 	EXP 	text_stim_sentence: autoDraw = False
+338.5272 	EXP 	text_stim_stim_n: text = 15
+338.5272 	EXP 	text_stim_sentence_type: text = 'match'
+338.5272 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+338.5272 	EXP 	text_stim_prompt: color = 'blue (named)'
+338.5272 	EXP 	text_stim_prompt: text = '¿Qué abre Marta?'
+338.5272 	EXP 	text_stim_sentence: text = 'Marta abre el regalo.'
+338.5272 	EXP 	text_stim_stim_n: autoDraw = True
+338.5272 	EXP 	text_stim_sentence_type: autoDraw = True
+338.5272 	EXP 	text_stim_condition: autoDraw = True
+338.5272 	EXP 	text_stim_prompt: autoDraw = True
+338.5593 	EXP 	text_stim_sentence: autoDraw = True
+343.3124 	EXP 	New trial (rep=0, index=16): OrderedDict([('stim_n', 16), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué vende Manuela?'), ('sentence', 'Manuela vende el carro.'), ('color', 'blue')])
+343.3256 	DATA 	Keypress: right
+343.3429 	EXP 	text_stim_stim_n: autoDraw = False
+343.3429 	EXP 	text_stim_sentence_type: autoDraw = False
+343.3429 	EXP 	text_stim_condition: autoDraw = False
+343.3429 	EXP 	text_stim_prompt: autoDraw = False
+343.3429 	EXP 	text_stim_sentence: autoDraw = False
+343.3429 	EXP 	text_stim_stim_n: text = 16
+343.3429 	EXP 	text_stim_sentence_type: text = 'match'
+343.3429 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+343.3429 	EXP 	text_stim_prompt: color = 'blue (named)'
+343.3429 	EXP 	text_stim_prompt: text = '¿Qué vende Manuela?'
+343.3429 	EXP 	text_stim_sentence: text = 'Manuela vende el carro.'
+343.3429 	EXP 	text_stim_stim_n: autoDraw = True
+343.3429 	EXP 	text_stim_sentence_type: autoDraw = True
+343.3429 	EXP 	text_stim_condition: autoDraw = True
+343.3429 	EXP 	text_stim_prompt: autoDraw = True
+343.3933 	EXP 	text_stim_sentence: autoDraw = True
+348.2301 	EXP 	New trial (rep=0, index=17): OrderedDict([('stim_n', 17), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Daniel iba a Bolivia?'), ('color', 'white')])
+348.2745 	DATA 	Keypress: right
+348.2979 	EXP 	text_stim_stim_n: autoDraw = False
+348.2979 	EXP 	text_stim_sentence_type: autoDraw = False
+348.2979 	EXP 	text_stim_condition: autoDraw = False
+348.2979 	EXP 	text_stim_prompt: autoDraw = False
+348.2979 	EXP 	text_stim_sentence: autoDraw = False
+348.2979 	EXP 	text_stim_stim_n: text = 17
+348.2979 	EXP 	text_stim_sentence_type: text = 'match'
+348.2979 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+348.2979 	EXP 	text_stim_prompt: color = 'white (named)'
+348.2979 	EXP 	text_stim_prompt: text = ' '
+348.2979 	EXP 	text_stim_sentence: text = '¿Daniel iba a Bolivia?'
+348.2979 	EXP 	text_stim_stim_n: autoDraw = True
+348.2979 	EXP 	text_stim_sentence_type: autoDraw = True
+348.2979 	EXP 	text_stim_condition: autoDraw = True
+348.2979 	EXP 	text_stim_prompt: autoDraw = True
+348.3096 	EXP 	text_stim_sentence: autoDraw = True
+352.6783 	EXP 	New trial (rep=0, index=18): OrderedDict([('stim_n', 18), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿David leía el libro?'), ('color', 'white')])
+352.7007 	DATA 	Keypress: right
+352.7069 	EXP 	text_stim_stim_n: autoDraw = False
+352.7069 	EXP 	text_stim_sentence_type: autoDraw = False
+352.7069 	EXP 	text_stim_condition: autoDraw = False
+352.7069 	EXP 	text_stim_prompt: autoDraw = False
+352.7069 	EXP 	text_stim_sentence: autoDraw = False
+352.7069 	EXP 	text_stim_stim_n: text = 18
+352.7069 	EXP 	text_stim_sentence_type: text = 'match'
+352.7069 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+352.7069 	EXP 	text_stim_prompt: color = 'white (named)'
+352.7069 	EXP 	text_stim_prompt: text = ' '
+352.7069 	EXP 	text_stim_sentence: text = '¿David leía el libro?'
+352.7069 	EXP 	text_stim_stim_n: autoDraw = True
+352.7069 	EXP 	text_stim_sentence_type: autoDraw = True
+352.7069 	EXP 	text_stim_condition: autoDraw = True
+352.7069 	EXP 	text_stim_prompt: autoDraw = True
+352.7437 	EXP 	text_stim_sentence: autoDraw = True
+356.4296 	EXP 	New trial (rep=0, index=19): OrderedDict([('stim_n', 19), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Emilio ama la marcha?'), ('color', 'white')])
+356.4420 	DATA 	Keypress: right
+356.4606 	EXP 	text_stim_stim_n: autoDraw = False
+356.4606 	EXP 	text_stim_sentence_type: autoDraw = False
+356.4606 	EXP 	text_stim_condition: autoDraw = False
+356.4606 	EXP 	text_stim_prompt: autoDraw = False
+356.4606 	EXP 	text_stim_sentence: autoDraw = False
+356.4606 	EXP 	text_stim_stim_n: text = 19
+356.4606 	EXP 	text_stim_sentence_type: text = 'match'
+356.4606 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+356.4606 	EXP 	text_stim_prompt: color = 'white (named)'
+356.4606 	EXP 	text_stim_prompt: text = ' '
+356.4606 	EXP 	text_stim_sentence: text = '¿Emilio ama la marcha?'
+356.4606 	EXP 	text_stim_stim_n: autoDraw = True
+356.4606 	EXP 	text_stim_sentence_type: autoDraw = True
+356.4606 	EXP 	text_stim_condition: autoDraw = True
+356.4606 	EXP 	text_stim_prompt: autoDraw = True
+356.4934 	EXP 	text_stim_sentence: autoDraw = True
+359.6823 	DATA 	Keypress: right
+359.7017 	EXP 	New trial (rep=0, index=20): OrderedDict([('stim_n', 20), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mariano habla del tiempo?'), ('color', 'white')])
+359.7290 	EXP 	text_stim_stim_n: autoDraw = False
+359.7290 	EXP 	text_stim_sentence_type: autoDraw = False
+359.7290 	EXP 	text_stim_condition: autoDraw = False
+359.7290 	EXP 	text_stim_prompt: autoDraw = False
+359.7290 	EXP 	text_stim_sentence: autoDraw = False
+359.7290 	EXP 	text_stim_stim_n: text = 20
+359.7290 	EXP 	text_stim_sentence_type: text = 'match'
+359.7290 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+359.7290 	EXP 	text_stim_prompt: color = 'white (named)'
+359.7290 	EXP 	text_stim_prompt: text = ' '
+359.7290 	EXP 	text_stim_sentence: text = '¿Mariano habla del tiempo?'
+359.7290 	EXP 	text_stim_stim_n: autoDraw = True
+359.7290 	EXP 	text_stim_sentence_type: autoDraw = True
+359.7290 	EXP 	text_stim_condition: autoDraw = True
+359.7290 	EXP 	text_stim_prompt: autoDraw = True
+359.7618 	EXP 	text_stim_sentence: autoDraw = True
+363.7465 	EXP 	New trial (rep=0, index=21): OrderedDict([('stim_n', 21), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Ana lleva el abrigo?'), ('color', 'white')])
+363.7654 	DATA 	Keypress: right
+363.7767 	EXP 	text_stim_stim_n: autoDraw = False
+363.7767 	EXP 	text_stim_sentence_type: autoDraw = False
+363.7767 	EXP 	text_stim_condition: autoDraw = False
+363.7767 	EXP 	text_stim_prompt: autoDraw = False
+363.7767 	EXP 	text_stim_sentence: autoDraw = False
+363.7767 	EXP 	text_stim_stim_n: text = 21
+363.7767 	EXP 	text_stim_sentence_type: text = 'match'
+363.7767 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+363.7767 	EXP 	text_stim_prompt: color = 'white (named)'
+363.7767 	EXP 	text_stim_prompt: text = ' '
+363.7767 	EXP 	text_stim_sentence: text = '¿Ana lleva el abrigo?'
+363.7767 	EXP 	text_stim_stim_n: autoDraw = True
+363.7767 	EXP 	text_stim_sentence_type: autoDraw = True
+363.7767 	EXP 	text_stim_condition: autoDraw = True
+363.7767 	EXP 	text_stim_prompt: autoDraw = True
+363.8096 	EXP 	text_stim_sentence: autoDraw = True
+367.3323 	EXP 	New trial (rep=0, index=22): OrderedDict([('stim_n', 22), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿María bebe el vino?'), ('color', 'white')])
+367.3513 	DATA 	Keypress: right
+367.3613 	EXP 	text_stim_stim_n: autoDraw = False
+367.3613 	EXP 	text_stim_sentence_type: autoDraw = False
+367.3613 	EXP 	text_stim_condition: autoDraw = False
+367.3613 	EXP 	text_stim_prompt: autoDraw = False
+367.3613 	EXP 	text_stim_sentence: autoDraw = False
+367.3613 	EXP 	text_stim_stim_n: text = 22
+367.3613 	EXP 	text_stim_sentence_type: text = 'match'
+367.3613 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+367.3613 	EXP 	text_stim_prompt: color = 'white (named)'
+367.3613 	EXP 	text_stim_prompt: text = ' '
+367.3613 	EXP 	text_stim_sentence: text = '¿María bebe el vino?'
+367.3613 	EXP 	text_stim_stim_n: autoDraw = True
+367.3613 	EXP 	text_stim_sentence_type: autoDraw = True
+367.3613 	EXP 	text_stim_condition: autoDraw = True
+367.3613 	EXP 	text_stim_prompt: autoDraw = True
+367.3936 	EXP 	text_stim_sentence: autoDraw = True
+371.5977 	EXP 	New trial (rep=0, index=23): OrderedDict([('stim_n', 23), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Marta abre el regalo?'), ('color', 'white')])
+371.6147 	DATA 	Keypress: right
+371.6292 	EXP 	text_stim_stim_n: autoDraw = False
+371.6292 	EXP 	text_stim_sentence_type: autoDraw = False
+371.6292 	EXP 	text_stim_condition: autoDraw = False
+371.6292 	EXP 	text_stim_prompt: autoDraw = False
+371.6292 	EXP 	text_stim_sentence: autoDraw = False
+371.6292 	EXP 	text_stim_stim_n: text = 23
+371.6292 	EXP 	text_stim_sentence_type: text = 'match'
+371.6292 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+371.6292 	EXP 	text_stim_prompt: color = 'white (named)'
+371.6292 	EXP 	text_stim_prompt: text = ' '
+371.6292 	EXP 	text_stim_sentence: text = '¿Marta abre el regalo?'
+371.6292 	EXP 	text_stim_stim_n: autoDraw = True
+371.6292 	EXP 	text_stim_sentence_type: autoDraw = True
+371.6292 	EXP 	text_stim_condition: autoDraw = True
+371.6292 	EXP 	text_stim_prompt: autoDraw = True
+371.6616 	EXP 	text_stim_sentence: autoDraw = True
+375.6565 	EXP 	New trial (rep=0, index=24): OrderedDict([('stim_n', 24), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Manuela vende el carro?'), ('color', 'white')])
+375.6709 	DATA 	Keypress: right
+375.6776 	EXP 	text_stim_stim_n: autoDraw = False
+375.6776 	EXP 	text_stim_sentence_type: autoDraw = False
+375.6776 	EXP 	text_stim_condition: autoDraw = False
+375.6776 	EXP 	text_stim_prompt: autoDraw = False
+375.6776 	EXP 	text_stim_sentence: autoDraw = False
+375.6776 	EXP 	text_stim_stim_n: text = 24
+375.6776 	EXP 	text_stim_sentence_type: text = 'match'
+375.6776 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+375.6776 	EXP 	text_stim_prompt: color = 'white (named)'
+375.6776 	EXP 	text_stim_prompt: text = ' '
+375.6776 	EXP 	text_stim_sentence: text = '¿Manuela vende el carro?'
+375.6776 	EXP 	text_stim_stim_n: autoDraw = True
+375.6776 	EXP 	text_stim_sentence_type: autoDraw = True
+375.6776 	EXP 	text_stim_condition: autoDraw = True
+375.6776 	EXP 	text_stim_prompt: autoDraw = True
+375.7155 	EXP 	text_stim_sentence: autoDraw = True
+379.7817 	EXP 	New trial (rep=0, index=25): OrderedDict([('stim_n', 25), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué iba a Bolivia?'), ('color', 'white')])
+379.8184 	DATA 	Keypress: right
+379.8294 	EXP 	text_stim_stim_n: autoDraw = False
+379.8294 	EXP 	text_stim_sentence_type: autoDraw = False
+379.8294 	EXP 	text_stim_condition: autoDraw = False
+379.8294 	EXP 	text_stim_prompt: autoDraw = False
+379.8294 	EXP 	text_stim_sentence: autoDraw = False
+379.8294 	EXP 	text_stim_stim_n: text = 25
+379.8294 	EXP 	text_stim_sentence_type: text = 'match'
+379.8294 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+379.8294 	EXP 	text_stim_prompt: color = 'white (named)'
+379.8294 	EXP 	text_stim_prompt: text = ' '
+379.8294 	EXP 	text_stim_sentence: text = '¿Por qué iba a Bolivia?'
+379.8294 	EXP 	text_stim_stim_n: autoDraw = True
+379.8294 	EXP 	text_stim_sentence_type: autoDraw = True
+379.8294 	EXP 	text_stim_condition: autoDraw = True
+379.8294 	EXP 	text_stim_prompt: autoDraw = True
+379.8623 	EXP 	text_stim_sentence: autoDraw = True
+383.7146 	EXP 	New trial (rep=0, index=26): OrderedDict([('stim_n', 26), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo leía el libro?'), ('color', 'white')])
+383.7364 	DATA 	Keypress: right
+383.7455 	EXP 	text_stim_stim_n: autoDraw = False
+383.7455 	EXP 	text_stim_sentence_type: autoDraw = False
+383.7455 	EXP 	text_stim_condition: autoDraw = False
+383.7455 	EXP 	text_stim_prompt: autoDraw = False
+383.7455 	EXP 	text_stim_sentence: autoDraw = False
+383.7455 	EXP 	text_stim_stim_n: text = 26
+383.7455 	EXP 	text_stim_sentence_type: text = 'match'
+383.7455 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+383.7455 	EXP 	text_stim_prompt: color = 'white (named)'
+383.7455 	EXP 	text_stim_prompt: text = ' '
+383.7455 	EXP 	text_stim_sentence: text = '¿Cuándo leía el libro?'
+383.7455 	EXP 	text_stim_stim_n: autoDraw = True
+383.7455 	EXP 	text_stim_sentence_type: autoDraw = True
+383.7455 	EXP 	text_stim_condition: autoDraw = True
+383.7455 	EXP 	text_stim_prompt: autoDraw = True
+383.7786 	EXP 	text_stim_sentence: autoDraw = True
+386.9499 	EXP 	New trial (rep=0, index=27): OrderedDict([('stim_n', 27), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué ama la navidad?'), ('color', 'white')])
+386.9650 	DATA 	Keypress: right
+386.9799 	EXP 	text_stim_stim_n: autoDraw = False
+386.9799 	EXP 	text_stim_sentence_type: autoDraw = False
+386.9799 	EXP 	text_stim_condition: autoDraw = False
+386.9799 	EXP 	text_stim_prompt: autoDraw = False
+386.9799 	EXP 	text_stim_sentence: autoDraw = False
+386.9799 	EXP 	text_stim_stim_n: text = 27
+386.9799 	EXP 	text_stim_sentence_type: text = 'match'
+386.9799 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+386.9799 	EXP 	text_stim_prompt: color = 'white (named)'
+386.9799 	EXP 	text_stim_prompt: text = ' '
+386.9799 	EXP 	text_stim_sentence: text = '¿Por qué ama la navidad?'
+386.9799 	EXP 	text_stim_stim_n: autoDraw = True
+386.9799 	EXP 	text_stim_sentence_type: autoDraw = True
+386.9799 	EXP 	text_stim_condition: autoDraw = True
+386.9799 	EXP 	text_stim_prompt: autoDraw = True
+387.0132 	EXP 	text_stim_sentence: autoDraw = True
+390.6974 	EXP 	New trial (rep=0, index=28): OrderedDict([('stim_n', 28), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué hablaba del agua?'), ('color', 'white')])
+390.7120 	DATA 	Keypress: right
+390.7300 	EXP 	text_stim_stim_n: autoDraw = False
+390.7300 	EXP 	text_stim_sentence_type: autoDraw = False
+390.7300 	EXP 	text_stim_condition: autoDraw = False
+390.7300 	EXP 	text_stim_prompt: autoDraw = False
+390.7300 	EXP 	text_stim_sentence: autoDraw = False
+390.7300 	EXP 	text_stim_stim_n: text = 28
+390.7300 	EXP 	text_stim_sentence_type: text = 'match'
+390.7300 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+390.7300 	EXP 	text_stim_prompt: color = 'white (named)'
+390.7300 	EXP 	text_stim_prompt: text = ' '
+390.7300 	EXP 	text_stim_sentence: text = '¿Por qué hablaba del agua?'
+390.7300 	EXP 	text_stim_stim_n: autoDraw = True
+390.7300 	EXP 	text_stim_sentence_type: autoDraw = True
+390.7300 	EXP 	text_stim_condition: autoDraw = True
+390.7300 	EXP 	text_stim_prompt: autoDraw = True
+390.7618 	EXP 	text_stim_sentence: autoDraw = True
+394.9985 	EXP 	New trial (rep=0, index=29): OrderedDict([('stim_n', 29), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo lleva el abrigo?'), ('color', 'white')])
+395.0068 	DATA 	Keypress: right
+395.0307 	EXP 	text_stim_stim_n: autoDraw = False
+395.0307 	EXP 	text_stim_sentence_type: autoDraw = False
+395.0307 	EXP 	text_stim_condition: autoDraw = False
+395.0307 	EXP 	text_stim_prompt: autoDraw = False
+395.0307 	EXP 	text_stim_sentence: autoDraw = False
+395.0307 	EXP 	text_stim_stim_n: text = 29
+395.0307 	EXP 	text_stim_sentence_type: text = 'match'
+395.0307 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+395.0307 	EXP 	text_stim_prompt: color = 'white (named)'
+395.0307 	EXP 	text_stim_prompt: text = ' '
+395.0307 	EXP 	text_stim_sentence: text = '¿Cuándo lleva el abrigo?'
+395.0307 	EXP 	text_stim_stim_n: autoDraw = True
+395.0307 	EXP 	text_stim_sentence_type: autoDraw = True
+395.0307 	EXP 	text_stim_condition: autoDraw = True
+395.0307 	EXP 	text_stim_prompt: autoDraw = True
+395.0459 	EXP 	text_stim_sentence: autoDraw = True
+399.0830 	EXP 	New trial (rep=0, index=30): OrderedDict([('stim_n', 30), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo bebía el vino?'), ('color', 'white')])
+399.1005 	DATA 	Keypress: right
+399.1145 	EXP 	text_stim_stim_n: autoDraw = False
+399.1145 	EXP 	text_stim_sentence_type: autoDraw = False
+399.1145 	EXP 	text_stim_condition: autoDraw = False
+399.1145 	EXP 	text_stim_prompt: autoDraw = False
+399.1145 	EXP 	text_stim_sentence: autoDraw = False
+399.1145 	EXP 	text_stim_stim_n: text = 30
+399.1145 	EXP 	text_stim_sentence_type: text = 'match'
+399.1145 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+399.1145 	EXP 	text_stim_prompt: color = 'white (named)'
+399.1145 	EXP 	text_stim_prompt: text = ' '
+399.1145 	EXP 	text_stim_sentence: text = '¿Cuándo bebía el vino?'
+399.1145 	EXP 	text_stim_stim_n: autoDraw = True
+399.1145 	EXP 	text_stim_sentence_type: autoDraw = True
+399.1145 	EXP 	text_stim_condition: autoDraw = True
+399.1145 	EXP 	text_stim_prompt: autoDraw = True
+399.1460 	EXP 	text_stim_sentence: autoDraw = True
+402.8164 	EXP 	New trial (rep=0, index=31): OrderedDict([('stim_n', 31), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué abre el regalo?'), ('color', 'white')])
+402.8311 	DATA 	Keypress: right
+402.8490 	EXP 	text_stim_stim_n: autoDraw = False
+402.8490 	EXP 	text_stim_sentence_type: autoDraw = False
+402.8490 	EXP 	text_stim_condition: autoDraw = False
+402.8490 	EXP 	text_stim_prompt: autoDraw = False
+402.8490 	EXP 	text_stim_sentence: autoDraw = False
+402.8490 	EXP 	text_stim_stim_n: text = 31
+402.8490 	EXP 	text_stim_sentence_type: text = 'match'
+402.8490 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+402.8490 	EXP 	text_stim_prompt: color = 'white (named)'
+402.8490 	EXP 	text_stim_prompt: text = ' '
+402.8490 	EXP 	text_stim_sentence: text = '¿Por qué abre el regalo?'
+402.8490 	EXP 	text_stim_stim_n: autoDraw = True
+402.8490 	EXP 	text_stim_sentence_type: autoDraw = True
+402.8490 	EXP 	text_stim_condition: autoDraw = True
+402.8490 	EXP 	text_stim_prompt: autoDraw = True
+402.8969 	EXP 	text_stim_sentence: autoDraw = True
+407.1653 	EXP 	New trial (rep=0, index=32): OrderedDict([('stim_n', 32), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo vendía el carro?'), ('color', 'white')])
+407.1781 	DATA 	Keypress: right
+407.1970 	EXP 	text_stim_stim_n: autoDraw = False
+407.1970 	EXP 	text_stim_sentence_type: autoDraw = False
+407.1970 	EXP 	text_stim_condition: autoDraw = False
+407.1970 	EXP 	text_stim_prompt: autoDraw = False
+407.1970 	EXP 	text_stim_sentence: autoDraw = False
+407.1970 	EXP 	text_stim_stim_n: text = 32
+407.1970 	EXP 	text_stim_sentence_type: text = 'match'
+407.1970 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+407.1970 	EXP 	text_stim_prompt: color = 'white (named)'
+407.1970 	EXP 	text_stim_prompt: text = ' '
+407.1970 	EXP 	text_stim_sentence: text = '¿Cuándo vendía el carro?'
+407.1970 	EXP 	text_stim_stim_n: autoDraw = True
+407.1970 	EXP 	text_stim_sentence_type: autoDraw = True
+407.1970 	EXP 	text_stim_condition: autoDraw = True
+407.1970 	EXP 	text_stim_prompt: autoDraw = True
+407.2297 	EXP 	text_stim_sentence: autoDraw = True
+410.7328 	EXP 	New trial (rep=0, index=33): OrderedDict([('stim_n', 33), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El hombre mira la luna.'), ('color', 'white')])
+410.7654 	DATA 	Keypress: right
+410.7815 	EXP 	text_stim_stim_n: autoDraw = False
+410.7815 	EXP 	text_stim_sentence_type: autoDraw = False
+410.7815 	EXP 	text_stim_condition: autoDraw = False
+410.7815 	EXP 	text_stim_prompt: autoDraw = False
+410.7815 	EXP 	text_stim_sentence: autoDraw = False
+410.7815 	EXP 	text_stim_stim_n: text = 33
+410.7815 	EXP 	text_stim_sentence_type: text = 'mismatch'
+410.7815 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+410.7815 	EXP 	text_stim_prompt: color = 'white (named)'
+410.7815 	EXP 	text_stim_prompt: text = ' '
+410.7815 	EXP 	text_stim_sentence: text = 'El hombre mira la luna.'
+410.7815 	EXP 	text_stim_stim_n: autoDraw = True
+410.7815 	EXP 	text_stim_sentence_type: autoDraw = True
+410.7815 	EXP 	text_stim_condition: autoDraw = True
+410.7815 	EXP 	text_stim_prompt: autoDraw = True
+410.8140 	EXP 	text_stim_sentence: autoDraw = True
+414.7329 	EXP 	New trial (rep=0, index=34): OrderedDict([('stim_n', 34), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'La niña lava el plato.'), ('color', 'white')])
+414.7578 	DATA 	Keypress: right
+414.7832 	EXP 	text_stim_stim_n: autoDraw = False
+414.7832 	EXP 	text_stim_sentence_type: autoDraw = False
+414.7832 	EXP 	text_stim_condition: autoDraw = False
+414.7832 	EXP 	text_stim_prompt: autoDraw = False
+414.7832 	EXP 	text_stim_sentence: autoDraw = False
+414.7832 	EXP 	text_stim_stim_n: text = 34
+414.7832 	EXP 	text_stim_sentence_type: text = 'mismatch'
+414.7832 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+414.7832 	EXP 	text_stim_prompt: color = 'white (named)'
+414.7832 	EXP 	text_stim_prompt: text = ' '
+414.7832 	EXP 	text_stim_sentence: text = 'La niña lava el plato.'
+414.7832 	EXP 	text_stim_stim_n: autoDraw = True
+414.7832 	EXP 	text_stim_sentence_type: autoDraw = True
+414.7832 	EXP 	text_stim_condition: autoDraw = True
+414.7832 	EXP 	text_stim_prompt: autoDraw = True
+414.7979 	EXP 	text_stim_sentence: autoDraw = True
+418.1015 	EXP 	New trial (rep=0, index=35): OrderedDict([('stim_n', 35), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi madre come la fruta.'), ('color', 'white')])
+418.1184 	DATA 	Keypress: right
+418.1493 	EXP 	text_stim_stim_n: autoDraw = False
+418.1493 	EXP 	text_stim_sentence_type: autoDraw = False
+418.1493 	EXP 	text_stim_condition: autoDraw = False
+418.1493 	EXP 	text_stim_prompt: autoDraw = False
+418.1493 	EXP 	text_stim_sentence: autoDraw = False
+418.1493 	EXP 	text_stim_stim_n: text = 35
+418.1493 	EXP 	text_stim_sentence_type: text = 'mismatch'
+418.1493 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+418.1493 	EXP 	text_stim_prompt: color = 'white (named)'
+418.1493 	EXP 	text_stim_prompt: text = ' '
+418.1493 	EXP 	text_stim_sentence: text = 'Mi madre come la fruta.'
+418.1493 	EXP 	text_stim_stim_n: autoDraw = True
+418.1493 	EXP 	text_stim_sentence_type: autoDraw = True
+418.1493 	EXP 	text_stim_condition: autoDraw = True
+418.1493 	EXP 	text_stim_prompt: autoDraw = True
+418.1628 	EXP 	text_stim_sentence: autoDraw = True
+421.9568 	DATA 	Keypress: right
+421.9663 	EXP 	New trial (rep=0, index=36): OrderedDict([('stim_n', 36), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El niño oye el río.'), ('color', 'white')])
+421.9991 	EXP 	text_stim_stim_n: autoDraw = False
+421.9991 	EXP 	text_stim_sentence_type: autoDraw = False
+421.9991 	EXP 	text_stim_condition: autoDraw = False
+421.9991 	EXP 	text_stim_prompt: autoDraw = False
+421.9991 	EXP 	text_stim_sentence: autoDraw = False
+421.9991 	EXP 	text_stim_stim_n: text = 36
+421.9991 	EXP 	text_stim_sentence_type: text = 'mismatch'
+421.9991 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+421.9991 	EXP 	text_stim_prompt: color = 'white (named)'
+421.9991 	EXP 	text_stim_prompt: text = ' '
+421.9991 	EXP 	text_stim_sentence: text = 'El niño oye el río.'
+421.9991 	EXP 	text_stim_stim_n: autoDraw = True
+421.9991 	EXP 	text_stim_sentence_type: autoDraw = True
+421.9991 	EXP 	text_stim_condition: autoDraw = True
+421.9991 	EXP 	text_stim_prompt: autoDraw = True
+422.0313 	EXP 	text_stim_sentence: autoDraw = True
+425.6530 	EXP 	New trial (rep=0, index=37): OrderedDict([('stim_n', 37), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi tía odia la lluvia.'), ('color', 'white')])
+425.6627 	DATA 	Keypress: right
+425.6814 	EXP 	text_stim_stim_n: autoDraw = False
+425.6814 	EXP 	text_stim_sentence_type: autoDraw = False
+425.6814 	EXP 	text_stim_condition: autoDraw = False
+425.6814 	EXP 	text_stim_prompt: autoDraw = False
+425.6814 	EXP 	text_stim_sentence: autoDraw = False
+425.6814 	EXP 	text_stim_stim_n: text = 37
+425.6814 	EXP 	text_stim_sentence_type: text = 'mismatch'
+425.6814 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+425.6814 	EXP 	text_stim_prompt: color = 'white (named)'
+425.6814 	EXP 	text_stim_prompt: text = ' '
+425.6814 	EXP 	text_stim_sentence: text = 'Mi tía odia la lluvia.'
+425.6814 	EXP 	text_stim_stim_n: autoDraw = True
+425.6814 	EXP 	text_stim_sentence_type: autoDraw = True
+425.6814 	EXP 	text_stim_condition: autoDraw = True
+425.6814 	EXP 	text_stim_prompt: autoDraw = True
+425.7185 	EXP 	text_stim_sentence: autoDraw = True
+429.4401 	DATA 	Keypress: right
+429.4512 	EXP 	New trial (rep=0, index=38): OrderedDict([('stim_n', 38), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El bebé comía muy bien.'), ('color', 'white')])
+429.4843 	EXP 	text_stim_stim_n: autoDraw = False
+429.4843 	EXP 	text_stim_sentence_type: autoDraw = False
+429.4843 	EXP 	text_stim_condition: autoDraw = False
+429.4843 	EXP 	text_stim_prompt: autoDraw = False
+429.4843 	EXP 	text_stim_sentence: autoDraw = False
+429.4843 	EXP 	text_stim_stim_n: text = 38
+429.4843 	EXP 	text_stim_sentence_type: text = 'mismatch'
+429.4843 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+429.4843 	EXP 	text_stim_prompt: color = 'white (named)'
+429.4843 	EXP 	text_stim_prompt: text = ' '
+429.4843 	EXP 	text_stim_sentence: text = 'El bebé comía muy bien.'
+429.4843 	EXP 	text_stim_stim_n: autoDraw = True
+429.4843 	EXP 	text_stim_sentence_type: autoDraw = True
+429.4843 	EXP 	text_stim_condition: autoDraw = True
+429.4843 	EXP 	text_stim_prompt: autoDraw = True
+429.5150 	EXP 	text_stim_sentence: autoDraw = True
+433.5727 	EXP 	New trial (rep=0, index=39): OrderedDict([('stim_n', 39), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'La maestra vive en Paris.'), ('color', 'white')])
+433.5894 	DATA 	Keypress: right
+433.5986 	EXP 	text_stim_stim_n: autoDraw = False
+433.5986 	EXP 	text_stim_sentence_type: autoDraw = False
+433.5986 	EXP 	text_stim_condition: autoDraw = False
+433.5986 	EXP 	text_stim_prompt: autoDraw = False
+433.5986 	EXP 	text_stim_sentence: autoDraw = False
+433.5986 	EXP 	text_stim_stim_n: text = 39
+433.5986 	EXP 	text_stim_sentence_type: text = 'mismatch'
+433.5986 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+433.5986 	EXP 	text_stim_prompt: color = 'white (named)'
+433.5986 	EXP 	text_stim_prompt: text = ' '
+433.5986 	EXP 	text_stim_sentence: text = 'La maestra vive en Paris.'
+433.5986 	EXP 	text_stim_stim_n: autoDraw = True
+433.5986 	EXP 	text_stim_sentence_type: autoDraw = True
+433.5986 	EXP 	text_stim_condition: autoDraw = True
+433.5986 	EXP 	text_stim_prompt: autoDraw = True
+433.6341 	EXP 	text_stim_sentence: autoDraw = True
+437.3188 	EXP 	New trial (rep=0, index=40): OrderedDict([('stim_n', 40), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi novio viene del lago.'), ('color', 'white')])
+437.3392 	DATA 	Keypress: right
+437.3490 	EXP 	text_stim_stim_n: autoDraw = False
+437.3490 	EXP 	text_stim_sentence_type: autoDraw = False
+437.3490 	EXP 	text_stim_condition: autoDraw = False
+437.3490 	EXP 	text_stim_prompt: autoDraw = False
+437.3490 	EXP 	text_stim_sentence: autoDraw = False
+437.3490 	EXP 	text_stim_stim_n: text = 40
+437.3490 	EXP 	text_stim_sentence_type: text = 'mismatch'
+437.3490 	EXP 	text_stim_condition: text = 'declarative_broad_focus'
+437.3490 	EXP 	text_stim_prompt: color = 'white (named)'
+437.3490 	EXP 	text_stim_prompt: text = ' '
+437.3490 	EXP 	text_stim_sentence: text = 'Mi novio viene del lago.'
+437.3490 	EXP 	text_stim_stim_n: autoDraw = True
+437.3490 	EXP 	text_stim_sentence_type: autoDraw = True
+437.3490 	EXP 	text_stim_condition: autoDraw = True
+437.3490 	EXP 	text_stim_prompt: autoDraw = True
+437.3980 	EXP 	text_stim_sentence: autoDraw = True
+441.4213 	EXP 	New trial (rep=0, index=41): OrderedDict([('stim_n', 41), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué mira el hombre?'), ('sentence', 'El hombre mira la luna.'), ('color', 'blue')])
+441.4544 	DATA 	Keypress: right
+441.4692 	EXP 	text_stim_stim_n: autoDraw = False
+441.4692 	EXP 	text_stim_sentence_type: autoDraw = False
+441.4692 	EXP 	text_stim_condition: autoDraw = False
+441.4692 	EXP 	text_stim_prompt: autoDraw = False
+441.4692 	EXP 	text_stim_sentence: autoDraw = False
+441.4692 	EXP 	text_stim_stim_n: text = 41
+441.4692 	EXP 	text_stim_sentence_type: text = 'mismatch'
+441.4692 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+441.4692 	EXP 	text_stim_prompt: color = 'blue (named)'
+441.4692 	EXP 	text_stim_prompt: text = '¿Qué mira el hombre?'
+441.4692 	EXP 	text_stim_sentence: text = 'El hombre mira la luna.'
+441.4692 	EXP 	text_stim_stim_n: autoDraw = True
+441.4692 	EXP 	text_stim_sentence_type: autoDraw = True
+441.4692 	EXP 	text_stim_condition: autoDraw = True
+441.4692 	EXP 	text_stim_prompt: autoDraw = True
+441.4996 	EXP 	text_stim_sentence: autoDraw = True
+447.4344 	EXP 	New trial (rep=0, index=42): OrderedDict([('stim_n', 42), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué lava la niña?'), ('sentence', 'La niña lava el plato.'), ('color', 'blue')])
+447.4604 	DATA 	Keypress: right
+447.4847 	EXP 	text_stim_stim_n: autoDraw = False
+447.4847 	EXP 	text_stim_sentence_type: autoDraw = False
+447.4847 	EXP 	text_stim_condition: autoDraw = False
+447.4847 	EXP 	text_stim_prompt: autoDraw = False
+447.4847 	EXP 	text_stim_sentence: autoDraw = False
+447.4847 	EXP 	text_stim_stim_n: text = 42
+447.4847 	EXP 	text_stim_sentence_type: text = 'mismatch'
+447.4847 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+447.4847 	EXP 	text_stim_prompt: color = 'blue (named)'
+447.4847 	EXP 	text_stim_prompt: text = '¿Qué lava la niña?'
+447.4847 	EXP 	text_stim_sentence: text = 'La niña lava el plato.'
+447.4847 	EXP 	text_stim_stim_n: autoDraw = True
+447.4847 	EXP 	text_stim_sentence_type: autoDraw = True
+447.4847 	EXP 	text_stim_condition: autoDraw = True
+447.4847 	EXP 	text_stim_prompt: autoDraw = True
+447.5001 	EXP 	text_stim_sentence: autoDraw = True
+452.8581 	EXP 	New trial (rep=0, index=43): OrderedDict([('stim_n', 43), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué come tu madre?'), ('sentence', 'Mi madre come la fruta.'), ('color', 'blue')])
+452.8845 	DATA 	Keypress: right
+452.9001 	EXP 	text_stim_stim_n: autoDraw = False
+452.9001 	EXP 	text_stim_sentence_type: autoDraw = False
+452.9001 	EXP 	text_stim_condition: autoDraw = False
+452.9001 	EXP 	text_stim_prompt: autoDraw = False
+452.9001 	EXP 	text_stim_sentence: autoDraw = False
+452.9001 	EXP 	text_stim_stim_n: text = 43
+452.9001 	EXP 	text_stim_sentence_type: text = 'mismatch'
+452.9001 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+452.9001 	EXP 	text_stim_prompt: color = 'blue (named)'
+452.9001 	EXP 	text_stim_prompt: text = '¿Qué come tu madre?'
+452.9001 	EXP 	text_stim_sentence: text = 'Mi madre come la fruta.'
+452.9001 	EXP 	text_stim_stim_n: autoDraw = True
+452.9001 	EXP 	text_stim_sentence_type: autoDraw = True
+452.9001 	EXP 	text_stim_condition: autoDraw = True
+452.9001 	EXP 	text_stim_prompt: autoDraw = True
+452.9529 	EXP 	text_stim_sentence: autoDraw = True
+457.7537 	EXP 	New trial (rep=0, index=44): OrderedDict([('stim_n', 44), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué oye el niño?'), ('sentence', 'El niño oye el río.'), ('color', 'blue')])
+457.7869 	DATA 	Keypress: right
+457.8000 	EXP 	text_stim_stim_n: autoDraw = False
+457.8000 	EXP 	text_stim_sentence_type: autoDraw = False
+457.8000 	EXP 	text_stim_condition: autoDraw = False
+457.8000 	EXP 	text_stim_prompt: autoDraw = False
+457.8000 	EXP 	text_stim_sentence: autoDraw = False
+457.8000 	EXP 	text_stim_stim_n: text = 44
+457.8000 	EXP 	text_stim_sentence_type: text = 'mismatch'
+457.8000 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+457.8000 	EXP 	text_stim_prompt: color = 'blue (named)'
+457.8000 	EXP 	text_stim_prompt: text = '¿Qué oye el niño?'
+457.8000 	EXP 	text_stim_sentence: text = 'El niño oye el río.'
+457.8000 	EXP 	text_stim_stim_n: autoDraw = True
+457.8000 	EXP 	text_stim_sentence_type: autoDraw = True
+457.8000 	EXP 	text_stim_condition: autoDraw = True
+457.8000 	EXP 	text_stim_prompt: autoDraw = True
+457.8510 	EXP 	text_stim_sentence: autoDraw = True
+462.2046 	EXP 	New trial (rep=0, index=45): OrderedDict([('stim_n', 45), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué odia tu tía?'), ('sentence', 'Mi tía odia la lluvia.'), ('color', 'blue')])
+462.2384 	DATA 	Keypress: right
+462.2507 	EXP 	text_stim_stim_n: autoDraw = False
+462.2507 	EXP 	text_stim_sentence_type: autoDraw = False
+462.2507 	EXP 	text_stim_condition: autoDraw = False
+462.2507 	EXP 	text_stim_prompt: autoDraw = False
+462.2507 	EXP 	text_stim_sentence: autoDraw = False
+462.2507 	EXP 	text_stim_stim_n: text = 45
+462.2507 	EXP 	text_stim_sentence_type: text = 'mismatch'
+462.2507 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+462.2507 	EXP 	text_stim_prompt: color = 'blue (named)'
+462.2507 	EXP 	text_stim_prompt: text = '¿Qué odia tu tía?'
+462.2507 	EXP 	text_stim_sentence: text = 'Mi tía odia la lluvia.'
+462.2507 	EXP 	text_stim_stim_n: autoDraw = True
+462.2507 	EXP 	text_stim_sentence_type: autoDraw = True
+462.2507 	EXP 	text_stim_condition: autoDraw = True
+462.2507 	EXP 	text_stim_prompt: autoDraw = True
+462.2677 	EXP 	text_stim_sentence: autoDraw = True
+466.9211 	EXP 	New trial (rep=0, index=46): OrderedDict([('stim_n', 46), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Cómo comía el bebé? '), ('sentence', 'El bebé comía muy bien.'), ('color', 'blue')])
+466.9583 	DATA 	Keypress: right
+466.9692 	EXP 	text_stim_stim_n: autoDraw = False
+466.9692 	EXP 	text_stim_sentence_type: autoDraw = False
+466.9692 	EXP 	text_stim_condition: autoDraw = False
+466.9692 	EXP 	text_stim_prompt: autoDraw = False
+466.9692 	EXP 	text_stim_sentence: autoDraw = False
+466.9692 	EXP 	text_stim_stim_n: text = 46
+466.9692 	EXP 	text_stim_sentence_type: text = 'mismatch'
+466.9692 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+466.9692 	EXP 	text_stim_prompt: color = 'blue (named)'
+466.9692 	EXP 	text_stim_prompt: text = '¿Cómo comía el bebé? '
+466.9692 	EXP 	text_stim_sentence: text = 'El bebé comía muy bien.'
+466.9692 	EXP 	text_stim_stim_n: autoDraw = True
+466.9692 	EXP 	text_stim_sentence_type: autoDraw = True
+466.9692 	EXP 	text_stim_condition: autoDraw = True
+466.9692 	EXP 	text_stim_prompt: autoDraw = True
+466.9847 	EXP 	text_stim_sentence: autoDraw = True
+471.6169 	EXP 	New trial (rep=0, index=47): OrderedDict([('stim_n', 47), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Dónde vive la maestra?'), ('sentence', 'La maestra vive en Paris.'), ('color', 'blue')])
+471.6537 	DATA 	Keypress: right
+471.6683 	EXP 	text_stim_stim_n: autoDraw = False
+471.6683 	EXP 	text_stim_sentence_type: autoDraw = False
+471.6683 	EXP 	text_stim_condition: autoDraw = False
+471.6683 	EXP 	text_stim_prompt: autoDraw = False
+471.6683 	EXP 	text_stim_sentence: autoDraw = False
+471.6683 	EXP 	text_stim_stim_n: text = 47
+471.6683 	EXP 	text_stim_sentence_type: text = 'mismatch'
+471.6683 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+471.6683 	EXP 	text_stim_prompt: color = 'blue (named)'
+471.6683 	EXP 	text_stim_prompt: text = '¿Dónde vive la maestra?'
+471.6683 	EXP 	text_stim_sentence: text = 'La maestra vive en Paris.'
+471.6683 	EXP 	text_stim_stim_n: autoDraw = True
+471.6683 	EXP 	text_stim_sentence_type: autoDraw = True
+471.6683 	EXP 	text_stim_condition: autoDraw = True
+471.6683 	EXP 	text_stim_prompt: autoDraw = True
+471.6845 	EXP 	text_stim_sentence: autoDraw = True
+477.2394 	EXP 	New trial (rep=0, index=48): OrderedDict([('stim_n', 48), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿De dónde viene tu novio?'), ('sentence', 'Mi novio viene del lago.'), ('color', 'blue')])
+477.2670 	DATA 	Keypress: right
+477.2883 	EXP 	text_stim_stim_n: autoDraw = False
+477.2883 	EXP 	text_stim_sentence_type: autoDraw = False
+477.2883 	EXP 	text_stim_condition: autoDraw = False
+477.2883 	EXP 	text_stim_prompt: autoDraw = False
+477.2883 	EXP 	text_stim_sentence: autoDraw = False
+477.2883 	EXP 	text_stim_stim_n: text = 48
+477.2883 	EXP 	text_stim_sentence_type: text = 'mismatch'
+477.2883 	EXP 	text_stim_condition: text = 'declarative_narrow_focus'
+477.2883 	EXP 	text_stim_prompt: color = 'blue (named)'
+477.2883 	EXP 	text_stim_prompt: text = '¿De dónde viene tu novio?'
+477.2883 	EXP 	text_stim_sentence: text = 'Mi novio viene del lago.'
+477.2883 	EXP 	text_stim_stim_n: autoDraw = True
+477.2883 	EXP 	text_stim_sentence_type: autoDraw = True
+477.2883 	EXP 	text_stim_condition: autoDraw = True
+477.2883 	EXP 	text_stim_prompt: autoDraw = True
+477.3006 	EXP 	text_stim_sentence: autoDraw = True
+482.2723 	EXP 	New trial (rep=0, index=49): OrderedDict([('stim_n', 49), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El hombre mira la luna?'), ('color', 'white')])
+482.2953 	DATA 	Keypress: right
+482.3187 	EXP 	text_stim_stim_n: autoDraw = False
+482.3187 	EXP 	text_stim_sentence_type: autoDraw = False
+482.3187 	EXP 	text_stim_condition: autoDraw = False
+482.3187 	EXP 	text_stim_prompt: autoDraw = False
+482.3187 	EXP 	text_stim_sentence: autoDraw = False
+482.3187 	EXP 	text_stim_stim_n: text = 49
+482.3187 	EXP 	text_stim_sentence_type: text = 'mismatch'
+482.3187 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+482.3187 	EXP 	text_stim_prompt: color = 'white (named)'
+482.3187 	EXP 	text_stim_prompt: text = ' '
+482.3187 	EXP 	text_stim_sentence: text = '¿El hombre mira la luna?'
+482.3187 	EXP 	text_stim_stim_n: autoDraw = True
+482.3187 	EXP 	text_stim_sentence_type: autoDraw = True
+482.3187 	EXP 	text_stim_condition: autoDraw = True
+482.3187 	EXP 	text_stim_prompt: autoDraw = True
+482.3358 	EXP 	text_stim_sentence: autoDraw = True
+487.5715 	EXP 	New trial (rep=0, index=50): OrderedDict([('stim_n', 50), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿La niña lava el plato?'), ('color', 'white')])
+487.5886 	DATA 	Keypress: right
+487.6041 	EXP 	text_stim_stim_n: autoDraw = False
+487.6041 	EXP 	text_stim_sentence_type: autoDraw = False
+487.6041 	EXP 	text_stim_condition: autoDraw = False
+487.6041 	EXP 	text_stim_prompt: autoDraw = False
+487.6041 	EXP 	text_stim_sentence: autoDraw = False
+487.6041 	EXP 	text_stim_stim_n: text = 50
+487.6041 	EXP 	text_stim_sentence_type: text = 'mismatch'
+487.6041 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+487.6041 	EXP 	text_stim_prompt: color = 'white (named)'
+487.6041 	EXP 	text_stim_prompt: text = ' '
+487.6041 	EXP 	text_stim_sentence: text = '¿La niña lava el plato?'
+487.6041 	EXP 	text_stim_stim_n: autoDraw = True
+487.6041 	EXP 	text_stim_sentence_type: autoDraw = True
+487.6041 	EXP 	text_stim_condition: autoDraw = True
+487.6041 	EXP 	text_stim_prompt: autoDraw = True
+487.6353 	EXP 	text_stim_sentence: autoDraw = True
+491.2558 	EXP 	New trial (rep=0, index=51): OrderedDict([('stim_n', 51), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi madre come la fruta?'), ('color', 'white')])
+491.2718 	DATA 	Keypress: right
+491.2873 	EXP 	text_stim_stim_n: autoDraw = False
+491.2873 	EXP 	text_stim_sentence_type: autoDraw = False
+491.2873 	EXP 	text_stim_condition: autoDraw = False
+491.2873 	EXP 	text_stim_prompt: autoDraw = False
+491.2873 	EXP 	text_stim_sentence: autoDraw = False
+491.2873 	EXP 	text_stim_stim_n: text = 51
+491.2873 	EXP 	text_stim_sentence_type: text = 'mismatch'
+491.2873 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+491.2873 	EXP 	text_stim_prompt: color = 'white (named)'
+491.2873 	EXP 	text_stim_prompt: text = ' '
+491.2873 	EXP 	text_stim_sentence: text = '¿Mi madre come la fruta?'
+491.2873 	EXP 	text_stim_stim_n: autoDraw = True
+491.2873 	EXP 	text_stim_sentence_type: autoDraw = True
+491.2873 	EXP 	text_stim_condition: autoDraw = True
+491.2873 	EXP 	text_stim_prompt: autoDraw = True
+491.3196 	EXP 	text_stim_sentence: autoDraw = True
+494.8740 	EXP 	New trial (rep=0, index=52): OrderedDict([('stim_n', 52), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El niño oye el río?'), ('color', 'white')])
+494.8946 	DATA 	Keypress: right
+494.9038 	EXP 	text_stim_stim_n: autoDraw = False
+494.9038 	EXP 	text_stim_sentence_type: autoDraw = False
+494.9038 	EXP 	text_stim_condition: autoDraw = False
+494.9038 	EXP 	text_stim_prompt: autoDraw = False
+494.9038 	EXP 	text_stim_sentence: autoDraw = False
+494.9038 	EXP 	text_stim_stim_n: text = 52
+494.9038 	EXP 	text_stim_sentence_type: text = 'mismatch'
+494.9038 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+494.9038 	EXP 	text_stim_prompt: color = 'white (named)'
+494.9038 	EXP 	text_stim_prompt: text = ' '
+494.9038 	EXP 	text_stim_sentence: text = '¿El niño oye el río?'
+494.9038 	EXP 	text_stim_stim_n: autoDraw = True
+494.9038 	EXP 	text_stim_sentence_type: autoDraw = True
+494.9038 	EXP 	text_stim_condition: autoDraw = True
+494.9038 	EXP 	text_stim_prompt: autoDraw = True
+494.9360 	EXP 	text_stim_sentence: autoDraw = True
+498.5910 	EXP 	New trial (rep=0, index=53): OrderedDict([('stim_n', 53), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi tía odia la lluvia?'), ('color', 'white')])
+498.5999 	DATA 	Keypress: right
+498.6213 	EXP 	text_stim_stim_n: autoDraw = False
+498.6213 	EXP 	text_stim_sentence_type: autoDraw = False
+498.6213 	EXP 	text_stim_condition: autoDraw = False
+498.6213 	EXP 	text_stim_prompt: autoDraw = False
+498.6213 	EXP 	text_stim_sentence: autoDraw = False
+498.6213 	EXP 	text_stim_stim_n: text = 53
+498.6213 	EXP 	text_stim_sentence_type: text = 'mismatch'
+498.6213 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+498.6213 	EXP 	text_stim_prompt: color = 'white (named)'
+498.6213 	EXP 	text_stim_prompt: text = ' '
+498.6213 	EXP 	text_stim_sentence: text = '¿Mi tía odia la lluvia?'
+498.6213 	EXP 	text_stim_stim_n: autoDraw = True
+498.6213 	EXP 	text_stim_sentence_type: autoDraw = True
+498.6213 	EXP 	text_stim_condition: autoDraw = True
+498.6213 	EXP 	text_stim_prompt: autoDraw = True
+498.6360 	EXP 	text_stim_sentence: autoDraw = True
+502.2474 	EXP 	New trial (rep=0, index=54): OrderedDict([('stim_n', 54), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El bebé comía muy bien?'), ('color', 'white')])
+502.2637 	DATA 	Keypress: right
+502.2717 	EXP 	text_stim_stim_n: autoDraw = False
+502.2717 	EXP 	text_stim_sentence_type: autoDraw = False
+502.2717 	EXP 	text_stim_condition: autoDraw = False
+502.2717 	EXP 	text_stim_prompt: autoDraw = False
+502.2717 	EXP 	text_stim_sentence: autoDraw = False
+502.2717 	EXP 	text_stim_stim_n: text = 54
+502.2717 	EXP 	text_stim_sentence_type: text = 'mismatch'
+502.2717 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+502.2717 	EXP 	text_stim_prompt: color = 'white (named)'
+502.2717 	EXP 	text_stim_prompt: text = ' '
+502.2717 	EXP 	text_stim_sentence: text = '¿El bebé comía muy bien?'
+502.2717 	EXP 	text_stim_stim_n: autoDraw = True
+502.2717 	EXP 	text_stim_sentence_type: autoDraw = True
+502.2717 	EXP 	text_stim_condition: autoDraw = True
+502.2717 	EXP 	text_stim_prompt: autoDraw = True
+502.3033 	EXP 	text_stim_sentence: autoDraw = True
+505.9291 	EXP 	New trial (rep=0, index=55): OrderedDict([('stim_n', 55), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿La maestra vive en Paris?'), ('color', 'white')])
+505.9451 	DATA 	Keypress: right
+505.9525 	EXP 	text_stim_stim_n: autoDraw = False
+505.9525 	EXP 	text_stim_sentence_type: autoDraw = False
+505.9525 	EXP 	text_stim_condition: autoDraw = False
+505.9525 	EXP 	text_stim_prompt: autoDraw = False
+505.9525 	EXP 	text_stim_sentence: autoDraw = False
+505.9525 	EXP 	text_stim_stim_n: text = 55
+505.9525 	EXP 	text_stim_sentence_type: text = 'mismatch'
+505.9525 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+505.9525 	EXP 	text_stim_prompt: color = 'white (named)'
+505.9525 	EXP 	text_stim_prompt: text = ' '
+505.9525 	EXP 	text_stim_sentence: text = '¿La maestra vive en Paris?'
+505.9525 	EXP 	text_stim_stim_n: autoDraw = True
+505.9525 	EXP 	text_stim_sentence_type: autoDraw = True
+505.9525 	EXP 	text_stim_condition: autoDraw = True
+505.9525 	EXP 	text_stim_prompt: autoDraw = True
+505.9865 	EXP 	text_stim_sentence: autoDraw = True
+509.3742 	EXP 	New trial (rep=0, index=56): OrderedDict([('stim_n', 56), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi novio viene del lago?'), ('color', 'white')])
+509.3858 	DATA 	Keypress: right
+509.4024 	EXP 	text_stim_stim_n: autoDraw = False
+509.4024 	EXP 	text_stim_sentence_type: autoDraw = False
+509.4024 	EXP 	text_stim_condition: autoDraw = False
+509.4024 	EXP 	text_stim_prompt: autoDraw = False
+509.4024 	EXP 	text_stim_sentence: autoDraw = False
+509.4024 	EXP 	text_stim_stim_n: text = 56
+509.4024 	EXP 	text_stim_sentence_type: text = 'mismatch'
+509.4024 	EXP 	text_stim_condition: text = 'interrogative_total_yn'
+509.4024 	EXP 	text_stim_prompt: color = 'white (named)'
+509.4024 	EXP 	text_stim_prompt: text = ' '
+509.4024 	EXP 	text_stim_sentence: text = '¿Mi novio viene del lago?'
+509.4024 	EXP 	text_stim_stim_n: autoDraw = True
+509.4024 	EXP 	text_stim_sentence_type: autoDraw = True
+509.4024 	EXP 	text_stim_condition: autoDraw = True
+509.4024 	EXP 	text_stim_prompt: autoDraw = True
+509.4379 	EXP 	text_stim_sentence: autoDraw = True
+514.2268 	EXP 	New trial (rep=0, index=57): OrderedDict([('stim_n', 57), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo miraba la luna?'), ('color', 'white')])
+514.2429 	DATA 	Keypress: right
+514.2537 	EXP 	text_stim_stim_n: autoDraw = False
+514.2537 	EXP 	text_stim_sentence_type: autoDraw = False
+514.2537 	EXP 	text_stim_condition: autoDraw = False
+514.2537 	EXP 	text_stim_prompt: autoDraw = False
+514.2537 	EXP 	text_stim_sentence: autoDraw = False
+514.2537 	EXP 	text_stim_stim_n: text = 57
+514.2537 	EXP 	text_stim_sentence_type: text = 'mismatch'
+514.2537 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+514.2537 	EXP 	text_stim_prompt: color = 'white (named)'
+514.2537 	EXP 	text_stim_prompt: text = ' '
+514.2537 	EXP 	text_stim_sentence: text = '¿Cuándo miraba la luna?'
+514.2537 	EXP 	text_stim_stim_n: autoDraw = True
+514.2537 	EXP 	text_stim_sentence_type: autoDraw = True
+514.2537 	EXP 	text_stim_condition: autoDraw = True
+514.2537 	EXP 	text_stim_prompt: autoDraw = True
+514.3038 	EXP 	text_stim_sentence: autoDraw = True
+518.0740 	EXP 	New trial (rep=0, index=58): OrderedDict([('stim_n', 58), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo lavaba el plato?'), ('color', 'white')])
+518.0939 	DATA 	Keypress: right
+518.1061 	EXP 	text_stim_stim_n: autoDraw = False
+518.1061 	EXP 	text_stim_sentence_type: autoDraw = False
+518.1061 	EXP 	text_stim_condition: autoDraw = False
+518.1061 	EXP 	text_stim_prompt: autoDraw = False
+518.1061 	EXP 	text_stim_sentence: autoDraw = False
+518.1061 	EXP 	text_stim_stim_n: text = 58
+518.1061 	EXP 	text_stim_sentence_type: text = 'mismatch'
+518.1061 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+518.1061 	EXP 	text_stim_prompt: color = 'white (named)'
+518.1061 	EXP 	text_stim_prompt: text = ' '
+518.1061 	EXP 	text_stim_sentence: text = '¿Cuándo lavaba el plato?'
+518.1061 	EXP 	text_stim_stim_n: autoDraw = True
+518.1061 	EXP 	text_stim_sentence_type: autoDraw = True
+518.1061 	EXP 	text_stim_condition: autoDraw = True
+518.1061 	EXP 	text_stim_prompt: autoDraw = True
+518.1208 	EXP 	text_stim_sentence: autoDraw = True
+521.4314 	EXP 	New trial (rep=0, index=59): OrderedDict([('stim_n', 59), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo comía la fruta?'), ('color', 'white')])
+521.4441 	DATA 	Keypress: right
+521.4545 	EXP 	text_stim_stim_n: autoDraw = False
+521.4545 	EXP 	text_stim_sentence_type: autoDraw = False
+521.4545 	EXP 	text_stim_condition: autoDraw = False
+521.4545 	EXP 	text_stim_prompt: autoDraw = False
+521.4545 	EXP 	text_stim_sentence: autoDraw = False
+521.4545 	EXP 	text_stim_stim_n: text = 59
+521.4545 	EXP 	text_stim_sentence_type: text = 'mismatch'
+521.4545 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+521.4545 	EXP 	text_stim_prompt: color = 'white (named)'
+521.4545 	EXP 	text_stim_prompt: text = ' '
+521.4545 	EXP 	text_stim_sentence: text = '¿Cuándo comía la fruta?'
+521.4545 	EXP 	text_stim_stim_n: autoDraw = True
+521.4545 	EXP 	text_stim_sentence_type: autoDraw = True
+521.4545 	EXP 	text_stim_condition: autoDraw = True
+521.4545 	EXP 	text_stim_prompt: autoDraw = True
+521.4880 	EXP 	text_stim_sentence: autoDraw = True
+525.5764 	EXP 	New trial (rep=0, index=60): OrderedDict([('stim_n', 60), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué oía el río?'), ('color', 'white')])
+525.5925 	DATA 	Keypress: right
+525.6050 	EXP 	text_stim_stim_n: autoDraw = False
+525.6050 	EXP 	text_stim_sentence_type: autoDraw = False
+525.6050 	EXP 	text_stim_condition: autoDraw = False
+525.6050 	EXP 	text_stim_prompt: autoDraw = False
+525.6050 	EXP 	text_stim_sentence: autoDraw = False
+525.6050 	EXP 	text_stim_stim_n: text = 60
+525.6050 	EXP 	text_stim_sentence_type: text = 'mismatch'
+525.6050 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+525.6050 	EXP 	text_stim_prompt: color = 'white (named)'
+525.6050 	EXP 	text_stim_prompt: text = ' '
+525.6050 	EXP 	text_stim_sentence: text = '¿Por qué oía el río?'
+525.6050 	EXP 	text_stim_stim_n: autoDraw = True
+525.6050 	EXP 	text_stim_sentence_type: autoDraw = True
+525.6050 	EXP 	text_stim_condition: autoDraw = True
+525.6050 	EXP 	text_stim_prompt: autoDraw = True
+525.6552 	EXP 	text_stim_sentence: autoDraw = True
+529.5948 	EXP 	New trial (rep=0, index=61): OrderedDict([('stim_n', 61), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué odiaba la lluvia?'), ('color', 'white')])
+529.6131 	DATA 	Keypress: right
+529.6229 	EXP 	text_stim_stim_n: autoDraw = False
+529.6229 	EXP 	text_stim_sentence_type: autoDraw = False
+529.6229 	EXP 	text_stim_condition: autoDraw = False
+529.6229 	EXP 	text_stim_prompt: autoDraw = False
+529.6229 	EXP 	text_stim_sentence: autoDraw = False
+529.6229 	EXP 	text_stim_stim_n: text = 61
+529.6229 	EXP 	text_stim_sentence_type: text = 'mismatch'
+529.6229 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+529.6229 	EXP 	text_stim_prompt: color = 'white (named)'
+529.6229 	EXP 	text_stim_prompt: text = ' '
+529.6229 	EXP 	text_stim_sentence: text = '¿Por qué odiaba la lluvia?'
+529.6229 	EXP 	text_stim_stim_n: autoDraw = True
+529.6229 	EXP 	text_stim_sentence_type: autoDraw = True
+529.6229 	EXP 	text_stim_condition: autoDraw = True
+529.6229 	EXP 	text_stim_prompt: autoDraw = True
+529.6384 	EXP 	text_stim_sentence: autoDraw = True
+533.6099 	EXP 	New trial (rep=0, index=62): OrderedDict([('stim_n', 62), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué desayuna muy bien?'), ('color', 'white')])
+533.6241 	DATA 	Keypress: right
+533.6419 	EXP 	text_stim_stim_n: autoDraw = False
+533.6419 	EXP 	text_stim_sentence_type: autoDraw = False
+533.6419 	EXP 	text_stim_condition: autoDraw = False
+533.6419 	EXP 	text_stim_prompt: autoDraw = False
+533.6419 	EXP 	text_stim_sentence: autoDraw = False
+533.6419 	EXP 	text_stim_stim_n: text = 62
+533.6419 	EXP 	text_stim_sentence_type: text = 'mismatch'
+533.6419 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+533.6419 	EXP 	text_stim_prompt: color = 'white (named)'
+533.6419 	EXP 	text_stim_prompt: text = ' '
+533.6419 	EXP 	text_stim_sentence: text = '¿Por qué desayuna muy bien?'
+533.6419 	EXP 	text_stim_stim_n: autoDraw = True
+533.6419 	EXP 	text_stim_sentence_type: autoDraw = True
+533.6419 	EXP 	text_stim_condition: autoDraw = True
+533.6419 	EXP 	text_stim_prompt: autoDraw = True
+533.6713 	EXP 	text_stim_sentence: autoDraw = True
+542.0934 	EXP 	New trial (rep=0, index=63): OrderedDict([('stim_n', 63), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué vivía en Paris?'), ('color', 'white')])
+542.1167 	DATA 	Keypress: right
+542.1413 	EXP 	text_stim_stim_n: autoDraw = False
+542.1413 	EXP 	text_stim_sentence_type: autoDraw = False
+542.1413 	EXP 	text_stim_condition: autoDraw = False
+542.1413 	EXP 	text_stim_prompt: autoDraw = False
+542.1413 	EXP 	text_stim_sentence: autoDraw = False
+542.1413 	EXP 	text_stim_stim_n: text = 63
+542.1413 	EXP 	text_stim_sentence_type: text = 'mismatch'
+542.1413 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+542.1413 	EXP 	text_stim_prompt: color = 'white (named)'
+542.1413 	EXP 	text_stim_prompt: text = ' '
+542.1413 	EXP 	text_stim_sentence: text = '¿Por qué vivía en Paris?'
+542.1413 	EXP 	text_stim_stim_n: autoDraw = True
+542.1413 	EXP 	text_stim_sentence_type: autoDraw = True
+542.1413 	EXP 	text_stim_condition: autoDraw = True
+542.1413 	EXP 	text_stim_prompt: autoDraw = True
+542.1554 	EXP 	text_stim_sentence: autoDraw = True
+546.5276 	EXP 	New trial (rep=0, index=64): OrderedDict([('stim_n', 64), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué venía del lago?'), ('color', 'white')])
+546.5468 	DATA 	Keypress: right
+546.5556 	EXP 	text_stim_stim_n: autoDraw = False
+546.5556 	EXP 	text_stim_sentence_type: autoDraw = False
+546.5556 	EXP 	text_stim_condition: autoDraw = False
+546.5556 	EXP 	text_stim_prompt: autoDraw = False
+546.5556 	EXP 	text_stim_sentence: autoDraw = False
+546.5556 	EXP 	text_stim_stim_n: text = 64
+546.5556 	EXP 	text_stim_sentence_type: text = 'mismatch'
+546.5556 	EXP 	text_stim_condition: text = 'interrogative_partial_wh'
+546.5556 	EXP 	text_stim_prompt: color = 'white (named)'
+546.5556 	EXP 	text_stim_prompt: text = ' '
+546.5556 	EXP 	text_stim_sentence: text = '¿Por qué venía del lago?'
+546.5556 	EXP 	text_stim_stim_n: autoDraw = True
+546.5556 	EXP 	text_stim_sentence_type: autoDraw = True
+546.5556 	EXP 	text_stim_condition: autoDraw = True
+546.5556 	EXP 	text_stim_prompt: autoDraw = True
+546.5736 	EXP 	text_stim_sentence: autoDraw = True
+550.5000 	DEBUG 	Read csv file with pandas: trials/filler_list.csv
+550.5044 	DEBUG 	Clearing unnamed columns from trials/filler_list.csv
+550.5138 	EXP 	Imported trials/filler_list.csv as conditions, 64 conditions, 6 params
+550.5148 	EXP 	Created sequence: sequential, trialTypes=64, nReps=1, seed=None
+550.5156 	EXP 	New trial (rep=0, index=0): OrderedDict([('stim_n', 1), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Roberto cocina por la mañana.'), ('color', 'white')])
+550.5643 	DATA 	Keypress: right
+550.5745 	EXP 	text_stim_stim_n: autoDraw = False
+550.5745 	EXP 	text_stim_sentence_type: autoDraw = False
+550.5745 	EXP 	text_stim_condition: autoDraw = False
+550.5745 	EXP 	text_stim_prompt: autoDraw = False
+550.5745 	EXP 	text_stim_sentence: autoDraw = False
+550.5745 	EXP 	text_stim_stim_n: text = 1
+550.5745 	EXP 	text_stim_sentence_type: text = 'statement'
+550.5745 	EXP 	text_stim_condition: text = 'A'
+550.5745 	EXP 	text_stim_prompt: color = 'white (named)'
+550.5745 	EXP 	text_stim_prompt: text = 'filler'
+550.5745 	EXP 	text_stim_sentence: text = 'Roberto cocina por la mañana.'
+550.5745 	EXP 	text_stim_stim_n: autoDraw = True
+550.5745 	EXP 	text_stim_sentence_type: autoDraw = True
+550.5745 	EXP 	text_stim_condition: autoDraw = True
+550.5745 	EXP 	text_stim_prompt: autoDraw = True
+550.6234 	EXP 	text_stim_sentence: autoDraw = True
+554.8973 	EXP 	New trial (rep=0, index=1): OrderedDict([('stim_n', 2), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Ana practicaba el yoga.'), ('color', 'white')])
+554.9309 	DATA 	Keypress: right
+554.9392 	EXP 	text_stim_stim_n: autoDraw = False
+554.9392 	EXP 	text_stim_sentence_type: autoDraw = False
+554.9392 	EXP 	text_stim_condition: autoDraw = False
+554.9392 	EXP 	text_stim_prompt: autoDraw = False
+554.9392 	EXP 	text_stim_sentence: autoDraw = False
+554.9392 	EXP 	text_stim_stim_n: text = 2
+554.9392 	EXP 	text_stim_sentence_type: text = 'statement'
+554.9392 	EXP 	text_stim_condition: text = 'B'
+554.9392 	EXP 	text_stim_prompt: color = 'white (named)'
+554.9392 	EXP 	text_stim_prompt: text = 'filler'
+554.9392 	EXP 	text_stim_sentence: text = 'Ana practicaba el yoga.'
+554.9392 	EXP 	text_stim_stim_n: autoDraw = True
+554.9392 	EXP 	text_stim_sentence_type: autoDraw = True
+554.9392 	EXP 	text_stim_condition: autoDraw = True
+554.9392 	EXP 	text_stim_prompt: autoDraw = True
+554.9567 	EXP 	text_stim_sentence: autoDraw = True
+558.6947 	EXP 	New trial (rep=0, index=2): OrderedDict([('stim_n', 3), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La niña pinta con su amiga.'), ('color', 'white')])
+558.8339 	DATA 	Keypress: right
+558.8407 	EXP 	text_stim_stim_n: autoDraw = False
+558.8407 	EXP 	text_stim_sentence_type: autoDraw = False
+558.8407 	EXP 	text_stim_condition: autoDraw = False
+558.8407 	EXP 	text_stim_prompt: autoDraw = False
+558.8407 	EXP 	text_stim_sentence: autoDraw = False
+558.8407 	EXP 	text_stim_stim_n: text = 3
+558.8407 	EXP 	text_stim_sentence_type: text = 'statement'
+558.8407 	EXP 	text_stim_condition: text = 'A'
+558.8407 	EXP 	text_stim_prompt: color = 'white (named)'
+558.8407 	EXP 	text_stim_prompt: text = 'filler'
+558.8407 	EXP 	text_stim_sentence: text = 'La niña pinta con su amiga.'
+558.8407 	EXP 	text_stim_stim_n: autoDraw = True
+558.8407 	EXP 	text_stim_sentence_type: autoDraw = True
+558.8407 	EXP 	text_stim_condition: autoDraw = True
+558.8407 	EXP 	text_stim_prompt: autoDraw = True
+558.8745 	EXP 	text_stim_sentence: autoDraw = True
+562.7949 	EXP 	New trial (rep=0, index=3): OrderedDict([('stim_n', 4), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Las chicas dan una fiesta hoy.'), ('color', 'white')])
+562.8195 	DATA 	Keypress: right
+562.8406 	EXP 	text_stim_stim_n: autoDraw = False
+562.8406 	EXP 	text_stim_sentence_type: autoDraw = False
+562.8406 	EXP 	text_stim_condition: autoDraw = False
+562.8406 	EXP 	text_stim_prompt: autoDraw = False
+562.8406 	EXP 	text_stim_sentence: autoDraw = False
+562.8406 	EXP 	text_stim_stim_n: text = 4
+562.8406 	EXP 	text_stim_sentence_type: text = 'statement'
+562.8406 	EXP 	text_stim_condition: text = 'C'
+562.8406 	EXP 	text_stim_prompt: color = 'white (named)'
+562.8406 	EXP 	text_stim_prompt: text = 'filler'
+562.8406 	EXP 	text_stim_sentence: text = 'Las chicas dan una fiesta hoy.'
+562.8406 	EXP 	text_stim_stim_n: autoDraw = True
+562.8406 	EXP 	text_stim_sentence_type: autoDraw = True
+562.8406 	EXP 	text_stim_condition: autoDraw = True
+562.8406 	EXP 	text_stim_prompt: autoDraw = True
+562.8608 	EXP 	text_stim_sentence: autoDraw = True
+567.4434 	EXP 	New trial (rep=0, index=4): OrderedDict([('stim_n', 5), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Isabel duerme por muchas horas.'), ('color', 'white')])
+567.4669 	DATA 	Keypress: right
+567.4747 	EXP 	text_stim_stim_n: autoDraw = False
+567.4747 	EXP 	text_stim_sentence_type: autoDraw = False
+567.4747 	EXP 	text_stim_condition: autoDraw = False
+567.4747 	EXP 	text_stim_prompt: autoDraw = False
+567.4747 	EXP 	text_stim_sentence: autoDraw = False
+567.4747 	EXP 	text_stim_stim_n: text = 5
+567.4747 	EXP 	text_stim_sentence_type: text = 'statement'
+567.4747 	EXP 	text_stim_condition: text = 'A'
+567.4747 	EXP 	text_stim_prompt: color = 'white (named)'
+567.4747 	EXP 	text_stim_prompt: text = 'filler'
+567.4747 	EXP 	text_stim_sentence: text = 'Isabel duerme por muchas horas.'
+567.4747 	EXP 	text_stim_stim_n: autoDraw = True
+567.4747 	EXP 	text_stim_sentence_type: autoDraw = True
+567.4747 	EXP 	text_stim_condition: autoDraw = True
+567.4747 	EXP 	text_stim_prompt: autoDraw = True
+567.5137 	EXP 	text_stim_sentence: autoDraw = True
+571.3944 	EXP 	New trial (rep=0, index=5): OrderedDict([('stim_n', 6), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Alberto nunca se afeita.'), ('color', 'white')])
+571.4054 	DATA 	Keypress: right
+571.4258 	EXP 	text_stim_stim_n: autoDraw = False
+571.4258 	EXP 	text_stim_sentence_type: autoDraw = False
+571.4258 	EXP 	text_stim_condition: autoDraw = False
+571.4258 	EXP 	text_stim_prompt: autoDraw = False
+571.4258 	EXP 	text_stim_sentence: autoDraw = False
+571.4258 	EXP 	text_stim_stim_n: text = 6
+571.4258 	EXP 	text_stim_sentence_type: text = 'statement'
+571.4258 	EXP 	text_stim_condition: text = 'B'
+571.4258 	EXP 	text_stim_prompt: color = 'white (named)'
+571.4258 	EXP 	text_stim_prompt: text = 'filler'
+571.4258 	EXP 	text_stim_sentence: text = 'Alberto nunca se afeita.'
+571.4258 	EXP 	text_stim_stim_n: autoDraw = True
+571.4258 	EXP 	text_stim_sentence_type: autoDraw = True
+571.4258 	EXP 	text_stim_condition: autoDraw = True
+571.4258 	EXP 	text_stim_prompt: autoDraw = True
+571.4576 	EXP 	text_stim_sentence: autoDraw = True
+575.0979 	EXP 	New trial (rep=0, index=6): OrderedDict([('stim_n', 7), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La madre pasa la aspiradora.'), ('color', 'white')])
+575.1158 	DATA 	Keypress: right
+575.1266 	EXP 	text_stim_stim_n: autoDraw = False
+575.1266 	EXP 	text_stim_sentence_type: autoDraw = False
+575.1266 	EXP 	text_stim_condition: autoDraw = False
+575.1266 	EXP 	text_stim_prompt: autoDraw = False
+575.1266 	EXP 	text_stim_sentence: autoDraw = False
+575.1266 	EXP 	text_stim_stim_n: text = 7
+575.1266 	EXP 	text_stim_sentence_type: text = 'statement'
+575.1266 	EXP 	text_stim_condition: text = 'A'
+575.1266 	EXP 	text_stim_prompt: color = 'white (named)'
+575.1266 	EXP 	text_stim_prompt: text = 'filler'
+575.1266 	EXP 	text_stim_sentence: text = 'La madre pasa la aspiradora.'
+575.1266 	EXP 	text_stim_stim_n: autoDraw = True
+575.1266 	EXP 	text_stim_sentence_type: autoDraw = True
+575.1266 	EXP 	text_stim_condition: autoDraw = True
+575.1266 	EXP 	text_stim_prompt: autoDraw = True
+575.1616 	EXP 	text_stim_sentence: autoDraw = True
+578.9956 	EXP 	New trial (rep=0, index=7): OrderedDict([('stim_n', 8), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El estudiante odia la tarea.'), ('color', 'white')])
+579.0131 	DATA 	Keypress: right
+579.0259 	EXP 	text_stim_stim_n: autoDraw = False
+579.0259 	EXP 	text_stim_sentence_type: autoDraw = False
+579.0259 	EXP 	text_stim_condition: autoDraw = False
+579.0259 	EXP 	text_stim_prompt: autoDraw = False
+579.0259 	EXP 	text_stim_sentence: autoDraw = False
+579.0259 	EXP 	text_stim_stim_n: text = 8
+579.0259 	EXP 	text_stim_sentence_type: text = 'statement'
+579.0259 	EXP 	text_stim_condition: text = 'C'
+579.0259 	EXP 	text_stim_prompt: color = 'white (named)'
+579.0259 	EXP 	text_stim_prompt: text = 'filler'
+579.0259 	EXP 	text_stim_sentence: text = 'El estudiante odia la tarea.'
+579.0259 	EXP 	text_stim_stim_n: autoDraw = True
+579.0259 	EXP 	text_stim_sentence_type: autoDraw = True
+579.0259 	EXP 	text_stim_condition: autoDraw = True
+579.0259 	EXP 	text_stim_prompt: autoDraw = True
+579.0580 	EXP 	text_stim_sentence: autoDraw = True
+583.5575 	EXP 	New trial (rep=0, index=8): OrderedDict([('stim_n', 9), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El equipo practica mucho.'), ('color', 'white')])
+583.5787 	DATA 	Keypress: right
+583.5927 	EXP 	text_stim_stim_n: autoDraw = False
+583.5927 	EXP 	text_stim_sentence_type: autoDraw = False
+583.5927 	EXP 	text_stim_condition: autoDraw = False
+583.5927 	EXP 	text_stim_prompt: autoDraw = False
+583.5927 	EXP 	text_stim_sentence: autoDraw = False
+583.5927 	EXP 	text_stim_stim_n: text = 9
+583.5927 	EXP 	text_stim_sentence_type: text = 'statement'
+583.5927 	EXP 	text_stim_condition: text = 'A'
+583.5927 	EXP 	text_stim_prompt: color = 'white (named)'
+583.5927 	EXP 	text_stim_prompt: text = 'filler'
+583.5927 	EXP 	text_stim_sentence: text = 'El equipo practica mucho.'
+583.5927 	EXP 	text_stim_stim_n: autoDraw = True
+583.5927 	EXP 	text_stim_sentence_type: autoDraw = True
+583.5927 	EXP 	text_stim_condition: autoDraw = True
+583.5927 	EXP 	text_stim_prompt: autoDraw = True
+583.6092 	EXP 	text_stim_sentence: autoDraw = True
+588.1973 	EXP 	New trial (rep=0, index=9): OrderedDict([('stim_n', 10), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Juana barría el piso.'), ('color', 'white')])
+588.2203 	DATA 	Keypress: right
+588.2423 	EXP 	text_stim_stim_n: autoDraw = False
+588.2423 	EXP 	text_stim_sentence_type: autoDraw = False
+588.2423 	EXP 	text_stim_condition: autoDraw = False
+588.2423 	EXP 	text_stim_prompt: autoDraw = False
+588.2423 	EXP 	text_stim_sentence: autoDraw = False
+588.2423 	EXP 	text_stim_stim_n: text = 10
+588.2423 	EXP 	text_stim_sentence_type: text = 'statement'
+588.2423 	EXP 	text_stim_condition: text = 'B'
+588.2423 	EXP 	text_stim_prompt: color = 'white (named)'
+588.2423 	EXP 	text_stim_prompt: text = 'filler'
+588.2423 	EXP 	text_stim_sentence: text = 'Juana barría el piso.'
+588.2423 	EXP 	text_stim_stim_n: autoDraw = True
+588.2423 	EXP 	text_stim_sentence_type: autoDraw = True
+588.2423 	EXP 	text_stim_condition: autoDraw = True
+588.2423 	EXP 	text_stim_prompt: autoDraw = True
+588.2587 	EXP 	text_stim_sentence: autoDraw = True
+592.1006 	EXP 	New trial (rep=0, index=10): OrderedDict([('stim_n', 11), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La abuela plancha la ropa.'), ('color', 'white')])
+592.1192 	DATA 	Keypress: right
+592.1354 	EXP 	text_stim_stim_n: autoDraw = False
+592.1354 	EXP 	text_stim_sentence_type: autoDraw = False
+592.1354 	EXP 	text_stim_condition: autoDraw = False
+592.1354 	EXP 	text_stim_prompt: autoDraw = False
+592.1354 	EXP 	text_stim_sentence: autoDraw = False
+592.1354 	EXP 	text_stim_stim_n: text = 11
+592.1354 	EXP 	text_stim_sentence_type: text = 'statement'
+592.1354 	EXP 	text_stim_condition: text = 'A'
+592.1354 	EXP 	text_stim_prompt: color = 'white (named)'
+592.1354 	EXP 	text_stim_prompt: text = 'filler'
+592.1354 	EXP 	text_stim_sentence: text = 'La abuela plancha la ropa.'
+592.1354 	EXP 	text_stim_stim_n: autoDraw = True
+592.1354 	EXP 	text_stim_sentence_type: autoDraw = True
+592.1354 	EXP 	text_stim_condition: autoDraw = True
+592.1354 	EXP 	text_stim_prompt: autoDraw = True
+592.1598 	EXP 	text_stim_sentence: autoDraw = True
+596.5343 	DATA 	Keypress: right
+596.5458 	EXP 	New trial (rep=0, index=11): OrderedDict([('stim_n', 12), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Los abuelos compran un espejo.'), ('color', 'white')])
+596.5800 	EXP 	text_stim_stim_n: autoDraw = False
+596.5800 	EXP 	text_stim_sentence_type: autoDraw = False
+596.5800 	EXP 	text_stim_condition: autoDraw = False
+596.5800 	EXP 	text_stim_prompt: autoDraw = False
+596.5800 	EXP 	text_stim_sentence: autoDraw = False
+596.5800 	EXP 	text_stim_stim_n: text = 12
+596.5800 	EXP 	text_stim_sentence_type: text = 'statement'
+596.5800 	EXP 	text_stim_condition: text = 'C'
+596.5800 	EXP 	text_stim_prompt: color = 'white (named)'
+596.5800 	EXP 	text_stim_prompt: text = 'filler'
+596.5800 	EXP 	text_stim_sentence: text = 'Los abuelos compran un espejo.'
+596.5800 	EXP 	text_stim_stim_n: autoDraw = True
+596.5800 	EXP 	text_stim_sentence_type: autoDraw = True
+596.5800 	EXP 	text_stim_condition: autoDraw = True
+596.5800 	EXP 	text_stim_prompt: autoDraw = True
+596.6102 	EXP 	text_stim_sentence: autoDraw = True
+600.7390 	DATA 	Keypress: right
+600.7657 	EXP 	New trial (rep=0, index=12): OrderedDict([('stim_n', 13), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El niño habla con su madre.'), ('color', 'white')])
+600.7936 	EXP 	text_stim_stim_n: autoDraw = False
+600.7936 	EXP 	text_stim_sentence_type: autoDraw = False
+600.7936 	EXP 	text_stim_condition: autoDraw = False
+600.7936 	EXP 	text_stim_prompt: autoDraw = False
+600.7936 	EXP 	text_stim_sentence: autoDraw = False
+600.7936 	EXP 	text_stim_stim_n: text = 13
+600.7936 	EXP 	text_stim_sentence_type: text = 'statement'
+600.7936 	EXP 	text_stim_condition: text = 'A'
+600.7936 	EXP 	text_stim_prompt: color = 'white (named)'
+600.7936 	EXP 	text_stim_prompt: text = 'filler'
+600.7936 	EXP 	text_stim_sentence: text = 'El niño habla con su madre.'
+600.7936 	EXP 	text_stim_stim_n: autoDraw = True
+600.7936 	EXP 	text_stim_sentence_type: autoDraw = True
+600.7936 	EXP 	text_stim_condition: autoDraw = True
+600.7936 	EXP 	text_stim_prompt: autoDraw = True
+600.8270 	EXP 	text_stim_sentence: autoDraw = True
+604.9661 	EXP 	New trial (rep=0, index=13): OrderedDict([('stim_n', 14), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Hago ejercicio todos los días. '), ('color', 'white')])
+604.9985 	DATA 	Keypress: right
+605.0114 	EXP 	text_stim_stim_n: autoDraw = False
+605.0114 	EXP 	text_stim_sentence_type: autoDraw = False
+605.0114 	EXP 	text_stim_condition: autoDraw = False
+605.0114 	EXP 	text_stim_prompt: autoDraw = False
+605.0114 	EXP 	text_stim_sentence: autoDraw = False
+605.0114 	EXP 	text_stim_stim_n: text = 14
+605.0114 	EXP 	text_stim_sentence_type: text = 'statement'
+605.0114 	EXP 	text_stim_condition: text = 'B'
+605.0114 	EXP 	text_stim_prompt: color = 'white (named)'
+605.0114 	EXP 	text_stim_prompt: text = 'filler'
+605.0114 	EXP 	text_stim_sentence: text = 'Hago ejercicio todos los días. '
+605.0114 	EXP 	text_stim_stim_n: autoDraw = True
+605.0114 	EXP 	text_stim_sentence_type: autoDraw = True
+605.0114 	EXP 	text_stim_condition: autoDraw = True
+605.0114 	EXP 	text_stim_prompt: autoDraw = True
+605.0291 	EXP 	text_stim_sentence: autoDraw = True
+613.5018 	DATA 	Keypress: right
+613.5152 	EXP 	New trial (rep=0, index=14): OrderedDict([('stim_n', 15), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La vista de la casa es bonita.'), ('color', 'white')])
+613.5527 	EXP 	text_stim_stim_n: autoDraw = False
+613.5527 	EXP 	text_stim_sentence_type: autoDraw = False
+613.5527 	EXP 	text_stim_condition: autoDraw = False
+613.5527 	EXP 	text_stim_prompt: autoDraw = False
+613.5527 	EXP 	text_stim_sentence: autoDraw = False
+613.5527 	EXP 	text_stim_stim_n: text = 15
+613.5527 	EXP 	text_stim_sentence_type: text = 'statement'
+613.5527 	EXP 	text_stim_condition: text = 'A'
+613.5527 	EXP 	text_stim_prompt: color = 'white (named)'
+613.5527 	EXP 	text_stim_prompt: text = 'filler'
+613.5527 	EXP 	text_stim_sentence: text = 'La vista de la casa es bonita.'
+613.5527 	EXP 	text_stim_stim_n: autoDraw = True
+613.5527 	EXP 	text_stim_sentence_type: autoDraw = True
+613.5527 	EXP 	text_stim_condition: autoDraw = True
+613.5527 	EXP 	text_stim_prompt: autoDraw = True
+613.5942 	EXP 	text_stim_sentence: autoDraw = True
+618.1840 	EXP 	New trial (rep=0, index=15): OrderedDict([('stim_n', 16), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'El baño no es muy grande. '), ('color', 'white')])
+618.1997 	DATA 	Keypress: right
+618.2121 	EXP 	text_stim_stim_n: autoDraw = False
+618.2121 	EXP 	text_stim_sentence_type: autoDraw = False
+618.2121 	EXP 	text_stim_condition: autoDraw = False
+618.2121 	EXP 	text_stim_prompt: autoDraw = False
+618.2121 	EXP 	text_stim_sentence: autoDraw = False
+618.2121 	EXP 	text_stim_stim_n: text = 16
+618.2121 	EXP 	text_stim_sentence_type: text = 'statement'
+618.2121 	EXP 	text_stim_condition: text = 'B'
+618.2121 	EXP 	text_stim_prompt: color = 'white (named)'
+618.2121 	EXP 	text_stim_prompt: text = 'filler'
+618.2121 	EXP 	text_stim_sentence: text = 'El baño no es muy grande. '
+618.2121 	EXP 	text_stim_stim_n: autoDraw = True
+618.2121 	EXP 	text_stim_sentence_type: autoDraw = True
+618.2121 	EXP 	text_stim_condition: autoDraw = True
+618.2121 	EXP 	text_stim_prompt: autoDraw = True
+618.2606 	EXP 	text_stim_sentence: autoDraw = True
+621.4996 	EXP 	New trial (rep=0, index=16): OrderedDict([('stim_n', 17), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Compro un regalo para Navidad.'), ('color', 'white')])
+621.5290 	DATA 	Keypress: right
+621.5416 	EXP 	text_stim_stim_n: autoDraw = False
+621.5416 	EXP 	text_stim_sentence_type: autoDraw = False
+621.5416 	EXP 	text_stim_condition: autoDraw = False
+621.5416 	EXP 	text_stim_prompt: autoDraw = False
+621.5416 	EXP 	text_stim_sentence: autoDraw = False
+621.5416 	EXP 	text_stim_stim_n: text = 17
+621.5416 	EXP 	text_stim_sentence_type: text = 'statement'
+621.5416 	EXP 	text_stim_condition: text = 'A'
+621.5416 	EXP 	text_stim_prompt: color = 'white (named)'
+621.5416 	EXP 	text_stim_prompt: text = 'filler'
+621.5416 	EXP 	text_stim_sentence: text = 'Compro un regalo para Navidad.'
+621.5416 	EXP 	text_stim_stim_n: autoDraw = True
+621.5416 	EXP 	text_stim_sentence_type: autoDraw = True
+621.5416 	EXP 	text_stim_condition: autoDraw = True
+621.5416 	EXP 	text_stim_prompt: autoDraw = True
+621.5781 	EXP 	text_stim_sentence: autoDraw = True
+625.1355 	EXP 	New trial (rep=0, index=17): OrderedDict([('stim_n', 18), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Tu cumpleaños es mañana.'), ('color', 'white')])
+625.1576 	DATA 	Keypress: right
+625.1817 	EXP 	text_stim_stim_n: autoDraw = False
+625.1817 	EXP 	text_stim_sentence_type: autoDraw = False
+625.1817 	EXP 	text_stim_condition: autoDraw = False
+625.1817 	EXP 	text_stim_prompt: autoDraw = False
+625.1817 	EXP 	text_stim_sentence: autoDraw = False
+625.1817 	EXP 	text_stim_stim_n: text = 18
+625.1817 	EXP 	text_stim_sentence_type: text = 'statement'
+625.1817 	EXP 	text_stim_condition: text = 'C'
+625.1817 	EXP 	text_stim_prompt: color = 'white (named)'
+625.1817 	EXP 	text_stim_prompt: text = 'filler'
+625.1817 	EXP 	text_stim_sentence: text = 'Tu cumpleaños es mañana.'
+625.1817 	EXP 	text_stim_stim_n: autoDraw = True
+625.1817 	EXP 	text_stim_sentence_type: autoDraw = True
+625.1817 	EXP 	text_stim_condition: autoDraw = True
+625.1817 	EXP 	text_stim_prompt: autoDraw = True
+625.1956 	EXP 	text_stim_sentence: autoDraw = True
+629.0651 	EXP 	New trial (rep=0, index=18): OrderedDict([('stim_n', 19), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Nadamos en la piscina por la tarde.'), ('color', 'white')])
+629.0896 	DATA 	Keypress: right
+629.1118 	EXP 	text_stim_stim_n: autoDraw = False
+629.1118 	EXP 	text_stim_sentence_type: autoDraw = False
+629.1118 	EXP 	text_stim_condition: autoDraw = False
+629.1118 	EXP 	text_stim_prompt: autoDraw = False
+629.1118 	EXP 	text_stim_sentence: autoDraw = False
+629.1118 	EXP 	text_stim_stim_n: text = 19
+629.1118 	EXP 	text_stim_sentence_type: text = 'statement'
+629.1118 	EXP 	text_stim_condition: text = 'C'
+629.1118 	EXP 	text_stim_prompt: color = 'white (named)'
+629.1118 	EXP 	text_stim_prompt: text = 'filler'
+629.1118 	EXP 	text_stim_sentence: text = 'Nadamos en la piscina por la tarde.'
+629.1118 	EXP 	text_stim_stim_n: autoDraw = True
+629.1118 	EXP 	text_stim_sentence_type: autoDraw = True
+629.1118 	EXP 	text_stim_condition: autoDraw = True
+629.1118 	EXP 	text_stim_prompt: autoDraw = True
+629.1340 	EXP 	text_stim_sentence: autoDraw = True
+632.9478 	EXP 	New trial (rep=0, index=19): OrderedDict([('stim_n', 20), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Karina siempre anda en bicicleta.'), ('color', 'white')])
+632.9631 	DATA 	Keypress: right
+632.9804 	EXP 	text_stim_stim_n: autoDraw = False
+632.9804 	EXP 	text_stim_sentence_type: autoDraw = False
+632.9804 	EXP 	text_stim_condition: autoDraw = False
+632.9804 	EXP 	text_stim_prompt: autoDraw = False
+632.9804 	EXP 	text_stim_sentence: autoDraw = False
+632.9804 	EXP 	text_stim_stim_n: text = 20
+632.9804 	EXP 	text_stim_sentence_type: text = 'statement'
+632.9804 	EXP 	text_stim_condition: text = 'A'
+632.9804 	EXP 	text_stim_prompt: color = 'white (named)'
+632.9804 	EXP 	text_stim_prompt: text = 'filler'
+632.9804 	EXP 	text_stim_sentence: text = 'Karina siempre anda en bicicleta.'
+632.9804 	EXP 	text_stim_stim_n: autoDraw = True
+632.9804 	EXP 	text_stim_sentence_type: autoDraw = True
+632.9804 	EXP 	text_stim_condition: autoDraw = True
+632.9804 	EXP 	text_stim_prompt: autoDraw = True
+633.0117 	EXP 	text_stim_sentence: autoDraw = True
+637.4840 	EXP 	New trial (rep=0, index=20): OrderedDict([('stim_n', 21), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Los niños ganan el partido.'), ('color', 'white')])
+637.5109 	DATA 	Keypress: right
+637.5293 	EXP 	text_stim_stim_n: autoDraw = False
+637.5293 	EXP 	text_stim_sentence_type: autoDraw = False
+637.5293 	EXP 	text_stim_condition: autoDraw = False
+637.5293 	EXP 	text_stim_prompt: autoDraw = False
+637.5293 	EXP 	text_stim_sentence: autoDraw = False
+637.5293 	EXP 	text_stim_stim_n: text = 21
+637.5293 	EXP 	text_stim_sentence_type: text = 'statement'
+637.5293 	EXP 	text_stim_condition: text = 'B'
+637.5293 	EXP 	text_stim_prompt: color = 'white (named)'
+637.5293 	EXP 	text_stim_prompt: text = 'filler'
+637.5293 	EXP 	text_stim_sentence: text = 'Los niños ganan el partido.'
+637.5293 	EXP 	text_stim_stim_n: autoDraw = True
+637.5293 	EXP 	text_stim_sentence_type: autoDraw = True
+637.5293 	EXP 	text_stim_condition: autoDraw = True
+637.5293 	EXP 	text_stim_prompt: autoDraw = True
+637.5632 	EXP 	text_stim_sentence: autoDraw = True
+641.5734 	EXP 	New trial (rep=0, index=21): OrderedDict([('stim_n', 22), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Cocinabas por la noche.'), ('color', 'white')])
+641.5900 	DATA 	Keypress: right
+641.6139 	EXP 	text_stim_stim_n: autoDraw = False
+641.6139 	EXP 	text_stim_sentence_type: autoDraw = False
+641.6139 	EXP 	text_stim_condition: autoDraw = False
+641.6139 	EXP 	text_stim_prompt: autoDraw = False
+641.6139 	EXP 	text_stim_sentence: autoDraw = False
+641.6139 	EXP 	text_stim_stim_n: text = 22
+641.6139 	EXP 	text_stim_sentence_type: text = 'statement'
+641.6139 	EXP 	text_stim_condition: text = 'A'
+641.6139 	EXP 	text_stim_prompt: color = 'white (named)'
+641.6139 	EXP 	text_stim_prompt: text = 'filler'
+641.6139 	EXP 	text_stim_sentence: text = 'Cocinabas por la noche.'
+641.6139 	EXP 	text_stim_stim_n: autoDraw = True
+641.6139 	EXP 	text_stim_sentence_type: autoDraw = True
+641.6139 	EXP 	text_stim_condition: autoDraw = True
+641.6139 	EXP 	text_stim_prompt: autoDraw = True
+641.6295 	EXP 	text_stim_sentence: autoDraw = True
+645.4997 	EXP 	New trial (rep=0, index=22): OrderedDict([('stim_n', 23), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Dibujabas con tu amiga.'), ('color', 'white')])
+645.5162 	DATA 	Keypress: right
+645.5303 	EXP 	text_stim_stim_n: autoDraw = False
+645.5303 	EXP 	text_stim_sentence_type: autoDraw = False
+645.5303 	EXP 	text_stim_condition: autoDraw = False
+645.5303 	EXP 	text_stim_prompt: autoDraw = False
+645.5303 	EXP 	text_stim_sentence: autoDraw = False
+645.5303 	EXP 	text_stim_stim_n: text = 23
+645.5303 	EXP 	text_stim_sentence_type: text = 'statement'
+645.5303 	EXP 	text_stim_condition: text = 'A'
+645.5303 	EXP 	text_stim_prompt: color = 'white (named)'
+645.5303 	EXP 	text_stim_prompt: text = 'filler'
+645.5303 	EXP 	text_stim_sentence: text = 'Dibujabas con tu amiga.'
+645.5303 	EXP 	text_stim_stim_n: autoDraw = True
+645.5303 	EXP 	text_stim_sentence_type: autoDraw = True
+645.5303 	EXP 	text_stim_condition: autoDraw = True
+645.5303 	EXP 	text_stim_prompt: autoDraw = True
+645.5639 	EXP 	text_stim_sentence: autoDraw = True
+649.2335 	EXP 	New trial (rep=0, index=23): OrderedDict([('stim_n', 24), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El hombre da un paseo. '), ('color', 'white')])
+649.2527 	DATA 	Keypress: right
+649.2663 	EXP 	text_stim_stim_n: autoDraw = False
+649.2663 	EXP 	text_stim_sentence_type: autoDraw = False
+649.2663 	EXP 	text_stim_condition: autoDraw = False
+649.2663 	EXP 	text_stim_prompt: autoDraw = False
+649.2663 	EXP 	text_stim_sentence: autoDraw = False
+649.2663 	EXP 	text_stim_stim_n: text = 24
+649.2663 	EXP 	text_stim_sentence_type: text = 'statement'
+649.2663 	EXP 	text_stim_condition: text = 'C'
+649.2663 	EXP 	text_stim_prompt: color = 'white (named)'
+649.2663 	EXP 	text_stim_prompt: text = 'filler'
+649.2663 	EXP 	text_stim_sentence: text = 'El hombre da un paseo. '
+649.2663 	EXP 	text_stim_stim_n: autoDraw = True
+649.2663 	EXP 	text_stim_sentence_type: autoDraw = True
+649.2663 	EXP 	text_stim_condition: autoDraw = True
+649.2663 	EXP 	text_stim_prompt: autoDraw = True
+649.2801 	EXP 	text_stim_sentence: autoDraw = True
+653.3719 	EXP 	New trial (rep=0, index=24): OrderedDict([('stim_n', 25), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Compramos en el supermercado.'), ('color', 'white')])
+653.3982 	DATA 	Keypress: right
+653.4178 	EXP 	text_stim_stim_n: autoDraw = False
+653.4178 	EXP 	text_stim_sentence_type: autoDraw = False
+653.4178 	EXP 	text_stim_condition: autoDraw = False
+653.4178 	EXP 	text_stim_prompt: autoDraw = False
+653.4178 	EXP 	text_stim_sentence: autoDraw = False
+653.4178 	EXP 	text_stim_stim_n: text = 25
+653.4178 	EXP 	text_stim_sentence_type: text = 'statement'
+653.4178 	EXP 	text_stim_condition: text = 'A'
+653.4178 	EXP 	text_stim_prompt: color = 'white (named)'
+653.4178 	EXP 	text_stim_prompt: text = 'filler'
+653.4178 	EXP 	text_stim_sentence: text = 'Compramos en el supermercado.'
+653.4178 	EXP 	text_stim_stim_n: autoDraw = True
+653.4178 	EXP 	text_stim_sentence_type: autoDraw = True
+653.4178 	EXP 	text_stim_condition: autoDraw = True
+653.4178 	EXP 	text_stim_prompt: autoDraw = True
+653.4473 	EXP 	text_stim_sentence: autoDraw = True
+657.5048 	DATA 	Keypress: right
+657.5169 	EXP 	New trial (rep=0, index=25): OrderedDict([('stim_n', 26), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Mateo piensa en las compras.'), ('color', 'white')])
+657.5502 	EXP 	text_stim_stim_n: autoDraw = False
+657.5502 	EXP 	text_stim_sentence_type: autoDraw = False
+657.5502 	EXP 	text_stim_condition: autoDraw = False
+657.5502 	EXP 	text_stim_prompt: autoDraw = False
+657.5502 	EXP 	text_stim_sentence: autoDraw = False
+657.5502 	EXP 	text_stim_stim_n: text = 26
+657.5502 	EXP 	text_stim_sentence_type: text = 'statement'
+657.5502 	EXP 	text_stim_condition: text = 'B'
+657.5502 	EXP 	text_stim_prompt: color = 'white (named)'
+657.5502 	EXP 	text_stim_prompt: text = 'filler'
+657.5502 	EXP 	text_stim_sentence: text = 'Mateo piensa en las compras.'
+657.5502 	EXP 	text_stim_stim_n: autoDraw = True
+657.5502 	EXP 	text_stim_sentence_type: autoDraw = True
+657.5502 	EXP 	text_stim_condition: autoDraw = True
+657.5502 	EXP 	text_stim_prompt: autoDraw = True
+657.5812 	EXP 	text_stim_sentence: autoDraw = True
+661.7002 	EXP 	New trial (rep=0, index=26): OrderedDict([('stim_n', 27), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Emilia va al hospital.'), ('color', 'white')])
+661.7197 	DATA 	Keypress: right
+661.7325 	EXP 	text_stim_stim_n: autoDraw = False
+661.7325 	EXP 	text_stim_sentence_type: autoDraw = False
+661.7325 	EXP 	text_stim_condition: autoDraw = False
+661.7325 	EXP 	text_stim_prompt: autoDraw = False
+661.7325 	EXP 	text_stim_sentence: autoDraw = False
+661.7325 	EXP 	text_stim_stim_n: text = 27
+661.7325 	EXP 	text_stim_sentence_type: text = 'statement'
+661.7325 	EXP 	text_stim_condition: text = 'A'
+661.7325 	EXP 	text_stim_prompt: color = 'white (named)'
+661.7325 	EXP 	text_stim_prompt: text = 'filler'
+661.7325 	EXP 	text_stim_sentence: text = 'Emilia va al hospital.'
+661.7325 	EXP 	text_stim_stim_n: autoDraw = True
+661.7325 	EXP 	text_stim_sentence_type: autoDraw = True
+661.7325 	EXP 	text_stim_condition: autoDraw = True
+661.7325 	EXP 	text_stim_prompt: autoDraw = True
+661.7642 	EXP 	text_stim_sentence: autoDraw = True
+665.1693 	EXP 	New trial (rep=0, index=27): OrderedDict([('stim_n', 28), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El hotel tiene muchas habitaciones. '), ('color', 'white')])
+665.1862 	DATA 	Keypress: right
+665.1970 	EXP 	text_stim_stim_n: autoDraw = False
+665.1970 	EXP 	text_stim_sentence_type: autoDraw = False
+665.1970 	EXP 	text_stim_condition: autoDraw = False
+665.1970 	EXP 	text_stim_prompt: autoDraw = False
+665.1970 	EXP 	text_stim_sentence: autoDraw = False
+665.1970 	EXP 	text_stim_stim_n: text = 28
+665.1970 	EXP 	text_stim_sentence_type: text = 'statement'
+665.1970 	EXP 	text_stim_condition: text = 'C'
+665.1970 	EXP 	text_stim_prompt: color = 'white (named)'
+665.1970 	EXP 	text_stim_prompt: text = 'filler'
+665.1970 	EXP 	text_stim_sentence: text = 'El hotel tiene muchas habitaciones. '
+665.1970 	EXP 	text_stim_stim_n: autoDraw = True
+665.1970 	EXP 	text_stim_sentence_type: autoDraw = True
+665.1970 	EXP 	text_stim_condition: autoDraw = True
+665.1970 	EXP 	text_stim_prompt: autoDraw = True
+665.2334 	EXP 	text_stim_sentence: autoDraw = True
+670.0855 	EXP 	New trial (rep=0, index=28): OrderedDict([('stim_n', 29), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El abrigo es muy barato. '), ('color', 'white')])
+670.1076 	DATA 	Keypress: right
+670.1135 	EXP 	text_stim_stim_n: autoDraw = False
+670.1135 	EXP 	text_stim_sentence_type: autoDraw = False
+670.1135 	EXP 	text_stim_condition: autoDraw = False
+670.1135 	EXP 	text_stim_prompt: autoDraw = False
+670.1135 	EXP 	text_stim_sentence: autoDraw = False
+670.1135 	EXP 	text_stim_stim_n: text = 29
+670.1135 	EXP 	text_stim_sentence_type: text = 'statement'
+670.1135 	EXP 	text_stim_condition: text = 'A'
+670.1135 	EXP 	text_stim_prompt: color = 'white (named)'
+670.1135 	EXP 	text_stim_prompt: text = 'filler'
+670.1135 	EXP 	text_stim_sentence: text = 'El abrigo es muy barato. '
+670.1135 	EXP 	text_stim_stim_n: autoDraw = True
+670.1135 	EXP 	text_stim_sentence_type: autoDraw = True
+670.1135 	EXP 	text_stim_condition: autoDraw = True
+670.1135 	EXP 	text_stim_prompt: autoDraw = True
+670.1489 	EXP 	text_stim_sentence: autoDraw = True
+673.6355 	EXP 	New trial (rep=0, index=29): OrderedDict([('stim_n', 30), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'La discoteca es muy buena.'), ('color', 'white')])
+673.6734 	DATA 	Keypress: right
+673.6816 	EXP 	text_stim_stim_n: autoDraw = False
+673.6816 	EXP 	text_stim_sentence_type: autoDraw = False
+673.6816 	EXP 	text_stim_condition: autoDraw = False
+673.6816 	EXP 	text_stim_prompt: autoDraw = False
+673.6816 	EXP 	text_stim_sentence: autoDraw = False
+673.6816 	EXP 	text_stim_stim_n: text = 30
+673.6816 	EXP 	text_stim_sentence_type: text = 'statement'
+673.6816 	EXP 	text_stim_condition: text = 'B'
+673.6816 	EXP 	text_stim_prompt: color = 'white (named)'
+673.6816 	EXP 	text_stim_prompt: text = 'filler'
+673.6816 	EXP 	text_stim_sentence: text = 'La discoteca es muy buena.'
+673.6816 	EXP 	text_stim_stim_n: autoDraw = True
+673.6816 	EXP 	text_stim_sentence_type: autoDraw = True
+673.6816 	EXP 	text_stim_condition: autoDraw = True
+673.6816 	EXP 	text_stim_prompt: autoDraw = True
+673.7322 	EXP 	text_stim_sentence: autoDraw = True
+677.5671 	EXP 	New trial (rep=0, index=30): OrderedDict([('stim_n', 31), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La ciudad tiene dos bancos.'), ('color', 'white')])
+677.5909 	DATA 	Keypress: right
+677.5993 	EXP 	text_stim_stim_n: autoDraw = False
+677.5993 	EXP 	text_stim_sentence_type: autoDraw = False
+677.5993 	EXP 	text_stim_condition: autoDraw = False
+677.5993 	EXP 	text_stim_prompt: autoDraw = False
+677.5993 	EXP 	text_stim_sentence: autoDraw = False
+677.5993 	EXP 	text_stim_stim_n: text = 31
+677.5993 	EXP 	text_stim_sentence_type: text = 'statement'
+677.5993 	EXP 	text_stim_condition: text = 'A'
+677.5993 	EXP 	text_stim_prompt: color = 'white (named)'
+677.5993 	EXP 	text_stim_prompt: text = 'filler'
+677.5993 	EXP 	text_stim_sentence: text = 'La ciudad tiene dos bancos.'
+677.5993 	EXP 	text_stim_stim_n: autoDraw = True
+677.5993 	EXP 	text_stim_sentence_type: autoDraw = True
+677.5993 	EXP 	text_stim_condition: autoDraw = True
+677.5993 	EXP 	text_stim_prompt: autoDraw = True
+677.6363 	EXP 	text_stim_sentence: autoDraw = True
+681.6342 	EXP 	New trial (rep=0, index=31): OrderedDict([('stim_n', 32), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Luis trabaja todo el día.'), ('color', 'white')])
+681.6610 	DATA 	Keypress: right
+681.6819 	EXP 	text_stim_stim_n: autoDraw = False
+681.6819 	EXP 	text_stim_sentence_type: autoDraw = False
+681.6819 	EXP 	text_stim_condition: autoDraw = False
+681.6819 	EXP 	text_stim_prompt: autoDraw = False
+681.6819 	EXP 	text_stim_sentence: autoDraw = False
+681.6819 	EXP 	text_stim_stim_n: text = 32
+681.6819 	EXP 	text_stim_sentence_type: text = 'statement'
+681.6819 	EXP 	text_stim_condition: text = 'C'
+681.6819 	EXP 	text_stim_prompt: color = 'white (named)'
+681.6819 	EXP 	text_stim_prompt: text = 'filler'
+681.6819 	EXP 	text_stim_sentence: text = 'Luis trabaja todo el día.'
+681.6819 	EXP 	text_stim_stim_n: autoDraw = True
+681.6819 	EXP 	text_stim_sentence_type: autoDraw = True
+681.6819 	EXP 	text_stim_condition: autoDraw = True
+681.6819 	EXP 	text_stim_prompt: autoDraw = True
+681.6983 	EXP 	text_stim_sentence: autoDraw = True
+685.6850 	EXP 	New trial (rep=0, index=32): OrderedDict([('stim_n', 33), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Ella compra una mochila?'), ('color', 'white')])
+685.7031 	DATA 	Keypress: right
+685.7165 	EXP 	text_stim_stim_n: autoDraw = False
+685.7165 	EXP 	text_stim_sentence_type: autoDraw = False
+685.7165 	EXP 	text_stim_condition: autoDraw = False
+685.7165 	EXP 	text_stim_prompt: autoDraw = False
+685.7165 	EXP 	text_stim_sentence: autoDraw = False
+685.7165 	EXP 	text_stim_stim_n: text = 33
+685.7165 	EXP 	text_stim_sentence_type: text = 'question'
+685.7165 	EXP 	text_stim_condition: text = 'C'
+685.7165 	EXP 	text_stim_prompt: color = 'white (named)'
+685.7165 	EXP 	text_stim_prompt: text = 'filler'
+685.7165 	EXP 	text_stim_sentence: text = '¿Ella compra una mochila?'
+685.7165 	EXP 	text_stim_stim_n: autoDraw = True
+685.7165 	EXP 	text_stim_sentence_type: autoDraw = True
+685.7165 	EXP 	text_stim_condition: autoDraw = True
+685.7165 	EXP 	text_stim_prompt: autoDraw = True
+685.7494 	EXP 	text_stim_sentence: autoDraw = True
+689.5216 	EXP 	New trial (rep=0, index=33): OrderedDict([('stim_n', 34), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi padre cantaba bien?'), ('color', 'white')])
+689.5388 	DATA 	Keypress: right
+689.5510 	EXP 	text_stim_stim_n: autoDraw = False
+689.5510 	EXP 	text_stim_sentence_type: autoDraw = False
+689.5510 	EXP 	text_stim_condition: autoDraw = False
+689.5510 	EXP 	text_stim_prompt: autoDraw = False
+689.5510 	EXP 	text_stim_sentence: autoDraw = False
+689.5510 	EXP 	text_stim_stim_n: text = 34
+689.5510 	EXP 	text_stim_sentence_type: text = 'question'
+689.5510 	EXP 	text_stim_condition: text = 'A'
+689.5510 	EXP 	text_stim_prompt: color = 'white (named)'
+689.5510 	EXP 	text_stim_prompt: text = 'filler'
+689.5510 	EXP 	text_stim_sentence: text = '¿Mi padre cantaba bien?'
+689.5510 	EXP 	text_stim_stim_n: autoDraw = True
+689.5510 	EXP 	text_stim_sentence_type: autoDraw = True
+689.5510 	EXP 	text_stim_condition: autoDraw = True
+689.5510 	EXP 	text_stim_prompt: autoDraw = True
+689.5865 	EXP 	text_stim_sentence: autoDraw = True
+692.8932 	EXP 	New trial (rep=0, index=34): OrderedDict([('stim_n', 35), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿La vecina sale muy temprano? '), ('color', 'white')])
+692.9212 	DATA 	Keypress: right
+692.9515 	EXP 	text_stim_stim_n: autoDraw = False
+692.9515 	EXP 	text_stim_sentence_type: autoDraw = False
+692.9515 	EXP 	text_stim_condition: autoDraw = False
+692.9515 	EXP 	text_stim_prompt: autoDraw = False
+692.9515 	EXP 	text_stim_sentence: autoDraw = False
+692.9515 	EXP 	text_stim_stim_n: text = 35
+692.9515 	EXP 	text_stim_sentence_type: text = 'question'
+692.9515 	EXP 	text_stim_condition: text = 'B'
+692.9515 	EXP 	text_stim_prompt: color = 'white (named)'
+692.9515 	EXP 	text_stim_prompt: text = 'filler'
+692.9515 	EXP 	text_stim_sentence: text = '¿La vecina sale muy temprano? '
+692.9515 	EXP 	text_stim_stim_n: autoDraw = True
+692.9515 	EXP 	text_stim_sentence_type: autoDraw = True
+692.9515 	EXP 	text_stim_condition: autoDraw = True
+692.9515 	EXP 	text_stim_prompt: autoDraw = True
+692.9838 	EXP 	text_stim_sentence: autoDraw = True
+696.4642 	EXP 	New trial (rep=0, index=35): OrderedDict([('stim_n', 36), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi amiga mira la luna?'), ('color', 'white')])
+696.4781 	DATA 	Keypress: right
+696.5003 	EXP 	text_stim_stim_n: autoDraw = False
+696.5003 	EXP 	text_stim_sentence_type: autoDraw = False
+696.5003 	EXP 	text_stim_condition: autoDraw = False
+696.5003 	EXP 	text_stim_prompt: autoDraw = False
+696.5003 	EXP 	text_stim_sentence: autoDraw = False
+696.5003 	EXP 	text_stim_stim_n: text = 36
+696.5003 	EXP 	text_stim_sentence_type: text = 'question'
+696.5003 	EXP 	text_stim_condition: text = 'A'
+696.5003 	EXP 	text_stim_prompt: color = 'white (named)'
+696.5003 	EXP 	text_stim_prompt: text = 'filler'
+696.5003 	EXP 	text_stim_sentence: text = '¿Mi amiga mira la luna?'
+696.5003 	EXP 	text_stim_stim_n: autoDraw = True
+696.5003 	EXP 	text_stim_sentence_type: autoDraw = True
+696.5003 	EXP 	text_stim_condition: autoDraw = True
+696.5003 	EXP 	text_stim_prompt: autoDraw = True
+696.5167 	EXP 	text_stim_sentence: autoDraw = True
+700.2725 	EXP 	New trial (rep=0, index=36): OrderedDict([('stim_n', 37), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Lucía va a la iglesia?'), ('color', 'white')])
+700.2862 	DATA 	Keypress: right
+700.3002 	EXP 	text_stim_stim_n: autoDraw = False
+700.3002 	EXP 	text_stim_sentence_type: autoDraw = False
+700.3002 	EXP 	text_stim_condition: autoDraw = False
+700.3002 	EXP 	text_stim_prompt: autoDraw = False
+700.3002 	EXP 	text_stim_sentence: autoDraw = False
+700.3002 	EXP 	text_stim_stim_n: text = 37
+700.3002 	EXP 	text_stim_sentence_type: text = 'question'
+700.3002 	EXP 	text_stim_condition: text = 'B'
+700.3002 	EXP 	text_stim_prompt: color = 'white (named)'
+700.3002 	EXP 	text_stim_prompt: text = 'filler'
+700.3002 	EXP 	text_stim_sentence: text = '¿Lucía va a la iglesia?'
+700.3002 	EXP 	text_stim_stim_n: autoDraw = True
+700.3002 	EXP 	text_stim_sentence_type: autoDraw = True
+700.3002 	EXP 	text_stim_condition: autoDraw = True
+700.3002 	EXP 	text_stim_prompt: autoDraw = True
+700.3346 	EXP 	text_stim_sentence: autoDraw = True
+704.1413 	EXP 	New trial (rep=0, index=37): OrderedDict([('stim_n', 38), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi vecino habla mucho?'), ('color', 'white')])
+704.1596 	DATA 	Keypress: right
+704.1669 	EXP 	text_stim_stim_n: autoDraw = False
+704.1669 	EXP 	text_stim_sentence_type: autoDraw = False
+704.1669 	EXP 	text_stim_condition: autoDraw = False
+704.1669 	EXP 	text_stim_prompt: autoDraw = False
+704.1669 	EXP 	text_stim_sentence: autoDraw = False
+704.1669 	EXP 	text_stim_stim_n: text = 38
+704.1669 	EXP 	text_stim_sentence_type: text = 'question'
+704.1669 	EXP 	text_stim_condition: text = 'A'
+704.1669 	EXP 	text_stim_prompt: color = 'white (named)'
+704.1669 	EXP 	text_stim_prompt: text = 'filler'
+704.1669 	EXP 	text_stim_sentence: text = '¿Mi vecino habla mucho?'
+704.1669 	EXP 	text_stim_stim_n: autoDraw = True
+704.1669 	EXP 	text_stim_sentence_type: autoDraw = True
+704.1669 	EXP 	text_stim_condition: autoDraw = True
+704.1669 	EXP 	text_stim_prompt: autoDraw = True
+704.2067 	EXP 	text_stim_sentence: autoDraw = True
+707.7482 	EXP 	New trial (rep=0, index=38): OrderedDict([('stim_n', 39), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿El estudiante toma apuntes?'), ('color', 'white')])
+707.7766 	DATA 	Keypress: right
+707.8025 	EXP 	text_stim_stim_n: autoDraw = False
+707.8025 	EXP 	text_stim_sentence_type: autoDraw = False
+707.8025 	EXP 	text_stim_condition: autoDraw = False
+707.8025 	EXP 	text_stim_prompt: autoDraw = False
+707.8025 	EXP 	text_stim_sentence: autoDraw = False
+707.8025 	EXP 	text_stim_stim_n: text = 39
+707.8025 	EXP 	text_stim_sentence_type: text = 'question'
+707.8025 	EXP 	text_stim_condition: text = 'C'
+707.8025 	EXP 	text_stim_prompt: color = 'white (named)'
+707.8025 	EXP 	text_stim_prompt: text = 'filler'
+707.8025 	EXP 	text_stim_sentence: text = '¿El estudiante toma apuntes?'
+707.8025 	EXP 	text_stim_stim_n: autoDraw = True
+707.8025 	EXP 	text_stim_sentence_type: autoDraw = True
+707.8025 	EXP 	text_stim_condition: autoDraw = True
+707.8025 	EXP 	text_stim_prompt: autoDraw = True
+707.8169 	EXP 	text_stim_sentence: autoDraw = True
+711.7709 	EXP 	New trial (rep=0, index=39): OrderedDict([('stim_n', 40), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿La chica abre su libro?'), ('color', 'white')])
+711.7868 	DATA 	Keypress: right
+711.8070 	EXP 	text_stim_stim_n: autoDraw = False
+711.8070 	EXP 	text_stim_sentence_type: autoDraw = False
+711.8070 	EXP 	text_stim_condition: autoDraw = False
+711.8070 	EXP 	text_stim_prompt: autoDraw = False
+711.8070 	EXP 	text_stim_sentence: autoDraw = False
+711.8070 	EXP 	text_stim_stim_n: text = 40
+711.8070 	EXP 	text_stim_sentence_type: text = 'question'
+711.8070 	EXP 	text_stim_condition: text = 'A'
+711.8070 	EXP 	text_stim_prompt: color = 'white (named)'
+711.8070 	EXP 	text_stim_prompt: text = 'filler'
+711.8070 	EXP 	text_stim_sentence: text = '¿La chica abre su libro?'
+711.8070 	EXP 	text_stim_stim_n: autoDraw = True
+711.8070 	EXP 	text_stim_sentence_type: autoDraw = True
+711.8070 	EXP 	text_stim_condition: autoDraw = True
+711.8070 	EXP 	text_stim_prompt: autoDraw = True
+711.8343 	EXP 	text_stim_sentence: autoDraw = True
+715.8044 	EXP 	New trial (rep=0, index=40): OrderedDict([('stim_n', 41), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Sandra corre en el parque?'), ('color', 'white')])
+715.8289 	DATA 	Keypress: right
+715.8505 	EXP 	text_stim_stim_n: autoDraw = False
+715.8505 	EXP 	text_stim_sentence_type: autoDraw = False
+715.8505 	EXP 	text_stim_condition: autoDraw = False
+715.8505 	EXP 	text_stim_prompt: autoDraw = False
+715.8505 	EXP 	text_stim_sentence: autoDraw = False
+715.8505 	EXP 	text_stim_stim_n: text = 41
+715.8505 	EXP 	text_stim_sentence_type: text = 'question'
+715.8505 	EXP 	text_stim_condition: text = 'B'
+715.8505 	EXP 	text_stim_prompt: color = 'white (named)'
+715.8505 	EXP 	text_stim_prompt: text = 'filler'
+715.8505 	EXP 	text_stim_sentence: text = '¿Sandra corre en el parque?'
+715.8505 	EXP 	text_stim_stim_n: autoDraw = True
+715.8505 	EXP 	text_stim_sentence_type: autoDraw = True
+715.8505 	EXP 	text_stim_condition: autoDraw = True
+715.8505 	EXP 	text_stim_prompt: autoDraw = True
+715.8678 	EXP 	text_stim_sentence: autoDraw = True
+719.7726 	DATA 	Keypress: right
+719.7881 	EXP 	New trial (rep=0, index=41): OrderedDict([('stim_n', 42), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi amigo no comía pollo?'), ('color', 'white')])
+719.8205 	EXP 	text_stim_stim_n: autoDraw = False
+719.8205 	EXP 	text_stim_sentence_type: autoDraw = False
+719.8205 	EXP 	text_stim_condition: autoDraw = False
+719.8205 	EXP 	text_stim_prompt: autoDraw = False
+719.8205 	EXP 	text_stim_sentence: autoDraw = False
+719.8205 	EXP 	text_stim_stim_n: text = 42
+719.8205 	EXP 	text_stim_sentence_type: text = 'question'
+719.8205 	EXP 	text_stim_condition: text = 'A'
+719.8205 	EXP 	text_stim_prompt: color = 'white (named)'
+719.8205 	EXP 	text_stim_prompt: text = 'filler'
+719.8205 	EXP 	text_stim_sentence: text = '¿Mi amigo no comía pollo?'
+719.8205 	EXP 	text_stim_stim_n: autoDraw = True
+719.8205 	EXP 	text_stim_sentence_type: autoDraw = True
+719.8205 	EXP 	text_stim_condition: autoDraw = True
+719.8205 	EXP 	text_stim_prompt: autoDraw = True
+719.8573 	EXP 	text_stim_sentence: autoDraw = True
+724.7299 	EXP 	New trial (rep=0, index=42): OrderedDict([('stim_n', 43), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Carlos escribe una carta?'), ('color', 'white')])
+724.7596 	DATA 	Keypress: right
+724.7685 	EXP 	text_stim_stim_n: autoDraw = False
+724.7685 	EXP 	text_stim_sentence_type: autoDraw = False
+724.7685 	EXP 	text_stim_condition: autoDraw = False
+724.7685 	EXP 	text_stim_prompt: autoDraw = False
+724.7685 	EXP 	text_stim_sentence: autoDraw = False
+724.7685 	EXP 	text_stim_stim_n: text = 43
+724.7685 	EXP 	text_stim_sentence_type: text = 'question'
+724.7685 	EXP 	text_stim_condition: text = 'C'
+724.7685 	EXP 	text_stim_prompt: color = 'white (named)'
+724.7685 	EXP 	text_stim_prompt: text = 'filler'
+724.7685 	EXP 	text_stim_sentence: text = '¿Carlos escribe una carta?'
+724.7685 	EXP 	text_stim_stim_n: autoDraw = True
+724.7685 	EXP 	text_stim_sentence_type: autoDraw = True
+724.7685 	EXP 	text_stim_condition: autoDraw = True
+724.7685 	EXP 	text_stim_prompt: autoDraw = True
+724.8011 	EXP 	text_stim_sentence: autoDraw = True
+728.6425 	DATA 	Keypress: right
+728.6540 	EXP 	New trial (rep=0, index=43): OrderedDict([('stim_n', 44), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Jose visitaba la playa?'), ('color', 'white')])
+728.6877 	EXP 	text_stim_stim_n: autoDraw = False
+728.6877 	EXP 	text_stim_sentence_type: autoDraw = False
+728.6877 	EXP 	text_stim_condition: autoDraw = False
+728.6877 	EXP 	text_stim_prompt: autoDraw = False
+728.6877 	EXP 	text_stim_sentence: autoDraw = False
+728.6877 	EXP 	text_stim_stim_n: text = 44
+728.6877 	EXP 	text_stim_sentence_type: text = 'question'
+728.6877 	EXP 	text_stim_condition: text = 'A'
+728.6877 	EXP 	text_stim_prompt: color = 'white (named)'
+728.6877 	EXP 	text_stim_prompt: text = 'filler'
+728.6877 	EXP 	text_stim_sentence: text = '¿Jose visitaba la playa?'
+728.6877 	EXP 	text_stim_stim_n: autoDraw = True
+728.6877 	EXP 	text_stim_sentence_type: autoDraw = True
+728.6877 	EXP 	text_stim_condition: autoDraw = True
+728.6877 	EXP 	text_stim_prompt: autoDraw = True
+728.7199 	EXP 	text_stim_sentence: autoDraw = True
+733.2751 	EXP 	New trial (rep=0, index=44): OrderedDict([('stim_n', 45), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Mi hermano cierra la puerta?'), ('color', 'white')])
+733.2924 	DATA 	Keypress: right
+733.3021 	EXP 	text_stim_stim_n: autoDraw = False
+733.3021 	EXP 	text_stim_sentence_type: autoDraw = False
+733.3021 	EXP 	text_stim_condition: autoDraw = False
+733.3021 	EXP 	text_stim_prompt: autoDraw = False
+733.3021 	EXP 	text_stim_sentence: autoDraw = False
+733.3021 	EXP 	text_stim_stim_n: text = 45
+733.3021 	EXP 	text_stim_sentence_type: text = 'question'
+733.3021 	EXP 	text_stim_condition: text = 'B'
+733.3021 	EXP 	text_stim_prompt: color = 'white (named)'
+733.3021 	EXP 	text_stim_prompt: text = 'filler'
+733.3021 	EXP 	text_stim_sentence: text = '¿Mi hermano cierra la puerta?'
+733.3021 	EXP 	text_stim_stim_n: autoDraw = True
+733.3021 	EXP 	text_stim_sentence_type: autoDraw = True
+733.3021 	EXP 	text_stim_condition: autoDraw = True
+733.3021 	EXP 	text_stim_prompt: autoDraw = True
+733.3372 	EXP 	text_stim_sentence: autoDraw = True
+742.5376 	EXP 	New trial (rep=0, index=45): OrderedDict([('stim_n', 46), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿El chico escribía una carta?'), ('color', 'white')])
+742.5510 	DATA 	Keypress: right
+742.5734 	EXP 	text_stim_stim_n: autoDraw = False
+742.5734 	EXP 	text_stim_sentence_type: autoDraw = False
+742.5734 	EXP 	text_stim_condition: autoDraw = False
+742.5734 	EXP 	text_stim_prompt: autoDraw = False
+742.5734 	EXP 	text_stim_sentence: autoDraw = False
+742.5734 	EXP 	text_stim_stim_n: text = 46
+742.5734 	EXP 	text_stim_sentence_type: text = 'question'
+742.5734 	EXP 	text_stim_condition: text = 'A'
+742.5734 	EXP 	text_stim_prompt: color = 'white (named)'
+742.5734 	EXP 	text_stim_prompt: text = 'filler'
+742.5734 	EXP 	text_stim_sentence: text = '¿El chico escribía una carta?'
+742.5734 	EXP 	text_stim_stim_n: autoDraw = True
+742.5734 	EXP 	text_stim_sentence_type: autoDraw = True
+742.5734 	EXP 	text_stim_condition: autoDraw = True
+742.5734 	EXP 	text_stim_prompt: autoDraw = True
+742.5866 	EXP 	text_stim_sentence: autoDraw = True
+747.2108 	EXP 	New trial (rep=0, index=46): OrderedDict([('stim_n', 47), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Mi vecino trae comida?'), ('color', 'white')])
+747.2279 	DATA 	Keypress: right
+747.2383 	EXP 	text_stim_stim_n: autoDraw = False
+747.2383 	EXP 	text_stim_sentence_type: autoDraw = False
+747.2383 	EXP 	text_stim_condition: autoDraw = False
+747.2383 	EXP 	text_stim_prompt: autoDraw = False
+747.2383 	EXP 	text_stim_sentence: autoDraw = False
+747.2383 	EXP 	text_stim_stim_n: text = 47
+747.2383 	EXP 	text_stim_sentence_type: text = 'question'
+747.2383 	EXP 	text_stim_condition: text = 'C'
+747.2383 	EXP 	text_stim_prompt: color = 'white (named)'
+747.2383 	EXP 	text_stim_prompt: text = 'filler'
+747.2383 	EXP 	text_stim_sentence: text = '¿Mi vecino trae comida?'
+747.2383 	EXP 	text_stim_stim_n: autoDraw = True
+747.2383 	EXP 	text_stim_sentence_type: autoDraw = True
+747.2383 	EXP 	text_stim_condition: autoDraw = True
+747.2383 	EXP 	text_stim_prompt: autoDraw = True
+747.2537 	EXP 	text_stim_sentence: autoDraw = True
+751.2436 	EXP 	New trial (rep=0, index=47): OrderedDict([('stim_n', 48), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Carlos trae a sus hijos? '), ('color', 'white')])
+751.2714 	DATA 	Keypress: right
+751.2866 	EXP 	text_stim_stim_n: autoDraw = False
+751.2866 	EXP 	text_stim_sentence_type: autoDraw = False
+751.2866 	EXP 	text_stim_condition: autoDraw = False
+751.2866 	EXP 	text_stim_prompt: autoDraw = False
+751.2866 	EXP 	text_stim_sentence: autoDraw = False
+751.2866 	EXP 	text_stim_stim_n: text = 48
+751.2866 	EXP 	text_stim_sentence_type: text = 'question'
+751.2866 	EXP 	text_stim_condition: text = 'A'
+751.2866 	EXP 	text_stim_prompt: color = 'white (named)'
+751.2866 	EXP 	text_stim_prompt: text = 'filler'
+751.2866 	EXP 	text_stim_sentence: text = '¿Carlos trae a sus hijos? '
+751.2866 	EXP 	text_stim_stim_n: autoDraw = True
+751.2866 	EXP 	text_stim_sentence_type: autoDraw = True
+751.2866 	EXP 	text_stim_condition: autoDraw = True
+751.2866 	EXP 	text_stim_prompt: autoDraw = True
+751.3044 	EXP 	text_stim_sentence: autoDraw = True
+755.5550 	DATA 	Keypress: right
+755.5732 	EXP 	New trial (rep=0, index=48): OrderedDict([('stim_n', 49), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Jaime tenía una tienda?'), ('color', 'white')])
+755.6064 	EXP 	text_stim_stim_n: autoDraw = False
+755.6064 	EXP 	text_stim_sentence_type: autoDraw = False
+755.6064 	EXP 	text_stim_condition: autoDraw = False
+755.6064 	EXP 	text_stim_prompt: autoDraw = False
+755.6064 	EXP 	text_stim_sentence: autoDraw = False
+755.6064 	EXP 	text_stim_stim_n: text = 49
+755.6064 	EXP 	text_stim_sentence_type: text = 'question'
+755.6064 	EXP 	text_stim_condition: text = 'B'
+755.6064 	EXP 	text_stim_prompt: color = 'white (named)'
+755.6064 	EXP 	text_stim_prompt: text = 'filler'
+755.6064 	EXP 	text_stim_sentence: text = '¿Jaime tenía una tienda?'
+755.6064 	EXP 	text_stim_stim_n: autoDraw = True
+755.6064 	EXP 	text_stim_sentence_type: autoDraw = True
+755.6064 	EXP 	text_stim_condition: autoDraw = True
+755.6064 	EXP 	text_stim_prompt: autoDraw = True
+755.6400 	EXP 	text_stim_sentence: autoDraw = True
+760.4637 	EXP 	New trial (rep=0, index=49): OrderedDict([('stim_n', 50), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Juan quiere un bistec?'), ('color', 'white')])
+760.4808 	DATA 	Keypress: right
+760.4896 	EXP 	text_stim_stim_n: autoDraw = False
+760.4896 	EXP 	text_stim_sentence_type: autoDraw = False
+760.4896 	EXP 	text_stim_condition: autoDraw = False
+760.4896 	EXP 	text_stim_prompt: autoDraw = False
+760.4896 	EXP 	text_stim_sentence: autoDraw = False
+760.4896 	EXP 	text_stim_stim_n: text = 50
+760.4896 	EXP 	text_stim_sentence_type: text = 'question'
+760.4896 	EXP 	text_stim_condition: text = 'A'
+760.4896 	EXP 	text_stim_prompt: color = 'white (named)'
+760.4896 	EXP 	text_stim_prompt: text = 'filler'
+760.4896 	EXP 	text_stim_sentence: text = '¿Juan quiere un bistec?'
+760.4896 	EXP 	text_stim_stim_n: autoDraw = True
+760.4896 	EXP 	text_stim_sentence_type: autoDraw = True
+760.4896 	EXP 	text_stim_condition: autoDraw = True
+760.4896 	EXP 	text_stim_prompt: autoDraw = True
+760.5564 	EXP 	text_stim_sentence: autoDraw = True
+764.9922 	EXP 	New trial (rep=0, index=50): OrderedDict([('stim_n', 51), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Carolina baila flamenco? '), ('color', 'white')])
+765.0064 	DATA 	Keypress: right
+765.0279 	EXP 	text_stim_stim_n: autoDraw = False
+765.0279 	EXP 	text_stim_sentence_type: autoDraw = False
+765.0279 	EXP 	text_stim_condition: autoDraw = False
+765.0279 	EXP 	text_stim_prompt: autoDraw = False
+765.0279 	EXP 	text_stim_sentence: autoDraw = False
+765.0279 	EXP 	text_stim_stim_n: text = 51
+765.0279 	EXP 	text_stim_sentence_type: text = 'question'
+765.0279 	EXP 	text_stim_condition: text = 'A'
+765.0279 	EXP 	text_stim_prompt: color = 'white (named)'
+765.0279 	EXP 	text_stim_prompt: text = 'filler'
+765.0279 	EXP 	text_stim_sentence: text = '¿Carolina baila flamenco? '
+765.0279 	EXP 	text_stim_stim_n: autoDraw = True
+765.0279 	EXP 	text_stim_sentence_type: autoDraw = True
+765.0279 	EXP 	text_stim_condition: autoDraw = True
+765.0279 	EXP 	text_stim_prompt: autoDraw = True
+765.0716 	EXP 	text_stim_sentence: autoDraw = True
+769.3744 	EXP 	New trial (rep=0, index=51): OrderedDict([('stim_n', 52), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Mi familia cenaba tarde?'), ('color', 'white')])
+769.3922 	DATA 	Keypress: right
+769.4043 	EXP 	text_stim_stim_n: autoDraw = False
+769.4043 	EXP 	text_stim_sentence_type: autoDraw = False
+769.4043 	EXP 	text_stim_condition: autoDraw = False
+769.4043 	EXP 	text_stim_prompt: autoDraw = False
+769.4043 	EXP 	text_stim_sentence: autoDraw = False
+769.4043 	EXP 	text_stim_stim_n: text = 52
+769.4043 	EXP 	text_stim_sentence_type: text = 'question'
+769.4043 	EXP 	text_stim_condition: text = 'B'
+769.4043 	EXP 	text_stim_prompt: color = 'white (named)'
+769.4043 	EXP 	text_stim_prompt: text = 'filler'
+769.4043 	EXP 	text_stim_sentence: text = '¿Mi familia cenaba tarde?'
+769.4043 	EXP 	text_stim_stim_n: autoDraw = True
+769.4043 	EXP 	text_stim_sentence_type: autoDraw = True
+769.4043 	EXP 	text_stim_condition: autoDraw = True
+769.4043 	EXP 	text_stim_prompt: autoDraw = True
+769.4392 	EXP 	text_stim_sentence: autoDraw = True
+773.4910 	EXP 	New trial (rep=0, index=52): OrderedDict([('stim_n', 53), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Pablo lavaba su coche? '), ('color', 'white')])
+773.5076 	DATA 	Keypress: right
+773.5223 	EXP 	text_stim_stim_n: autoDraw = False
+773.5223 	EXP 	text_stim_sentence_type: autoDraw = False
+773.5223 	EXP 	text_stim_condition: autoDraw = False
+773.5223 	EXP 	text_stim_prompt: autoDraw = False
+773.5223 	EXP 	text_stim_sentence: autoDraw = False
+773.5223 	EXP 	text_stim_stim_n: text = 53
+773.5223 	EXP 	text_stim_sentence_type: text = 'question'
+773.5223 	EXP 	text_stim_condition: text = 'C'
+773.5223 	EXP 	text_stim_prompt: color = 'white (named)'
+773.5223 	EXP 	text_stim_prompt: text = 'filler'
+773.5223 	EXP 	text_stim_sentence: text = '¿Pablo lavaba su coche? '
+773.5223 	EXP 	text_stim_stim_n: autoDraw = True
+773.5223 	EXP 	text_stim_sentence_type: autoDraw = True
+773.5223 	EXP 	text_stim_condition: autoDraw = True
+773.5223 	EXP 	text_stim_prompt: autoDraw = True
+773.5553 	EXP 	text_stim_sentence: autoDraw = True
+778.6934 	EXP 	New trial (rep=0, index=53): OrderedDict([('stim_n', 54), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿El equipo gana la competencia?'), ('color', 'white')])
+778.7110 	DATA 	Keypress: right
+778.7217 	EXP 	text_stim_stim_n: autoDraw = False
+778.7217 	EXP 	text_stim_sentence_type: autoDraw = False
+778.7217 	EXP 	text_stim_condition: autoDraw = False
+778.7217 	EXP 	text_stim_prompt: autoDraw = False
+778.7217 	EXP 	text_stim_sentence: autoDraw = False
+778.7217 	EXP 	text_stim_stim_n: text = 54
+778.7217 	EXP 	text_stim_sentence_type: text = 'question'
+778.7217 	EXP 	text_stim_condition: text = 'A'
+778.7217 	EXP 	text_stim_prompt: color = 'white (named)'
+778.7217 	EXP 	text_stim_prompt: text = 'filler'
+778.7217 	EXP 	text_stim_sentence: text = '¿El equipo gana la competencia?'
+778.7217 	EXP 	text_stim_stim_n: autoDraw = True
+778.7217 	EXP 	text_stim_sentence_type: autoDraw = True
+778.7217 	EXP 	text_stim_condition: autoDraw = True
+778.7217 	EXP 	text_stim_prompt: autoDraw = True
+778.7565 	EXP 	text_stim_sentence: autoDraw = True
+787.6413 	EXP 	New trial (rep=0, index=54): OrderedDict([('stim_n', 55), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Rogelio cuida a los niños? '), ('color', 'white')])
+787.6626 	DATA 	Keypress: right
+787.6729 	EXP 	text_stim_stim_n: autoDraw = False
+787.6729 	EXP 	text_stim_sentence_type: autoDraw = False
+787.6729 	EXP 	text_stim_condition: autoDraw = False
+787.6729 	EXP 	text_stim_prompt: autoDraw = False
+787.6729 	EXP 	text_stim_sentence: autoDraw = False
+787.6729 	EXP 	text_stim_stim_n: text = 55
+787.6729 	EXP 	text_stim_sentence_type: text = 'question'
+787.6729 	EXP 	text_stim_condition: text = 'C'
+787.6729 	EXP 	text_stim_prompt: color = 'white (named)'
+787.6729 	EXP 	text_stim_prompt: text = 'filler'
+787.6729 	EXP 	text_stim_sentence: text = '¿Rogelio cuida a los niños? '
+787.6729 	EXP 	text_stim_stim_n: autoDraw = True
+787.6729 	EXP 	text_stim_sentence_type: autoDraw = True
+787.6729 	EXP 	text_stim_condition: autoDraw = True
+787.6729 	EXP 	text_stim_prompt: autoDraw = True
+787.7069 	EXP 	text_stim_sentence: autoDraw = True
+794.1771 	EXP 	New trial (rep=0, index=55): OrderedDict([('stim_n', 56), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Maria se peina en la mañana?'), ('color', 'white')])
+794.2040 	DATA 	Keypress: right
+794.2244 	EXP 	text_stim_stim_n: autoDraw = False
+794.2244 	EXP 	text_stim_sentence_type: autoDraw = False
+794.2244 	EXP 	text_stim_condition: autoDraw = False
+794.2244 	EXP 	text_stim_prompt: autoDraw = False
+794.2244 	EXP 	text_stim_sentence: autoDraw = False
+794.2244 	EXP 	text_stim_stim_n: text = 56
+794.2244 	EXP 	text_stim_sentence_type: text = 'question'
+794.2244 	EXP 	text_stim_condition: text = 'A'
+794.2244 	EXP 	text_stim_prompt: color = 'white (named)'
+794.2244 	EXP 	text_stim_prompt: text = 'filler'
+794.2244 	EXP 	text_stim_sentence: text = '¿Maria se peina en la mañana?'
+794.2244 	EXP 	text_stim_stim_n: autoDraw = True
+794.2244 	EXP 	text_stim_sentence_type: autoDraw = True
+794.2244 	EXP 	text_stim_condition: autoDraw = True
+794.2244 	EXP 	text_stim_prompt: autoDraw = True
+794.2573 	EXP 	text_stim_sentence: autoDraw = True
+798.5753 	EXP 	New trial (rep=0, index=56): OrderedDict([('stim_n', 57), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Lucía compra el jabón?'), ('color', 'white')])
+798.5993 	DATA 	Keypress: right
+798.6062 	EXP 	text_stim_stim_n: autoDraw = False
+798.6062 	EXP 	text_stim_sentence_type: autoDraw = False
+798.6062 	EXP 	text_stim_condition: autoDraw = False
+798.6062 	EXP 	text_stim_prompt: autoDraw = False
+798.6062 	EXP 	text_stim_sentence: autoDraw = False
+798.6062 	EXP 	text_stim_stim_n: text = 57
+798.6062 	EXP 	text_stim_sentence_type: text = 'question'
+798.6062 	EXP 	text_stim_condition: text = 'B'
+798.6062 	EXP 	text_stim_prompt: color = 'white (named)'
+798.6062 	EXP 	text_stim_prompt: text = 'filler'
+798.6062 	EXP 	text_stim_sentence: text = '¿Lucía compra el jabón?'
+798.6062 	EXP 	text_stim_stim_n: autoDraw = True
+798.6062 	EXP 	text_stim_sentence_type: autoDraw = True
+798.6062 	EXP 	text_stim_condition: autoDraw = True
+798.6062 	EXP 	text_stim_prompt: autoDraw = True
+798.6447 	EXP 	text_stim_sentence: autoDraw = True
+802.7288 	EXP 	New trial (rep=0, index=57): OrderedDict([('stim_n', 58), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿A Jaime le gusta su piso?'), ('color', 'white')])
+802.7460 	DATA 	Keypress: right
+802.7585 	EXP 	text_stim_stim_n: autoDraw = False
+802.7585 	EXP 	text_stim_sentence_type: autoDraw = False
+802.7585 	EXP 	text_stim_condition: autoDraw = False
+802.7585 	EXP 	text_stim_prompt: autoDraw = False
+802.7585 	EXP 	text_stim_sentence: autoDraw = False
+802.7585 	EXP 	text_stim_stim_n: text = 58
+802.7585 	EXP 	text_stim_sentence_type: text = 'question'
+802.7585 	EXP 	text_stim_condition: text = 'A'
+802.7585 	EXP 	text_stim_prompt: color = 'white (named)'
+802.7585 	EXP 	text_stim_prompt: text = 'filler'
+802.7585 	EXP 	text_stim_sentence: text = '¿A Jaime le gusta su piso?'
+802.7585 	EXP 	text_stim_stim_n: autoDraw = True
+802.7585 	EXP 	text_stim_sentence_type: autoDraw = True
+802.7585 	EXP 	text_stim_condition: autoDraw = True
+802.7585 	EXP 	text_stim_prompt: autoDraw = True
+802.7898 	EXP 	text_stim_sentence: autoDraw = True
+807.4930 	EXP 	New trial (rep=0, index=58): OrderedDict([('stim_n', 59), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Isabel puede apagar la luz?'), ('color', 'white')])
+807.5156 	DATA 	Keypress: right
+807.5398 	EXP 	text_stim_stim_n: autoDraw = False
+807.5398 	EXP 	text_stim_sentence_type: autoDraw = False
+807.5398 	EXP 	text_stim_condition: autoDraw = False
+807.5398 	EXP 	text_stim_prompt: autoDraw = False
+807.5398 	EXP 	text_stim_sentence: autoDraw = False
+807.5398 	EXP 	text_stim_stim_n: text = 59
+807.5398 	EXP 	text_stim_sentence_type: text = 'question'
+807.5398 	EXP 	text_stim_condition: text = 'C'
+807.5398 	EXP 	text_stim_prompt: color = 'white (named)'
+807.5398 	EXP 	text_stim_prompt: text = 'filler'
+807.5398 	EXP 	text_stim_sentence: text = '¿Isabel puede apagar la luz?'
+807.5398 	EXP 	text_stim_stim_n: autoDraw = True
+807.5398 	EXP 	text_stim_sentence_type: autoDraw = True
+807.5398 	EXP 	text_stim_condition: autoDraw = True
+807.5398 	EXP 	text_stim_prompt: autoDraw = True
+807.5580 	EXP 	text_stim_sentence: autoDraw = True
+812.6459 	EXP 	New trial (rep=0, index=59): OrderedDict([('stim_n', 60), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Felipe no tiene contraseña?'), ('color', 'white')])
+812.6690 	DATA 	Keypress: right
+812.6912 	EXP 	text_stim_stim_n: autoDraw = False
+812.6912 	EXP 	text_stim_sentence_type: autoDraw = False
+812.6912 	EXP 	text_stim_condition: autoDraw = False
+812.6912 	EXP 	text_stim_prompt: autoDraw = False
+812.6912 	EXP 	text_stim_sentence: autoDraw = False
+812.6912 	EXP 	text_stim_stim_n: text = 60
+812.6912 	EXP 	text_stim_sentence_type: text = 'question'
+812.6912 	EXP 	text_stim_condition: text = 'A'
+812.6912 	EXP 	text_stim_prompt: color = 'white (named)'
+812.6912 	EXP 	text_stim_prompt: text = 'filler'
+812.6912 	EXP 	text_stim_sentence: text = '¿Felipe no tiene contraseña?'
+812.6912 	EXP 	text_stim_stim_n: autoDraw = True
+812.6912 	EXP 	text_stim_sentence_type: autoDraw = True
+812.6912 	EXP 	text_stim_condition: autoDraw = True
+812.6912 	EXP 	text_stim_prompt: autoDraw = True
+812.7073 	EXP 	text_stim_sentence: autoDraw = True
+816.9680 	EXP 	New trial (rep=0, index=60): OrderedDict([('stim_n', 61), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿El estudiante practica deportes?'), ('color', 'white')])
+816.9870 	DATA 	Keypress: right
+817.0112 	EXP 	text_stim_stim_n: autoDraw = False
+817.0112 	EXP 	text_stim_sentence_type: autoDraw = False
+817.0112 	EXP 	text_stim_condition: autoDraw = False
+817.0112 	EXP 	text_stim_prompt: autoDraw = False
+817.0112 	EXP 	text_stim_sentence: autoDraw = False
+817.0112 	EXP 	text_stim_stim_n: text = 61
+817.0112 	EXP 	text_stim_sentence_type: text = 'question'
+817.0112 	EXP 	text_stim_condition: text = 'B'
+817.0112 	EXP 	text_stim_prompt: color = 'white (named)'
+817.0112 	EXP 	text_stim_prompt: text = 'filler'
+817.0112 	EXP 	text_stim_sentence: text = '¿El estudiante practica deportes?'
+817.0112 	EXP 	text_stim_stim_n: autoDraw = True
+817.0112 	EXP 	text_stim_sentence_type: autoDraw = True
+817.0112 	EXP 	text_stim_condition: autoDraw = True
+817.0112 	EXP 	text_stim_prompt: autoDraw = True
+817.0427 	EXP 	text_stim_sentence: autoDraw = True
+821.2289 	EXP 	New trial (rep=0, index=61): OrderedDict([('stim_n', 62), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Sofia no quiere la revista?'), ('color', 'white')])
+821.2569 	DATA 	Keypress: right
+821.2750 	EXP 	text_stim_stim_n: autoDraw = False
+821.2750 	EXP 	text_stim_sentence_type: autoDraw = False
+821.2750 	EXP 	text_stim_condition: autoDraw = False
+821.2750 	EXP 	text_stim_prompt: autoDraw = False
+821.2750 	EXP 	text_stim_sentence: autoDraw = False
+821.2750 	EXP 	text_stim_stim_n: text = 62
+821.2750 	EXP 	text_stim_sentence_type: text = 'question'
+821.2750 	EXP 	text_stim_condition: text = 'A'
+821.2750 	EXP 	text_stim_prompt: color = 'white (named)'
+821.2750 	EXP 	text_stim_prompt: text = 'filler'
+821.2750 	EXP 	text_stim_sentence: text = '¿Sofia no quiere la revista?'
+821.2750 	EXP 	text_stim_stim_n: autoDraw = True
+821.2750 	EXP 	text_stim_sentence_type: autoDraw = True
+821.2750 	EXP 	text_stim_condition: autoDraw = True
+821.2750 	EXP 	text_stim_prompt: autoDraw = True
+821.2919 	EXP 	text_stim_sentence: autoDraw = True
+825.8950 	EXP 	New trial (rep=0, index=62): OrderedDict([('stim_n', 63), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Mi esposo conoce al chico?'), ('color', 'white')])
+825.9095 	DATA 	Keypress: right
+825.9269 	EXP 	text_stim_stim_n: autoDraw = False
+825.9269 	EXP 	text_stim_sentence_type: autoDraw = False
+825.9269 	EXP 	text_stim_condition: autoDraw = False
+825.9269 	EXP 	text_stim_prompt: autoDraw = False
+825.9269 	EXP 	text_stim_sentence: autoDraw = False
+825.9269 	EXP 	text_stim_stim_n: text = 63
+825.9269 	EXP 	text_stim_sentence_type: text = 'question'
+825.9269 	EXP 	text_stim_condition: text = 'C'
+825.9269 	EXP 	text_stim_prompt: color = 'white (named)'
+825.9269 	EXP 	text_stim_prompt: text = 'filler'
+825.9269 	EXP 	text_stim_sentence: text = '¿Mi esposo conoce al chico?'
+825.9269 	EXP 	text_stim_stim_n: autoDraw = True
+825.9269 	EXP 	text_stim_sentence_type: autoDraw = True
+825.9269 	EXP 	text_stim_condition: autoDraw = True
+825.9269 	EXP 	text_stim_prompt: autoDraw = True
+825.9594 	EXP 	text_stim_sentence: autoDraw = True
+830.3791 	EXP 	New trial (rep=0, index=63): OrderedDict([('stim_n', 64), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi hija prefiere los perros?'), ('color', 'white')])
+830.3965 	DATA 	Keypress: right
+830.4093 	EXP 	text_stim_stim_n: autoDraw = False
+830.4093 	EXP 	text_stim_sentence_type: autoDraw = False
+830.4093 	EXP 	text_stim_condition: autoDraw = False
+830.4093 	EXP 	text_stim_prompt: autoDraw = False
+830.4093 	EXP 	text_stim_sentence: autoDraw = False
+830.4093 	EXP 	text_stim_stim_n: text = 64
+830.4093 	EXP 	text_stim_sentence_type: text = 'question'
+830.4093 	EXP 	text_stim_condition: text = 'A'
+830.4093 	EXP 	text_stim_prompt: color = 'white (named)'
+830.4093 	EXP 	text_stim_prompt: text = 'filler'
+830.4093 	EXP 	text_stim_sentence: text = '¿Mi hija prefiere los perros?'
+830.4093 	EXP 	text_stim_stim_n: autoDraw = True
+830.4093 	EXP 	text_stim_sentence_type: autoDraw = True
+830.4093 	EXP 	text_stim_condition: autoDraw = True
+830.4093 	EXP 	text_stim_prompt: autoDraw = True
+830.4422 	EXP 	text_stim_sentence: autoDraw = True
+834.6468 	DATA 	Keypress: right
+834.6607 	EXP 	text_stim_stim_n: autoDraw = False
+834.6607 	EXP 	text_stim_sentence_type: autoDraw = False
+834.6607 	EXP 	text_stim_condition: autoDraw = False
+834.6607 	EXP 	text_stim_prompt: autoDraw = False
+834.6607 	EXP 	text_stim_sentence: autoDraw = False
+834.6722 	INFO 	saved data to '/Users/lfa/Desktop/empathy_intonation_perc/exp/stim/data/spain_text_stim_for_audio_2020_Nov_24_1031.csv'
+834.6786 	INFO 	saved data to /Users/lfa/Desktop/empathy_intonation_perc/exp/stim/data/spain_text_stim_for_audio_2020_Nov_24_1031.psydat
+834.7635 	EXP 	window1: mouseVisible = True
+834.7642 	DEBUG 	Saving data for text_stim_for_audio ExperimentHandler
