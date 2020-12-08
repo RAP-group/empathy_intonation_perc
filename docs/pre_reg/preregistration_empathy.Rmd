@@ -6,7 +6,7 @@ output: github_document
 
 # Registration Metadata
 
-**Title**: The role of empathy in the perceptual development of intonation
+**Title**: Production, perception, and processing of prosody in second language accquisition
 
 **Description**: Specifically, we look at the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
 
