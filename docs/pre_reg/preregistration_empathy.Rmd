@@ -64,7 +64,9 @@ Using data from empathy influences how listeners interpret intonation by D'Imper
 H1. L2 learners of Spanish with a higher empathy quotient have a higher sensitivity to intonation in 
 Spanish phrases than L2 learners of Spanish with a lower empathy quotient.
 
-H2: L2 learners of Spanish and Spanish monolinguals with a higher level of proficiency in Spanish are more sensitive to intonation differences in Spanish statements and questions. 
+H2. Native speakers and L2 learners of Spanish with a higher proficiency level have a higher 
+sensitivity and accuracy, as well as a quicker reaction time, to rising intonation in Spanish phrases 
+than L2 learners of Spanish with a lower proficiency level.
 
 <!-- 
 Draft but something to this effect: 
@@ -103,7 +105,7 @@ Describe your study design. The key is to be as detailed as is necessary given t
 -->
 
 Participants take the empathy quotient assessment <!-- Should we explain this further? Describe the task, how they'll complete it, etc. -->
-Participants take a Spanish proficiency assessment, the lextale. It is a measure of vocabulary knowledge that we're using as a proxy for proficiency.
+Participants take a Spanish proficiency assessment <!-- add ", the lextale. It is a measure of vocabulary knowledge that we're using as a proxy for proficiency." -->
 
 Assessment will ask participants to recognize on-screen text as “a word” or “not a word” 
 Participants will distinguish between matched and mismatched auditory and visual stimuli
@@ -139,7 +141,7 @@ NA
 ### Data collection procedures*
 
 We will recruit XXX human participants for this study. 
-Participants will be native English speakers L2 learners of Spanish with varying levels of proficiency.
+Participants will be adult second-language speakers of Spanish or Spanish monolinguals residing in the U.S.
 Participants will be recruited via ProlificAC and will be compensated at a rate of XXX for their time.
 
 ### Sample size*
@@ -156,6 +158,8 @@ Our hypotheses related to empathy as a possible mediator of perceptual learning 
 ###  Stopping rule
 
 We will stop data collection once XXX participants have completed all tasks or time runs out.
+
+
 
 
 
