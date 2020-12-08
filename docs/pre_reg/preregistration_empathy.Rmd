@@ -109,8 +109,8 @@ Participants take a Spanish proficiency assessment <!-- add ", the lextale. It i
 
 Assessment will ask participants to recognize on-screen text as “a word” or “not a word” 
 Participants will distinguish between matched and mismatched auditory and visual stimuli
-Auditory stimuli: pre-recorded sentences obtained from Brandl et. al study
-Visual stimuli: sentences obtained from Brandl et. al study
+Auditory stimuli: pre-recorded sentences adapted from Brandl et. al study
+Visual stimuli: sentences adapted from Brandl et. al study
 Fillers: the "mismatched" ones (i.e. sentences that, at surface level, could be either declarative or interrogative)
      e.g. “¿Cuándo llegaron a Málaga?” vs. “Cuando llegaron a Málaga.”
 Participants will be asked to identify a match or mismatch between each set of auditory and visual stimuli
