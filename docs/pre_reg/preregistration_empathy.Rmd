@@ -61,18 +61,31 @@ Using data from empathy influences how listeners interpret intonation by D'Imper
 Previous studies (Brandl, Gonzáles & Bustin, 2020; Esteve-Gibert, 2020) have indicated that both empathy and language proficiency are predictors of an individual’s sensitivity to intonational cues.
 This suggests that prosody development in second-language acquisition may also be associated with empathy.
 
-Esteve-Gibert et. al (2020) investigate the perception of intonational cues in relation to individual pragmatic skills (used interchangeably with empathy). This study finds that individuals with higher empathy are more sensitive to intonational cues when given a lexical disambiguation task.
+Esteve-Gibert et. al (2020) investigated the perception of intonational cues in relation to individual pragmatic skills (used interchangeably with empathy).
+Prior to the experiment, participants took the Empathy Quotient questionnaire in order to quantify their empathy level.
+Participants were then simultaneously presented with visual and auditory stimuli centered around two homophones which are also semantically ambiguous.
+Since the stimuli is presented as a guessing game where Person A makes a guess and then Person B either confirms or contradicts the guess, the study utilized the visual-world eye-tracking paradigm to monitor fixaton patterns on the visual stimuli.
+(Still working on this part)
+This study found that individuals with higher empathy are more sensitive to intonational cues when given a disambiguation task.
 
-Brandl, González & Bustin (2020) apply intonation perception to second-language learners, studying the development of intonational perception--that is, how individuals of varying proficiencies are able to pick up intonational cues.
-Specifically, their study explored perceptual intonational development within the context of L2 Spanish statements and yes-no questions.
-Participants belonging to one of five proficiency levels (Beginner I, Beginner II, Intermediate I, Intermediate II, Advanced) were presented with visual and auditory stimuli corresponding to Spanish statements and questions, and asked to indicate whether or not the stimuli matched. For each set of visual and auditory stimuli presented, this study recorded the accuracy and reaction time of each participant.
-These results were compared to results from native Spanish speakers performing the same task. L2 learners had a longer reaction time for yes-no questions than native speakers, who also indicated matches and mismatches with greater accuracy across all types of statements.
+Brandl, González & Bustin (2020) applied intonation perception to second-language learners, studying the development of intonational perception—-that is, how individuals of varying proficiencies are able to pick up intonational cues.
+Specifically, their study explored perceptual intonational development within the context of L2 Spanish statements (broad and narrow focus) and questions (yes-no and wh- questions).
+Participants belonging to one of five proficiency levels (Beginner I, Beginner II, Intermediate I, Intermediate II, Advanced) were presented with visual and auditory stimuli corresponding to Spanish statements and questions, and asked to indicate whether or not the stimuli matched.
+For each set of visual and auditory stimuli presented, this study recorded the accuracy and reaction time of each participant.
+These results were compared to results from native Spanish speakers performing the same task.
+Native speakers identified mismatches between auditory and visual stimuli for yes-no questions with the most accuracy.
+There was a significant difference between native speakers and advanced L2 learners.
+Likewise, there was a significant difference between advanced L2 learners and intermediate II L2 learners.
+Despite the significant differences between participants of varying proficiency levels, participants of all proficiency levels identified yes-no mismatches with the lowest accuracy.
+These findings suggest that yes-no questions are harder to identify and acquire than other types of questions and statements.
+They also suggest that L2 learners will acquire and develop sensitivity to intonational cues as they progress in proficiency.
 
-In summary, previous research suggests that the development of L2 prosody is in some way associated with empathy.
-Empathy and the ability to use intonational cues have a positive correlation (Esteve-Gibert et.al, 2020).
-Likewise, language proficiency and use of intonational cues also have a positive correlation (Bradnl, Gonzáles, & Bustin, 2020).
-The present study aims to combine findings from both studies and investigate how empathy plays a role in the prosodic development of L2 learners.
-
+The extant literature shows that 'yes/no'-type questions harder to process and acquire, when compared with simple statements (Brandl et al., 2020). 
+Recent research has also shown that empathy influences language processing in how listeners interpret intonation and meaning when words are ambiguous (Esteve-Gibert et al., 2020). 
+Specifically, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
+In short, individuals with more pragmatic skill (higher empathy) are able to use intonation to resolve temporary lexical ambiguity that can lead to confirmatory vs. contrasting interpretations. 
+This research underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension. 
+Thus, we extend this research to second language acquisition in order to determine if individual differences in pragmatic skill affect the development of intonation in L2 processing and sentence comprehension.
 
 
 ### Hypotheses
