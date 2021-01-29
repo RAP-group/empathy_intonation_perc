@@ -87,6 +87,9 @@ In short, individuals with more pragmatic skill (higher empathy) are able to use
 This research underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension. 
 Thus, we extend this research to second language acquisition in order to determine if individual differences in pragmatic skill affect the development of intonation in L2 processing and sentence comprehension.
 
+Baron-Cohen and Wheelwright (2004) defines empathy into two ways, the affective approach and cognitive approach, in this particular study researchers review psychological theories of empathy and its measurement.
+Focusing on measuring empahty in adults, the EQ or Empathy quotient was designed for use of normal intelligence. 
+EQ contains 40 empathy items and 20 filler items, in each item a person can score 2, 1 or 0, so the EQ has a maximum score of 80 and minimum of 0. 
 
 ### Hypotheses
 
