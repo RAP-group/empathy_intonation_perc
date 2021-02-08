@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.4),
-    on Fri Oct 23 15:08:37 2020
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.8),
+    on Fri Feb  5 09:56:47 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,10 +35,10 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.4'
+psychopyVersion = '2020.2.8'
 expName = 'empathy_intonation_perc'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
-dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
+dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
@@ -61,7 +61,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 frameTolerance = 0.001  # how close to onset before 'same' frame
 
-# Start Code - component code to be run before the window creation
+# Start Code - component code to be run after the window creation
 
 # Setup the Window
 win = visual.Window(
@@ -202,7 +202,7 @@ slider_eq_trial = visual.Slider(win=win, name='slider_eq_trial',
     labels=['strongly agree', 'slightly agree', 'slightly disagree', 'strongly disagree'], ticks=None,
     granularity=1, style=['rating', 'triangleMarker'],
     color='LightGray', font='HelveticaBold',
-    flip=False)
+    flip=False, depth=-1)
 key_resp_eq_trial = keyboard.Keyboard()
 
 # Create some handy timers
