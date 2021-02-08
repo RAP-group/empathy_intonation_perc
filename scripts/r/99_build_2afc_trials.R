@@ -51,9 +51,7 @@ trial_item_path_response <- c(
 
 twoafc_practice_trials <- tibble(
   path = names(trial_item_path_response), 
-  correct_response = trial_item_path_response, 
-  prac_button_si = rep("Sí", times = 8), 
-  prac_button_no = rep("No", times = 8)
+  correct_response = trial_item_path_response
 )
 
 # -----------------------------------------------------------------------------
@@ -76,11 +74,11 @@ twoafc_trials <- dir_ls(here("exp", "stim", "wavs"), regexp = "\\.wav$") %>%
   mutate(item_num = seq_along(file)) %>% 
   ungroup() %>% 
   mutate(correct_response = case_when(
-    item_type == "declarative-broad-focus" ~ 0, 
+    item_type == "declarative-broad-focus"  ~ 0, 
     item_type == "declarative-narrow-focus" ~ 0, 
     item_type == "interrogative-partial-wh" ~ 1, 
-    item_type == "interrogative-total-yn" ~ 1, 
-    type == "question" ~ 1, 
+    item_type == "interrogative-total-yn"   ~ 1, 
+    type == "question"  ~ 1, 
     type == "statement" ~ 0
   )) %>% 
   pivot_wider(id_cols = c("variety", "item_num", "correct_response"), 
