@@ -39,3 +39,5 @@ vignettes/*.pdf
 .Renviron
 
 *.DS_Store
+
+/exp/stim/wavs_complete
