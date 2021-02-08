@@ -7,6 +7,6 @@ for i to numberOfFiles
 	soundName$ = Get string... i
 	Read from file... ../../exp/stim/wavs/'soundName$'
 	Scale peak... 0.99
-	Write to binary file... ../../exp/stim/wavs/'soundName$'
+	Save as WAV file... ../../exp/stim/wavs/'soundName$'
 	Remove
 endfor

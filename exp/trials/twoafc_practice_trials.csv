@@ -1,0 +1,9 @@
+path,correct_response,prac_button_si,prac_button_no
+./stim/wavs/castilian_question_filler_Mi-esposo-conoce-al-chico.wav,1,Sí,No
+./stim/wavs/argentine_question_filler_Mi-vecino-habla-mucho.wav,1,Sí,No
+./stim/wavs/chilean_question_filler_Mi-padre-cantaba-bien.wav,1,Sí,No
+./stim/wavs/mexican_question_filler_Felipe-no-tiene-contrasena.wav,1,Sí,No
+./stim/wavs/cuban_statement_filler_Cocinabas-por-la-noche.wav,0,Sí,No
+./stim/wavs/andalusian_statement_filler_Alberto-nunca-se-afeita.wav,0,Sí,No
+./stim/wavs/peruvian_statement_filler_El-nino-habla-con-su-madre.wav,0,Sí,No
+./stim/wavs/puertorican_statement_filler_La-nina-pinta-con-su-amiga.wav,0,Sí,No

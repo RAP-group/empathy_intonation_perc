@@ -36,7 +36,7 @@ source(here::here("scripts", "r","01_helpers.R"))
 
 # Tidy lexTALE ----------------------------------------------------------------
 
-dir_ls(here("exp", "data"), regexp = "\\.csv$", ) %>%
+dir_ls(here("exp", "data"), regexp = "\\.csv$") %>%
   map_dfr(read_csv, .id = "source") %>% 
   filter(!is.na(key_resp_lextale_trial.keys)) %>% 
   mutate(is_real = if_else(correct_response == 1, "real", "nonse"), 
