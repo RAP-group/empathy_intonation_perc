@@ -172,12 +172,12 @@ filler_list <- tribble(
 
 # Save as csv's and xlsx files ------------------------------------------------
 
-write_csv(stim_list, here("exp", "stim", "trials", "stim_list.csv"))
-write_xlsx(stim_list, here("exp", "stim", "trials", "stim_list.xlsx"), 
+write_csv(stim_list, here("exp", "text_stim_for_audio", "trials", "stim_list.csv"))
+write_xlsx(stim_list, here("exp", "text_stim_for_audio", "trials", "stim_list.xlsx"), 
   format_headers = F)
 
-write_csv(filler_list, here("exp", "stim", "trials", "filler_list.csv"))
-write_xlsx(filler_list, here("exp", "stim", "trials", "filler_list.xlsx"), 
+write_csv(filler_list, here("exp", "text_stim_for_audio", "trials", "filler_list.csv"))
+write_xlsx(filler_list, here("exp", "text_stim_for_audio", "trials", "filler_list.xlsx"), 
   format_headers = F)
 
 # -----------------------------------------------------------------------------

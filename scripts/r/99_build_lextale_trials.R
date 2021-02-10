@@ -103,18 +103,20 @@ lextale_trials <- tibble(
 # Save as csv's and xlsx files ------------------------------------------------
 
 write_csv(instructions_text, 
-  here("exp", "instructions", "lextale_instructions_text.csv"))
+  here("exp", "empathy_intonation_perc", "instructions", "lextale_instructions_text.csv"))
 write_csv(lextale_practice_trials, 
-  here("exp", "trials", "lextale_practice_trials.csv"))
+  here("exp", "empathy_intonation_perc", "trials", "lextale_practice_trials.csv"))
 write_csv(lextale_trials, 
-  here("exp", "trials", "lextale_trials.csv"))
+  here("exp", "empathy_intonation_perc", "trials", "lextale_trials.csv"))
 
 write_xlsx(instructions_text, 
-  here("exp", "instructions", "lextale_instructions_text.xlsx"), 
-  format_headers = F)
+  here("exp", "empathy_intonation_perc", "instructions", 
+    "lextale_instructions_text.xlsx"), format_headers = F)
 write_xlsx(lextale_practice_trials, 
-  here("exp", "trials", "lextale_practice_trials.xlsx"), format_headers = F)
+  here("exp", "empathy_intonation_perc", "trials", "lextale_practice_trials.xlsx"), 
+  format_headers = F)
 write_xlsx(lextale_trials, 
-  here("exp", "trials", "lextale_trials.xlsx"), format_headers = F)
+  here("exp", "empathy_intonation_perc", "trials", "lextale_trials.xlsx"), 
+  format_headers = F)
 
 # -----------------------------------------------------------------------------

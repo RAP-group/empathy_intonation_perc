@@ -140,8 +140,8 @@ eq_trials <- tibble(
     is_agree_score    = if_else(item_num %in% agree_score, 1, 0), 
     is_disagree_score = if_else(item_num %in% disagree_score, 1, 0)) 
 
-write_csv(eq_trials, here("exp", "trials", "eq_trials.csv"))
-write_xlsx(eq_trials, here("exp", "trials", "eq_trials.xlsx"), 
+write_csv(eq_trials, here("exp", "empathy_intonation_perc", "trials", "eq_trials.csv"))
+write_xlsx(eq_trials, here("exp", "empathy_intonation_perc", "trials", "eq_trials.xlsx"), 
   format_headers = F)
 
 # -----------------------------------------------------------------------------

@@ -24,12 +24,15 @@ source(here::here("scripts", "r", "01_helpers.R"))
 
 instructions_text <- tibble(
   instructions_text = c(
-  "A continuación vas a escuchar una serie de frases. 
+  "In the following task you are going to here a series of utterances. 
 
-  Decide si son preguntas o no presionando '1' (sí) o '0' (no).
+  You will decide if the utterances sound like questions or not using your keyboard.",  
+  
+  "If you believe the utterance is a question, type '1' (for 'yes') and if you do not 
+  believe it is a question type '0' (for 'no').
 
-  Vamos a practicar un poco..."), 
-  continue_text = "(presiona la barra espaciadora para continuar)"
+  Let's practice a bit..."), 
+  continue_text = rep("(press the spacebar to continue)", 2)
 )
 
 # -----------------------------------------------------------------------------
@@ -61,14 +64,16 @@ twoafc_practice_trials <- tibble(
 
 # Build trials data frame -----------------------------------------------------
 
-path_remove <- "/Users/casillas/academia/research/in_progress/empathy_intonation_perc/exp/stim/wavs/"
+path_remove <- "/Users/casillas/academia/research/in_progress/empathy_intonation_perc/exp/empathy_intonation_perc/stim/wavs/"
 path_add <- "./stim/wavs/"
 
-twoafc_trials <- dir_ls(here("exp", "stim", "wavs"), regexp = "\\.wav$") %>% 
+twoafc_trials <- dir_ls(here("exp", "empathy_intonation_perc", "stim", "wavs"), 
+  regexp = "\\.wav$") %>% 
   as_tibble() %>% 
-  transmute(file = str_remove(value, pattern = path)) %>% 
+  transmute(file = str_remove(value, pattern = path_remove)) %>% 
   separate(col = file, into = c("variety", "type", "item_type", "dump"), 
     sep = "_", remove = F) %>% 
+  filter(item_type != "filler") %>% 
   select(variety, type, item_type, file) %>% 
   group_by(variety) %>% 
   mutate(item_num = seq_along(file)) %>% 
@@ -93,18 +98,20 @@ twoafc_trials <- dir_ls(here("exp", "stim", "wavs"), regexp = "\\.wav$") %>%
 # Save as csv's and xlsx files ------------------------------------------------
 
 write_csv(instructions_text, 
-  here("exp", "instructions", "2afc_instructions_text.csv"))
+  here("exp", "empathy_intonation_perc", "instructions", "2afc_instructions_text.csv"))
 write_csv(twoafc_practice_trials, 
-  here("exp", "trials", "twoafc_practice_trials.csv"))
+  here("exp", "empathy_intonation_perc", "trials", "twoafc_practice_trials.csv"))
 write_csv(twoafc_trials, 
-  here("exp", "trials", "twoafc_trials.csv"))
+  here("exp", "empathy_intonation_perc", "trials", "twoafc_trials.csv"))
 
 write_xlsx(instructions_text, 
-  here("exp", "instructions", "2afc_instructions_text.xlsx"), 
+  here("exp", "empathy_intonation_perc","instructions", "2afc_instructions_text.xlsx"), 
   format_headers = F)
 write_xlsx(twoafc_practice_trials, 
-  here("exp", "trials", "twoafc_practice_trials.xlsx"), format_headers = F)
+  here("exp", "empathy_intonation_perc", "trials", "twoafc_practice_trials.xlsx"), 
+  format_headers = F)
 write_xlsx(twoafc_trials, 
-  here("exp", "trials", "twoafc_trials.xlsx"), format_headers = F)
+  here("exp", "empathy_intonation_perc", "trials", "twoafc_trials.xlsx"), 
+  format_headers = F)
 
 # -----------------------------------------------------------------------------
