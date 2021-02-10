@@ -1,0 +1,8 @@
+instructions_text,continue_text
+"In the following task you are going to here a series of utterances. 
+
+  You will decide if the utterances sound like questions or not using your keyboard.",(press the spacebar to continue)
+"If you believe the utterance is a question, type '1' (for 'yes') and if you do not 
+  believe it is a question type '0' (for 'no').
+
+  Let's practice a bit...",(press the spacebar to continue)
