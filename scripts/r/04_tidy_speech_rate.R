@@ -35,7 +35,8 @@ sr %>%
   ggplot() + 
   aes(x = speech_rate) + 
   facet_wrap(~ variety, nrow = 2) + 
-  geom_histogram(fill = "lightblue", color = "black", binwidth = 0.55, 
+  geom_histogram(fill = "lightblue", color = "black", 
+    bins = 8, 
     aes(y = ..density..)) + 
   geom_density(size = 1, color = "darkred") + 
   geom_vline(data = filter(sr_desc, metric == "speech_rate"), 
