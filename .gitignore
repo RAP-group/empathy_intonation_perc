@@ -40,4 +40,4 @@ vignettes/*.pdf
 
 *.DS_Store
 
-/exp/stim/wavs_complete
+/exp/empathy_intonation_perc/stim/wavs_complete

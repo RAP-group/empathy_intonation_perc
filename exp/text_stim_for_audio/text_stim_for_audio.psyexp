@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="False" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1050, 750]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[1,1,1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="text_stim_for_audio" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="fillers"/>
+    <Routine name="stim">
+      <TextComponent name="text_stim_stim_n">
+        <Param name="color" updates="constant" val="grey" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="text_stim_stim_n" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.67, -0.47)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$stim_n" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stim_sentence_type">
+        <Param name="color" updates="constant" val="grey" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="text_stim_sentence_type" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.57, -0.47)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$sentence_type" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stim_condition">
+        <Param name="color" updates="constant" val="grey" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="text_stim_condition" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.0, -0.47)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$condition" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stim_prompt">
+        <Param name="color" updates="set every repeat" val="$color" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.07" valType="code"/>
+        <Param name="name" updates="None" val="text_stim_prompt" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$prompt" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stim_sentence">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.09" valType="code"/>
+        <Param name="name" updates="None" val="text_stim_sentence" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.05" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$sentence" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_stim">
+        <Param name="allowedKeys" updates="constant" val="'y','n','left','right','space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_stim" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="stim_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('stim_n', 0), ('sentence_type', ' '), ('condition', ' '), ('prompt', 'Instrucciones'), ('sentence', 'Por favor lea las siguientes frases.'), ('color', 'blue')]), OrderedDict([('stim_n', 1), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Daniel iba a Bolivia.'), ('color', 'white')]), OrderedDict([('stim_n', 2), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'David leía el libro.'), ('color', 'white')]), OrderedDict([('stim_n', 3), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Emilio ama la marcha.'), ('color', 'white')]), OrderedDict([('stim_n', 4), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mariano habla del tiempo.'), ('color', 'white')]), OrderedDict([('stim_n', 5), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Ana lleva el abrigo.'), ('color', 'white')]), OrderedDict([('stim_n', 6), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'María bebe el vino.'), ('color', 'white')]), OrderedDict([('stim_n', 7), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Marta abre el regalo.'), ('color', 'white')]), OrderedDict([('stim_n', 8), ('sentence_type', 'match'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Manuela vende el carro.'), ('color', 'white')]), OrderedDict([('stim_n', 9), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿A dónde iba Daniel?'), ('sentence', 'Daniel iba a Bolivia.'), ('color', 'blue')]), OrderedDict([('stim_n', 10), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué leía David?'), ('sentence', 'David leía el libro.'), ('color', 'blue')]), OrderedDict([('stim_n', 11), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué ama Emilio?'), ('sentence', 'Emilio ama la marcha.'), ('color', 'blue')]), OrderedDict([('stim_n', 12), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿De qué habla Mariano?'), ('sentence', 'Mariano habla del tiempo.'), ('color', 'blue')]), OrderedDict([('stim_n', 13), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué lleva Ana?'), ('sentence', 'Ana lleva el abrigo.'), ('color', 'blue')]), OrderedDict([('stim_n', 14), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué bebe María?'), ('sentence', 'María bebe el vino.'), ('color', 'blue')]), OrderedDict([('stim_n', 15), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué abre Marta?'), ('sentence', 'Marta abre el regalo.'), ('color', 'blue')]), OrderedDict([('stim_n', 16), ('sentence_type', 'match'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué vende Manuela?'), ('sentence', 'Manuela vende el carro.'), ('color', 'blue')]), OrderedDict([('stim_n', 17), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Daniel iba a Bolivia?'), ('color', 'white')]), OrderedDict([('stim_n', 18), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿David leía el libro?'), ('color', 'white')]), OrderedDict([('stim_n', 19), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Emilio ama la marcha?'), ('color', 'white')]), OrderedDict([('stim_n', 20), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mariano habla del tiempo?'), ('color', 'white')]), OrderedDict([('stim_n', 21), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Ana lleva el abrigo?'), ('color', 'white')]), OrderedDict([('stim_n', 22), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿María bebe el vino?'), ('color', 'white')]), OrderedDict([('stim_n', 23), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Marta abre el regalo?'), ('color', 'white')]), OrderedDict([('stim_n', 24), ('sentence_type', 'match'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Manuela vende el carro?'), ('color', 'white')]), OrderedDict([('stim_n', 25), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué iba a Bolivia?'), ('color', 'white')]), OrderedDict([('stim_n', 26), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo leía el libro?'), ('color', 'white')]), OrderedDict([('stim_n', 27), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué ama la navidad?'), ('color', 'white')]), OrderedDict([('stim_n', 28), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué hablaba del agua?'), ('color', 'white')]), OrderedDict([('stim_n', 29), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo lleva el abrigo?'), ('color', 'white')]), OrderedDict([('stim_n', 30), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo bebía el vino?'), ('color', 'white')]), OrderedDict([('stim_n', 31), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué abre el regalo?'), ('color', 'white')]), OrderedDict([('stim_n', 32), ('sentence_type', 'match'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo vendía el carro?'), ('color', 'white')]), OrderedDict([('stim_n', 33), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El hombre mira la luna.'), ('color', 'white')]), OrderedDict([('stim_n', 34), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'La niña lava el plato.'), ('color', 'white')]), OrderedDict([('stim_n', 35), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi madre come la fruta.'), ('color', 'white')]), OrderedDict([('stim_n', 36), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El niño oye el río.'), ('color', 'white')]), OrderedDict([('stim_n', 37), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi tía odia la lluvia.'), ('color', 'white')]), OrderedDict([('stim_n', 38), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'El bebé comía muy bien.'), ('color', 'white')]), OrderedDict([('stim_n', 39), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'La maestra vive en Paris.'), ('color', 'white')]), OrderedDict([('stim_n', 40), ('sentence_type', 'mismatch'), ('condition', 'declarative_broad_focus'), ('prompt', ' '), ('sentence', 'Mi novio viene del lago.'), ('color', 'white')]), OrderedDict([('stim_n', 41), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué mira el hombre?'), ('sentence', 'El hombre mira la luna.'), ('color', 'blue')]), OrderedDict([('stim_n', 42), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué lava la niña?'), ('sentence', 'La niña lava el plato.'), ('color', 'blue')]), OrderedDict([('stim_n', 43), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué come tu madre?'), ('sentence', 'Mi madre come la fruta.'), ('color', 'blue')]), OrderedDict([('stim_n', 44), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué oye el niño?'), ('sentence', 'El niño oye el río.'), ('color', 'blue')]), OrderedDict([('stim_n', 45), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Qué odia tu tía?'), ('sentence', 'Mi tía odia la lluvia.'), ('color', 'blue')]), OrderedDict([('stim_n', 46), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Cómo comía el bebé? '), ('sentence', 'El bebé comía muy bien.'), ('color', 'blue')]), OrderedDict([('stim_n', 47), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿Dónde vive la maestra?'), ('sentence', 'La maestra vive en Paris.'), ('color', 'blue')]), OrderedDict([('stim_n', 48), ('sentence_type', 'mismatch'), ('condition', 'declarative_narrow_focus'), ('prompt', '¿De dónde viene tu novio?'), ('sentence', 'Mi novio viene del lago.'), ('color', 'blue')]), OrderedDict([('stim_n', 49), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El hombre mira la luna?'), ('color', 'white')]), OrderedDict([('stim_n', 50), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿La niña lava el plato?'), ('color', 'white')]), OrderedDict([('stim_n', 51), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi madre come la fruta?'), ('color', 'white')]), OrderedDict([('stim_n', 52), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El niño oye el río?'), ('color', 'white')]), OrderedDict([('stim_n', 53), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi tía odia la lluvia?'), ('color', 'white')]), OrderedDict([('stim_n', 54), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿El bebé comía muy bien?'), ('color', 'white')]), OrderedDict([('stim_n', 55), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿La maestra vive en Paris?'), ('color', 'white')]), OrderedDict([('stim_n', 56), ('sentence_type', 'mismatch'), ('condition', 'interrogative_total_yn'), ('prompt', ' '), ('sentence', '¿Mi novio viene del lago?'), ('color', 'white')]), OrderedDict([('stim_n', 57), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo miraba la luna?'), ('color', 'white')]), OrderedDict([('stim_n', 58), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo lavaba el plato?'), ('color', 'white')]), OrderedDict([('stim_n', 59), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Cuándo comía la fruta?'), ('color', 'white')]), OrderedDict([('stim_n', 60), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué oía el río?'), ('color', 'white')]), OrderedDict([('stim_n', 61), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué odiaba la lluvia?'), ('color', 'white')]), OrderedDict([('stim_n', 62), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué desayuna muy bien?'), ('color', 'white')]), OrderedDict([('stim_n', 63), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué vivía en Paris?'), ('color', 'white')]), OrderedDict([('stim_n', 64), ('sentence_type', 'mismatch'), ('condition', 'interrogative_partial_wh'), ('prompt', ' '), ('sentence', '¿Por qué venía del lago?'), ('color', 'white')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials/stim_list.csv" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="stim_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="stim"/>
+    <LoopTerminator name="stim_loop"/>
+    <LoopInitiator loopType="TrialHandler" name="fillers_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('stim_n', 1), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Roberto cocina por la mañana.'), ('color', 'white')]), OrderedDict([('stim_n', 2), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Ana practicaba el yoga.'), ('color', 'white')]), OrderedDict([('stim_n', 3), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La niña pinta con su amiga.'), ('color', 'white')]), OrderedDict([('stim_n', 4), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Las chicas dan una fiesta hoy.'), ('color', 'white')]), OrderedDict([('stim_n', 5), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Isabel duerme por muchas horas.'), ('color', 'white')]), OrderedDict([('stim_n', 6), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Alberto nunca se afeita.'), ('color', 'white')]), OrderedDict([('stim_n', 7), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La madre pasa la aspiradora.'), ('color', 'white')]), OrderedDict([('stim_n', 8), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El estudiante odia la tarea.'), ('color', 'white')]), OrderedDict([('stim_n', 9), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El equipo practica mucho.'), ('color', 'white')]), OrderedDict([('stim_n', 10), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Juana barría el piso.'), ('color', 'white')]), OrderedDict([('stim_n', 11), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La abuela plancha la ropa.'), ('color', 'white')]), OrderedDict([('stim_n', 12), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Los abuelos compran un espejo.'), ('color', 'white')]), OrderedDict([('stim_n', 13), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El niño habla con su madre.'), ('color', 'white')]), OrderedDict([('stim_n', 14), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Hago ejercicio todos los días. '), ('color', 'white')]), OrderedDict([('stim_n', 15), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La vista de la casa es bonita.'), ('color', 'white')]), OrderedDict([('stim_n', 16), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'El baño no es muy grande. '), ('color', 'white')]), OrderedDict([('stim_n', 17), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Compro un regalo para Navidad.'), ('color', 'white')]), OrderedDict([('stim_n', 18), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Tu cumpleaños es mañana.'), ('color', 'white')]), OrderedDict([('stim_n', 19), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Nadamos en la piscina por la tarde.'), ('color', 'white')]), OrderedDict([('stim_n', 20), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Karina siempre anda en bicicleta.'), ('color', 'white')]), OrderedDict([('stim_n', 21), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Los niños ganan el partido.'), ('color', 'white')]), OrderedDict([('stim_n', 22), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Cocinabas por la noche.'), ('color', 'white')]), OrderedDict([('stim_n', 23), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Dibujabas con tu amiga.'), ('color', 'white')]), OrderedDict([('stim_n', 24), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El hombre da un paseo. '), ('color', 'white')]), OrderedDict([('stim_n', 25), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Compramos en el supermercado.'), ('color', 'white')]), OrderedDict([('stim_n', 26), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'Mateo piensa en las compras.'), ('color', 'white')]), OrderedDict([('stim_n', 27), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'Emilia va al hospital.'), ('color', 'white')]), OrderedDict([('stim_n', 28), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'El hotel tiene muchas habitaciones. '), ('color', 'white')]), OrderedDict([('stim_n', 29), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'El abrigo es muy barato. '), ('color', 'white')]), OrderedDict([('stim_n', 30), ('sentence_type', 'statement'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', 'La discoteca es muy buena.'), ('color', 'white')]), OrderedDict([('stim_n', 31), ('sentence_type', 'statement'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', 'La ciudad tiene dos bancos.'), ('color', 'white')]), OrderedDict([('stim_n', 32), ('sentence_type', 'statement'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', 'Luis trabaja todo el día.'), ('color', 'white')]), OrderedDict([('stim_n', 33), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Ella compra una mochila?'), ('color', 'white')]), OrderedDict([('stim_n', 34), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi padre cantaba bien?'), ('color', 'white')]), OrderedDict([('stim_n', 35), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿La vecina sale muy temprano? '), ('color', 'white')]), OrderedDict([('stim_n', 36), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi amiga mira la luna?'), ('color', 'white')]), OrderedDict([('stim_n', 37), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Lucía va a la iglesia?'), ('color', 'white')]), OrderedDict([('stim_n', 38), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi vecino habla mucho?'), ('color', 'white')]), OrderedDict([('stim_n', 39), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿El estudiante toma apuntes?'), ('color', 'white')]), OrderedDict([('stim_n', 40), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿La chica abre su libro?'), ('color', 'white')]), OrderedDict([('stim_n', 41), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Sandra corre en el parque?'), ('color', 'white')]), OrderedDict([('stim_n', 42), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi amigo no comía pollo?'), ('color', 'white')]), OrderedDict([('stim_n', 43), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Carlos escribe una carta?'), ('color', 'white')]), OrderedDict([('stim_n', 44), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Jose visitaba la playa?'), ('color', 'white')]), OrderedDict([('stim_n', 45), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Mi hermano cierra la puerta?'), ('color', 'white')]), OrderedDict([('stim_n', 46), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿El chico escribía una carta?'), ('color', 'white')]), OrderedDict([('stim_n', 47), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Mi vecino trae comida?'), ('color', 'white')]), OrderedDict([('stim_n', 48), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Carlos trae a sus hijos? '), ('color', 'white')]), OrderedDict([('stim_n', 49), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Jaime tenía una tienda?'), ('color', 'white')]), OrderedDict([('stim_n', 50), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Juan quiere un bistec?'), ('color', 'white')]), OrderedDict([('stim_n', 51), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Carolina baila flamenco? '), ('color', 'white')]), OrderedDict([('stim_n', 52), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Mi familia cenaba tarde?'), ('color', 'white')]), OrderedDict([('stim_n', 53), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Pablo lavaba su coche? '), ('color', 'white')]), OrderedDict([('stim_n', 54), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿El equipo gana la competencia?'), ('color', 'white')]), OrderedDict([('stim_n', 55), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Rogelio cuida a los niños? '), ('color', 'white')]), OrderedDict([('stim_n', 56), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Maria se peina en la mañana?'), ('color', 'white')]), OrderedDict([('stim_n', 57), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿Lucía compra el jabón?'), ('color', 'white')]), OrderedDict([('stim_n', 58), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿A Jaime le gusta su piso?'), ('color', 'white')]), OrderedDict([('stim_n', 59), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Isabel puede apagar la luz?'), ('color', 'white')]), OrderedDict([('stim_n', 60), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Felipe no tiene contraseña?'), ('color', 'white')]), OrderedDict([('stim_n', 61), ('sentence_type', 'question'), ('condition', 'B'), ('prompt', 'filler'), ('sentence', '¿El estudiante practica deportes?'), ('color', 'white')]), OrderedDict([('stim_n', 62), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Sofia no quiere la revista?'), ('color', 'white')]), OrderedDict([('stim_n', 63), ('sentence_type', 'question'), ('condition', 'C'), ('prompt', 'filler'), ('sentence', '¿Mi esposo conoce al chico?'), ('color', 'white')]), OrderedDict([('stim_n', 64), ('sentence_type', 'question'), ('condition', 'A'), ('prompt', 'filler'), ('sentence', '¿Mi hija prefiere los perros?'), ('color', 'white')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials/filler_list.csv" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="fillers_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="stim"/>
+    <LoopTerminator name="fillers_loop"/>
+  </Flow>
+</PsychoPy2experiment>

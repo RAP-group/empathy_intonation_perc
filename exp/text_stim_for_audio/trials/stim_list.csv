@@ -1,0 +1,66 @@
+stim_n,sentence_type,condition,prompt,sentence,color
+0, , ,Instrucciones,Por favor lea las siguientes frases.,blue
+1,match,declarative_broad_focus, ,Daniel iba a Bolivia.,white
+2,match,declarative_broad_focus, ,David leía el libro.,white
+3,match,declarative_broad_focus, ,Emilio ama la marcha.,white
+4,match,declarative_broad_focus, ,Mariano habla del tiempo.,white
+5,match,declarative_broad_focus, ,Ana lleva el abrigo.,white
+6,match,declarative_broad_focus, ,María bebe el vino.,white
+7,match,declarative_broad_focus, ,Marta abre el regalo.,white
+8,match,declarative_broad_focus, ,Manuela vende el carro.,white
+9,match,declarative_narrow_focus,¿A dónde iba Daniel?,Daniel iba a Bolivia.,blue
+10,match,declarative_narrow_focus,¿Qué leía David?,David leía el libro.,blue
+11,match,declarative_narrow_focus,¿Qué ama Emilio?,Emilio ama la marcha.,blue
+12,match,declarative_narrow_focus,¿De qué habla Mariano?,Mariano habla del tiempo.,blue
+13,match,declarative_narrow_focus,¿Qué lleva Ana?,Ana lleva el abrigo.,blue
+14,match,declarative_narrow_focus,¿Qué bebe María?,María bebe el vino.,blue
+15,match,declarative_narrow_focus,¿Qué abre Marta?,Marta abre el regalo.,blue
+16,match,declarative_narrow_focus,¿Qué vende Manuela?,Manuela vende el carro.,blue
+17,match,interrogative_total_yn, ,¿Daniel iba a Bolivia?,white
+18,match,interrogative_total_yn, ,¿David leía el libro?,white
+19,match,interrogative_total_yn, ,¿Emilio ama la marcha?,white
+20,match,interrogative_total_yn, ,¿Mariano habla del tiempo?,white
+21,match,interrogative_total_yn, ,¿Ana lleva el abrigo?,white
+22,match,interrogative_total_yn, ,¿María bebe el vino?,white
+23,match,interrogative_total_yn, ,¿Marta abre el regalo?,white
+24,match,interrogative_total_yn, ,¿Manuela vende el carro?,white
+25,match,interrogative_partial_wh, ,¿Por qué iba a Bolivia?,white
+26,match,interrogative_partial_wh, ,¿Cuándo leía el libro?,white
+27,match,interrogative_partial_wh, ,¿Por qué ama la navidad?,white
+28,match,interrogative_partial_wh, ,¿Por qué hablaba del agua?,white
+29,match,interrogative_partial_wh, ,¿Cuándo lleva el abrigo?,white
+30,match,interrogative_partial_wh, ,¿Cuándo bebía el vino?,white
+31,match,interrogative_partial_wh, ,¿Por qué abre el regalo?,white
+32,match,interrogative_partial_wh, ,¿Cuándo vendía el carro?,white
+33,mismatch,declarative_broad_focus, ,El hombre mira la luna.,white
+34,mismatch,declarative_broad_focus, ,La niña lava el plato.,white
+35,mismatch,declarative_broad_focus, ,Mi madre come la fruta.,white
+36,mismatch,declarative_broad_focus, ,El niño oye el río.,white
+37,mismatch,declarative_broad_focus, ,Mi tía odia la lluvia.,white
+38,mismatch,declarative_broad_focus, ,El bebé comía muy bien.,white
+39,mismatch,declarative_broad_focus, ,La maestra vive en Paris.,white
+40,mismatch,declarative_broad_focus, ,Mi novio viene del lago.,white
+41,mismatch,declarative_narrow_focus,¿Qué mira el hombre?,El hombre mira la luna.,blue
+42,mismatch,declarative_narrow_focus,¿Qué lava la niña?,La niña lava el plato.,blue
+43,mismatch,declarative_narrow_focus,¿Qué come tu madre?,Mi madre come la fruta.,blue
+44,mismatch,declarative_narrow_focus,¿Qué oye el niño?,El niño oye el río.,blue
+45,mismatch,declarative_narrow_focus,¿Qué odia tu tía?,Mi tía odia la lluvia.,blue
+46,mismatch,declarative_narrow_focus,¿Cómo comía el bebé? ,El bebé comía muy bien.,blue
+47,mismatch,declarative_narrow_focus,¿Dónde vive la maestra?,La maestra vive en Paris.,blue
+48,mismatch,declarative_narrow_focus,¿De dónde viene tu novio?,Mi novio viene del lago.,blue
+49,mismatch,interrogative_total_yn, ,¿El hombre mira la luna?,white
+50,mismatch,interrogative_total_yn, ,¿La niña lava el plato?,white
+51,mismatch,interrogative_total_yn, ,¿Mi madre come la fruta?,white
+52,mismatch,interrogative_total_yn, ,¿El niño oye el río?,white
+53,mismatch,interrogative_total_yn, ,¿Mi tía odia la lluvia?,white
+54,mismatch,interrogative_total_yn, ,¿El bebé comía muy bien?,white
+55,mismatch,interrogative_total_yn, ,¿La maestra vive en Paris?,white
+56,mismatch,interrogative_total_yn, ,¿Mi novio viene del lago?,white
+57,mismatch,interrogative_partial_wh, ,¿Cuándo miraba la luna?,white
+58,mismatch,interrogative_partial_wh, ,¿Cuándo lavaba el plato?,white
+59,mismatch,interrogative_partial_wh, ,¿Cuándo comía la fruta?,white
+60,mismatch,interrogative_partial_wh, ,¿Por qué oía el río?,white
+61,mismatch,interrogative_partial_wh, ,¿Por qué odiaba la lluvia?,white
+62,mismatch,interrogative_partial_wh, ,¿Por qué desayuna muy bien?,white
+63,mismatch,interrogative_partial_wh, ,¿Por qué vivía en Paris?,white
+64,mismatch,interrogative_partial_wh, ,¿Por qué venía del lago?,white

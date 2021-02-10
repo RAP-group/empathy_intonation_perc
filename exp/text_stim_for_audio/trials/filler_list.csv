@@ -1,0 +1,65 @@
+stim_n,sentence_type,condition,prompt,sentence,color
+1,statement,A,filler,Roberto cocina por la mañana.,white
+2,statement,B,filler,Ana practicaba el yoga.,white
+3,statement,A,filler,La niña pinta con su amiga.,white
+4,statement,C,filler,Las chicas dan una fiesta hoy.,white
+5,statement,A,filler,Isabel duerme por muchas horas.,white
+6,statement,B,filler,Alberto nunca se afeita.,white
+7,statement,A,filler,La madre pasa la aspiradora.,white
+8,statement,C,filler,El estudiante odia la tarea.,white
+9,statement,A,filler,El equipo practica mucho.,white
+10,statement,B,filler,Juana barría el piso.,white
+11,statement,A,filler,La abuela plancha la ropa.,white
+12,statement,C,filler,Los abuelos compran un espejo.,white
+13,statement,A,filler,El niño habla con su madre.,white
+14,statement,B,filler,Hago ejercicio todos los días. ,white
+15,statement,A,filler,La vista de la casa es bonita.,white
+16,statement,B,filler,El baño no es muy grande. ,white
+17,statement,A,filler,Compro un regalo para Navidad.,white
+18,statement,C,filler,Tu cumpleaños es mañana.,white
+19,statement,C,filler,Nadamos en la piscina por la tarde.,white
+20,statement,A,filler,Karina siempre anda en bicicleta.,white
+21,statement,B,filler,Los niños ganan el partido.,white
+22,statement,A,filler,Cocinabas por la noche.,white
+23,statement,A,filler,Dibujabas con tu amiga.,white
+24,statement,C,filler,El hombre da un paseo. ,white
+25,statement,A,filler,Compramos en el supermercado.,white
+26,statement,B,filler,Mateo piensa en las compras.,white
+27,statement,A,filler,Emilia va al hospital.,white
+28,statement,C,filler,El hotel tiene muchas habitaciones. ,white
+29,statement,A,filler,El abrigo es muy barato. ,white
+30,statement,B,filler,La discoteca es muy buena.,white
+31,statement,A,filler,La ciudad tiene dos bancos.,white
+32,statement,C,filler,Luis trabaja todo el día.,white
+33,question,C,filler,¿Ella compra una mochila?,white
+34,question,A,filler,¿Mi padre cantaba bien?,white
+35,question,B,filler,¿La vecina sale muy temprano? ,white
+36,question,A,filler,¿Mi amiga mira la luna?,white
+37,question,B,filler,¿Lucía va a la iglesia?,white
+38,question,A,filler,¿Mi vecino habla mucho?,white
+39,question,C,filler,¿El estudiante toma apuntes?,white
+40,question,A,filler,¿La chica abre su libro?,white
+41,question,B,filler,¿Sandra corre en el parque?,white
+42,question,A,filler,¿Mi amigo no comía pollo?,white
+43,question,C,filler,¿Carlos escribe una carta?,white
+44,question,A,filler,¿Jose visitaba la playa?,white
+45,question,B,filler,¿Mi hermano cierra la puerta?,white
+46,question,A,filler,¿El chico escribía una carta?,white
+47,question,C,filler,¿Mi vecino trae comida?,white
+48,question,A,filler,¿Carlos trae a sus hijos? ,white
+49,question,B,filler,¿Jaime tenía una tienda?,white
+50,question,A,filler,¿Juan quiere un bistec?,white
+51,question,A,filler,¿Carolina baila flamenco? ,white
+52,question,B,filler,¿Mi familia cenaba tarde?,white
+53,question,C,filler,¿Pablo lavaba su coche? ,white
+54,question,A,filler,¿El equipo gana la competencia?,white
+55,question,C,filler,¿Rogelio cuida a los niños? ,white
+56,question,A,filler,¿Maria se peina en la mañana?,white
+57,question,B,filler,¿Lucía compra el jabón?,white
+58,question,A,filler,¿A Jaime le gusta su piso?,white
+59,question,C,filler,¿Isabel puede apagar la luz?,white
+60,question,A,filler,¿Felipe no tiene contraseña?,white
+61,question,B,filler,¿El estudiante practica deportes?,white
+62,question,A,filler,¿Sofia no quiere la revista?,white
+63,question,C,filler,¿Mi esposo conoce al chico?,white
+64,question,A,filler,¿Mi hija prefiere los perros?,white
