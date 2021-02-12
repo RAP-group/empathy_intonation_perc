@@ -40,4 +40,10 @@ vignettes/*.pdf
 
 *.DS_Store
 
+# Ignore full audio files
 /exp/empathy_intonation_perc/stim/wavs_complete
+
+# Ignore gitlab files 
+/exp/empathy_intonation_perc_sp/.git
+/exp/empathy_intonation_perc_sp/.Rproj.user
+/exp/empathy_intonation_perc_sp/.gitignore
