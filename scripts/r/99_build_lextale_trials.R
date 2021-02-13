@@ -24,18 +24,18 @@ source(here::here("scripts", "r", "01_helpers.R"))
 
 instructions_text <- tibble(
   instructions_text = c(
-  "Este es un test de vocabulario en español. 
+  "Great! Now we will move on. The next task consists of about 60 trials, in each of which you will see a string of letters. 
   
-  A continuación vas a ver 90 secuencias de letras que parecen 'españolas'.
+  Your task is to decide whether this is a real Spanish word or not.", 
   
-  Solo algunas de ellas son palabras de verdad.", 
-  "Por favor, señala las palabras que tú conoces (aquellas que estás convencido que son palabras españolas, incluso aunque no seas capaz de dar el significado preciso).",
-  "Pero cuidado: los errores se penalizan. Por eso no tiene sentido tratar de incrementar tu puntuación marcando como reales palabras que nunca has visto.", 
-  "Presiona la tecla 1 si piensas que es una palabra real y la tecla 
-  0 si piensas que es una palabra falsa. 
+  "If you think it is an existing Spanish word, you type '1' (for 'REAL'), and if you think it is not an existing Spanish word, you type '0' (for 'FAKE').", 
   
-  Vamos a practicar un poco..."), 
-  continue_text = rep("(presiona la barra espaciadora para continuar)", 
+  "If you are sure that the word exists, even though you don’t know its exact meaning, you may still respond '1' (REAL). 
+  
+  But if you are not sure if it is an existing word, you should respond '0' (FAKE).
+  
+  Let's do a practice round..."), 
+  continue_text = rep("(press the spacebar to continue)", 
     n = length(instructions_text))
 )
 
@@ -56,7 +56,7 @@ lextale_practice_trials <- tibble(
   word = names(trial_item_cor_response),
   correct_response = trial_item_cor_response, 
   prac_button_real = rep("REAL", times = 12), 
-  prac_button_false = rep("FALSA", times = 12)
+  prac_button_false = rep("FAKE", times = 12)
 )
 
 # -----------------------------------------------------------------------------
@@ -92,7 +92,7 @@ lextale_trials <- tibble(
   word = names(item_cor_response), 
   correct_response = item_cor_response, 
   button_real = rep("REAL", times = 90), 
-  button_false = rep("FALSA", times = 90)
+  button_false = rep("FAKE", times = 90)
 )
 
 # -----------------------------------------------------------------------------

@@ -22,9 +22,10 @@ source(here::here("scripts", "r", "01_helpers.R"))
 
 # Build instructions data frame -----------------------------------------------
 
+# English
 instructions_text <- tibble(
   instructions_text = c(
-  "In the following task you are going to here a series of utterances. 
+  "In the following task you are going to hear a series of utterances. 
 
   You will decide if the utterances sound like questions or not using your keyboard.",  
   
@@ -33,6 +34,20 @@ instructions_text <- tibble(
 
   Let's practice a bit..."), 
   continue_text = rep("(press the spacebar to continue)", 2)
+)
+
+# Spanish
+instructions_sp_text <- tibble(
+  instructions_text = c(
+  "En la siguiente tarea vas a escuchar una serie de frases cortas. 
+
+  Vas a decidir si suenan como preguntas o no usando el teclado.", 
+
+  "Si crees que el enunciado es una pregunta, teclea '1' (Sí) y si crees que 
+  no es una pregunta teclea '0' (no).
+
+  Vamos a practicar..."), 
+  continue_text = rep("(presiona la barra espaciadora para continuar)", 2)
 )
 
 # -----------------------------------------------------------------------------
@@ -99,6 +114,8 @@ twoafc_trials <- dir_ls(here("exp", "empathy_intonation_perc", "stim", "wavs"),
 
 write_csv(instructions_text, 
   here("exp", "empathy_intonation_perc", "instructions", "2afc_instructions_text.csv"))
+write_csv(instructions_sp_text, 
+  here("exp", "empathy_intonation_perc_sp", "instructions", "2afc_instructions_sp_text.csv"))
 write_csv(twoafc_practice_trials, 
   here("exp", "empathy_intonation_perc", "trials", "twoafc_practice_trials.csv"))
 write_csv(twoafc_trials, 
@@ -106,6 +123,9 @@ write_csv(twoafc_trials,
 
 write_xlsx(instructions_text, 
   here("exp", "empathy_intonation_perc","instructions", "2afc_instructions_text.xlsx"), 
+  format_headers = F)
+write_xlsx(instructions_sp_text, 
+  here("exp", "empathy_intonation_perc_sp","instructions", "2afc_instructions_sp_text.xlsx"), 
   format_headers = F)
 write_xlsx(twoafc_practice_trials, 
   here("exp", "empathy_intonation_perc", "trials", "twoafc_practice_trials.xlsx"), 
