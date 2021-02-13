@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['id'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'id': '', 'La variedad del español que mejor conozcas': 'ej. cubano'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1200]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0,0,0]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="empathy_intonation_perc_sp" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="prompt">
+      <TextComponent name="text_4">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_4" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.2" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Es una pregunta?" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="check_2afc">
+      <TextComponent name="text_2afc_check">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_check" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Bien! Ahora vamos a empezar. &amp;#10;&amp;#10;Intenta responder lo más rápido posible sin cometer errores después de escuchar cada enunciado. &amp;#10;&amp;#10;(presiona la barra espaciadora para comenzar)" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2afc_gotit">
+        <Param name="allowedKeys" updates="constant" val="'c','space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2afc_gotit" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instructions_2afc">
+      <TextComponent name="text_2afc_instructions">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.1)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$instructions_text" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_2afc_instructions_continue">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.045" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_instructions_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every repeat" val="$continue_text" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2afc_instructions">
+        <Param name="allowedKeys" updates="constant" val="'c', 'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2afc_instructions" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="False" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="practice_2afc">
+      <SoundComponent name="sound_2afc_practice_stim">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="sound_2afc_practice_stim" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$path" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.500" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <TextComponent name="text_2afc_response_yes_practice">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_response_yes_practice" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.3, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.250" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Sí" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_2afc_response_no_practice">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_response_no_practice" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.3, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.250" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="No" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2afc_practice">
+        <Param name="allowedKeys" updates="constant" val="'1','0'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$correct_response" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2afc_practice" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.500" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="first key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="text_2afc_question_practice">
+        <Param name="color" updates="constant" val="blue" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_2afc_question_practice" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Es una pregunta?" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="trial_2afc">
+      <CodeComponent name="code_2afc">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="col_name = ['andalusian', 'argentine', 'castilian', 'chilean', 'cuban', 'mexican', 'peruvian', 'puertorican']&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="col_name = ['andalusian', 'argentine', 'castilian', 'chilean', 'cuban', 'mexican', 'peruvian', 'puertorican'];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="the_col = col_name[Math.floor(Math.random() * col_name.length)];" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="the_col = np.random.choice(col_name, p=[0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125])&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trials_2afc_loop.addData(&quot;the_col&quot;, the_col);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trials_2afc_loop.addData('the_col', the_col)&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="code_2afc" valType="code"/>
+      </CodeComponent>
+      <SoundComponent name="sound_stim_trial">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="hamming" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="sound_stim_trial" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="sound" updates="set every repeat" val="$eval(the_col)" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.500" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+        <Param name="volume" updates="constant" val="1" valType="code"/>
+      </SoundComponent>
+      <TextComponent name="text_response_yes_trial">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_response_yes_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.3, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.250" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Sí" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_response_no_trial">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_response_no_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.3, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.250" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="No" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2afc_trial">
+        <Param name="allowedKeys" updates="constant" val="'1','0'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="$correct_response" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_2afc_trial" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.500" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="first key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="text_question_trial">
+        <Param name="color" updates="constant" val="blue" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_question_trial" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Es una pregunta?" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="instructions_2afc_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('instructions_text', 'En la siguiente tarea vas a escuchar una serie de frases cortas. \n\n  Vas a decidir si suenan como preguntas o no usando el teclado.'), ('continue_text', '(presiona la barra espaciadora para continuar)')]), OrderedDict([('instructions_text', &quot;Si crees que el enunciado es una pregunta, teclea '1' (Sí) y si crees que \n  no es una pregunta teclea '0' (no).\n\n  Vamos a practicar...&quot;), ('continue_text', '(presiona la barra espaciadora para continuar)')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="instructions/2afc_instructions_sp_text.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="instructions_2afc_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="instructions_2afc"/>
+    <LoopTerminator name="instructions_2afc_loop"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2afc_practice_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('path', './stim/wavs/castilian_question_filler_Mi-esposo-conoce-al-chico.wav'), ('correct_response', 1)]), OrderedDict([('path', './stim/wavs/argentine_question_filler_Mi-vecino-habla-mucho.wav'), ('correct_response', 1)]), OrderedDict([('path', './stim/wavs/chilean_question_filler_Mi-padre-cantaba-bien.wav'), ('correct_response', 1)]), OrderedDict([('path', './stim/wavs/mexican_question_filler_Felipe-no-tiene-contrasena.wav'), ('correct_response', 1)]), OrderedDict([('path', './stim/wavs/cuban_statement_filler_Cocinabas-por-la-noche.wav'), ('correct_response', 0)]), OrderedDict([('path', './stim/wavs/andalusian_statement_filler_Alberto-nunca-se-afeita.wav'), ('correct_response', 0)]), OrderedDict([('path', './stim/wavs/peruvian_statement_filler_El-nino-habla-con-su-madre.wav'), ('correct_response', 0)]), OrderedDict([('path', './stim/wavs/puertorican_statement_filler_La-nina-pinta-con-su-amiga.wav'), ('correct_response', 0)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials/twoafc_practice_trials.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials_2afc_practice_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="practice_2afc"/>
+    <LoopTerminator name="trials_2afc_practice_loop"/>
+    <Routine name="check_2afc"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2afc_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('item_num', 1), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav')]), OrderedDict([('item_num', 2), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav')]), OrderedDict([('item_num', 3), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_David-leia-el-libro.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_David-leia-el-libro.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_David-leia-el-libro.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_David-leia-el-libro.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_David-leia-el-libro.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_David-leia-el-libro.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_David-leia-el-libro.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_David-leia-el-libro.wav')]), OrderedDict([('item_num', 4), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Emilio-ama-la-marcha.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Emilio-ama-la-marcha.wav')]), OrderedDict([('item_num', 5), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Manuela-vende-el-carro.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Manuela-vende-el-carro.wav')]), OrderedDict([('item_num', 6), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Maria-bebe-el-vino.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Maria-bebe-el-vino.wav')]), OrderedDict([('item_num', 7), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav')]), OrderedDict([('item_num', 8), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-broad-focus_Marta-abre-el-regalo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-broad-focus_Marta-abre-el-regalo.wav')]), OrderedDict([('item_num', 9), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav')]), OrderedDict([('item_num', 10), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav')]), OrderedDict([('item_num', 11), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_David-leia-el-libro.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_David-leia-el-libro.wav')]), OrderedDict([('item_num', 12), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav')]), OrderedDict([('item_num', 13), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Manuela-vende-el-carro.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Manuela-vende-el-carro.wav')]), OrderedDict([('item_num', 14), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Maria-bebe-el-vino.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Maria-bebe-el-vino.wav')]), OrderedDict([('item_num', 15), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav')]), OrderedDict([('item_num', 16), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('argentine', './stim/wavs/argentine_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('castilian', './stim/wavs/castilian_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('chilean', './stim/wavs/chilean_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('cuban', './stim/wavs/cuban_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('mexican', './stim/wavs/mexican_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('peruvian', './stim/wavs/peruvian_match_declarative-narrow-focus_Marta-abre-el-regalo.wav'), ('puertorican', './stim/wavs/puertorican_match_declarative-narrow-focus_Marta-abre-el-regalo.wav')]), OrderedDict([('item_num', 17), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav')]), OrderedDict([('item_num', 18), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Cuando-leia-el-libro.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Cuando-leia-el-libro.wav')]), OrderedDict([('item_num', 19), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav')]), OrderedDict([('item_num', 20), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav')]), OrderedDict([('item_num', 21), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav')]), OrderedDict([('item_num', 22), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav')]), OrderedDict([('item_num', 23), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav')]), OrderedDict([('item_num', 24), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav')]), OrderedDict([('item_num', 25), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav')]), OrderedDict([('item_num', 26), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav')]), OrderedDict([('item_num', 27), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_David-leia-el-libro.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_David-leia-el-libro.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_David-leia-el-libro.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_David-leia-el-libro.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_David-leia-el-libro.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_David-leia-el-libro.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_David-leia-el-libro.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_David-leia-el-libro.wav')]), OrderedDict([('item_num', 28), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Emilio-ama-la-marcha.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Emilio-ama-la-marcha.wav')]), OrderedDict([('item_num', 29), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Manuela-vende-el-carro.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Manuela-vende-el-carro.wav')]), OrderedDict([('item_num', 30), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Maria-bebe-el-vino.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Maria-bebe-el-vino.wav')]), OrderedDict([('item_num', 31), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav')]), OrderedDict([('item_num', 32), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('argentine', './stim/wavs/argentine_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('castilian', './stim/wavs/castilian_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('chilean', './stim/wavs/chilean_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('cuban', './stim/wavs/cuban_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('mexican', './stim/wavs/mexican_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('peruvian', './stim/wavs/peruvian_match_interrogative-total-yn_Marta-abre-el-regalo.wav'), ('puertorican', './stim/wavs/puertorican_match_interrogative-total-yn_Marta-abre-el-regalo.wav')]), OrderedDict([('item_num', 33), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav')]), OrderedDict([('item_num', 34), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav')]), OrderedDict([('item_num', 35), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav')]), OrderedDict([('item_num', 36), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav')]), OrderedDict([('item_num', 37), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav')]), OrderedDict([('item_num', 38), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav')]), OrderedDict([('item_num', 39), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav')]), OrderedDict([('item_num', 40), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav')]), OrderedDict([('item_num', 41), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav')]), OrderedDict([('item_num', 42), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav')]), OrderedDict([('item_num', 43), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav')]), OrderedDict([('item_num', 44), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav')]), OrderedDict([('item_num', 45), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav')]), OrderedDict([('item_num', 46), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav')]), OrderedDict([('item_num', 47), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav')]), OrderedDict([('item_num', 48), ('correct_response', 0), ('andalusian', './stim/wavs/andalusian_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('argentine', './stim/wavs/argentine_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('castilian', './stim/wavs/castilian_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('chilean', './stim/wavs/chilean_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('cuban', './stim/wavs/cuban_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('mexican', './stim/wavs/mexican_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav')]), OrderedDict([('item_num', 49), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav')]), OrderedDict([('item_num', 50), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav')]), OrderedDict([('item_num', 51), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav')]), OrderedDict([('item_num', 52), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav')]), OrderedDict([('item_num', 53), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav')]), OrderedDict([('item_num', 54), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav')]), OrderedDict([('item_num', 55), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav')]), OrderedDict([('item_num', 56), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav')]), OrderedDict([('item_num', 57), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav')]), OrderedDict([('item_num', 58), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav')]), OrderedDict([('item_num', 59), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav')]), OrderedDict([('item_num', 60), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav')]), OrderedDict([('item_num', 61), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav')]), OrderedDict([('item_num', 62), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav')]), OrderedDict([('item_num', 63), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav')]), OrderedDict([('item_num', 64), ('correct_response', 1), ('andalusian', './stim/wavs/andalusian_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('argentine', './stim/wavs/argentine_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('castilian', './stim/wavs/castilian_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('chilean', './stim/wavs/chilean_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('cuban', './stim/wavs/cuban_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('mexican', './stim/wavs/mexican_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('peruvian', './stim/wavs/peruvian_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav'), ('puertorican', './stim/wavs/puertorican_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials/twoafc_trials.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="trials_2afc_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial_2afc"/>
+    <LoopTerminator name="trials_2afc_loop"/>
+  </Flow>
+</PsychoPy2experiment>
