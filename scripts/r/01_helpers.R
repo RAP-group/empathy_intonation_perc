@@ -40,6 +40,15 @@ score_lextale <- function(
   return(val)
 }
 
+# Calculate difference in days from origin
+time_diff <- function(date = "1982-11-03", format = "%Y-%m-%d", 
+                      origin = "1970-01-01", units = "days") {
+  start_date <- as.Date(origin, format)
+  end_date   <- as.Date(date, format)
+  out <- as.numeric(difftime(end_date, start_date, units = units))
+  return(out)
+}
+
 # -----------------------------------------------------------------------------
 
 
