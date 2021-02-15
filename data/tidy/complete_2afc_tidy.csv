@@ -1,0 +1,129 @@
+participant,group,en_variety,sp_variety,have_ln,check_pass,check_fails,item_variety,condition,sentence_type,sentence,correct_response,response,is_correct,rt
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,interrogative-partial-wh,Por que oia el rio,1,0,0,0.93874
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,declarative-broad-focus,Marta abre el regalo,0,0,1,0.31233
+jvc198,learner,Southern English,Mexican,no,1,1,castilian,mismatch,interrogative-total-yn,Mi tia odia la lluvia,1,1,1,2.05184
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,declarative-narrow-focus,Manuela vende el carro,0,0,1,2.195125
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,interrogative-total-yn,Ana lleva el abrigo,1,0,0,1.06599
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,mismatch,interrogative-partial-wh,Por que vivia en Paris,1,0,0,2.333505
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,match,declarative-broad-focus,Daniel iba a Bolivia,0,0,1,3.081535
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,mismatch,interrogative-total-yn,El hombre mira la luna,1,0,0,0.95469
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,declarative-broad-focus,Mariano habla del tiempo,0,0,1,0.566865
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,declarative-narrow-focus,Mi tia odia la lluvia,0,0,1,0.138595
+jvc198,learner,Southern English,Mexican,no,1,1,castilian,mismatch,interrogative-partial-wh,Cuando lavaba el plato,1,0,0,0.40574
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,match,declarative-broad-focus,Ana lleva el abrigo,0,0,1,1.30857
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,mismatch,declarative-narrow-focus,Mi madre come la fruta,0,0,1,0.53847
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,interrogative-total-yn,El bebe comia muy bien,1,0,0,1.60032
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,mismatch,interrogative-total-yn,La maestra vive en Paris,1,0,0,1.20505
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,match,interrogative-total-yn,Maria bebe el vino,1,0,0,0.41865
+jvc198,learner,Southern English,Mexican,no,1,1,puertorican,match,declarative-broad-focus,Maria bebe el vino,0,0,1,0.306755
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,declarative-broad-focus,Emilio ama la marcha,0,0,1,0.38973
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,declarative-narrow-focus,La maestra vive en Paris,0,0,1,1.296695
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,interrogative-total-yn,Emilio ama la marcha,1,0,0,1.018525
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,interrogative-partial-wh,Por que hablaba del agua,1,0,0,0.051045
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,mismatch,declarative-broad-focus,Mi tia odia la lluvia,0,0,1,0.236185
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,match,declarative-narrow-focus,Daniel iba a Bolivia,0,0,1,0.289015
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,match,interrogative-partial-wh,Por que ama la navidad,1,0,0,5.9e-4
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,interrogative-partial-wh,Cuando leia el libro,1,0,0,0.20032
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,match,interrogative-partial-wh,Cuando bebia el vino,1,0,0,0.21728
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,interrogative-partial-wh,Por que venia del lago,1,0,0,0.15013
+jvc198,learner,Southern English,Mexican,no,1,1,castilian,match,interrogative-total-yn,Manuela vende el carro,1,0,0,0.141645
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,declarative-narrow-focus,El hombre mira la luna,0,0,1,0.10299
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,match,declarative-narrow-focus,Mariano habla del tiempo,0,0,1,0.149895
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,interrogative-partial-wh,Cuando lleva el abrigo,1,0,0,0.162525
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,declarative-broad-focus,La maestra vive en Paris,0,0,1,0.167175
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,interrogative-total-yn,La nina lava el plato,1,0,0,0.184025
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,declarative-broad-focus,David leia el libro,0,0,1,0.151235
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,interrogative-partial-wh,Por que odiaba la lluvia,1,0,0,0.131555
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,match,declarative-narrow-focus,David leia el libro,0,0,1,0.11747
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,declarative-narrow-focus,El bebe comia muy bien,0,0,1,0.08736
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,interrogative-partial-wh,Cuando miraba la luna,1,0,0,0.0757
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,match,declarative-broad-focus,Manuela vende el carro,0,0,1,0.07923
+jvc198,learner,Southern English,Mexican,no,1,1,puertorican,match,declarative-narrow-focus,Marta abre el regalo,0,0,1,0.190315
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,mismatch,declarative-narrow-focus,Mi novio viene del lago,0,0,1,0.10033
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,interrogative-total-yn,Mi novio viene del lago,1,0,0,0.19993
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,declarative-broad-focus,El bebe comia muy bien,0,0,1,0.137645
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,interrogative-total-yn,Mariano habla del tiempo,1,0,0,0.21691
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,declarative-narrow-focus,Ana lleva el abrigo,0,0,1,0.02312
+jvc198,learner,Southern English,Mexican,no,1,1,castilian,match,interrogative-total-yn,Daniel iba a Bolivia,1,0,0,0.017975
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,declarative-narrow-focus,El nino oye el rio,0,0,1,0.0908
+jvc198,learner,Southern English,Mexican,no,1,1,puertorican,mismatch,interrogative-total-yn,Mi madre come la fruta,1,0,0,0.133865
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,mismatch,declarative-broad-focus,La nina lava el plato,0,0,1,0.250345
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,declarative-broad-focus,Mi madre come la fruta,0,0,1,5.15e-4
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,interrogative-total-yn,David leia el libro,1,1,1,2.10479
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,declarative-broad-focus,Mi novio viene del lago,0,0,1,1.850385
+jvc198,learner,Southern English,Mexican,no,1,1,mexican,mismatch,interrogative-partial-wh,Cuando comia la fruta,1,0,0,0.934145
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,match,interrogative-partial-wh,Por que iba a Bolivia,1,0,0,0.3444
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,interrogative-total-yn,Marta abre el regalo,1,0,0,0.636855
+jvc198,learner,Southern English,Mexican,no,1,1,andalusian,match,declarative-narrow-focus,Maria bebe el vino,0,0,1,1.162715
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,match,declarative-narrow-focus,Emilio ama la marcha,0,0,1,0.807045
+jvc198,learner,Southern English,Mexican,no,1,1,castilian,match,interrogative-partial-wh,Cuando vendia el carro,1,0,0,1.634345
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,mismatch,declarative-narrow-focus,La nina lava el plato,0,0,1,1.48409
+jvc198,learner,Southern English,Mexican,no,1,1,cuban,mismatch,interrogative-partial-wh,Por que desayuna muy bien,1,0,0,2.389235
+jvc198,learner,Southern English,Mexican,no,1,1,argentine,match,interrogative-partial-wh,Por que abre el regalo,1,0,0,0.19503
+jvc198,learner,Southern English,Mexican,no,1,1,chilean,mismatch,interrogative-total-yn,El nino oye el rio,1,0,0,3.54258
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,declarative-broad-focus,El nino oye el rio,0,0,1,1.833215
+jvc198,learner,Southern English,Mexican,no,1,1,peruvian,mismatch,declarative-broad-focus,El hombre mira la luna,0,0,1,1.62333
+jvc198,native,NA,cubano,no,NA,NA,castilian,match,interrogative-partial-wh,Por que hablaba del agua,1,1,1,2.695
+jvc198,native,NA,cubano,no,NA,NA,puertorican,mismatch,interrogative-partial-wh,Por que desayuna muy bien,1,1,1,1.713
+jvc198,native,NA,cubano,no,NA,NA,puertorican,match,declarative-narrow-focus,Maria bebe el vino,0,0,1,1.427
+jvc198,native,NA,cubano,no,NA,NA,castilian,match,interrogative-total-yn,Maria bebe el vino,1,0,0,0.075
+jvc198,native,NA,cubano,no,NA,NA,andalusian,mismatch,interrogative-total-yn,El bebe comia muy bien,1,0,0,0.051
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,declarative-broad-focus,Ana lleva el abrigo,0,0,1,0.019
+jvc198,native,NA,cubano,no,NA,NA,castilian,match,interrogative-partial-wh,Por que iba a Bolivia,1,0,0,0.031
+jvc198,native,NA,cubano,no,NA,NA,peruvian,match,declarative-broad-focus,David leia el libro,0,0,1,0.04
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,declarative-narrow-focus,Mi madre come la fruta,0,0,1,0.025
+jvc198,native,NA,cubano,no,NA,NA,puertorican,mismatch,declarative-broad-focus,El nino oye el rio,0,0,1,0.067
+jvc198,native,NA,cubano,no,NA,NA,chilean,mismatch,declarative-broad-focus,El hombre mira la luna,0,0,1,0.053
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,interrogative-partial-wh,Cuando miraba la luna,1,0,0,0.031
+jvc198,native,NA,cubano,no,NA,NA,chilean,match,declarative-broad-focus,Manuela vende el carro,0,0,1,0.094
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,declarative-broad-focus,Mi madre come la fruta,0,0,1,0.053
+jvc198,native,NA,cubano,no,NA,NA,castilian,match,declarative-narrow-focus,Mariano habla del tiempo,0,0,1,0.051
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,declarative-narrow-focus,La nina lava el plato,0,0,1,0.041
+jvc198,native,NA,cubano,no,NA,NA,andalusian,match,declarative-narrow-focus,Ana lleva el abrigo,0,0,1,0.17
+jvc198,native,NA,cubano,no,NA,NA,castilian,mismatch,interrogative-total-yn,Mi madre come la fruta,1,0,0,0.105
+jvc198,native,NA,cubano,no,NA,NA,andalusian,mismatch,interrogative-partial-wh,Cuando lavaba el plato,1,0,0,0.151
+jvc198,native,NA,cubano,no,NA,NA,peruvian,mismatch,interrogative-total-yn,El nino oye el rio,1,0,0,0.085
+jvc198,native,NA,cubano,no,NA,NA,puertorican,match,interrogative-total-yn,Emilio ama la marcha,1,0,0,0.084
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,interrogative-total-yn,Mi novio viene del lago,1,0,0,0.077
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,interrogative-total-yn,Mariano habla del tiempo,1,0,0,0.121
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,interrogative-total-yn,Manuela vende el carro,1,0,0,0.021
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,interrogative-partial-wh,Por que vivia en Paris,1,0,0,0.056
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,interrogative-partial-wh,Por que odiaba la lluvia,1,0,0,0.097
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,declarative-broad-focus,La nina lava el plato,0,0,1,0.093
+jvc198,native,NA,cubano,no,NA,NA,peruvian,mismatch,interrogative-partial-wh,Cuando comia la fruta,1,0,0,0.102
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,declarative-broad-focus,Mi tia odia la lluvia,0,0,1,0.102
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,interrogative-total-yn,David leia el libro,1,0,0,0.709
+jvc198,native,NA,cubano,no,NA,NA,chilean,match,interrogative-partial-wh,Cuando vendia el carro,1,0,0,0.008
+jvc198,native,NA,cubano,no,NA,NA,mexican,mismatch,declarative-narrow-focus,El nino oye el rio,0,0,1,0.68
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,declarative-broad-focus,La maestra vive en Paris,0,0,1,0.086
+jvc198,native,NA,cubano,no,NA,NA,puertorican,match,declarative-narrow-focus,Emilio ama la marcha,0,0,1,0.075
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,declarative-narrow-focus,Daniel iba a Bolivia,0,0,1,0.04
+jvc198,native,NA,cubano,no,NA,NA,peruvian,mismatch,interrogative-partial-wh,Por que oia el rio,1,0,0,0.076
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,interrogative-total-yn,La nina lava el plato,1,0,0,0.092
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,interrogative-partial-wh,Cuando bebia el vino,1,0,0,0.129
+jvc198,native,NA,cubano,no,NA,NA,andalusian,mismatch,declarative-narrow-focus,El bebe comia muy bien,0,0,1,0.137
+jvc198,native,NA,cubano,no,NA,NA,argentine,mismatch,declarative-broad-focus,Mi novio viene del lago,0,0,1,0.073
+jvc198,native,NA,cubano,no,NA,NA,andalusian,mismatch,interrogative-total-yn,La maestra vive en Paris,1,0,0,0.12
+jvc198,native,NA,cubano,no,NA,NA,andalusian,mismatch,interrogative-total-yn,El hombre mira la luna,1,0,0,0.054
+jvc198,native,NA,cubano,no,NA,NA,puertorican,mismatch,declarative-narrow-focus,Mi tia odia la lluvia,0,0,1,0.158
+jvc198,native,NA,cubano,no,NA,NA,andalusian,match,interrogative-partial-wh,Cuando leia el libro,1,0,0,0.027
+jvc198,native,NA,cubano,no,NA,NA,chilean,match,interrogative-partial-wh,Cuando lleva el abrigo,1,0,0,0.186
+jvc198,native,NA,cubano,no,NA,NA,castilian,match,declarative-broad-focus,Emilio ama la marcha,0,0,1,0.22
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,declarative-broad-focus,Mariano habla del tiempo,0,0,1,0.169
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,declarative-narrow-focus,El hombre mira la luna,0,0,1,0.137
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,declarative-broad-focus,Marta abre el regalo,0,0,1,0.184
+jvc198,native,NA,cubano,no,NA,NA,chilean,match,interrogative-total-yn,Marta abre el regalo,1,0,0,0.152
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,interrogative-total-yn,Mi tia odia la lluvia,1,0,0,0.16
+jvc198,native,NA,cubano,no,NA,NA,puertorican,match,declarative-narrow-focus,David leia el libro,0,0,1,0.111
+jvc198,native,NA,cubano,no,NA,NA,peruvian,mismatch,declarative-narrow-focus,Mi novio viene del lago,0,0,1,0.202
+jvc198,native,NA,cubano,no,NA,NA,cuban,match,interrogative-partial-wh,Por que ama la navidad,1,0,0,0.172
+jvc198,native,NA,cubano,no,NA,NA,peruvian,mismatch,declarative-narrow-focus,La maestra vive en Paris,0,0,1,0.009
+jvc198,native,NA,cubano,no,NA,NA,cuban,mismatch,interrogative-partial-wh,Por que venia del lago,1,0,0,0.012
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,declarative-narrow-focus,Marta abre el regalo,0,0,1,0.011
+jvc198,native,NA,cubano,no,NA,NA,peruvian,match,declarative-broad-focus,Maria bebe el vino,0,0,1,0.319
+jvc198,native,NA,cubano,no,NA,NA,puertorican,mismatch,declarative-broad-focus,El bebe comia muy bien,0,0,1,0.267
+jvc198,native,NA,cubano,no,NA,NA,andalusian,match,declarative-broad-focus,Daniel iba a Bolivia,0,0,1,0.202
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,declarative-narrow-focus,Manuela vende el carro,0,0,1,0.145
+jvc198,native,NA,cubano,no,NA,NA,mexican,match,interrogative-total-yn,Ana lleva el abrigo,1,0,0,0.179
+jvc198,native,NA,cubano,no,NA,NA,andalusian,match,interrogative-partial-wh,Por que abre el regalo,1,0,0,0.188
+jvc198,native,NA,cubano,no,NA,NA,puertorican,match,interrogative-total-yn,Daniel iba a Bolivia,1,0,0,0.184

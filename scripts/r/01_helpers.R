@@ -23,8 +23,12 @@ source(here::here("scripts", "r", "00_libs.R"))
 # Score lextale task
 # ((n_corr_real / n_real_words * 100) + (n_corr_nonse / n_nonse_words * 100)) / 2
 
-score_lextale <- function(n_real, n_nonse, n_real_correct, n_nonse_correct, 
-                          n_nonse_incorrect = NULL) {
+score_lextale <- function(
+  n_real = NULL, 
+  n_nonse = NULL, 
+  n_real_correct = NULL, 
+  n_nonse_correct = NULL, 
+  n_nonse_incorrect = NULL) {
 
   if (is.null(n_nonse_incorrect)) {
   avg_real <-  (n_real_correct / n_real * 100)

@@ -1,0 +1,513 @@
+variety,condition,sentence_type,item,nsyll,npause,dur (s),phonationtime (s),speech_rate,articulation_rate,avg_syll_dur
+Andalusian,match,declarative-broad-focus,Ana-lleva-el-abrigo,6,0,1.35,1.35,4.45,4.45,0.225
+Andalusian,match,declarative-broad-focus,Daniel-iba-a-Bolivia,6,0,1.46,1.46,4.11,4.11,0.243
+Andalusian,match,declarative-broad-focus,David-leia-el-libro,7,0,1.43,1.43,4.9,4.9,0.204
+Andalusian,match,declarative-broad-focus,Emilio-ama-la-marcha,4,0,1.27,1.27,3.16,3.16,0.317
+Andalusian,match,declarative-broad-focus,Manuela-vende-el-carro,2,0,1.25,1.25,1.61,1.61,0.623
+Andalusian,match,declarative-broad-focus,Maria-bebe-el-vino,3,0,1.11,1.11,2.71,2.71,0.369
+Andalusian,match,declarative-broad-focus,Mariano-habla-del-tiempo,4,0,1.57,1.57,2.54,2.54,0.393
+Andalusian,match,declarative-broad-focus,Marta-abre-el-regalo,5,0,1.39,1.39,3.6,3.6,0.278
+Andalusian,match,declarative-narrow-focus,Ana-lleva-el-abrigo,7,0,1.29,1.29,5.44,5.44,0.184
+Andalusian,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,5,0,1.31,1.31,3.81,3.81,0.262
+Andalusian,match,declarative-narrow-focus,David-leia-el-libro,5,0,1.45,1.45,3.45,3.45,0.29
+Andalusian,match,declarative-narrow-focus,Emilio-ama-la-marcha,4,0,1.48,1.48,2.71,2.71,0.369
+Andalusian,match,declarative-narrow-focus,Manuela-vende-el-carro,4,0,1.45,1.45,2.76,2.76,0.362
+Andalusian,match,declarative-narrow-focus,Maria-bebe-el-vino,6,0,1.34,1.34,4.47,4.47,0.224
+Andalusian,match,declarative-narrow-focus,Mariano-habla-del-tiempo,5,0,1.64,1.64,3.05,3.05,0.327
+Andalusian,match,declarative-narrow-focus,Marta-abre-el-regalo,5,0,1.45,1.45,3.45,3.45,0.29
+Andalusian,match,interrogative-partial-wh,Cuando-bebia-el-vino,5,0,1.27,1.27,3.94,3.94,0.254
+Andalusian,match,interrogative-partial-wh,Cuando-leia-el-libro,5,0,1.31,1.31,3.81,3.81,0.263
+Andalusian,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,5,0,1.21,1.21,4.15,4.15,0.241
+Andalusian,match,interrogative-partial-wh,Cuando-vendia-el-carro,6,0,1.3,1.3,4.62,4.62,0.217
+Andalusian,match,interrogative-partial-wh,Por-que-abre-el-regalo,5,0,1.21,1.21,4.15,4.15,0.241
+Andalusian,match,interrogative-partial-wh,Por-que-ama-la-navidad,5,0,1.33,1.33,3.77,3.77,0.265
+Andalusian,match,interrogative-partial-wh,Por-que-hablaba-del-agua,3,0,1.27,1.27,2.36,2.36,0.424
+Andalusian,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,5,0,1.23,1.23,4.06,4.06,0.247
+Andalusian,match,interrogative-total-yn,Ana-lleva-el-abrigo,6,0,1.22,1.22,4.92,4.92,0.203
+Andalusian,match,interrogative-total-yn,Daniel-iba-a-Bolivia,6,0,1.34,1.34,4.48,4.48,0.223
+Andalusian,match,interrogative-total-yn,David-leia-el-libro,5,0,1.25,1.25,4.01,4.01,0.249
+Andalusian,match,interrogative-total-yn,Emilio-ama-la-marcha,5,0,1.38,1.38,3.62,3.62,0.276
+Andalusian,match,interrogative-total-yn,Manuela-vende-el-carro,5,0,1.33,1.33,3.77,3.77,0.265
+Andalusian,match,interrogative-total-yn,Maria-bebe-el-vino,4,0,1.15,1.15,3.47,3.47,0.288
+Andalusian,match,interrogative-total-yn,Mariano-habla-del-tiempo,5,0,1.6,1.6,3.13,3.13,0.319
+Andalusian,match,interrogative-total-yn,Marta-abre-el-regalo,4,0,1.26,1.26,3.18,3.18,0.315
+Andalusian,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,7,0,1.33,1.33,5.28,5.28,0.19
+Andalusian,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,3,0,1.25,1.25,2.41,2.41,0.415
+Andalusian,mismatch,declarative-broad-focus,El-nino-oye-el-rio,3,0,1.33,1.33,2.26,2.26,0.442
+Andalusian,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,6,0,1.44,1.44,4.17,4.17,0.24
+Andalusian,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.21,1.21,3.32,3.32,0.301
+Andalusian,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,7,0,1.31,1.31,5.33,5.33,0.188
+Andalusian,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,5,0,1.48,1.48,3.39,3.39,0.295
+Andalusian,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,5,0,1.36,1.36,3.67,3.67,0.273
+Andalusian,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,6,0,1.31,1.31,4.57,4.57,0.219
+Andalusian,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,6,0,1.33,1.33,4.5,4.5,0.222
+Andalusian,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,3,0,1.26,1.26,2.38,2.38,0.42
+Andalusian,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,7,0,1.19,1.19,5.89,5.89,0.17
+Andalusian,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,4,0,1.41,1.41,2.85,2.85,0.351
+Andalusian,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,7,0,1.38,1.04,5.07,6.71,0.149
+Andalusian,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,6,0,1.21,1.21,4.96,4.96,0.202
+Andalusian,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,6,0,1.36,1.36,4.4,4.4,0.227
+Andalusian,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,4,0,1.45,1.45,2.76,2.76,0.362
+Andalusian,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,5,0,1.28,1.28,3.9,3.9,0.256
+Andalusian,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,2,0,1.33,1.33,1.51,1.51,0.664
+Andalusian,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,5,0,1.4,1.4,3.57,3.57,0.28
+Andalusian,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,5,0,1.31,1.31,3.81,3.81,0.262
+Andalusian,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,5,0,1.27,1.27,3.93,3.93,0.254
+Andalusian,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,4,0,1.29,1.29,3.1,3.1,0.323
+Andalusian,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,5,0,1.17,1.17,4.27,4.27,0.234
+Andalusian,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,5,0,1.33,1.33,3.76,3.76,0.266
+Andalusian,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,6,0,1.32,1.32,4.55,4.55,0.22
+Andalusian,mismatch,interrogative-total-yn,El-nino-oye-el-rio,5,0,1.52,1.52,3.28,3.28,0.305
+Andalusian,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,6,0,1.37,1.37,4.39,4.39,0.228
+Andalusian,mismatch,interrogative-total-yn,La-nina-lava-el-plato,4,0,1.41,1.41,2.83,2.83,0.353
+Andalusian,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,6,0,1.36,1.36,4.42,4.42,0.226
+Andalusian,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,4,0,1.42,1.42,2.81,2.81,0.355
+Andalusian,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,5,0,1.48,1.48,3.39,3.39,0.295
+Argentine,match,declarative-broad-focus,Ana-lleva-el-abrigo,5,0,1.1,1.1,4.56,4.56,0.219
+Argentine,match,declarative-broad-focus,Daniel-iba-a-Bolivia,4,0,1.35,1.35,2.96,2.96,0.338
+Argentine,match,declarative-broad-focus,David-leia-el-libro,6,0,1.34,1.34,4.48,4.48,0.223
+Argentine,match,declarative-broad-focus,Emilio-ama-la-marcha,6,0,1.38,1.38,4.35,4.35,0.23
+Argentine,match,declarative-broad-focus,Manuela-vende-el-carro,4,0,1.38,1.38,2.89,2.89,0.346
+Argentine,match,declarative-broad-focus,Maria-bebe-el-vino,5,0,1.12,1.12,4.47,4.47,0.224
+Argentine,match,declarative-broad-focus,Mariano-habla-del-tiempo,5,0,1.28,1.28,3.92,3.92,0.255
+Argentine,match,declarative-broad-focus,Marta-abre-el-regalo,7,0,1.36,1.36,5.14,5.14,0.194
+Argentine,match,declarative-narrow-focus,Ana-lleva-el-abrigo,5,0,1.16,1.16,4.3,4.3,0.233
+Argentine,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,3,0,1.27,1.27,2.37,2.37,0.423
+Argentine,match,declarative-narrow-focus,David-leia-el-libro,4,0,1.13,1.13,3.54,3.54,0.283
+Argentine,match,declarative-narrow-focus,Emilio-ama-la-marcha,5,0,1.38,1.38,3.63,3.63,0.276
+Argentine,match,declarative-narrow-focus,Manuela-vende-el-carro,4,0,1.5,1.5,2.66,2.66,0.376
+Argentine,match,declarative-narrow-focus,Maria-bebe-el-vino,5,0,1.22,1.22,4.09,4.09,0.245
+Argentine,match,declarative-narrow-focus,Mariano-habla-del-tiempo,5,0,1.45,1.45,3.44,3.44,0.291
+Argentine,match,declarative-narrow-focus,Marta-abre-el-regalo,5,0,1.31,1.31,3.83,3.83,0.261
+Argentine,match,interrogative-partial-wh,Cuando-bebia-el-vino,5,0,1.14,1.14,4.38,4.38,0.228
+Argentine,match,interrogative-partial-wh,Cuando-leia-el-libro,4,0,1.09,1.09,3.66,3.66,0.273
+Argentine,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,4,0,1.21,1.21,3.3,3.3,0.303
+Argentine,match,interrogative-partial-wh,Cuando-vendia-el-carro,4,0,1.11,1.11,3.59,3.59,0.278
+Argentine,match,interrogative-partial-wh,Por-que-abre-el-regalo,3,0,1.16,1.16,2.59,2.59,0.386
+Argentine,match,interrogative-partial-wh,Por-que-ama-la-navidad,5,0,1.26,1.26,3.98,3.98,0.251
+Argentine,match,interrogative-partial-wh,Por-que-hablaba-del-agua,6,0,1.36,1.36,4.43,4.43,0.226
+Argentine,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,4,0,1.11,1.11,3.59,3.59,0.278
+Argentine,match,interrogative-total-yn,Ana-lleva-el-abrigo,4,0,1.34,1.34,2.97,2.97,0.336
+Argentine,match,interrogative-total-yn,Daniel-iba-a-Bolivia,3,0,1.41,1.41,2.13,2.13,0.468
+Argentine,match,interrogative-total-yn,David-leia-el-libro,5,0,1.32,1.32,3.78,3.78,0.265
+Argentine,match,interrogative-total-yn,Emilio-ama-la-marcha,7,0,1.58,1.58,4.43,4.43,0.226
+Argentine,match,interrogative-total-yn,Manuela-vende-el-carro,4,0,1.45,1.45,2.76,2.76,0.362
+Argentine,match,interrogative-total-yn,Maria-bebe-el-vino,4,0,1.26,1.26,3.17,3.17,0.316
+Argentine,match,interrogative-total-yn,Mariano-habla-del-tiempo,5,0,1.51,1.51,3.31,3.31,0.302
+Argentine,match,interrogative-total-yn,Marta-abre-el-regalo,6,0,1.34,1.34,4.48,4.48,0.223
+Argentine,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,4,0,1.51,1.51,2.64,2.64,0.378
+Argentine,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,7,0,1.18,1.18,5.93,5.93,0.169
+Argentine,mismatch,declarative-broad-focus,El-nino-oye-el-rio,5,0,1.56,1.56,3.21,3.21,0.311
+Argentine,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,6,0,1.43,1.43,4.19,4.19,0.239
+Argentine,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.26,1.26,3.18,3.18,0.314
+Argentine,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,6,0,1.52,1.52,3.95,3.95,0.253
+Argentine,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,5,0,1.68,1.68,2.98,2.98,0.336
+Argentine,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,6,0,1.63,1.63,3.69,3.69,0.271
+Argentine,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,3,0,1.2,1.2,2.5,2.5,0.401
+Argentine,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,6,0,1.14,1.14,5.27,5.27,0.19
+Argentine,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,2,0,1.35,1.35,1.48,1.48,0.675
+Argentine,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,5,0,1.32,1.32,3.78,3.78,0.265
+Argentine,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,5,0,1.26,1.26,3.98,3.98,0.251
+Argentine,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,7,0,1.41,1.41,4.98,4.98,0.201
+Argentine,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,4,0,1.3,1.3,3.07,3.07,0.325
+Argentine,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,5,0,1.28,1.28,3.91,3.91,0.256
+Argentine,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,6,0,1.32,1.32,4.54,4.54,0.22
+Argentine,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,4,0,1.22,1.22,3.28,3.28,0.305
+Argentine,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,6,0,1.17,1.17,5.13,5.13,0.195
+Argentine,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,4,0,1.34,1.34,2.97,2.97,0.336
+Argentine,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,3,0,1.31,1.31,2.29,2.29,0.437
+Argentine,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,3,0,1.2,1.2,2.51,2.51,0.399
+Argentine,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,4,0,1.15,1.15,3.49,3.49,0.287
+Argentine,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,6,0,1.22,1.22,4.92,4.92,0.203
+Argentine,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,3,0,1.29,1.29,2.33,2.33,0.43
+Argentine,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,5,0,1.2,1.2,4.18,4.18,0.239
+Argentine,mismatch,interrogative-total-yn,El-nino-oye-el-rio,2,0,1.19,1.19,1.68,1.68,0.595
+Argentine,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,6,0,1.56,1.56,3.85,3.85,0.26
+Argentine,mismatch,interrogative-total-yn,La-nina-lava-el-plato,4,0,1.39,1.39,2.87,2.87,0.349
+Argentine,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,7,0,1.5,1.5,4.65,4.65,0.215
+Argentine,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,4,0,1.5,1.5,2.67,2.67,0.375
+Argentine,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,4,0,1.43,1.43,2.8,2.8,0.357
+Castilian,match,declarative-broad-focus,Ana-lleva-el-abrigo,6,0,1.26,1.26,4.76,4.76,0.21
+Castilian,match,declarative-broad-focus,Daniel-iba-a-Bolivia,6,0,1.46,1.46,4.11,4.11,0.243
+Castilian,match,declarative-broad-focus,David-leia-el-libro,7,0,1.48,1.48,4.72,4.72,0.212
+Castilian,match,declarative-broad-focus,Emilio-ama-la-marcha,4,0,1.4,1.4,2.85,2.85,0.351
+Castilian,match,declarative-broad-focus,Manuela-vende-el-carro,4,0,1.53,1.53,2.61,2.61,0.383
+Castilian,match,declarative-broad-focus,Maria-bebe-el-vino,6,0,1.36,1.36,4.41,4.41,0.227
+Castilian,match,declarative-broad-focus,Mariano-habla-del-tiempo,7,0,1.61,1.61,4.35,4.35,0.23
+Castilian,match,declarative-broad-focus,Marta-abre-el-regalo,5,0,1.4,1.4,3.57,3.57,0.28
+Castilian,match,declarative-narrow-focus,Ana-lleva-el-abrigo,5,0,1.22,1.22,4.1,4.1,0.244
+Castilian,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,6,0,1.5,1.5,4.01,4.01,0.249
+Castilian,match,declarative-narrow-focus,David-leia-el-libro,5,0,1.34,1.34,3.72,3.72,0.269
+Castilian,match,declarative-narrow-focus,Emilio-ama-la-marcha,4,0,1.36,1.36,2.94,2.94,0.341
+Castilian,match,declarative-narrow-focus,Manuela-vende-el-carro,6,0,1.44,1.44,4.16,4.16,0.241
+Castilian,match,declarative-narrow-focus,Maria-bebe-el-vino,3,0,1.31,1.31,2.29,2.29,0.438
+Castilian,match,declarative-narrow-focus,Mariano-habla-del-tiempo,6,0,1.56,1.56,3.85,3.85,0.26
+Castilian,match,declarative-narrow-focus,Marta-abre-el-regalo,6,0,1.4,1.4,4.28,4.28,0.234
+Castilian,match,interrogative-partial-wh,Cuando-bebia-el-vino,5,0,1.33,1.33,3.75,3.75,0.266
+Castilian,match,interrogative-partial-wh,Cuando-leia-el-libro,6,0,1.38,1.38,4.35,4.35,0.23
+Castilian,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,6,0,1.28,1.28,4.67,4.67,0.214
+Castilian,match,interrogative-partial-wh,Cuando-vendia-el-carro,5,0,1.36,1.36,3.67,3.67,0.272
+Castilian,match,interrogative-partial-wh,Por-que-abre-el-regalo,6,0,1.39,1.39,4.32,4.32,0.231
+Castilian,match,interrogative-partial-wh,Por-que-ama-la-navidad,6,0,1.3,1.3,4.63,4.63,0.216
+Castilian,match,interrogative-partial-wh,Por-que-hablaba-del-agua,6,0,1.46,1.46,4.11,4.11,0.243
+Castilian,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,6,0,1.45,1.45,4.14,4.14,0.241
+Castilian,match,interrogative-total-yn,Ana-lleva-el-abrigo,5,0,1.27,1.27,3.95,3.95,0.253
+Castilian,match,interrogative-total-yn,Daniel-iba-a-Bolivia,5,0,1.29,1.29,3.89,3.89,0.257
+Castilian,match,interrogative-total-yn,David-leia-el-libro,5,0,1.43,1.43,3.5,3.5,0.285
+Castilian,match,interrogative-total-yn,Emilio-ama-la-marcha,7,0,1.44,1.44,4.85,4.85,0.206
+Castilian,match,interrogative-total-yn,Manuela-vende-el-carro,5,0,1.49,1.49,3.36,3.36,0.298
+Castilian,match,interrogative-total-yn,Maria-bebe-el-vino,4,0,1.31,1.31,3.05,3.05,0.328
+Castilian,match,interrogative-total-yn,Mariano-habla-del-tiempo,6,0,1.58,1.58,3.81,3.81,0.263
+Castilian,match,interrogative-total-yn,Marta-abre-el-regalo,5,0,1.44,1.44,3.48,3.48,0.287
+Castilian,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,5,0,1.6,1.6,3.13,3.13,0.32
+Castilian,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,6,0,1.37,1.37,4.4,4.4,0.228
+Castilian,mismatch,declarative-broad-focus,El-nino-oye-el-rio,4,0,1.41,1.41,2.84,2.84,0.352
+Castilian,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,8,0,1.6,1.6,5.01,5.01,0.2
+Castilian,mismatch,declarative-broad-focus,La-nina-lava-el-plato,5,0,1.47,1.47,3.41,3.41,0.293
+Castilian,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,7,0,1.49,1.49,4.7,4.7,0.213
+Castilian,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,6,0,1.51,1.51,3.96,3.96,0.252
+Castilian,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,5,0,1.3,1.3,3.83,3.83,0.261
+Castilian,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,6,0,1.48,1.48,4.05,4.05,0.247
+Castilian,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,5,0,1.28,1.28,3.91,3.91,0.256
+Castilian,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,4,0,1.39,1.39,2.87,2.87,0.348
+Castilian,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,9,0,1.72,1.72,5.22,5.22,0.191
+Castilian,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,5,0,1.34,1.34,3.74,3.74,0.268
+Castilian,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,5,0,1.49,1.49,3.35,3.35,0.298
+Castilian,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,6,0,1.49,1.49,4.03,4.03,0.248
+Castilian,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,4,0,1.42,1.42,2.82,2.82,0.355
+Castilian,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,4,0,1.4,1.4,2.86,2.86,0.349
+Castilian,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,4,0,1.33,1.33,3.01,3.01,0.332
+Castilian,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,2,0,1.32,1.32,1.51,1.51,0.662
+Castilian,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,4,0,1.52,1.52,2.64,2.64,0.379
+Castilian,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,7,0,1.55,1.55,4.52,4.52,0.221
+Castilian,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,6,0,1.36,1.36,4.4,4.4,0.227
+Castilian,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,4,0,1.45,1.45,2.76,2.76,0.362
+Castilian,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,6,0,1.49,1.49,4.04,4.04,0.248
+Castilian,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,5,0,1.47,1.47,3.4,3.4,0.294
+Castilian,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,5,0,1.29,1.29,3.87,3.87,0.258
+Castilian,mismatch,interrogative-total-yn,El-nino-oye-el-rio,4,0,1.46,1.46,2.74,2.74,0.365
+Castilian,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,6,0,1.76,1.76,3.42,3.42,0.293
+Castilian,mismatch,interrogative-total-yn,La-nina-lava-el-plato,4,0,1.45,1.45,2.76,2.76,0.363
+Castilian,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,5,0,1.51,1.51,3.32,3.32,0.302
+Castilian,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,6,0,1.53,1.53,3.91,3.91,0.256
+Castilian,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,5,0,1.46,1.46,3.42,3.42,0.292
+Chilean,match,declarative-broad-focus,Ana-lleva-el-abrigo,4,0,1.1,1.1,3.64,3.64,0.275
+Chilean,match,declarative-broad-focus,Daniel-iba-a-Bolivia,3,0,1.1,1.1,2.73,2.73,0.366
+Chilean,match,declarative-broad-focus,David-leia-el-libro,4,0,1.02,1.02,3.92,3.92,0.255
+Chilean,match,declarative-broad-focus,Emilio-ama-la-marcha,5,0,1.29,1.29,3.86,3.86,0.259
+Chilean,match,declarative-broad-focus,Manuela-vende-el-carro,3,0,1.19,1.19,2.53,2.53,0.396
+Chilean,match,declarative-broad-focus,Maria-bebe-el-vino,4,0,0.97,0.97,4.14,4.14,0.242
+Chilean,match,declarative-broad-focus,Mariano-habla-del-tiempo,4,0,1.47,1.47,2.72,2.72,0.367
+Chilean,match,declarative-broad-focus,Marta-abre-el-regalo,4,0,1.1,1.1,3.64,3.64,0.275
+Chilean,match,declarative-narrow-focus,Ana-lleva-el-abrigo,5,0,1.08,1.08,4.62,4.62,0.216
+Chilean,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,2,0,0.92,0.92,2.17,2.17,0.46
+Chilean,match,declarative-narrow-focus,David-leia-el-libro,6,0,1.13,1.13,5.32,5.32,0.188
+Chilean,match,declarative-narrow-focus,Emilio-ama-la-marcha,6,0,1.28,1.28,4.69,4.69,0.213
+Chilean,match,declarative-narrow-focus,Manuela-vende-el-carro,4,0,1.01,1.01,3.97,3.97,0.252
+Chilean,match,declarative-narrow-focus,Maria-bebe-el-vino,4,0,0.98,0.98,4.06,4.06,0.246
+Chilean,match,declarative-narrow-focus,Mariano-habla-del-tiempo,5,0,1.75,1.75,2.86,2.86,0.35
+Chilean,match,declarative-narrow-focus,Marta-abre-el-regalo,4,0,1.1,1.1,3.62,3.62,0.276
+Chilean,match,interrogative-partial-wh,Cuando-bebia-el-vino,5,0,1.24,1.24,4.03,4.03,0.248
+Chilean,match,interrogative-partial-wh,Cuando-leia-el-libro,5,0,1.12,1.12,4.46,4.46,0.224
+Chilean,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,6,0,1.17,1.17,5.11,5.11,0.196
+Chilean,match,interrogative-partial-wh,Cuando-vendia-el-carro,6,0,1.32,1.32,4.56,4.56,0.219
+Chilean,match,interrogative-partial-wh,Por-que-abre-el-regalo,4,0,1.28,1.28,3.13,3.13,0.319
+Chilean,match,interrogative-partial-wh,Por-que-ama-la-navidad,5,0,1.19,1.19,4.21,4.21,0.237
+Chilean,match,interrogative-partial-wh,Por-que-hablaba-del-agua,7,0,1.49,1.49,4.68,4.68,0.213
+Chilean,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,3,0,1.03,1.03,2.9,2.9,0.345
+Chilean,match,interrogative-total-yn,Ana-lleva-el-abrigo,6,0,1.24,1.24,4.82,4.82,0.207
+Chilean,match,interrogative-total-yn,Daniel-iba-a-Bolivia,4,0,1.06,1.06,3.76,3.76,0.266
+Chilean,match,interrogative-total-yn,David-leia-el-libro,5,0,1.2,1.2,4.15,4.15,0.241
+Chilean,match,interrogative-total-yn,Emilio-ama-la-marcha,6,0,1.33,1.33,4.5,4.5,0.222
+Chilean,match,interrogative-total-yn,Manuela-vende-el-carro,5,0,1.29,1.29,3.87,3.87,0.258
+Chilean,match,interrogative-total-yn,Maria-bebe-el-vino,5,0,1.2,1.2,4.15,4.15,0.241
+Chilean,match,interrogative-total-yn,Mariano-habla-del-tiempo,6,0,1.37,1.37,4.39,4.39,0.228
+Chilean,match,interrogative-total-yn,Marta-abre-el-regalo,5,0,1.26,1.26,3.98,3.98,0.251
+Chilean,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,6,0,1.27,1.27,4.74,4.74,0.211
+Chilean,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,4,0,1.12,1.12,3.57,3.57,0.28
+Chilean,mismatch,declarative-broad-focus,El-nino-oye-el-rio,4,0,1.39,1.39,2.87,2.87,0.349
+Chilean,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,5,0,1.22,1.22,4.09,4.09,0.244
+Chilean,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.06,1.06,3.78,3.78,0.264
+Chilean,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,7,0,1.19,1.19,5.86,5.86,0.171
+Chilean,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,6,0,1.44,1.44,4.16,4.16,0.24
+Chilean,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,5,0,1.34,1.34,3.74,3.74,0.267
+Chilean,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,6,0,1.29,1.29,4.64,4.64,0.216
+Chilean,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,5,0,1.2,1.2,4.18,4.18,0.239
+Chilean,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,4,0,1.26,1.26,3.16,3.16,0.316
+Chilean,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,4,0,1.33,1.33,3.01,3.01,0.332
+Chilean,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,4,0,1.22,1.22,3.27,3.27,0.305
+Chilean,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,4,0,1.17,1.17,3.43,3.43,0.292
+Chilean,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,6,0,1.37,1.37,4.39,4.39,0.228
+Chilean,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,6,0,1.44,1.44,4.17,4.17,0.24
+Chilean,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,7,0,1.24,1.24,5.64,5.64,0.177
+Chilean,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,5,0,1.28,1.28,3.92,3.92,0.255
+Chilean,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,4,0,1.25,1.25,3.21,3.21,0.312
+Chilean,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,6,0,1.45,1.45,4.13,4.13,0.242
+Chilean,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,7,0,1.47,1.47,4.75,4.75,0.211
+Chilean,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,5,0,1.42,1.42,3.53,3.53,0.283
+Chilean,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,6,0,1.33,1.33,4.51,4.51,0.222
+Chilean,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,5,0,1.38,1.38,3.63,3.63,0.276
+Chilean,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,7,0,1.42,1.42,4.94,4.94,0.202
+Chilean,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,6,0,1.18,1.18,5.07,5.07,0.197
+Chilean,mismatch,interrogative-total-yn,El-nino-oye-el-rio,4,0,1.27,1.27,3.15,3.15,0.318
+Chilean,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,6,0,1.3,1.3,4.6,4.6,0.217
+Chilean,mismatch,interrogative-total-yn,La-nina-lava-el-plato,4,0,1.15,1.15,3.47,3.47,0.288
+Chilean,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,3,0,1.29,1.29,2.33,2.33,0.43
+Chilean,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,5,0,1.29,1.29,3.89,3.89,0.257
+Chilean,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,5,0,1.37,1.37,3.65,3.65,0.274
+Cuban,match,declarative-broad-focus,Ana-lleva-el-abrigo,7,0,1.24,1.24,5.66,5.66,0.177
+Cuban,match,declarative-broad-focus,Daniel-iba-a-Bolivia,8,0,1.58,1.58,5.05,5.05,0.198
+Cuban,match,declarative-broad-focus,David-leia-el-libro,6,0,1.41,1.41,4.25,4.25,0.235
+Cuban,match,declarative-broad-focus,Emilio-ama-la-marcha,6,0,1.23,1.23,4.89,4.89,0.205
+Cuban,match,declarative-broad-focus,Manuela-vende-el-carro,6,0,1.39,1.39,4.31,4.31,0.232
+Cuban,match,declarative-broad-focus,Maria-bebe-el-vino,3,0,1.25,1.25,2.4,2.4,0.417
+Cuban,match,declarative-broad-focus,Mariano-habla-del-tiempo,4,0,1.46,1.46,2.73,2.73,0.366
+Cuban,match,declarative-broad-focus,Marta-abre-el-regalo,4,0,1.33,1.33,3.01,3.01,0.332
+Cuban,match,declarative-narrow-focus,Ana-lleva-el-abrigo,7,0,1.08,1.08,6.46,6.46,0.155
+Cuban,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,6,0,1.29,1.29,4.66,4.66,0.214
+Cuban,match,declarative-narrow-focus,David-leia-el-libro,7,0,1.35,1.35,5.17,5.17,0.193
+Cuban,match,declarative-narrow-focus,Emilio-ama-la-marcha,6,0,1.26,1.26,4.76,4.76,0.21
+Cuban,match,declarative-narrow-focus,Manuela-vende-el-carro,6,0,1.38,1.38,4.35,4.35,0.23
+Cuban,match,declarative-narrow-focus,Maria-bebe-el-vino,6,0,1.09,1.09,5.51,5.51,0.182
+Cuban,match,declarative-narrow-focus,Mariano-habla-del-tiempo,4,0,1.24,1.24,3.22,3.22,0.31
+Cuban,match,declarative-narrow-focus,Marta-abre-el-regalo,4,0,1.18,1.18,3.39,3.39,0.295
+Cuban,match,interrogative-partial-wh,Cuando-bebia-el-vino,4,0,1.12,1.12,3.57,3.57,0.28
+Cuban,match,interrogative-partial-wh,Cuando-leia-el-libro,4,0,1.18,1.18,3.38,3.38,0.296
+Cuban,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,5,0,1.18,1.18,4.25,4.25,0.235
+Cuban,match,interrogative-partial-wh,Cuando-vendia-el-carro,5,0,1.16,1.16,4.29,4.29,0.233
+Cuban,match,interrogative-partial-wh,Por-que-abre-el-regalo,4,0,1.22,1.22,3.28,3.28,0.305
+Cuban,match,interrogative-partial-wh,Por-que-ama-la-navidad,5,0,1.17,1.17,4.27,4.27,0.234
+Cuban,match,interrogative-partial-wh,Por-que-hablaba-del-agua,4,0,1.38,1.38,2.9,2.9,0.344
+Cuban,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,6,0,1.2,1.2,4.99,4.99,0.201
+Cuban,match,interrogative-total-yn,Ana-lleva-el-abrigo,6,0,1.13,1.13,5.33,5.33,0.188
+Cuban,match,interrogative-total-yn,Daniel-iba-a-Bolivia,6,0,1.31,1.31,4.58,4.58,0.218
+Cuban,match,interrogative-total-yn,David-leia-el-libro,5,0,1.32,1.32,3.8,3.8,0.263
+Cuban,match,interrogative-total-yn,Emilio-ama-la-marcha,4,0,1.28,1.28,3.13,3.13,0.319
+Cuban,match,interrogative-total-yn,Manuela-vende-el-carro,5,0,1.22,1.22,4.09,4.09,0.244
+Cuban,match,interrogative-total-yn,Maria-bebe-el-vino,4,0,1.33,1.33,3.02,3.02,0.331
+Cuban,match,interrogative-total-yn,Mariano-habla-del-tiempo,5,0,1.44,1.44,3.47,3.47,0.288
+Cuban,match,interrogative-total-yn,Marta-abre-el-regalo,4,0,1.25,1.25,3.19,3.19,0.313
+Cuban,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,5,0,1.32,1.32,3.77,3.77,0.265
+Cuban,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,6,0,1.13,1.13,5.29,5.29,0.189
+Cuban,mismatch,declarative-broad-focus,El-nino-oye-el-rio,3,0,1.39,1.39,2.16,2.16,0.463
+Cuban,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,6,0,1.29,1.29,4.63,4.63,0.216
+Cuban,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.22,1.22,3.27,3.27,0.306
+Cuban,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,6,0,1.37,1.37,4.39,4.39,0.228
+Cuban,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,5,0,1.4,1.4,3.57,3.57,0.28
+Cuban,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,6,0,1.47,1.47,4.08,4.08,0.245
+Cuban,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,4,0,1.1,1.1,3.64,3.64,0.275
+Cuban,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,6,0,1.22,1.22,4.91,4.91,0.204
+Cuban,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,6,0,1.24,1.24,4.83,4.83,0.207
+Cuban,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,5,0,1.21,1.21,4.15,4.15,0.241
+Cuban,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,3,0,1.16,1.16,2.58,2.58,0.388
+Cuban,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,6,0,1.26,1.26,4.78,4.78,0.209
+Cuban,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,6,0,1.32,1.32,4.56,4.56,0.22
+Cuban,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,4,0,1.3,1.3,3.08,3.08,0.325
+Cuban,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,6,0,1.03,1.03,5.83,5.83,0.171
+Cuban,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,5,0,1.22,1.22,4.1,4.1,0.244
+Cuban,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,4,0,1.17,1.17,3.42,3.42,0.292
+Cuban,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,4,0,1.36,1.36,2.95,2.95,0.339
+Cuban,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,3,0,1.38,1.38,2.18,2.18,0.459
+Cuban,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,5,0,1.29,1.29,3.86,3.86,0.259
+Cuban,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,2,0,1.04,1.04,1.93,1.93,0.519
+Cuban,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,4,0,1.09,1.09,3.67,3.67,0.272
+Cuban,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,5,0,1.29,1.29,3.86,3.86,0.259
+Cuban,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,6,0,1.11,1.11,5.4,5.4,0.185
+Cuban,mismatch,interrogative-total-yn,El-nino-oye-el-rio,2,0,1.06,1.06,1.89,1.89,0.528
+Cuban,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,4,0,1.4,1.4,2.85,2.85,0.351
+Cuban,mismatch,interrogative-total-yn,La-nina-lava-el-plato,7,0,1.19,1.19,5.89,5.89,0.17
+Cuban,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,8,0,1.27,1.27,6.32,6.32,0.158
+Cuban,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,3,0,1.36,1.36,2.21,2.21,0.453
+Cuban,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,5,0,1.22,1.22,4.11,4.11,0.243
+Mexican,match,declarative-broad-focus,Ana-lleva-el-abrigo,6,0,1.09,1.09,5.49,5.49,0.182
+Mexican,match,declarative-broad-focus,Daniel-iba-a-Bolivia,6,0,1.19,1.19,5.05,5.05,0.198
+Mexican,match,declarative-broad-focus,David-leia-el-libro,4,0,1.1,1.1,3.64,3.64,0.275
+Mexican,match,declarative-broad-focus,Emilio-ama-la-marcha,5,0,1.28,1.28,3.91,3.91,0.256
+Mexican,match,declarative-broad-focus,Manuela-vende-el-carro,5,0,1.15,1.15,4.34,4.34,0.231
+Mexican,match,declarative-broad-focus,Maria-bebe-el-vino,5,0,1.09,1.09,4.6,4.6,0.217
+Mexican,match,declarative-broad-focus,Mariano-habla-del-tiempo,5,0,1.22,1.22,4.09,4.09,0.244
+Mexican,match,declarative-broad-focus,Marta-abre-el-regalo,4,0,1.12,1.12,3.56,3.56,0.281
+Mexican,match,declarative-narrow-focus,Ana-lleva-el-abrigo,6,0,1.06,1.06,5.68,5.68,0.176
+Mexican,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,5,0,1.1,1.1,4.55,4.55,0.22
+Mexican,match,declarative-narrow-focus,David-leia-el-libro,4,0,1.09,1.09,3.68,3.68,0.272
+Mexican,match,declarative-narrow-focus,Emilio-ama-la-marcha,5,0,1.14,1.14,4.37,4.37,0.229
+Mexican,match,declarative-narrow-focus,Manuela-vende-el-carro,7,0,1.21,1.21,5.77,5.77,0.173
+Mexican,match,declarative-narrow-focus,Maria-bebe-el-vino,6,0,1.08,1.08,5.56,5.56,0.18
+Mexican,match,declarative-narrow-focus,Mariano-habla-del-tiempo,5,0,1.22,1.22,4.1,4.1,0.244
+Mexican,match,declarative-narrow-focus,Marta-abre-el-regalo,6,0,1.15,1.15,5.2,5.2,0.192
+Mexican,match,interrogative-partial-wh,Cuando-bebia-el-vino,4,0,1.06,1.06,3.78,3.78,0.265
+Mexican,match,interrogative-partial-wh,Cuando-leia-el-libro,5,0,1.03,1.03,4.87,4.87,0.205
+Mexican,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,6,0,1.16,1.16,5.19,5.19,0.193
+Mexican,match,interrogative-partial-wh,Cuando-vendia-el-carro,5,0,1.02,1.02,4.89,4.89,0.204
+Mexican,match,interrogative-partial-wh,Por-que-abre-el-regalo,4,0,1.13,1.13,3.55,3.55,0.282
+Mexican,match,interrogative-partial-wh,Por-que-ama-la-navidad,4,0,1.19,1.19,3.36,3.36,0.298
+Mexican,match,interrogative-partial-wh,Por-que-hablaba-del-agua,6,0,1.21,1.21,4.96,4.96,0.202
+Mexican,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,5,0,1.24,1.24,4.03,4.03,0.248
+Mexican,match,interrogative-total-yn,Ana-lleva-el-abrigo,6,0,1.15,1.15,5.2,5.2,0.192
+Mexican,match,interrogative-total-yn,Daniel-iba-a-Bolivia,6,0,1.33,1.33,4.53,4.53,0.221
+Mexican,match,interrogative-total-yn,David-leia-el-libro,5,0,1.21,1.21,4.14,4.14,0.241
+Mexican,match,interrogative-total-yn,Emilio-ama-la-marcha,6,0,1.23,1.23,4.87,4.87,0.205
+Mexican,match,interrogative-total-yn,Manuela-vende-el-carro,6,0,1.26,1.26,4.76,4.76,0.21
+Mexican,match,interrogative-total-yn,Maria-bebe-el-vino,8,0,1.18,1.18,6.77,6.77,0.148
+Mexican,match,interrogative-total-yn,Mariano-habla-del-tiempo,7,0,1.36,1.36,5.17,5.17,0.194
+Mexican,match,interrogative-total-yn,Marta-abre-el-regalo,5,0,1.15,1.15,4.37,4.37,0.229
+Mexican,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,6,0,1.19,1.19,5.04,5.04,0.199
+Mexican,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,4,0,1.22,1.22,3.27,3.27,0.306
+Mexican,mismatch,declarative-broad-focus,El-nino-oye-el-rio,4,0,1.08,1.08,3.69,3.69,0.271
+Mexican,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,5,0,1.2,1.2,4.17,4.17,0.24
+Mexican,mismatch,declarative-broad-focus,La-nina-lava-el-plato,6,0,1.1,1.1,5.47,5.47,0.183
+Mexican,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,6,0,1.26,1.26,4.78,4.78,0.209
+Mexican,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,3,0,1.14,1.14,2.63,2.63,0.381
+Mexican,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,6,0,1.14,1.14,5.25,5.25,0.191
+Mexican,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,6,0,1.14,1.14,5.25,5.25,0.191
+Mexican,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,5,0,1.05,1.05,4.76,4.76,0.21
+Mexican,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,5,0,1.23,1.23,4.05,4.05,0.247
+Mexican,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,6,0,1.23,1.23,4.87,4.87,0.205
+Mexican,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,4,0,1.13,1.13,3.56,3.56,0.281
+Mexican,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,7,0,1.27,1.27,5.5,5.5,0.182
+Mexican,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,4,0,1.23,1.23,3.25,3.25,0.307
+Mexican,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,6,0,1.21,1.21,4.96,4.96,0.202
+Mexican,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,6,0,1.07,1.07,5.6,5.6,0.179
+Mexican,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,5,0,1.06,1.06,4.7,4.7,0.213
+Mexican,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,5,0,1.05,1.05,4.74,4.74,0.211
+Mexican,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,4,0,1.33,1.33,3.01,3.01,0.332
+Mexican,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,4,0,1.17,1.17,3.42,3.42,0.292
+Mexican,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,4,0,1.08,1.08,3.69,3.69,0.271
+Mexican,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,4,0,1.07,1.07,3.75,3.75,0.267
+Mexican,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,4,0,1.17,1.17,3.42,3.42,0.292
+Mexican,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,6,0,1.25,1.25,4.81,4.81,0.208
+Mexican,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,6,0,1.12,1.12,5.38,5.38,0.186
+Mexican,mismatch,interrogative-total-yn,El-nino-oye-el-rio,4,0,1.15,1.15,3.47,3.47,0.289
+Mexican,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,6,0,1.43,1.43,4.2,4.2,0.238
+Mexican,mismatch,interrogative-total-yn,La-nina-lava-el-plato,6,0,1.25,1.25,4.81,4.81,0.208
+Mexican,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,6,0,1.26,1.26,4.77,4.77,0.209
+Mexican,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,7,0,1.29,1.29,5.43,5.43,0.184
+Mexican,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,6,0,1.19,1.19,5.05,5.05,0.198
+Peruvian,match,declarative-broad-focus,Ana-lleva-el-abrigo,6,0,1.33,1.33,4.5,4.5,0.222
+Peruvian,match,declarative-broad-focus,Daniel-iba-a-Bolivia,6,0,1.44,1.44,4.18,4.18,0.239
+Peruvian,match,declarative-broad-focus,David-leia-el-libro,5,0,1.43,1.43,3.51,3.51,0.285
+Peruvian,match,declarative-broad-focus,Emilio-ama-la-marcha,6,0,1.44,1.44,4.18,4.18,0.239
+Peruvian,match,declarative-broad-focus,Manuela-vende-el-carro,7,0,1.52,1.52,4.6,4.6,0.218
+Peruvian,match,declarative-broad-focus,Maria-bebe-el-vino,5,0,1.36,1.36,3.69,3.69,0.271
+Peruvian,match,declarative-broad-focus,Mariano-habla-del-tiempo,7,0,1.77,1.77,3.96,3.96,0.253
+Peruvian,match,declarative-broad-focus,Marta-abre-el-regalo,6,0,1.46,1.46,4.11,4.11,0.243
+Peruvian,match,declarative-narrow-focus,Ana-lleva-el-abrigo,5,0,1.32,1.32,3.77,3.77,0.265
+Peruvian,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,5,0,1.33,1.33,3.76,3.76,0.266
+Peruvian,match,declarative-narrow-focus,David-leia-el-libro,4,0,1.35,1.35,2.97,2.97,0.337
+Peruvian,match,declarative-narrow-focus,Emilio-ama-la-marcha,6,0,1.51,1.51,3.98,3.98,0.251
+Peruvian,match,declarative-narrow-focus,Manuela-vende-el-carro,6,0,1.55,1.55,3.88,3.88,0.258
+Peruvian,match,declarative-narrow-focus,Maria-bebe-el-vino,5,0,1.32,1.32,3.8,3.8,0.263
+Peruvian,match,declarative-narrow-focus,Mariano-habla-del-tiempo,5,0,1.6,1.6,3.12,3.12,0.32
+Peruvian,match,declarative-narrow-focus,Marta-abre-el-regalo,4,0,1.37,1.37,2.92,2.92,0.342
+Peruvian,match,interrogative-partial-wh,Cuando-bebia-el-vino,6,0,1.37,1.37,4.39,4.39,0.228
+Peruvian,match,interrogative-partial-wh,Cuando-leia-el-libro,5,0,1.26,1.26,3.97,3.97,0.252
+Peruvian,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,6,0,1.39,1.39,4.33,4.33,0.231
+Peruvian,match,interrogative-partial-wh,Cuando-vendia-el-carro,6,0,1.34,1.34,4.48,4.48,0.223
+Peruvian,match,interrogative-partial-wh,Por-que-abre-el-regalo,6,0,1.53,1.53,3.91,3.91,0.256
+Peruvian,match,interrogative-partial-wh,Por-que-ama-la-navidad,5,0,1.54,1.54,3.25,3.25,0.308
+Peruvian,match,interrogative-partial-wh,Por-que-hablaba-del-agua,5,0,1.5,1.5,3.33,3.33,0.3
+Peruvian,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,6,0,1.29,1.29,4.66,4.66,0.215
+Peruvian,match,interrogative-total-yn,Ana-lleva-el-abrigo,6,0,1.39,1.39,4.33,4.33,0.231
+Peruvian,match,interrogative-total-yn,Daniel-iba-a-Bolivia,5,0,1.36,1.36,3.68,3.68,0.272
+Peruvian,match,interrogative-total-yn,David-leia-el-libro,5,0,1.38,1.38,3.62,3.62,0.276
+Peruvian,match,interrogative-total-yn,Emilio-ama-la-marcha,5,0,1.5,1.5,3.34,3.34,0.299
+Peruvian,match,interrogative-total-yn,Manuela-vende-el-carro,6,0,1.56,1.56,3.83,3.83,0.261
+Peruvian,match,interrogative-total-yn,Maria-bebe-el-vino,6,0,1.36,1.36,4.41,4.41,0.227
+Peruvian,match,interrogative-total-yn,Mariano-habla-del-tiempo,6,0,1.67,1.67,3.6,3.6,0.278
+Peruvian,match,interrogative-total-yn,Marta-abre-el-regalo,8,0,1.53,1.53,5.24,5.24,0.191
+Peruvian,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,6,0,1.78,1.78,3.36,3.36,0.297
+Peruvian,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,3,0,1.35,1.35,2.22,2.22,0.45
+Peruvian,mismatch,declarative-broad-focus,El-nino-oye-el-rio,2,0,1.54,1.54,1.3,1.3,0.771
+Peruvian,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,8,0,1.75,1.75,4.58,4.58,0.218
+Peruvian,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.5,1.5,2.67,2.67,0.374
+Peruvian,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,7,0,1.57,1.57,4.47,4.47,0.224
+Peruvian,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,6,0,1.63,1.63,3.68,3.68,0.272
+Peruvian,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,5,0,1.64,1.64,3.04,3.04,0.329
+Peruvian,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,6,0,1.67,1.67,3.59,3.59,0.279
+Peruvian,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,3,0,1.43,1.43,2.1,2.1,0.477
+Peruvian,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,4,0,1.57,1.57,2.54,2.54,0.393
+Peruvian,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,6,0,1.74,1.74,3.44,3.44,0.291
+Peruvian,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,5,0,1.62,1.62,3.1,3.1,0.323
+Peruvian,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,6,0,1.63,1.63,3.68,3.68,0.272
+Peruvian,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,6,0,1.5,1.5,4.01,4.01,0.249
+Peruvian,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,6,0,1.61,1.61,3.72,3.72,0.269
+Peruvian,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,6,0,1.54,1.54,3.91,3.91,0.256
+Peruvian,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,7,0,1.38,1.38,5.09,5.09,0.197
+Peruvian,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,7,0,1.46,1.46,4.81,4.81,0.208
+Peruvian,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,8,0,1.74,1.74,4.6,4.6,0.217
+Peruvian,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,5,0,1.52,1.52,3.29,3.29,0.304
+Peruvian,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,4,0,1.4,1.4,2.85,2.85,0.35
+Peruvian,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,6,0,1.43,1.43,4.21,4.21,0.238
+Peruvian,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,5,0,1.55,1.55,3.22,3.22,0.311
+Peruvian,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,6,0,1.68,1.68,3.58,3.58,0.279
+Peruvian,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,4,0,1.45,1.45,2.75,2.75,0.363
+Peruvian,mismatch,interrogative-total-yn,El-nino-oye-el-rio,3,0,1.45,1.45,2.07,2.07,0.483
+Peruvian,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,8,0,1.73,1.73,4.63,4.63,0.216
+Peruvian,mismatch,interrogative-total-yn,La-nina-lava-el-plato,5,0,1.43,1.43,3.49,3.49,0.286
+Peruvian,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,6,0,1.58,1.58,3.8,3.8,0.263
+Peruvian,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,7,0,1.63,1.63,4.29,4.29,0.233
+Peruvian,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,5,0,1.6,1.6,3.12,3.12,0.32
+Puerto Rican,match,declarative-broad-focus,Ana-lleva-el-abrigo,7,0,1.05,1.05,6.65,6.65,0.15
+Puerto Rican,match,declarative-broad-focus,Daniel-iba-a-Bolivia,5,0,1.2,1.2,4.18,4.18,0.239
+Puerto Rican,match,declarative-broad-focus,David-leia-el-libro,5,0,1.14,1.14,4.37,4.37,0.229
+Puerto Rican,match,declarative-broad-focus,Emilio-ama-la-marcha,6,0,1.24,1.24,4.83,4.83,0.207
+Puerto Rican,match,declarative-broad-focus,Manuela-vende-el-carro,6,0,1.24,1.24,4.83,4.83,0.207
+Puerto Rican,match,declarative-broad-focus,Maria-bebe-el-vino,4,0,1.13,1.13,3.54,3.54,0.282
+Puerto Rican,match,declarative-broad-focus,Mariano-habla-del-tiempo,6,0,1.29,1.29,4.66,4.66,0.214
+Puerto Rican,match,declarative-broad-focus,Marta-abre-el-regalo,6,0,1.18,1.18,5.1,5.1,0.196
+Puerto Rican,match,declarative-narrow-focus,Ana-lleva-el-abrigo,4,0,1,1,4.01,4.01,0.249
+Puerto Rican,match,declarative-narrow-focus,Daniel-iba-a-Bolivia,4,0,1,1,4.02,4.02,0.249
+Puerto Rican,match,declarative-narrow-focus,David-leia-el-libro,6,0,1.05,1.05,5.7,5.7,0.175
+Puerto Rican,match,declarative-narrow-focus,Emilio-ama-la-marcha,5,0,1.21,1.21,4.12,4.12,0.243
+Puerto Rican,match,declarative-narrow-focus,Manuela-vende-el-carro,3,0,1.22,1.22,2.45,2.45,0.407
+Puerto Rican,match,declarative-narrow-focus,Maria-bebe-el-vino,4,0,1.2,1.2,3.33,3.33,0.3
+Puerto Rican,match,declarative-narrow-focus,Mariano-habla-del-tiempo,4,0,1.31,1.31,3.06,3.06,0.326
+Puerto Rican,match,declarative-narrow-focus,Marta-abre-el-regalo,6,0,1.16,1.16,5.16,5.16,0.194
+Puerto Rican,match,interrogative-partial-wh,Cuando-bebia-el-vino,4,0,1.07,1.07,3.74,3.74,0.267
+Puerto Rican,match,interrogative-partial-wh,Cuando-leia-el-libro,3,0,1.01,1.01,2.97,2.97,0.337
+Puerto Rican,match,interrogative-partial-wh,Cuando-lleva-el-abrigo,6,0,1.11,1.11,5.38,5.38,0.186
+Puerto Rican,match,interrogative-partial-wh,Cuando-vendia-el-carro,5,0,1.15,1.15,4.35,4.35,0.23
+Puerto Rican,match,interrogative-partial-wh,Por-que-abre-el-regalo,5,0,1.15,1.15,4.34,4.34,0.23
+Puerto Rican,match,interrogative-partial-wh,Por-que-ama-la-navidad,3,0,1.17,1.17,2.57,2.57,0.388
+Puerto Rican,match,interrogative-partial-wh,Por-que-hablaba-del-agua,4,0,1.08,1.08,3.71,3.71,0.27
+Puerto Rican,match,interrogative-partial-wh,Por-que-iba-a-Bolivia,2,0,1.02,1.02,1.96,1.96,0.511
+Puerto Rican,match,interrogative-total-yn,Ana-lleva-el-abrigo,5,0,1.04,1.04,4.82,4.82,0.207
+Puerto Rican,match,interrogative-total-yn,Daniel-iba-a-Bolivia,6,0,1.14,1.14,5.28,5.28,0.189
+Puerto Rican,match,interrogative-total-yn,David-leia-el-libro,4,0,0.99,0.99,4.05,4.05,0.247
+Puerto Rican,match,interrogative-total-yn,Emilio-ama-la-marcha,4,0,1.2,1.2,3.33,3.33,0.3
+Puerto Rican,match,interrogative-total-yn,Manuela-vende-el-carro,5,0,1.16,1.16,4.31,4.31,0.232
+Puerto Rican,match,interrogative-total-yn,Maria-bebe-el-vino,6,0,1,1,6.02,6.02,0.166
+Puerto Rican,match,interrogative-total-yn,Mariano-habla-del-tiempo,6,0,1.27,1.27,4.71,4.71,0.212
+Puerto Rican,match,interrogative-total-yn,Marta-abre-el-regalo,6,0,1.15,1.15,5.23,5.23,0.191
+Puerto Rican,mismatch,declarative-broad-focus,El-bebe-comia-muy-bien,5,0,1.19,1.19,4.2,4.2,0.238
+Puerto Rican,mismatch,declarative-broad-focus,El-hombre-mira-la-luna,6,0,1.19,1.19,5.03,5.03,0.199
+Puerto Rican,mismatch,declarative-broad-focus,El-nino-oye-el-rio,2,0,1.14,1.14,1.75,1.75,0.571
+Puerto Rican,mismatch,declarative-broad-focus,La-maestra-vive-en-Paris,5,0,1.21,1.21,4.12,4.12,0.243
+Puerto Rican,mismatch,declarative-broad-focus,La-nina-lava-el-plato,4,0,1.14,1.14,3.5,3.5,0.285
+Puerto Rican,mismatch,declarative-broad-focus,Mi-madre-come-la-fruta,5,0,1.34,1.34,3.72,3.72,0.268
+Puerto Rican,mismatch,declarative-broad-focus,Mi-novio-viene-del-lago,3,0,1.22,1.22,2.47,2.47,0.405
+Puerto Rican,mismatch,declarative-broad-focus,Mi-tia-odia-la-lluvia,5,0,1.23,1.23,4.08,4.08,0.245
+Puerto Rican,mismatch,declarative-narrow-focus,El-bebe-comia-muy-bien,5,0,1.19,1.19,4.21,4.21,0.238
+Puerto Rican,mismatch,declarative-narrow-focus,El-hombre-mira-la-luna,4,0,1.13,1.13,3.55,3.55,0.282
+Puerto Rican,mismatch,declarative-narrow-focus,El-nino-oye-el-rio,3,0,1.11,1.11,2.71,2.71,0.368
+Puerto Rican,mismatch,declarative-narrow-focus,La-maestra-vive-en-Paris,5,0,1.19,1.19,4.2,4.2,0.238
+Puerto Rican,mismatch,declarative-narrow-focus,La-nina-lava-el-plato,5,0,1.14,1.14,4.39,4.39,0.228
+Puerto Rican,mismatch,declarative-narrow-focus,Mi-madre-come-la-fruta,4,0,1.29,1.29,3.1,3.1,0.323
+Puerto Rican,mismatch,declarative-narrow-focus,Mi-novio-viene-del-lago,5,0,1.23,1.23,4.06,4.06,0.247
+Puerto Rican,mismatch,declarative-narrow-focus,Mi-tia-odia-la-lluvia,5,0,1.27,1.27,3.93,3.93,0.254
+Puerto Rican,mismatch,interrogative-partial-wh,Cuando-comia-la-fruta,4,0,1.23,1.23,3.26,3.26,0.307
+Puerto Rican,mismatch,interrogative-partial-wh,Cuando-lavaba-el-plato,5,0,1.22,1.22,4.09,4.09,0.244
+Puerto Rican,mismatch,interrogative-partial-wh,Cuando-miraba-la-luna,4,0,1.1,1.1,3.64,3.64,0.274
+Puerto Rican,mismatch,interrogative-partial-wh,Por-que-desayuna-muy-bien,3,0,1.26,1.26,2.38,2.38,0.42
+Puerto Rican,mismatch,interrogative-partial-wh,Por-que-odiaba-la-lluvia,5,0,1.18,1.18,4.22,4.22,0.237
+Puerto Rican,mismatch,interrogative-partial-wh,Por-que-oia-el-rio,1,0,0.99,0.99,1.01,1.01,0.99
+Puerto Rican,mismatch,interrogative-partial-wh,Por-que-venia-del-lago,3,0,1.13,1.13,2.66,2.66,0.375
+Puerto Rican,mismatch,interrogative-partial-wh,Por-que-vivia-en-Paris,4,0,1.04,1.04,3.86,3.86,0.259
+Puerto Rican,mismatch,interrogative-total-yn,El-bebe-comia-muy-bien,3,0,1.22,1.22,2.46,2.46,0.406
+Puerto Rican,mismatch,interrogative-total-yn,El-hombre-mira-la-luna,6,0,1.22,1.22,4.91,4.91,0.203
+Puerto Rican,mismatch,interrogative-total-yn,El-nino-oye-el-rio,3,0,1.13,1.13,2.67,2.67,0.375
+Puerto Rican,mismatch,interrogative-total-yn,La-maestra-vive-en-Paris,8,0,1.31,1.31,6.09,6.09,0.164
+Puerto Rican,mismatch,interrogative-total-yn,La-nina-lava-el-plato,6,0,1.16,1.16,5.18,5.18,0.193
+Puerto Rican,mismatch,interrogative-total-yn,Mi-madre-come-la-fruta,7,0,1.25,1.25,5.62,5.62,0.178
+Puerto Rican,mismatch,interrogative-total-yn,Mi-novio-viene-del-lago,6,0,1.26,1.26,4.75,4.75,0.21
+Puerto Rican,mismatch,interrogative-total-yn,Mi-tia-odia-la-lluvia,6,0,1.35,1.35,4.45,4.45,0.224

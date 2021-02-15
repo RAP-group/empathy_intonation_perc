@@ -1,26 +1,3 @@
-# -
-
-# Source libs  and helpers ----------------------------------------------------
-
-source(here::here("scripts", "r","01_helpers.R"))
-
-# -----------------------------------------------------------------------------
-
-
-# Load Speech rate data -------------------------------------------------------
-
-sr <- read_csv(here("data", "raw", "speech_rate", "speech_rate_raw.csv")) %>% 
-  separate(
-    col = soundname, 
-    into = c("variety", "condition", "sentence_type", "item"), sep = "_"
-    ) %>%
-  rename(
-    speech_rate = `speechrate (nsyll/dur)`, 
-    articulation_rate = `articulation rate (nsyll / phonationtime)`, 
-    avg_syll_dur = `ASD (speakingtime/nsyll)`
-    ) %>% 
-  mutate(variety = recode(variety, "puertorican" = "Puerto Rican")) %>%  
-  mutate(variety = tools::toTitleCase(variety)) 
 
 sr_desc <- sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
@@ -29,7 +6,6 @@ sr_desc <- sr %>%
   summarize(avg_val = mean(val), med_val = median(val), .groups = "drop") %>% 
   pivot_longer(cols = c("avg_val", "med_val"), names_to = "measure", 
     values_to = "val")
-  #printy::super_split(variety, metric)
 
 sr %>% 
   ggplot() + 
@@ -64,5 +40,3 @@ sr %>%
   coord_cartesian(xlim = c(-2.5, 2.5)) + 
   labs(x = "Speech rate (std)", y = "Spanish variety") + 
   ds4ling::ds4ling_bw_theme(base_family = "Times", base_size = 16)
-
-

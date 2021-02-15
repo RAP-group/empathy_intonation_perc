@@ -1,0 +1,2 @@
+participant,group,en_variety,sp_variety,have_ln,check_pass,check_fails,nonse_correct,nonse_incorrect,real_correct,real_incorrect,n_real,n_nonse,n,lextale_avg,lextale_tra
+jvc198,learner,Southern English,Mexican,no,1,1,29,1,1,59,30,60,90,25.833333333333336,-1
