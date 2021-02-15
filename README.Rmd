@@ -13,3 +13,9 @@ The purpose of this project is to study the production, perception, and processi
 ## Contributor roles
 
 ![](./figs/project_contributors.png)
+
+## Basic organization
+
+```{r, 'proj-structure', comment=NA, echo=F}
+fs::dir_tree(recurse = 1, glob = "*.Rmd|*.md|*.Rproj", invert = T)
+```

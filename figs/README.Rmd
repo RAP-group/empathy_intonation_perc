@@ -2,4 +2,8 @@
 output: github_document
 ---
 
-# Figs
+# figs
+
+```{r, 'figs-structure', comment=NA, echo=F}
+fs::dir_tree(recurse = 0)
+```

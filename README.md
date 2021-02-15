@@ -15,3 +15,31 @@ in questions and statements in L2 Spanish.
 ## Contributor roles
 
 ![](./figs/project_contributors.png)
+
+## Basic organization
+
+    .
+    ├── LICENSE
+    ├── data
+    │   ├── raw
+    │   └── tidy
+    ├── docs
+    │   ├── Brandl et al. Stimuli
+    │   ├── irb
+    │   ├── lit
+    │   ├── manuscript
+    │   ├── pre_reg
+    │   └── templates
+    ├── exp
+    │   ├── empathy_intonation_perc
+    │   ├── empathy_intonation_perc_sp
+    │   └── text_stim_for_audio
+    ├── figs
+    │   ├── project_contributors.pdf
+    │   ├── project_contributors.png
+    │   ├── project_timeline.pdf
+    │   └── project_timeline.png
+    ├── models
+    └── scripts
+        ├── praat
+        └── r

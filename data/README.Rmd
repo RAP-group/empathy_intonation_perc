@@ -2,5 +2,20 @@
 output: github_document
 ---
 
-# Data
+# data
 
+This is the data directory containing raw and tidy data. 
+
+```{r, 'data-structure', comment=NA, echo=F}
+fs::dir_tree(recurse = 1)
+```
+
+The `speech_rate` files (raw and tidy) contain acoustic measurements of the experimental items. 
+The remaining tidy csv's are the following: 
+
+- **complete_2afc_tidy.csv**: combined learners and natives 2afc data
+- **learners_2afc_tidy.csv**: learners 2afc data
+- **learners_all_tasks_tidy.csv**: learners data from all tasks
+- **learners_eq_tidy.csv**: learners empathy quotient data
+- **learners_lextale_tidy.csv**: learners LexTALE data
+- **natives_2afc_tidy.csv**: natives 2afc data
