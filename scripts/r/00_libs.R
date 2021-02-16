@@ -16,5 +16,6 @@ library("ganttrify")
 library("contributoR")
 library("ggbeeswarm")
 library("ggrepel")
+library("patchwork")
 
 # -----------------------------------------------------------------------------

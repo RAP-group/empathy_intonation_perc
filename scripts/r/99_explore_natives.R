@@ -2,7 +2,8 @@
 # descriptives
 
 # n participants
-natives$participant %>% unique() %>% length
+n_participant <- natives$participant %>% unique() %>% length
+n_trials <- natives %>% nrow()
 
 # n by spanish variety
 natives %>% 
@@ -59,8 +60,12 @@ natives %>%
   ggplot(., aes(x = rt_adj)) + 
     geom_histogram(fill = "grey40", color = "black") 
 
+# How many RTs over X?
 sum(natives$rt_adj > 5); sum(natives$rt_adj > 10)
 
+# How many RTs < 0?
+sum(natives$rt_adj < 0)
+sum(natives$rt_adj < 0) / nrow(natives)
 
 
 natives %>% 
@@ -88,15 +93,6 @@ natives %>%
       fun.args = list(mult = 1), pch = 21, fill = "white") + 
     geom_hline(yintercept = nat_d$median_rt$val, lty = 3, color = "darkred") 
 
-
-natives %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
-  ggplot(., aes(x = speaker_variety, y = is_correct)) + 
-    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
-    geom_hline(yintercept = nat_d$mean_cor$val) + 
-    stat_summary(fun.data = mean_se, geom = "pointrange") + 
-    coord_cartesian(ylim = c(0.4, 1))
-
 natives %>% 
   filter(rt_adj <= 5 & rt_adj >= 0, is_correct == 1) %>% 
   ggplot(., aes(x = speaker_variety, y = rt_adj)) + 
@@ -106,11 +102,16 @@ natives %>%
     geom_hline(yintercept = nat_d$median_rt$val, lty = 3, color = "darkred") + 
     coord_cartesian(ylim = c(-0.5, NA))
 
+natives %>% 
+  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
+  ggplot(., aes(x = speaker_variety, y = is_correct)) + 
+    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
+    geom_hline(yintercept = nat_d$mean_cor$val) + 
+    stat_summary(fun.data = mean_se, geom = "pointrange") + 
+    coord_cartesian(ylim = c(0.4, 1))
+
 
 # Error analysis
-n_trials <- natives %>% nrow()
-n_participant <- natives$participant %>% unique() %>% length
-
 
 natives %>% 
   summarize(correct = sum(is_correct), 
@@ -157,14 +158,14 @@ natives %>%
 
 # Keep/reject?
 
-natives %>% 
-  filter(participant == "5ea3b4df5d02233529fce18e") %>% 
+p1_accuracy <- natives %>% 
+  filter(participant == "5edd2b336561d6085ed58841") %>% 
   ggplot(., aes(x = participant, y = is_correct)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange") + 
     coord_cartesian(ylim = c(0.5, 1))
 
-natives %>% 
-  filter(participant == "5ea3b4df5d02233529fce18e") %>% 
+p2_rts <- natives %>% 
+  filter(participant == "5edd2b336561d6085ed58841") %>% 
   ggplot(., aes(x = participant, y = rt_adj)) + 
     geom_jitter(alpha = 0.5, width = 0.2, 
       aes(color = factor(is_correct))) + 
@@ -175,6 +176,7 @@ natives %>%
       labels = c("incorrect", "correct")) + 
     geom_text(aes(x = 1.4, y = 0.1, label = sp_variety), alpha = 0.02)
 
+p1_accuracy + p2_rts
 
 # Reject
 # 5efcbbdd231bde0af2edb847 (accuracy)
