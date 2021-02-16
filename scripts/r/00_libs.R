@@ -15,5 +15,6 @@ library("ggplot2")
 library("ganttrify")
 library("contributoR")
 library("ggbeeswarm")
+library("ggrepel")
 
 # -----------------------------------------------------------------------------
