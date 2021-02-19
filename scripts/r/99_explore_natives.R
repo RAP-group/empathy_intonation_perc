@@ -1,3 +1,9 @@
+# Source libs, helpers, and data ----------------------------------------------
+
+source(here::here("scripts", "r", "07_load_data.R"))
+
+# -----------------------------------------------------------------------------
+
 #
 # descriptives
 #
@@ -96,9 +102,10 @@ natives %>%
 # Adj RTs by speaker variety
 natives %>% 
   filter(rt_adj > 0, rt_adj <= 5) %>% 
-  ggplot(., aes(x = rt_adj)) + 
-    facet_grid(speaker_variety ~ .) + 
-    geom_histogram(bins = 50, fill = "grey40", color = "black")
+  ggplot(., aes(x = rt_adj, y = speaker_variety, 
+    fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+    stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) + 
+    scale_fill_viridis_c(name = "Tail probability", direction = -1)
 
 # Adj RTs by variety
 natives %>% 
@@ -133,14 +140,6 @@ natives %>%
       color = "grey50", alpha = 0.5) + 
     stat_summary(fun.data = mean_se, geom = "ribbon", fill = "darkred", alpha = 0.2) + 
     stat_summary(fun = mean, geom = "line", color = "darkred", size = 1.5) + 
-    coord_cartesian(ylim = c(0, NA))
-
-# Adj RTs by speaker variety of trials
-natives %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
-  ggplot(., aes(x = trial_n, y = rt_adj)) + 
-    facet_grid(speaker_variety ~ .) + 
-    stat_summary(fun = mean, geom = "line") + 
     coord_cartesian(ylim = c(0, NA))
 
 
