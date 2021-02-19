@@ -45,6 +45,7 @@ learners <- dir_ls(path = here("exp", "empathy_intonation_perc", "data"),
     sp_variety = `What variety of Spanish are you most familiar with?*`, 
     have_ln = `Are you proficient in any languages other than English/Spanish (yes/no)?*`, 
     check_pass, check_fails, item = andalusian, 
+    trial_n = trials_2afc_loop.thisN, 
     correct_response:key_resp_2afc_trial.rt
   ) %>% 
   group_by(participant) %>% 
@@ -65,7 +66,8 @@ learners <- dir_ls(path = here("exp", "empathy_intonation_perc", "data"),
   select(
     participant, group, en_variety:check_fails, speaker_variety = the_col,
     condition:correct_response, response = key_resp_2afc_trial.keys,
-    is_correct = key_resp_2afc_trial.corr, rt_raw = key_resp_2afc_trial.rt) %>%
+    is_correct = key_resp_2afc_trial.corr, rt_raw = key_resp_2afc_trial.rt, 
+    trial_n) %>%
   left_join(., 
     read_csv(here("data", "tidy", "speech_rate_tidy.csv")) %>% 
       select(speaker_variety:sentence, sentence_dur), 
@@ -93,6 +95,7 @@ natives <- dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"),
     participant, 
     sp_variety, 
     have_ln = `¿Hablas con fluidez otra lengua (sí/no)?*`, 
+    trial_n = trials_2afc_loop.thisN, 
     correct_response:key_resp_2afc_trial.rt, 
     item = andalusian
   ) %>% 
@@ -113,7 +116,8 @@ natives <- dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"),
   select(participant, group, en_variety, sp_variety:have_ln, 
     check_pass:check_fails, speaker_variety = the_col, condition:sentence,
     correct_response, response = key_resp_2afc_trial.keys, 
-    is_correct = key_resp_2afc_trial.corr, rt_raw = key_resp_2afc_trial.rt) %>% 
+    is_correct = key_resp_2afc_trial.corr, rt_raw = key_resp_2afc_trial.rt, 
+    trial_n) %>% 
   left_join(., 
     read_csv(here("data", "tidy", "speech_rate_tidy.csv")) %>% 
       select(speaker_variety:sentence, sentence_dur), 

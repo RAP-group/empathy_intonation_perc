@@ -17,5 +17,7 @@ library("contributoR")
 library("ggbeeswarm")
 library("ggrepel")
 library("patchwork")
+library("brms")
+library("tidybayes")
 
 # -----------------------------------------------------------------------------

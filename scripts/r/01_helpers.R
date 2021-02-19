@@ -67,4 +67,89 @@ minimal_adj <- function(...) {
   )
 }
 
+# Concert '-' to unicode minus
+unicode_minus <- function(x) {
+  sub('^-', '\U2212', format(x))
+}
+
+# Strip blank space
+strip_blank <- function(x) {
+  sub('[[:space:]]+', '', format(x))
+}
+
 # -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#forest_re <- function(mod, effect, quoted_var) {
+  
+#  ef   <- enquo(effect)
+#  efn  <- enquo(quoted_var)
+
+  # Get draws for each re
+#  re_draws <- 
+#  spread_draws(mod, !!!efn[!!effect,], b_Intercept) %>% 
+#  mutate(b_Intercept = !!!efn + b_Intercept)
+
+#  return(re_draws)
+  # Get draws for pooled effect
+  #re_pooled_effect_draws <- 
+  #spread_draws(mod, b_Intercept) %>% 
+  #mutate(effect = "Pooled Effect")
+
+  # Combine it and clean up
+  #re_forest_data <- 
+  #bind_rows(re_draws, re_pooled_effect_draws) %>% 
+  #ungroup() %>%
+  #mutate(effect = reorder(effect, b_Intercept), 
+  #       effect = relevel(effect, "Pooled Effect", after = Inf))
+
+  # Calculate mean qi intervals for right margin text
+  #re_forest_data_summary <- 
+  #group_by(re_forest_data, effect) %>% 
+  #mean_qi(b_Intercept, .width = 0.95) 
+
+  # Calculate mean qi intervals for pooled effect
+  #re_pooled_summary <- 
+  #group_by(re_forest_data, effect) %>% 
+  #mean_qi(b_Intercept, .width = c(0.5, 0.8, 0.95)) %>% 
+  #filter(effect == "Pooled Effect")
+
+  # Plot it all
+  #p_post <- re_forest_data %>% 
+  #ggplot() + 
+  #aes(x = b_Intercept, y = effect) + 
+  #geom_text(data = 
+  #  mutate_if(re_forest_data_summary, is.numeric, round, 2) %>% 
+  #  mutate_at(c("b_Intercept", ".lower", ".upper"), as.character) %>% 
+  #  mutate_at(c("b_Intercept", ".lower", ".upper"), unicode_minus) %>% 
+  #  mutate_at(c("b_Intercept", ".lower", ".upper"), strip_blank),
+  #          aes(label = glue("{b_Intercept} [{.lower}, {.upper}]"), x = Inf), 
+  #          hjust = "inward", family = "Times") + 
+  #geom_tile(data = re_pooled_summary, aes(width = .lower - .upper),
+  #  alpha = 0.2, height = Inf, fill = "#31688EFF") +
+  #stat_pointinterval(point_fill = "white", shape = 21, .width = c(0.8, 0.95)) +
+  #coord_cartesian(xlim = c(0, 6)) + 
+  #labs(x = expression(italic("beta")), y = NULL) +
+  #minimal_adj() + 
+  #theme(axis.text.y = element_text(hjust = 0))
+
+  #return(p_post)
+#}
+
+#forest_re(native_response_00, "speaker_variety", speaker_variety)
+
+
