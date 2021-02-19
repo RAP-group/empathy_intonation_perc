@@ -20,5 +20,6 @@ sr        <- read_csv(here("data", "tidy", "speech_rate_tidy.csv"))
 learners  <- read_csv(here("data", "tidy", "learners_all_tasks_tidy.csv"))
 natives   <- read_csv(here("data", "tidy", "natives_2afc_tidy.csv"))
 full_2afc <- read_csv(here("data", "tidy", "complete_2afc_tidy.csv"))
+id_remove <- readRDS(here("data", "tidy", "participants_removed_list.Rds"))
 
 # -----------------------------------------------------------------------------
