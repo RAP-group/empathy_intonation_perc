@@ -5,9 +5,10 @@ Open Science Pre-Registration for Empathy project
 
 **Title**: Production, perception, and processing of prosody in second
 language acquisition <!-- The title says "production". Is this because we might analyze the stimuli recordings in the future? or does it need to be changed? -->
+<!--Since empathy is an integral part of the study, should we not mention it in the title-->
 
 **Description**: Specifically, we investigate the role of empathy in the
-development of L2 prosody by analyzing the perception of intonation in
+development of second language (L2) prosody by analyzing the perception of intonation in
 questions and statements in L2 Spanish.
 
 **Contributors**: *to be added via osf.io*
@@ -58,7 +59,7 @@ intonation to resolve temporary lexical ambiguity that can lead to
 confirmatory vs. contrasting interpretations. This research underscores
 the importance of considering individual pragmatic differences when
 examining intonational meaning processing and sentence comprehension.
-Thus, we extend this research to second language acquisition in order to
+Thus, we extend this research to L2 acquisition in order to
 determine if individual differences in pragmatic skills affect the
 development of intonation in L2 processing and sentence comprehension.
 
@@ -69,9 +70,11 @@ by proficiency and intonation type (i.e., Brandl et al., 2020)?
 Hypothesis: Accuracy will increase and processing time will decrease as
 a function of proficiency and intonation type. Yes-no questions will
 present the most difficulty for L2 learners of Spanish.
+<!--Should we specify what other intonation types there are? Maybe adding something like "in comparison with open questions and statements."-->"
 
 Research question 2: Do pragmatic skills modulate the rate of development in
 L2 prosody?  
+<!-- Wouldn't it be better to say empathy instead of pragmatic skills? Especially because the hypothesis only talks about empathy.-->
 Hypothesis: Based on the findings of Esteve-Gilbert et al. (2020), we
 posit that prosodic development will occur sooner and at a faster rate
 in higher empathy individuals. In this operationalization, ‘sooner’
@@ -81,6 +84,7 @@ Research question 3: Does speaker variety affect perception accuracy?
 Hypothesis: Based on tentative findings from native speaker pilot data,
 we hypothesize that overall L2 learners will have most difficulty (lower
 accuracy, slower RTs) with the Cuban speaker.
+<!--Cuban variety?-->
 
 # Design Plan
 
@@ -120,7 +124,7 @@ task consists of 64 trials in which the stimuli presented are randomized
 across speaker variety. Each variety has the same probability of being
 selected on a given trial, such that, on average, a given participant
 will hear each variety approximately 8 times. The 2AFC task will be
-administered online using Psychopy and participants will be recruited
+administered online using PsychoPy and participants will be recruited
 using Prolific. The task takes approximately 5 minutes to complete.
 
 The LexTALE task is a lexical decision experiment in which the
@@ -130,6 +134,7 @@ have to decide if the word they are presented with is real or not using the keyb
 an assessment of the participants' vocabulary size in Spanish, which is
 assumed to be a proxy for Spanish proficiency. The LexTALE task takes
 approximately 5 minutes to complete.
+<!-- We could add a citation for the vocabulary size being a proxy for proficiency-->
 
 Finally, participants will complete the Empathy Quotient (EQ,
 Baron-Cohen & Wheelwright, 2004), a 60-item questionnaire that presents
@@ -179,7 +184,7 @@ Following Brandl et al. (2020), we assume the effect size for perceptual
 learning to be moderate in terms of the criteria set forth for L2
 research by Plonsky et al. (2015?) (Cohen’s D = 0.600, Pearson’s r =
 0.287). Based on this assumption, we estimate that we will need 94
-participants to have and 80% chance of capturing the proficiency effect
+participants to have an 80% chance of capturing the proficiency effect
 with a type II error rate of 5%. Our hypothesis related to empathy as a
 possible mediator of perceptual learning is exploratory and thus we do
 not base our sample size estimate on any parameter estimates related to
@@ -300,6 +305,7 @@ empathy levels may be more attuned to intonational variability.
 Specifically, we hypothesize that the effect of empathy on perceptual
 learning will be additive, thus higher empathy learners may perform
 better on the 2AFC task at lower levels of proficiency.
+<!-- We have not used SLA anywhere before. I would just say L2 acquisition.-->
 
 # Other
 
