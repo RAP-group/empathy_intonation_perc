@@ -4,11 +4,12 @@ Open Science Pre-Registration for Empathy project
 # Registration Metadata
 
 **Title**: Production, perception, and processing of prosody in second
-language acquisition <!-- The title says "production". Is this because we might analyze the stimuli recordings in the future? or does it need to be changed? -->
+language acquisition
+<!-- The title says "production". Is this because we might analyze the stimuli recordings in the future? or does it need to be changed? -->
 <!--Since empathy is an integral part of the study, should we not mention it in the title-->
 
-**Description**: Specifically, we investigate the role of empathy in the
-development of second language (L2) prosody by analyzing the perception of intonation in
+**Description**: Specifically, we look at the role of empathy in the
+development of L2 prosody by analyzing the perception of intonation in
 questions and statements in L2 Spanish.
 
 **Contributors**: *to be added via osf.io*
@@ -27,14 +28,14 @@ questions and statements in L2 Spanish.
 
 The purpose of this project is to study the production, perception, and
 processing of prosody in second language acquisition. This research
-examines the role of individual pragmatic skills in the process of
-learning a new language. Specifically, we focus on the role of empathy in
+looks at the role of individual pragmatic skills in the process of
+learning a new language. Specifically, we look at the role of empathy in
 the development of L2 prosody by analyzing the perception of intonation
 in questions and statements in L2 Spanish.
 
-The objectives of this research are twofold. First, the project intends to
+The objectives of this research are twofold. First, the project intends
 contribute to cumulative science by conceptually replicating the Brandl
-et al. (2020) finding, which demonstrates that perception and processing of L2
+et al. (2020) finding demonstrating that perception and processing of L2
 intonation improves in conjunction with L2 proficiency and as a function
 of intonation type. Second, this research will extend the current
 findings on perceptual development to include pragmatic skills,
@@ -42,11 +43,11 @@ specifically empathy.
 
 This research builds on recent studies looking at the role of individual
 pragmatic skills in language processing and extends them to the field of
-second language acquisition. Concretely, we examine the role of empathy
+second language acquisition. Concretely, we look at the role of empathy
 in the development of L2 prosody by analyzing the perception of
 intonation in questions and statements in L2 Spanish. L2 learners
 gradually acquire Spanish prosody as they gain proficiency in the
-language. The extant literature shows that ‘yes/no’-type questions are
+language. The extant literature shows that ‘yes/no’-type questions
 harder to process and acquire, when compared with simple statements
 (Brandl et al., 2020). Recent research has also shown that empathy
 influences native language processing in how listeners interpret
@@ -59,21 +60,21 @@ intonation to resolve temporary lexical ambiguity that can lead to
 confirmatory vs. contrasting interpretations. This research underscores
 the importance of considering individual pragmatic differences when
 examining intonational meaning processing and sentence comprehension.
-Thus, we extend this research to L2 acquisition in order to
-determine if individual differences in pragmatic skills affect the
+Thus, we extend this research to second language acquisition in order to
+determine if individual differences in pragmatic skill affect the
 development of intonation in L2 processing and sentence comprehension.
 
 ### Hypotheses
 
 Research question 1: Is perceptional development in L2 Spanish modulated
-by proficiency and intonation type (i.e., Brandl et al., 2020)?  
+by proficiency and intonation type (i.e., Brandl et al., 2020).  
 Hypothesis: Accuracy will increase and processing time will decrease as
 a function of proficiency and intonation type. Yes-no questions will
 present the most difficulty for L2 learners of Spanish.
-<!--Should we specify what other intonation types there are? Maybe adding something like "in comparison with open questions and statements."-->"
+<!--Should we specify what other intonation types there are? Maybe adding something like "in comparison with open questions and statements."-->
 
-Research question 2: Do pragmatic skills modulate the rate of development in
-L2 prosody?  
+Research question 2: Do pragmatic skills modulate rate of development in
+L2 prosody?
 <!-- Wouldn't it be better to say empathy instead of pragmatic skills? Especially because the hypothesis only talks about empathy.-->
 Hypothesis: Based on the findings of Esteve-Gilbert et al. (2020), we
 posit that prosodic development will occur sooner and at a faster rate
@@ -83,8 +84,7 @@ refers to lower proficiency levels in a cross-sectional design.
 Research question 3: Does speaker variety affect perception accuracy?  
 Hypothesis: Based on tentative findings from native speaker pilot data,
 we hypothesize that overall L2 learners will have most difficulty (lower
-accuracy, slower RTs) with the Cuban speaker.
-<!--Cuban variety?-->
+accuracy, slower RTs) with the Cuban speaker. <!--Cuban variety?-->
 
 # Design Plan
 
@@ -107,7 +107,7 @@ There is no additional blinding in this study.
 The study consists of three tasks, given in the following order: 2AFC,
 LexTALE, and Empathy quotient.
 
-In the 2AFC task participants will be presented with an audio file containing
+In the 2AFC task participants will be presented an audio file containing
 a statement (declarative: broad focus or narrow focus) or a question
 (yes-no or wh-). Their task is to determine, as quickly and as
 accurately as possible, if the utterance they hear is a question or a
@@ -118,27 +118,27 @@ question”). The stimuli consist of 64 critical items, 16 of each
 sentence type. To generate the stimuli, we recorded native Spanish
 speakers of 8 different varieties (Cuban, Castilian, Andalusian,
 Puertorican, Chilean, Argentinean, Mexican, and Peruvian). The 8 native
-speakers all produced the same 64 critical items. We segmented all the
+speakers all produced the same 64 critical items. We segmented the all
 utterances using Praat and normalized them for peak intensity. The 2AFC
 task consists of 64 trials in which the stimuli presented are randomized
 across speaker variety. Each variety has the same probability of being
 selected on a given trial, such that, on average, a given participant
 will hear each variety approximately 8 times. The 2AFC task will be
-administered online using PsychoPy and participants will be recruited
-using Prolific. The task takes approximately 5 minutes to complete.
+administered online using Psychopy and participants will be recruited
+using Prolific. The task takes approximate 5 minutes to complete.
 
-The LexTALE task is a lexical decision experiment in which the
-participants are presented with real and nonsense words (in Spanish). They
-have to decide if the word they are presented with is real or not using the keyboard
+The LexTALE task is lexical decision experiment in which the
+participants are presented a real and nonsense words (in Spanish). They
+decide if the word they are presented in real or not using the keyboard
 (‘1’ for real, ‘0’ for fake). The purpose of the LexTALE task is to get
-an assessment of the participants' vocabulary size in Spanish, which is
+an assessment of the participants vocabulary size in Spanish, which is
 assumed to be a proxy for Spanish proficiency. The LexTALE task takes
 approximately 5 minutes to complete.
 <!-- We could add a citation for the vocabulary size being a proxy for proficiency-->
 
 Finally, participants will complete the Empathy Quotient (EQ,
 Baron-Cohen & Wheelwright, 2004), a 60-item questionnaire that presents
-likert-type items ranging from ‘strongly agree’ to ‘strongly disagree’.
+lykert-type items ranging from ‘strongly agree’ to ‘strongly disagree’.
 The EQ is scored to produce a single value indicating an individual’s
 level of empathy. The EQ takes approximately 7 minutes to complete.
 
@@ -160,7 +160,7 @@ We have data from 100 native Spanish speakers.
 We piloted the 2AFC experiment on 100 native Spanish speakers to assure
 critical item quality and assess the difficulty of the task.
 
-### Data collection procedures\*
+### Data collection procedures
 
 We will recruit 250 human participants for the remainder of this study.
 Participants will be adult native speakers of English with varied levels
@@ -170,7 +170,7 @@ $9.52 per hour for their time. We estimate the task will take
 approximately 17 minutes to complete, thus each participant will receive
 $2.70 for completing all 3 tasks.
 
-### Sample size\*
+### Sample size
 
 All participants will be native speakers of American English who range
 from functionally monolingual to highly proficient in Spanish
@@ -184,8 +184,8 @@ Following Brandl et al. (2020), we assume the effect size for perceptual
 learning to be moderate in terms of the criteria set forth for L2
 research by Plonsky et al. (2015?) (Cohen’s D = 0.600, Pearson’s r =
 0.287). Based on this assumption, we estimate that we will need 94
-participants to have an 80% chance of capturing the proficiency effect
-with a type II error rate of 5%. Our hypothesis related to empathy as a
+participants to have and 80% chance of capturing the proficiency effect
+with a type II error rate of 5%. Our hypotheses related to empathy as a
 possible mediator of perceptual learning is exploratory and thus we do
 not base our sample size estimate on any parameter estimates related to
 this effect. That being said, we believe the aforementioned exploratory
@@ -223,7 +223,7 @@ include declarative (broad focus, narrow focus) and interrogative
 stimuli are audio recordings spoken by native Spanish speakers of
 different varieties.
 
-### Measured variables\*
+### Measured variables
 
 For the 2AFC task there are two measured variables: response and
 response time. The first outcome variable is participants’ responses to
@@ -247,7 +247,7 @@ NA
 
 # Analysis Plan
 
-### Statistical models\*
+### Statistical models
 
 We utilize Bayesian data analysis for statistical inferences. For the
 response data we will fit a hierarchical logistic regression model in
