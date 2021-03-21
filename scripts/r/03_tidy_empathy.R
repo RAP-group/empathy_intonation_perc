@@ -27,16 +27,39 @@ source(here::here("scripts", "r", "01_helpers.R"))
 
 # Tidy empathy ----------------------------------------------------------------
 
+# Get path to learner data
+path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
+
+# Vector of .csv's to remove ("returned")
+returned <- c(
+  "5fc8232ac3b2ae180fa1a39b_empathy_intonation_perc_2021-03-21_10h28.18.777.csv", # incomplete/slow
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-21_10h34.31.784.csv", 
+  "5dcd91a0b7ebf606d16c971e_empathy_intonation_perc_2021-03-20_22h15.44.775.csv", # attention check
+  "5fc98a7db2180e4b23c6f5be_empathy_intonation_perc_2021-03-20_20h14.49.809.csv", # all 1's
+  "5dd2441687c1fd266f9457f6_empathy_intonation_perc_2021-03-20_21h50.59.284.csv", 
+  "58cbd0a55d42920001414dd3_empathy_intonation_perc_2021-03-20_21h06.21.726.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h18.06.182.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h54.32.690.csv"
+  )
+
+# Combine path and file names to filter them out
+path_returned <- paste0(path, returned)
+
 dir_ls(
   path = here("exp", "empathy_intonation_perc", "data"), 
   regexp = "\\.csv$"
   ) %>%
-  map_dfr(read_csv, .id = "source") %>% 
+  as_tibble() %>% 
+  filter(!(value %in% path_returned)) %>% 
+  pull() %>% 
+  map_dfr(read_csv, .id = "source", 
+    col_types = cols(.default = "?", key_resp_ac1.keys = "c")) %>% 
   select(
     participant, 
-    en_variety = `What variety of English do you speak?*`, 
-    sp_variety = `What variety of Spanish are you most familiar with?*`, 
-    have_ln = `Are you proficient in any languages other than English/Spanish (yes/no)?*`, 
+    eng_variety = `What part of the US are you from?*`, 
+    spn_variety = `I am most familiar with Spanish from...*`, 
+    have_ln = `Are you proficient in any languages other than English/Spanish?*`, 
+    aoa = `At what age did you begin learning Spanish?*`, 
     check_pass, check_fails, 
     slider_eq_trial.response:is_disagree_score
   ) %>% 
@@ -55,7 +78,7 @@ dir_ls(
       TRUE ~ 0
       )
     ) %>% 
-  group_by(participant, group, en_variety, sp_variety, 
+  group_by(participant, group, eng_variety, spn_variety, 
            have_ln, check_pass, check_fails) %>% 
   summarize(eq_score = sum(score), .groups = "drop") %>% 
   write_csv(here("data", "tidy", "learners_eq_tidy.csv"))

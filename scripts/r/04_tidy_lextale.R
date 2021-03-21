@@ -29,20 +29,46 @@ source(here::here("scripts", "r","01_helpers.R"))
 # It is calculated as follows:
 # ((n_corr_real / n_real_words * 100) + (n_corr_nonse / n_nonse_words * 100)) / 2
 
+
+
+
 # Tidy lexTALE ----------------------------------------------------------------
+
+# Get path to learner data
+path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
+
+# Vector of .csv's to remove ("returned")
+returned <- c(
+  "5fc8232ac3b2ae180fa1a39b_empathy_intonation_perc_2021-03-21_10h28.18.777.csv", # incomplete/slow
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-21_10h34.31.784.csv", 
+  "5dcd91a0b7ebf606d16c971e_empathy_intonation_perc_2021-03-20_22h15.44.775.csv", # attention check
+  "5fc98a7db2180e4b23c6f5be_empathy_intonation_perc_2021-03-20_20h14.49.809.csv", # all 1's
+  "5dd2441687c1fd266f9457f6_empathy_intonation_perc_2021-03-20_21h50.59.284.csv", 
+  "58cbd0a55d42920001414dd3_empathy_intonation_perc_2021-03-20_21h06.21.726.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h18.06.182.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h54.32.690.csv"
+  )
+
+# Combine path and file names to filter them out
+path_returned <- paste0(path, returned)
 
 dir_ls(
   path = here("exp", "empathy_intonation_perc", "data"), 
   regexp = "\\.csv$"
-  ) %>%
-  map_dfr(read_csv, .id = "source") %>% 
+  ) %>% 
+  as_tibble() %>% 
+  filter(!(value %in% path_returned)) %>% 
+  pull() %>% 
+  map_dfr(read_csv, .id = "source", 
+    col_types = cols(.default = "?", `key_resp_ac1.keys` = "c")) %>% 
   select(
     participant, 
-    en_variety = `What variety of English do you speak?*`, 
-    sp_variety = `What variety of Spanish are you most familiar with?*`, 
-    have_ln = `Are you proficient in any languages other than English/Spanish (yes/no)?*`, 
+    eng_variety = `What part of the US are you from?*`, 
+    spn_variety = `I am most familiar with Spanish from...*`, 
+    have_ln = `Are you proficient in any languages other than English/Spanish?*`, 
+    aoa = `At what age did you begin learning Spanish?*`, 
     check_pass, check_fails, stim, word, 
-    key_resp_lextale_trial.keys:trials_lextale_loop.ran, correct_response
+    key_resp_lextale_trial.keys:trials_lextale_loop.ran
   ) %>% 
   group_by(participant) %>% 
   mutate(check_pass = sum(check_pass, na.rm = T), 
@@ -50,23 +76,29 @@ dir_ls(
   filter(!is.na(key_resp_lextale_trial.keys)) %>% 
   mutate(
     group = "learner", 
-    is_real = if_else(correct_response == 1, "real", "nonse"), 
+    response = `key_resp_lextale_trial.keys`, 
     is_correct = key_resp_lextale_trial.corr, 
     is_incorrect = if_else(is_correct == 0, 1, 0), 
-    type = case_when(
-      is_real == "real"  & is_correct == 1 ~ "real_correct", 
-      is_real == "real"  & is_correct == 0 ~ "real_incorrect", 
-      is_real == "nonse" & is_correct == 1 ~ "nonse_correct", 
-      is_real == "nonse" & is_correct == 0 ~ "nonse_incorrect" 
-        )
+    is_real = case_when(
+      response == 1 & is_correct == 1 ~ "real", 
+      response == 1 & is_correct == 0 ~ "nonse", 
+      response == 0 & is_correct == 1 ~ "nonse", 
+      response == 0 & is_correct == 0 ~ "real"),  
+    real_correct    = if_else(is_real == "real"  & is_correct == 1, 1, 0), 
+    real_incorrect  = if_else(is_real == "real"  & is_correct == 0, 1, 0), 
+    nonse_correct   = if_else(is_real == "nonse" & is_correct == 1, 1, 0), 
+    nonse_incorrect = if_else(is_real == "nonse" & is_correct == 0, 1, 0)
     ) %>% 
-  group_by(participant, group, en_variety, sp_variety, have_ln, 
-           check_pass, check_fails, type) %>% 
-  summarize(totals = n(), .groups = "drop") %>% 
-  pivot_wider(names_from = "type", values_from = "totals") %>% 
+  group_by(participant, group, eng_variety, spn_variety, have_ln, 
+           check_pass, check_fails) %>% 
+  summarize(totals = n(), 
+    real_correct = sum(real_correct), 
+    real_incorrect = sum(real_incorrect), 
+    nonse_correct = sum(nonse_correct), 
+    nonse_incorrect = sum(nonse_incorrect), .groups = "drop") %>% 
   mutate(
-    n_real = nonse_correct + nonse_incorrect, 
-    n_nonse = real_correct + real_incorrect, 
+    n_real = real_correct + real_incorrect, 
+    n_nonse = nonse_correct + nonse_incorrect, 
     n = n_real + n_nonse, 
     lextale_avg = score_lextale(
       n_real = n_real, 
