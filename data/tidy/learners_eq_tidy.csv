@@ -1,2 +1,32 @@
-participant,group,en_variety,sp_variety,have_ln,check_pass,check_fails,eq_score
-jvc198,learner,Southern English,Mexican,no,1,1,18
+participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_score
+558aab19fdf99b65685f0142,learner,Midwest,I am not familiar with Spanish,no,1,0,65
+55ce148b34e9060012e56279,learner,Northeast,I am not familiar with Spanish,no,1,0,31
+5658000ca9872d0011e1ba26,learner,Midwest,I am not familiar with Spanish,no,1,0,52
+5727aecae386b9000f4000cd,learner,South,I am not familiar with Spanish,no,1,0,36
+57901207c9abeb0001af353e,learner,Midwest,I am not familiar with Spanish,no,1,0,67
+5a2e19cca3a512000195866a,learner,Midwest,United States,no,1,0,18
+5adfbd52f6b58c0001fa8f3c,learner,South,I am not familiar with Spanish,no,1,0,58
+5aea962d0ef2f20001858c9c,learner,West coast,I am not familiar with Spanish,no,1,0,24
+5bc5356e65cfb8000154bd82,learner,Northeast,I am not familiar with Spanish,no,1,0,26
+5d184b040a274600013f7107,learner,West coast,United States,no,1,0,53
+5d453e8723a5bb0001492546,learner,South,Puerto Rico,no,1,0,24
+5d4613a2da9cb60001aa4948,learner,Midwest,United States,no,1,0,25
+5dcc5f2545b8f98fd44ab4d7,learner,Northeast,United States,no,1,0,42
+5dd32e9deab0423455e0358f,learner,South,United States,no,1,0,13
+5e1a7114a90da52e206de7ea,learner,West coast,I am not familiar with Spanish,no,1,0,38
+5e2f131d0473500224f75035,learner,Midwest,I am not familiar with Spanish,no,1,0,40
+5e3dff6b8714b707b9a258b0,learner,West coast,United States,yes,1,0,31
+5e5e11aed2420e129dc155ce,learner,Midwest,United States,no,1,0,45
+5e85088b3f06400f3f75e21f,learner,South,I am not familiar with Spanish,no,1,0,21
+5e92a1a4fc57e20f92eef47f,learner,Northeast,I am not familiar with Spanish,no,1,0,50
+5ed6c9613e5fc912b310c00c,learner,East coast,I am not familiar with Spanish,no,1,0,12
+5f3fecd2bc9bac0b4ca93d30,learner,Midwest,Honduras,no,1,0,38
+5fc8232ac3b2ae180fa1a39b,learner,West coast,United States,no,1,1,41
+5fcf286268f4c722183af975,learner,South,Mexico,no,1,0,23
+5fecd5fa7e067ae6bd9cc8d2,learner,South,I am not familiar with Spanish,no,1,0,33
+5feef07e0ad48b201b5ad5fe,learner,Northeast,I am not familiar with Spanish,no,1,0,28
+600e9f3d9b955475336971bb,learner,South,I am not familiar with Spanish,no,1,0,24
+601228de8f04be234171ca8f,learner,Northeast,Mexico,no,1,0,38
+603d631cffe72fc0ff456cc2,learner,Northeast,United States,yes,1,0,43
+60485c6bfddf0e195cb18b62,learner,South,I am not familiar with Spanish,no,1,0,14
+6055710aefbed49cbc6c872b,learner,West coast,I am not familiar with Spanish,no,1,0,15
