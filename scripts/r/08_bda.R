@@ -135,4 +135,6 @@ native_rt_01 <- brm(
 pp_check(native_response_01, nsamples = 200)
 pp_check(native_rt_01, nsamples = 200)
 
+tab_model(native_response_01)
+
 # -----------------------------------------------------------------------------

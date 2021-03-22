@@ -32,6 +32,15 @@ path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
 
 # Vector of .csv's to remove ("returned")
 returned <- c(
+  "60514fe20a8ea24a26a96e85_empathy_intonation_perc_2021-03-22_00h58.41.495.csv", # incomplete
+  "5f70ecb8b8137d701eb29f26_empathy_intonation_perc_2021-03-22_02h08.33.943.csv", # incomplete
+  "5f70ecb8b8137d701eb29f26_empathy_intonation_perc_2021-03-22_02h03.33.854.csv", # incomplete
+  "5e0e1b8800a6bf000a694f79_empathy_intonation_perc_2021-03-22_08h02.40.720.csv", # incomplete
+  "5dd28beafce6062a4f5221b3_empathy_intonation_perc_2021-03-22_05h23.46.880.csv", # incomplete
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-22_03h48.00.848.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-22_03h47.57.700.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-22_00h48.40.258.csv", 
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-21_23h39.09.387.csv", 
   "60482cefb198f41385293a2d_empathy_intonation_perc_2021-03-21_21h39.24.588.csv", # incomplete
   "5fc8232ac3b2ae180fa1a39b_empathy_intonation_perc_2021-03-21_10h28.18.777.csv", # incomplete/slow
   "PARTICIPANT_empathy_intonation_perc2_2021-03-21_10h34.31.784.csv", 

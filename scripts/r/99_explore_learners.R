@@ -359,13 +359,14 @@ learners %>%
 #
 
 learners %>% 
-  ggplot(., aes(x = eq_score, y = lextale_tra)) + 
-    geom_point()
+  ggplot(., aes(y = eq_score, x = lextale_tra)) + 
+    geom_point() + 
+    geom_smooth(method = lm)
 
 learners %>% 
-  ggplot(., aes(x = eq_score, y = lextale_avg)) + 
-    geom_point()
-
+  ggplot(., aes(y = eq_score, x = lextale_avg)) + 
+    geom_point() + 
+    geom_smooth(method = lm)
 
 
 
