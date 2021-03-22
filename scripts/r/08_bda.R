@@ -110,13 +110,12 @@ native_response_01 <- brm(
     (1 | sentence), 
   data = natives, 
   prior = nat_priors, 
-  warmup = 2000, iter = 8000, chains = 6, 
+  warmup = 1000, iter = 2000, chains = 4, 
   family = "bernoulli", 
   cores = parallel::detectCores(), 
   control = list(adapt_delta = 0.99), 
   file = here("models", "native_response_01")
 )
-
 
 native_rt_01 <- brm(
   formula = rt_adj ~ 1 + 
@@ -126,7 +125,7 @@ native_rt_01 <- brm(
     (1 | sentence), 
   data = natives %>% filter(rt_adj > 0, is_correct == 1), 
   prior = rt_priors, 
-  warmup = 2000, iter = 8000, chains = 6, 
+  warmup = 1000, iter = 2000, chains = 4, 
   family = lognormal(), 
   cores = parallel::detectCores(), 
   control = list(adapt_delta = 0.99, max_treedepth = 15), 
