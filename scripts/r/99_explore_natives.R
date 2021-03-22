@@ -14,9 +14,9 @@ n_trials <- natives %>% nrow()
 
 # n participants by spanish variety
 natives %>% 
-  group_by(sp_variety) %>%
+  group_by(spn_variety) %>%
   summarize(., totals = n_distinct(participant)) %>% 
-  add_row(sp_variety = "total", totals = sum(.$totals))
+  add_row(spn_variety = "total", totals = sum(.$totals))
 
 # Test randomization of stim
 natives %>% 
@@ -39,12 +39,12 @@ natives %>%
 
 # Test randomization of stim across varieties
 natives %>% 
-  group_by(participant, sp_variety, speaker_variety) %>% 
+  group_by(participant, spn_variety, speaker_variety) %>% 
   summarize(
     total_trials = max(seq_along(speaker_variety)),  
     total_correct = sum(is_correct), 
     errors = total_trials - total_correct, .groups = "drop") %>% 
-  ggplot(., aes(x = sp_variety, y = total_trials, color = speaker_variety)) + 
+  ggplot(., aes(x = spn_variety, y = total_trials, color = speaker_variety)) + 
     geom_hline(yintercept = 8, size = 3, color = "white") + 
     stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), 
       geom = "pointrange", position = position_dodge(0.5)) + 
@@ -221,23 +221,23 @@ natives %>%
 # N errors by speaker variety
 natives %>% 
   filter(is_correct == 0) %>% 
-  group_by(sp_variety, speaker_variety) %>% 
+  group_by(spn_variety, speaker_variety) %>% 
   summarize(errors = n(), .groups = "drop") %>%
   mutate(speaker_variety = fct_reorder(speaker_variety, errors, max)) %>% 
   ggplot(., aes(x = speaker_variety, y = errors)) + 
-    facet_grid(. ~ sp_variety) + 
+    facet_grid(. ~ spn_variety) + 
     geom_bar(stat = "identity", color = "black") + 
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 # Error rate by listener variety and speaker variety
 natives %>% 
-  group_by(participant, sp_variety, speaker_variety) %>% 
+  group_by(participant, spn_variety, speaker_variety) %>% 
   summarize(
     total_trials = max(seq_along(speaker_variety)),  
     total_correct = sum(is_correct), 
     errors = total_trials - total_correct, .groups = "drop") %>% 
   mutate(speaker_variety = fct_reorder(speaker_variety, errors, max)) %>% 
-  ggplot(., aes(x = sp_variety, y = errors, color = speaker_variety)) + 
+  ggplot(., aes(x = spn_variety, y = errors, color = speaker_variety)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange", 
       position = position_dodge(0.5)) + 
     scale_color_viridis_d(name = "Speaker variety") + 
@@ -275,7 +275,7 @@ p2_rts <- natives %>%
     stat_summary(fun.data = mean_se, geom = "pointrange") + 
     scale_color_brewer(name = NULL, palette = "Set1", 
       labels = c("incorrect", "correct")) + 
-    geom_text(aes(x = 1.4, y = 0.1, label = sp_variety), alpha = 0.02)
+    geom_text(aes(x = 1.4, y = 0.1, label = spn_variety), alpha = 0.02)
 
 p1_accuracy + p2_rts
 

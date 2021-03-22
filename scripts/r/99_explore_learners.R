@@ -303,19 +303,23 @@ learners %>%
 
 
 learners %>% 
+  distinct(participant, lextale_avg, lextale_tra) %>% 
   summarize(meanlextale = mean(lextale_avg), sdlextale = sd(lextale_avg), 
     minlextale = min(lextale_avg), maxlextale = max(lextale_avg))
 
 learners %>% 
+  distinct(participant, lextale_avg, lextale_tra) %>% 
   summarize(meanlextale = mean(lextale_tra), sdlextale = sd(lextale_tra), 
     minlextale = min(lextale_tra), maxlextale = max(lextale_tra))
 
 
 learners %>% 
+  distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_avg)) + 
     geom_histogram(fill = "grey", color = "black", binwidth = 2)
 
 learners %>% 
+  distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_tra)) + 
     geom_histogram(fill = "grey", color = "black", binwidth = 2)
 
@@ -370,13 +374,13 @@ learners %>%
 # Keep/reject?
 
 p1_accuracy <- learners %>% 
-  filter(participant == "5e85088b3f06400f3f75e21f") %>% 
+  filter(participant == "5f22bdb732432502a2615f3f") %>% 
   ggplot(., aes(x = participant, y = is_correct)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange") + 
     coord_cartesian(ylim = c(0.25, 1))
 
 p2_rts <- learners %>% 
-  filter(participant == "5e85088b3f06400f3f75e21f") %>% 
+  filter(participant == "5f22bdb732432502a2615f3f") %>% 
   ggplot(., aes(x = participant, y = rt_adj)) + 
     geom_jitter(alpha = 0.5, width = 0.2, 
       aes(color = factor(is_correct))) + 
