@@ -23,6 +23,7 @@ source(here::here("scripts", "r", "01_helpers.R"))
 # Participants to remove
 id_remove <- tribble(
   ~"participant",             ~"group",   ~"reason", 
+   "5dd55364dcec8750a2efc32b", "learners", "no_code", 
    "5fc8232ac3b2ae180fa1a39b", "learners", "incomplete/slow", 
    "5dcd91a0b7ebf606d16c971e", "learners", "attention_check", 
    "5fc98a7db2180e4b23c6f5be", "learners", "low_accuracy", 

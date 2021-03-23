@@ -71,7 +71,7 @@ nat_d <- learners %>%
 # Dist. of RTs
 learners %>% 
   ggplot(., aes(x = rt_adj)) + 
-    geom_histogram(fill = "grey40", color = "black") 
+    geom_histogram(fill = "grey40", color = "black", binwidth = 0.15) 
 
 # How many RTs over X seconds?
 sum(learners$rt_adj > 5); sum(learners$rt_adj > 10)
@@ -154,7 +154,7 @@ learners %>%
   summarize(mean_cor = mean(is_correct)) %>% 
   arrange(desc(mean_cor)) %>% 
   ggplot(., aes(mean_cor)) + 
-    geom_histogram(binwidth = 0.015, fill = "grey40", color = "black")
+    geom_histogram(binwidth = 0.05, fill = "grey40", color = "black")
 
 # % correct by speaker variety
 learners %>% 
@@ -248,7 +248,7 @@ learners %>%
 
 learners %>% 
   ggplot(., aes(x = eq_score)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 2)
+    geom_histogram(fill = "grey", color = "black", binwidth = 5)
 
 learners %>% 
   filter(rt_adj <= 5) %>% 
@@ -268,7 +268,7 @@ learners %>%
   ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"))
+    geom_smooth(method = "glm", se = F, method.args = list(family = "binomial"))
 
 learners %>% 
   filter(rt_adj <= 5, is_correct == 1) %>% 
@@ -280,7 +280,7 @@ learners %>%
   filter(rt_adj <= 5, is_correct == 1) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
-    geom_point() + 
+    geom_point(alpha = 0.5) + 
     geom_smooth(method = "lm")
 
 learners %>% 
@@ -291,10 +291,10 @@ learners %>%
 
 learners %>% 
   filter(rt_adj <= 5, is_correct == 1) %>% 
-  ggplot(., aes(x = eq_score, y = rt_adj, color = sentence_type)) + 
+  ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
-    geom_smooth(method = "lm")
+    geom_smooth(method = "lm", se = F, aes(color = sentence_type))
 
 
 #
@@ -316,12 +316,12 @@ learners %>%
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_avg)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 2)
+    geom_histogram(fill = "grey", color = "black", binwidth = 3)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_tra)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 2)
+    geom_histogram(fill = "grey", color = "black", binwidth = 3)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
@@ -339,19 +339,19 @@ learners %>%
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct)) + 
     facet_grid(. ~ speaker_variety) + 
-    geom_point() + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"))
+    geom_jitter(alpha = 0.05, width = 0.4, height = 0.01, pch = 21) + 
+    geom_smooth(method = "glm", method.args = list(family = "binomial")) 
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct, color = sentence_type)) + 
-    geom_point() + 
+    geom_jitter(alpha = 0.1, height = 0.01, width = 0.5, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial"))
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct, color = sentence_type)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"))
+    geom_smooth(method = "glm", se = F, method.args = list(family = "binomial"))
 
 
 #
@@ -375,13 +375,15 @@ learners %>%
 # Keep/reject?
 
 p1_accuracy <- learners %>% 
-  filter(participant == "5f22bdb732432502a2615f3f") %>% 
+  filter(participant == "5f6bc8e8a9a9b4134c8719b4") %>% 
   ggplot(., aes(x = participant, y = is_correct)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange") + 
+    geom_text(aes(label = lextale_tra, x = 1.4, y = 0.5)) + 
+    geom_text(aes(label = eq_score, x = 0.6, y = 0.5)) + 
     coord_cartesian(ylim = c(0.25, 1))
 
 p2_rts <- learners %>% 
-  filter(participant == "5f22bdb732432502a2615f3f") %>% 
+  filter(participant == "5f6bc8e8a9a9b4134c8719b4") %>% 
   ggplot(., aes(x = participant, y = rt_adj)) + 
     geom_jitter(alpha = 0.5, width = 0.2, 
       aes(color = factor(is_correct))) + 
@@ -402,6 +404,13 @@ learners %>%
 
 
 # Rejected
+# 5dd55364dcec8750a2efc32b (no code)
 # 5fc8232ac3b2ae180fa1a39b (took a few vacations)
 # 5fc98a7db2180e4b23c6f5be (all 1's on 2afc)
 # 5dcd91a0b7ebf606d16c971e (failed attention check, finished in 9min)
+
+
+# Checked for AC, but ok
+# "5f9710e93c0e4a07c48e98d9" 
+# "5ff1e7e39f4b9e67a53f893a" 
+# "6021d935ae778527962c9fd3"
