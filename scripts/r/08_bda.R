@@ -28,7 +28,7 @@ native_ppred_response_00 <- brm(
     (1 | participant ) + 
     (1 | speaker_variety/sentence_type) + 
     (1 | sentence_type) + 
-    (1 | sentence), 
+    (1 | item), 
   data = natives, 
   prior = nat_priors, 
   sample_prior = "only",
@@ -42,7 +42,7 @@ ppred_response_samples <- posterior_samples(native_ppred_response_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
-    sentence_sd = sd_sentence__Intercept, 
+    item_sd = sd_item__Intercept, 
     sentence_type_sd = sd_sentence_type__Intercept, 
     speaker_variety_sd = sd_speaker_variety__Intercept, 
     speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
@@ -67,7 +67,7 @@ native_ppred_rt_00 <- brm(
     (1 | participant ) + 
     (1 | speaker_variety/sentence_type) + 
     (1 | sentence_type) + 
-    (1 | sentence), 
+    (1 | item), 
   data = natives %>% filter(rt_adj > 0, is_correct == 1), 
   prior = rt_priors, 
   sample_prior = "only",
@@ -81,7 +81,7 @@ ppred_rt_samples <- posterior_samples(native_ppred_rt_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
-    sentence_sd = sd_sentence__Intercept, 
+    item_sd = sd_item__Intercept, 
     sentence_type_sd = sd_sentence_type__Intercept, 
     speaker_variety_sd = sd_speaker_variety__Intercept, 
     speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
@@ -107,7 +107,7 @@ native_response_01 <- brm(
     (1 | participant ) + 
     (1 | speaker_variety/sentence_type) + 
     (1 | sentence_type) + 
-    (1 | sentence), 
+    (1 | item), 
   data = natives, 
   prior = nat_priors, 
   warmup = 1000, iter = 2000, chains = 4, 
@@ -122,7 +122,7 @@ native_rt_01 <- brm(
     (1 | participant ) + 
     (1 | speaker_variety/sentence_type) + 
     (1 | sentence_type) + 
-    (1 | sentence), 
+    (1 | item), 
   data = natives %>% filter(rt_adj > 0, is_correct == 1), 
   prior = rt_priors, 
   warmup = 1000, iter = 2000, chains = 4, 
@@ -134,7 +134,9 @@ native_rt_01 <- brm(
 
 pp_check(native_response_01, nsamples = 200)
 pp_check(native_rt_01, nsamples = 200)
-
-tab_model(native_response_01)
+# sjPlot::tab_model(native_response_01)
+# sjPlot::tab_model(native_rt_01)
 
 # -----------------------------------------------------------------------------
+
+natives$sentence %>% unique

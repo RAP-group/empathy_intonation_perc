@@ -1,0 +1,8 @@
+instructions_2afc_loop.thisRepN,instructions_2afc_loop.thisTrialN,instructions_2afc_loop.thisN,instructions_2afc_loop.thisIndex,instructions_2afc_loop.ran,instructions_text,continue_text,participant,study_id,session,I am most familiar with Spanish from...*,What part of the US are you from?*,At what age did you begin learning Spanish?*,Are you proficient in any languages other than English/Spanish?*,date,expName,psychopyVersion,OS,frameRate
+0,0,0,0,1,"In the following task you are going to hear a series of utterances. 
+
+  You will decide if the utterances sound like questions or not using your keyboard.",(press the spacebar to continue),5eb46ccc0c06142c0faae377,6057c54e64b0b4e5c128b4f9,6058c6beb38486c3a1511bd3,United States,Northeast,13 or older,no,2021-03-22_12h33.41.507,empathy_intonation_perc,2020.2.10,Win32,60
+0,1,1,1,1,"If you believe the utterance is a question, type '1' (for 'yes') and if you do not 
+  believe it is a question type '0' (for 'no').
+
+  Let's practice a bit...",(press the spacebar to continue),5eb46ccc0c06142c0faae377,6057c54e64b0b4e5c128b4f9,6058c6beb38486c3a1511bd3,United States,Northeast,13 or older,no,2021-03-22_12h33.41.507,empathy_intonation_perc,2020.2.10,Win32,60
