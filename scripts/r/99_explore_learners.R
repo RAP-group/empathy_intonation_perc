@@ -50,8 +50,11 @@ learners %>%
       geom = "pointrange", position = position_dodge(0.5)) + 
     coord_cartesian(ylim = c(0, 20))
 
+# n learners removed
+id_remove$learners %>% nrow()
+
 # n participants removed
-(id_remove$learners %>% nrow()) + (id_remove$learners %>% nrow())
+(id_remove$learners %>% nrow()) + (id_remove$native %>% nrow())
 
 
 #
@@ -373,9 +376,14 @@ learners %>%
 
 
 # Keep/reject?
+learners %>% 
+  select(participant, check_fails) %>% 
+  filter(check_fails != 0) %>% 
+  pull(participant) %>% unique()
+
 
 p1_accuracy <- learners %>% 
-  filter(participant == "5f6bc8e8a9a9b4134c8719b4") %>% 
+  filter(participant == "5f6a094092466e03262c6b37") %>% 
   ggplot(., aes(x = participant, y = is_correct)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange") + 
     geom_text(aes(label = lextale_tra, x = 1.4, y = 0.5)) + 
@@ -383,8 +391,9 @@ p1_accuracy <- learners %>%
     coord_cartesian(ylim = c(0.25, 1))
 
 p2_rts <- learners %>% 
-  filter(participant == "5f6bc8e8a9a9b4134c8719b4") %>% 
+  filter(participant == "5f6a094092466e03262c6b37") %>% 
   ggplot(., aes(x = participant, y = rt_adj)) + 
+    geom_hline(yintercept = 0, size = 3, color = "white") + 
     geom_jitter(alpha = 0.5, width = 0.2, 
       aes(color = factor(is_correct))) + 
     geom_text(nudge_x = -0.35, 
@@ -396,14 +405,11 @@ p2_rts <- learners %>%
 
 p1_accuracy + p2_rts
 
-learners %>% 
-  select(participant, check_fails) %>% 
-  filter(check_fails != 0) %>% 
-  pull(participant) %>% unique()
-
 
 
 # Rejected
+# 5fb2caa34a6f4d94967b2748 (all negative RTs)
+# 5d5af833f35ed70001e17a5c (all 1's on afc)
 # 5dd55364dcec8750a2efc32b (no code)
 # 5fc8232ac3b2ae180fa1a39b (took a few vacations)
 # 5fc98a7db2180e4b23c6f5be (all 1's on 2afc)

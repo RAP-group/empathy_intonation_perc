@@ -6,6 +6,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 57901207c9abeb0001af353e,learner,Midwest,I am not familiar with Spanish,no,1,0,67
 58f0fca0d40252000192f201,learner,Northeast,United States,no,1,0,42
 5a2e19cca3a512000195866a,learner,Midwest,United States,no,1,0,18
+5acacdcd0527ba0001c24bad,learner,East coast,United States,no,1,0,25
 5adfbd52f6b58c0001fa8f3c,learner,South,I am not familiar with Spanish,no,1,0,58
 5aea962d0ef2f20001858c9c,learner,West coast,I am not familiar with Spanish,no,1,0,24
 5aede0b676b763000132f6a4,learner,East coast,Mexico,no,1,0,43
@@ -14,6 +15,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 5bb6413cb4dca50001df0096,learner,Northeast,Mexico,no,1,0,61
 5bc5356e65cfb8000154bd82,learner,Northeast,I am not familiar with Spanish,no,1,0,26
 5bc9f91f418bad00016c6773,learner,Northeast,Mexico,no,1,0,47
+5c6d460ec3aa150001145611,learner,East coast,I am not familiar with Spanish,no,1,0,46
 5c742339e621f900163f4543,learner,East coast,United States,no,1,0,50
 5c75471e5eb59f000131c7a4,learner,Northeast,United States,no,1,0,32
 5ced8f96a726ed0015d31452,learner,Northeast,Mexico,no,1,0,37
@@ -22,7 +24,6 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 5d184b040a274600013f7107,learner,West coast,United States,no,1,0,53
 5d453e8723a5bb0001492546,learner,South,Puerto Rico,no,1,0,24
 5d4613a2da9cb60001aa4948,learner,Midwest,United States,no,1,0,25
-5d5af833f35ed70001e17a5c,learner,East coast,Mexico,no,1,1,43
 5d61798f7ad20f001b74922e,learner,Northeast,Spain,no,1,0,30
 5d62886927a84f00010fbbb4,learner,East coast,United States,no,1,0,16
 5dcc5f2545b8f98fd44ab4d7,learner,Northeast,United States,no,1,0,42
@@ -37,12 +38,14 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 5e5e11aed2420e129dc155ce,learner,Midwest,United States,no,1,0,45
 5e85088b3f06400f3f75e21f,learner,South,I am not familiar with Spanish,no,1,0,21
 5e92a1a4fc57e20f92eef47f,learner,Northeast,I am not familiar with Spanish,no,1,0,50
+5eb0bbbc0be27c183500b45d,learner,Northeast,Spain,no,1,0,49
 5eb46ccc0c06142c0faae377,learner,Northeast,United States,no,1,0,31
 5eb69d6f0c2db401c496390f,learner,East coast,Mexico,no,1,0,41
 5ed6c9613e5fc912b310c00c,learner,East coast,I am not familiar with Spanish,no,1,0,12
 5eda86226763346ac679ca5f,learner,Northeast,United States,no,1,0,34
 5edfb0770fb0722aa3839b6d,learner,Northeast,United States,no,1,0,33
 5ee50130f8d19d080bcc8263,learner,East coast,Mexico,no,1,0,34
+5f055b6ca28292863f750383,learner,East coast,United States,no,1,0,38
 5f0763da47bd2b3561e8d085,learner,Midwest,United States,no,1,0,49
 5f163626e9b14f1bfccf2b67,learner,Northeast,United States,no,1,0,22
 5f22bdb732432502a2615f3f,learner,Northeast,Dominican Republic,no,1,0,49
@@ -58,7 +61,10 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 5f48e9e36d9c7b3b69c5ed4f,learner,East coast,Mexico,no,1,0,31
 5f4cfe26fc6fe994078bedd3,learner,Northeast,United States,no,1,0,31
 5f4e50590bf655000c944e16,learner,Northeast,I am not familiar with Spanish,no,1,0,41
+5f53927e3a8bb66b0f07d471,learner,Northeast,Spain,no,1,0,39
+5f5588d8f313fc95927e288b,learner,Northeast,Mexico,no,1,0,44
 5f579b85e5442025dcc0c068,learner,Southwest,Spain,no,1,0,29
+5f6a094092466e03262c6b37,learner,Northeast,United States,no,1,0,44
 5f6bc8e8a9a9b4134c8719b4,learner,Northeast,United States,no,1,0,39
 5f9710e93c0e4a07c48e98d9,learner,Northeast,United States,no,1,1,37
 5f9858b14dff5d10e5c3cdb3,learner,Northeast,I am not familiar with Spanish,no,1,0,28
@@ -75,6 +81,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 5ff1e7e39f4b9e67a53f893a,learner,Northeast,I am not familiar with Spanish,no,1,1,43
 5ff8b291840bed124061d389,learner,East coast,Mexico,no,1,0,48
 5ffef0a1255d0c5fd3bdfd6a,learner,East coast,Mexico,no,1,0,42
+6005a135fff7b6818a99fd87,learner,East coast,Mexico,no,1,0,17
 600e9f3d9b955475336971bb,learner,South,I am not familiar with Spanish,no,1,0,24
 601228de8f04be234171ca8f,learner,Northeast,Mexico,no,1,0,38
 601c8b5b02683a7e54b93aeb,learner,Northeast,Spain,no,1,0,31

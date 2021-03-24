@@ -23,6 +23,8 @@ source(here::here("scripts", "r", "01_helpers.R"))
 # Participants to remove
 id_remove <- tribble(
   ~"participant",             ~"group",   ~"reason", 
+   "5fb2caa34a6f4d94967b2748", "learners", "low_accuracy", 
+   "5d5af833f35ed70001e17a5c", "learners", "low_accuracy", 
    "5dd55364dcec8750a2efc32b", "learners", "no_code", 
    "5fc8232ac3b2ae180fa1a39b", "learners", "incomplete/slow", 
    "5dcd91a0b7ebf606d16c971e", "learners", "attention_check", 
@@ -42,6 +44,9 @@ path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
 
 # Vector of .csv's to remove ("returned")
 returned <- c(
+  "5fb2caa34a6f4d94967b2748_empathy_intonation_perc_2021-03-23_23h08.18.781.csv", # all -RTs
+  "5d5af833f35ed70001e17a5c_empathy_intonation_perc_2021-03-23_10h12.18.436.csv", # all 1's
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-23_20h49.03.313.csv", 
   "58add4364d580c0001e0bf38_empathy_intonation_perc_2021-03-22_17h10.15.779.csv", # incomplete
   "5eb46ccc0c06142c0faae377_empathy_intonation_perc_2021-03-22_12h33.41.507.csv", # incomplete
   "5e9749b44592572013c96868_empathy_intonation_perc_2021-03-22_13h29.55.390.csv", # incomplete
