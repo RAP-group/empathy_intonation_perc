@@ -3,14 +3,13 @@ Open Science Pre-Registration for Empathy project
 
 # Registration Metadata
 
-**Title**: Production, perception, and processing of prosody in second
-language acquisition
-<!-- The title says "production". Is this because we might analyze the stimuli recordings in the future? or does it need to be changed? -->
-<!--Since empathy is an integral part of the study, should we not mention it in the title-->
+**Title**: The role of empathy and proficiency in the perception and
+processing of second language prosody
 
-**Description**: Specifically, we investigate the role of empathy in the
-development of second language (L2) prosody by analyzing the perception
-of intonation in questions and statements in L2 Spanish.
+**Description**: We investigate the interplay between proficiency and
+individual pragmatic skills via empathy in the development of second
+language (L2) prosody by analyzing the perception of intonation in
+questions and statements in L2 Spanish.
 
 **Contributors**: *to be added via osf.io*
 
@@ -26,11 +25,11 @@ of intonation in questions and statements in L2 Spanish.
 
 # Study Information
 
-The purpose of this project is to study the production, perception, and
-processing of prosody in second language acquisition. This research
-examines the role of individual pragmatic skills in the process of
-learning a new language. Specifically, we focus on the role of empathy
-in the development of L2 prosody by analyzing the perception of
+The purpose of this project is to study the perception and processing of
+prosody in second language acquisition. This research examines the role
+of individual pragmatic skills in the process of learning a new
+language. Specifically, we focus on the role of empathy in the
+development of L2 prosody by analyzing the perception/processing of
 intonation in questions and statements in L2 Spanish.
 
 The objectives of this research are twofold. First, the project intends
@@ -70,21 +69,21 @@ Research question 1: Is perceptional development in L2 Spanish modulated
 by proficiency and intonation type (i.e., Brandl et al., 2020)?  
 Hypothesis: Accuracy will increase and processing time will decrease as
 a function of proficiency and intonation type. Yes-no questions will
-present the most difficulty for L2 learners of Spanish.
-<!--Should we specify what other intonation types there are? Maybe adding something like "in comparison with open questions and statements."-->
+present the most difficulty for L2 learners of Spanish, followed by wh-
+questions and declarative broad focus and narrow focus statements.
 
 Research question 2: Do pragmatic skills—specifically, empathy—modulate
-the rate of development in L2 prosody?
-<!-- Wouldn't it be better to say empathy instead of pragmatic skills? Especially because the hypothesis only talks about empathy.-->
-Hypothesis: Based on the findings of Esteve-Gilbert et al. (2020), we
-posit that prosodic development will occur sooner and at a faster rate
-in higher empathy individuals. In this operationalization, ‘sooner’
-refers to lower proficiency levels in a cross-sectional design.
+the rate of development in L2 prosody? Hypothesis: Based on the findings
+of Esteve-Gilbert et al. (2020), we posit that prosodic development will
+occur sooner and at a faster rate in higher empathy individuals. In this
+operationalization, ‘sooner’ refers to lower proficiency levels in a
+cross-sectional design, that is, at an earlier developmental stage than
+lower empathy individuals.
 
-Research question 3: Does speaker variety affect perception accuracy?  
-Hypothesis: Based on tentative findings from native speaker pilot data,
-we hypothesize that overall L2 learners will have most difficulty (lower
-accuracy, slower RTs) with the Cuban speaker. <!--Cuban variety?-->
+Research question 3: Does speaker variety affect perception accuracy and
+processing speed? Hypothesis: Based on tentative findings from native
+speaker pilot data, we hypothesize that overall L2 learners will have
+most difficulty (lower accuracy, slower RTs) with the Cuban variety.
 
 # Design Plan
 
@@ -104,8 +103,9 @@ There is no additional blinding in this study.
 
 ### Study design
 
-The study consists of three tasks, given in the following order: 2AFC,
-LexTALE, and Empathy quotient.
+The study consists of three tasks, given in the following order: a
+two-alternative forced choice task (2AFC), followed by the LexTALE, and,
+finally, the Empathy quotient (EQ).
 
 In the 2AFC task participants will be presented with an audio file
 containing a statement (declarative: broad focus or narrow focus) or a
@@ -116,8 +116,8 @@ question” using the keyboard. They will type ‘1’ for “yes” (meaning
 “yes, this is a question”) and ‘0’ for ‘no’ (meaning “no, this is not a
 question”). The stimuli consist of 64 critical items, 16 of each
 sentence type. To generate the stimuli, we recorded native Spanish
-speakers of 8 different varieties (Cuban, Castilian, Andalusian,
-Puertorican, Chilean, Argentinean, Mexican, and Peruvian). The 8 native
+speakers of 8 different varieties (Cuban, Castilian, Andalusian, Puerto
+Rican, Chilean, Argentinean, Mexican, and Peruvian). The 8 native
 speakers all produced the same 64 critical items. We segmented all
 utterances using Praat and normalized them for peak intensity. The 2AFC
 task consists of 64 trials in which the stimuli presented are randomized
@@ -127,20 +127,21 @@ will hear each variety approximately 8 times. The 2AFC task will be
 administered online using PsychoPy and participants will be recruited
 using Prolific. The task takes approximately 5 minutes to complete.
 
-The LexTALE task is a lexical decision experiment in which the
-participants are presented real and nonsense words (in Spanish). They
-have to decide if the word they are presented is real or not using the
-keyboard (‘1’ for real, ‘0’ for fake). The purpose of the LexTALE task
-is to get an assessment of the participants’ vocabulary size in Spanish,
-which is assumed to be a proxy for Spanish proficiency. The LexTALE task
-takes approximately 5 minutes to complete.
-<!-- We could add a citation for the vocabulary size being a proxy for proficiency-->
+The LexTALE task (Lemhöfer & Broersma, 2012) is a lexical decision
+experiment in which the participants are presented real and nonsense
+words. We will administer the Spanish version, LexTALE-ESP (Izura,
+Cuetos, & Brysbaert, 2014). Participants have to decide if the word they
+are presented is real or not using the keyboard (‘1’ for real, ‘0’ for
+fake). The purpose of the LexTALE task is to get an assessment of the
+participants’ vocabulary size in Spanish, which is assumed to be a proxy
+for Spanish proficiency. The LexTALE task takes approximately 5 minutes
+to complete.
 
 Finally, participants will complete the Empathy Quotient (EQ,
 Baron-Cohen & Wheelwright, 2004), a 60-item questionnaire that presents
 likert-type items ranging from ‘strongly agree’ to ‘strongly disagree’.
 The EQ is scored to produce a single value indicating an individual’s
-level of empathy. The EQ takes approximately 7 minutes to complete.
+level of empathy. The EQ takes approximately 5 minutes to complete.
 
 ### Randomization
 
@@ -158,16 +159,18 @@ We have data from 100 native Spanish speakers.
 ### Explanation of existing data
 
 We piloted the 2AFC experiment on 100 native Spanish speakers to assure
-critical item quality and assess the difficulty of the task.
+critical item quality and assess the difficulty of the task. Crucially,
+our existing data does not include our population of interest, L2
+learners.
 
 ### Data collection procedures
 
-We will recruit 250 human participants for the remainder of this study.
+We will recruit 200 human participants for the remainder of this study.
 Participants will be adult native speakers of English with varied levels
 of proficiency in Spanish (determined by the LexTALE task). Participants
 will be recruited via Prolific and will be compensated at a rate of
 $9.52 per hour for their time. We estimate the task will take
-approximately 17 minutes to complete, thus each participant will receive
+approximately 15 minutes to complete, thus each participant will receive
 $2.70 for completing all 3 tasks.
 
 ### Sample size
@@ -176,7 +179,8 @@ All participants will be native speakers of American English who range
 from functionally monolingual to highly proficient in Spanish
 (bilinguals). All participants with knowledge of Spanish will be second
 language learners, operationally defined as having begun the endeavor of
-learning Spanish after the age of 13.
+learning Spanish after the age of 13. We plan to collect data from 300
+individuals (100 native Spanish speakers and 200 L2 learners).
 
 ### Sample size rationale
 
@@ -190,7 +194,7 @@ possible mediator of perceptual learning is exploratory in nature and
 thus we do not base our sample size estimate on any parameter estimates
 related to this effect. That being said, we believe the aforementioned
 exploratory effect is likely small, and, considering the resources
-necessary and available to us, we have planned to recruit up to 150 more
+necessary and available to us, we have planned to recruit 100 additional
 participants.
 
 ``` r
@@ -209,8 +213,9 @@ seqtest::size.cor(rho = 0, delta = 0.287,
 
 ### Stopping rule
 
-We will stop data collection once a total of 350 participants (100
-native speakers + 250 L2 learners) have completed all tasks.
+We will stop data collection once a total of 300 participants (100
+native Spanish speakers + 200 Native English L2 learners of Spanish)
+have completed all tasks.
 
 # Variables
 
@@ -252,12 +257,20 @@ NA
 We utilize Bayesian data analysis for statistical inferences. For the
 response data we will fit a hierarchical logistic regression model in
 which the response (‘1’, ‘0’) is fit as a function of *empathy* (empathy
-quotient score), and *proficiency* (LexTALE score). The random effects
-structure will include by-participant random intercepts, as well as
-random intercepts for items nested within question type, nested within
-speaker variety, i.e.,
-`response ~ proficiency * empathy + (1 | id) + (1 | speaker_variety/question_type/item)`.
+quotient score), and *proficiency* (LexTALE score). Along with the
+population-level effects, the model will include grouping effects for
+participants, as well as for items nested within question type, nested
+within speaker variety, with slopes for the interaction between the
+continuous variables i.e.,
+
+    response ~ proficiency * empathy + 
+      (1 | id) + 
+      (1 + proficiency * empathy | speaker_variety/question_type) + 
+      (1 + proficiency * empathy | question_type) + 
+      (1 | item)
+
 The model will use regularizing, weakly informative priors.
+Additionally, we will fit a drift diffusion as an assessment of bias.
 
 ### Transformations
 
@@ -305,7 +318,6 @@ empathy levels may be more attuned to intonational variability.
 Specifically, we hypothesize that the effect of empathy on perceptual
 learning will be additive, thus higher empathy learners may perform
 better on the 2AFC task at lower levels of proficiency.
-<!-- We have not used SLA anywhere before. I would just say L2 acquisition.-->
 
 # Other
 
@@ -313,13 +325,22 @@ NA
 
 # References
 
+-   Baron-Cohen, S., & Wheelwright, S. (2004). The empathy quotient: An
+    investigation of adults with asperger syndrome or high functioning
+    autism, and normal sex differences. Journal of Autism and
+    Developmental Disorders, 34(2), 163–175.
 -   Brandl, A., González, C., & Bustin, A. (2020). The development of
     intonation in l2 spanish: A perceptual study. In A.
     Morales-Front, M. J. Ferreira, R. P. Leow, & C. Sanz (Eds.),
     Hispanic linguistics: Current issues and new directions (pp. 12–31).
     John Benjamins Publishing Company.
-
--   Baron-Cohen, S., & Wheelwright, S. (2004). The empathy quotient: An
-    investigation of adults with asperger syndrome or high functioning
-    autism, and normal sex differences. Journal of Autism and
-    Developmental Disorders, 34(2), 163–175.
+-   Esteve-Gibert, N., Schafer, A. J., Hemforth, B., Portes, C.,
+    Pozniak, C., & D’Imperio, M. (2020). Empathy influences how
+    listeners interpret intonation and meaning when words are ambiguous.
+    Memory & cognition, 1-15.
+-   Izura, C., Cuetos, F., & Brysbaert, M. (2014). Lextale-Esp: A test
+    to rapidly and efficiently assess the Spanish vocabulary size.
+    Psicologica, 35, 49-66.
+-   Lemhöfer, K., & Broersma, M. (2012). Introducing LexTALE: A quick
+    and valid Lexical Test for Advanced Learners of English. Behavior
+    Research Methods, 44, 325-343.

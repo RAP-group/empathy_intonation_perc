@@ -137,6 +137,52 @@ pp_check(native_rt_01, nsamples = 200)
 # sjPlot::tab_model(native_response_01)
 # sjPlot::tab_model(native_rt_01)
 
-# -----------------------------------------------------------------------------
 
-natives$sentence %>% unique
+#
+# L2 models
+#
+
+l2_response_priors <- c(
+  prior(normal(0, 2), class = "Intercept"), 
+  prior(normal(0, 1.5), class = "sd")
+)
+
+learner_response_01 <- brm(
+  formula = is_correct ~ lextale_std * eq_std + 
+    (1 | participant ) + 
+    (1 + lextale_std * eq_std | speaker_variety/sentence_type) + 
+    (1 + lextale_std * eq_std | sentence_type) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj > 0), 
+  prior = l2_response_priors, 
+  warmup = 1000, iter = 2000, chains = 4, 
+  family = "bernoulli", 
+  cores = parallel::detectCores(), 
+  control = list(adapt_delta = 0.99), 
+  file = here("models", "learner_response_01")
+)
+
+
+l2_rt_priors <- c(
+  set_prior("normal(6, 0.5)", class = "Intercept"), 
+  set_prior("normal(0, 1.5)", class = "sd"), 
+  set_prior("normal(0, 3)", class = "sd", group = "sentence_type"), 
+  set_prior("normal(0, 0.5)", class = "sigma") 
+  )
+
+learner_rt_01 <- brm(
+  formula = rt_adj ~ lextale_std * eq_std + 
+    (1 | participant ) + 
+    (1 + lextale_std * eq_std | speaker_variety/sentence_type) + 
+    (1 + lextale_std * eq_std | sentence_type) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj > 0, is_correct == 1), 
+  prior = l2_rt_priors, 
+  warmup = 1000, iter = 2000, chains = 4, 
+  family = lognormal(), 
+  cores = parallel::detectCores(), 
+  control = list(adapt_delta = 0.99), 
+  file = here("models", "learner_rt_01")
+)
+
+# -----------------------------------------------------------------------------
