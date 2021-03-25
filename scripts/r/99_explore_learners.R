@@ -157,7 +157,7 @@ learners %>%
   summarize(mean_cor = mean(is_correct)) %>% 
   arrange(desc(mean_cor)) %>% 
   ggplot(., aes(mean_cor)) + 
-    geom_histogram(binwidth = 0.05, fill = "grey40", color = "black")
+    geom_histogram(binwidth = 0.04, fill = "grey40", color = "black")
 
 # % correct by speaker variety
 learners %>% 

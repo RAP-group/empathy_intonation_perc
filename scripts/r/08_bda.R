@@ -185,4 +185,23 @@ learner_rt_01 <- brm(
   file = here("models", "learner_rt_01")
 )
 
+
+
+learner_response_02 <- brm(
+  formula = response ~ is_question * lextale_std * eq_std + 
+    (1 | participant ) + 
+    (1 + is_question * lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj > 0, 
+         participant %in% c("60514fe20a8ea24a26a96e85", 
+                            "6055710aefbed49cbc6c872b")), 
+  prior = l2_response_priors, 
+  warmup = 1000, iter = 2000, chains = 4, 
+  family = "bernoulli", 
+  cores = parallel::detectCores(), 
+  control = list(adapt_delta = 0.99), 
+  file = here("models", "learner_response_02")
+)
+
+
 # -----------------------------------------------------------------------------
