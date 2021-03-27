@@ -49,6 +49,12 @@ time_diff <- function(date = "1982-11-03", format = "%Y-%m-%d",
   return(out)
 }
 
+# Calculate binwidth for histograms
+fd_bw <- function(x) {
+  out <- 2 * IQR(x) / length(x)^(1/3)
+  return(out)
+}
+
 # -----------------------------------------------------------------------------
 
 

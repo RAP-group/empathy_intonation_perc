@@ -12,12 +12,6 @@ source(here::here("scripts", "r", "07_load_data.R"))
 n_participant <- learners$participant %>% unique() %>% length
 n_trials <- learners %>% nrow()
 
-# n participants by eng variety
-learners %>% 
-  group_by(eng_variety) %>%
-  summarize(., totals = n_distinct(participant)) %>% 
-  add_row(eng_variety = "total", totals = sum(.$totals))
-
 # Test randomization of stim
 learners %>% 
   select(participant, speaker_variety) %>% 
@@ -37,24 +31,14 @@ learners %>%
     subtitle = glue("(n = {n_participant})"), 
     caption = "Mean +/- SD")
 
-# Test randomization of stim across eng varieties
-learners %>% 
-  group_by(participant, eng_variety, speaker_variety) %>% 
-  summarize(
-    total_trials = max(seq_along(speaker_variety)),  
-    total_correct = sum(is_correct), 
-    errors = total_trials - total_correct, .groups = "drop") %>% 
-  ggplot(., aes(x = eng_variety, y = total_trials, color = speaker_variety)) + 
-    geom_hline(yintercept = 8, size = 3, color = "white") + 
-    stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), 
-      geom = "pointrange", position = position_dodge(0.5)) + 
-    coord_cartesian(ylim = c(0, 20))
-
 # n learners removed
 id_remove$learners %>% nrow()
 
 # n participants removed
 (id_remove$learners %>% nrow()) + (id_remove$native %>% nrow())
+
+# n incomplete
+length(returned)
 
 
 #
@@ -90,8 +74,8 @@ learners %>%
 
 # adjusted RTs w/ mean/median
 learners %>% 
-  filter(rt_adj > 0, rt_adj <= 5) %>% 
-  ggplot(., aes(x = rt_adj)) + 
+  filter(rt_adj > -1, rt_adj <= 5) %>% 
+  ggplot(., aes(x = rt_adj + max(abs(rt_adj)))) + 
     geom_histogram(bins = 50, fill = "grey40", color = "black") + 
     geom_vline(xintercept = c(nat_d$mean_rt$val, nat_d$median_rt$val), 
       color = c("red", "blue"))
@@ -183,15 +167,7 @@ learners %>%
       color = "grey50", alpha = 0.5) + 
     stat_summary(fun.data = mean_se, geom = "ribbon", fill = "darkred", alpha = 0.2) + 
     stat_summary(fun = mean, geom = "line", color = "darkred", size = 1.5) + 
-    coord_cartesian(ylim = c(0.5, 1.1))
-
-# % correct over trials by speaker variety
-learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
-  ggplot(., aes(x = trial_n, y = is_correct)) + 
-    facet_grid(speaker_variety ~ .) + 
-    stat_summary(fun = mean, geom = "line") + 
-    coord_cartesian(ylim = c(0.2, 1.1))
+    coord_cartesian(ylim = c(0.4, 1.1))
 
 
 #
@@ -215,30 +191,18 @@ learners %>%
   ggplot(., aes(x = speaker_variety, y = errors)) + 
     geom_bar(stat = "identity", fill = "grey40", color = "black")
 
-# N errors by speaker variety
-learners %>% 
-  filter(is_correct == 0) %>% 
-  group_by(eng_variety, speaker_variety) %>% 
-  summarize(errors = n(), .groups = "drop") %>%
-  mutate(speaker_variety = fct_reorder(speaker_variety, errors, max)) %>% 
-  ggplot(., aes(x = speaker_variety, y = errors)) + 
-    facet_grid(. ~ eng_variety) + 
-    geom_bar(stat = "identity", color = "black") + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
-
 # Error rate by listener variety and speaker variety
 learners %>% 
-  group_by(participant, eng_variety, speaker_variety) %>% 
+  group_by(participant, speaker_variety) %>% 
   summarize(
     total_trials = max(seq_along(speaker_variety)),  
     total_correct = sum(is_correct), 
     errors = total_trials - total_correct, .groups = "drop") %>% 
   mutate(speaker_variety = fct_reorder(speaker_variety, errors, max)) %>% 
-  ggplot(., aes(x = eng_variety, y = errors, color = speaker_variety)) + 
-    stat_summary(fun.data = mean_se, geom = "pointrange", 
-      position = position_dodge(0.5)) + 
+  ggplot(., aes(x = speaker_variety, y = errors)) + 
+    stat_summary(fun.data = mean_se, geom = "pointrange") + 
     scale_color_viridis_d(name = "Speaker variety") + 
-    labs(x = "Listener variety", y = "Error rate")
+    labs(x = "Speaker variety", y = "Error rate")
 
 
 #
@@ -251,7 +215,7 @@ learners %>%
 
 learners %>% 
   ggplot(., aes(x = eq_score)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 5)
+    geom_histogram(fill = "grey", color = "black", binwidth = fd_bw(learners$eq_score))
 
 learners %>% 
   filter(rt_adj <= 5) %>% 
@@ -342,7 +306,7 @@ learners %>%
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct)) + 
-    geom_point() + 
+    geom_jitter(alpha = 0.05, height = 0.01, width = 0.5, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial"))
 
 learners %>% 
@@ -368,17 +332,26 @@ learners %>%
 #
 
 learners %>% 
-  ggplot(., aes(y = eq_score, x = lextale_tra)) + 
+  ggplot(., aes(x = eq_score, y = lextale_tra)) + 
     geom_point() + 
     geom_smooth(method = lm)
 
 learners %>% 
-  ggplot(., aes(y = eq_score, x = lextale_avg)) + 
+  ggplot(., aes(x = eq_score, y = lextale_avg)) + 
     geom_point() + 
     geom_smooth(method = lm)
 
 
-
+learners %>% 
+  filter(is_question == 1) %>% 
+  group_by(participant, sentence_type) %>% 
+  summarize(avg_score = mean(is_correct), 
+            lt = mean(lextale_tra), 
+            eq = mean(eq_score), .groups = "drop") %>% 
+  arrange(desc(avg_score)) %>% 
+  ggplot(., aes(x = lt, y = avg_score, color = sentence_type)) + 
+    geom_point() + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs"))
 
 
 # Keep/reject?
@@ -389,15 +362,16 @@ learners %>%
 
 
 p1_accuracy <- learners %>% 
-  filter(participant == "5f6a094092466e03262c6b37") %>% 
+  filter(participant == "midd08") %>% 
   ggplot(., aes(x = participant, y = is_correct)) + 
-    stat_summary(fun.data = mean_se, geom = "pointrange") + 
+    stat_summary(fun.data = mean_se, geom = "pointrange", 
+      aes(color = sentence_type), position = position_dodge(0.25)) + 
     geom_text(aes(label = lextale_tra, x = 1.4, y = 0.5)) + 
     geom_text(aes(label = eq_score, x = 0.6, y = 0.5)) + 
     coord_cartesian(ylim = c(0.25, 1))
 
 p2_rts <- learners %>% 
-  filter(participant == "5f6a094092466e03262c6b37") %>% 
+  filter(participant == "midd08") %>% 
   ggplot(., aes(x = participant, y = rt_adj)) + 
     geom_hline(yintercept = 0, size = 3, color = "white") + 
     geom_jitter(alpha = 0.5, width = 0.2, 
