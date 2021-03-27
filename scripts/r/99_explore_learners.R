@@ -215,18 +215,23 @@ learners %>%
 
 learners %>% 
   ggplot(., aes(x = eq_score)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = fd_bw(learners$eq_score))
+    geom_histogram(fill = "grey", color = "black", 
+      binwidth = fd_bw(learners$eq_score))
 
 learners %>% 
   filter(rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = is_correct)) + 
+    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"))
+    geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+    scale_y_continuous(breaks = seq(0, 1, 0.1)) + 
+    coord_cartesian(ylim = c(0.48, 1.0))
+
 
 learners %>% 
   filter(rt_adj <= 5) %>% 
-  ggplot(., aes(x = eq_score, y = is_correct)) + 
-    facet_grid(. ~ speaker_variety) + 
+  ggplot(., aes(x = eq_score, y = is_correct, color = speaker_variety)) + 
+    #facet_grid(. ~ speaker_variety) + 
     geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial")) + 
@@ -246,7 +251,7 @@ learners %>%
 learners %>% 
   filter(rt_adj <= 5, is_correct == 1) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
-    geom_point() + 
+    geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
@@ -289,12 +294,12 @@ learners %>%
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_avg)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 2.5)
+    geom_histogram(fill = "grey", color = "black", binwidth = 5)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_tra)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 2)
+    geom_histogram(fill = "grey", color = "black", binwidth = 5)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
@@ -306,8 +311,10 @@ learners %>%
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct)) + 
+    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(alpha = 0.05, height = 0.01, width = 0.5, pch = 21) + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"))
+    geom_smooth(method = "glm", method.args = list(family = "binomial")) + 
+    coord_cartesian(ylim = c(0.48, 1))
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct)) + 
@@ -360,7 +367,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "5fb33ec89c2b44a71c2cd5df")
+check_participant(data = learners, id = "5a0502cb517dfb00013db4a3")
 
 
 # Rejected

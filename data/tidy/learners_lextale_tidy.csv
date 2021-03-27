@@ -12,6 +12,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,totals,
 59dba8575cddae0001ff0780,learner,Midwest,United States,no,1,0,90,23,37,16,14,60,30,90,45.833333333333336,-5
 59dc458f77860e000151240e,learner,Midwest,United States,no,1,0,90,30,30,14,16,60,30,90,48.33333333333333,-2
 59e91cebae9f950001d8466a,learner,Midwest,I am not familiar with Spanish,no,1,0,90,11,49,20,10,60,30,90,42.49999999999999,-9
+5a0502cb517dfb00013db4a3,learner,Northeast,United States,no,1,0,90,22,38,17,13,60,30,90,46.666666666666664,-4
 5a2e19cca3a512000195866a,learner,Midwest,United States,no,1,0,90,6,54,30,0,60,30,90,55,6
 5acacdcd0527ba0001c24bad,learner,East coast,United States,no,1,0,90,27,33,15,15,60,30,90,47.5,-3
 5adfbd52f6b58c0001fa8f3c,learner,South,I am not familiar with Spanish,no,1,0,90,25,35,20,10,60,30,90,54.166666666666664,5
@@ -25,6 +26,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,totals,
 5bc9f91f418bad00016c6773,learner,Northeast,Mexico,no,1,0,90,17,43,22,8,60,30,90,50.83333333333333,1
 5bdab584b341a4000154256b,learner,Midwest,I am not familiar with Spanish,no,1,0,90,16,44,20,10,60,30,90,46.666666666666664,-4
 5c049e9bad9a9700011b877b,learner,Midwest,Peru,no,1,0,90,39,21,19,11,60,30,90,64.16666666666666,17
+5c1919fbd9241d0001363964,learner,Midwest,I am not familiar with Spanish,no,1,0,90,26,34,16,14,60,30,90,48.333333333333336,-2
 5c1dc77ee2d9150001b5b70e,learner,Northeast,I am not familiar with Spanish,no,1,0,90,17,43,19,11,60,30,90,45.83333333333333,-5
 5c59aecb6ca5e600017206de,learner,Midwest,Mexico,no,1,0,90,17,43,22,8,60,30,90,50.83333333333333,1
 5c5fc78e96dff400013607a5,learner,East coast,United States,no,1,0,90,27,33,19,11,60,30,90,54.166666666666664,5
