@@ -253,21 +253,21 @@ learners %>%
   filter(rt_adj <= 5, is_correct == 1) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
-    geom_point(alpha = 0.5) + 
+    geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
   filter(rt_adj <= 5, is_correct == 1) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj, color = sentence_type)) + 
-    geom_point() + 
+    geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
   filter(rt_adj <= 5, is_correct == 1) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
-    geom_point() + 
-    geom_smooth(method = "lm", se = F, aes(color = sentence_type))
+    geom_point(alpha = 0.2, pch = 21) + 
+    geom_smooth(method = "lm", aes(color = sentence_type))
 
 
 #
@@ -349,7 +349,7 @@ learners %>%
             lt = mean(lextale_tra), 
             eq = mean(eq_score), .groups = "drop") %>% 
   arrange(desc(avg_score)) %>% 
-  ggplot(., aes(x = lt, y = avg_score, color = sentence_type)) + 
+  ggplot(., aes(x = eq, y = avg_score, color = sentence_type)) + 
     geom_point() + 
     geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs"))
 
@@ -360,34 +360,12 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-
-p1_accuracy <- learners %>% 
-  filter(participant == "midd08") %>% 
-  ggplot(., aes(x = participant, y = is_correct)) + 
-    stat_summary(fun.data = mean_se, geom = "pointrange", 
-      aes(color = sentence_type), position = position_dodge(0.25)) + 
-    geom_text(aes(label = lextale_tra, x = 1.4, y = 0.5)) + 
-    geom_text(aes(label = eq_score, x = 0.6, y = 0.5)) + 
-    coord_cartesian(ylim = c(0.25, 1))
-
-p2_rts <- learners %>% 
-  filter(participant == "midd08") %>% 
-  ggplot(., aes(x = participant, y = rt_adj)) + 
-    geom_hline(yintercept = 0, size = 3, color = "white") + 
-    geom_jitter(alpha = 0.5, width = 0.2, 
-      aes(color = factor(is_correct))) + 
-    geom_text(nudge_x = -0.35, 
-      aes(label = ifelse(is_correct == 0, speaker_variety, ''))) + 
-    stat_summary(fun.data = mean_se, geom = "pointrange") + 
-    scale_color_brewer(name = NULL, palette = "Set1", 
-      labels = c("incorrect", "correct")) + 
-    geom_text(aes(x = 1.4, y = 0.1, label = spn_variety), alpha = 0.02)
-
-p1_accuracy + p2_rts
-
+check_participant(data = learners, id = "5fb33ec89c2b44a71c2cd5df")
 
 
 # Rejected
+# 5f4a7225cf944c08a81adca2 (failed attention check, 6min)
+# 603454dbbea63e24a99aabd2 (majority negative RTs, 7 min)
 # 5fb2caa34a6f4d94967b2748 (all negative RTs)
 # 5d5af833f35ed70001e17a5c (all 1's on afc)
 # 5dd55364dcec8750a2efc32b (no code)
@@ -397,6 +375,9 @@ p1_accuracy + p2_rts
 
 
 # Checked for AC, but ok
+# "603401117dd0c2000a1cb8e6"
+# "6021f6c1f883e82b11739f31"
+# "5fb9689421064d7ff5f5243e"
 # "5f9710e93c0e4a07c48e98d9" 
 # "5ff1e7e39f4b9e67a53f893a" 
 # "6021d935ae778527962c9fd3"

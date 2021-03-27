@@ -83,6 +83,37 @@ strip_blank <- function(x) {
   sub('[[:space:]]+', '', format(x))
 }
 
+
+# Participant check
+check_participant <- function(data = "learners", id) {
+
+  p1_accuracy <- data %>% 
+    filter(participant == id) %>% 
+    ggplot(., aes(x = participant, y = is_correct)) + 
+      stat_summary(fun.data = mean_se, geom = "pointrange", 
+        aes(color = sentence_type), position = position_dodge(0.25)
+        ) + 
+      geom_text(aes(label = lextale_tra, x = 1.4, y = 0.5)) + 
+      geom_text(aes(label = eq_score, x = 0.6, y = 0.5)) + 
+      coord_cartesian(ylim = c(0, 1))
+
+  p2_rts <- data %>% 
+    filter(participant == id) %>% 
+    ggplot(., aes(x = participant, y = rt_adj)) + 
+      geom_hline(yintercept = 0, size = 3, color = "white") + 
+      geom_jitter(alpha = 0.5, width = 0.2, 
+        aes(color = factor(is_correct))) + 
+      geom_text(nudge_x = -0.35, 
+        aes(label = ifelse(is_correct == 0, speaker_variety, ''))) + 
+      stat_summary(fun.data = mean_se, geom = "pointrange") + 
+      scale_color_brewer(name = NULL, palette = "Set1", 
+        labels = c("incorrect", "correct")) + 
+      geom_text(aes(x = 1.4, y = 0.1, label = spn_variety), alpha = 0.02)
+
+  print(p1_accuracy + p2_rts)
+
+}
+
 # -----------------------------------------------------------------------------
 
 
