@@ -367,7 +367,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "5a0502cb517dfb00013db4a3")
+check_participant(data = learners, id = "midd19")
 
 
 # Rejected
