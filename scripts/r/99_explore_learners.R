@@ -216,7 +216,7 @@ learners %>%
 learners %>% 
   ggplot(., aes(x = eq_score)) + 
     geom_histogram(fill = "grey", color = "black", 
-      binwidth = fd_bw(learners$eq_score))
+      binwidth = fd_bw(learners$eq_score) + 1)
 
 learners %>% 
   filter(rt_adj <= 5) %>% 
@@ -367,8 +367,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "5fce532e51f670000a2a1410")
-
+check_participant(data = learners, id = "5d8f8510f3e52d0018924390")
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)
@@ -382,6 +381,7 @@ check_participant(data = learners, id = "5fce532e51f670000a2a1410")
 
 
 # Checked for AC, but ok
+# "5ef411225a5e591d15fda2ec"
 # "6037034f07abbf728431e247
 # "603401117dd0c2000a1cb8e6"
 # "6021f6c1f883e82b11739f31"
