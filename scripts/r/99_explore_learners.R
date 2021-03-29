@@ -367,7 +367,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd19")
+check_participant(data = learners, id = "5fce532e51f670000a2a1410")
 
 
 # Rejected
@@ -382,6 +382,7 @@ check_participant(data = learners, id = "midd19")
 
 
 # Checked for AC, but ok
+# "6037034f07abbf728431e247
 # "603401117dd0c2000a1cb8e6"
 # "6021f6c1f883e82b11739f31"
 # "5fb9689421064d7ff5f5243e"
