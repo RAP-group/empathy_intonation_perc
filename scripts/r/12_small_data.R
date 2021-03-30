@@ -14,7 +14,13 @@ sr %>%
 
 
 
-time <- read_csv(here("data", "raw", "prolific_export_602ab2f3ccc37d12d58ba79b.csv")) %>% 
+time <- bind_rows(
+  read_csv(here("data", "raw", "prolific_export_602aa93df732e9107ec837da_l2_reset.csv")), 
+  read_csv(here("data", "raw", "prolific_export_602ab2f3ccc37d12d58ba79b_sp_mono.csv")), 
+  read_csv(here("data", "raw", "prolific_export_605b45a4d25f287719a41696_l2_e.csv")),
+  read_csv(here("data", "raw", "prolific_export_6057c54e64b0b4e5c128b4f9_l2_ne.csv")),
+  read_csv(here("data", "raw", "prolific_export_60568611ec04488a9e9da93b_en_mono.csv"))
+  ) %>% 
   select(status, time_taken) %>% 
   filter(status == "APPROVED") %>% 
   mutate(min = time_taken / 60) 

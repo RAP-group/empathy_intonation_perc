@@ -44,7 +44,7 @@ native_ppred_response_00 <- brm(
 )
 
 # Wrangle and plot prior predictive checks
-ppred_response_samples <- posterior_samples(native_ppred_response_00) %>%
+ppred_response_samples_natives <- posterior_samples(native_ppred_response_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
@@ -53,7 +53,7 @@ ppred_response_samples <- posterior_samples(native_ppred_response_00) %>%
     speaker_variety_sd = sd_speaker_variety__Intercept, 
     speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
 
-ppred_response_samples %>% 
+ppred_response_samples_natives %>% 
   select(intercept:speaker_variety_sentence_type_sd) %>% 
   pivot_longer(intercept:speaker_variety_sentence_type_sd, names_to = "term") %>% 
   mutate(term = fct_relevel(term, "intercept", "participant_sd")) %>%
@@ -78,6 +78,28 @@ native_response_01 <- brm(
 )
 
 pp_check(native_response_01, nsamples = 200)
+
+# Wrangle and plot posteriors
+post_response_samples_natives <- posterior_samples(native_response_01) %>%
+  rename(
+    intercept = b_Intercept, 
+    participant_sd = sd_participant__Intercept, 
+    item_sd = sd_item__Intercept, 
+    sentence_type_sd = sd_sentence_type__Intercept, 
+    speaker_variety_sd = sd_speaker_variety__Intercept, 
+    speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
+
+post_response_samples_natives %>% 
+  select(intercept:speaker_variety_sentence_type_sd) %>% 
+  pivot_longer(intercept:speaker_variety_sentence_type_sd, names_to = "term") %>% 
+  mutate(term = fct_relevel(term, "intercept", "participant_sd")) %>%
+  ggplot(aes(value)) +
+  geom_density(colour = NA, fill = "#325756", alpha = 0.9) +
+  facet_wrap(~ term, scales = "free")
+
+
+
+
 
 #
 # RT data
@@ -108,7 +130,7 @@ native_ppred_rt_00 <- brm(
 )
 
 # Wrangle and plot prior predictive checks
-ppred_rt_samples <- posterior_samples(native_ppred_rt_00) %>%
+ppred_rt_samples_natives <- posterior_samples(native_ppred_rt_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
@@ -117,7 +139,7 @@ ppred_rt_samples <- posterior_samples(native_ppred_rt_00) %>%
     speaker_variety_sd = sd_speaker_variety__Intercept, 
     speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
 
-ppred_rt_samples %>%
+ppred_rt_samples_natives %>%
   select(intercept:speaker_variety_sentence_type_sd) %>% 
   pivot_longer(intercept:speaker_variety_sentence_type_sd, names_to = "term") %>% 
   mutate(term = fct_relevel(term, "intercept", "participant_sd")) %>%
@@ -143,6 +165,24 @@ native_rt_01 <- brm(
 
 # Posterior predictive check
 pp_check(native_rt_01, nsamples = 200)
+
+# Wrangle and plot posterior
+post_rt_samples_natives <- posterior_samples(native_rt_01) %>%
+  rename(
+    intercept = b_Intercept, 
+    participant_sd = sd_participant__Intercept, 
+    item_sd = sd_item__Intercept, 
+    sentence_type_sd = sd_sentence_type__Intercept, 
+    speaker_variety_sd = sd_speaker_variety__Intercept, 
+    speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
+
+post_rt_samples_natives %>%
+  select(intercept:speaker_variety_sentence_type_sd) %>% 
+  pivot_longer(intercept:speaker_variety_sentence_type_sd, names_to = "term") %>% 
+  mutate(term = fct_relevel(term, "intercept", "participant_sd")) %>%
+  ggplot(aes(value)) +
+  geom_density(colour = NA, fill = "#325756", alpha = 0.9) +
+  facet_wrap(~ term, scales = "free")
 
 # -----------------------------------------------------------------------------
 
@@ -199,24 +239,6 @@ learner_rt_01 <- brm(
   cores = parallel::detectCores(), 
   control = list(adapt_delta = 0.99), 
   file = here("models", "learner_rt_01")
-)
-
-
-
-learner_response_02 <- brm(
-  formula = response ~ is_question * lextale_std * eq_std + 
-    (1 | participant ) + 
-    (1 + is_question * lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj > 0, 
-         participant %in% c("60514fe20a8ea24a26a96e85", 
-                            "6055710aefbed49cbc6c872b")), 
-  prior = l2_response_priors, 
-  warmup = 1000, iter = 2000, chains = 4, 
-  family = "bernoulli", 
-  cores = parallel::detectCores(), 
-  control = list(adapt_delta = 0.99), 
-  file = here("models", "learner_response_02")
 )
 
 
