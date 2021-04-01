@@ -46,6 +46,8 @@ path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
 
 # Vector of .csv's to remove ("returned")
 returned <- c(
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-31_12h21.27.529.csv", 
+  "midd29_empathy_intonation_perc_2021-03-31_10h19.38.438.csv", # incomplete
   "midd07_empathy_intonation_perc_2021-03-30_10h12.02.133.csv", # incomplete
   "PARTICIPANT_empathy_intonation_perc2_2021-03-29_09h23.48.503.csv", 
   "5e9902c3a64f740009842923_empathy_intonation_perc_2021-03-28_15h16.38.622.csv", # incomplete
@@ -182,7 +184,7 @@ natives <- dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"),
   regexp = "\\.csv$") %>%
   map_dfr(read_csv, .id = "source") %>% 
   left_join(., read_csv(
-    here("data", "raw", "prolific_export_602ab2f3ccc37d12d58ba79b.csv")) %>% 
+    here("data", "raw", "prolific_export_602ab2f3ccc37d12d58ba79b_sp_mono.csv")) %>% 
       select(participant = participant_id, spn_variety = Nationality), 
     by = "participant") %>% 
   filter(!grepl('iniciales \\+', source), 

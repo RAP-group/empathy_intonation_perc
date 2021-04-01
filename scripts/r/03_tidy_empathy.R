@@ -32,6 +32,8 @@ path <- paste0(here(), "/exp/empathy_intonation_perc/data/")
 
 # Vector of .csv's to remove ("returned")
 returned <- c(
+  "PARTICIPANT_empathy_intonation_perc2_2021-03-31_12h21.27.529.csv", 
+  "midd29_empathy_intonation_perc_2021-03-31_10h19.38.438.csv", # incomplete
   "midd07_empathy_intonation_perc_2021-03-30_10h12.02.133.csv", # incomplete
   "PARTICIPANT_empathy_intonation_perc2_2021-03-29_09h23.48.503.csv", 
   "5e9902c3a64f740009842923_empathy_intonation_perc_2021-03-28_15h16.38.622.csv", # incomplete

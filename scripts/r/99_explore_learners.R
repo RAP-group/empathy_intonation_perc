@@ -214,12 +214,14 @@ learners %>%
     min_eq = min(eq_score), max_eq = max(eq_score))
 
 learners %>% 
+  select(participant, eq_score) %>% 
+  distinct() %>% 
   ggplot(., aes(x = eq_score)) + 
     geom_histogram(fill = "grey", color = "black", 
-      binwidth = fd_bw(learners$eq_score) + 1)
+      binwidth = 3.54)
 
 learners %>% 
-  filter(rt_adj <= 5) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = is_correct)) + 
     geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
@@ -229,7 +231,7 @@ learners %>%
 
 
 learners %>% 
-  filter(rt_adj <= 5) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = is_correct, color = speaker_variety)) + 
     #facet_grid(. ~ speaker_variety) + 
     geom_hline(yintercept = 0.5, size = 3, color = "white") + 
@@ -238,7 +240,7 @@ learners %>%
     coord_cartesian(ylim = c(0.48, 1.0))
 
 learners %>% 
-  filter(rt_adj <= 5) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
@@ -249,26 +251,26 @@ learners %>%
 #
 
 learners %>% 
-  filter(rt_adj <= 5, is_correct == 1) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 5, is_correct == 1) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 5, is_correct == 1) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj, color = sentence_type)) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 5, is_correct == 1) %>% 
+  filter(rt_adj <= 10) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point(alpha = 0.2, pch = 21) + 
@@ -294,7 +296,7 @@ learners %>%
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_avg)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 5)
+    geom_histogram(fill = "grey", color = "black", binwidth = 3)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
@@ -367,7 +369,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd28")
+check_participant(data = learners, id = "midd29")
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)
