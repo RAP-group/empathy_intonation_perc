@@ -63,6 +63,12 @@ learners %>%
 # How many RTs over X seconds?
 sum(learners$rt_adj > 5); sum(learners$rt_adj > 10)
 
+# Accuracy when RT is >= 0
+learners %>% 
+  filter(rt_adj >= 5) %>% 
+  summarize(mean_cor = mean(is_correct))
+
+
 # How many RTs < 0?
 sum(learners$rt_adj <= 0)
 sum(learners$rt_adj <= 0) / nrow(learners)
@@ -72,30 +78,29 @@ learners %>%
   filter(rt_adj <= 0) %>% 
   summarize(mean_cor = mean(is_correct))
 
-# adjusted RTs w/ mean/median
+# adjusted RTs
 learners %>% 
-  filter(rt_adj > -1, rt_adj <= 5) %>% 
-  ggplot(., aes(x = rt_adj + max(abs(rt_adj)))) + 
-    geom_histogram(bins = 50, fill = "grey40", color = "black") + 
-    geom_vline(xintercept = c(nat_d$mean_rt$val, nat_d$median_rt$val), 
-      color = c("red", "blue"))
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  ggplot(., aes(x = rt_adj + abs(min(rt_adj)) + 0.2)) + 
+    geom_histogram(bins = 50, fill = "grey40", color = "black") 
 
 # Transformed RTs
 learners %>% 
-  filter(rt_adj > 0) %>% 
-  ggplot(., aes(x = log(rt_adj))) + 
+  filter(rt_adj >= -0.1) %>% 
+  ggplot(., aes(x = log(rt_adj + abs(min(rt_adj)) + 0.2))) +
     geom_histogram(bins = 40, fill = "grey40", color = "black")
 
 # Adj RTs by speaker variety
 learners %>% 
-  filter(rt_adj > 0, rt_adj <= 5) %>% 
-  ggplot(., aes(x = rt_adj, y = speaker_variety, 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  ggplot(., aes(x = rt_adj + abs(min(rt_adj)) + 0.2, y = speaker_variety, 
     fill = 0.5 - abs(0.5 - stat(ecdf)))) +
     stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) + 
     scale_fill_viridis_c(name = "Tail probability", direction = -1)
 
 # Adj RTs by variety
 learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = speaker_variety, y = rt_adj)) + 
     geom_jitter(alpha = 0.05, width = 0.2) + 
     stat_summary(fun.data = mean_sdl, geom = "pointrange", 
@@ -104,24 +109,23 @@ learners %>%
 
 # Adj RTs with subset
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0, is_correct == 1) %>% 
-  ggplot(., aes(x = speaker_variety, y = rt_adj)) + 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  ggplot(., aes(x = speaker_variety, y = rt_adj + abs(min(rt_adj)) + 0.2)) + 
     geom_violin() + 
     stat_summary(fun.data = mean_sdl, geom = "pointrange", 
       fun.args = list(mult = 1), pch = 21, fill = "white") + 
-    geom_hline(yintercept = nat_d$median_rt$val, lty = 3, color = "darkred") + 
     coord_cartesian(ylim = c(-0.5, NA))
 
 # Adj RTs over trials
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = trial_n, y = rt_adj)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange", 
       pch = 21, fill = "white")
 
 # Adj RTs over trials
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = trial_n, y = rt_adj)) + 
     stat_summary(fun = mean, geom = "line", aes(group = speaker_variety), 
       color = "grey50", alpha = 0.5) + 
@@ -145,23 +149,37 @@ learners %>%
 
 # % correct by speaker variety
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
-  ggplot(., aes(x = speaker_variety, y = is_correct)) + 
-    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, speaker_variety) %>% 
+  summarize(avg_correct = mean(is_correct), .groups = "drop") %>% 
+  mutate(
+    speaker_variety = fct_recode(speaker_variety, `Puerto Rican` = "puertorican"), 
+    speaker_variety = str_to_title(speaker_variety, locale = "en")
+    ) %>% 
+  ggplot(., aes(x = speaker_variety, y = avg_correct)) + 
     geom_hline(yintercept = nat_d$mean_cor$val, lty = 3) + 
-    stat_summary(fun.data = mean_cl_boot, geom = "pointrange") + 
-    coord_cartesian(ylim = c(0.5, 1))
+    geom_text(aes(label = label), hjust = 1, nudge_x = 0.5, size = 2.5, family = "Times", 
+      data = tibble(speaker_variety = "Puerto Rican", avg_correct = 0.83, 
+      label = paste0("Overall\nAvg. = ", round(nat_d$mean_cor$val, 2)))) + 
+    stat_summary(aes(fill = speaker_variety), fun.data = mean_cl_boot, 
+      geom = "pointrange", pch = 21, size = 0.8, show.legend = F) + 
+    scale_fill_viridis_d(option = "viridis") + 
+    coord_cartesian(ylim = c(0.5, 1)) + 
+    labs(y = "Proportion correct", x = NULL, 
+         title = "Proportion correct as a function of speaker variety", 
+         caption = "Mean ± 95% CI") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
 
 # % correct by trials
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = trial_n, y = is_correct)) + 
     stat_summary(fun.data = mean_se, geom = "pointrange", 
       pch = 21, fill = "white")
 
 # % correct by speaker variety over trials
 learners %>% 
-  filter(rt_adj <= 5 & rt_adj >= 0) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = trial_n, y = is_correct)) + 
     stat_summary(fun = mean, geom = "line", aes(group = speaker_variety), 
       color = "grey50", alpha = 0.5) + 
@@ -221,8 +239,17 @@ learners %>%
       binwidth = 3.54)
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = is_correct)) + 
+    geom_hline(yintercept = 0.5, size = 3, color = "white") + 
+    geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
+    geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+    scale_y_continuous(breaks = seq(0, 1, 0.1)) + 
+    coord_cartesian(ylim = c(0.48, 1.0))
+
+learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
     geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial")) +
@@ -231,16 +258,16 @@ learners %>%
 
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = is_correct, color = speaker_variety)) + 
-    #facet_grid(. ~ speaker_variety) + 
+    facet_grid(. ~ speaker_variety) + 
     geom_hline(yintercept = 0.5, size = 3, color = "white") + 
     geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial")) + 
     coord_cartesian(ylim = c(0.48, 1.0))
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
@@ -251,26 +278,26 @@ learners %>%
 #
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj, color = sentence_type)) + 
     geom_point(alpha = 0.2, pch = 21) + 
     geom_smooth(method = "lm")
 
 learners %>% 
-  filter(rt_adj <= 10) %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
   ggplot(., aes(x = eq_score, y = rt_adj)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point(alpha = 0.2, pch = 21) + 
@@ -280,7 +307,6 @@ learners %>%
 #
 # Lextale
 #
-
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
@@ -319,10 +345,27 @@ learners %>%
     coord_cartesian(ylim = c(0.48, 1))
 
 learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, lextale_avg) %>% 
+  summarize(rt_adj = mean(rt_adj)) %>% 
+  ggplot(., aes(x = lextale_avg, y = rt_adj)) + 
+    geom_point(alpha = 0.5, pch = 21) + 
+    geom_smooth(method = "lm") 
+
+learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_jitter(alpha = 0.05, width = 0.4, height = 0.01, pch = 21) + 
     geom_smooth(method = "glm", method.args = list(family = "binomial")) 
+
+learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, speaker_variety, lextale_avg) %>% 
+  summarize(rt_adj = mean(rt_adj)) %>% 
+  ggplot(., aes(x = lextale_avg, y = rt_adj)) + 
+    facet_grid(. ~ speaker_variety) + 
+    geom_point(alpha = 0.5, pch = 21) + 
+    geom_smooth(method = "lm") 
 
 learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct, color = sentence_type)) + 
@@ -330,11 +373,27 @@ learners %>%
     geom_smooth(method = "glm", method.args = list(family = "binomial"))
 
 learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, sentence_type, lextale_avg) %>% 
+  summarize(rt_adj = mean(rt_adj)) %>% 
+  ggplot(., aes(x = lextale_avg, y = rt_adj, color = sentence_type)) + 
+    geom_point(alpha = 0.5, pch = 21) + 
+    geom_smooth(method = "lm") 
+
+learners %>% 
   ggplot(., aes(x = lextale_avg, y = is_correct, color = sentence_type)) + 
     facet_grid(. ~ speaker_variety) + 
     geom_point() + 
     geom_smooth(method = "glm", se = F, method.args = list(family = "binomial"))
 
+learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, sentence_type, speaker_variety, lextale_avg) %>% 
+  summarize(rt_adj = mean(rt_adj)) %>% 
+  ggplot(., aes(x = lextale_avg, y = rt_adj, color = sentence_type)) + 
+    facet_grid(. ~ speaker_variety) + 
+    geom_point(alpha = 0.5, pch = 21) + 
+    geom_smooth(method = "lm") 
 
 #
 # Lextale and empathy
@@ -351,25 +410,13 @@ learners %>%
     geom_smooth(method = lm)
 
 
-learners %>% 
-  filter(is_question == 1) %>% 
-  group_by(participant, sentence_type) %>% 
-  summarize(avg_score = mean(is_correct), 
-            lt = mean(lextale_tra), 
-            eq = mean(eq_score), .groups = "drop") %>% 
-  arrange(desc(avg_score)) %>% 
-  ggplot(., aes(x = eq, y = avg_score, color = sentence_type)) + 
-    geom_point() + 
-    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs"))
-
-
 # Keep/reject?
 learners %>% 
   select(participant, check_fails) %>% 
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd29")
+check_participant(data = learners, id = "midd24")
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)

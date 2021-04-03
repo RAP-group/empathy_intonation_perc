@@ -201,6 +201,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,eq_scor
 605796ef0a4b32599655c385,learner,East coast,Puerto Rico,no,1,0,40
 60579ed57a769950e21bcda2,learner,East coast,United States,no,1,0,48
 midd01,learner,Northeast,Honduras,no,1,0,29
+midd02,learner,Midwest,Puerto Rico,yes,1,0,44
 midd03,learner,Midwest,Spain,no,1,0,31
 midd04,learner,Northeast,Colombia,yes,1,0,33
 midd05,learner,Northeast,Spain,no,1,0,57
@@ -212,6 +213,7 @@ midd12,learner,South,United States,yes,1,0,47
 midd17,learner,Southwest,Mexico,no,1,0,68
 midd19,learner,Midwest,Mexico,no,1,0,42
 midd22,learner,Midwest,Spain,yes,1,0,37
+midd24,learner,South,United States,no,1,0,45
 midd25,learner,Northeast,Spain,yes,1,0,39
 midd27,learner,Northeast,Spain,yes,1,0,44
 midd28,learner,Midwest,Colombia,yes,1,0,59

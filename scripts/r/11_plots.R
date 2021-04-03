@@ -172,7 +172,7 @@ ranef(native_response_01)$participant
 sr_desc <- sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
   names_to = "metric", values_to = "val") %>% 
-  group_by(variety, metric) %>% 
+  group_by(speaker_variety, metric) %>% 
   summarize(avg_val = mean(val), med_val = median(val), .groups = "drop") %>% 
   pivot_longer(cols = c("avg_val", "med_val"), names_to = "measure", 
     values_to = "val")
@@ -180,7 +180,7 @@ sr_desc <- sr %>%
 sr %>% 
   ggplot() + 
   aes(x = speech_rate) + 
-  facet_wrap(~ variety, nrow = 2) + 
+  facet_wrap(~ speaker_variety, nrow = 2) + 
   geom_histogram(fill = "lightblue", color = "black", 
     bins = 8, 
     aes(y = ..density..)) + 
@@ -197,16 +197,148 @@ sr %>%
     names_to = "metric", values_to = "val") %>% 
   group_by(metric) %>% 
   mutate(val_std = (val - mean(val)) / sd(val), 
-         variety = fct_relevel(variety, rev)) %>% 
+         speaker_variety = fct_relevel(speaker_variety, rev)) %>% 
   filter(metric == "speech_rate") %>% 
   ggplot() + 
-  aes(x = val_std, y = variety, color = variety) + 
+  aes(x = val_std, y = speaker_variety, color = speaker_variety) + 
   geom_vline(xintercept = 0, lty = 3) + 
   geom_beeswarm(alpha = 0.2, groupOnX = F, show.legend = F) + 
   stat_summary(fun.data = mean_cl_normal, geom = "pointrange", show.legend = F, 
-    pch = 21, color = "black", size = 1.1, aes(fill = variety)) + 
+    pch = 21, color = "black", size = 1.1, aes(fill = speaker_variety)) + 
   scale_color_viridis_d(option = "D", end = 0.9) + 
   scale_fill_viridis_d(option = "D", end = 0.9) + 
   coord_cartesian(xlim = c(-2.5, 2.5)) + 
   labs(x = "Speech rate (std)", y = "Spanish variety") + 
   ds4ling::ds4ling_bw_theme(base_family = "Times", base_size = 16)
+
+
+
+
+
+
+# ARESTY POSTER IMG
+
+# % correct by speaker variety
+learner_accuracy_by_speaker_variety <- learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, speaker_variety) %>% 
+  summarize(avg_correct = mean(is_correct), .groups = "drop") %>% 
+  mutate(
+    speaker_variety = fct_recode(speaker_variety, `Puerto Rican` = "puertorican"), 
+    speaker_variety = str_to_title(speaker_variety, locale = "en")
+    ) %>% 
+  ggplot(., aes(x = speaker_variety, y = avg_correct)) + 
+    geom_hline(yintercept = nat_d$mean_cor$val, lty = 3) + 
+    geom_text(aes(label = label), hjust = 1, nudge_x = 0.5, size = 2.5, family = "Times", 
+      data = tibble(speaker_variety = "Puerto Rican", avg_correct = 0.83, 
+      label = paste0("Overall\nAvg. = ", round(nat_d$mean_cor$val, 2)))) + 
+    stat_summary(aes(fill = speaker_variety), fun.data = mean_cl_boot, 
+      geom = "pointrange", pch = 21, size = 0.8, show.legend = F) + 
+    scale_fill_brewer(palette = "Set2") + 
+    coord_cartesian(ylim = c(0.5, 1)) + 
+    labs(y = "Proportion correct", x = NULL, 
+         title = "Proportion correct as a function of speaker variety", 
+         caption = "Mean ± 95% CI") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+
+learner_accuracy_by_utterance_type <- learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  group_by(participant, sentence_type) %>% 
+  summarize(avg_correct = mean(is_correct), .groups = "drop") %>% 
+  mutate(sentence_type = case_when(
+      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
+      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
+      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
+      TRUE ~ "Declarative\nbroad focus")) %>% 
+  ggplot(., aes(x = sentence_type, y = avg_correct)) + 
+    geom_hline(yintercept = nat_d$mean_cor$val, lty = 3) + 
+    geom_text(aes(label = label), hjust = 1, nudge_x = 0.5, size = 2.5, family = "Times", 
+      data = tibble(sentence_type = "Interrogative\ny/n", avg_correct = 0.83, 
+      label = paste0("Overall\nAvg. = ", round(nat_d$mean_cor$val, 2)))) + 
+    stat_summary(aes(fill = sentence_type), fun.data = mean_cl_boot, 
+      geom = "pointrange", pch = 21, size = 0.8, show.legend = F) + 
+    scale_fill_brewer(palette = "Set2") + 
+    labs(y = "Proportion correct", x = NULL, 
+         title = "Proportion correct as a function of utterance type", 
+         caption = "Mean ± 95% CI") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+
+lt_me <- conditional_effects(learner_response_01, 
+  effects = "lextale_std", 
+  re_formula = NA, 
+  method = "posterior_epred", 
+  spaghetti = TRUE, 
+  nsamples = 300)
+
+learner_accuracy_by_lextale <- plot(lt_me, plot = F, 
+  line_args = list(size = 3, colour = "white"))[[1]] + 
+  coord_cartesian(ylim = c(NA, 1)) + 
+  labs(y = "Proportion correct", x = "LexTALE score", 
+  title = "Proportion correct as a function of LexTALE score", 
+  subtitle = "300 draws from the posterior distribution") +   
+  ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+
+learner_accuracy_by_st_eq <- learners %>% 
+  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
+  mutate(sentence_type = case_when(
+      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
+      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
+      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
+      TRUE ~ "Declarative\nbroad focus")) %>% 
+  ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
+    geom_hline(yintercept = 0.5, lty = 3, color = "black") + 
+    geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
+    geom_smooth(method = "glm", method.args = list(family = "binomial"), 
+      se = F) + 
+    geom_smooth(method = "glm", method.args = list(family = "binomial"), 
+      show.legend = F) + 
+    scale_color_brewer(name = NULL, palette = "Set2") + 
+    scale_y_continuous(breaks = seq(0, 1, 0.1)) + 
+    coord_cartesian(ylim = c(0.48, 1.0)) + 
+    labs(y = "Proportion correct", x = "Empathy quotient", 
+    title = "Proportion correct as a function of EQ and utterance type") +  
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+    theme(legend.key = element_rect(size = 1, fill = "white", colour = "white"), 
+      legend.key.size = unit(0.9, "cm"))
+
+
+
+ggsave(
+  filename = "learner_accuracy_by_speaker_variety.pdf", 
+  plot = learner_accuracy_by_speaker_variety, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
+ggsave(
+  filename = "learner_accuracy_by_utterance_type.pdf", 
+  plot = learner_accuracy_by_utterance_type, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
+ggsave(
+  filename = "learner_accuracy_by_lextale.pdf", 
+  plot = learner_accuracy_by_lextale, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 6, 
+  units = "in", 
+  dpi = 300
+  )
+
+ggsave(
+  filename = "learner_accuracy_by_st_eq.pdf", 
+  plot = learner_accuracy_by_st_eq, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 6, 
+  units = "in", 
+  dpi = 300
+  )

@@ -201,6 +201,7 @@ participant,group,eng_variety,spn_variety,have_ln,check_pass,check_fails,totals,
 605796ef0a4b32599655c385,learner,East coast,Puerto Rico,no,1,0,90,27,33,15,15,60,30,90,47.5,-3
 60579ed57a769950e21bcda2,learner,East coast,United States,no,1,0,90,31,29,18,12,60,30,90,55.833333333333336,7
 midd01,learner,Northeast,Honduras,no,1,0,90,53,7,18,12,60,30,90,74.16666666666666,29
+midd02,learner,Midwest,Puerto Rico,yes,1,0,90,48,12,23,7,60,30,90,78.33333333333334,34
 midd03,learner,Midwest,Spain,no,1,0,90,52,8,27,3,60,30,90,88.33333333333334,46
 midd04,learner,Northeast,Colombia,yes,1,0,90,49,11,23,7,60,30,90,79.16666666666667,35
 midd05,learner,Northeast,Spain,no,1,0,90,44,16,28,2,60,30,90,83.33333333333333,40
@@ -212,6 +213,7 @@ midd12,learner,South,United States,yes,1,0,90,39,21,28,2,60,30,90,79.16666666666
 midd17,learner,Southwest,Mexico,no,1,0,90,33,27,25,5,60,30,90,69.16666666666667,23
 midd19,learner,Midwest,Mexico,no,1,0,90,49,11,18,12,60,30,90,70.83333333333334,25
 midd22,learner,Midwest,Spain,yes,1,0,90,54,6,28,2,60,30,90,91.66666666666666,50
+midd24,learner,South,United States,no,1,0,90,35,25,25,5,60,30,90,70.83333333333334,25
 midd25,learner,Northeast,Spain,yes,1,0,90,47,13,29,1,60,30,90,87.5,45
 midd27,learner,Northeast,Spain,yes,1,0,90,48,12,18,12,60,30,90,70,24
 midd28,learner,Midwest,Colombia,yes,1,0,90,57,3,29,1,60,30,90,95.83333333333334,55
