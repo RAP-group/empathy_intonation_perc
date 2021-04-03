@@ -342,3 +342,64 @@ ggsave(
   units = "in", 
   dpi = 300
   )
+
+
+s_types <- c(
+  "b_Intercept", 
+  "b_sentence_typeinterrogativeMpartialMwh", 
+  "b_sentence_typedeclarativeMnarrowMfocus", 
+  "b_sentence_typedeclarativeMbroadMfocus"
+  )
+
+plot <- learner_response_01 %>% 
+  as_tibble() %>% 
+  select(b_Intercept, starts_with("b_sentence_type")) %>% 
+  transmute(
+    `Interrogative\ny/n` = b_Intercept, 
+    `Interrogative\nWh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+    `Declarative\nNarrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+    `Declarative\nBroad focus`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
+  ) %>% 
+  pivot_longer(cols = everything(), names_to = "parameter", values_to = "estimate") %>% 
+  mutate(prob = plogis(estimate)) %>% 
+  ggplot(., aes(x = parameter, y = prob)) + 
+    stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), height = 5, show.legend = F) +
+    stat_halfeye(position = position_nudge(x = 0.04), slab_alpha = 0.2, 
+      interval_alpha = 0, point_size = 0.75, fill = "tan", width = 0.5) + 
+    rcartocolor::scale_color_carto_d(palette = "Peach") + 
+    coord_cartesian(ylim = c(0.4, 1.00)) + 
+    labs(y = "Proportion correct", x = NULL, 
+      title = "Response accuracy", 
+      subtitle = "Range and distribution of correct responses for each utterance type") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+
+legend_text <- 
+  tibble(
+    xt = c(5, 4.125, 3.125, 1.875, 0.625, 7.75), 
+    yt = rep(1.02, 6), 
+    text = c("10%", "25%", "50%", "75%", "100%", 
+    "of participant accuracy falls in this range"))
+
+legend <- ggplot(data = tibble(x = 0:10, y = rep(1, 11)), aes(x, y)) + 
+  stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), show.legend = F) + 
+  rcartocolor::scale_color_carto_d(palette = "Peach") + 
+  coord_cartesian(ylim = c(0.9, 1.1)) + 
+  geom_text(data = legend_text, aes(xt, yt, label = text), 
+    family = "Times", color = "grey65", size = 3) + 
+  theme_void()
+
+plot_ins <- cowplot::ggdraw(plot) + 
+  cowplot::draw_plot(legend, x = .16, y = -0.02, width = .75, height = .35)
+
+learner_accuracy_by_utterance_type <- plot_ins + plot_layout(widths = 1)
+
+ggsave(
+  filename = "learner_accuracy_by_utterance_type.pdf", 
+  plot = learner_accuracy_by_utterance_type, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
