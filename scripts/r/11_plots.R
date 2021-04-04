@@ -218,50 +218,121 @@ sr %>%
 
 # ARESTY POSTER IMG
 
-# % correct by speaker variety
-learner_accuracy_by_speaker_variety <- learners %>% 
-  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
-  group_by(participant, speaker_variety) %>% 
-  summarize(avg_correct = mean(is_correct), .groups = "drop") %>% 
-  mutate(
-    speaker_variety = fct_recode(speaker_variety, `Puerto Rican` = "puertorican"), 
-    speaker_variety = str_to_title(speaker_variety, locale = "en")
-    ) %>% 
-  ggplot(., aes(x = speaker_variety, y = avg_correct)) + 
-    geom_hline(yintercept = nat_d$mean_cor$val, lty = 3) + 
-    geom_text(aes(label = label), hjust = 1, nudge_x = 0.5, size = 2.5, family = "Times", 
-      data = tibble(speaker_variety = "Puerto Rican", avg_correct = 0.83, 
-      label = paste0("Overall\nAvg. = ", round(nat_d$mean_cor$val, 2)))) + 
-    stat_summary(aes(fill = speaker_variety), fun.data = mean_cl_boot, 
-      geom = "pointrange", pch = 21, size = 0.8, show.legend = F) + 
-    scale_fill_brewer(palette = "Set2") + 
-    coord_cartesian(ylim = c(0.5, 1)) + 
-    labs(y = "Proportion correct", x = NULL, 
-         title = "Proportion correct as a function of speaker variety", 
-         caption = "Mean ± 95% CI") + 
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+# Accuracy by utterance type --------------------------------------------------
 
-learner_accuracy_by_utterance_type <- learners %>% 
-  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
-  group_by(participant, sentence_type) %>% 
-  summarize(avg_correct = mean(is_correct), .groups = "drop") %>% 
-  mutate(sentence_type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      TRUE ~ "Declarative\nbroad focus")) %>% 
-  ggplot(., aes(x = sentence_type, y = avg_correct)) + 
-    geom_hline(yintercept = nat_d$mean_cor$val, lty = 3) + 
-    geom_text(aes(label = label), hjust = 1, nudge_x = 0.5, size = 2.5, family = "Times", 
-      data = tibble(sentence_type = "Interrogative\ny/n", avg_correct = 0.83, 
-      label = paste0("Overall\nAvg. = ", round(nat_d$mean_cor$val, 2)))) + 
-    stat_summary(aes(fill = sentence_type), fun.data = mean_cl_boot, 
-      geom = "pointrange", pch = 21, size = 0.8, show.legend = F) + 
-    scale_fill_brewer(palette = "Set2") + 
+s_types <- c(
+  "b_Intercept", 
+  "b_sentence_typeinterrogativeMpartialMwh", 
+  "b_sentence_typedeclarativeMnarrowMfocus", 
+  "b_sentence_typedeclarativeMbroadMfocus"
+  )
+
+plot <- learner_response_01 %>% 
+  as_tibble() %>% 
+  select(b_Intercept, starts_with("b_sentence_type")) %>% 
+  transmute(
+    `Interrogative\ny/n` = b_Intercept, 
+    `Interrogative\nWh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+    `Declarative\nNarrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+    `Declarative\nBroad focus`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
+  ) %>% 
+  pivot_longer(cols = everything(), names_to = "parameter", values_to = "estimate") %>% 
+  mutate(prob = plogis(estimate)) %>% 
+  ggplot(., aes(x = parameter, y = prob)) + 
+    stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), height = 5, show.legend = F) +
+    stat_halfeye(position = position_nudge(x = 0.04), slab_alpha = 0.3, 
+      interval_alpha = 0, point_size = 0.75, fill = "tan", width = 0.5) + 
+    rcartocolor::scale_color_carto_d(palette = "Peach") + 
+    coord_cartesian(ylim = c(0.4, 1.00)) + 
     labs(y = "Proportion correct", x = NULL, 
-         title = "Proportion correct as a function of utterance type", 
-         caption = "Mean ± 95% CI") + 
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+      title = "Response accuracy", 
+      subtitle = "Range and distribution of correct responses for each utterance type") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+    theme(panel.grid.minor = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.major.y = element_line(size = 0.1),
+          axis.text.x = element_text(size = 11, face = "bold"),
+          axis.text.y = element_text(size = 9, color = "grey65"))
+
+legend_text <- 
+  tibble(
+    xt = c(5, 4.125, 3.125, 1.875, 0.625, 7.95), 
+    yt = rep(1.02, 6), 
+    text = c("10%", "25%", "50%", "75%", "100%", 
+    "of participant accuracy falls in this range"))
+
+legend <- ggplot(data = tibble(x = 0:10, y = rep(1, 11)), aes(x, y)) + 
+  stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), show.legend = F) + 
+  rcartocolor::scale_color_carto_d(palette = "Peach") + 
+  coord_cartesian(ylim = c(0.9, 1.1)) + 
+  geom_text(data = legend_text, aes(xt, yt, label = text), 
+    family = "Times", color = "grey65", size = 2.75) + 
+  theme_void()
+
+plot_ins <- cowplot::ggdraw(plot) + 
+  cowplot::draw_plot(legend, x = .23, y = -0.01, width = .6, height = .35)
+
+learner_accuracy_by_utterance_type <- plot_ins + plot_layout(widths = 1)
+
+ggsave(
+  filename = "learner_accuracy_by_utterance_type.pdf", 
+  plot = learner_accuracy_by_utterance_type, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
+
+# Accuracy by speaker variety -------------------------------------------------
+
+learner_accuracy_by_speaker_variety <- learner_response_01 %>% 
+  as_tibble() %>% 
+  select("b_Intercept", 
+    starts_with("r_speaker_variety[") & contains(",Intercept")) %>% 
+  transmute(
+    Andalusian    = `r_speaker_variety[andalusian,Intercept]`, 
+    Argentine     = `r_speaker_variety[argentine,Intercept]`, 
+    Castilian     = `r_speaker_variety[castilian,Intercept]`, 
+    Chilean       = `r_speaker_variety[chilean,Intercept]`, 
+    Cuban         = `r_speaker_variety[cuban,Intercept]`, 
+    Mexican       = `r_speaker_variety[mexican,Intercept]`, 
+    Peruvian      = `r_speaker_variety[peruvian,Intercept]`, 
+   `Puerto Rican` = `r_speaker_variety[puertorican,Intercept]`
+  ) %>% 
+  pivot_longer(everything(), names_to = "parameter", values_to = "estimate") %>% 
+  mutate(parameter = fct_relevel(parameter, rev)) %>% 
+  ggplot(., aes(x = estimate, y = parameter)) + 
+    geom_vline(xintercept = 0, lty = 3) +
+    stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
+      interval_alpha = 1, pch = 21, fill = "darkred", height = 0.8) + 
+    expand_limits(y = c(-0.25, 9.25)) + 
+    geom_text(data = tibble(x = -0.1, y = 0.05, text = sprintf("less accurate")), 
+      aes(x, y, label = text), size = 3, hjust = 1, family = "Times") + 
+    geom_text(data = tibble(x = 0.1, y = 0.05, text = "more accurate"), 
+      aes(x, y, label = text), size = 3, hjust = 0, family = "Times") + 
+    geom_curve(aes(x = -0.55, xend = -0.65, y = 0.025, yend = 0.03), size = 0.3, 
+      curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) + 
+    geom_curve(aes(x = 0.59, xend = 0.69, y = 0.025, yend = 0.03), size = 0.3, 
+      curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) + 
+    labs(x = "Log odds", y = NULL, 
+      title = "Response accuracy", 
+      subtitle = "Partially pooled estimates of accurate responses for each speaker variety") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
+
+ggsave(
+  filename = "learner_accuracy_by_speaker_variety.pdf", 
+  plot = learner_accuracy_by_speaker_variety, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
+
+# Accuracy by lextale ---------------------------------------------------------
 
 lt_me <- conditional_effects(learner_response_01, 
   effects = "lextale_std", 
@@ -277,6 +348,20 @@ learner_accuracy_by_lextale <- plot(lt_me, plot = F,
   title = "Proportion correct as a function of LexTALE score", 
   subtitle = "300 draws from the posterior distribution") +   
   ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+
+ggsave(
+  filename = "learner_accuracy_by_lextale.pdf", 
+  plot = learner_accuracy_by_lextale, 
+  path = here("figs", "poster"), 
+  width = 7, 
+  height = 6, 
+  units = "in", 
+  dpi = 300
+  )
+
+
+
+# Accuracy by utterance type and empathy --------------------------------------
 
 learner_accuracy_by_st_eq <- learners %>% 
   filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
@@ -301,38 +386,6 @@ learner_accuracy_by_st_eq <- learners %>%
     theme(legend.key = element_rect(size = 1, fill = "white", colour = "white"), 
       legend.key.size = unit(0.9, "cm"))
 
-
-
-ggsave(
-  filename = "learner_accuracy_by_speaker_variety.pdf", 
-  plot = learner_accuracy_by_speaker_variety, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 4, 
-  units = "in", 
-  dpi = 300
-  )
-
-ggsave(
-  filename = "learner_accuracy_by_utterance_type.pdf", 
-  plot = learner_accuracy_by_utterance_type, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 4, 
-  units = "in", 
-  dpi = 300
-  )
-
-ggsave(
-  filename = "learner_accuracy_by_lextale.pdf", 
-  plot = learner_accuracy_by_lextale, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 6, 
-  units = "in", 
-  dpi = 300
-  )
-
 ggsave(
   filename = "learner_accuracy_by_st_eq.pdf", 
   plot = learner_accuracy_by_st_eq, 
@@ -342,64 +395,3 @@ ggsave(
   units = "in", 
   dpi = 300
   )
-
-
-s_types <- c(
-  "b_Intercept", 
-  "b_sentence_typeinterrogativeMpartialMwh", 
-  "b_sentence_typedeclarativeMnarrowMfocus", 
-  "b_sentence_typedeclarativeMbroadMfocus"
-  )
-
-plot <- learner_response_01 %>% 
-  as_tibble() %>% 
-  select(b_Intercept, starts_with("b_sentence_type")) %>% 
-  transmute(
-    `Interrogative\ny/n` = b_Intercept, 
-    `Interrogative\nWh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
-    `Declarative\nNarrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
-    `Declarative\nBroad focus`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
-  ) %>% 
-  pivot_longer(cols = everything(), names_to = "parameter", values_to = "estimate") %>% 
-  mutate(prob = plogis(estimate)) %>% 
-  ggplot(., aes(x = parameter, y = prob)) + 
-    stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), height = 5, show.legend = F) +
-    stat_halfeye(position = position_nudge(x = 0.04), slab_alpha = 0.2, 
-      interval_alpha = 0, point_size = 0.75, fill = "tan", width = 0.5) + 
-    rcartocolor::scale_color_carto_d(palette = "Peach") + 
-    coord_cartesian(ylim = c(0.4, 1.00)) + 
-    labs(y = "Proportion correct", x = NULL, 
-      title = "Response accuracy", 
-      subtitle = "Range and distribution of correct responses for each utterance type") + 
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
-
-legend_text <- 
-  tibble(
-    xt = c(5, 4.125, 3.125, 1.875, 0.625, 7.75), 
-    yt = rep(1.02, 6), 
-    text = c("10%", "25%", "50%", "75%", "100%", 
-    "of participant accuracy falls in this range"))
-
-legend <- ggplot(data = tibble(x = 0:10, y = rep(1, 11)), aes(x, y)) + 
-  stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), show.legend = F) + 
-  rcartocolor::scale_color_carto_d(palette = "Peach") + 
-  coord_cartesian(ylim = c(0.9, 1.1)) + 
-  geom_text(data = legend_text, aes(xt, yt, label = text), 
-    family = "Times", color = "grey65", size = 3) + 
-  theme_void()
-
-plot_ins <- cowplot::ggdraw(plot) + 
-  cowplot::draw_plot(legend, x = .16, y = -0.02, width = .75, height = .35)
-
-learner_accuracy_by_utterance_type <- plot_ins + plot_layout(widths = 1)
-
-ggsave(
-  filename = "learner_accuracy_by_utterance_type.pdf", 
-  plot = learner_accuracy_by_utterance_type, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 4, 
-  units = "in", 
-  dpi = 300
-  )
-

@@ -20,5 +20,6 @@ library("patchwork")
 library("brms")
 library("tidybayes")
 library("ggridges")
+library("extrafont")
 
 # -----------------------------------------------------------------------------
