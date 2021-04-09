@@ -416,7 +416,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd24")
+check_participant(data = learners, id = "midd26")
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)

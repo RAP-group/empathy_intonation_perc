@@ -211,11 +211,13 @@ midd08,learner,Midwest,United States,no,1,0,28
 midd09,learner,East coast,Spain,yes,1,0,66
 midd11,learner,Midwest,Costa Rica,no,1,0,54
 midd12,learner,South,United States,yes,1,0,47
+midd14,learner,West coast,Spain,yes,1,0,33
 midd17,learner,Southwest,Mexico,no,1,0,68
 midd19,learner,Midwest,Mexico,no,1,0,42
 midd22,learner,Midwest,Spain,yes,1,0,37
 midd24,learner,South,United States,no,1,0,45
 midd25,learner,Northeast,Spain,yes,1,0,39
+midd26,learner,Northeast,United States,no,1,0,33
 midd27,learner,Northeast,Spain,yes,1,0,44
 midd28,learner,Midwest,Colombia,yes,1,0,59
 midd29,learner,South,Spain,no,1,0,35
