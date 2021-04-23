@@ -211,6 +211,7 @@ midd08,learner,Midwest,United States,no,1,0,90,30,30,26,4,60,30,90,68.3333333333
 midd09,learner,East coast,Spain,yes,1,0,90,47,13,26,4,60,30,90,82.5,39
 midd11,learner,Midwest,Costa Rica,no,1,0,90,43,17,23,7,60,30,90,74.16666666666667,29
 midd12,learner,South,United States,yes,1,0,90,39,21,28,2,60,30,90,79.16666666666666,35
+midd13,learner,Southwest,Spain,no,1,0,90,36,24,21,9,60,30,90,65,18
 midd14,learner,West coast,Spain,yes,1,0,90,51,9,21,9,60,30,90,77.5,33
 midd17,learner,Southwest,Mexico,no,1,0,90,33,27,25,5,60,30,90,69.16666666666667,23
 midd19,learner,Midwest,Mexico,no,1,0,90,49,11,18,12,60,30,90,70.83333333333334,25

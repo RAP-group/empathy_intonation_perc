@@ -145,7 +145,7 @@ learners %>%
   summarize(mean_cor = mean(is_correct)) %>% 
   arrange(desc(mean_cor)) %>% 
   ggplot(., aes(mean_cor)) + 
-    geom_histogram(binwidth = 0.04, fill = "grey40", color = "black")
+    geom_histogram(binwidth = 0.035, fill = "grey40", color = "black")
 
 # % correct by speaker variety
 learners %>% 
@@ -322,7 +322,7 @@ learners %>%
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
   ggplot(., aes(x = lextale_avg)) + 
-    geom_histogram(fill = "grey", color = "black", binwidth = 3)
+    geom_histogram(fill = "grey", color = "black", binwidth = 4.5)
 
 learners %>% 
   distinct(participant, lextale_avg, lextale_tra) %>% 
@@ -416,7 +416,7 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd30")
+check_participant(data = learners, id = "midd13")
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)
