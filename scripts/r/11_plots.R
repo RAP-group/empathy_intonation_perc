@@ -1,7 +1,14 @@
+# Source helpers and libs -----------------------------------------------------
+
+source(here::here("scripts", "r", "07_load_data.R"))
+
+# -----------------------------------------------------------------------------
+
+
 # Model stuff
 
 
-post_samples <- posterior_samples(native_response_01) %>% glimpse
+post_samples <- posterior_samples(native_response_01) %>% 
   rename(intercept = b_Intercept, 
          participant_sd = sd_participant__Intercept, 
          sentence_type_sd = sd_sentence_type__Intercept, 
@@ -9,7 +16,7 @@ post_samples <- posterior_samples(native_response_01) %>% glimpse
          speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
 
 # Grouping variable posteriors
-posterior_samples(native_response_01) %>% 
+posterior_samples(all_mods$native_response_01) %>% 
   select(starts_with("sd")) %>% 
   gather(key, sd) %>% 
   mutate(key = str_remove(key, "sd_") %>% 
@@ -138,13 +145,6 @@ p_post_speaker_variety
 
 
 
-as_tibble(native_response_01) %>% glimpse()
-
-ranef(native_response_01)$`speaker_variety:sentence_type:sentence`
-ranef(native_response_01)$`speaker_variety:sentence_type`
-ranef(native_response_01)$speaker_variety
-ranef(native_response_01)$sentence_type 
-ranef(native_response_01)$participant 
 
 
 
@@ -161,55 +161,6 @@ ranef(native_response_01)$participant
 
 
 
-
-
-
-
-
-# SPeech rate stuff
-
-
-sr_desc <- sr %>% 
-  pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
-  names_to = "metric", values_to = "val") %>% 
-  group_by(speaker_variety, metric) %>% 
-  summarize(avg_val = mean(val), med_val = median(val), .groups = "drop") %>% 
-  pivot_longer(cols = c("avg_val", "med_val"), names_to = "measure", 
-    values_to = "val")
-
-sr %>% 
-  ggplot() + 
-  aes(x = speech_rate) + 
-  facet_wrap(~ speaker_variety, nrow = 2) + 
-  geom_histogram(fill = "lightblue", color = "black", 
-    bins = 8, 
-    aes(y = ..density..)) + 
-  geom_density(size = 1, color = "darkred") + 
-  geom_vline(data = filter(sr_desc, metric == "speech_rate"), 
-    aes(xintercept = val, color = measure)) + 
-  scale_color_viridis_d(name = NULL, option = "D", end = 0.8, 
-                        labels = c("Mean", "Median")) + 
-  labs(x = "Speech rate", y = "Density") + 
-  ds4ling::ds4ling_bw_theme(base_family = "Times", base_size = 16)
-
-sr %>% 
-  pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
-    names_to = "metric", values_to = "val") %>% 
-  group_by(metric) %>% 
-  mutate(val_std = (val - mean(val)) / sd(val), 
-         speaker_variety = fct_relevel(speaker_variety, rev)) %>% 
-  filter(metric == "speech_rate") %>% 
-  ggplot() + 
-  aes(x = val_std, y = speaker_variety, color = speaker_variety) + 
-  geom_vline(xintercept = 0, lty = 3) + 
-  geom_beeswarm(alpha = 0.2, groupOnX = F, show.legend = F) + 
-  stat_summary(fun.data = mean_cl_normal, geom = "pointrange", show.legend = F, 
-    pch = 21, color = "black", size = 1.1, aes(fill = speaker_variety)) + 
-  scale_color_viridis_d(option = "D", end = 0.9) + 
-  scale_fill_viridis_d(option = "D", end = 0.9) + 
-  coord_cartesian(xlim = c(-2.5, 2.5)) + 
-  labs(x = "Speech rate (std)", y = "Spanish variety") + 
-  ds4ling::ds4ling_bw_theme(base_family = "Times", base_size = 16)
 
 
 
@@ -302,7 +253,7 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
    `Puerto Rican` = `r_speaker_variety[puertorican,Intercept]`
   ) %>% 
   pivot_longer(everything(), names_to = "parameter", values_to = "estimate") %>% 
-  mutate(parameter = fct_relevel(parameter, rev)) %>% 
+  mutate(parameter = fct_reorder(parameter, estimate, min)) %>% 
   ggplot(., aes(x = estimate, y = parameter)) + 
     geom_vline(xintercept = 0, lty = 3) +
     stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
@@ -341,13 +292,18 @@ lt_me <- conditional_effects(learner_response_01,
   spaghetti = TRUE, 
   nsamples = 300)
 
+
+
 learner_accuracy_by_lextale <- plot(lt_me, plot = F, 
-  line_args = list(size = 3, colour = "white"))[[1]] + 
-  coord_cartesian(ylim = c(NA, 1)) + 
-  labs(y = "Proportion correct", x = "LexTALE score", 
+  line_args = list(size = 3), 
+  spaghetti_args = list(colour = alpha("#440154FF", 0.1)))[[1]] + 
+  coord_cartesian(ylim = c(0.4, 1), expand = F) + 
+  geom_hline(yintercept = 0.5, lty = 3) + 
+  scale_y_continuous(position = "right") + 
+  labs(y = NULL, x = "LexTALE score", 
   title = "Proportion correct as a function of LexTALE score", 
   subtitle = "300 draws from the posterior distribution") +   
-  ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
 
 ggsave(
   filename = "learner_accuracy_by_lextale.pdf", 
@@ -363,35 +319,53 @@ ggsave(
 
 # Accuracy by utterance type and empathy --------------------------------------
 
-learner_accuracy_by_st_eq <- learners %>% 
-  filter(rt_adj >= -0.1, rt_adj <= 5) %>% 
-  mutate(sentence_type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      TRUE ~ "Declarative\nbroad focus")) %>% 
-  ggplot(., aes(x = eq_score, y = is_correct, color = sentence_type)) + 
-    geom_hline(yintercept = 0.5, lty = 3, color = "black") + 
-    geom_jitter(width = 0.3, height = 0.01, alpha = 0.05, pch = 21) + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"), 
-      se = F) + 
-    geom_smooth(method = "glm", method.args = list(family = "binomial"), 
-      show.legend = F) + 
-    scale_color_brewer(name = NULL, palette = "Set2") + 
-    scale_y_continuous(breaks = seq(0, 1, 0.1)) + 
-    coord_cartesian(ylim = c(0.48, 1.0)) + 
-    labs(y = "Proportion correct", x = "Empathy quotient", 
-    title = "Proportion correct as a function of EQ and utterance type") +  
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
-    theme(legend.key = element_rect(size = 1, fill = "white", colour = "white"), 
-      legend.key.size = unit(0.9, "cm"))
+eq_st_me <- conditional_effects(learner_response_01, 
+  effects = "eq_std:sentence_type", 
+  re_formula = NA, 
+  method = "posterior_epred", 
+  spaghetti = TRUE, 
+  nsamples = 300)
+
+sentence_labs <- c(
+  "Interrogative\ny/n", 
+  "Interrogative\nWh-", 
+  "Declarative\nnarrow focus", 
+  "Declarative\nbroad focus")
+
+utterance_colors <- c(
+  "#440154"
+)
+
+
+learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F, 
+  line_args = list(size = 3))[[1]] + 
+  coord_cartesian(ylim = c(0.4, 1), expand = F) + 
+  geom_hline(yintercept = 0.5, lty = 3) + 
+  scale_color_manual(
+    name = NULL, 
+    values = alpha(viridis_pal()(4), 0.1), 
+    labels = sentence_labs) + 
+  labs(y = "Proportion correct", x = "Empathy quotient", 
+  title = "Proportion correct as a function of EQ and utterance type", 
+  subtitle = "300 draws from the posterior distribution") + 
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+  theme(
+    legend.position = c(0.5, 0.07), 
+    legend.direction = "horizontal", 
+    legend.key.size = unit(0.7, "cm"), 
+    legend.text.align = 0.5) + 
+  guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
+
+# Combine with accuracy by lextale for abstracts
+plot_abstract_hls <- learner_accuracy_eq_by_st + learner_accuracy_by_lextale
 
 ggsave(
-  filename = "learner_accuracy_by_st_eq.pdf", 
-  plot = learner_accuracy_by_st_eq, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 6, 
+  filename = "plot_abstract_hls.png", 
+  plot = plot_abstract_hls, 
+  path = here("figs", "abstract"), 
+  width = 11, 
+  height = 5, 
   units = "in", 
   dpi = 300
   )
+

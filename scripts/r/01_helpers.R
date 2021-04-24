@@ -55,6 +55,23 @@ fd_bw <- function(x) {
   return(out)
 }
 
+# Load all rds files in a directory
+load_models <- function(path, obj_type) { 
+  
+  # Get object names
+  obj_reg <- paste0("\\.", obj_type, "$")
+  the_names <- list.files(path = path, pattern = obj_reg) %>% 
+  str_remove(paste0(".", obj_type))
+
+  # Get objects
+  the_objs <- dir_ls(path = path, regexp = obj_reg) %>%
+  map(readRDS)
+
+  # Rename objects
+  names(the_objs) <- the_names
+  return(the_objs)
+}
+
 # -----------------------------------------------------------------------------
 
 

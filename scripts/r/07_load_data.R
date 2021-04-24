@@ -38,3 +38,11 @@ full_2afc <- read_csv(here("data", "tidy", "complete_2afc_tidy.csv"))
 id_remove <- readRDS(here("data", "tidy", "participants_removed_list.Rds"))
 
 # -----------------------------------------------------------------------------
+
+
+
+# Load all mods ---------------------------------------------------------------
+
+all_mods <- load_models(path = here("models"), obj_type = "rds")
+
+# -----------------------------------------------------------------------------

@@ -1,6 +1,31 @@
+# Small data ------------------------------------------------------------------
+#
+#
+#
+#
+#
+# -----------------------------------------------------------------------------
 
 
 
+# Source helpers and libs -----------------------------------------------------
+
+source(here::here("scripts", "r", "07_load_data.R"))
+
+# -----------------------------------------------------------------------------
+
+
+
+# Learner descriptives --------------------------------------------------------
+
+n_learners <- learners$participant %>% unique %>% length
+n_removed  <- id_remove$learners %>% nrow
+
+# -----------------------------------------------------------------------------
+
+
+
+# Speech rate info ------------------------------------------------------------
 
 sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
@@ -11,8 +36,13 @@ sr %>%
     values_to = "val") %>% 
   printy::super_split(speaker_variety, metric)
 
+# -----------------------------------------------------------------------------
 
 
+
+
+
+# Time to complete tasks ------------------------------------------------------
 
 time <- bind_rows(
   read_csv(here("data", "raw", "prolific_export_602aa93df732e9107ec837da_l2_reset.csv")), 
@@ -27,10 +57,3 @@ time <- bind_rows(
 
 t_mean   <- time$min %>% mean
 t_median <- time$min %>% median
-
-
-time %>% 
-  ggplot() + 
-    aes(x = min) + 
-    geom_histogram(binwidth = 1, color = "black", fill = "grey90") + 
-    geom_vline(xintercept = t_median, lty = 3)
