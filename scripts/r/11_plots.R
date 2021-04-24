@@ -302,7 +302,8 @@ learner_accuracy_by_lextale <- plot(lt_me, plot = F,
   scale_y_continuous(position = "right") + 
   labs(y = NULL, x = "LexTALE score", 
   title = "Proportion correct as a function of LexTALE score", 
-  subtitle = "300 draws from the posterior distribution") +   
+  subtitle = "300 draws from the posterior distribution") + 
+  annotate("text", x = -1, y = 0.97, label = "(B)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
 
 ggsave(
@@ -348,6 +349,7 @@ learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F,
   labs(y = "Proportion correct", x = "Empathy quotient", 
   title = "Proportion correct as a function of EQ and utterance type", 
   subtitle = "300 draws from the posterior distribution") + 
+  annotate("text", x = -2, y = 0.98, label = "(A)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(
     legend.position = c(0.5, 0.07), 
@@ -357,7 +359,7 @@ learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F,
   guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
 
 # Combine with accuracy by lextale for abstracts
-plot_abstract_hls <- learner_accuracy_eq_by_st + learner_accuracy_by_lextale
+plot_abstract_hls <- learner_accuracy_eq_by_st + learner_accuracy_by_lextale 
 
 ggsave(
   filename = "plot_abstract_hls.png", 
