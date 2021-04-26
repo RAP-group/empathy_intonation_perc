@@ -303,7 +303,7 @@ learner_accuracy_by_lextale <- plot(lt_me, plot = F,
   labs(y = NULL, x = "LexTALE score", 
   title = "Proportion correct as a function of LexTALE score", 
   subtitle = "300 draws from the posterior distribution") + 
-  annotate("text", x = -1, y = 0.97, label = "(B)", family = "Times") +
+  annotate("text", x = -1.25, y = 0.98, label = "(B)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
 
 ggsave(
@@ -349,7 +349,7 @@ learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F,
   labs(y = "Proportion correct", x = "Empathy quotient", 
   title = "Proportion correct as a function of EQ and utterance type", 
   subtitle = "300 draws from the posterior distribution") + 
-  annotate("text", x = -2, y = 0.98, label = "(A)", family = "Times") +
+  annotate("text", x = -1.95, y = 0.98, label = "(A)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(
     legend.position = c(0.5, 0.07), 

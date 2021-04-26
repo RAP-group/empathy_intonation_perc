@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  11pt,
+  12pt,
 ]{article}
 \usepackage{lmodern}
 \usepackage{amsmath}
@@ -38,7 +38,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={cool title here},
+  pdftitle={Using intonation to disambiguate meaning:},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -86,7 +86,15 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\title{cool title here}
+\title{Using intonation to disambiguate meaning:}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{The role of empathy and proficiency in L2 perceptual
+development}
 \author{}
 \date{\vspace{-2.5em}}
 
@@ -99,21 +107,22 @@ Specifically, we focus on the role of empathy in the development of
 second language (L2) prosody by analyzing the perception and processing
 of intonation in questions and statements in L2 Spanish. It is common
 for L2 learners to struggle with L2 intonation, often resulting in
-comprehension and communication difficulties. Previous research attests
-that learners gradually acquire target-language prosody as they gain
-proficiency in the language. Concretely, the perception and processing
-of L2 intonation has been shown to improve in conjunction with
-proficiency conditional on intonation type (Brandl et al., 2020), with
-polar (`yes/no') interrogatives being more difficult to process and
-acquire when compared with simple statements. The construct empathy has
-been shown to influence native language processing in how listeners
-interpret intonation and meaning when words are ambiguous (Esteve-Gibert
-et al., 2020). Specifically, higher empathy individuals, in comparison
-with lower empathy individuals, appear to be more sensitive to
-intonation cues in the process of forming sound-meaning associations. We
-extend this research to L2 acquisition in order to determine if
-individual differences in pragmatic skills affect the development of
-intonation in L2 processing and sentence comprehension.
+comprehension and communication difficulties (Trofimovich \& Baker,
+2006). Previous research attests that learners gradually acquire
+target-language prosody as they gain proficiency in the language.
+Concretely, the perception and processing of L2 intonation has been
+shown to improve in conjunction with proficiency conditional on
+intonation type (Brandl et al., 2020), with polar (`yes/no')
+interrogatives being more difficult to process and acquire when compared
+with simple statements. The construct empathy has been shown to
+influence native language processing in how listeners interpret
+intonation and meaning when words are ambiguous (Esteve-Gibert et al.,
+2020). Specifically, higher empathy individuals, in comparison with
+lower empathy individuals, appear to be more sensitive to intonation
+cues in the process of forming sound-meaning associations. We extend
+this research to L2 acquisition in order to determine if individual
+differences in pragmatic skills affect the development of intonation in
+L2 processing and sentence comprehension.
 
 A total of 223 participants completed a two-alternative forced choice
 (2AFC) task in which four utterance types were categorized as questions
@@ -128,11 +137,11 @@ proficiency, as well as the Empathy Quotient questionnaire in English
 assessment of the construct empathy.
 
 The data were analyzed using Bayesian multilevel regression and Drift
-Diffusion models. The analyses showed that empathy scores were
-positively correlated with higher accuracy in polar interrogatives (see
-figure x). Additionally, we replicated findings from Brandl et al.
+Diffusion models. The results replicated findings from Brandl et al.
 (2020) showing that learner response accuracy improved as a function of
-proficiency for all utterance types. As is the case with L1 research,
+proficiency for all utterance types. Importantly, empathy scores were
+positively correlated with higher accuracy in polar interrogatives (see
+Figure \ref{fig:plot-2panel-emp-prof}). As is the case with L1 research,
 the present project underscores the importance of considering individual
 pragmatic differences when examining intonational meaning processing and
 sentence comprehension in an L2. More specifically, the results also
@@ -146,7 +155,7 @@ to better account for individual differences in L2 learning.
 \begin{figure}
 \includegraphics[width=1\linewidth]{/Users/casillas/academia/research/in_progress/empathy_intonation_perc/figs/abstract/plot_abstract_hls} \caption{Conditional effects of response accuracy as a function of Empathy 
 quotient and utterance type (panel A) and standardized LexTALE score (panel B). 
-Individual colored lines represent 300 draws from the posterior distribution. White lines indicate the median lines of best fit from the posterior.}\label{fig:plot-2afc-3way}
+Individual colored lines represent 300 draws from the posterior distribution. White lines indicate the median lines of best fit from the posterior.}\label{fig:plot-2panel-emp-prof}
 \end{figure}
 
 \hypertarget{references}{%
@@ -185,6 +194,12 @@ Cognition}, 1--15. \url{https://doi.org/10.3758/s13421-019-00990-w}
 Izura, C., Cuetos, F., \& Brysbaert, M. (2014). Lextale-esp: A test to
 rapidly and efficiently assess the spanish vocabulary size.
 \emph{Psicol{ó}gica}, \emph{35}(1), 49--66.
+
+\leavevmode\hypertarget{ref-trofimovich2006learning}{}%
+Trofimovich, P., \& Baker, W. (2006). Learning second language
+suprasegmentals: Effect of L2 experience on prosody and fluency
+characteristics of L2 speech. \emph{Studies in Second Language
+Acquisition}, 1--30. \url{https://doi.org/10.1017/S0272263106060013}
 
 \end{CSLReferences}
 
