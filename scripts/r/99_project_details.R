@@ -20,14 +20,20 @@ source(here::here("scripts", "r","01_helpers.R"))
 
 # This is proof of concept, will change
 time_line_df <- tribble(
- ~"wp",          ~"activity",             ~"start_date",  ~"end_date",
-  "Preparation",  "Registered report",     "2020-09-16",   "2021-03-15",
+ ~"wp",          ~"activity",              ~"start_date",  ~"end_date", 
+#  "Preparation",  "Winter break",          "2020-12-20",   "2021-01-08", 
+#  "Preparation",  "Winter break",          "2021-12-20",   "2022-01-08", 
+#  "Preparation",  "Summer break",          "2021-06-01",   "2021-10-01", 
+  "Preparation",  "Pre-registration",      "2020-09-16",   "2021-03-15",
   "Preparation",  "Materials prep.",       "2020-09-16",   "2021-02-14",
   "Preparation",  "Recruting",             "2021-02-17",   "2021-02-25",
   "Preparation",  "Analyses",              "2021-02-25",   "2021-03-01", 
-  "Presentation", "Manuscript prep.",      "2021-03-15",   "2021-05-01", 
-  "Presentation", "Manuscript submission", "2021-05-01",   "2021-05-10", 
-  "Presentation", "Abstract submission",   "2021-04-01",   "2021-04-28"
+  "Presentation", "Manuscript prep.",      "2021-10-23",   "2021-12-01", 
+  "Presentation", "Manuscript submission", "2021-12-01",   "2021-12-01", 
+  "Presentation", "Deadline - HLS",        "2021-04-01",   "2021-04-28", 
+  "Presentation", "Conference - HLS",      "2021-10-07",   "2021-10-07", 
+  "Presentation", "Deadline - CASPSLaP",   "2021-10-30",   "2021-10-30", 
+  "Presentation", "Conference - CASPSLaP", "2022-02-17",   "2022-02-19", 
 )
 
 # "Spots" can be used to mark when things actually occur on expected timeline
@@ -41,10 +47,10 @@ time_line_spots <- tribble(
 # Generate plot 
 p_project_timeline <- ganttrify(
   project = time_line_df,
-  spots = time_line_spots,
+ # spots = time_line_spots,
   by_date = TRUE,
   exact_date = TRUE,
-  size_text_relative = 1.2,
+  size_text_relative = 1,
   month_number = FALSE,
   font_family = "Times") + 
   geom_vline(xintercept = time_diff(date = Sys.Date()), lty = 3)
