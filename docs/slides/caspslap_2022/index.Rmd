@@ -1,0 +1,1027 @@
+---
+title: "If you can believe it you can perceive it:<br/>Conceptually cueing the double phonemic boundary effect in late bilinguals"
+author: |
+  Nicole Rodríguez, Cristina Lozano Argüelles, Laura Fernández Arroyo, 
+  Ezequiel Durand, Juan José Garrido, Jennifer Markovits Rojas, 
+  Jessica Varela, Núria de Rocafiguera<sup>*</sup>, Joseph V. Casillas
+institute: "Rutgers University | Universitat Pompeu Fabra<sup>*</sup>"
+date: "CASPSLAP 2020"
+output:
+  xaringan::moon_reader:
+    chakra: "https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js"
+    lib_dir: libs
+    css: [default, hygge, rutgers, rutgers-fonts]
+    nature:
+      beforeInit: ["https://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+    includes:
+      in_header: "./libs/partials/header.html"
+---
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r, 'source-libs', message=F, echo=F}
+source(here::here("scripts", "08_small_data.R"))
+library("fontawesome")
+```
+
+```{r, 'bib-setup', echo=F}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+bib <- ReadBib(here("docs", "manuscript", "includes", "bib", 
+                    "language_set.bib"), check = FALSE)
+```
+
+class: center
+count: false
+background-image: url(./libs/img/osf_dark.png), url(./libs/img/open_data.png), url(./libs/img/open_materials.png), url(./libs/img/prereg.png), url(./libs/img/qr4.png)
+background-size: 100px, 100px, 100px, 100px, 110px
+background-position: 20% 70%, 35% 70%, 50% 70%, 65% 70%, 80% 70%
+
+
+# <br><br>.grey[Slides, data, code, and pre-print available]
+
+### https://osf.io/cp9bs/
+
+---
+exclude: true
+
+# Summary 
+
+- Previous studies attest that early bilinguals can modify their perceptual 
+identification according to the fine-phonetic detail of the language they 
+believe they are hearing. 
+
+- Following `r Citet(bib, "gonzales2019")`, we replicate the double phonemic 
+boundary effect in late bilinguals (LBs) using conceptual-based cueing.
+
+- We administered a forced choice identification task to 169 native English 
+adult learners of Spanish in two sessions. 
+
+- In both sessions participants identified the same /b/-/p/ voicing continuum, 
+but language context was cued via the instructions. 
+  
+- The data were analyzed using Bayesian multilevel regression. 
+  
+- Learners' responses varied as a function of the language they believed they 
+were hearing and this effect was further modulated by L2 proficiency. 
+
+- Higher proficiency learners showed stronger evidence for double phonemic 
+boundaries. 
+
+- This research demonstrates that the double phonemic boundary effect can be 
+conceptually cued in LBs and supports accounts positing selective activation 
+of independent perception grammars in L2 learning.
+
+---
+background-color: black
+background-image: url(./libs/img/brain.gif)
+background-position: 100% 50%
+background-size: 450px
+
+# Background
+
+.big[.white[
+- Being bilingual implies navigating</br>communicative situations in which</br> 
+it is necessary to produce/perceive</br>speech in multiple languages
+]]
+
+--
+
+.big[.white[
+- Switching between language-specific</br>phonetic targets<sup>1</sup> and 
+phonological</br>rules<sup>2</sup>
+]]
+
+.footnote[.RUred[
+<sup>1</sup>`r Citet(bib, "flege1987production")`  
+<sup>2</sup>`r Citet(bib, "simon2010phonological")`
+]]
+
+--
+
+.big[.white[
+- Often in real time
+]]
+
+---
+background-image: url(./libs/img/sp_en_stops_color.png)
+background-size: contain
+
+???
+
+- English and Spanish both contrast bilabial stops based on voicing, /b/-/p/, 
+though the phonetic realizations differ in each language. 
+
+- English distinguishes between lag stops, whereas Spanish distinguishes 
+between pre-voiced and short-lag stops. 
+
+- Bilingual speakers regulate fine-phonetic detail such as this by seamlessly 
+adjusting to the ambient languages.
+
+---
+
+# Background
+
+</br>
+
+.big[
+<ul class="no_bullet">
+<li class="prod">Early and late bilinguals develop language-specific phonetic 
+categories in speech production<sup>1</sup></br>.white[.]</li>
+</ul>
+]
+
+--
+
+</br>
+
+.big[
+<ul class="no_bullet">
+<li class="perc">Growing body of research showing early and late bilinguals 
+also employ language-specific perceptual categorization routines<sup>2</sup></li>
+</ul>
+]
+
+.footnote[
+<sup>1</sup>`r Citet(bib, "flege1987production")`  
+<sup>2</sup>`r Citet(bib, c("elman1977", "hazan1993", "casillas2018"))`
+]
+
+---
+
+# Background
+
+</br>
+
+.big[
+- Perception of the incoming acoustic signal seems to be modulated 
+by the language the bilingual listener *believes* they are hearing
+]
+
+--
+
+.big[
+- The listener's beliefs can derive directly from the acoustic signal<sup>1</sup>
+]
+
+--
+
+.big[
+- Recent studies suggest they can also be cued conceptually<sup>2</sup>
+]
+
+
+.footnote[
+<sup>1</sup>e.g., `r Citet(bib, c("gonzales2013", "casillas2018"))`  
+<sup>2</sup>`r Citet(bib, c("gonzales2019", "yazawa2019language"))`
+]
+
+???
+
+- That is, early bilinguals modify their perceptual categorization routines in 
+accordance with the fine-phonetic detail of the language they believe they are 
+hearing. 
+
+---
+
+# Bilingual language modes
+
+.large[
+- Refers to the level of activation of an individual's languages 
+in any given moment .lightgrey[`r Citep(bib, "Grosjean:2001vr")`]
+]
+
+--
+
+.large[
+<p></p>
+- Continuum between **monolingual mode** (one language activated), and 
+.blue[bilingual mode] (dual activation)
+  - Bilinguals *produce* language-specific phonetic targets in **monolingual** 
+  testing situations .lightgrey[`r Citep(bib, "flege1987production", before = "e.g., ")`]
+  - Cross-linguistic interactions occur when the communicative setting 
+  activates .blue[both languages] 
+  .lightgrey[`r Citep(bib, "simonet_2014", before = "e.g., ")`]
+]
+
+--
+
+.large[
+- Increasing evidence bilinguals *also* adjust perceptual categorization 
+routines based on the language context in **monolingual**<sup>1</sup>
+and .blue[bilingual]<sup>2</sup> modes
+]
+
+.footnote[
+<sup>1</sup>e.g., `r Citet(bib, c("gonzales2013", "gonzales2019"))`  
+<sup>2</sup>`r Citet(bib, "casillas2018")`
+]
+
+--
+
+.large[
+- This has been referred to as the **double phonemic boundary effect** 
+]
+
+---
+
+# Double phonemic boundary effect
+
+### `r Citet(bib, "gonzales2013")`
+
+.large[
+- Early Spanish-English bilinguals identified resynthesized VOT continua of 
+pseudowords ('bafri', 'pafri'). 
+]
+
+--
+
+.large[
+- *Language context* manipulated through instructions and the 
+acoustic properties of target word endings
+]
+
+--
+
+.large[
+- **Finding**: perceptual identification depended on the 
+language-specific continua
+]
+
+???
+
+- English-specific final syllable [fɹi] appended to stimuli to 
+create "English-like" continuum
+- Spanish-specific final syllable [fri] appended to stimuli to 
+create "Spanish-like" continuum
+- Continua <u>identical</u> regarding acoustic properties of stop segments
+
+- Bilinguals hearing English-like continuum displayed identification 
+functions typical of English speakers
+- Bilinguals hearing Spanish-like continuum had more 'voiceless' 
+responses, consistent with fine-phonetic detail of Spanish stop voicing 
+(shift to the left)
+
+---
+background-image: url(../../manuscript/includes/figs/logistic_function/plot_logistic_function.png)
+background-size: 100%
+
+---
+
+# Second Language Linguistic Perception Model (L2LP)
+
+.pull-left[
+
+- Difficulties with non-native segments/contrasts explained via 
+acoustic similarities/differences with L1 phonology
+
+- During initial stages of L2 learning a copy of the L1 perception grammar is 
+made, develops independently of the L1 grammar
+
+]
+
+--
+
+.pull-right[
+
+- With exposure... 
+  - Adjustments made to L2 perception grammar via comparison module, the
+  Gradual Learning Algorithm (GLA)
+
+  - Learn to selectively activate the L1/ L2 perception grammars
+
+]
+
+---
+count: false
+
+# Second Language Linguistic Perception Model (L2LP)
+
+.pull-left[
+
+- Difficulties with non-native segments/contrasts explained via 
+acoustic similarities/differences with L1 phonology
+
+- During initial stages of L2 learning a copy of the L1 perception grammar is 
+made, develops independently of the L1 grammar
+
+.full-width[.content-box-blue[
+- **New scenario**: contrast perceived as novel, new phonetic category must be 
+formed
+- **Similar scenario**: contrast perceived as familiar, must reset boundary 
+between the acoustic properties of contrast
+- **Subset scenario**: single L2 category perceptually assimilated to multiple
+L1 categories
+]]]
+
+.pull-right[
+
+- With exposure... 
+  - Adjustments made to L2 perception grammar via comparison module, the
+  Gradual Learning Algorithm (GLA)
+
+  - Learn to selectively activate the L1/ L2 perception grammars
+
+]
+
+---
+count: false
+
+# Second Language Linguistic Perception Model (L2LP)
+
+.pull-left[
+
+- Difficulties with non-native segments/contrasts explained via 
+acoustic similarities/differences with L1 phonology
+
+- During initial stages of L2 learning a copy of the L1 perception grammar is 
+made, develops independently of the L1 grammar
+
+.full-width[.content-box-blue[
+- **New scenario**: contrast perceived as novel, new phonetic category must be 
+formed
+- **Similar scenario**: contrast perceived as familiar, must reset boundary 
+between the acoustic properties of contrast
+- **Subset scenario**: single L2 category perceptually assimilated to multiple
+L1 categories
+]]]
+
+.pull-right[
+
+- With exposure... 
+  - Adjustments made to L2 perception grammar via comparison module, the
+  Gradual Learning Algorithm (GLA)
+
+  - Learn to selectively activate the L1/ L2 perception grammars
+
+.full-width[.content-box-red[
+- Spanish/English stop voicing contrasts are considered a 'similar scenario'
+- Same phonological contrasts, different phonetic realizations
+- L2 learners of Spanish must adjust voicing boundaries to accurately produce 
+and perceive Spanish stops
+]]]
+
+---
+
+# Double phonemic boundary effect
+
+### `r Citet(bib, "gonzales2013")`
+
+- Early Spanish-English bilinguals display DPBE in monolingual mode
+- Acoustically cued
+
+--
+
+### `r Citet(bib, "casillas2018")`
+
+- Replicates `r Citet(bib, "gonzales2013")`, extends to adult L2 learners
+- Acoustically cued
+
+--
+
+### `r Citet(bib, "gonzales2019")`
+
+- Early Spanish-English bilinguals display DPBE in monolingual mode
+- Conceptually cued
+
+---
+class: middle
+
+.Large[
+.center[
+
+|  .white[...............] | Acoustically</br>cued                  |    | Conceptually</br>cued          |
+| :----------------------- | :------------------------------------: | :- | :----------------------------: |
+| .grey[Early</br>learner] | .RUred[`r Citet(bib, "gonzales2013")`] |    | .white[Gonzales et al. (2019)] |
+| .grey[Late</br>learner]  | .white[`r Citet(bib, "casillas2018")`] | .white[....] |                      |
+
+]
+]
+
+---
+class: middle
+count: false
+
+.Large[
+.center[
+
+|  .white[...............] | Acoustically</br>cued                  |    | Conceptually</br>cued          |
+| :----------------------- | :------------------------------------: | :- | :----------------------------: |
+| .grey[Early</br>learner] | `r Citet(bib, "gonzales2013")`         |    | .white[Gonzales et al. (2019)] |
+| .grey[Late</br>learner]  | .RUred[`r Citet(bib, "casillas2018")`] | .white[....] |                      |
+
+
+]
+]
+
+---
+class: middle
+count: false
+
+.Large[
+.center[
+
+|  .white[...............] | Acoustically</br>cued          |    | Conceptually</br>cued          |
+| :----------------------- | :----------------------------: | :- | :----------------------------: |
+| .grey[Early</br>learner] | `r Citet(bib, "gonzales2013")` |    | .RUred[Gonzales et al. (2019)] |
+| .grey[Late</br>learner]  | `r Citet(bib, "casillas2018")` | .white[....] |                      |
+
+]
+]
+
+---
+class: middle
+count: false
+
+.Large[
+.center[
+
+|  .white[...............] | Acoustically</br>cued          |    | Conceptually</br>cued  |
+| :----------------------- | :----------------------------: | :- | :--------------------: |
+| .grey[Early</br>learner] | `r Citet(bib, "gonzales2013")` |    | Gonzales et al. (2019) |
+| .grey[Late</br>learner]  | `r Citet(bib, "casillas2018")` | .white[....] | .RUred[?]    |
+
+]
+]
+
+---
+
+# The big picture
+
+</br>
+
+.big[
+- Unclear how dynamic perceptual categorization develops and whether or 
+not it can be conceptually cued in late bilinguals
+]
+
+--
+
+.big[
+- We did a conceptual replication of 
+`r Citet(bib, "gonzales2019")`
+]
+
+--
+
+.big[
+- We tested the extent to which adult second language (L2) learners of Spanish 
+modulated their identification of a resynthesized voice timing continuum based 
+on the language they believed they were hearing.
+]
+
+---
+class: title-slide-section-grey, middle
+
+# .RUred[Research questions]
+
+.big[
+Can late bilinguals be conceptually cued to employ language-specific 
+perceptual categorization routines?
+]
+
+--
+
+.big[
+If so, how is the double phonemic boundary effect modulated by L2 proficiency?
+]
+
+---
+class: title-slide-section-red, middle
+
+# Method
+
+---
+background-image: url(https://raw.githubusercontent.com/jvcasillas/media/master/linguistics/img/perception_2.png)
+background-size: 150px
+background-position: 90% 20%
+
+# Method
+
+### Participants
+
+.large[
+- We recruited participants (n = `r grand_n %>% pull(total)`) for a 
+two-alternative </br> forced choice (2AFC) task and lexical decision task
+  - Undergraduate L1 English, L2 learners of Spanish (n = `r grand_n %>% pull(ru)`) 
+  - Monolingual English speakers (n = `r grand_n %>% pull(prolific)`) 
+  from Prolific.ac 
+]
+
+--
+
+### Proficiency
+
+.large[
+- All participants completed LexTALE-ESP<sup>1</sup>
+- Lexical decision task, assessment of vocab size/proficiency
+- x&#772; &equals; 
+`r lextale_desc %>% pull(Estimate) %>% round(., 2)` &pm;
+`r lextale_desc %>% pull(sd) %>% round(., 2)` SD, range [
+`r lextale_desc %>% pull(min)`, `r lextale_desc %>% pull(max)`]
+]
+
+.footnote[<sup>1</sup>`r Citet(bib, c("lextale_study", "lextale_esp"))`]
+
+???
+
+Online-recruited participants were restricted to monolingual English speakers 
+born, raised, and currently living in the United States with no knowledge of 
+any languages other than English.
+
+Participants responded to the following screening questions: 1) *Was English 
+your first language?*, 2) *Did you start learning Spanish at the age of 13 or 
+older?*, and 3) *Do you have significant knowledge of any languages besides 
+English and Spanish?*.
+
+We excluded data from participants responding "no" to (1) or (2), or "yes" 
+to (3).
+
+---
+background-image: url(../../manuscript/includes/figs/lextale/plot_lextale.png)
+background-size: 100%
+
+???
+
+Lexical Test for Advanced Learners of Spanish as a standardized assessment of 
+participants' proficiency/vocabulary size in Spanish.
+
+scores can range from &minus;20 to 60, with native speaker values generally 
+found between 50-60.
+
+Individuals with little or no knowledge of Spanish typically score from 
+&minus;20 to 0.
+
+proficiency is treated as a continuous  variable, thus we consider a 
+monolingual English speaker to have little to no proficiency in Spanish.
+
+Min. &equals; 
+`r lextale_desc %>% pull(min)`, Max. &equals;
+`r lextale_desc %>% pull(max)`
+
+mean &equals; 
+`r lextale_desc %>% pull(Estimate)` (95% CI: [
+`r lextale_desc %>% pull(Q2.5)`, 
+`r lextale_desc %>% pull(Q97.5)`])  
+SD &equals;
+`r lextale_desc %>% pull(sd)`
+
+---
+background-image: url(./libs/img/ins_sp.png)
+background-size: 500px
+background-position: 95% 50%
+
+# Method
+
+### Instructions
+
+- Recorded in English by 25-year-old female <br>Spanish-English 
+simultaneous bilingual <br>(duration &equals; 35 s)
+
+- Two sets, one for each language context <br>(.blue[Spanish], **English**)
+
+- Conceptually cued context by telling participants <br>they would hear 
+fragments of rare words in Spanish <br>or English
+
+- Recordings did not mention orally the target words, <br>only presented 
+orthographically
+
+- Recordings were identical in content and acoustic <br>information in all ways 
+except for the words "English" <br>and "Spanish".
+
+---
+
+# Method
+
+### Stimuli
+
+<div style="float:right">
+.full-width[
+.content-box-blue[
+<audio controls style="width: 120px;">
+  <source src="./libs/wav/pa-35.ogg" type="audio/ogg">
+  <source src="./libs/wav/pa-35.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</br>
+<audio controls style="width: 120px;">
+  <source src="./libs/wav/pa+35.ogg" type="audio/ogg">
+  <source src="./libs/wav/pa+35.wav" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+]
+]
+</div>
+
+- Pseudoword VOT continuum .lightgrey[`r Citep(bib, "gonzales2019")`]
+- 14 stop &#43; [af] sequences 
+- VOT from &minus;35 to 35 ms in 5 ms increments (excluding 0)
+
+### Procedure
+
+- 2 separate testing sessions with different language contexts
+  - Session 1: first iteration of the 2AFC task, followed by the LexTALE task
+  - Session 2: second iteration of the 2AFC task
+- Language context counter balanced across participants
+- Stimuli drawn randomly from VOT continuum in 10 separate blocks 
+(14 steps &times; 10 blocks &equals; 140 responses per participant).
+- Experiments run in PsychoPy3 .lightgrey[(Peirce et al., 2019)] `r NoCite(bib, "Peirce:2019")`
+
+---
+
+# Method 
+
+### Statistical analysis
+
+- Bayesian multilevel regression model fitted in `stan` using `brms` 
+.lightgrey[`r Citep(bib, "R_brms_a")`]
+
+- Responses, 'bafri'/'pafri', coded as 0/1
+
+- Modeled as a function of *VOT*, *context* (English, Spanish), 
+*LexTALE score*,  and all higher order interactions
+
+- Continuous predictors standardized and language context was
+deviation coded <br>(Spanish = &minus;0.5, English = 0.5)
+
+- By-subject intercepts with random slopes for *VOT*, *context*, 
+*LexTALE score*, and all higher order interactions
+
+- 2000 iterations (1000 warm-up), 16 processing cores 
+
+- Regularizing, weakly informative priors .lightgrey[`r Citep(bib, "Gelman_2017")`]
+
+---
+class: title-slide-section-red, middle
+
+# Results
+
+---
+background-image: url(../../manuscript/includes/figs/2afc/plot_2afc_mod.png)
+background-size: 100%
+
+---
+background-image: url(../../manuscript/includes/figs/2afc/plot_2afc_3way_posterior.png)
+background-size: 100%
+
+---
+background-image: url(./libs/img/plot_2afc_3way_triptych_1.png)
+background-size: 100%
+
+---
+count: false
+background-image: url(./libs/img/plot_2afc_3way_triptych_2.png)
+background-size: 100%
+
+---
+count: false
+background-image: url(./libs/img/plot_2afc_3way_triptych_3.png)
+background-size: 100%
+
+---
+# Review
+
+.Large[
+- We conceptually cued language context in a within subjects design
+]
+
+--
+
+.Large[
+- We replicated the DPBE, extend it to a different population: </br>adult L2 
+learners
+]
+
+--
+
+<p></p>
+
+.Large[
+- Support for theoretically motivated 3-way interaction between VOT, 
+proficiency, and language context
+  - Low proficiency = 'voiceless' responses varied as a function of VOT 
+  - Higher proficiency = more likely to respond 'voiceless' when they were led 
+  to believe they were hearing Spanish
+]
+
+---
+
+# Discussion
+
+.pull-left[
+
+### Corroborates "language set" experiments
+
+.full-width[
+.content-box-blue[
+
+Perceptual categorization depends on language context in monolingual 
+language mode in early bilinguals<sup>1</sup> and in late bilinguals<sup>2</sup> 
+
+]
+]
+]
+
+.pull-right[
+
+### Selective activation accounts
+
+.full-width[
+.content-box-blue[
+
+- Support SA of independent perception grammars in L2 learning
+- L2LP interpretation of Grosjean's language mode hypothesis:  
+ability to activate L1/L2 perception grammars develops w/ exposure to L2  
+.blue[What is exposure?]
+]
+]
+]
+
+.footnote[
+.tiny[
+<sup>1</sup>`r Citet(bib, c("elman1977", "williams1977", "flege1987", 
+"bohn1993", "hazan1993", "garcia_sierra2009", "garcia_sierra2012"))`  
+<sup>2</sup>`r Citet(bib, "casillas2018")`
+]
+]
+
+---
+
+# Discussion
+
+### Exposure
+
+.large[
+- L2LP posits TL exposure as the driving force behind meaning-driven learning 
+vis-à-vis the perception grammar .lightgrey[`r Citep(bib, "VanLeussen2015")`]
+]
+
+--
+
+.large[
+<p></p>
+- How do you operationalize/quantify exposure?
+  - Phonological development is correlated with L2 vocabulary size  
+  .lightgrey[`r Citep(bib, "bundgaard2012second")`]
+  - Largest gains often occur at an early stage of development  
+  .lightgrey[`r Citep(bib, c("williams1979modification", "munro2012english"))`]
+]
+
+---
+background-image: url(../../manuscript/includes/figs/dag/plot_dag.png)
+background-size: 550px
+background-position: 92% 50%
+
+# Discussion
+
+### Exposure
+
+.pull-left[
+.large[
+- Multiple paths to development of L2 perceptual grammar?
+
+- Perhaps proficiency, vocabulary size, quantity/quality of 
+input (or a combination) are key to perceptual development
+
+]
+]
+
+.full-width[
+.content-box-blue[
+
+**Future research**: measure and control for input and vocabulary size in 
+conjunction with standardized measures of proficiency to tease apart how these 
+variables interact during L2 perceptual development to better inform models 
+of L2 speech learning
+]
+]
+
+???
+
+A directed acyclic graph (DAG) illustrating possible causal paths from input 
+(I), vocabulary size (V), and proficiency (P) to perceptual development (PD). 
+The curved line indicates a bidirectional relationship.
+
+future research relates to how the model conceives of L2 development
+
+L2LP posits TL exposure as the driving force behind meaning-driven learning 
+vis-à-vis the perception grammar[@VanLeussen2015, p. 4]. 
+
+Perception improves if current state of the grammar results in 
+misunderstandings; but no straightforward method for operationalizing nor 
+quantifying exposure
+
+phonological development is correlated with L2 vocabulary size 
+[@bundgaard2012second]
+
+learners' largest gains often occur at an early stage of development 
+[@williams1979modification; @munro2012english]
+
+standardized assessment of vocabulary size as a proxy to L2 proficiency.
+
+The evidence provided herein cannot partial out the possible mediating effect 
+of either
+
+It may be the case that proficiency, vocabulary size, quantity and quality of 
+input, or any combination thereof are the key to perceptual development
+
+For instance, an individual could receive large amounts of L2 input and not 
+improve in L2 proficiency
+
+The converse is also true.
+
+multiple paths to development of the L2 perceptual grammar?
+
+A case could be made, for instance, that input, vocabulary size, or some 
+version of the construct 'proficiency' could lead to perceptual development. 
+However, at this time we cannot discount the possibility that vocabulary size 
+or proficiency are also mediator variables associated with input. 
+Future investigations should consider measuring and controlling for input 
+and vocabulary size in conjunction with standardized measures of proficiency 
+in order to shed light on how these variables interact during L2 perceptual 
+development to better inform models of L2 speech learning. 
+This also opens the door to new avenues for research on individual differences 
+in the development of the L2 perception grammar.
+
+---
+class: middle
+
+.Large[
+.center[
+
+|  .white[...............] | Acoustically</br>cued          |    | Conceptually</br>cued  |
+| :----------------------- | :----------------------------: | :- | :--------------------: |
+| .grey[Early</br>learner] | `r Citet(bib, "gonzales2013")` |    | Gonzales et al. (2019) |
+| .grey[Late</br>learner]  | `r Citet(bib, "casillas2018")` |    | .RUred[&#10004;]       |
+
+]
+]
+
+--
+
+<br>
+
+.center[
+### **Conceptually cued language-specific processing routines in bilingual mode**?
+
+![:scale 75%](./libs/img/language_modes.png)
+]
+
+---
+
+# Conclusion
+
+<br>
+
+.large[
+- We replicated the findings of Gonzales et al. (2019) and provided 
+empirical evidence for conceptually-cued language mode selection in late 
+bilinguals
+
+- Adult L2 learners of Spanish also display mode-specific perceptual 
+normalization criteria in accordance with the fine-phonetic detail of the 
+language they have been led to believe they are hearing
+
+- The DPBE develops as proficiency in the L2 increases
+
+- Evidence supporting the notion that there is some degree of separation 
+between phonetic systems in the bilingual mind
+]
+
+---
+count: false
+class: title-slide-final
+background-image: url(https://github.com/jvcasillas/ru_xaringan/raw/master/img/logo/ru_shield.png), url(./libs/img/qr3.png), url(https://raw.githubusercontent.com/jvcasillas/hex_stickers/master/stickers/rap-group.png)
+background-size: 100px, 150px, 130px
+background-position: 25% 50%, 50% 50%, 75% 50%
+
+<br>
+
+# Thank you!
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+.large[
+
+|                                     |                                         |
+| ----------------------------------: | :-------------------------------------- |
+| `r fa("paper-plane", fill = "red")` | .lightgrey[joseph.casillas@rutgers.edu] |
+| `r fa("twitter", fill = "red")`     | .lightgrey[@jvcasill]                   |
+| `r fa("link", fill = "red")`        | .lightgrey[bit.ly/caspslap_2020]        |
+
+]
+
+---
+
+# References
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(bib, start = 1, end = 6)
+```
+
+---
+count: false
+
+# References II
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(bib, start = 7, end = 12)
+```
+
+---
+count: false
+
+# References III
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(bib, start = 13, end = 18)
+```
+
+---
+count: false
+
+# References IV
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(bib, start = 19, end = 24)
+```
+
+
+
+<style type="text/css">
+
+.title-slide {
+  background-image: url(https://github.com/jvcasillas/ru_xaringan/raw/master/img/logo/ru_shield.png), url(./libs/img/upf.png);
+  background-position: 9% 15%, 91% 15%;
+  background-size: 55px, 70px;
+  background-color: #fff;
+  padding-left: 100px;
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  color: #cc0033;
+  padding-top: 250px;
+  font-weight: normal;
+  font-size: 45px;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.remark-slide table {
+  margin: auto;
+  border: 0px none;
+  border-collapse: collapse;
+}
+.remark-slide table thead th { 
+  border: 0px none;
+  background-color: none;
+}
+
+th, td { 
+  padding: 5px;
+  border: 0px none;
+  background-color: none;
+}
+
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
+  border: 0px none;
+  background: none;
+}
+
+ul.no_bullet {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.prod {
+  background: url(https://raw.githubusercontent.com/jvcasillas/media/master/linguistics/img/production_1.png) no-repeat;
+  background-size: 95px 95px;
+  display: block;
+  padding: 0 50px 10px 150px;
+}
+
+li.perc {
+  background: url(https://raw.githubusercontent.com/jvcasillas/media/master/linguistics/img/perception_1.png) no-repeat;
+  background-size: 80px 95px;
+  display: block;
+  padding: 0 50px 10px 150px;
+}
+
+</style>
