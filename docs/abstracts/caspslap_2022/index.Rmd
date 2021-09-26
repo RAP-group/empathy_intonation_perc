@@ -1,0 +1,85 @@
+---
+author: ""
+date: ""
+output: 
+  pdf_document: 
+    fig_caption: yes
+    keep_tex: yes
+header-includes:
+   - \usepackage{tipa}
+   - \usepackage{xcolor}
+fontsize: 12pt
+bibliography: ../../bib/empathy.bib
+csl: ../../bib/apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source(here::here("scripts", "r", "12_small_data.R"))
+```
+
+```{r, echo=F}
+title <- "Using intonation to disambiguate meaning:"
+subtitle <- "The role of empathy and proficiency in L2 perceptual development"
+```
+\begin{center}
+Abstract: CASPSLaP 2022
+\end{center}
+
+**Authors**: Joseph V. Casillas, Juan José Garrido Puzó, Nicole Rodríguez, Kyle Parrish, Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, Constantin-Dureci, Jaiwei Shao, Iván Rascón \& Katherine Taveras  
+**Affiliations**: Rutgers University  
+**Email**: joseph.casillas@rutgers.edu (corresponding author)  
+**Title**: `r title` `r subtitle`
+
+\clearpage
+
+\begin{center}
+{\large `r title` \\
+`r subtitle`}
+\end{center}
+
+The present study investigates the interplay between proficiency and individual pragmatic skills in the process of learning a new language. 
+Notably, we focus on the role of empathy in the development of second language (L2) prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
+It is common for L2 learners to struggle with L2 intonation, often resulting in comprehension and communication difficulties [@trofimovich2006learning]. 
+Previous research attests that learners gradually acquire target-language prosody as they gain proficiency in the language. 
+Concretely, the perception and processing of L2 intonation has been shown to improve in conjunction with proficiency conditional on intonation type [@bustin_2020], with polar ('yes/no') interrogatives being more difficult to process and acquire when compared with simple statements. 
+The construct empathy has been shown to influence native language processing in how listeners interpret intonation and meaning when words are ambiguous [@esteve2020empathy]. 
+Importantly, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
+We extend this research to L2 acquisition in order to determine if individual differences in pragmatic skills affect the development of intonation in L2 processing and sentence comprehension.
+
+A total of `r n_learners` participants completed a two-alternative forced choice (2AFC) task in which four utterance types were categorized as questions or statements. 
+The stimuli were randomly drawn tokens of declarative (broad, narrow focus) and interrogative (polar, wh-) utterances, spoken by native speakers of eight distinct varieties of Spanish (Andalusian, Argentine, Castilian, Chilean, Cuban, Mexican, Peruvian, Puerto Rican). 
+Additionally, participants completed the LexTALE vocabulary task in Spanish [@izura2014lextale], which served as a proxy for L2 proficiency, as well as the Empathy Quotient questionnaire in English [@baron2004empathy], which provided an individual assessment of the construct empathy.
+
+The data were analyzed using Bayesian multilevel regression and Drift Diffusion models. 
+The results replicated findings from @bustin_2020 showing that learner response accuracy improved as a function of proficiency for all utterance types. Importantly, empathy scores were positively correlated with higher accuracy in polar interrogatives (see Figure \ref{fig:plot-2panel-emp-prof}).
+As is the case with L1 research, the present project underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension in an L2. 
+More notably, the results also motivate the inclusion of measures of pragmatic skill, such as empathy, as predictors for L2 acquisition outcomes. 
+Furthermore, these findings highlight an area in which models of L2 development can improve in order to better account for individual differences in L2 learning.
+
+\clearpage
+
+```{r, 'fig-cap', echo=F}
+fig_cap <- "Conditional effects of response accuracy as a function of Empathy 
+quotient and utterance type (panel A) and standardized LexTALE score (panel B). 
+Individual colored lines represent 300 draws from the posterior distribution. White lines indicate the median lines of best fit from the posterior."
+```
+
+```{r, 'plot-2panel-emp-prof', echo=F, fig.cap=fig_cap, out.width="100%"}
+knitr::include_graphics(
+  here("figs", "abstract", "plot_abstract_hls.png")
+)
+```
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\phantom{.} 
+\textcolor{white}{\\} 
+\vspace{-0.5in}
+
+<div id = "refs"></div>
+\endgroup
