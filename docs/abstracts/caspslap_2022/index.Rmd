@@ -26,7 +26,7 @@ subtitle <- "The role of empathy and proficiency in L2 perceptual development"
 Abstract: CASPSLaP 2022
 \end{center}
 
-**Authors**: Joseph V. Casillas, Juan José Garrido Puzó, Nicole Rodríguez, Kyle Parrish, Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, Constantin-Dureci, Jaiwei Shao, Iván Andreu \& Katherine Taveras  
+**Authors**: Joseph V. Casillas, Juan José Garrido Pozú, Nicole Rodríguez, Kyle Parrish, Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, Constantin-Dureci, Jaiwei Shao, Iván Andreu \& Katherine Taveras  
 **Affiliations**: Rutgers University  
 **Email**: joseph.casillas@rutgers.edu (corresponding author)  
 **Title**: `r title` `r subtitle`
