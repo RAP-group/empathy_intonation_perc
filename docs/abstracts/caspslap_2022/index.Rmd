@@ -19,14 +19,15 @@ source(here::here("scripts", "r", "12_small_data.R"))
 ```
 
 ```{r, echo=F}
-title <- "Using intonation to disambiguate meaning:"
-subtitle <- "The role of empathy and proficiency in L2 perceptual development"
+title <- "Inferring meaning from intonation:"
+subtitle <- "The effects of proficiency and empathy on L2 pragmatic skills"
 ```
+
 \begin{center}
 Abstract: CASPSLaP 2022
 \end{center}
 
-**Authors**: Joseph V. Casillas, Juan José Garrido Puzó, Nicole Rodríguez, Kyle Parrish, Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, Constantin-Dureci, Jaiwei Shao, Iván Rascón \& Katherine Taveras  
+**Authors**: Joseph V. Casillas, Juan José Garrido Pozú, Nicole Rodríguez, Kyle Parrish, Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, Gabriela Constantin-Dureci, Jiawei Shao, Iván Andreu \& Katherine Taveras  
 **Affiliations**: Rutgers University  
 **Email**: joseph.casillas@rutgers.edu (corresponding author)  
 **Title**: `r title` `r subtitle`
@@ -47,12 +48,14 @@ The construct empathy has been shown to influence native language processing in 
 Importantly, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
 We extend this research to L2 acquisition in order to determine if individual differences in pragmatic skills affect the development of intonation in L2 processing and sentence comprehension.
 
-A total of `r n_learners` participants completed a two-alternative forced choice (2AFC) task in which four utterance types were categorized as questions or statements. 
-The stimuli were randomly drawn tokens of declarative (broad, narrow focus) and interrogative (polar, wh-) utterances, spoken by native speakers of eight distinct varieties of Spanish (Andalusian, Argentine, Castilian, Chilean, Cuban, Mexican, Peruvian, Puerto Rican). 
-Additionally, participants completed the LexTALE vocabulary task in Spanish [@izura2014lextale], which served as a proxy for L2 proficiency, as well as the Empathy Quotient questionnaire in English [@baron2004empathy], which provided an individual assessment of the construct empathy.
+A total of `r n_learners` adult L2 Spanish learners (L1 English) from the Northeastern United States completed a two-alternative forced choice (2AFC) task in which they listened to four utterance types and categorized them as either questions or statements.
+The stimuli were randomly drawn tokens of declarative (broad, narrow focus) and interrogative (polar, wh-) sentences, spoken by native speakers of eight distinct varieties of Spanish (Andalusian, Argentine, Castilian, Chilean, Cuban, Mexican, Peruvian, Puerto Rican). 
+The stimuli were presented aurally to the participants and subsequently identified as questions or statements using a keyboard. 
+Additionally, participants completed the LexTALE vocabulary task in Spanish [@izura2014lextale], which served as a proxy for L2 proficiency, as well as the Empathy Quotient questionnaire in English [@baron2004empathy], which provided an individual assessment of the construct empathy. 
 
-The data were analyzed using Bayesian multilevel regression and Drift Diffusion models. 
-The results replicated findings from @bustin_2020 showing that learner response accuracy improved as a function of proficiency for all utterance types. Importantly, empathy scores were positively correlated with higher accuracy in polar interrogatives (see Figure \ref{fig:plot-2panel-emp-prof}).
+We used Bayesian multilevel regression and Drift Diffusion models to analyze the 2AFC data as a function of proficiency and empathy scores. 
+Proficiency and empathy were used as continuous predictors to assess their relationship with pragmatic skill.
+The results replicated findings from @bustin_2020 showing that learner response accuracy improved as a function of proficiency for all utterance types. Importantly, higher empathy scores were positively correlated with higher accuracy in identifying polar interrogatives (see Figure \ref{fig:plot-2panel-emp-prof}).
 As is the case with L1 research, the present project underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension in an L2. 
 More notably, the results also motivate the inclusion of measures of pragmatic skill, such as empathy, as predictors for L2 acquisition outcomes. 
 Furthermore, these findings highlight an area in which models of L2 development can improve in order to better account for individual differences in L2 learning.
