@@ -167,7 +167,6 @@ p_post_speaker_variety
 
 
 
-# ARESTY POSTER IMG
 
 # Accuracy by utterance type --------------------------------------------------
 
@@ -178,7 +177,7 @@ s_types <- c(
   "b_sentence_typedeclarativeMbroadMfocus"
   )
 
-plot <- learner_response_01 %>% 
+learner_accuracy_by_utterance_type <- learner_response_01 %>% 
   as_tibble() %>% 
   select(b_Intercept, starts_with("b_sentence_type")) %>% 
   transmute(
@@ -188,47 +187,32 @@ plot <- learner_response_01 %>%
     `Declarative\nBroad focus`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
   ) %>% 
   pivot_longer(cols = everything(), names_to = "parameter", values_to = "estimate") %>% 
-  mutate(prob = plogis(estimate)) %>% 
-  ggplot(., aes(x = parameter, y = prob)) + 
-    stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), height = 5, show.legend = F) +
-    stat_halfeye(position = position_nudge(x = 0.04), slab_alpha = 0.3, 
-      interval_alpha = 0, point_size = 0.75, fill = "tan", width = 0.5) + 
-    rcartocolor::scale_color_carto_d(palette = "Peach") + 
-    coord_cartesian(ylim = c(0.4, 1.00)) + 
-    labs(y = "Proportion correct", x = NULL, 
+  ggplot(., aes(x = parameter, y = estimate)) + 
+    coord_cartesian(ylim = c(-1, NA)) + 
+    geom_hline(yintercept = 0, lty = 3) + 
+    stat_slab(fill = "#cc0033", alpha = 0.87, 
+      aes(fill_ramp = stat(cut_cdf_qi(cdf, .width = c(.5, .65, .8, 1.0), 
+        labels = scales::percent_format())))) + 
+    stat_pointinterval(pch = 21, fill = "white", point_size = 2.2, 
+      .width = c(0.95, 0.65)) +
+    ggdist::scale_fill_ramp_discrete(range = c(1, 0.3), na.translate = F) +
+    labs(y = "Log odds", x = NULL, 
       title = "Response accuracy", 
-      subtitle = "Range and distribution of correct responses for each utterance type") + 
+      subtitle = "Probability of a correct response for each utterance type in the logistic space") + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
-    theme(panel.grid.minor = element_blank(),
-          panel.grid.major.x = element_blank(),
-          panel.grid.major.y = element_line(size = 0.1),
-          axis.text.x = element_text(size = 11, face = "bold"),
-          axis.text.y = element_text(size = 9, color = "grey65"))
-
-legend_text <- 
-  tibble(
-    xt = c(5, 4.125, 3.125, 1.875, 0.625, 7.95), 
-    yt = rep(1.02, 6), 
-    text = c("10%", "25%", "50%", "75%", "100%", 
-    "of participant accuracy falls in this range"))
-
-legend <- ggplot(data = tibble(x = 0:10, y = rep(1, 11)), aes(x, y)) + 
-  stat_interval(.width = c(0.1, 0.25, 0.5, 0.75, 1.0), show.legend = F) + 
-  rcartocolor::scale_color_carto_d(palette = "Peach") + 
-  coord_cartesian(ylim = c(0.9, 1.1)) + 
-  geom_text(data = legend_text, aes(xt, yt, label = text), 
-    family = "Times", color = "grey65", size = 2.75) + 
-  theme_void()
-
-plot_ins <- cowplot::ggdraw(plot) + 
-  cowplot::draw_plot(legend, x = .23, y = -0.01, width = .6, height = .35)
-
-learner_accuracy_by_utterance_type <- plot_ins + plot_layout(widths = 1)
+    theme(legend.position = c(0.5, 0.1), legend.direction = "horizontal", 
+      legend.title = element_text(size = 8, color = "grey45"), 
+      legend.spacing.x = unit(0,"cm"), legend.background = element_blank(), 
+      strip.background = element_rect(fill = NA)) + 
+    guides(fill_ramp = guide_legend(keywidth = 0.5, keyheight = 0.1, 
+      default.unit = "inch", title.hjust = 0.5, reverse = T, 
+      title = "of participant accuracy falls in this range",
+      label.position = "bottom", title.position = "bottom")) 
 
 ggsave(
-  filename = "learner_accuracy_by_utterance_type.pdf", 
+  filename = "learner_accuracy_by_utterance_type.png", 
   plot = learner_accuracy_by_utterance_type, 
-  path = here("figs", "poster"), 
+  path = here("figs", "slides"), 
   width = 7, 
   height = 4, 
   units = "in", 
@@ -255,27 +239,27 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
   pivot_longer(everything(), names_to = "parameter", values_to = "estimate") %>% 
   mutate(parameter = fct_reorder(parameter, estimate, min)) %>% 
   ggplot(., aes(x = estimate, y = parameter)) + 
-    geom_vline(xintercept = 0, lty = 3) +
+    geom_vline(xintercept = 0, lty = 3, color = "black") +
     stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
       interval_alpha = 1, pch = 21, fill = "darkred", height = 0.8) + 
     expand_limits(y = c(-0.25, 9.25)) + 
     geom_text(data = tibble(x = -0.1, y = 0.05, text = sprintf("less accurate")), 
-      aes(x, y, label = text), size = 3, hjust = 1, family = "Times") + 
+      aes(x, y, label = text), color = "black", size = 3, hjust = 1, family = "Times") + 
     geom_text(data = tibble(x = 0.1, y = 0.05, text = "more accurate"), 
-      aes(x, y, label = text), size = 3, hjust = 0, family = "Times") + 
+      aes(x, y, label = text), color = "black", size = 3, hjust = 0, family = "Times") + 
     geom_curve(aes(x = -0.55, xend = -0.65, y = 0.025, yend = 0.03), size = 0.3, 
-      curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) + 
+      curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
     geom_curve(aes(x = 0.59, xend = 0.69, y = 0.025, yend = 0.03), size = 0.3, 
-      curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) + 
+      curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
     labs(x = "Log odds", y = NULL, 
       title = "Response accuracy", 
-      subtitle = "Partially pooled estimates of accurate responses for each speaker variety") + 
+      subtitle = "Partially pooled estimates for each speaker variety") + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
 
 ggsave(
-  filename = "learner_accuracy_by_speaker_variety.pdf", 
+  filename = "learner_accuracy_by_speaker_variety.png", 
   plot = learner_accuracy_by_speaker_variety, 
-  path = here("figs", "poster"), 
+  path = here("figs", "slides"), 
   width = 7, 
   height = 4, 
   units = "in", 
@@ -285,47 +269,34 @@ ggsave(
 
 # Accuracy by lextale ---------------------------------------------------------
 
-lt_me <- conditional_effects(learner_response_01, 
+lt_me <- conditional_effects(learner_response_01_noslope, 
   effects = "lextale_std", 
   re_formula = NA, 
-  method = "posterior_epred", 
+  method = "posterior_linpred", 
   spaghetti = TRUE, 
-  nsamples = 300)
-
-
+  nsamples = 300, 
+  #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
+  )
 
 learner_accuracy_by_lextale <- plot(lt_me, plot = F, 
   line_args = list(size = 3), 
   spaghetti_args = list(colour = alpha("#440154FF", 0.1)))[[1]] + 
-  coord_cartesian(ylim = c(0.4, 1), expand = F) + 
-  geom_hline(yintercept = 0.5, lty = 3) + 
-  scale_y_continuous(position = "right") + 
-  labs(y = NULL, x = "LexTALE score", 
-  title = "Proportion correct as a function of LexTALE score", 
-  subtitle = "300 draws from the posterior distribution") + 
-  annotate("text", x = -1.25, y = 0.98, label = "(B)", family = "Times") +
+  coord_cartesian(ylim = c(-1, 6), expand = F) + 
+  scale_x_continuous(breaks = seq(-1, 4)) + 
+  geom_hline(yintercept = 0, lty = 3) + 
+  labs(y = "Log odds", x = "LexTALE score") + 
+  annotate("text", x = -1, y = 5.75, label = "(A)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
 
-ggsave(
-  filename = "learner_accuracy_by_lextale.pdf", 
-  plot = learner_accuracy_by_lextale, 
-  path = here("figs", "poster"), 
-  width = 7, 
-  height = 6, 
-  units = "in", 
-  dpi = 300
-  )
-
-
-
-# Accuracy by utterance type and empathy --------------------------------------
-
-eq_st_me <- conditional_effects(learner_response_01, 
-  effects = "eq_std:sentence_type", 
+# Get interaction with utterance type
+lt_st_me <- conditional_effects(learner_response_01, 
+  effects = "lextale_std:sentence_type", 
   re_formula = NA, 
-  method = "posterior_epred", 
+  method = "posterior_linpred", 
   spaghetti = TRUE, 
-  nsamples = 300)
+  nsamples = 300, 
+  #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
+  )
 
 sentence_labs <- c(
   "Interrogative\ny/n", 
@@ -337,37 +308,277 @@ utterance_colors <- c(
   "#440154"
 )
 
-
-learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F, 
+learner_accuracy_lt_by_st <- plot(lt_st_me, plot = F, 
   line_args = list(size = 3))[[1]] + 
-  coord_cartesian(ylim = c(0.4, 1), expand = F) + 
-  geom_hline(yintercept = 0.5, lty = 3) + 
+  coord_cartesian(ylim = c(-1, 6), expand = F) + 
+  scale_y_continuous(position = "right") + 
+  geom_hline(yintercept = 0, lty = 3) + 
   scale_color_manual(
     name = NULL, 
-    values = alpha(viridis_pal()(4), 0.1), 
+    values = alpha(viridis::viridis_pal()(4), 0.1), 
     labels = sentence_labs) + 
-  labs(y = "Proportion correct", x = "Empathy quotient", 
-  title = "Proportion correct as a function of EQ and utterance type", 
-  subtitle = "300 draws from the posterior distribution") + 
-  annotate("text", x = -1.95, y = 0.98, label = "(A)", family = "Times") +
+  labs(y = NULL, x = "LexTALE score") + 
+  annotate("text", x = -1, y = 5.75, label = "(B)", family = "Times") +
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(
-    legend.position = c(0.5, 0.07), 
+    legend.background = element_blank(), 
+    legend.position = c(0.5, 0.06), 
     legend.direction = "horizontal", 
     legend.key.size = unit(0.7, "cm"), 
     legend.text.align = 0.5) + 
   guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
 
-# Combine with accuracy by lextale for abstracts
-plot_abstract_hls <- learner_accuracy_eq_by_st + learner_accuracy_by_lextale 
+lt_st_combine <- learner_accuracy_by_lextale + learner_accuracy_lt_by_st + 
+  plot_annotation(
+  title = 'Response accuracy',
+  subtitle = "Probability of a correct response in the logistic space as a function of LexTALE score (A) and LexTALE score for each utterance type (B)",
+  caption = "Colored lines represent 300 draws from the posterior distribution"
+)
 
 ggsave(
-  filename = "plot_abstract_hls.png", 
-  plot = plot_abstract_hls, 
-  path = here("figs", "abstract"), 
+  filename = "lextale_utterance_type_combine.png", 
+  plot = lt_st_combine, 
+  path = here("figs", "slides"), 
   width = 11, 
   height = 5, 
   units = "in", 
   dpi = 300
   )
 
+# -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+# Accuracy by utterance type and empathy --------------------------------------
+eq_me <- conditional_effects(learner_response_01_noslope, 
+  effects = "eq_std", 
+  re_formula = NA, 
+  method = "posterior_linpred", 
+  spaghetti = TRUE, 
+  nsamples = 500, 
+  #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
+  )
+
+learner_accuracy_by_eq <- plot(eq_me, plot = F, 
+  line_args = list(size = 5, fill = 'black'), 
+  spaghetti_args = list(colour = alpha("#440154FF", 0.1)))[[1]] + 
+  coord_cartesian(ylim = c(-1, 4.5), expand = F) + 
+  geom_hline(yintercept = 0, lty = 3) + 
+  labs(y = "Log odds", x = "Empathy quotient") + 
+  annotate("text", x = -2, y = 4.25, label = "(A)", family = "Times") +
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
+
+eq_st_me <- conditional_effects(learner_response_01, 
+  effects = "eq_std:sentence_type", 
+  re_formula = NA, 
+  method = "posterior_linpred", 
+  spaghetti = TRUE, 
+  nsamples = 300)
+
+learner_accuracy_eq_by_st <- plot(eq_st_me, plot = F, 
+  line_args = list(size = 3))[[1]] + 
+  coord_cartesian(ylim = c(-1, 4.5), expand = F) + 
+  scale_y_continuous(position = "right") + 
+  geom_hline(yintercept = 0, lty = 3) + 
+  scale_color_manual(
+    name = NULL, 
+    values = alpha(viridis::viridis_pal()(4), 0.1), 
+    labels = sentence_labs) + 
+  labs(y = NULL, x = "Empathy quotient") + 
+  annotate("text", x = -2, y = 4.25, label = "(B)", family = "Times") +
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+  theme(
+    legend.background = element_blank(), 
+    legend.position = c(0.5, 0.09), 
+    legend.direction = "horizontal", 
+    legend.key.size = unit(0.7, "cm"), 
+    legend.text.align = 0.5) + 
+  guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
+
+# Combine with accuracy by lextale for abstracts
+empathy_st_combine <- learner_accuracy_by_eq + learner_accuracy_eq_by_st + 
+  plot_annotation(
+  title = 'Response accuracy',
+  subtitle = "Probability of a correct response in the logistic space as a function of (A) empathy quotient and (B) emapthy quotient for each utterance type",
+  caption = "Colored lines represent 300 draws from the posterior distribution"
+)
+
+ggsave(
+  filename = "empathy_utterance_type_combine.png", 
+  plot = empathy_st_combine, 
+  path = here("figs", "slides"), 
+  width = 11, 
+  height = 5, 
+  units = "in", 
+  dpi = 300
+  )
+
+# -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+conditions <- data.frame(
+  q_type = setNames(c(1, -1), c("Interrogative\ny/n", "Interrogative\nWh-"))
+)
+
+int_conditions <- list(
+  eq_std = setNames(c(-2, -1, 0, 1, 2), 
+    c("-2", "-1", "0", "1", "2"))
+)
+
+lt_eq_3way <- conditional_effects(learner_response_qonly_01, 
+  effects = "lextale_std:eq_std", 
+  re_formula = NA, 
+  method = "posterior_epred", 
+  spaghetti = TRUE, 
+  nsamples = 300, 
+  ncol = 2, 
+  conditions = conditions, 
+  int_conditions = int_conditions
+  )
+
+lt_eq_3way_ce <- plot(lt_eq_3way, plot = F, 
+  line_args = list(size = 1.5))[[1]] + 
+  coord_cartesian(xlim = c(-1, 4.2), ylim = c(0.3, 1), expand = F) + 
+  geom_hline(yintercept = 0.5, lty = 3) + 
+  scale_color_manual(
+    name = "Empathy\nquotient", 
+    values = alpha(viridis::viridis_pal(option = "B", end = 0.8)(5), 0.1)) + 
+  labs(y = "P(correct)", x = "LexTALE score", 
+    title = "Response accuracy", 
+    subtitle = "Probability of a correct response as a function of empathy quotient and LexTALE score for each question type") + 
+  ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+  theme(
+    legend.position = "bottom", 
+    legend.background = element_blank(), 
+    legend.key.size = unit(0.7, "cm"), 
+    legend.text.align = 0.5, 
+    legend.title = element_text(size = 10, color = "grey45"), 
+    legend.spacing.x = unit(0,"cm"), 
+    strip.background = element_rect(fill = NA)) + 
+  guides(color = guide_legend(keywidth = 0.5, keyheight = 0.1, 
+      default.unit = "inch", title.hjust = 0.5, reverse = T, 
+      title = "Empathy quotient",
+      label.position = "bottom", title.position = "bottom", 
+      override.aes = list(fill = NA, size = 3))) 
+
+ggsave(
+  filename = "lt_eq_3way_ce.png", 
+  plot = lt_eq_3way_ce, 
+  path = here("figs", "slides"), 
+  width = 11, 
+  height = 6, 
+  units = "in", 
+  dpi = 300
+  )
+
+
+
+
+
+
+
+
+# Speech rate by variety
+plot_speech_rate <- mono_speech_rates_df %>% 
+  select(speaker_variety, metric, val) %>% 
+  filter(metric == "articulation_rate") %>% 
+  mutate(
+    speaker_variety = case_when(
+      speaker_variety == "andalusian" ~ "Andalusian", 
+      speaker_variety == "argentine" ~ "Argentine", 
+      speaker_variety == "castilian" ~ "Castilian", 
+      speaker_variety == "chilean" ~ "Chilean", 
+      speaker_variety == "cuban" ~ "Cuban", 
+      speaker_variety == "mexican" ~ "Mexican", 
+      speaker_variety == "peruvian" ~ "Peruvian", 
+      speaker_variety == "puertorican" ~ "Puerto Rican"
+  ), 
+    speaker_variety = fct_reorder(speaker_variety, val, .fun = mean), 
+    val = (val - mean(val)) / sd(val)) %>% 
+  ggplot(., aes(x = val, y = speaker_variety)) + 
+    geom_vline(xintercept = 0, lty = 3) +
+    stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
+      interval_alpha = 1, pch = 21, fill = "darkred", height = 0.8) + 
+    expand_limits(y = c(-0.25, 9.25)) + 
+    geom_text(aes(x, y, label = text), data = tibble(x = -0.2, y = 0.05,
+      text = sprintf("slower")), color = "black", size = 3, hjust = 1, family = "Times") + 
+    geom_text(aes(x, y, label = text), data = tibble(x = 0.2, y = 0.05,
+      text = "faster"), color = "black", size = 3, hjust = 0, family = "Times") +
+    geom_curve(aes(x = -0.7, xend = -1, y = 0.03, yend = 0.03), 
+      size = 0.3, color = "black", curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) +
+    geom_curve(aes(x = 0.7, xend = 1, y = 0.03, yend = 0.03),
+      size = 0.3, color = "black", curvature = 0, arrow = arrow(length = unit(0.15, "cm"))) +
+    labs(y = "Speaker variety", x = "z-Articulation rate") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+    NULL
+
+ggsave(
+  filename = "speech_rate.png", 
+  plot = plot_speech_rate, 
+  path = here("figs", "slides"), 
+  width = 7, 
+  height = 4, 
+  units = "in", 
+  dpi = 300
+  )
+
+
+
+
+
+
+
+learners %>% 
+  select(participant, lextale_tra) %>% 
+  distinct() %>% 
+  ggplot(., aes(x = lextale_tra)) + 
+    geom_histogram(fill = "grey", color = "black", 
+      binwidth = 3.54)
+
+learners %>% 
+  select(participant, eq_score) %>% 
+  distinct() %>% 
+  ggplot(., aes(x = eq_score)) + 
+    geom_histogram(fill = "grey", color = "black", 
+      binwidth = 3.54)
+
+random_speaker_check <- learners %>% 
+  select(participant, speaker_variety) %>% 
+  group_by(participant, speaker_variety) %>% 
+  tally() %>% 
+  ungroup() %>% 
+  mutate(prop = n / 8, 
+         speaker_variety = tools::toTitleCase(speaker_variety)) %>% 
+  ggplot(., aes(x = speaker_variety, y = n)) + 
+    geom_hline(yintercept = 8, lty = 3, color = "black") + 
+    geom_violin(alpha = 0.3) + 
+    stat_summary(fun.data = mean_sdl, geom = "pointrange", pch = 21, 
+      color = "black", fill = "white", size = 1, fun.args = list(mult = 1)) + 
+    coord_cartesian(ylim = c(-5, 20))  + 
+    labs(y = "Mean", x = "Speaker variety", 
+      title = "Average stimuli tokens from each variety.", 
+      subtitle = glue("(n = {n_participant})"), 
+      caption = "Mean +/- SD") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+    NULL
+
+
+ggsave(
+  filename = "random_speaker_check.png", 
+  plot = random_speaker_check, 
+  path = here("figs", "slides"), 
+  width = 9, 
+  height = 5, 
+  units = "in", 
+  dpi = 300
+  )

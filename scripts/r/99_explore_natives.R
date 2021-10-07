@@ -28,9 +28,9 @@ natives %>%
          speaker_variety = tools::toTitleCase(speaker_variety)) %>% 
   ggplot(., aes(x = speaker_variety, y = n)) + 
     geom_hline(yintercept = 8, size = 2, color = "white") + 
-    geom_violin() + 
+    geom_violin(alpha = 0.3) + 
     stat_summary(fun.data = mean_sdl, geom = "pointrange", pch = 21, 
-      fill = "white", size = 1, fun.args = list(mult = 1)) + 
+      color = "black", fill = "white", size = 1, fun.args = list(mult = 1)) + 
     coord_cartesian(ylim = c(-5, 20))  + 
   labs(y = "Mean", x = "Speaker variety", 
     title = "Average stimuli tokens from each variety.", 
