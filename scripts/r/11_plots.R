@@ -229,7 +229,7 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
   transmute(
     Andalusian    = `r_speaker_variety[andalusian,Intercept]`, 
     Argentine     = `r_speaker_variety[argentine,Intercept]`, 
-    Castilian     = `r_speaker_variety[castilian,Intercept]`, 
+    Peninsular    = `r_speaker_variety[castilian,Intercept]`, 
     Chilean       = `r_speaker_variety[chilean,Intercept]`, 
     Cuban         = `r_speaker_variety[cuban,Intercept]`, 
     Mexican       = `r_speaker_variety[mexican,Intercept]`, 
@@ -489,14 +489,16 @@ ggsave(
 
 
 # Speech rate by variety
-plot_speech_rate <- mono_speech_rates_df %>% 
+plot_speech_rate <- sr %>% 
+  pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
+  names_to = "metric", values_to = "val") %>% 
   select(speaker_variety, metric, val) %>% 
   filter(metric == "articulation_rate") %>% 
   mutate(
     speaker_variety = case_when(
       speaker_variety == "andalusian" ~ "Andalusian", 
       speaker_variety == "argentine" ~ "Argentine", 
-      speaker_variety == "castilian" ~ "Castilian", 
+      speaker_variety == "castilian" ~ "Peninsular", 
       speaker_variety == "chilean" ~ "Chilean", 
       speaker_variety == "cuban" ~ "Cuban", 
       speaker_variety == "mexican" ~ "Mexican", 
