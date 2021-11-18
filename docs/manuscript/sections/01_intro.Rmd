@@ -1,0 +1,210 @@
+---
+references: "../../bib/empathy.bib"
+---
+
+# Introduction
+
+A fundamental problem of speech comprehension is that listeners can come to understand different messages when presented with the same linguistic information [@cain2004individual]. <!-- this is literally the first sentence (paraphrased) from Esteve et al. Need to elegantly say the same thing in a different way --> 
+This can be especially problematic when one begins the endeavor of learning a new language. 
+In particular, it is common for second language (L2) learners to struggle with intonation---i.e., the melodic contour of an utterance---in the target language [@trofimovich2006learning]. 
+The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information (e.g., utterance type, syntactic constituency), but also pragmatic information [e.g., polite discourse @astruc2016cost; bias, or presupposition @henriksen2016intonational]. 
+The present study investigates how the comprehension of intonation develops in adult L2 learners. 
+
+Recent research on monolingual populations suggests that individual differences in pragmatic skills, such as empathy, may play a role in meaning disambiguation [@bishop2016individual; @esteve2016role; @esteve2020empathy; @orrico2020individual]. 
+Concretely, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to the intonational cues of speech during the process of forming sound-meaning associations. 
+Furthermore, increasing attention has been given to how individual differences in learner backgrounds play a role in the process of L2 acquisition. 
+The present study contributes to these lines of research by examining how individual differences in pragmatic skills affect the development and processing of intonation during sentence comprehension. 
+Specifically, we investigated the interplay between proficiency and individual pragmatic skill (empathy) when learning a new language. 
+We focus on the role of empathy in the development of L2 prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
+
+## Background and motivation 
+
+### L2 acquisition of prosody
+
+The difficulties associated with learning an additional language in adulthood are numerous. 
+More often than not our focus falls on individual sounds, or segments, though we know that adults who learn an L2 are faced with suprasegmental challenges as well.
+Concretely, L2 learners often struggle with intonation, i.e., melodic variation at the utterance level. 
+In normal discourse, speakers use intonation to indicate syntactic structure, whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
+Notably, the manner in which intonation is mapped to meaning is often language-specific. 
+For these reasons, the development of L2 intonation represents a facet of L2 phonological learning that often results in comprehension and communication difficulties [@trofimovich2006learning]. 
+
+As alluded to above, intonation has a semantic function, and through the adequate cognitive decoding of intonation a speaker can signal sentences, such as declarative or interrogative. 
+Additionally, a speaker can signal pragmatic functions, because it can be used to express a wide range of connotations, such as when a speaker presents a polite discourse [@astruc2016cost], bias and presupposition [@henriksen2016intonational]. 
+One essential aspect of second language acquisition and language comprehension is that in the presence of the same linguistic elements, listeners can arrive at different interpretations of the message [e.g. @cain2004individual]. 
+The difficulty in interpreting, and decoding the multiple functionalities of intonational contours makes the L2 learning a challenge. 
+
+Traditionally, intonation is not taught in the L2 classroom. 
+Primary focus is generally on syntax and morphology, with target language phonology receiving much less, if any, attention (REFS). 
+When target language pronunciation is addressed, it often focuses on segmental elements. 
+As a result, intonation is one of the last aspects of L2 phonology that learners acquire (REFS)
+
+Generally, research on L2 intonation has been concerned primarily with production. 
+Learner difficulties are generally ascribed to L1 transfer, and models of L2 phonology focus on the speech segment (i.e., PAM-L2, SLMr, L2LP, though CF trofimovich paper extending SLM) <!-- add refs --> 
+There is a dearth of knowledge with regard to how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes. 
+The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
+
+### Acquisition of Spanish prosody
+
+<!--
+- Mastery seems possible (more target-like as prof. increases)
+    - Utterance type matters
+      - Statements easier than questions
+      - ‘Yes/No’-type questions are harder to process and acquire, when 
+      compared with wh-questions and simple statements [@bustin_2020] 
+    - Familiarity matters
+      - Positive correlation between accuracy and familiarity with variety
+      - Important because of lots of variability in Spanish prosody
+-->
+
+Spanish is extensively spoken across the world, with relatively small geolectal differences between its varieties compared to other languages, such that speakers from distinct regions can still generally understand each other. 
+This linguistic continuum allows, however, for variation to occur. 
+Previous research on the acquisition of Spanish prosody attests that learners gradually acquire target-language intonation as they gain proficiency in the language. 
+Research in this area has focused on speech production. 
+For instance, @trimble2013acquiring analyzed L2 Spanish learners' production of intonational patterns for broad focus declaratives and absolute interrogatives after a semester-long study abroad program. 
+<!-- add findings -->
+
+
+Research on perception of Spanish intonation also supports the notion that mastery is indeed possible for adult learners. 
+@trimble2013perceiving examined the perception of intonational cues ... <!-- add sentence or two about study -->
+@trimble2013perceiving found that intonational cues that were absent form participants' L1 were difficult to perceive. 
+Unsurprisingly, the study suggests the L2 intonation system develops in tandem with proficiency in Spanish, which was positively correlated with time spent studying abroad. 
+
+In a similar vein, @bustin_2020 investigated the perceptual development of intonation in questions and statements in L2 Spanish. 
+Specifically, @bustin_2020 examined the effect of L2 proficiency on the perception of statements (broad-focus and narrow-focus) and questions (wh-questions and yes/no questions). 
+Adult English L1-Spanish L2 learners (beginner, intermediate, and advanced) and adult native speakers of Spanish completed an AX discrimination task in which they were presented with two stimuli sentences at a time, one aural and one visual. 
+Participants had to decide whether the sentence presented aurally was the same as the sentence presented visually by pressing a button ('yes', 'no'). 
+
+The study found that perception and processing of L2 intonation improved in conjunction with proficiency conditional on intonation type, with polar ('yes/no') interrogatives being more difficult to process and acquire when compared with simple statements. 
+Accuracy was high in match conditions, but accuracy in mismatch conditions was below chance for all L2 learners. 
+Regarding response times, intermediate learners were the fastest overall, and native speakers were the slowest. 
+Learners with lower proficiency processed statements faster than questions. 
+@bustin_2020 concluded that L2 intonation perception differs from L1 intonation perception in Spanish, that L2 intonation perception undergoes a gradual development as L2 acquisition progresses, and that statements are more easily processed and acquired by L2 learners of Spanish, compared to yes/no questions. 
+
+<!-- 
+stopped here 
+Need to add another study before Bustin et al (Nibert)
+Need to add concluding transition paragraph to empathy section
+Moved criticism of Bustin to "present study" subsection (will use parts of it)
+--> 
+
+
+### Empathy
+
+<!--
+- Info on construct [@carruthers2009we; @baron2004empathy; @baron2011zero; @frith2003development]
+      - Relies on inferring the intentions, understanding the feelings, 
+      and emotions of others
+      - Associated with Theory of Mind and perspective-taking
+      - used as a measure to tap into individual pragmatic skills
+    - Empathy as proxy for pragmatic skill
+      - Empathy influences native language processing in how listeners 
+      interpret intonation and meaning when words are ambiguous 
+      [@esteve2020empathy]. 
+        - Higher empathy individuals appear to be more sensitive to 
+        intonation cues in the process of forming sound-meaning associations 
+        than lower empathy individuals 
+        - Higher empathy (more pragmatic skilled individuals) = ability to 
+        use intonation to resolve temporary lexical ambiguity that can lead 
+        to confirmatory vs. contrasting interpretations 
+-->
+
+
+<!--
+This section is not organized yet, just copy/paste mashup
+--> 
+
+The construct empathy has been shown to influence native language processing in how listeners interpret intonation and meaning when words are ambiguous [@esteve2020empathy]. 
+
+
+Recent research has also shown that empathy influences native language processing in how listeners interpret intonation and meaning when words are ambiguous [@esteve2020empathy]. 
+Specifically, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
+In short, individuals with more pragmatic skill (higher empathy) are able to use intonation to resolve temporary lexical ambiguity that can lead to confirmatory vs. contrasting interpretations. 
+This research underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension. 
+Thus, we extend this research to second language acquisition in order to determine if individual differences in pragmatic skills affect the development of intonation in L2 processing and sentence comprehension.
+
+
+According to @esteve2020empathy, empathy can be understood as it is related to theory of mind and perspective taking [@baron2011zero; @carruthers2009we; @frith2003development]. 
+In other words, those with higher empathy are expected to more effectively take the perspective of another, and past research has investigated whether better perspective taking is related to more effective meaning disambiguation. 
+Evidence has been found for the use of intonational cues to disambiguate meaning by higher empathy individuals in monolingual speech [@esteve2020empathy]. 
+On the other hand, there is also evidence that higher proficiency Spanish speakers can effectively distinguish questions from statements [@bustin_2020].
+
+
+
+Speakers use intonational cues to express feelings, intentions, and pragmatic meaning [see @prieto2015intonational], but listeners vary in how they interpret intonational cues to infer meaning [e.g., @bishop2016individual; @bishop2016individual; @portes2014dialogical]. 
+This variability could be related to differences in individual pragmatic skills. 
+Previous studies have shown that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items, with more pragmatic individuals preferring pragmatically enriched interpretations and less pragmatic individuals preferring literal/semantic interpretations [e.g., @degen2016availability; @nieuwland2010incrementality]. 
+In addition, more pragmatically skilled individuals and less pragmatically skilled individuals tend to rely on different phonetic cues to parse syntactically ambiguous sentences [@bishop2016individual]. 
+It is possible that variability in intonation processing is also linked to individual differences in pragmatic skills.
+
+Recent studies have explored the possibility that individual pragmatic skills can modulate the sensitivity of listeners to intonational cues that convey pragmatic meaning. 
+@esteve2020empathy focused specifically on empathy, which is a pragmatic skill that helps listeners understand other peoples' feelings, emotions, intentions, and behavior [@baron2004empathy]. 
+@esteve2020empathy investigated whether listeners' empathy modulated variability in intonation processing. 
+Empathy was measured using a self-reported Empathy Quotient (EQ) questionnaire [@baron2004empathy]. 
+@esteve2020empathy tested French monolinguals in a visual-world paradigm eye-tracking task that resembled a card guessing game. 
+Participants listened to short dialogues in French between two players (Player A and Player B) playing a card guessing game as they saw a display of four objects on a screen. 
+Participants had to identify the object that depicted the picture of the card of one of the players. 
+Target objects were homophones in French (e.g., cane - "female duck"; canne - "walking stick"). 
+The dialogues consisted of a suggestion by Player A (e.g., "I think you have a stick") followed by Player B's response, which could confirm (e.g., "I have a stick, indeed, to walk") or contrast (e.g., "I have a female duck, instead, the animal") Player A's suggestion. 
+The first portion of Player B's responses varied in intonational contours (confirmation or contrast of beliefs) and had subsequent disambiguating lexical information (indeed/instead + additional information). 
+Results indicated that empathy level affected the processing of an ambiguous word (a homophone) when intonation was the only cue available. 
+Highly empathic individuals varied their looking behavior as a function of intonational cues while less empathic individuals did not. 
+However, the direction of the looking behavior of the highly empathic individuals was not as expected and reverse intonation-meaning mapping was observed. 
+Confirmation intonation did not trigger more looks to the suggested image and contrast intonation did not trigger more looks to objects other than the suggested image. 
+
+To explore this unexpected finding further, @esteve2020empathy tested an additional group of French monolinguals in an offline matching task in which they listened only to the ambiguous portion of Player B's response (e.g., "I have a stick.", "I have a female duck.") and matched the sentences to either a confirmatory or contrastive meaning. 
+Intonation was the only disambiguating cue available. 
+Results showed that the higher the listeners' empathy, the more accurate they were matching intonation to meaning. 
+@esteve2020empathy concluded that listeners use empathy as a pragmatic ability to process linguistic information and that empathy influences how listeners use intonation to infer pragmatic meaning, especially when linguistic information is ambiguous or non literal. 
+Pragmatic skills like empathy need to be considered when investigating intonation processing in typical and atypical individuals. 
+
+## The present study
+
+<!--
+Not organized yes (copy/paste mashup)
+--> 
+
+<!--
+Importantly, the authors stated that the study had some limitations. First, the nature of the task may have raised participants’ metalinguistic awareness of intonational differences since they were explicitly asked to compare the aural and visual stimuli. Additionally, the fact that participants were presented with two types of input (aural and visual) at the same time may have influenced their perception, considering that visual input has been shown to influence aural perception (Shook and Marian, 2013, NEED MORE REFS). Besides, the items used in the wh-question mismatch condition contained syntactic differences apart from intonational differences (e.g., ¿Por qué iba Daniel a Bolivia? vs Daniel iba a Bolivia). In this condition, participants may have been able to identify the mismatch since the beginning of the sentence by comparing the syntactic structure and word order without the need of intonational discrimination. This flaw may have influenced participants’ perception of wh-questions, which may explain why the results showed that wh-questions had the highest accuracy rate. Second, the authors mentioned that it is possible that dialectal or sociolectal variation could have influenced participants’ responses. In fact, the stimuli sentences included recordings of 8 different varieties of Spanish, but dialectal variation was not included in the analysis. Whether intonation perception varies across Spanish varieties still remains unclear. Lastly, the study did not include an objective measure of L2 proficiency. L2 proficiency was established based on the course that English-Spanish learners were enrolled in, which may not provide an accurate representation of L2 proficiency level. In spite of this, the proficiency effects reported in the study were found as expected. 
+-->
+
+We investigate the interplay between proficiency and individual pragmatic skills via empathy in the development of second language (L2) prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
+
+It is unclear whether those with higher empathy also take advantage of intonational cues to infer another speaker's communicative intent in a second language when proficiency is also taken into account.   
+
+The present study investigates whether L2 learners of Spanish with higher empathy are more effective in distinguishing statements from questions when proficiency is held constant. 
+
+
+
+the project intends to contribute to cumulative science by conceptually replicating the @bustin_2020 finding, which demonstrates that perception and processing of L2 intonation improves in conjunction with L2 proficiency and as a function of intonation type. 
+Second, this research will extend the current findings on perceptual development to include pragmatic skills, specifically empathy.
+
+
+This research builds on recent studies looking at the role of individual pragmatic skills in language processing and extends them to the field of second language acquisition. 
+Concretely, we examine the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
+L2 learners gradually acquire Spanish prosody as they gain proficiency in the language. 
+The extant literature shows that 'yes/no'-type questions are harder to process and acquire, when compared with simple statements [@bustin_2020]. 
+
+Current study is a conceptual replication of @bustin_2020 
+  - Extend current findings on perceptual development to include pragmatic 
+  skills (empathy)
+    - Build on studies that look at the role of individual pragmatic skills 
+    in language processing
+      - And if individual differences in pragmatic skills affect the 
+      development of intonation in L2 processing and sentence comprehension 
+    - Examine the role of empathy in the development of L2 prosody by 
+    analyzing the perception of intonation in questions and statements in L2 
+    Spanish
+
+
+### Research questions 
+
+Research question 1: Is perceptional development in L2 Spanish modulated by proficiency and intonation type [i.e., @bustin_2020]?  
+Hypothesis: Accuracy will increase and processing time will decrease as a function of proficiency and intonation type. 
+Yes-no questions will present the most difficulty for L2 learners of Spanish, followed by wh-questions and declarative broad focus and narrow focus statements.
+
+Research question 2: Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?
+Hypothesis: Based on the findings of @esteve2020empathy, we posit that prosodic development will occur sooner and at a faster rate in higher empathy individuals. 
+In this operationalization, 'sooner' refers to lower proficiency levels in a cross-sectional design, that is, at an earlier developmental stage than lower empathy individuals.
+
+Research question 3: Does speaker variety affect perception accuracy and processing speed?
+Hypothesis: Based on tentative findings from native speaker pilot data, we hypothesize that overall L2 learners will have most difficulty (lower accuracy, slower RTs) with the Cuban variety. 
