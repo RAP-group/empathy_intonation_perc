@@ -4,7 +4,7 @@ references: "../../bib/empathy.bib"
 
 # Introduction
 
-A fundamental problem of speech comprehension is that listeners can come to understand different messages when presented with the same linguistic information [@cain2004individual]. <!-- this is literally the first sentence (paraphrased) from Esteve et al. Need to elegantly say the same thing in a different way --> 
+A fundamental difficulty of speech comprehension is that listeners can come to understand different messages when presented with the same linguistic information [@cain2004individual]. 
 This can be especially problematic when one begins the endeavor of learning a new language. 
 In particular, it is common for second language (L2) learners to struggle with intonation---i.e., the melodic contour of an utterance---in the target language [@trofimovich2006learning]. 
 The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information (e.g., utterance type, syntactic constituency), but also pragmatic information [e.g., polite discourse @astruc2016cost; bias, or presupposition @henriksen2016intonational]. 
@@ -14,7 +14,7 @@ Recent research on monolingual populations suggests that individual differences 
 Concretely, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to the intonational cues of speech during the process of forming sound-meaning associations. 
 Furthermore, increasing attention has been given to how individual differences in learner backgrounds play a role in the process of L2 acquisition. 
 The present study contributes to these lines of research by examining how individual differences in pragmatic skills affect the development and processing of intonation during sentence comprehension. 
-Specifically, we investigated the interplay between proficiency and individual pragmatic skill (empathy) when learning a new language. 
+Specifically, we investigated the interplay between language proficiency and an individual pragmatic skill (empathy) when learning an L2. 
 We focus on the role of empathy in the development of L2 prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
 
 ## Background and motivation 
@@ -28,10 +28,11 @@ In normal discourse, speakers use intonation to indicate syntactic structure, wh
 Notably, the manner in which intonation is mapped to meaning is often language-specific. 
 For these reasons, the development of L2 intonation represents a facet of L2 phonological learning that often results in comprehension and communication difficulties [@trofimovich2006learning]. 
 
-As alluded to above, intonation has a semantic function, and through the adequate cognitive decoding of intonation a speaker can signal sentences, such as declarative or interrogative. 
-Additionally, a speaker can signal pragmatic functions, because it can be used to express a wide range of connotations, such as when a speaker presents a polite discourse [@astruc2016cost], bias and presupposition [@henriksen2016intonational]. 
+As alluded to above, intonation has a semantic function, and through the adequate cognitive decoding of intonation a listener can interpret the function of a given utterance. 
+For example, the intonational contour can indicate whether a speakers' utterance is declarative or interrogative in nature. 
+Additionally, through prosody a speaker can signal various additional pragmatic functions, such as when they present a polite discourse [@astruc2016cost], bias or presupposition [@henriksen2016intonational]. 
 One essential aspect of second language acquisition and language comprehension is that in the presence of the same linguistic elements, listeners can arrive at different interpretations of the message [e.g. @cain2004individual]. 
-The difficulty in interpreting, and decoding the multiple functionalities of intonational contours makes the L2 learning a challenge. 
+The difficulty in interpreting and decoding the multiple functionalities of intonational contours makes L2 learning a challenge. 
 
 Traditionally, intonation is not taught in the L2 classroom. 
 Primary focus is generally on syntax and morphology, with target language phonology receiving much less, if any, attention (REFS). 
@@ -132,7 +133,7 @@ On the other hand, there is also evidence that higher proficiency Spanish speake
 
 Speakers use intonational cues to express feelings, intentions, and pragmatic meaning [see @prieto2015intonational], but listeners vary in how they interpret intonational cues to infer meaning [e.g., @bishop2016individual; @bishop2016individual; @portes2014dialogical]. 
 This variability could be related to differences in individual pragmatic skills. 
-Previous studies have shown that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items, with more pragmatic individuals preferring pragmatically enriched interpretations and less pragmatic individuals preferring literal/semantic interpretations [e.g., @degen2016availability; @nieuwland2010incrementality]. 
+Previous studies have shown that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items, with more pragmatic individuals preferring pragmatically enriched interpretations and less pragmatic individuals preferring literal/semantic interpretations [e.g., @degen2016availability; @nieuwland2010incrementality]. <!-- more pragmatic individuals -->
 In addition, more pragmatically skilled individuals and less pragmatically skilled individuals tend to rely on different phonetic cues to parse syntactically ambiguous sentences [@bishop2016individual]. 
 It is possible that variability in intonation processing is also linked to individual differences in pragmatic skills.
 
