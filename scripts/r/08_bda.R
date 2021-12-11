@@ -44,7 +44,8 @@ native_ppred_response_00 <- brm(
 )
 
 # Wrangle and plot prior predictive checks
-ppred_response_samples_natives <- posterior_samples(native_ppred_response_00) %>%
+ppred_response_samples_natives <- 
+  posterior_samples(native_ppred_response_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
@@ -80,7 +81,8 @@ native_response_01 <- brm(
 pp_check(native_response_01, nsamples = 200)
 
 # Wrangle and plot posteriors
-post_response_samples_natives <- posterior_samples(native_response_01) %>%
+post_response_samples_natives <- 
+  posterior_samples(native_response_01) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
@@ -130,7 +132,8 @@ native_ppred_rt_00 <- brm(
 )
 
 # Wrangle and plot prior predictive checks
-ppred_rt_samples_natives <- posterior_samples(native_ppred_rt_00) %>%
+ppred_rt_samples_natives <- 
+  posterior_samples(native_ppred_rt_00) %>%
   rename(
     intercept = b_Intercept, 
     participant_sd = sd_participant__Intercept, 
@@ -285,5 +288,30 @@ conditional_effects(learner_response_qonly_01)
 bayestestR::describe_posterior(
   learner_response_qonly_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
   ci = 0.95)
+
+
+
+learner_response_yn_01 <- brm(
+  formula = is_correct ~ 0 + Intercept + lextale_std * eq_std + 
+    (1 | participant) + 
+    (1 + lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj < 10, sentence_type == "interrogative-total-yn"),
+  prior = l2_response_priors, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = "bernoulli", 
+  cores = 4, 
+  control = list(adapt_delta = 0.99, max_treedepth = 20), 
+  backend = "cmdstanr", 
+  file = here("models", "learner_response_yn_01")
+)
+
+
+conditional_effects(learner_response_yn_01)
+bayestestR::describe_posterior(
+  learner_response_yn_01, 
+  rope_range = c(-0.1, 0.1), rope_ci = 0.95, ci = 0.95)
+
+
 
 # -----------------------------------------------------------------------------
