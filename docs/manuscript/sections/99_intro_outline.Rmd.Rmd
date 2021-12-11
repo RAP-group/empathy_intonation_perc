@@ -1,0 +1,60 @@
+INTRO OUTLINE
+
+- Intro - Current study is a conceptual replication of Brandl et al. (2020) 
+  - Extend current findings on perceptual development to include pragmatic 
+  skills (empathy)
+    - Build on studies that look at the role of individual pragmatic skills 
+    in language processing
+      - And if individual differences in pragmatic skills affect the 
+      development of intonation in L2 processing and sentence comprehension 
+    - Examine the role of empathy in the development of L2 prosody by 
+    analyzing the perception of intonation in questions and statements in L2 
+    Spanish
+
+
+
+- Background and motivation 
+  - L2 acquisition of prosody (general)
+    - Learners often struggle with L2 intonation, resulting in comprehension 
+    and communication difficulties (Trofimovich and Baker, 2006)
+    - indicator of L2 accent
+    - intonation is not generally taught in the L2 classroom
+    - last aspects of l2 phonology for learners to acquire
+  - Acquisition of Spanish prosody
+    - Mastery seems possible (more target-like as prof. increases)
+    - Utterance type matters
+      - Statements easier than questions
+      - ‘Yes/No’-type questions are harder to process and acquire, when 
+      compared with wh-questions and simple statements (Brandl et al., 2000) 
+    - Familiarity matters
+      - Positive correlation between accuracy and familiarity with variety
+      - Important because of lots of variability in spanish prosody
+  - Empathy
+    - Info on construct (Carruthers, 2009; Baron-Cohen & Wheelwhright, 2004; 
+    Baron-Cohen, 2011; Frith & Frith, 2003)
+      - Relies on inferring the intentions, understanding the feelings, 
+      and emotions of others
+      - Associated with Theory of Mind and perspective-taking
+      - used as a measure to tap into individual pragmatic skills
+    - Empathy as proxy for pragmatic skill
+      - Empathy influences native language processing in how listeners 
+      interpret intonation and meaning when words are ambiguous 
+      (Esteve-Gilbert et al., 2020). 
+        - Higher empathy individuals appear to be more sensitive to 
+        intonation cues in the process of forming sound-meaning associations 
+        than lower empathy individuals 
+        - Higher empathy (more pragmatic skilled individuals) = ability to 
+        use intonation to resolve temporary lexical ambiguity that can lead 
+        to confirmatory vs. contrasting interpretations 
+- Current study (RQs): 
+  - RQ1: Is perceptual development in L2 Spanish modulated by proficiency 
+  and intonation type (i.e., Brandl et al., 2020)? 
+  - RQ2: Do pragmatic skills, specifically, empathy, modulate the rate of 
+  development in L2 prosody? 
+  - RQ3: Does speaker variety affect perception accuracy and processing speed? 
+
+
+
+
+
+

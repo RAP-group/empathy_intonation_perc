@@ -1,8 +1,3 @@
----
-title: "Methods"
-output: pdf_document
----
-
 # Method
 
 ## Participants
