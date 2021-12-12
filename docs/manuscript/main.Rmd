@@ -1,51 +1,133 @@
 ---
-title             : "The title"
-shorttitle        : "Title"
+title             : |
+  Using intonation to disambiguate meaning: The role of empathy and 
+  proficiency in L2 perceptual development
+shorttitle        : "Individual differences in L2 perception of intonation"
 
 author: 
-  - name          : "First Author"
+  - name          : "Joseph V. Casillas"
+    corresponding : yes
     affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
-    address       : "Postal address"
-    email         : "my@email.com"
-    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+    address       : |
+      Rutgers University - Department of Spanish and Portuguese, 15 Seminary 
+      place, New Brunswick, NJ 08904, USA
+    email         : "joseph.casillas@rutgers.edu"
+    role:
       - Conceptualization
       - Writing - Original Draft Preparation
       - Writing - Review & Editing
-  - name          : "Ernst-August Doelle"
-    affiliation   : "1,2"
+  - name          : "Nicole Rodríguez"
+    affiliation   : "2"
+    role:         
+      - Writing - Review & Editing
+  - name          : "Juan José Garrido Pozú"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Kyle Parrish"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Laura Fernández Arroyo"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Robert Esposito"
+    affiliation   : "3"
+    role:
+      - Writing - Review & Editing
+  - name          : "Isabelle Chang"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Kimberly Gómez"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Gabriela Constantin-Dureci"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Jiawei Shao"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Iván Andreu"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Katherine Taveras"
+    affiliation   : "1"
     role:
       - Writing - Review & Editing
 
 affiliation:
   - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
+    institution   : "Rutgers University"
   - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : "Poznan"
+  - id            : "3"
+    institution   : "Duo-lingo"
 
 authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-  Enter author note here.
+  We express our gratitude to all the haters. 
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  The present study investigates the interplay between proficiency and 
+  individual pragmatic skills in the process of learning a new language. 
+  Notably, we focus on the role of empathy in the development of second 
+  language (L2) prosody by analyzing the perception and processing of 
+  intonation in questions and statements in L2 Spanish. 
+  It is common for L2 learners to struggle with L2 intonation, often resulting 
+  in comprehension and communication difficulties [@trofimovich2006learning]. 
+  Previous research attests that learners gradually acquire target-language 
+  prosody as they gain proficiency in the language. 
+  Concretely, the perception and processing of L2 intonation has been shown to 
+  improve in conjunction with proficiency conditional on intonation type 
+  [@bustin_2020], with polar ('yes/no') interrogatives being more difficult 
+  to process and acquire when compared with simple statements. 
+  The construct empathy has been shown to influence native language processing 
+  in how listeners interpret intonation and meaning when words are ambiguous 
+  [@esteve2020empathy]. 
+  Importantly, higher empathy individuals, in comparison with lower empathy 
+  individuals, appear to be more sensitive to intonation cues in the process 
+  of forming sound-meaning associations. 
+  We extend this research to L2 acquisition in order to determine if 
+  individual differences in pragmatic skills affect the development of 
+  intonation in L2 processing and sentence comprehension. 
+  A total of N adult L2 Spanish learners (L1 English) from the 
+  Northeastern United States completed a two-alternative forced choice (2AFC) 
+  task in which they listened to four utterance types and categorized them as 
+  either questions or statements. 
+  The stimuli were randomly drawn tokens of declarative (broad, narrow focus) 
+  and interrogative (polar, wh-) sentences, spoken by native speakers of eight 
+  distinct varieties of Spanish (Andalusian, Argentine, Castilian, Chilean, 
+  Cuban, Mexican, Peruvian, Puerto Rican). 
+  The stimuli were presented aurally to the participants and subsequently 
+  identified as questions or statements using a keyboard. 
+  Additionally, participants completed the LexTALE vocabulary task in Spanish 
+  [@izura2014lextale], which served as a proxy for L2 proficiency, as well as 
+  the Empathy Quotient questionnaire in English [@baron2004empathy], which 
+  provided an individual assessment of the construct empathy. 
+  We used Bayesian multilevel regression and Drift Diffusion models to analyze 
+  the 2AFC data as a function of proficiency and empathy scores. 
+  Proficiency and empathy were used as continuous predictors to assess their 
+  relationship with pragmatic skill. 
+  The results replicated findings from @bustin_2020 showing that learner 
+  response accuracy improved as a function of proficiency for all utterance 
+  types. 
+  Importantly, higher empathy scores were positively correlated with higher 
+  accuracy in identifying polar interrogatives. 
+  As is the case with L1 research, the present project underscores the 
+  importance of considering individual pragmatic differences when examining 
+  intonational meaning processing and sentence comprehension in an L2. 
+  More notably, the results also motivate the inclusion of measures of 
+  pragmatic skill, such as empathy, as predictors for L2 acquisition outcomes. 
+  Furthermore, these findings highlight an area in which models of L2 
+  development can improve in order to better account for individual 
+  differences in L2 learning.
   
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
-  
-  <!-- https://tinyurl.com/ybremelq -->
-  
-keywords          : "keywords"
+keywords          : "Second language acquisition, Intonation, Empathy, Prosody"
 wordcount         : "X"
 
 bibliography      : ["../bib/empathy.bib"]
@@ -67,7 +149,7 @@ output            : papaja::apa6_word
 
 ```{r setup, include = FALSE}
 library("papaja")
-#source(here::here("scripts", "12_small_data.R"))
+source(here::here("scripts", "r", "12_small_data.R"))
 ```
 
 ```{r analysis-preferences}

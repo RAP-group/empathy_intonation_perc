@@ -1,5 +1,3 @@
-# Introduction
-
 A fundamental difficulty of speech comprehension is that listeners can come to understand different messages when presented with the same linguistic information [@cain2004individual]. 
 This can be especially problematic when one begins the endeavor of learning a new language. 
 In particular, it is common for second language (L2) learners to struggle with intonation---i.e., the melodic contour of an utterance---in the target language [@trofimovich2006learning]. 
@@ -15,9 +13,7 @@ We focus on the role of empathy in the development of L2 prosody by analyzing th
 
 ## Background and motivation 
 
-### L2 acquisition of prosody
-
-The difficulties associated with learning an additional language in adulthood are numerous. 
+**L2 acquisition of prosody**. The difficulties associated with learning an additional language in adulthood are numerous. 
 More often than not our focus falls on individual sounds, or segments, though we know that adults who learn an L2 are faced with suprasegmental challenges as well.
 Concretely, L2 learners often struggle with intonation, i.e., melodic variation at the utterance level. 
 In normal discourse, speakers use intonation to indicate syntactic structure, whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
@@ -40,7 +36,7 @@ Learner difficulties are generally ascribed to L1 transfer, and models of L2 pho
 There is a dearth of knowledge with regard to how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes. 
 The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
 
-### Acquisition of Spanish prosody
+**Acquisition of Spanish prosody**.
 
 <!--
 - Mastery seems possible (more target-like as prof. increases)
@@ -85,7 +81,7 @@ Moved criticism of Bustin to "present study" subsection (will use parts of it)
 --> 
 
 
-### Empathy
+**Empathy and pragmatic skill**.
 
 <!--
 - Info on construct [@carruthers2009we; @baron2004empathy; @baron2011zero; @frith2003development]
