@@ -49,6 +49,70 @@ time_diff <- function(date = "1982-11-03", format = "%Y-%m-%d",
   return(out)
 }
 
+
+# Calculate dprime
+dprime <- function(n_hit, n_fa, n_miss = NULL, n_cr = NULL, n_targets = NULL,
+                   n_distractors = NULL, adjusted = TRUE) {
+
+  # Get number of targets if not provided
+  if (is.null(n_targets)) {
+    n_targets <- n_hit + n_miss
+  }
+
+  # Get number of distractors is not provided
+  if (is.null(n_distractors)) {
+    n_distractors <- n_fa + n_cr
+  }
+
+  # Adjust hit rate and false alarm rate if there are extreme values
+  # (Hautus, 1995)
+  if (adjusted == TRUE) {
+    if (is.null(n_miss) | is.null(n_cr)) {
+
+      # Stop because of missing info
+      warning("You need to include n_miss and n_cr to compute adjusted ratios.
+               Computing indices anyway with non-adjusted ratios...")
+
+      # Calculate non-adjusted hit rate and fa rate
+      hit_rate_adjusted <- n_hit / n_targets
+      fa_rate_adjusted  <- n_fa / n_distractors
+
+    } else {
+
+      # Calculate adjusted rate
+      hit_rate_adjusted <- (n_hit + 0.5) / (n_hit + n_miss + 1)
+      fa_rate_adjusted  <- (n_fa + 0.5) / (n_fa + n_cr + 1)
+
+    }
+
+    # Calculate adjusted dprime
+    dprime <- qnorm(hit_rate_adjusted) - qnorm(fa_rate_adjusted)
+
+  } else {
+
+    # Calculate non-adjusted dprime
+    hit_rate <- n_hit / n_targets
+    fa_rate <- n_fa / n_distractors
+    dprime <- qnorm(hit_rate) - qnorm(fa_rate)
+
+  }
+
+  # If there are 0 false alarms and correct rejections (distractors) then
+  # it is impossible to calculate dprime
+  if (any(n_distractors == 0)) {
+    warning("There are observations with 0 distractors.
+             Not possible to compute dprime :(")
+    return(dprime)
+  }
+
+  return(dprime)
+
+}
+
+
+
+
+
 # Calculate binwidth for histograms
 fd_bw <- function(x) {
   out <- 2 * IQR(x) / length(x)^(1/3)
