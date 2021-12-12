@@ -149,7 +149,7 @@ output            : papaja::apa6_word
 
 ```{r setup, include = FALSE}
 library("papaja")
-source(here::here("scripts", "r", "12_small_data.R"))
+source(here::here("scripts", "r", "13_small_data.R"))
 ```
 
 ```{r analysis-preferences}
