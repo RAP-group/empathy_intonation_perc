@@ -1,4 +1,4 @@
-# DDM ------------------------------------------------------------------------
+# Dprime Models ---------------------------------------------------------------
 #
 # This script sources libraries and helpers and loads all tidy data
 #
