@@ -15,6 +15,120 @@ source(here::here("scripts", "r", "07_load_data.R"))
 
 
 
+# L2 models -------------------------------------------------------------------
+
+l2_response_priors <- c(
+  prior(normal(0, 2), class = "Intercept"), 
+  prior(normal(0, 1.5), class = "sd")
+)
+
+l2_response_priors <- c(
+  prior(normal(0, 0.3), class = b),
+  prior(normal(0, 0.1), class = sd), 
+  prior(lkj(8), class = cor)
+)
+
+learner_response_01 <- brm(
+  formula = is_correct ~ 0 + Intercept + sentence_type * lextale_std * eq_std + 
+    (1 + sentence_type | participant) + 
+    (1 + lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj < 10),
+  prior = l2_response_priors, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = "bernoulli", 
+  cores = 4, 
+  control = list(adapt_delta = 0.99, max_treedepth = 20), 
+  file = here("models", "learner_response_01")
+)
+
+conditional_effects(learner_response_01)
+bayestestR::describe_posterior(
+  learner_response_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
+  ci = 0.95)
+
+learner_response_q_01 <- brm(
+  formula = is_correct ~ 0 + Intercept + is_question * lextale_std * eq_std + 
+    (1 + is_question | participant) + 
+    (1 + lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj < 10, is_question %in% c(-1, 1)),
+  prior = l2_response_priors, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = "bernoulli", 
+  cores = 4, 
+  control = list(adapt_delta = 0.99, max_treedepth = 20), 
+  file = here("models", "learner_response_q_01")
+)
+
+conditional_effects(learner_response_q_01)
+bayestestR::describe_posterior(
+  learner_response_q_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
+  ci = 0.95)
+
+
+learner_response_qonly_01 <- brm(
+  formula = is_correct ~ 0 + Intercept + q_type * lextale_std * eq_std + 
+    (1 + q_type | participant) + 
+    (1 + lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj < 10, is_question == 1),
+  prior = l2_response_priors, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = "bernoulli", 
+  cores = 4, 
+  control = list(adapt_delta = 0.99, max_treedepth = 20), 
+  file = here("models", "learner_response_qonly_01")
+)
+
+conditional_effects(learner_response_qonly_01)
+bayestestR::describe_posterior(
+  learner_response_qonly_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
+  ci = 0.95)
+
+
+
+learner_response_yn_01 <- brm(
+  formula = is_correct ~ 0 + Intercept + lextale_std * eq_std + 
+    (1 | participant) + 
+    (1 + lextale_std * eq_std | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% filter(rt_adj < 10, sentence_type == "interrogative-total-yn"),
+  prior = l2_response_priors, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = "bernoulli", 
+  cores = 4, 
+  control = list(adapt_delta = 0.99, max_treedepth = 20), 
+  backend = "cmdstanr", 
+  file = here("models", "learner_response_yn_01")
+)
+
+
+conditional_effects(learner_response_yn_01)
+bayestestR::describe_posterior(
+  learner_response_yn_01, 
+  rope_range = c(-0.1, 0.1), rope_ci = 0.95, ci = 0.95)
+
+
+
+# -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Native Spanish speakers -----------------------------------------------------
 
 #
@@ -195,123 +309,3 @@ post_rt_samples_natives %>%
 
 
 
-
-
-#
-# L2 models
-#
-
-l2_response_priors <- c(
-  prior(normal(0, 2), class = "Intercept"), 
-  prior(normal(0, 1.5), class = "sd")
-)
-
-learner_response_01_noslope <- brm(
-  formula = is_correct ~ lextale_std * eq_std + 
-    (1 | participant) + 
-    (1 | speaker_variety/sentence_type) + 
-    (1 | sentence_type) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 5), 
-  prior = l2_response_priors, 
-  warmup = 1000, iter = 2000, chains = 2, 
-  family = "bernoulli", 
-  cores = 2, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  file = here("models", "learner_response_01_noslope")
-)
-
-
-#  prior(normal(0, 2), class = "Intercept"), 
-#  prior(normal(0, 1.5), class = "sd")
-  
-l2_response_priors <- c(
-  prior(normal(0, 0.3), class = b),
-  prior(normal(0, 0.1), class = sd), 
-  prior(lkj(8), class = cor)
-)
-
-learner_response_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + sentence_type * lextale_std * eq_std + 
-    (1 + sentence_type | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  file = here("models", "learner_response_01")
-)
-
-conditional_effects(learner_response_01)
-bayestestR::describe_posterior(
-  learner_response_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
-learner_response_q_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + is_question * lextale_std * eq_std + 
-    (1 + is_question | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10, is_question %in% c(-1, 1)),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  file = here("models", "learner_response_q_01")
-)
-
-conditional_effects(learner_response_q_01)
-bayestestR::describe_posterior(
-  learner_response_q_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
-
-learner_response_qonly_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + q_type * lextale_std * eq_std + 
-    (1 + q_type | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10, is_question == 1),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  file = here("models", "learner_response_qonly_01")
-)
-
-conditional_effects(learner_response_qonly_01)
-bayestestR::describe_posterior(
-  learner_response_qonly_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
-
-
-learner_response_yn_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + lextale_std * eq_std + 
-    (1 | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10, sentence_type == "interrogative-total-yn"),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  backend = "cmdstanr", 
-  file = here("models", "learner_response_yn_01")
-)
-
-
-conditional_effects(learner_response_yn_01)
-bayestestR::describe_posterior(
-  learner_response_yn_01, 
-  rope_range = c(-0.1, 0.1), rope_ci = 0.95, ci = 0.95)
-
-
-
-# -----------------------------------------------------------------------------
