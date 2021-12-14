@@ -10,10 +10,25 @@ Participants were L1 speakers of American English who ranged from functionally m
 All participants with knowledge of Spanish were adult L2 learners, operationally defined as having begun the endeavor of learning Spanish after the age of 13. 
 
 We planed to collect data from 300 individuals (100 monolingual Spanish speakers and 200 L2 learners). 
-Following Brandl et al. (2020), we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by Plonsky et al. (2015?) (Cohen's D = 0.600, Pearson's r = 0.287).
+Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).
 Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
 Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature and thus we did not base our sample size estimate on any parameter estimates related to this effect. 
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, we planned to recruit 100 additional participants.
+
+
+The pool of online-recruited participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the US with no knowledge of any languages other than English and/or Spanish.
+They reported no hearing difficulties and were required to use headphones on a desktop computer. 
+Upon beginning the experiment, all participants responded to the following screening questions: 
+1) What part of the US are you from?
+2) At what age did you begin learning Spanish?
+3) Are you proficient in any languages other than English/Spanish?. 
+Additionally, participants responded to the prompt "I am most familiar with Spanish from..." and using a pull-down window they selected a variety of Spanish or "I am not familiar with any variety of Spanish". 
+
+
+We excluded data from any participant that responded that they were not from the US Northeast, that they began learning Spanish before the age of 13, or that they were proficient in a language other than English/Spanish.
+Participants responding categorically across all trials were also excluded.
+
+
 
 ## Tasks
 
@@ -29,7 +44,7 @@ The 8 native speakers all produced the same 64 critical items.
 We segmented all utterances using Praat and normalized them for peak intensity. 
 The 2AFC task consists of 64 trials in which the stimuli presented are randomized across speaker variety. 
 Each variety has the same probability of being selected on a given trial, such that, on average, a given participant will hear each variety approximately 8 times. 
-The 2AFC task will be administered online using PsychoPy and participants will be recruited using Prolific. 
+The 2AFC task will be administered online using PsychoPy [@Peirce:2019] and participants will be recruited using the Prolific.ac online experimental platform. 
 The task takes approximately 5 minutes to complete.
 
 The experimental items consisted of sentences in Spanish...
@@ -44,13 +59,43 @@ Participants have to decide if the word they are presented is real or not using 
 The purpose of the LexTALE task is to get an assessment of the participants’ vocabulary size in Spanish, which is assumed to be a proxy for Spanish proficiency. 
 The LexTALE task takes approximately 5 minutes to complete.
 
-**Empathy Questionnaire**. Finally, participants will complete the Empathy Quotient (EQ, Baron-Cohen & Wheelwright, 2004), a 60-item questionnaire that presents likert-type items ranging from ‘strongly agree’ to ‘strongly disagree’. 
+
+We administered the Lexical Test for Advanced Learners of Spanish 
+[LexTALE-ESP, @lemhofer2012introducing; @izura2014lextale] in order to provide a 
+standardized assessment of the participants' proficiency/vocabulary size in 
+Spanish. 
+On this measure, scores can range from &minus;20 to 60, with native speaker 
+values generally above 50.
+Individuals with little or no knowledge of Spanish typically score from 
+&minus;20 to 0.
+For the purposes of the present study, proficiency is treated as a continuous 
+variable, thus we consider a monolingual English speaker to have little to no 
+proficiency in Spanish.
+<!--
+Figure \@ref(fig:plot-lextale) plots the LexTALE data. 
+Participants had a wide range of scores (Min. &equals;
+`r lextale_desc %>% pull(min)`, Max. &equals;
+`r lextale_desc %>% pull(max)`), suggesting all proficiency levels were 
+likely represented in the sample. 
+The mean value was
+`r lextale_desc %>% pull(Estimate)` (95% HDI: [
+`r lextale_desc %>% pull(Q2.5)`, 
+`r lextale_desc %>% pull(Q97.5)`]).
+The horizontal lines indicate scores located at 1 and 2 standard deviations 
+from the mean (SD &equals;
+`r lextale_desc %>% pull(sd)`). 
+-->
+
+
+
+
+**Empathy Questionnaire**. Finally, participants will complete the Empathy Quotient [EQ, @baron2004empathy], a 60-item questionnaire that presents likert-type items ranging from ‘strongly agree’ to ‘strongly disagree’. 
 The EQ is scored to produce a single value indicating an individual’s level of empathy. 
 The EQ takes approximately 5 minutes to complete.
 
 ## Procedure
 
-We excluded data according to the following criteria: error during data collection; clear lack of understanding or engagement during the task, i.e., all '1' responses, failed three attention checks, etc.; participants reporting having learned Spanish before the age of 13; participants with knowledge of language other and English and Spanish.  
+We excluded data according to the following criteria: error during data collection; clear lack of understanding or engagement during the task, i.e., all '1' responses, failed three attention checks, etc.; participants reporting having learned Spanish before the age of 13; participants with knowledge of language other and English and Spanish. 
 Data from a total of `r n_returned` participants was discarded because the session timed our and/or data was incomplete. 
 An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
 A total of `r n_learners` participants met the criteria for inclusion. 
@@ -69,12 +114,15 @@ The slope for *utterance type* varied for the participant effect, as did the pro
 All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represents the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
 
+The model included regularizing, weakly informative priors [@Gelman_2017].
+
+We established a region of practical equivalence (ROPE) of &pm; 0.05 around a point null value of 0 [see @kruschke2018rejecting]. 
 We will sample the posterior distribution of the model for statistical inferences. 
-A region of practical equivalence (ROPE) will be established around a point null value of 0 (Kruschke, 2018) using the following formula:
+A region of practical equivalence (ROPE) will be established around a point null value of 0 [@kruschke2018rejecting] using the following formula:
 
 $$\\frac{\\mu\_1 - \\mu\_2}{\\sqrt{\\frac{\\sigma\_1^2 + \\sigma\_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
 For statistical inferences, a posterior distribution for a parameter β in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
-All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI and the MPE.   
-The analyses were conducted in R and models fit using `stan` via the R package `brms` (Bürkner, 2018).
+All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI and the MPE. 
+The analyses were conducted in R and models fit using the probabilistic programming language `stan` via the R package `brms` [@R_brms_a; @R_brms_b].
