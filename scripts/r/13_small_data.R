@@ -33,14 +33,20 @@ mono_speech_rates_df <- sr %>%
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
   names_to = "metric", values_to = "val") 
 
+# Speech rate information of stimuli
 mono_speech_rates_avg <- sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
   names_to = "metric", values_to = "val") %>% 
   group_by(speaker_variety, metric) %>% 
-  summarize(avg_val = mean(val), med_val = median(val), .groups = "drop") %>% 
-  pivot_longer(cols = c("avg_val", "med_val"), names_to = "measure", 
-    values_to = "val")
+  summarize(avg_val = mean(val), .groups = "drop") %>% 
+  pivot_wider(names_from = metric, values_from = avg_val) %>% 
+  mutate(
+    speaker_variety = if_else(speaker_variety == "castilian", "Penninsular", .$speaker_variety), 
+    speaker_variety = str_to_title(speaker_variety)) %>% 
+  rename(Variety = speaker_variety, `Articulation rate` = articulation_rate, 
+    `Avg. syllable duration` = avg_syll_dur, `Speech rate` = speech_rate)
 
+# List of mean/median values for in-prose reporting
 mono_speech_rates_printy <- sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
   names_to = "metric", values_to = "val") %>% 
@@ -74,6 +80,7 @@ time <- bind_rows(
   filter(status == "APPROVED") %>% 
   mutate(min = time_taken / 60) 
 
+# Mean and median time to complete all tasks
 t_mean   <- time$min %>% mean
 t_median <- time$min %>% median
 
@@ -85,6 +92,8 @@ t_median <- time$min %>% median
 
 
 # LexTALE stuff ---------------------------------------------------------------
+
+# List of mean, sd, min, max for in-prose printing
 lt_dat <- learners %>% 
   distinct(participant, lextale_tra) %>% 
   summarize(mean_lt = mean(lextale_tra), sd_lt = sd(lextale_tra), 
@@ -93,14 +102,21 @@ lt_dat <- learners %>%
   mutate_if(is.numeric, round, digits = 2) %>% 
   split(.$desc)
 
+# -----------------------------------------------------------------------------
+
+
+
 
 # Empathy stuff ---------------------------------------------------------------
 
+# List of mean, sd, min, max for in-prose printing
 eq_dat <- learners %>% 
   summarize(mean_eq = mean(eq_score), sd_eq = sd(eq_score), 
     min_eq = min(eq_score), max_eq = max(eq_score)) %>% 
   pivot_longer(cols = everything(), names_to = "desc", values_to = "val") %>% 
   mutate_if(is.numeric, round, digits = 2) %>% 
   split(.$desc)
+
+# -----------------------------------------------------------------------------
 
 
