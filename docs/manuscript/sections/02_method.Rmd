@@ -74,16 +74,16 @@ proficiency in Spanish.
 <!--
 Figure \@ref(fig:plot-lextale) plots the LexTALE data. 
 Participants had a wide range of scores (Min. &equals;
-`r lextale_desc %>% pull(min)`, Max. &equals;
-`r lextale_desc %>% pull(max)`), suggesting all proficiency levels were 
+`r # lextale_desc %>% pull(min)`, Max. &equals;
+`r # lextale_desc %>% pull(max)`), suggesting all proficiency levels were 
 likely represented in the sample. 
 The mean value was
-`r lextale_desc %>% pull(Estimate)` (95% HDI: [
-`r lextale_desc %>% pull(Q2.5)`, 
-`r lextale_desc %>% pull(Q97.5)`]).
+`r # lextale_desc %>% pull(Estimate)` (95% HDI: [
+`r # lextale_desc %>% pull(Q2.5)`, 
+`r # lextale_desc %>% pull(Q97.5)`]).
 The horizontal lines indicate scores located at 1 and 2 standard deviations 
 from the mean (SD &equals;
-`r lextale_desc %>% pull(sd)`). 
+`r # lextale_desc %>% pull(sd)`). 
 -->
 
 
@@ -120,7 +120,7 @@ We established a region of practical equivalence (ROPE) of &pm; 0.05 around a po
 We will sample the posterior distribution of the model for statistical inferences. 
 A region of practical equivalence (ROPE) will be established around a point null value of 0 [@kruschke2018rejecting] using the following formula:
 
-$$\\frac{\\mu\_1 - \\mu\_2}{\\sqrt{\\frac{\\sigma\_1^2 + \\sigma\_2^2}{2}}}$$
+$$\frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
 For statistical inferences, a posterior distribution for a parameter β in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
