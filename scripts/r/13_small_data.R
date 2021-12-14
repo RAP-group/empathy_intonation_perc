@@ -1,8 +1,8 @@
 # Small data ------------------------------------------------------------------
 #
-#
-#
-#
+# - script to be loaded in main.Rmd
+# - used for reporting "smaller" descriptives (such as N, means, etc.)
+# - tables and model summaries are also loaded here for in-prose reporting
 #
 # -----------------------------------------------------------------------------
 
@@ -19,9 +19,11 @@ source(here::here("scripts", "r", "07_load_data.R"))
 # Learner descriptives --------------------------------------------------------
 
 n_learners <- learners$participant %>% unique %>% length
+n_returned <- id_return %>% length
 n_removed  <- id_remove$learners %>% nrow
 
 # -----------------------------------------------------------------------------
+
 
 
 
