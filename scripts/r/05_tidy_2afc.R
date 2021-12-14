@@ -126,6 +126,8 @@ returned <- c(
   "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h54.32.690.csv"
   )
 
+# Save "returned" files for bookkeeping
+saveRDS(returned, here("data", "tidy", "participants_returned_vector.Rds"))
 
 # Combine path and file names to filter them out
 path_returned <- paste0(path, returned)

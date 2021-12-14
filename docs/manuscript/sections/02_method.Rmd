@@ -2,35 +2,79 @@
 
 ## Participants
 
-The participant pool included XX English L1 - Spanish L2 learners.
-Participants were recruited... 
+Participants were adult native speakers of English with varied levels of proficiency in Spanish (determined by the LexTALE task). 
+Participants were be recruited via Prolific and were be compensated at a rate of $9.52 per hour for their time. 
+We estimated the task would take approximately 15 minutes to complete, thus each participant was compensated with $2.70 for completing all three tasks.
+
+Participants were L1 speakers of American English who ranged from functionally monolingual to highly proficient in Spanish (bilinguals). 
+All participants with knowledge of Spanish were adult L2 learners, operationally defined as having begun the endeavor of learning Spanish after the age of 13. 
+
+We planed to collect data from 300 individuals (100 monolingual Spanish speakers and 200 L2 learners). 
+Following Brandl et al. (2020), we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by Plonsky et al. (2015?) (Cohen's D = 0.600, Pearson's r = 0.287).
+Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
+Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature and thus we did not base our sample size estimate on any parameter estimates related to this effect. 
+That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, we planned to recruit 100 additional participants.
 
 ## Tasks
 
-In the study, participants completed three tasks in the following order: LexTALE, Empathy questionnaire, and Two-alternative forced choice task... 
+The study consists of three tasks, given in the following order: a two-alternative forced choice task (2AFC), followed by the LexTALE, and, finally, the Empathy quotient (EQ).
 
-### LexTALE
-
-The LexTALE is a vocabulary test that provides a proxy of proficiency based on vocabulary size...
-
-### Empathy Questionnaire
-
-Participants completed a questionnaire that assessed their... 
-
-### 2afc
-
-Participants completed a two-alternative forced choice task in which they listened to sentences in Spanish and had to decide whether the sentences were questions or statements...
-
-## Stimuli
+**2afc**. In the 2AFC task participants will be presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
+Their task is to determine, as quickly and as accurately as possible, if the utterance they hear is a question or a statement. 
+Specifically, they will respond to the question “Is this a question” using the keyboard. 
+They will type ‘1’ for “yes” (meaning “yes, this is a question”) and ‘0’ for ‘no’ (meaning “no, this is not a question”). 
+The stimuli consist of 64 critical items, 16 of each sentence type. 
+To generate the stimuli, we recorded native Spanish speakers of 8 different varieties (Cuban, Castilian, Andalusian, Puerto Rican, Chilean, Argentinean, Mexican, and Peruvian). 
+The 8 native speakers all produced the same 64 critical items. 
+We segmented all utterances using Praat and normalized them for peak intensity. 
+The 2AFC task consists of 64 trials in which the stimuli presented are randomized across speaker variety. 
+Each variety has the same probability of being selected on a given trial, such that, on average, a given participant will hear each variety approximately 8 times. 
+The 2AFC task will be administered online using PsychoPy and participants will be recruited using Prolific. 
+The task takes approximately 5 minutes to complete.
 
 The experimental items consisted of sentences in Spanish...
 
+We piloted the 2AFC experiment on 100 native Spanish speakers to assure critical item quality and assess the difficulty of the task. 
+Crucially, our existing data does not include our population of interest, L2 learners.
+
+
+**LexTALE**. The LexTALE task (Lemhöfer & Broersma, 2012) is a lexical decision experiment in which the participants are presented real and nonsense words. 
+We will administer the Spanish version, LexTALE-ESP (Izura, Cuetos, & Brysbaert, 2014). 
+Participants have to decide if the word they are presented is real or not using the keyboard (‘1’ for real, ‘0’ for fake). 
+The purpose of the LexTALE task is to get an assessment of the participants’ vocabulary size in Spanish, which is assumed to be a proxy for Spanish proficiency. 
+The LexTALE task takes approximately 5 minutes to complete.
+
+**Empathy Questionnaire**. Finally, participants will complete the Empathy Quotient (EQ, Baron-Cohen & Wheelwright, 2004), a 60-item questionnaire that presents likert-type items ranging from ‘strongly agree’ to ‘strongly disagree’. 
+The EQ is scored to produce a single value indicating an individual’s level of empathy. 
+The EQ takes approximately 5 minutes to complete.
+
 ## Procedure
 
-Data collection was carried out online. 
-Participants were provided with...
+We excluded data according to the following criteria: error during data collection; clear lack of understanding or engagement during the task, i.e., all '1' responses, failed three attention checks, etc.; participants reporting having learned Spanish before the age of 13; participants with knowledge of language other and English and Spanish.  
+Data from a total of `r n_returned` participants was discarded because the session timed our and/or data was incomplete. 
+An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
+A total of `r n_learners` participants met the criteria for inclusion. 
 
 ## Statistical analyses
 
-Data was analyzed using... 
 
+We report two primary statistical analyses that were pre-registered prior to collecting the learner data. 
+First, we analyzed response accuracy using Bayesian hierarchical logistic regression. 
+The model considered response accuracy for the population effects *utterance type* (declarative broad focus, declarative narrow focus, interrogative yes/no, interrogative -wh), proficiency (i.e., LexTALE score), empathy quotient, and the proficiency by empathy quotient interaction. 
+The likelihood of the model was Bernoulli distributed with a logit link function. 
+The criterion, *response*, was coded as "1" for correct responses and "0" for incorrect responses. 
+Thus, the first analysis modeled the probability of responding correctly to the prompt "Is this a question". 
+We specified group-level effects for participants, speaker variety, and items.  
+The slope for *utterance type* varied for the participant effect, as did the proficiency by empathy quotient interaction for the speaker variety effect. 
+All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represents the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
+
+
+We will sample the posterior distribution of the model for statistical inferences. 
+A region of practical equivalence (ROPE) will be established around a point null value of 0 (Kruschke, 2018) using the following formula:
+
+$$\\frac{\\mu\_1 - \\mu\_2}{\\sqrt{\\frac{\\sigma\_1^2 + \\sigma\_2^2}{2}}}$$
+
+For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
+For statistical inferences, a posterior distribution for a parameter β in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
+All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI and the MPE.   
+The analyses were conducted in R and models fit using `stan` via the R package `brms` (Bürkner, 2018).
