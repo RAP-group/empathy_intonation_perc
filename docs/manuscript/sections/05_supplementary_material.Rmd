@@ -15,7 +15,25 @@
 
 ## Supplementary analyses
 
+This is Figure \@ref(fig:plot-sm-random-speaker-check)
 
+(ref:plot-sm-random-speaker-check) Make sure each variety represented equally over course of experiment.
+
+```{r, 'plot-sm-random-speaker-check', fig.cap="(ref:plot-sm-random-speaker-check)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_random_speaker_check.pdf")
+  )
+```
+
+This is Figure \@ref(fig:plot-sm-random-speech-rate)
+
+(ref:plot-sm-random-speech-rate) Make sure each variety represented equally over course of experiment.
+
+```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_speech_rate.pdf")
+  )
+```
 
 
 
