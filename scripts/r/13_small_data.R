@@ -83,6 +83,7 @@ time <- bind_rows(
 # Mean and median time to complete all tasks
 t_mean   <- time$min %>% mean
 t_median <- time$min %>% median
+t_sd     <- time$min %>% sd
 
 # -----------------------------------------------------------------------------
 

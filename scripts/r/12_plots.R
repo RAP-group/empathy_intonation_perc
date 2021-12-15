@@ -1,169 +1,23 @@
-# Source helpers and libs -----------------------------------------------------
-
-source(here::here("scripts", "r", "07_load_data.R"))
-
+# Plots -----------------------------------------------------------------------
+#
+# - All plots presented in slides and manuscripts are generated from this file
+# - Default output is to png and pdf
+#
 # -----------------------------------------------------------------------------
 
 
-# Model stuff
 
 
-post_samples <- posterior_samples(native_response_01) %>% 
-  rename(intercept = b_Intercept, 
-         participant_sd = sd_participant__Intercept, 
-         sentence_type_sd = sd_sentence_type__Intercept, 
-         speaker_variety_sd = sd_speaker_variety__Intercept, 
-         speaker_variety_sentence_type_sd = `sd_speaker_variety:sentence_type__Intercept`)
+# Source helpers, libs, and models --------------------------------------------
 
-# Grouping variable posteriors
-posterior_samples(all_mods$native_response_01) %>% 
-  select(starts_with("sd")) %>% 
-  gather(key, sd) %>% 
-  mutate(key = str_remove(key, "sd_") %>% 
-           str_remove(., "__Intercept")) %>% 
-  ggplot(aes(x = sd, fill = key)) +
-  geom_density(color = "white", alpha = 0.7) +
-  scale_fill_viridis_d(name = "Group-level variance", option = "D", end = 0.9, 
-    labels = c("Participant", "Sentence type", "Speaker variety", 
-    "Speaker variety:sentence type", "Speaker variety:sentence type:sentence")) + 
-  coord_cartesian(xlim = c(0, 4)) + 
-  labs(y = "Density", x = expression(beta)) + 
-  minimal_adj() + 
-  theme(legend.position = c(0.85, 0.75), legend.title = element_text(size = 9), 
-    legend.text = element_text(size = 8), legend.key.size = unit(0.5, "cm"))
+source(here::here("scripts", "r", "07_load_data.R"))
 
+learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
+learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
+learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
+learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
 
-
-
-# By participant
-
-# Get draws for each study
-participant_draws <- 
-  spread_draws(native_response_01, r_participant[Participant,], b_Intercept) %>% 
-  mutate(b_Intercept = r_participant + b_Intercept)
-
-# Get draws for pooled effect
-participant_pooled_effect_draws <- 
-  spread_draws(native_response_01, b_Intercept) %>% 
-  mutate(Participant = "Pooled Effect")
-
-# Combine it and clean up
-participant_forest_data <- 
-  bind_rows(participant_draws, participant_pooled_effect_draws) %>% 
-  ungroup() %>%
-  mutate(Participant = reorder(Participant, b_Intercept), 
-         Participant = relevel(Participant, "Pooled Effect", after = Inf))
-
-# Calculate mean qi intervals for right margin text
-participant_forest_data_summary <- 
-  group_by(participant_forest_data, Participant) %>% 
-  mean_qi(b_Intercept, .width = 0.95) 
-
-# Calculate mean qi intervals for pooled effect
-participant_pooled_summary <- 
-  group_by(participant_forest_data, Participant) %>% 
-  mean_qi(b_Intercept, .width = c(0.5, 0.8, 0.95)) %>% 
-  filter(Participant == "Pooled Effect")
-
-# Plot it all
-p_post_participant <- participant_forest_data %>% 
-  filter(Participant != "Pooled Effect") %>% 
-  ggplot() + 
-  aes(x = b_Intercept, y = Participant) + 
-    geom_text(data = 
-    mutate_if(participant_forest_data_summary, is.numeric, round, 2) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), as.character) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), unicode_minus) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), strip_blank),
-            aes(label = glue("{b_Intercept} [{.lower}, {.upper}]"), x = Inf), 
-            hjust = "inward", family = "Times", alpha = 0) + 
-  geom_tile(data = participant_pooled_summary, aes(width = .lower - .upper),
-    alpha = 0.75, height = Inf, fill = "#31688EFF") +
-  stat_pointinterval(point_fill = "white", shape = 21, alpha = 0.85, 
-    .width = c(0.8, 0.95), point_size = 1.5) +
-  coord_cartesian(xlim = c(0, 7)) + 
-  labs(x = expression(beta), y = NULL) +
-  theme_test(base_size = 12) + 
-  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
-
-
-
-# By speaker variety
-
-# Get draws for each study
-speaker_variety_draws <- 
-  spread_draws(native_response_01, r_speaker_variety[Speaker_variety,], b_Intercept) %>% 
-  mutate(b_Intercept = r_speaker_variety + b_Intercept)
-
-# Get draws for pooled effect
-speaker_variety_pooled_effect_draws <- 
-  spread_draws(native_response_01, b_Intercept) %>% 
-  mutate(Speaker_variety = "Pooled Effect")
-
-# Combine it and clean up
-speaker_variety_forest_data <- 
-  bind_rows(speaker_variety_draws, speaker_variety_pooled_effect_draws) %>% 
-  ungroup() %>%
-  mutate(Speaker_variety = reorder(Speaker_variety, b_Intercept), 
-         Speaker_variety = relevel(Speaker_variety, "Pooled Effect", after = Inf))
-
-# Calculate mean qi intervals for right margin text
-speaker_variety_forest_data_summary <- 
-  group_by(speaker_variety_forest_data, Speaker_variety) %>% 
-  mean_qi(b_Intercept, .width = 0.95) 
-
-# Calculate mean qi intervals for pooled effect
-speaker_variety_pooled_summary <- 
-  group_by(speaker_variety_forest_data, Speaker_variety) %>% 
-  mean_qi(b_Intercept, .width = c(0.5, 0.8, 0.95)) %>% 
-  filter(Speaker_variety == "Pooled Effect")
-
-# Plot it all
-p_post_speaker_variety <- speaker_variety_forest_data %>% 
-  ggplot() + 
-  aes(x = b_Intercept, y = Speaker_variety) + 
-  geom_text(data = 
-    mutate_if(speaker_variety_forest_data_summary, is.numeric, round, 2) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), as.character) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), unicode_minus) %>% 
-    mutate_at(c("b_Intercept", ".lower", ".upper"), strip_blank),
-            aes(label = glue("{b_Intercept} [{.lower}, {.upper}]"), x = Inf), 
-            hjust = "inward", family = "Times") + 
-  geom_rect(data = speaker_variety_pooled_summary, 
-    aes(xmin = .lower, xmax = .upper, ymin = -Inf, ymax = Inf),
-    alpha = 0.2, fill = "#31688EFF") +
-  stat_halfeye(point_fill = "white", shape = 21, .width = c(0.8, 0.95)) +
-  coord_cartesian(xlim = c(0, 8)) + 
-  labs(x = expression(italic("beta")), y = NULL) +
-  minimal_adj() + 
-  theme(axis.text.y = element_text(hjust = 0))
-
-p_post_participant
-p_post_speaker_variety
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# -----------------------------------------------------------------------------
 
 
 
@@ -197,8 +51,9 @@ learner_accuracy_by_utterance_type <- learner_response_01 %>%
       .width = c(0.95, 0.65)) +
     ggdist::scale_fill_ramp_discrete(range = c(1, 0.3), na.translate = F) +
     labs(y = "Log odds", x = NULL, 
-      title = "Response accuracy", 
-      subtitle = "Probability of a correct response for each utterance type in the logistic space") + 
+      #title = "Response accuracy", 
+      #subtitle = "Probability of a correct response for each utterance type in the logistic space"
+      ) + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
     theme(legend.position = c(0.5, 0.1), legend.direction = "horizontal", 
       legend.title = element_text(size = 8, color = "grey45"), 
@@ -209,15 +64,9 @@ learner_accuracy_by_utterance_type <- learner_response_01 %>%
       title = "of participant accuracy falls in this range",
       label.position = "bottom", title.position = "bottom")) 
 
-ggsave(
-  filename = "learner_accuracy_by_utterance_type.png", 
-  plot = learner_accuracy_by_utterance_type, 
-  path = here("figs", "slides"), 
-  width = 7, 
-  height = 4, 
-  units = "in", 
-  dpi = 300
-  )
+# -----------------------------------------------------------------------------
+
+
 
 
 # Accuracy by speaker variety -------------------------------------------------
@@ -252,41 +101,17 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
     geom_curve(aes(x = 0.59, xend = 0.69, y = 0.025, yend = 0.03), size = 0.3, 
       curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
     labs(x = "Log odds", y = NULL, 
-      title = "Response accuracy", 
-      subtitle = "Partially pooled estimates for each speaker variety") + 
+      #title = "Response accuracy", 
+      #subtitle = "Partially pooled estimates for each speaker variety"
+      ) + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
 
-ggsave(
-  filename = "learner_accuracy_by_speaker_variety.png", 
-  plot = learner_accuracy_by_speaker_variety, 
-  path = here("figs", "slides"), 
-  width = 7, 
-  height = 4, 
-  units = "in", 
-  dpi = 300
-  )
+# -----------------------------------------------------------------------------
+
+
 
 
 # Accuracy by lextale ---------------------------------------------------------
-
-lt_me <- conditional_effects(learner_response_01_noslope, 
-  effects = "lextale_std", 
-  re_formula = NA, 
-  method = "posterior_linpred", 
-  spaghetti = TRUE, 
-  nsamples = 300, 
-  #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
-  )
-
-learner_accuracy_by_lextale <- plot(lt_me, plot = F, 
-  line_args = list(size = 3), 
-  spaghetti_args = list(colour = alpha("#440154FF", 0.1)))[[1]] + 
-  coord_cartesian(ylim = c(-1, 6), expand = F) + 
-  scale_x_continuous(breaks = seq(-1, 4)) + 
-  geom_hline(yintercept = 0, lty = 3) + 
-  labs(y = "Log odds", x = "LexTALE score") + 
-  annotate("text", x = -1, y = 5.75, label = "(A)", family = "Times") +
-  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times")
 
 # Get interaction with utterance type
 lt_st_me <- conditional_effects(learner_response_01, 
@@ -294,31 +119,32 @@ lt_st_me <- conditional_effects(learner_response_01,
   re_formula = NA, 
   method = "posterior_linpred", 
   spaghetti = TRUE, 
-  nsamples = 300, 
+  ndraws = 300, 
   #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
-  )
+  )[[1]]
 
+# Set labs for plot
 sentence_labs <- c(
   "Interrogative\ny/n", 
   "Interrogative\nWh-", 
   "Declarative\nnarrow focus", 
   "Declarative\nbroad focus")
 
+# Pick some colorsf
 utterance_colors <- c(
   "#440154"
 )
 
-learner_accuracy_lt_by_st <- plot(lt_st_me, plot = F, 
-  line_args = list(size = 3))[[1]] + 
+# Main plot
+learner_accuracy_lextale_by_utterance_type <- plot(lt_st_me, plot = F, 
+  line_args = list(size = 5))[[1]] + 
+  geom_line(aes(group = effect2__), size = 2, 
+    color = rep(viridis::viridis_pal(option = "A", end = 0.85)(4), each = 100)) +
   coord_cartesian(ylim = c(-1, 6), expand = F) + 
-  scale_y_continuous(position = "right") + 
   geom_hline(yintercept = 0, lty = 3) + 
-  scale_color_manual(
-    name = NULL, 
-    values = alpha(viridis::viridis_pal()(4), 0.1), 
-    labels = sentence_labs) + 
-  labs(y = NULL, x = "LexTALE score") + 
-  annotate("text", x = -1, y = 5.75, label = "(B)", family = "Times") +
+  scale_color_manual(name = NULL, labels = sentence_labs, 
+    values = alpha(viridis::viridis_pal(option = "A", end = 0.9)(4), 0.1)) + 
+  labs(y = "Log odds", x = "LexTALE score") + 
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(
     legend.background = element_blank(), 
@@ -328,24 +154,12 @@ learner_accuracy_lt_by_st <- plot(lt_st_me, plot = F,
     legend.text.align = 0.5) + 
   guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
 
-lt_st_combine <- learner_accuracy_by_lextale + learner_accuracy_lt_by_st + 
-  plot_annotation(
-  title = 'Response accuracy',
-  subtitle = "Probability of a correct response in the logistic space as a function of LexTALE score (A) and LexTALE score for each utterance type (B)",
-  caption = "Colored lines represent 300 draws from the posterior distribution"
-)
-
-ggsave(
-  filename = "lextale_utterance_type_combine.png", 
-  plot = lt_st_combine, 
-  path = here("figs", "slides"), 
-  width = 11, 
-  height = 5, 
-  units = "in", 
-  dpi = 300
-  )
-
 # -----------------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -584,3 +398,37 @@ ggsave(
   units = "in", 
   dpi = 300
   )
+
+
+
+
+
+
+
+
+# Save plots ------------------------------------------------------------------
+
+devices     <- c('png', 'pdf')
+path_to_fig <- file.path(here("figs", "manuscript"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/learner_accuracy_by_utterance_type.", .x), 
+  plot = learner_accuracy_by_utterance_type, 
+  device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/learner_accuracy_by_speaker_variety.", .x), 
+  plot = learner_accuracy_by_speaker_variety, 
+  device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/learner_accuracy_lextale_by_utterance_type.", .x), 
+  plot = learner_accuracy_lextale_by_utterance_type, 
+  device = .x, height = 4, width = 7, units = "in"))
+
+
+
+
+
+
+# -----------------------------------------------------------------------------

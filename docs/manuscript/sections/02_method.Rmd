@@ -100,6 +100,11 @@ Data from a total of `r n_returned` participants was discarded because the sessi
 An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
 A total of `r n_learners` participants met the criteria for inclusion. 
 
+Participants were recruited via Prolific.ac. 
+They completed the all three tasks in a single session. 
+The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy quotient questionnaire. 
+Participants spent an average of `r round(t_mean, 2)` minutes (SD: `r round(t_sd, 2)`) to finish the complete experiment. 
+
 ## Statistical analyses
 
 

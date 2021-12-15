@@ -170,11 +170,11 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 <!-- RESULTS -->
-```{r, 'include-results', child='./sections/03_coronal_stops.Rmd', eval=F}
+```{r, 'include-results', child='./sections/03_results.Rmd'}
 ```
 
 <!-- DISCUSSION/CONCLUSION -->
-```{r, 'include-disc', child='./sections/04_discussion.Rmd', eval=F}
+```{r, 'include-disc', child='./sections/04_discussion.Rmd'}
 ```
 
 

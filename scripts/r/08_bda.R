@@ -1,6 +1,8 @@
 # Models ----------------------------------------------------------------------
 #
-# This script sources libraries and helpers and loads all tidy data
+# - In this script we fit all of the Bayesian regression models for the learner 
+#   accuracy data
+# - There are exploratory analyses of the monolingual Spanish speakers as well
 #
 # -----------------------------------------------------------------------------
 
@@ -17,17 +19,20 @@ source(here::here("scripts", "r", "07_load_data.R"))
 
 # L2 models -------------------------------------------------------------------
 
+# Set weakly informative priors (not sure what this was for)
 l2_response_priors <- c(
   prior(normal(0, 2), class = "Intercept"), 
   prior(normal(0, 1.5), class = "sd")
 )
 
+# Set weakly informative priors
 l2_response_priors <- c(
   prior(normal(0, 0.3), class = b),
   prior(normal(0, 0.1), class = sd), 
   prior(lkj(8), class = cor)
 )
 
+# Fit main model
 learner_response_01 <- brm(
   formula = is_correct ~ 0 + Intercept + sentence_type * lextale_std * eq_std + 
     (1 + sentence_type | participant) + 
@@ -42,11 +47,7 @@ learner_response_01 <- brm(
   file = here("models", "learner_response_01")
 )
 
-conditional_effects(learner_response_01)
-bayestestR::describe_posterior(
-  learner_response_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
+# Model of questions vs statements
 learner_response_q_01 <- brm(
   formula = is_correct ~ 0 + Intercept + is_question * lextale_std * eq_std + 
     (1 + is_question | participant) + 
@@ -61,12 +62,7 @@ learner_response_q_01 <- brm(
   file = here("models", "learner_response_q_01")
 )
 
-conditional_effects(learner_response_q_01)
-bayestestR::describe_posterior(
-  learner_response_q_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
-
+# Model of yes/no vs. wh questions
 learner_response_qonly_01 <- brm(
   formula = is_correct ~ 0 + Intercept + q_type * lextale_std * eq_std + 
     (1 + q_type | participant) + 
@@ -81,13 +77,7 @@ learner_response_qonly_01 <- brm(
   file = here("models", "learner_response_qonly_01")
 )
 
-conditional_effects(learner_response_qonly_01)
-bayestestR::describe_posterior(
-  learner_response_qonly_01, rope_range = c(-0.1, 0.1), rope_ci = 0.95, 
-  ci = 0.95)
-
-
-
+# Subset to just y/n questions
 learner_response_yn_01 <- brm(
   formula = is_correct ~ 0 + Intercept + lextale_std * eq_std + 
     (1 | participant) + 
@@ -102,14 +92,6 @@ learner_response_yn_01 <- brm(
   backend = "cmdstanr", 
   file = here("models", "learner_response_yn_01")
 )
-
-
-conditional_effects(learner_response_yn_01)
-bayestestR::describe_posterior(
-  learner_response_yn_01, 
-  rope_range = c(-0.1, 0.1), rope_ci = 0.95, ci = 0.95)
-
-
 
 # -----------------------------------------------------------------------------
 
@@ -130,6 +112,11 @@ bayestestR::describe_posterior(
 
 
 # Native Spanish speakers -----------------------------------------------------
+#
+# - These models are exploratory in nature and were fit prior to collecting 
+#   the learner data
+# - These analyses are referenced in the manuscript qualitatively as a 
+#   justification for continuing with the experiment (i.e., the task worked)
 
 #
 # Response data
@@ -302,10 +289,3 @@ post_rt_samples_natives %>%
   facet_wrap(~ term, scales = "free")
 
 # -----------------------------------------------------------------------------
-
-
-
-
-
-
-

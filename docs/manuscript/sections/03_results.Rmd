@@ -1,1 +1,44 @@
 # Results
+
+
+Response accuracy: Probability of a correct response for each utterance type in the logistic space
+
+```{r, img-test-png}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_accuracy_by_utterance_type.png")
+  )
+```
+
+```{r, img-test-pdf}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_accuracy_by_utterance_type.pdf")
+  )
+```
+
+
+
+
+
+
+
+Response accuracy: Partially pooled estimates for each speaker variety
+
+```{r, img-test-pdf2}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_accuracy_by_speaker_variety.pdf")
+  )
+```
+
+
+
+
+
+
+
+Response accuracy: Probability of a correct response in the logistic space as a function of LexTALE score (A) and LexTALE score for each utterance type (B). Colored lines represent 300 draws from the posterior distribution. 
+
+```{r, img-test-pdf3}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_accuracy_lextale_by_utterance_type.pdf")
+  )
+```
