@@ -32,24 +32,11 @@ When target language pronunciation is addressed, it often focuses on segmental e
 As a result, intonation is one of the last aspects of L2 phonology that learners acquire [@kvavik1974theories].
 
 Generally, research on L2 intonation has been concerned primarily with production. 
-Learner difficulties are generally ascribed to L1 transfer, and models of L2 phonology focus on the speech segment (i.e., PAM-L2, SLMr, L2LP, though CF trofimovich paper extending SLM) <!-- add refs --> 
+Learner difficulties tend to be ascribed to L1 transfer, and models of L2 phonology focus on the speech segment, as in the Speech Learning Model revised [@flege2021revised], or contrasts between segments, i.e., PAM-L2, L2LP [@Best2007; @VanLeussen2015, respectively], though some researchers have considered how these models account for suprasegmental phenomenon [See @trofimovich2006learning]. 
 There is a dearth of knowledge with regard to how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes. 
 The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
 
-**Acquisition of Spanish prosody**.
-
-<!--
-- Mastery seems possible (more target-like as prof. increases)
-    - Utterance type matters
-      - Statements easier than questions
-      - ‘Yes/No’-type questions are harder to process and acquire, when 
-      compared with wh-questions and simple statements [@bustin_2020] 
-    - Familiarity matters
-      - Positive correlation between accuracy and familiarity with variety
-      - Important because of lots of variability in Spanish prosody
--->
-
-Spanish is extensively spoken across the world, with relatively small geolectal differences between its varieties compared to other languages, such that speakers from distinct regions can still generally understand each other. 
+**Acquisition of Spanish prosody**. Spanish is extensively spoken across the world, with relatively small geolectal differences between its varieties compared to other languages, such that speakers from distinct regions can still generally understand each other. 
 This linguistic continuum allows, however, for variation to occur. 
 Previous research on the acquisition of Spanish prosody attests that learners gradually acquire target-language intonation as they gain proficiency in the language. 
 Research in this area has focused on speech production. 
@@ -79,6 +66,18 @@ Need to add another study before Bustin et al (Nibert)
 Need to add concluding transition paragraph to empathy section
 Moved criticism of Bustin to "present study" subsection (will use parts of it)
 --> 
+
+<!--
+BASIC STRUCTURE OF THIS SECTION SHOULD BE:
+- Mastery seems possible (more target-like as prof. increases)
+    - Utterance type matters
+      - Statements easier than questions
+      - ‘Yes/No’-type questions are harder to process and acquire, when 
+      compared with wh-questions and simple statements [@bustin_2020] 
+    - Familiarity matters
+      - Positive correlation between accuracy and familiarity with variety
+      - Important because of lots of variability in Spanish prosody
+-->
 
 
 **Empathy and pragmatic skill**.
