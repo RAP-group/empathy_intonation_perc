@@ -122,7 +122,7 @@ dir_ls(
   as_tibble() %>% 
   filter(!(value %in% path_returned)) %>% 
   pull() %>% 
-  map_dfr(read_csv, .id = "source", 
+  map_dfr(read_csv, id = "source", 
     col_types = cols(.default = "?", key_resp_ac1.keys = "c")) %>% 
   select(
     participant, 
