@@ -22,14 +22,14 @@ For these reasons, the development of L2 intonation represents a facet of L2 pho
 
 As alluded to above, intonation has a semantic function, and through the adequate cognitive decoding of intonation a listener can interpret the function of a given utterance. 
 For example, the intonational contour can indicate whether a speakers' utterance is declarative or interrogative in nature. 
-Additionally, through prosody a speaker can signal various additional pragmatic functions, such as when they present a polite discourse [@astruc2016cost], bias or presupposition [@henriksen2016intonational]. 
-One essential aspect of second language acquisition and language comprehension is that in the presence of the same linguistic elements, listeners can arrive at different interpretations of the message [e.g. @cain2004individual]. 
-The difficulty in interpreting and decoding the multiple functionalities of intonational contours makes L2 learning a challenge. 
+Additionally, through prosody a speaker can signal various additional pragmatic functions, such as when they present polite discourse [@astruc2016cost], bias or presupposition [@henriksen2016intonational]. 
+One essential aspect of speech comprehension is that in the presence of the same linguistic elements, listeners can arrive at different interpretations of the message [e.g., @cain2004individual]. 
 
+Unsurprisingly, interpreting and decoding the numerous functions of intonational contours in an L2 makes this aspect of speech comprehension particularly challenging for the learner. 
 Traditionally, intonation is not taught in the L2 classroom. 
-Primary focus is generally on syntax and morphology, with target language phonology receiving much less, if any, attention (REFS). 
-When target language pronunciation is addressed, it often focuses on segmental elements. 
-As a result, intonation is one of the last aspects of L2 phonology that learners acquire (REFS)
+Primary focus is generally on syntax and morphology, with target language phonology receiving much less, if any, attention [@sp_pronunciation_ch00]. 
+When target language pronunciation is addressed, it often focuses on segmental elements [@sp_pronunciation_ch08]. 
+As a result, intonation is one of the last aspects of L2 phonology that learners acquire [@kvavik1974theories].
 
 Generally, research on L2 intonation has been concerned primarily with production. 
 Learner difficulties are generally ascribed to L1 transfer, and models of L2 phonology focus on the speech segment (i.e., PAM-L2, SLMr, L2LP, though CF trofimovich paper extending SLM) <!-- add refs --> 
