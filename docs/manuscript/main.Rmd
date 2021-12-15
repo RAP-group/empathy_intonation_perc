@@ -132,6 +132,9 @@ wordcount         : "X"
 
 bibliography      : ["../bib/empathy.bib"]
 
+appendix          : 
+  - "./sections/05_supplementary_material.Rmd"
+  
 floatsintext      : no
 figurelist        : no
 tablelist         : no

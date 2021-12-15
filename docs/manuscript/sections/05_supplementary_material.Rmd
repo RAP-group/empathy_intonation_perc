@@ -1,0 +1,42 @@
+# On-line supplementary material
+
+## Drift diffusion models
+
+
+
+
+
+
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Supplementary analyses
+
+
+
+
+
+
+
+
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Reproducibility information
+
+**About this document**  
+
+This document was written in RMarkdown using `papaja` [@R-papaja].
+
+**Session info**  
+
+```{r, session-info, comment=""}
+devtools::session_info()$platform
+as.data.frame(devtools::package_info())[, c(3, 8)]
+```
