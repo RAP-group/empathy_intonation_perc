@@ -94,10 +94,7 @@ test <- brm(
   file = here("models", "ddm", "test")
   )
 
-
-
-
-
+# Fit model for all participants 
 for (subj in unique(learners$participant)) {
   print(subj)
   
@@ -124,96 +121,91 @@ for (subj in unique(learners$participant)) {
     file = here("models", "ddm", subj))
 }
 
-
-# Extracts posterior samples from individual models
+# Function to read all rds files
 read_models <- function(filename) {
-  # read data
-  d <- readRDS(filename)
-  # parse filename; study, diagnosis, subject, trial
-  vars = str_match(filename, "(D|N)_(\\d+)_(\\d+)(\\d+)(\\d*)")
-  print(vars)
-  vars = as.data.frame(t(vars[1:nrow(vars), 1:2]))
-  print(vars)
-  names(vars) = c("SubjectID", "Language")
-  vars$Experiment = "Exp1"
-  post <- posterior_samples(d)
-  d <- cbind(vars, post)
-  # combine all these data
-  return(d)
+  mods <- readRDS(filename)
+  posteriors <- as_tibble(mods)
+  return(posteriors)
 }
 
-CatPerc_data1 <- list.files(pattern = "*.rds") %>%
-  purrr::map_df(read_models)
-
-
-CatPerc1 <- CatPerc_data1[, 1:92]
-
-CatPerc <- CatPerc %>% mutate(
-  drift_tNEARmid = `b_Biastaendt:DistanceNEAR` + 
-    `simo_Biastaendt:DistanceNEAR:moStep1[1]` + 
-    `simo_Biastaendt:DistanceNEAR:moStep1[2]` + 
-    `simo_Biastaendt:DistanceNEAR:moStep1[3]` + 
-    `simo_Biastaendt:DistanceNEAR:moStep1[4]`, 
-  drift_sNEARmid = `b_Biassendt:DistanceNEAR` + 
-    `simo_Biassendt:DistanceNEAR:moStep1[1]` + 
-    `simo_Biassendt:DistanceNEAR:moStep1[2]` + 
-    `simo_Biassendt:DistanceNEAR:moStep1[3]` + 
-    `simo_Biassendt:DistanceNEAR:moStep1[4]`,
-  drift_tFARmid = `b_Biastaendt:DistanceFAR` + 
-    `simo_Biastaendt:DistanceFAR:moStep1[1]` + 
-    `simo_Biastaendt:DistanceFAR:moStep1[2]` + 
-    `simo_Biastaendt:DistanceFAR:moStep1[3]` + 
-    `simo_Biastaendt:DistanceFAR:moStep1[4]`,
-  drift_sFARmid = `b_Biassendt:DistanceFAR` + 
-    `simo_Biassendt:DistanceFAR:moStep1[1]` + 
-    `simo_Biassendt:DistanceFAR:moStep1[2]` + 
-    `simo_Biassendt:DistanceFAR:moStep1[3]` + 
-    `simo_Biassendt:DistanceFAR:moStep1[4]`, 
-  bs_tNEARmid = `b_bs_Biastaendt:DistanceNEAR` + 
-    `simo_bs_Biastaendt:DistanceNEAR:moStep1[1]` + 
-    `simo_bs_Biastaendt:DistanceNEAR:moStep1[2]` + 
-    `simo_bs_Biastaendt:DistanceNEAR:moStep1[3]` + 
-    `simo_bs_Biastaendt:DistanceNEAR:moStep1[4]`,
-  bs_sNEARmid = `b_bs_Biassendt:DistanceNEAR` + 
-    `simo_bs_Biassendt:DistanceNEAR:moStep1[1]` + 
-    `simo_bs_Biassendt:DistanceNEAR:moStep1[2]` + 
-    `simo_bs_Biassendt:DistanceNEAR:moStep1[3]` + 
-    `simo_bs_Biassendt:DistanceNEAR:moStep1[4]`,
-  bs_tFARmid = `b_bs_Biastaendt:DistanceFAR` + 
-    `simo_bs_Biastaendt:DistanceFAR:moStep1[1]` + 
-    `simo_bs_Biastaendt:DistanceFAR:moStep1[2]` + 
-    `simo_bs_Biastaendt:DistanceFAR:moStep1[3]` + 
-    `simo_bs_Biastaendt:DistanceFAR:moStep1[4]`,
-  bs_sFARmid = `b_bs_Biassendt:DistanceFAR` + 
-    `simo_bs_Biassendt:DistanceFAR:moStep1[1]` + 
-    `simo_bs_Biassendt:DistanceFAR:moStep1[2]` + 
-    `simo_bs_Biassendt:DistanceFAR:moStep1[3]` + 
-    `simo_Biassendt:DistanceFAR:moStep1[4]`
-)
- 
- 
-# from wide to long
-CatPerc_short = CatPerc[, c(1:4, 93:100)]
-CatPerc_long = reshape(
-  CatPerc_short, 
-  direction="long", 
-  varying = list(
-    c("drift_tNEARmid", "drift_sNEARmid", "drift_tFARmid", "drift_sFARmid"), 
-    c("bs_tNEARmid", "bs_sNEARmid", "bs_tFARmid","bs_sFARmid")), 
-  times = c(
-    "drift_tNEARmid", "drift_sNEARmid", "drift_tFARmid", "drift_sFARmid"
-    ), 
-  v.names=c("drift_rate","bs"))
-
-# Rename the columns and some values for our purposes.
-names(CatPerc_long)[names(CatPerc_long) == "time"] <- "Bias"
-CatPerc_long$Distance = CatPerc_long$Bias
-CatPerc_long$Bias = gsub("drift_s(FAR|NEAR)mid", "sendt", CatPerc_long$Bias)
-CatPerc_long$Bias = gsub("drift_t(FAR|NEAR)mid", "taendt", CatPerc_long$Bias)
-CatPerc_long$Distance = gsub("drift_(s|t)FARmid", "FAR", CatPerc_long$Distance)
-CatPerc_long$Distance = gsub(
-  "drift_(s|t)NEARmid", "NEAR", CatPerc_long$Distance
+# Load full posterior for drift rate and boundary separation
+full_posterior <- 
+  dir_ls(path = here("models", "ddm"), regexp = "\\.rds$") %>% 
+  map_dfr(read_models, .id = "participant") %>% 
+  filter(participant != here("models", "ddm", "test.rds")) %>% 
+  select(participant, starts_with(c("b_bs_", "b_ndt"))) %>% 
+  pivot_longer(-participant, names_to = "param", values_to = "estimate") %>% 
+  mutate(
+    participant = str_remove(participant, here("models", "ddm/")), 
+    participant = str_remove(participant, ".rds"), 
+    param = str_remove(param, "b_")
+  ) %>% 
+  separate(param, into = c("effect", "q_type"), sep = "_", extra = "merge") %>% 
+  mutate(
+    q_type = str_remove(q_type, "sentence_typeinterrogativeM"), 
+    q_type = str_remove(q_type, "totalM|partialM"), 
+    effect = if_else(effect == "bs", "boundary_separation", "drift_rate")
+  )
+  
+tidy_posterior <- full_posterior %>% 
+  group_by(participant, effect, q_type) %>% 
+  mutate(draw = seq_along(participant)) %>% 
+  summarize(estimate = mean(estimate), .groups = "drop") %>% 
+  pivot_wider(names_from = effect, values_from = estimate) %>% 
+  left_join(., 
+    select(learners_ddm, participant, lextale_std, eq_std) %>% distinct, 
+    by = "participant"
   )
 
-# saves the dataset for later use
-write_csv(CatPerc_long, file = "CatPerc_DDM_byparticipant_postsamples.csv")
+tidy_posterior %>% 
+  ggplot(., aes(x = drift_rate, y = boundary_separation, color = q_type)) + 
+    geom_point(alpha = 0.1)
+
+
+
+
+
+# build models for drift rate (NDT) and boundary separation (bs)
+
+if(F) {
+
+dr_mod_formula <- bf(drift_rate ~ q_type + lextale_std + eq_std + 
+    (1 + q_type | participant))
+
+bs_mod_formula <- bf(boundary_separation ~ q_type + lextale_std + eq_std + 
+    (1 + q_type | participant))
+
+get_prior(dr_mod_formula, 
+  family = gaussian(), 
+  data = tidy_posterior)
+
+dr_bs_priors <- c(
+  prior(normal(0, 2), class = "Intercept"), 
+  prior(normal(0, 1), class = "b"), 
+  prior(cauchy(0, 1), class = "sd"), 
+  prior(lkj(2), class = "cor")
+)
+
+dr_mod <- brm(
+  formula = dr_mod_formula, 
+  prior = dr_bs_priors, 
+  cores = 4, chains = 4, 
+  control = list(max_treedepth = 15, adapt_delta = 0.99), 
+  backend = "cmdstanr", 
+  data = tidy_posterior, 
+  )
+
+bs_mod <- brm(
+  formula = bs_mod_formula, 
+  prior = dr_bs_priors, 
+  cores = 4, chains = 4, 
+  control = list(max_treedepth = 15, adapt_delta = 0.99), 
+  backend = "cmdstanr", 
+  data = tidy_posterior, 
+  )
+
+}
+
+
+ 
+ 
