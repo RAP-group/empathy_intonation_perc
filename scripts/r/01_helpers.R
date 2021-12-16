@@ -110,6 +110,36 @@ dprime <- function(n_hit, n_fa, n_miss = NULL, n_cr = NULL, n_targets = NULL,
 }
 
 
+# DDM simulation function
+sim_ddm <- function(q_type, eq, lt, drift_rate, boundary_separation, bias, ndt, n_sims) {
+  simd = NULL
+  for (sim in 1:n_sims){
+    step = 1
+    value = bias
+    n = 1
+    while (abs(value[n]) < boundary_separation) {
+      n = n + 1
+      value[n] = (value[n - 1] + rnorm(1, 0, abs(drift_rate)))
+      step[n] = n
+    }
+    dd <- tibble(q_type = q_type, eq = eq, lt = lt, sim_n = sim, step, value) %>% 
+    mutate(
+      sim_n = as.factor(sim_n), 
+      value = case_when(
+        value > boundary_separation ~ boundary_separation, 
+        value < -boundary_separation ~ -boundary_separation, 
+        TRUE ~ .$value)
+      )
+    simd = rbind(simd, dd)
+  }
+  return(simd)
+}
+
+
+
+
+
+
 
 
 
