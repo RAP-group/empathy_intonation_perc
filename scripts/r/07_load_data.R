@@ -42,8 +42,19 @@ id_return <- readRDS(here("data", "tidy", "participants_returned_vector.Rds"))
 
 
 
+
 # Load all mods ---------------------------------------------------------------
 
 all_mods <- load_models(path = here("models"), obj_type = "rds")
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Load posteriors -------------------------------------------------------------
+
+ddm_summarized_posterior <- 
+  read_csv(here("data", "tidy", "ddm_summarized_posterior.csv"))
 
 # -----------------------------------------------------------------------------

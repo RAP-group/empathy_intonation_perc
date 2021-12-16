@@ -158,75 +158,13 @@ long_posterior <- full_posterior %>%
   mutate(q_sum = if_else(q_type == "yn", 1, -1), 
 )
 
-wide_posterior <- full_posterior %>% 
-  group_by(participant, effect, q_type) %>% 
-  mutate(draw = seq_along(participant)) %>% 
-  pivot_wider(names_from = q_type, values_from = estimate) %>% 
-  mutate(diff = yn - wh) %>% 
-  left_join(., 
-    select(learners_ddm, participant, lextale_std, eq_std) %>% distinct, 
-    by = "participant"
-  )
+ddm_summarized_posterior <- long_posterior %>% 
+  group_by(participant, effect, q_sum, lextale_std, eq_std) %>% 
+  summarize(estimate = median(estimate), .groups = "drop") %>% 
+  write_csv(here("data", "tidy", "ddm_summarized_posterior.csv"))
 
-wide_posterior_summary <- full_posterior %>% 
-  group_by(participant, effect, q_type) %>% 
-  mutate(draw = seq_along(participant)) %>% 
-  summarize(estimate = mean(estimate), .groups = "drop") %>% 
-  pivot_wider(names_from = effect, values_from = estimate) %>% 
-  left_join(., 
-    select(learners_ddm, participant, lextale_std, eq_std) %>% distinct, 
-    by = "participant"
-  )
+# -----------------------------------------------------------------------------
 
-#
-# Estimates of boundary sep. and drift rate for each question type
-#
-
-long_posterior %>% 
-  ggplot(., aes(x = lextale_std, y = estimate, fill = q_type)) + 
-    facet_wrap(~ effect, scales = "free_y") + 
-    stat_pointinterval(pch = 21, color = "black") + 
-    scale_fill_viridis_d()
-
-long_posterior %>% 
-  ggplot(., aes(x = eq_std, y = estimate, fill = q_type)) + 
-    facet_wrap(~ effect, scales = "free_y") + 
-    stat_pointinterval(pch = 21, color = "black") + 
-    scale_fill_viridis_d()
-
-#
-# Wh - y/n diff. estimates for each question type
-#
-
-wide_posterior %>% 
-  ggplot(., aes(x = lextale_std, y = diff)) + 
-    facet_wrap(~ effect, scales = "free_y") + 
-    stat_pointinterval(pch = 21, fill = "white")  
-
-wide_posterior %>% 
-  ggplot(., aes(x = eq_std, y = diff)) + 
-    facet_wrap(~ effect, scales = "free_y") + 
-    stat_pointinterval(pch = 21, fill = "white")  
-
-#
-# Point estimates for boundary sep. and drift rate for each question type
-#
-
-wide_posterior_summary %>% 
-  ggplot(., aes(x = lextale_std, y = boundary_separation, color = q_type)) + 
-    geom_point()
-
-wide_posterior_summary %>% 
-  ggplot(., aes(x = eq_std, y = boundary_separation, color = q_type)) + 
-    geom_point()
-
-wide_posterior_summary %>% 
-  ggplot(., aes(x = lextale_std, y = drift_rate, color = q_type)) + 
-    geom_point()
-
-wide_posterior_summary %>% 
-  ggplot(., aes(x = eq_std, y = drift_rate, color = q_type)) + 
-    geom_point()
 
 
 
@@ -239,25 +177,24 @@ mod_formula <- bf(estimate ~ q_sum * lextale_std * eq_std +
 # Get priors of model
 get_prior(mod_formula, 
   family = gaussian(), 
-  data = long_posterior)
+  data = ddm_summarized_posterior)
 
-# Set weakly informative priors
+
+# Set weakly informative priors for drift rate
 dr_priors <- c(
   prior(normal(1, 0.5), class = "Intercept"), 
   prior(normal(0, 0.3), class = "b"), 
   prior(cauchy(0, 0.3), class = "sd"), 
   prior(lkj(8), class = "cor")
 )
+
+# Set weakly informative priors for boundary separation
 bs_priors <- c(
   prior(normal(2, 0.5), class = "Intercept"), 
   prior(normal(0, 0.5), class = "b"), 
   prior(cauchy(0, 0.3), class = "sd"), 
   prior(lkj(8), class = "cor")
 )
-
-long_sum <- long_posterior %>% 
-  group_by(participant, effect, q_sum, lextale_std, eq_std) %>% 
-  summarize(estimate = median(estimate), .groups = "drop")
 
 # Fit drift rate model
 ddm_drift_rate <- brm(
@@ -267,7 +204,7 @@ ddm_drift_rate <- brm(
   cores = 4, chains = 4, 
   control = list(max_treedepth = 15, adapt_delta = 0.99), 
   backend = "cmdstanr", 
-  data = filter(long_sum, effect == "drift_rate"), 
+  data = filter(ddm_summarized_posterior, effect == "drift_rate"), 
   file = here("models", "ddm_drift_rate")
 )
 
@@ -279,7 +216,7 @@ ddm_boundary_separation <- brm(
   cores = 4, chains = 4, 
   control = list(max_treedepth = 15, adapt_delta = 0.99), 
   backend = "cmdstanr", 
-  data = filter(long_sum, effect == "boundary_separation"), 
+  data = filter(ddm_summarized_posterior, effect == "boundary_separation"), 
   file = here("models", "ddm_boundary_separation")
 )
 
@@ -289,7 +226,10 @@ ddm_boundary_separation <- brm(
 
 
 # Trial simulation ------------------------------------------------------------
-# get estimate for BS and drift rate for each q_type for -2, 2 eq and lex
+
+#
+# General structure: 
+#
 
 # YN                 WH
 #   low emp low emp    low emp low emp
@@ -305,16 +245,21 @@ ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds")
 ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
 # Create new data to predict
-new_dat <- expand_grid(q_sum = c(-1, 1), lextale_std = c(-1, 1), eq_std = c(-1, 1)) %>% 
+new_dat <- expand_grid(
+  q_sum = c(-1, 1), 
+  lextale_std = c(-1, 1), 
+  eq_std = c(-1, 1)) %>% 
   mutate(participant = "pop")
 
 # Get predictions, store in list
 dr_bs_est <- bind_rows(
-  predict(ddm_boundary_separation, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
+  predict(ddm_boundary_separation, newdata = new_dat, 
+    re_formula = NA, allow_new_levels = T) %>% 
     as_tibble() %>% 
     bind_cols(new_dat, .) %>% 
     mutate(effect = "bs"), 
-  predict(ddm_drift_rate, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
+  predict(ddm_drift_rate, newdata = new_dat, 
+    re_formula = NA, allow_new_levels = T) %>% 
     as_tibble() %>% 
     bind_cols(new_dat, .) %>% 
     mutate(effect = "dr")
@@ -328,6 +273,7 @@ dr_bs_est <- bind_rows(
 # Example (drift rate estimate for y/n question, low eq, low lt)
 # dr_bs_est$yn$low$low$dr
 
+# Run 2000 simulations for each condition
 ddm_sims <- bind_rows(
   sim_ddm(q_type = "yn", eq = "low", lt = "low",
     drift_rate = dr_bs_est$yn$low$low$dr$val, 
@@ -383,3 +329,5 @@ ddm_sims <- bind_rows(
     final_val = value[final_step], 
     response = if_else(final_val > 0, "correct", "incorrect")) %>% 
   write_csv(., here("data", "tidy", "ddm_sims.csv"))
+
+# -----------------------------------------------------------------------------

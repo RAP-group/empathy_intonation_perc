@@ -247,7 +247,7 @@ ddm_yn <- ddm_sims %>%
     facet_wrap(~ facet_lab) + 
     scale_y_continuous(breaks = seq(-1.5, 1.5, 1), 
       labels = seq(-1.5, 1.5, 1)) + 
-    coord_cartesian(xlim = c(0, 25), ylim = c(-1.7, 1.7)) + 
+    coord_cartesian(xlim = c(0, 25), ylim = c(-1.6, 1.6)) + 
     geom_line(aes(group = sim_n), show.legend = F, color = "grey50", 
       alpha = 0.15, size = 0.15) + 
     stat_summary(aes(group = response), fun = mean, geom = "line", 
@@ -265,7 +265,7 @@ ddm_wh <- ddm_sims %>%
     facet_wrap(~ facet_lab) + 
     scale_y_continuous(position = "right", breaks = seq(-1.5, 1.5, 1), 
       labels = seq(-1.5, 1.5, 1)) + 
-    coord_cartesian(xlim = c(0, 25), ylim = c(-1.7, 1.7)) + 
+    coord_cartesian(xlim = c(0, 25), ylim = c(-1.6, 1.6)) + 
     geom_line(aes(group = sim_n), show.legend = F, color = "grey50", 
       alpha = 0.15, size = 0.15) + 
     stat_summary(aes(group = response), fun = mean, geom = "line", 
