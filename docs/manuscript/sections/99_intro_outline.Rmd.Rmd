@@ -58,3 +58,86 @@ INTRO OUTLINE
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- reread intro, light edits
+- reread method, organize, light edits
+- template results
+- lextale and empathy descriptives for method
+
+
+Additional Notes
+
+rhythm and intonation are perceptually salient when listening to a language 
+
+prosodic features considered fundamental factors in the perception of foreign accent, above other grammatical or pronunciation features (Munro 1995; Jilka 2000; Pettorino, De Meo and Vitale 2014).
+
+
+Through proper control of prosody, a learner not only has a better capacity to produce understandable, natural, and expressive sequences of speech, but also an improved ability to understand speech and to read and speak more fluently across different communicative situations. 
+
+being intelligible at the segmental level does not encompass being pragmatically understood, which is crucial since discourse needs to be appropriate to the communicative situation at hand.
+
+
+maintaining the prosodic characteristics of the L1 when speaking another language often leads to misunderstandings, as the same prosodic scheme may be associated with different linguistic or paralinguistic contents in both languages in question (Cruz-Ferreira 1987; Pickering 2001; de-la-Mota 2004; Chen 2005; Mennen 2007).
+
+related to social inclusion: “critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity” (Levis 2016, 154). 
+
+
+Certain linguistic content (e.g., sentence type or pragmatic nuances) can be conveyed in different geolects by means of different prosodic strategies, that is, while there are prosodic patterns that seem to be quite widespread, others are restricted to specific regions as instances of microvariation. This is the case with the declarative circumflex (i.e., rise–fall) contour of Mexican Spanish, Argentinian Spanish’s long fall, and Caribbean Spanish’s nuclear hat pattern in yes–no questions (Hualde and Prieto 2015).
+
+Conversely, the same pitch accent of a certain intonation contour can be produced differently by speakers from different geolectal varieties in terms of pitch movement and syllabic duration; for example, the main difference between the production of a neutral declarative sentence in Madrid Peninsular Spanish and in Buenos Aires Argentinian Spanish is that in the latter, the nuclear syllable is longer (Estebas-Vilaplana 2010, 167).
+
+
+Still, theoretical work on acquisition that specifically takes into account L2 Spanish prosody remains sparse (see Cortés 2002a, 2002b; Radel 2008). 
+
+
+
+
+Munro, M. J. 1995. “Nonsegmental Factors in Foreign Accent: Ratings of Filtered Speech.” Studies in Second Language Acquisition 17: 17–34.
+
+Jilka, M. 2000. “Testing the Contribution of Prosody to the Perception of Foreign Accent.”
+In Proc. New Sounds (4th International Symposium on the Acquisition of Second Language
+Speech), eds. A. James and J. Leather, 199–207. Amsterdam: University of Amsterdam.
+
+Pettorino, M., A. De Meo, and M. Vitale. 2014. “Transplanting Vowels: Towards the Acoustic Correlates of Foreign Accent.” In Fonética experimental, educación superior e inves- tigación, vol. II. Adquisición y aprendizaje de lenguas/Español como lengua extranjera, eds. Y. Congosto Martín, M. L. Montero Curiel, and A. Salvador Plans, 93–107. Madrid: Arco Libros.
+
+Cruz-Ferreira, M. 1987. “Non-Native Interpretive Strategies for Intonational Meaning: An Experimental Study.” In Sound Patterns in Second Language Acquisition, eds. A. James and J. Leather, 103–120. Berlin: Mouton de Gruyter.
+
+Pickering, L. 2001. “The Role of Tone Choice in Improving ITA Communication in the Classroom.” TESOL Quarterly 35 (2): 233–255.
+
+De-la-Mota, C. 2004. “La enseñanza de la entonación. Docencia semipresencial y tec- nología.” In 3o Congreso Internacional Docencia universitaria e Innovación (CIDUI), 1–20. Girona: ePub.
+
+Chen, A. 2005. “Universal and Language-Specific Perception of Paralinguistic Intonational Meaning.” PhD diss., LOT (The Netherlands National Graduate School of Linguistics).
+
+Mennen, I. 2007. “Phonological and Phonetic Influences in Non-Native Intonation.” In Non-Native Prosody. Phonetic Description and Teaching Practice, eds. J. Trouvain and U. Gut, 53–76. Berlin: Mouton de Gruyter.
+
+Levis, J. 2016. “Accent in Second Language Pronunciation Research and Teaching.” Journal of Second Language Pronunciation 2 (7): 153–159.
+
+Estebas-Vilaplana, E. 2014. “The Evaluation of Intonation Pitch Range Differences in English and Spanish.” In Evaluation in Context, Pragmatics & Beyond New Series 242, eds. G. Thompson and L. Alba Juez, 179–194. Amsterdam: John Benjamins.
+
+Cortés, M. 2002a. “Didáctica de la entonación: una asignatura pendiente.” Didáctica (Lengua y Literatura) 14: 65–75.
+
+Cortés, M. 2002b. Didáctica de la prosodia del español: la acentuación y la entonación. Madrid: Edinumen.
+
+Radel, M. 2008. Acquisition of Second Language Intonation: An Empirical Study on the Realization
+of Spanish Intonation by Non-Native Speakers. Norderstedt: BoD.
+
+
