@@ -239,6 +239,58 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
 
 
 
+# DDM simulations -------------------------------------------------------------
+
+ddm_yn <- ddm_sims %>% 
+  filter(q_type == "yn", step < 20) %>% 
+  ggplot(., aes(x = step, y = value)) + 
+    facet_wrap(~ facet_lab) + 
+    scale_y_continuous(breaks = seq(-1.5, 1.5, 1), 
+      labels = seq(-1.5, 1.5, 1)) + 
+    coord_cartesian(xlim = c(0, 25), ylim = c(-1.7, 1.7)) + 
+    geom_line(aes(group = sim_n), show.legend = F, color = "grey50", 
+      alpha = 0.15, size = 0.15) + 
+    stat_summary(aes(group = response), fun = mean, geom = "line", 
+      color = "white", size = 2) +
+    stat_summary(aes(group = response), fun = mean, geom = "line", 
+      color = "#cc0033", size = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_vline(xintercept = 0) + 
+    labs(title = "y/n questions", y = "Boundary separation", x = "Time step") + 
+    minimal_adj()
+
+ddm_wh <- ddm_sims %>% 
+  filter(q_type == "wh") %>% 
+  ggplot(., aes(x = step, y = value)) + 
+    facet_wrap(~ facet_lab) + 
+    scale_y_continuous(position = "right", breaks = seq(-1.5, 1.5, 1), 
+      labels = seq(-1.5, 1.5, 1)) + 
+    coord_cartesian(xlim = c(0, 25), ylim = c(-1.7, 1.7)) + 
+    geom_line(aes(group = sim_n), show.legend = F, color = "grey50", 
+      alpha = 0.15, size = 0.15) + 
+    stat_summary(aes(group = response), fun = mean, geom = "line", 
+      color = "white", size = 2) +
+    stat_summary(aes(group = response), fun = mean, geom = "line", 
+      color = "#cc0033", size = 1) +
+    geom_hline(yintercept = 0) + 
+    geom_vline(xintercept = 0) + 
+    labs(title = "wh- questions", y = NULL, x = "Time step") + 
+    minimal_adj()
+
+ddm_simulations <- ddm_yn + ddm_wh
+
+# -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 # Speech rate by variety ------------------------------------------------------
 
 # Plot speech rate for supplementary materials
@@ -347,6 +399,11 @@ walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/learner_accuracy_3way.", .x), 
   plot = learner_accuracy_3way, 
   device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/ddm_simulations.", .x), 
+  plot = ddm_simulations, 
+  device = .x, height = 6, width = 10, units = "in"))
 
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/sm_speech_rate.", .x), 

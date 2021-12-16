@@ -184,6 +184,8 @@ minimal_adj <- function(...) {
   )
 }
 
+
+
 # Concert '-' to unicode minus
 unicode_minus <- function(x) {
   sub('^-', '\U2212', format(x))

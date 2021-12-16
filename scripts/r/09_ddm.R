@@ -132,7 +132,7 @@ read_models <- function(filename, n_draws = 100) {
 # Load full posterior for drift rate and boundary separation
 full_posterior <- 
   dir_ls(path = here("models", "ddm"), regexp = "\\.rds$") %>% 
-  map_dfr(read_models, n_draws = 1, .id = "participant") %>% 
+  map_dfr(read_models, n_draws = 2000, .id = "participant") %>% 
   filter(participant != here("models", "ddm", "test.rds")) %>% 
   select(participant, starts_with(c("b_bs_", "b_ndt"))) %>% 
   pivot_longer(-participant, names_to = "param", values_to = "estimate") %>% 
@@ -233,7 +233,7 @@ wide_posterior_summary %>%
 # Drift rate and boundary separation models -----------------------------------
 
 # Model formula
-mod_formula <- bf(estimate ~ 0 + Intercept + q_sum * lextale_std * eq_std + 
+mod_formula <- bf(estimate ~ q_sum * lextale_std * eq_std + 
     (1 + q_sum * lextale_std * eq_std | participant))
 
 # Get priors of model
@@ -242,26 +242,46 @@ get_prior(mod_formula,
   data = long_posterior)
 
 # Set weakly informative priors
-dr_bs_priors <- c(
-  prior(normal(0, 1), class = "b"), 
-  prior(cauchy(0, 0.1), class = "sd"), 
+dr_priors <- c(
+  prior(normal(1, 0.5), class = "Intercept"), 
+  prior(normal(0, 0.3), class = "b"), 
+  prior(cauchy(0, 0.3), class = "sd"), 
+  prior(lkj(8), class = "cor")
+)
+bs_priors <- c(
+  prior(normal(2, 0.5), class = "Intercept"), 
+  prior(normal(0, 0.5), class = "b"), 
+  prior(cauchy(0, 0.3), class = "sd"), 
   prior(lkj(8), class = "cor")
 )
 
-for (eff in unique(long_posterior$effect)) {
-  print(eff)
-  # Fit drift rate model
-  effect_mod <- brm(
-    formula = mod_formula, 
-    prior = dr_bs_priors, 
-    family = gaussian(), 
-    cores = 4, chains = 4, 
-    control = list(max_treedepth = 15, adapt_delta = 0.99), 
-    backend = "cmdstanr", 
-    data = filter(long_posterior, effect == eff), 
-    file = here("models", glue("ddm_{eff}"))
-  )
-}
+long_sum <- long_posterior %>% 
+  group_by(participant, effect, q_sum, lextale_std, eq_std) %>% 
+  summarize(estimate = median(estimate), .groups = "drop")
+
+# Fit drift rate model
+ddm_drift_rate <- brm(
+  formula = mod_formula, 
+  prior = dr_priors, 
+  family = gaussian(), 
+  cores = 4, chains = 4, 
+  control = list(max_treedepth = 15, adapt_delta = 0.99), 
+  backend = "cmdstanr", 
+  data = filter(long_sum, effect == "drift_rate"), 
+  file = here("models", "ddm_drift_rate")
+)
+
+# Fit boundary separation model
+ddm_boundary_separation <- brm(
+  formula = mod_formula, 
+  prior = dr_priors, 
+  family = gaussian(), 
+  cores = 4, chains = 4, 
+  control = list(max_treedepth = 15, adapt_delta = 0.99), 
+  backend = "cmdstanr", 
+  data = filter(long_sum, effect == "boundary_separation"), 
+  file = here("models", "ddm_boundary_separation")
+)
 
 # -----------------------------------------------------------------------------
 
@@ -281,8 +301,8 @@ for (eff in unique(long_posterior$effect)) {
 #   P3      P4         P7      P8
 
 # Load models
-ddm_bs <- readRDS(here("models", "ddm_boundary_separation.rds"))
-ddm_dr <- readRDS(here("models", "ddm_drift_rate.rds"))
+ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
+ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
 # Create new data to predict
 new_dat <- expand_grid(q_sum = c(-1, 1), lextale_std = c(-1, 1), eq_std = c(-1, 1)) %>% 
@@ -290,11 +310,11 @@ new_dat <- expand_grid(q_sum = c(-1, 1), lextale_std = c(-1, 1), eq_std = c(-1, 
 
 # Get predictions, store in list
 dr_bs_est <- bind_rows(
-  predict(ddm_bs, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
+  predict(ddm_boundary_separation, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
     as_tibble() %>% 
     bind_cols(new_dat, .) %>% 
     mutate(effect = "bs"), 
-  predict(ddm_dr, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
+  predict(ddm_drift_rate, newdata = new_dat, re_formula = NA, allow_new_levels = T) %>% 
     as_tibble() %>% 
     bind_cols(new_dat, .) %>% 
     mutate(effect = "dr")
@@ -312,36 +332,36 @@ ddm_sims <- bind_rows(
   sim_ddm(q_type = "yn", eq = "low", lt = "low",
     drift_rate = dr_bs_est$yn$low$low$dr$val, 
     boundary_separation = dr_bs_est$yn$low$low$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "yn", eq = "low", lt = "high",
     drift_rate = dr_bs_est$yn$low$high$dr$val, 
     boundary_separation = dr_bs_est$yn$low$high$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "yn", eq = "high", lt = "low",
     drift_rate = dr_bs_est$yn$high$low$dr$val, 
     boundary_separation = dr_bs_est$yn$high$low$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "yn", eq = "high", lt = "high",
     drift_rate = dr_bs_est$yn$high$high$dr$val, 
     boundary_separation = dr_bs_est$yn$high$high$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
 
   sim_ddm(q_type = "wh", eq = "low", lt = "low",
     drift_rate = dr_bs_est$wh$low$low$dr$val, 
     boundary_separation = dr_bs_est$wh$low$low$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "wh", eq = "low", lt = "high",
     drift_rate = dr_bs_est$wh$low$high$dr$val, 
     boundary_separation = dr_bs_est$wh$low$high$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "wh", eq = "high", lt = "low",
     drift_rate = dr_bs_est$wh$high$low$dr$val, 
     boundary_separation = dr_bs_est$wh$high$low$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20), 
+    bias = 0, ndt = 0.57, n_sims = 2000), 
   sim_ddm(q_type = "wh", eq = "high", lt = "high",
     drift_rate = dr_bs_est$wh$high$high$dr$val, 
     boundary_separation = dr_bs_est$wh$high$high$bs$val / 2,
-    bias = 0, ndt = 0.57, n_sims = 20)
+    bias = 0, ndt = 0.57, n_sims = 2000)
   ) %>% 
   mutate(
     facet_lab = case_when(
@@ -357,28 +377,9 @@ ddm_sims <- bind_rows(
     facet_lab = fct_relevel(facet_lab, 
       "EQ: Low, LexTALE: low", "EQ: low, LexTALE: high", 
       "EQ: high, LexTALE: low", "EQ: high, LexTALE: high")
-    )
-
-lside <- ddm_sims %>% 
-  filter(q_type == "yn") %>% 
-  ggplot(., aes(x = step, y = value, color = sim_n)) + 
-    facet_wrap(~ facet_lab) + 
-    scale_y_continuous(breaks = seq(-1, 1, 1)) + 
-    geom_line(show.legend = F) + 
-    geom_hline(yintercept = 0, lty = 3) + 
-    scale_color_viridis_d(option = "B") + 
-    labs(y = "Boundary separation", x = "Time step") + 
-    theme_minimal()
-
-rside <- ddm_sims %>% 
-  filter(q_type == "wh") %>% 
-  ggplot(., aes(x = step, y = value, color = sim_n)) + 
-    facet_wrap(~ facet_lab) + 
-    scale_y_continuous(position = "right", breaks = seq(-1, 1, 1)) + 
-    geom_line(show.legend = F) + 
-    geom_hline(yintercept = 0, lty = 3) + 
-    scale_color_viridis_d(option = "B") + 
-    labs(y = "Boundary separation", x = "Time step") + 
-    theme_minimal()
-
-lside + rside
+    ) %>% 
+  group_by(q_type, eq, lt, sim_n) %>% 
+  mutate(final_step = max(step), 
+    final_val = value[final_step], 
+    response = if_else(final_val > 0, "correct", "incorrect")) %>% 
+  write_csv(., here("data", "tidy", "ddm_sims.csv"))
