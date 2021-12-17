@@ -112,7 +112,8 @@ dprime <- function(n_hit, n_fa, n_miss = NULL, n_cr = NULL, n_targets = NULL,
 
 # DDM simulation function
 sim_ddm <- function(q_type, eq, lt, drift_rate, boundary_separation, 
-  bias, ndt, n_sims) {
+  bias, ndt, n_sims, seed = NULL) {
+  set.seed(seed)
   simd = NULL
   for (sim in 1:n_sims){
     step = 1

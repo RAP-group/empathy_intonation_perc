@@ -119,6 +119,18 @@ The slope for *utterance type* varied for the participant effect, as did the pro
 All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represents the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
 
+This is Figure \@ref(fig:plot-ddm-explanation)
+
+(ref:plot-ddm-explanation) Need a caption.
+
+```{r, 'plot-ddm-explanation', fig.cap="(ref:plot-ddm-explanation)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "ddm_explanation.pdf")
+  )
+```
+
+
+
 The model included regularizing, weakly informative priors [@Gelman_2017].
 
 We established a region of practical equivalence (ROPE) of &pm; 0.05 around a point null value of 0 [see @kruschke2018rejecting]. 

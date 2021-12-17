@@ -280,6 +280,72 @@ ddm_bs_dr_estimates <- bind_rows(
 
 
 
+# DDM explanation -------------------------------------------------------------
+
+# Generate skewed RT-like data
+my_skewed_x <- fGarch::rsnorm(100, mean = 2.5, sd = 1.5, xi = 3.5)
+
+# Correct response dist
+inset_top <- tibble(x = my_skewed_x) %>%
+  ggplot(., aes(x = x)) + 
+    geom_density(fill = viridis::viridis_pal(option = "B", begin = 0.25)(1)) + 
+    theme_void()
+
+# Incorrect response dist
+inset_bottom <- tibble(x = my_skewed_x) %>%
+  ggplot(., aes(x = x)) + 
+    geom_density(fill = viridis::viridis_pal(option = "B", begin = 0.75)(1)) + 
+    scale_y_reverse() + 
+    theme_void()
+
+# Main plot
+main_plot <- sim_ddm(q_type = "yn", eq = "low", lt = "low", seed = 20180119, 
+  drift_rate = 0.11, boundary_separation = 1.25, bias = 0, ndt = 0, n_sims = 2) %>% 
+  ggplot(., aes(x = step, y = value, color = sim_n)) + 
+    geom_vline(xintercept = 1) + 
+    geom_hline(yintercept = c(-1.25, 1.25), lty = 3) + 
+    geom_line(show.legend = F, size = 1.25) + 
+    geom_segment(inherit.aes = F, aes(x = 1, xend = 98, y = 0, yend = 0), 
+      lty = 2, size = 0.25) + 
+    coord_cartesian(ylim = c(-2, 2), xlim = c(-5, 100)) + 
+    scale_x_continuous(breaks = c(1, seq(10, 100, 10)), 
+      labels = c("0", seq(10, 100, 10))) + 
+    scale_y_continuous(breaks = NULL) + 
+    labs(y = expression(alpha), x = "Time step") + 
+    annotate("text", x = -4.5, y = 0.15, size = 5, label = expression(tau)) + 
+    geom_segment(inherit.aes = F, aes(x = -5, y = 0, xend = 0, yend = 0), 
+      arrow = arrow(length = unit(0.2, "cm")), size = 0.5) + 
+    geom_segment(inherit.aes = F, aes(x = -5, y = 0, xend = -9, yend = 0), 
+      arrow = arrow(length = unit(0.2, "cm"))) + 
+    annotate("text", x = 101, y = 0, size = 5, label = expression(beta)) + 
+    geom_segment(inherit.aes = F, aes(x = 101, y = 0.2, xend = 101, yend = 0.5), 
+      arrow = arrow(length = unit(0.2, "cm")), size = 0.5) + 
+    geom_segment(inherit.aes = F, aes(x = 101, y = -0.2, xend = 101, yend = -0.5), 
+      arrow = arrow(length = unit(0.2, "cm"))) + 
+    annotate("text", x = 32, y = 0.25, size = 5, label = expression(delta)) + 
+    geom_segment(inherit.aes = F, aes(x = 30.5, y = 0.35, xend = 25, yend = 0.7), 
+      arrow = arrow(length = unit(0.2, "cm"))) + 
+    annotate("text", x = 79, y = 1.4, size = 4, label = "Correct response", hjust = 0) + 
+    annotate("text", x = 79, y = -1.4, size = 4, label = "Incorrect response", hjust = 0) + 
+    scale_color_viridis_d(option = "B", begin = 0.25, end = 0.75) + 
+    theme_minimal(base_family = 'Times', base_size = 13) + 
+    theme(panel.grid.major = element_line(size = 0.2),
+          panel.grid.minor = element_blank(), 
+      axis.title.y = element_text(size = rel(.9), hjust = 0.5))
+
+# Combine plots
+ddm_explanation <- main_plot + annotation_custom(
+  grob = ggplotGrob(inset_top), 
+  ymin = 1.25, ymax = 2, xmin = -2.5, xmax = 75) + 
+  annotation_custom(
+  grob = ggplotGrob(inset_bottom), 
+  ymin = -1.25, ymax = -2, xmin = -2.5, xmax = 75)
+
+# -----------------------------------------------------------------------------
+
+
+
+
 # DDM simulations -------------------------------------------------------------
 
 ddm_yn <- ddm_sims %>% 
@@ -437,6 +503,11 @@ walk(devices, ~ ggsave(
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/ddm_bs_dr_estimates.", .x), 
   plot = ddm_bs_dr_estimates, 
+  device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/ddm_explanation.", .x), 
+  plot = ddm_explanation, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(
