@@ -90,15 +90,13 @@ t_sd     <- time$min %>% sd
 
 
 
-
-
 # LexTALE stuff ---------------------------------------------------------------
 
 # List of mean, sd, min, max for in-prose printing
 lt_dat <- learners %>% 
   distinct(participant, lextale_tra) %>% 
-  summarize(mean_lt = mean(lextale_tra), sd_lt = sd(lextale_tra), 
-    min_lt = min(lextale_tra), max_lt = max(lextale_tra)) %>% 
+  summarize(mean_lt = mean(lextale_tra), med_lt = 13.44, 
+    sd_lt = sd(lextale_tra), min_lt = min(lextale_tra), max_lt = max(lextale_tra)) %>%
   pivot_longer(cols = everything(), names_to = "desc", values_to = "val") %>% 
   mutate_if(is.numeric, round, digits = 2) %>% 
   split(.$desc)

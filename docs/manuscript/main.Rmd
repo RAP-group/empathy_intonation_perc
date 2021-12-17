@@ -85,54 +85,29 @@ abstract: |
   Notably, we focus on the role of empathy in the development of second 
   language (L2) prosody by analyzing the perception and processing of 
   intonation in questions and statements in L2 Spanish. 
-  It is common for L2 learners to struggle with L2 intonation, often resulting 
-  in comprehension and communication difficulties [@trofimovich2006learning]. 
-  Previous research attests that learners gradually acquire target-language 
-  prosody as they gain proficiency in the language. 
-  Concretely, the perception and processing of L2 intonation has been shown to 
-  improve in conjunction with proficiency conditional on intonation type 
-  [@bustin_2020], with polar ('yes/no') interrogatives being more difficult 
-  to process and acquire when compared with simple statements. 
   The construct empathy has been shown to influence native language processing 
   in how listeners interpret intonation and meaning when words are ambiguous 
   [@esteve2020empathy]. 
-  Importantly, higher empathy individuals, in comparison with lower empathy 
-  individuals, appear to be more sensitive to intonation cues in the process 
-  of forming sound-meaning associations. 
   We extend this research to L2 acquisition in order to determine if 
   individual differences in pragmatic skills affect the development of 
   intonation in L2 processing and sentence comprehension. 
-  A total of N adult L2 Spanish learners (L1 English) from the 
+  A total of 224 adult L2 Spanish learners (L1 English) from the 
   Northeastern United States completed a two-alternative forced choice (2AFC) 
   task in which they listened to four utterance types and categorized them as 
   either questions or statements. 
-  The stimuli were randomly drawn tokens of declarative (broad, narrow focus) 
-  and interrogative (polar, wh-) sentences, spoken by native speakers of eight 
-  distinct varieties of Spanish (Andalusian, Argentine, Castilian, Chilean, 
-  Cuban, Mexican, Peruvian, Puerto Rican). 
-  The stimuli were presented aurally to the participants and subsequently 
-  identified as questions or statements using a keyboard. 
-  Additionally, participants completed the LexTALE vocabulary task in Spanish 
-  [@izura2014lextale], which served as a proxy for L2 proficiency, as well as 
-  the Empathy Quotient questionnaire in English [@baron2004empathy], which 
-  provided an individual assessment of the construct empathy. 
-  We used Bayesian multilevel regression and Drift Diffusion models to analyze 
-  the 2AFC data as a function of proficiency and empathy scores. 
-  Proficiency and empathy were used as continuous predictors to assess their 
-  relationship with pragmatic skill. 
-  The results replicated findings from @bustin_2020 showing that learner 
-  response accuracy improved as a function of proficiency for all utterance 
-  types. 
+  We used Bayesian multilevel regression and Drift Diffusion modeling to 
+  analyze the 2AFC data as a function of proficiency and empathy scores.
+  The results showed that learner response accuracy improved as a function 
+  of proficiency.
   Importantly, higher empathy scores were positively correlated with higher 
-  accuracy in identifying polar interrogatives. 
-  As is the case with L1 research, the present project underscores the 
-  importance of considering individual pragmatic differences when examining 
-  intonational meaning processing and sentence comprehension in an L2. 
-  More notably, the results also motivate the inclusion of measures of 
-  pragmatic skill, such as empathy, as predictors for L2 acquisition outcomes. 
-  Furthermore, these findings highlight an area in which models of L2 
-  development can improve in order to better account for individual 
-  differences in L2 learning.
+  accuracy and processing efficiency in identifying polar interrogatives. 
+  Higher empathic individuals, in comparison with lower empathic 
+  individuals, appear to be more sensitive to intonation cues in the process 
+  of forming sound-meaning associations. 
+  The results motivate the inclusion of measures of pragmatic skills, such as 
+  empathy, to better account for intonational meaning processing and sentence 
+  comprehensionas in second language acquisition.
+
   
 keywords          : "Second language acquisition, Intonation, Empathy, Prosody"
 wordcount         : "X"
