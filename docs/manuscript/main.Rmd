@@ -19,30 +19,37 @@ author:
   - name          : "Nicole Rodríguez"
     affiliation   : "2"
     role:         
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Juan José Garrido Pozú"
     affiliation   : "1"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Kyle Parrish"
     affiliation   : "1"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Laura Fernández Arroyo"
     affiliation   : "1"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Robert Esposito"
     affiliation   : "3"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Isabelle Chang"
     affiliation   : "1"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Kimberly Gómez"
     affiliation   : "1"
     role:
+      - Conceptualization
       - Writing - Review & Editing
   - name          : "Gabriela Constantin-Dureci"
     affiliation   : "1"

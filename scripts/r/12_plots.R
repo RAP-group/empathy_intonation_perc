@@ -16,6 +16,8 @@ learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
 learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
 learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
+ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
+ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
 # -----------------------------------------------------------------------------
 
@@ -239,6 +241,45 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
 
 
 
+# DDM Boundary separation and drift rate --------------------------------------
+
+ddm_bs_dr_estimates <- bind_rows(
+  as_draws_df(ddm_drift_rate) %>% 
+    select(starts_with("b_")) %>% 
+    pivot_longer(everything(), names_to = "params", values_to = "estimate") %>% 
+    mutate(effect = "dr"),
+  as_draws_df(ddm_boundary_separation) %>% 
+    select(starts_with("b_")) %>% 
+    pivot_longer(everything(), names_to = "params", values_to = "estimate") %>% 
+    mutate(effect = "bs")) %>% 
+  mutate(labs = case_when(
+    params == "b_Intercept" ~ "Intercept", 
+    params == "b_q_sum" ~ "Question type", 
+    params == "b_lextale_std" ~ "LexTALE", 
+    params == "b_eq_std" ~ "EQ", 
+    params == "b_q_sum:lextale_std" ~ "Question type x\nLexTALE", 
+    params == "b_q_sum:eq_std" ~ "Question type x\nEQ", 
+    params == "b_lextale_std:eq_std" ~ "LexTALE x EQ", 
+    params == "b_q_sum:lextale_std:eq_std" ~ "Question type x\nLexTALE x EQ"), 
+    labs = fct_relevel(labs, "Intercept", "Question type", "LexTALE", "EQ", 
+      "Question type x\nLexTALE", "Question type x\nEQ"))%>% 
+  ggplot(., aes(x = estimate, y = labs, shape = effect)) + 
+    stat_halfeye(aes(fill = effect), point_fill = "white", point_size = 1.5, 
+       slab_alpha = 0.7, position = position_dodge(0.5)) +
+    scale_shape_manual(name = NULL, values = c(21, 24), 
+      labels = c("Boundary shift", "Drift rate")) + 
+    scale_fill_viridis_d(name = NULL, option = "B", begin = 0.2, end = 0.8, 
+      labels = c("Boundary shift", "Drift rate")) + 
+    scale_y_discrete(limits = rev, position = "left") + 
+    labs(y = NULL, x = expression(beta)) + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
+    theme(legend.position = c(0.8, 0.2), legend.background = element_blank())
+
+# -----------------------------------------------------------------------------
+
+
+
+
 # DDM simulations -------------------------------------------------------------
 
 ddm_yn <- ddm_sims %>% 
@@ -257,7 +298,7 @@ ddm_yn <- ddm_sims %>%
     geom_hline(yintercept = 0) + 
     geom_vline(xintercept = 0) + 
     labs(title = "y/n questions", y = "Boundary separation", x = "Time step") + 
-    minimal_adj()
+    minimal_adj(base_size = 13)
 
 ddm_wh <- ddm_sims %>% 
   filter(q_type == "wh") %>% 
@@ -275,18 +316,11 @@ ddm_wh <- ddm_sims %>%
     geom_hline(yintercept = 0) + 
     geom_vline(xintercept = 0) + 
     labs(title = "wh- questions", y = NULL, x = "Time step") + 
-    minimal_adj()
+    minimal_adj(base_size = 13)
 
 ddm_simulations <- ddm_yn + ddm_wh
 
 # -----------------------------------------------------------------------------
-
-
-
-
-
-
-
 
 
 
@@ -398,6 +432,11 @@ walk(devices, ~ ggsave(
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/learner_accuracy_3way.", .x), 
   plot = learner_accuracy_3way, 
+  device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/ddm_bs_dr_estimates.", .x), 
+  plot = ddm_bs_dr_estimates, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(

@@ -69,3 +69,30 @@ knitr::include_graphics(
   )
 ```
 
+
+
+
+
+
+This is Figure \@ref(fig:plot-ddm-bs-dr-estimates)
+
+(ref:plot-ddm-bs-dr-estimates) Need a caption.
+
+```{r, 'plot-ddm-bs-dr-estimates', fig.cap="(ref:plot-ddm-bs-dr-estimates)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "ddm_bs_dr_estimates.pdf")
+  )
+```
+
+
+
+
+This is Figure \@ref(fig:plot-ddm-simulations)
+
+(ref:plot-ddm-simulations) Two-thousand simulations of the drift diffusion model for interrogative utterances as a function of empathy quotient (low/high) and LexTALE score (low/high). Low and high levels represent &pm;2 standard deviations above/below the mean. Dark red lines represent the average decision time course.
+
+```{r, 'plot-ddm-simulations', fig.cap="(ref:plot-ddm-simulations)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "ddm_simulations.pdf")
+  )
+```
