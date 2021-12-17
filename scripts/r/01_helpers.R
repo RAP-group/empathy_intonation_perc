@@ -1,8 +1,11 @@
 # Helpers ---------------------------------------------------------------------
 #
-#
-#
-#
+# Author: Joseph V. Casillas
+# LAST UPDATE: 12/16/2021
+# - Helper function using for analyses, plotting and reporting results in
+#   the project manuscript
+# - This file is sourced automatically when the data are loaded via 
+#   07_load_data.r
 #
 # -----------------------------------------------------------------------------
 
@@ -22,7 +25,6 @@ source(here::here("scripts", "r", "00_libs.R"))
 
 # Score lextale task
 # ((n_corr_real / n_real_words * 100) + (n_corr_nonse / n_nonse_words * 100)) / 2
-
 score_lextale <- function(
   n_real = NULL, 
   n_nonse = NULL, 
@@ -48,7 +50,6 @@ time_diff <- function(date = "1982-11-03", format = "%Y-%m-%d",
   out <- as.numeric(difftime(end_date, start_date, units = units))
   return(out)
 }
-
 
 # Calculate dprime
 dprime <- function(n_hit, n_fa, n_miss = NULL, n_cr = NULL, n_targets = NULL,
@@ -109,9 +110,9 @@ dprime <- function(n_hit, n_fa, n_miss = NULL, n_cr = NULL, n_targets = NULL,
 
 }
 
-
 # DDM simulation function
-sim_ddm <- function(q_type, eq, lt, drift_rate, boundary_separation, bias, ndt, n_sims) {
+sim_ddm <- function(q_type, eq, lt, drift_rate, boundary_separation, 
+  bias, ndt, n_sims) {
   simd = NULL
   for (sim in 1:n_sims){
     step = 1
@@ -133,20 +134,6 @@ sim_ddm <- function(q_type, eq, lt, drift_rate, boundary_separation, bias, ndt, 
     simd = rbind(simd, dd)
   }
   return(simd)
-}
-
-
-
-
-
-
-
-
-
-# Calculate binwidth for histograms
-fd_bw <- function(x) {
-  out <- 2 * IQR(x) / length(x)^(1/3)
-  return(out)
 }
 
 # Load all rds files in a directory
@@ -173,20 +160,24 @@ load_models <- function(path, obj_type) {
 
 # Plotting functions ----------------------------------------------------------
 
+# Calculate binwidth for histograms
+fd_bw <- function(x) {
+  out <- 2 * IQR(x) / length(x)^(1/3)
+  return(out)
+}
+
 minimal_adj <- function(...) {
   list(
     theme_minimal(base_size = 12, base_family = "Times"), 
     theme(
-      axis.title.y = element_text(size = rel(.9), hjust = 0.95), 
-      axis.title.x = element_text(size = rel(.9), hjust = 0.95),
+      axis.title.y = element_text(hjust = 0.95), 
+      axis.title.x = element_text(hjust = 0.95),
       panel.grid.major = element_line(colour = 'grey90', size = 0.15),
       panel.grid.minor = element_line(colour = 'grey90', size = 0.15))
   )
 }
 
-
-
-# Concert '-' to unicode minus
+# Convert '-' to unicode minus
 unicode_minus <- function(x) {
   sub('^-', '\U2212', format(x))
 }
@@ -195,7 +186,6 @@ unicode_minus <- function(x) {
 strip_blank <- function(x) {
   sub('[[:space:]]+', '', format(x))
 }
-
 
 # Participant check
 check_participant <- function(data = "learners", id) {
@@ -232,74 +222,6 @@ check_participant <- function(data = "learners", id) {
 
 
 
+# Printing functions ----------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-#forest_re <- function(mod, effect, quoted_var) {
-  
-#  ef   <- enquo(effect)
-#  efn  <- enquo(quoted_var)
-
-  # Get draws for each re
-#  re_draws <- 
-#  spread_draws(mod, !!!efn[!!effect,], b_Intercept) %>% 
-#  mutate(b_Intercept = !!!efn + b_Intercept)
-
-#  return(re_draws)
-  # Get draws for pooled effect
-  #re_pooled_effect_draws <- 
-  #spread_draws(mod, b_Intercept) %>% 
-  #mutate(effect = "Pooled Effect")
-
-  # Combine it and clean up
-  #re_forest_data <- 
-  #bind_rows(re_draws, re_pooled_effect_draws) %>% 
-  #ungroup() %>%
-  #mutate(effect = reorder(effect, b_Intercept), 
-  #       effect = relevel(effect, "Pooled Effect", after = Inf))
-
-  # Calculate mean qi intervals for right margin text
-  #re_forest_data_summary <- 
-  #group_by(re_forest_data, effect) %>% 
-  #mean_qi(b_Intercept, .width = 0.95) 
-
-  # Calculate mean qi intervals for pooled effect
-  #re_pooled_summary <- 
-  #group_by(re_forest_data, effect) %>% 
-  #mean_qi(b_Intercept, .width = c(0.5, 0.8, 0.95)) %>% 
-  #filter(effect == "Pooled Effect")
-
-  # Plot it all
-  #p_post <- re_forest_data %>% 
-  #ggplot() + 
-  #aes(x = b_Intercept, y = effect) + 
-  #geom_text(data = 
-  #  mutate_if(re_forest_data_summary, is.numeric, round, 2) %>% 
-  #  mutate_at(c("b_Intercept", ".lower", ".upper"), as.character) %>% 
-  #  mutate_at(c("b_Intercept", ".lower", ".upper"), unicode_minus) %>% 
-  #  mutate_at(c("b_Intercept", ".lower", ".upper"), strip_blank),
-  #          aes(label = glue("{b_Intercept} [{.lower}, {.upper}]"), x = Inf), 
-  #          hjust = "inward", family = "Times") + 
-  #geom_tile(data = re_pooled_summary, aes(width = .lower - .upper),
-  #  alpha = 0.2, height = Inf, fill = "#31688EFF") +
-  #stat_pointinterval(point_fill = "white", shape = 21, .width = c(0.8, 0.95)) +
-  #coord_cartesian(xlim = c(0, 6)) + 
-  #labs(x = expression(italic("beta")), y = NULL) +
-  #minimal_adj() + 
-  #theme(axis.text.y = element_text(hjust = 0))
-
-  #return(p_post)
-#}
-
-#forest_re(native_response_00, "speaker_variety", speaker_variety)
-
-
+# -----------------------------------------------------------------------------
