@@ -91,16 +91,62 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
     stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
       interval_alpha = 1, pch = 21, fill = "darkred", height = 0.8) + 
     expand_limits(y = c(-0.25, 9.25)) + 
-    geom_text(data = tibble(x = -0.1, y = 0.05, text = sprintf("less accurate")), 
+    geom_text(data = tibble(x = -0.1, y = 0.05, text = sprintf("-accurate")), 
       aes(x, y, label = text), color = "black", size = 3, hjust = 1, family = "Times") + 
-    geom_text(data = tibble(x = 0.1, y = 0.05, text = "more accurate"), 
+    geom_text(data = tibble(x = 0.1, y = 0.05, text = "+accurate"), 
       aes(x, y, label = text), color = "black", size = 3, hjust = 0, family = "Times") + 
-    geom_curve(aes(x = -0.55, xend = -0.65, y = 0.025, yend = 0.03), size = 0.3, 
+    geom_curve(aes(x = -0.69, xend = -0.99, y = 0.025, yend = 0.03), size = 0.3, 
       curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
-    geom_curve(aes(x = 0.59, xend = 0.69, y = 0.025, yend = 0.03), size = 0.3, 
+    geom_curve(aes(x = 0.69, xend = 0.99, y = 0.025, yend = 0.03), size = 0.3, 
       curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
-    labs(x = "Log odds", y = NULL) + 
+    labs(x = expression(paste(beta, "-Response")), y = NULL) + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# RT by speaker variety -------------------------------------------------------
+
+learner_rt_by_speaker_variety <- learner_rt_01 %>% 
+  as_tibble() %>% 
+  select("b_Intercept", 
+    starts_with("r_speaker_variety[") & contains(",Intercept")) %>% 
+  transmute(
+    Andalusian    = `r_speaker_variety[andalusian,Intercept]`, 
+    Argentine     = `r_speaker_variety[argentine,Intercept]`, 
+    Peninsular    = `r_speaker_variety[castilian,Intercept]`, 
+    Chilean       = `r_speaker_variety[chilean,Intercept]`, 
+    Cuban         = `r_speaker_variety[cuban,Intercept]`, 
+    Mexican       = `r_speaker_variety[mexican,Intercept]`, 
+    Peruvian      = `r_speaker_variety[peruvian,Intercept]`, 
+   `Puerto Rican` = `r_speaker_variety[puertorican,Intercept]`
+  ) %>% 
+  pivot_longer(everything(), names_to = "parameter", values_to = "estimate") %>% 
+  mutate(parameter = fct_relevel(parameter, "Cuban", "Puerto Rican", 
+    "Argentine", "Peruvian", "Andalusian", "Chilean", "Mexican", 
+    "Peninsular")) %>% 
+  ggplot(., aes(x = estimate, y = parameter)) + 
+    coord_cartesian(xlim = c(-0.12, 0.12)) + 
+    scale_y_discrete(position = "right") + 
+    geom_vline(xintercept = 0, lty = 3, color = "black") +
+    stat_halfeye(position = position_nudge(y = 0.04), slab_alpha = 0.2, 
+      interval_alpha = 1, pch = 21, fill = "darkred", height = 0.8) + 
+    expand_limits(y = c(-0.25, 9.25)) + 
+    geom_text(data = tibble(x = -0.01, y = 0.05, text = sprintf("faster")), 
+      aes(x, y, label = text), color = "black", size = 3, hjust = 1, family = "Times") + 
+    geom_text(data = tibble(x = 0.01, y = 0.05, text = "slower"), 
+      aes(x, y, label = text), color = "black", size = 3, hjust = 0, family = "Times") + 
+    geom_curve(aes(x = -0.04, xend = -0.06, y = 0.025, yend = 0.03), size = 0.3, 
+      curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
+    geom_curve(aes(x = 0.04, xend = 0.06, y = 0.025, yend = 0.03), size = 0.3, 
+      curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
+    labs(x = expression(paste(beta, "-Response time")), y = NULL) + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
+
+learner_accuracy_rt_by_speaker_variety <- 
+  learner_accuracy_by_speaker_variety + learner_rt_by_speaker_variety
 
 # -----------------------------------------------------------------------------
 
@@ -476,9 +522,9 @@ walk(devices, ~ ggsave(
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(
-  filename = glue(path_to_fig, "/learner_accuracy_by_speaker_variety.", .x), 
-  plot = learner_accuracy_by_speaker_variety, 
-  device = .x, height = 4, width = 7, units = "in"))
+  filename = glue(path_to_fig, "/learner_accuracy_rt_by_speaker_variety.", .x), 
+  plot = learner_accuracy_rt_by_speaker_variety, 
+  device = .x, height = 4, width = 9, units = "in"))
 
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/learner_accuracy_lextale_by_utterance_type.", .x), 

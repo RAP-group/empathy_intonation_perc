@@ -93,6 +93,36 @@ learner_response_yn_01 <- brm(
   file = here("models", "learner_response_yn_01")
 )
 
+
+
+#
+# RT analysis
+#
+
+# Set regularizing, weakly informative priors
+learner_rt_priors <- c(
+  set_prior("normal(6, 0.5)", class = "Intercept"), 
+  set_prior("cauchy(0, 1.5)", class = "sd"), 
+  set_prior("cauchy(0, 0.5)", class = "sigma")
+  )
+
+# Fit model
+learner_rt_01 <- brm(
+  formula = rt_raw ~ 1  + 
+    (1 | participant) + 
+    (1 | speaker_variety) + 
+    (1 | item), 
+  data = learners %>% dplyr::filter(rt_raw < 10, is_correct == 1), 
+  prior = learner_rt_priors, 
+  warmup = 1000, iter = 2000, chains = 4, 
+  family = lognormal(), 
+  cores = 4, 
+  backend = "cmdstanr", 
+  control = list(adapt_delta = 0.99, max_treedepth = 15), 
+  file = here("models", "learner_rt_01")
+)
+
+
 # -----------------------------------------------------------------------------
 
 

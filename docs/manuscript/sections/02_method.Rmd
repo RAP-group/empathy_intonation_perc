@@ -3,10 +3,10 @@
 ## Participants
 
 A total of `r n_learners` individuals completed a two-alternative forced choice (2AFC) task in which auditory stimuli were identified as being questions or statements. 
-Participants were recruited using the Prolific.ac online experimental platform and were be compensated at a rate of $9.52 per hour for their time. 
-We estimated the task would take approximately 15 minutes to complete, thus each participant was compensated with $2.70 for completing all three tasks.
-The mean time to completion was `r round(t_mean, 2)` minutes (SD: `r round(t_sd, 2)`). 
-The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the US with no knowledge of any languages other than English and/or Spanish.
+Participants were recruited using the Prolific.ac online experimental platform and were compensated at a rate of $9.52 per hour for their time. 
+We estimated the task would take approximately 15 minutes to complete, thus each participant was paid $2.70 for completing all three tasks.
+The mean time to completion was approximately `r round(t_mean)` minutes. 
+The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the US with no knowledge of any languages other than English or Spanish.
 They reported no hearing difficulties and were required to use headphones on a desktop computer. 
 Upon beginning the experiment, all participants responded to the following screening questions: 
 1) What part of the US are you from?
@@ -78,11 +78,11 @@ The model considered response accuracy for the population effects *utterance typ
 The likelihood of the model was Bernoulli distributed with a logit link function. 
 The criterion, *response*, was coded as "1" for correct responses and "0" for incorrect responses. 
 Thus, the first analysis modeled the probability of responding correctly to the prompt "Is this a question?". 
-We specified group-level effects for participants, speaker variety, and items.  
+We specified group-level effects for participants, speaker variety, and items.
 The slope for *utterance type* varied for the participant effect, as did the *LexTALE* by *empathy quotient* interaction for the speaker variety effect. 
 All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represented the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
-The second analysis utilized Bayesian drift diffusion modeling (DDM, RATCLIFF & MOON 2008). 
+The second analysis utilized Bayesian drift diffusion modeling [DDM, @ratcliff2008diffusion]. 
 This approach to analyzing behavioral data models decision-making using a random-walk decision process.
 DDMs can simultaneously take into account responses and response times in two-choice tasks in a single model, thus they are particularly beneficial when analyzing tasks in which speed-accuracy tradeoffs may be present. 
 We estimate the parameters off the DDM using a Bayesian methods and subsequently do regression on the posterior samples of the resulting parameters. 

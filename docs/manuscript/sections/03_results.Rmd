@@ -15,13 +15,13 @@ knitr::include_graphics(
 
 
 
-This is Figure \@ref(fig:plot-learner-accuracy-by-speaker-variety)
+This is Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)
 
-(ref:plot-learner-accuracy-by-speaker-variety) Response accuracy: Partially pooled estimates for each speaker variety.
+(ref:plot-learner-accuracy-rt-by-speaker-variety) Response accuracy: Partially pooled estimates for each speaker variety.
 
-```{r, 'plot-learner-accuracy-by-speaker-variety', fig.cap="(ref:plot-learner-accuracy-by-speaker-variety)"}
+```{r, 'plot-learner-accuracy-rt-by-speaker-variety', fig.cap="(ref:plot-learner-accuracy-rt-by-speaker-variety)"}
 knitr::include_graphics(
-  here("figs", "manuscript", "learner_accuracy_by_speaker_variety.pdf")
+  here("figs", "manuscript", "learner_accuracy_rt_by_speaker_variety.png")
   )
 ```
 
