@@ -107,12 +107,16 @@ learner_rt_priors <- c(
   )
 
 # Fit model
+learners_rt <- learners %>% 
+  dplyr::filter(rt_adj < 10, is_correct == 1) %>% 
+  mutate(rt = rt_adj + abs(min(rt_adj)) + 0.01)
+
 learner_rt_01 <- brm(
-  formula = rt_raw ~ 1  + 
+  formula = rt ~ 1  + 
     (1 | participant) + 
     (1 | speaker_variety) + 
     (1 | item), 
-  data = learners %>% dplyr::filter(rt_raw < 10, is_correct == 1), 
+  data = learners_rt, 
   prior = learner_rt_priors, 
   warmup = 1000, iter = 2000, chains = 4, 
   family = lognormal(), 

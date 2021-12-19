@@ -29,31 +29,19 @@ knitr::include_graphics(
 
 
 
-This is Figure \@ref(fig:plot-learner-accuracy-lextale-by-utterance-type)
+This is Figure \@ref(fig:plot-learner-accuracy-lt-eq-by-utterance-type)
 
-(ref:plot-learner-accuracy-lextale-by-utterance-type) Response accuracy: Probability of a correct response in the logistic space as a function of LexTALE score (A) and LexTALE score for each utterance type (B). Colored lines represent 300 draws from the posterior distribution.
+(ref:plot-learner-accuracy-lt-eq-by-utterance-type) Response accuracy: Probability of a correct response in the logistic space as a function of LexTALE score (left panel) and empathy quotient (right panel) for each utterance type. Thin lines represent 300 draws from the posterior distribution for each condition.
 
-```{r, 'plot-learner-accuracy-lextale-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-lextale-by-utterance-type)"}
+```{r, 'plot-learner-accuracy-lt-eq-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-lt-eq-by-utterance-type)"}
 knitr::include_graphics(
-  here("figs", "manuscript", "learner_accuracy_lextale_by_utterance_type.pdf")
+  here("figs", "manuscript", "learner_accuracy_lt_eq_by_utterance_type.pdf")
   )
 ```
 
 
 
 
-
-
-
-This is Figure \@ref(fig:plot-learner-accuracy-empathy-by-utterance-type)
-
-(ref:plot-learner-accuracy-empathy-by-utterance-type) Response accuracy: Probability of a correct response in the logistic space as a function of empathy quotient (A) and empathy quotient for each utterance type (B). Colored lines represent 300 draws from the posterior distribution.
-
-```{r, 'plot-learner-accuracy-empathy-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-empathy-by-utterance-type)"}
-knitr::include_graphics(
-  here("figs", "manuscript", "learner_accuracy_empathy_by_utterance_type.pdf")
-  )
-```
 
 
 

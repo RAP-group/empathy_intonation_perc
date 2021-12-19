@@ -117,3 +117,22 @@ eq_dat <- learners %>%
 # -----------------------------------------------------------------------------
 
 
+
+
+# RT stuff --------------------------------------------------------------------
+
+# N trials in which RT > 10
+n_rt_10_plus <- learners %>% filter(rt_adj > 10) %>% nrow
+
+# % of RT > 10 RTs
+perc_rt_10_plus <- round((n_rt_10_plus / nrow(learners)) * 100, 2)
+
+# N trials in which RT is negative (before offset of sentence)
+n_rt_0_minus <- learners %>% filter(rt_adj < 0) %>% nrow
+
+# % of negative RTs
+perc_rt_neg <- round((n_rt_0_minus / nrow(learners)) * 100, 2)
+
+# Accuracy of negative RTs
+perc_rt_neg_correct <- filter(learners, rt_adj < 0) %>% 
+  summarize(a = mean(is_correct) * 100) %>% pull() %>% round(., 2)

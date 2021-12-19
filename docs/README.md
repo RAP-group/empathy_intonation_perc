@@ -9,6 +9,12 @@
     │   └── Targets prompts fillers revised with new fillers 9_11_15.docx
     ├── README.Rmd
     ├── README.md
+    ├── abstracts
+    │   ├── caspslap_2022
+    │   └── hls_2021
+    ├── bib
+    │   ├── apa.csl
+    │   └── empathy.bib
     ├── irb
     │   ├── Debriefing Statement Template 8.17.17_0.docx
     │   ├── HRP-503b - Non-Interventional Research Protocol.docx
@@ -17,24 +23,38 @@
     │   ├── empathy_quotient
     │   ├── experimental_items
     │   ├── lextale
+    │   ├── quotes
     │   └── rCR Anonymous Data Collection Consent Form.docx
     ├── lit
-    │   ├── BaronCohen.Wheelwright2004.pdf
-    │   ├── Brandl.Gonzalez.Bustin_2020_The.development.of.intonation.in.Spanish.pdf
-    │   ├── Esteve-Gibert2020_Article_EmpathyInfluencesHowListenersI.pdf
-    │   ├── ICPhS_2995.pdf
     │   ├── README.Rmd
     │   ├── README.md
-    │   ├── Trimble_umn_0130E_13962.pdf;sequence=1.pdf
-    │   ├── apa.csl
-    │   ├── empathy.bib
+    │   ├── alvord_2010.pdf
+    │   ├── anderson_etal_1992.pdf
+    │   ├── baron-cohen_wheelwright_2004.pdf
+    │   ├── bertrand_etal_2018.pdf
+    │   ├── brandl_etal_2020.pdf
+    │   ├── craft_2015.pdf
+    │   ├── esteve-gibert_2020.pdf
+    │   ├── esteve-gibert_etal_2016.pdf
+    │   ├── hualde_prieto.pdf
+    │   ├── kvavik_1974.pdf
+    │   ├── munro_1995.pdf
+    │   ├── orrico_dimperio_2020.pdf
+    │   ├── orrico_etal_2019.pdf
     │   ├── trimble_2013.pdf
-    │   └── view.pdf
+    │   ├── trimble_diss_2013.pdf
+    │   └── trofimovich_2006.pdf
     ├── manuscript
     │   ├── README.Rmd
-    │   └── README.md
+    │   ├── README.md
+    │   ├── main.Rmd
+    │   ├── main.docx
+    │   └── sections
     ├── pre_reg
     │   ├── preregistration_empathy.Rmd
     │   └── preregistration_empathy.md
+    ├── slides
+    │   ├── caspslap_2022
+    │   └── hls_2021
     └── templates
         └── ref.docx

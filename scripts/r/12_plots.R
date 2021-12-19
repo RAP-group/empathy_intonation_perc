@@ -1,6 +1,10 @@
 # Plots -----------------------------------------------------------------------
 #
+# Author: Joseph V. Casillas
+# Last update: 20211218
+#
 # - All plots presented in slides and manuscripts are generated from this file
+#   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.
 # - Default output is to png and pdf
 #
 # -----------------------------------------------------------------------------
@@ -18,6 +22,33 @@ learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.r
 learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
 ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
 ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Empathy quotient and LexTALE descriptives -----------------------------------
+
+lt_mod <- brm(
+  formula = lextale_tra ~ 1, 
+  data = learners %>% select(participant, lextale_tra) %>% 
+    group_by(participant, lextale_tra) %>% distinct(),
+  prior = prior(normal(10, 20), class = "Intercept")
+)
+
+filter(learners, participant == "midd01")
+
+ learners %>% 
+  select(participant, lextale_tra, eq_score) %>% 
+  group_by(participant, lextale_tra, eq_score) %>% 
+  distinct() %>% 
+  pivot_longer(-participant, names_to = "metric", values_to = "val") %>% 
+  ggplot(., aes(x = val, fill = metric)) + 
+    geom_histogram(color = "black", alpha = 0.5, binwidth = fd_bw) + 
+    scale_fill_viridis_d(option = "B", begin = 0.2, end = 0.8) + 
+    minimal_adj() + 
+    theme(legend.position = c(0.8, 0.8))
 
 # -----------------------------------------------------------------------------
 
@@ -162,7 +193,7 @@ lt_st_me <- conditional_effects(learner_response_01,
   method = "posterior_epred", 
   spaghetti = TRUE, 
   ndraws = 300, 
-  #int_conditions = list(lextale_std = c(-1.5, 0, 2, 4))
+  int_conditions = list(lextale_std = c(-2.1, -1, 0, 1, 2.1))
   )
 
 # Set labs for plot
@@ -174,10 +205,11 @@ sentence_labs <- c(
 
 # Main plot
 learner_accuracy_lextale_by_utterance_type <- plot(lt_st_me, plot = F, 
-  line_args = list(size = 5))[[1]] + 
+  line_args = list(size = 4))[[1]] + 
   scale_x_continuous(expand = c(0, 0)) + 
-  geom_line(aes(group = effect2__), size = 2, 
-    color = rep(viridis::viridis_pal(option = "A", end = 0.85)(4), each = 100)) +
+  coord_cartesian(ylim = c(0.39, 1.01)) + 
+  geom_line(aes(group = effect2__), size = 1.5, 
+    color = rep(viridis::viridis_pal(option = "A", end = 0.85)(4), each = 5)) +
   geom_hline(yintercept = 0.5, lty = 3) + 
   scale_color_manual(name = NULL, labels = sentence_labs, 
     values = alpha(viridis::viridis_pal(option = "A", end = 0.9)(4), 0.1)) + 
@@ -204,18 +236,20 @@ eq_st_me <- conditional_effects(learner_response_01,
   re_formula = NA, 
   method = "posterior_epred", 
   spaghetti = TRUE, 
+  int_conditions = list(eq_std = c(-2.1, -1, 0, 1, 2.1)), 
   ndraws = 300)
 
 learner_accuracy_empathy_by_utterance_type <- plot(eq_st_me, plot = F, 
-  line_args = list(size = 5))[[1]] + 
-  coord_cartesian(ylim = c(0.4, 1)) + 
+  line_args = list(size = 4))[[1]] + 
+  coord_cartesian(ylim = c(0.39, 1.01)) + 
   scale_x_continuous(expand = c(0, 0)) + 
-  geom_line(aes(group = effect2__), size = 2, 
-    color = rep(viridis::viridis_pal(option = "A", end = 0.85)(4), each = 100)) +
+  scale_y_continuous(position = "right") + 
+  geom_line(aes(group = effect2__), size = 1.5, 
+    color = rep(viridis::viridis_pal(option = "A", end = 0.85)(4), each = 5)) +
   geom_hline(yintercept = 0.5, lty = 3) + 
   scale_color_manual(name = NULL, labels = sentence_labs, 
     values = alpha(viridis::viridis_pal(option = "A", end = 0.9)(4), 0.1)) + 
-  labs(y = "P(correct)", x = "Empathy quotient") + 
+  labs(y = NULL, x = "Empathy quotient") + 
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(
     legend.background = element_blank(), 
@@ -224,6 +258,11 @@ learner_accuracy_empathy_by_utterance_type <- plot(eq_st_me, plot = F,
     legend.key.size = unit(0.7, "cm"), 
     legend.text.align = 0.5) + 
   guides(color = guide_legend(override.aes = list(fill = NA, size = 2)))
+
+learner_accuracy_lt_eq_comb <- learner_accuracy_lextale_by_utterance_type + 
+  learner_accuracy_empathy_by_utterance_type & theme(legend.position = "bottom") 
+learner_accuracy_lt_eq_by_utterance_type <- 
+  learner_accuracy_lt_eq_comb + plot_layout(guides = "collect")
 
 # -----------------------------------------------------------------------------
 
@@ -527,13 +566,8 @@ walk(devices, ~ ggsave(
   device = .x, height = 4, width = 9, units = "in"))
 
 walk(devices, ~ ggsave(
-  filename = glue(path_to_fig, "/learner_accuracy_lextale_by_utterance_type.", .x), 
-  plot = learner_accuracy_lextale_by_utterance_type, 
-  device = .x, height = 4, width = 7, units = "in"))
-
-walk(devices, ~ ggsave(
-  filename = glue(path_to_fig, "/learner_accuracy_empathy_by_utterance_type.", .x), 
-  plot = learner_accuracy_empathy_by_utterance_type, 
+  filename = glue(path_to_fig, "/learner_accuracy_lt_eq_by_utterance_type.", .x), 
+  plot = learner_accuracy_lt_eq_by_utterance_type, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(

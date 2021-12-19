@@ -48,8 +48,8 @@ length(returned)
 # RT descriptives
 nat_d <- learners %>% 
   summarize(
-    mean_rt = mean(rt_adj), 
-    median_rt = median(rt_adj), 
+    mean_rt = mean(rt_raw), 
+    median_rt = median(rt_raw), 
     mean_cor = mean(is_correct), 
     sd_cor = sd(is_correct)) %>% 
   pivot_longer(cols = everything(), names_to = "metric", values_to = "val") %>% 
@@ -57,15 +57,15 @@ nat_d <- learners %>%
 
 # Dist. of RTs
 learners %>% 
-  ggplot(., aes(x = rt_adj)) + 
+  ggplot(., aes(x = rt_raw)) + 
     geom_histogram(fill = "grey40", color = "black", binwidth = 0.15) 
 
 # How many RTs over X seconds?
-sum(learners$rt_adj > 5); sum(learners$rt_adj > 10)
+sum(learners$rt_raw > 5); sum(learners$rt_raw > 10)
 
-# Accuracy when RT is >= 0
+# Accuracy when RT is <= 0
 learners %>% 
-  filter(rt_adj >= 5) %>% 
+  filter(rt_raw >= 15) %>% 
   summarize(mean_cor = mean(is_correct))
 
 

@@ -27,9 +27,9 @@ time_line_df <- tribble(
   "Preparation",  "Pre-registration",      "2020-09-16",   "2021-03-15",
   "Preparation",  "Materials prep.",       "2020-09-16",   "2021-02-14",
   "Preparation",  "Recruting",             "2021-02-17",   "2021-02-25",
-  "Preparation",  "Analyses",              "2021-02-25",   "2021-03-01", 
+  "Preparation",  "Analyses",              "2021-12-12",   "2021-12-17", 
   "Presentation", "Manuscript prep.",      "2021-10-23",   "2021-12-01", 
-  "Presentation", "Manuscript submission", "2021-12-01",   "2021-12-01", 
+  "Presentation", "Manuscript submission", "2021-12-21",   "2021-12-21", 
   "Presentation", "Deadline - HLS",        "2021-04-01",   "2021-04-28", 
   "Presentation", "Conference - HLS",      "2021-10-07",   "2021-10-07", 
   "Presentation", "Deadline - CASPSLaP",   "2021-10-30",   "2021-10-30", 
@@ -64,17 +64,22 @@ p_project_timeline <- ganttrify(
 
 # Create df 
 contributor_list <- list(
-  "JVC" = c(1), 
-  "JGP" = c(1), 
-  "NR"  = c(1), 
-  "KP"  = c(1), 
-  "LFA" = c(1), 
-  "RE"  = c(1), 
-  "IC"  = c(1), 
-  "KG"  = c(1)
+  "JVC" = tibble(role = 1:14,                 weight = "high"),
+  "JGP" = tibble(role = c(1, 2, 5, 6, 13:14), weight = "high"),
+  "NR"  = tibble(role = c(1, 5, 6, 13:14),    weight = c(rep("high", 4), "low")),
+  "KP"  = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
+  "LFA" = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
+  "RE"  = tibble(role = c(1, 5, 6),           weight = "high"),
+  "IC"  = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
+  "KG"  = tibble(role = c(1, 5, 6, 13),       weight = "high"),
+  "GC"  = tibble(role = 13:14,                weight = "low"),
+  "JS"  = tibble(role = 13:14,                weight = "low"),
+  "IA"  = tibble(role = 13:14,                weight = "low"),
+  "KT"  = tibble(role = 14,                   weight = "low")
 )
 
-p_project_contributors <- contributor(contributor_list)
+p_project_contributors <- contributor(
+  contributor_list, weight = T, begin = 0.2, end = 0.8)
 
 # -----------------------------------------------------------------------------
 
