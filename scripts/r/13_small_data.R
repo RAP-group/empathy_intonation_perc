@@ -8,10 +8,10 @@
 
 
 
-# Source helpers, and libs ----------------------------------------------------
+# Source helpers, libs, and posteriors ----------------------------------------
 
 source(here::here("scripts", "r", "07_load_data.R"))
-
+accuracy_summary <- read_csv(here("tables", "learner_response_01.csv"))
 
 # -----------------------------------------------------------------------------
 

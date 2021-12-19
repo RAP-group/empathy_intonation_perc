@@ -1,0 +1,17 @@
+Parameter,Median,HDI,% in ROPE,MPE,ESS
+Intercept,0.53,"[0.23, 0.83]",0.00,1.00,2099.20
+Int. wh-,0.43,"[0.17, 0.65]",0.00,1.00,2722.77
+Dec. narrow focus,2.13,"[1.86, 2.40]",0.00,1.00,2608.20
+Dec. broad focus,2.34,"[2.06, 2.60]",0.00,1.00,2576.40
+LexTALE,0.28,"[0.15, 0.41]",0.00,1.00,5245.13
+Empathy quotient,&minus;0.02,"[&minus;0.12, 0.09]",0.98,0.62,5351.29
+Int. wh-:LexTALE,0.12,"[&minus;0.05, 0.30]",0.42,0.90,4977.05
+Dec. narrow focus:LexTALE,0.02,"[&minus;0.17, 0.22]",0.72,0.58,8449.56
+Dec. broad focus:LexTALE,0.19,"[&minus;0.02, 0.42]",0.18,0.96,9482.35
+Int. wh-:Empathy quotient,0.20,"[0.03, 0.36]",0.10,0.99,4911.53
+Dec. narrow focus:Empathy quotient,0.26,"[0.08, 0.43]",0.02,1.00,8388.63
+Dec. broad focus:Empathy quotient,0.24,"[0.05, 0.43]",0.05,0.99,8180.49
+LexTALE:Empathy quotient,0.02,"[&minus;0.09, 0.14]",0.92,0.65,5954.09
+Int. wh-:LexTALE:Empathy quotient,0.19,"[0.00, 0.40]",0.16,0.97,5603.57
+Dec. narrow focus:LexTALE:Empathy quotient,0.02,"[&minus;0.20, 0.23]",0.67,0.56,8343.81
+Dec. broad focus:LexTALE:Empathy quotient,0.08,"[&minus;0.16, 0.33]",0.51,0.74,8697.81

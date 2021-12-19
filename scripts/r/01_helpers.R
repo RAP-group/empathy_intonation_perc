@@ -235,6 +235,12 @@ strip_blank <- function(x) {
   sub('[[:space:]]+', '', format(x))
 }
 
+# Round and format numbers to exactly N digits
+specify_decimal <- function(x, k) {
+  out <- trimws(format(round(x, k), nsmall = k))
+  return(out)
+}
+
 
 # Print values from tibble for article
 pull_from_tib <- function(df, col, row, val) {
@@ -246,15 +252,15 @@ pull_from_tib <- function(df, col, row, val) {
 }
 
 # Report estimate from posterior distribution summary
-report_posterior <- function(df, param, is_exp = FALSE) {
+report_posterior <- function(df, param, is_exp = TRUE) {
   
-  if (is_exp == FALSE) {
+  if (is_exp == TRUE) {
     
     # Extract wanted value from model output
     est  <- df[df$Parameter == param, "Median"]
-    cis  <- df[df$Parameter == param, "95% HDI"]
-    rope <- df[df$Parameter == param, "ROPE_Percentage"]
-    mpe  <- df[df$Parameter == param, "pd"]
+    cis  <- df[df$Parameter == param, "HDI"]
+    rope <- df[df$Parameter == param, "% in ROPE"]
+    mpe  <- df[df$Parameter == param, "MPE"]
 
     capture.output(
       paste0("(&beta; = ", est, ", HDI = ", cis, ", ROPE = ", rope, 
@@ -264,7 +270,7 @@ report_posterior <- function(df, param, is_exp = FALSE) {
   } else {
     # Extract wanted value from model output
     est  <- df[df$Parameter == param, "Median"]
-    cis  <- df[df$Parameter == param, "95% HDI"]
+    cis  <- df[df$Parameter == param, "HDI"]
 
     capture.output(
       paste0("(&beta; = ", est, ", HDI = ", cis, ")", "\n") %>% 

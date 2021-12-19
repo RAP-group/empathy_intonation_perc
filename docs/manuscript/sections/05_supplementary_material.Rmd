@@ -15,6 +15,21 @@
 
 ## Supplementary analyses
 
+
+```{r, 'table-learner-accuracy-by-utterance-type'}
+read_csv(here("tables", "learner_response_01.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
+    caption = "Summary of the posterior distribution modeling 
+    response accuracy as a function of utterance type, LexTALE, and 
+    Empathy quotient. The table includes posterior medians, the 95% HDI, 
+    the percentage of the HDI within the ROPE, and the maximum probability 
+    of effect (MPE).",
+    label = "table-learner-accuracy-by-utterance-type")
+```
+
+
+
+
 This is Figure \@ref(fig:plot-sm-random-speaker-check)
 
 (ref:plot-sm-random-speaker-check) Make sure each variety represented equally over course of experiment.

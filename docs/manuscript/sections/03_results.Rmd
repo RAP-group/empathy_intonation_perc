@@ -13,6 +13,10 @@ knitr::include_graphics(
 ```
 
 
+The estimate for the intercept is: `r report_posterior(accuracy_summary, param = "Intercept")`
+
+
+
 
 
 This is Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)
