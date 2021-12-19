@@ -416,7 +416,14 @@ learners %>%
   filter(check_fails != 0) %>% 
   pull(participant) %>% unique()
 
-check_participant(data = learners, id = "midd13")
+check_participant(data = learners, id = "midd30")
+
+learners %>% 
+  filter(participant == "midd31") %>% 
+  ggplot(., aes(sentence_type, y = is_correct)) + 
+    stat_summary(fun.data = mean_se, geom = "pointrange")
+
+
 
 # Rejected
 # 5f4a7225cf944c08a81adca2 (failed attention check, 6min)

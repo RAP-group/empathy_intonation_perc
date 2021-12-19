@@ -28,33 +28,6 @@ ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
 
 
-# Empathy quotient and LexTALE descriptives -----------------------------------
-
-lt_mod <- brm(
-  formula = lextale_tra ~ 1, 
-  data = learners %>% select(participant, lextale_tra) %>% 
-    group_by(participant, lextale_tra) %>% distinct(),
-  prior = prior(normal(10, 20), class = "Intercept")
-)
-
-filter(learners, participant == "midd01")
-
- learners %>% 
-  select(participant, lextale_tra, eq_score) %>% 
-  group_by(participant, lextale_tra, eq_score) %>% 
-  distinct() %>% 
-  pivot_longer(-participant, names_to = "metric", values_to = "val") %>% 
-  ggplot(., aes(x = val, fill = metric)) + 
-    geom_histogram(color = "black", alpha = 0.5, binwidth = fd_bw) + 
-    scale_fill_viridis_d(option = "B", begin = 0.2, end = 0.8) + 
-    minimal_adj() + 
-    theme(legend.position = c(0.8, 0.8))
-
-# -----------------------------------------------------------------------------
-
-
-
-
 # Accuracy by utterance type --------------------------------------------------
 
 s_types <- c(

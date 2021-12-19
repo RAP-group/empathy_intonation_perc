@@ -8,9 +8,10 @@
 
 
 
-# Source helpers and libs -----------------------------------------------------
+# Source helpers, and libs ----------------------------------------------------
 
 source(here::here("scripts", "r", "07_load_data.R"))
+
 
 # -----------------------------------------------------------------------------
 
@@ -88,35 +89,11 @@ t_mean <- time$min %>% mean
 
 
 
-# LexTALE stuff ---------------------------------------------------------------
+# LexTALE and Empathy quotient descriptives -----------------------------------
 
-# List of mean, sd, min, max for in-prose printing
-lt_dat <- learners %>% 
-  distinct(participant, lextale_tra) %>% 
-  summarize(mean_lt = mean(lextale_tra), med_lt = 13.44, 
-    sd_lt = sd(lextale_tra), min_lt = min(lextale_tra), max_lt = max(lextale_tra)) %>%
-  pivot_longer(cols = everything(), names_to = "desc", values_to = "val") %>% 
-  mutate_if(is.numeric, round, digits = 2) %>% 
-  split(.$desc)
+lt_eq_descriptives <- read_csv(here("tables", "lextale_empathy_descriptives.csv"))
 
 # -----------------------------------------------------------------------------
-
-
-
-
-# Empathy stuff ---------------------------------------------------------------
-
-# List of mean, sd, min, max for in-prose printing
-eq_dat <- learners %>% 
-  summarize(mean_eq = mean(eq_score), sd_eq = sd(eq_score), 
-    min_eq = min(eq_score), max_eq = max(eq_score)) %>% 
-  pivot_longer(cols = everything(), names_to = "desc", values_to = "val") %>% 
-  mutate_if(is.numeric, round, digits = 2) %>% 
-  split(.$desc)
-
-# -----------------------------------------------------------------------------
-
-
 
 
 # RT stuff --------------------------------------------------------------------

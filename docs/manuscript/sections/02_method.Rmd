@@ -2,7 +2,7 @@
 
 ## Participants
 
-A total of `r n_learners` individuals completed a two-alternative forced choice (2AFC) task in which auditory stimuli were identified as being questions or statements. 
+`r xfun::numbers_to_words(n_learners) %>% str_to_sentence` individuals completed a two-alternative forced choice (2AFC) task in which auditory stimuli were identified as being questions or statements. 
 Participants were recruited using the Prolific.ac online experimental platform and were compensated at a rate of $9.52 per hour for their time. 
 We estimated the task would take approximately 15 minutes to complete, thus each participant was paid $2.70 for completing all three tasks.
 The mean time to completion was approximately `r round(t_mean)` minutes. 
@@ -41,19 +41,24 @@ We did not come across any issues.
 **LexTALE**. To assess Spanish proficiency we administered the Lexical Test for Advanced Learners of Spanish (LexTALE-ESP, henceforth LexTALE) [@izura2014lextale; @lemhofer2012introducing]. 
 The LexTALE is a lexical decision experiment used provide a standardized assessment of proficiency/vocabulary size in Spanish. 
 In this task participants are presented words on the computer screen and must decide if it is real or not using the keyboard ('1' for real, '0' for fake). 
-LexTALE scores can range from -20 to 60. 
+LexTALE scores can range from &minus;20 to 60. 
 Monolingual Spanish speakers generally score above 50. 
-Scores from individuals with little or no knowledge of Spanish typically fall in the range of -20 to 0. 
-We conceive of proficiency as a continuous variable, thus we consider a monolingual English speaker to have little to no proficiency in Spanish. 
-Participant scores ranged from `r lt_dat$min_lt$val` to `r lt_dat$max_lt$val`, suggesting all proficiency levels were likely represented in the sample. 
-The mean score was `r lt_dat$med_lt$val` (SD: `r lt_dat$sd_lt$val`). 
+Scores from individuals with little or no knowledge of Spanish typically fall in the range of &minus;20 to 0. 
+Adult learners with low to medium proficiency can range from 0 to 25, and advanced learners generally score above 25. 
+We conceive of proficiency as a continuous variable, thus we consider a monolingual English speaker to have little to no proficiency in Spanish (i.e., a negative value on the LexTALE). 
+In our data set participant scores ranged from `r learners$lextale_tra %>% min %>% unicode_minus` to `r learners$lextale_tra %>% max`, suggesting all proficiency levels were likely represented in the sample. 
+The mean score was `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg_hdi)`) with a standard deviation of `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd_hdi)`. 
+
 
 **Empathy Questionnaire**. The construct empathy was assessed using the Empathy Quotient [EQ, @baron2004empathy]. 
 The EQ is a 60-item questionnaire that presents four point likert-type items ranging from 'strongly agree' to 'strongly disagree'. 
 Forty of the questions assess empathy and 20 are filler items. 
 In order to avoid response bias, choices indicating empathic responses are coded to elicit "agree" responses in half the target items and "disagree" responses in the other half. 
-The target items are scored with 2 or 1 points based on if the participant responds "strongly" or "slightly", 
+The target items are scored with 2 or 1 points based on if the participant responds "strongly" or "slightly". 
 Finally, the EQ is scored by summing the total points to produce a single value indicating an individual's level of empathy. 
+Thus the minimum possible value is 0 (low empathy) and the maximum is 80 (high empathy). 
+In our data set the average empathy quotient was `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg)` (Range: [`r learners$eq_score %>% min`, `r learners$eq_score %>% max`], 95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg_hdi)`, SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd)`, 95% CrI of SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd_hdi)`).
+
 
 ## Procedure
 

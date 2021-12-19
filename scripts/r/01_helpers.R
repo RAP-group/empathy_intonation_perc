@@ -161,6 +161,16 @@ load_models <- function(path, obj_type) {
 
 # Plotting functions ----------------------------------------------------------
 
+# change the default scales to include unicode minus
+scale_x_continuous <- function(..., labels = unicode_minus) {
+  ggplot2::scale_x_continuous(..., labels = labels)
+}
+
+# change the default scales to include unicode minus
+scale_y_continuous <- function(..., labels = unicode_minus) {
+  ggplot2::scale_y_continuous(..., labels = labels)
+}
+
 # Calculate binwidth for histograms
 fd_bw <- function(x) {
   out <- 2 * IQR(x) / length(x)^(1/3)
@@ -176,16 +186,6 @@ minimal_adj <- function(...) {
       panel.grid.major = element_line(colour = 'grey90', size = 0.15),
       panel.grid.minor = element_line(colour = 'grey90', size = 0.15))
   )
-}
-
-# Convert '-' to unicode minus
-unicode_minus <- function(x) {
-  sub('^-', '\U2212', format(x))
-}
-
-# Strip blank space
-strip_blank <- function(x) {
-  sub('[[:space:]]+', '', format(x))
 }
 
 # Participant check
@@ -224,5 +224,53 @@ check_participant <- function(data = "learners", id) {
 
 
 # Printing functions ----------------------------------------------------------
+
+# Convert '-' to unicode minus
+unicode_minus <- function(x) {
+  sub('^-', '\U2212', format(x))
+}
+
+# Strip blank space
+strip_blank <- function(x) {
+  sub('[[:space:]]+', '', format(x))
+}
+
+
+# Print values from tibble for article
+pull_from_tib <- function(df, col, row, val) {
+  col <- enquo(col)
+  row <- enquo(row)
+  val <- enquo(val)
+  val <- filter(df, !!col == !!row) %>% pull(!!val)
+  return(val)
+}
+
+# Report estimate from posterior distribution summary
+report_posterior <- function(df, param, is_exp = FALSE) {
+  
+  if (is_exp == FALSE) {
+    
+    # Extract wanted value from model output
+    est  <- df[df$Parameter == param, "Median"]
+    cis  <- df[df$Parameter == param, "95% HDI"]
+    rope <- df[df$Parameter == param, "ROPE_Percentage"]
+    mpe  <- df[df$Parameter == param, "pd"]
+
+    capture.output(
+      paste0("(&beta; = ", est, ", HDI = ", cis, ", ROPE = ", rope, 
+             ", MPE = ", mpe, ")", "\n") %>% 
+        cat()) %>% 
+        paste()
+  } else {
+    # Extract wanted value from model output
+    est  <- df[df$Parameter == param, "Median"]
+    cis  <- df[df$Parameter == param, "95% HDI"]
+
+    capture.output(
+      paste0("(&beta; = ", est, ", HDI = ", cis, ")", "\n") %>% 
+        cat()) %>% 
+        paste()
+  }
+}
 
 # -----------------------------------------------------------------------------
