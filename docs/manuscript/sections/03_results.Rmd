@@ -1,14 +1,14 @@
 # Results
 
 
-This is Figure \@ref(fig:plot-learner-accuracy-by-utterance-type)
+This is Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type)
 
 
-(ref:plot-learner-accuracy-by-utterance-type) Response accuracy: Probability of a correct response for each utterance type in the logistic space.
+(ref:plot-learner-accuracy-forest-by-utterance-type) Response accuracy: Probability of a correct response for each utterance type in the logistic space.
 
-```{r, 'plot-learner-accuracy-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-by-utterance-type)"}
+```{r, 'plot-learner-accuracy-forest-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-forest-by-utterance-type)"}
 knitr::include_graphics(
-  here("figs", "manuscript", "learner_accuracy_by_utterance_type.pdf")
+  here("figs", "manuscript", "learner_accuracy_forest_utterance_type.pdf")
   )
 ```
 

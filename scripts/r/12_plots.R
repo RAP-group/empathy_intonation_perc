@@ -20,6 +20,7 @@ learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
 learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
 learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
+learner_rt_01 <- readRDS(here("models", "learner_rt_01.rds"))
 ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
 ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
@@ -28,14 +29,69 @@ ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
 
 
 
-# Accuracy by utterance type --------------------------------------------------
 
-s_types <- c(
-  "b_Intercept", 
-  "b_sentence_typeinterrogativeMpartialMwh", 
-  "b_sentence_typedeclarativeMnarrowMfocus", 
-  "b_sentence_typedeclarativeMbroadMfocus"
-  )
+# Accuracy model forest plot --------------------------------------------------
+
+simp_y_labs <- c("Intercept", "Int. wh-", "Dec. narrow focus", 
+  "Dec. broad focus", "LexTALE", "EQ", "Int. wh- x LexTALE", 
+  "Dec. narrow focus x LexTALE", "Dec. broad focus x LexTALE", 
+  "Int. wh- x EQ", "Dec. narrow focus x EQ", "Dec. broad focus x EQ", 
+  "LexTALE x EQ", "Int. wh- x LexTALE x EQ", "Dec. narrow focus x LexTALE x EQ", 
+  "Dec. broad focus x LexTALE x EQ")
+
+simp_labs_tib <- tibble(y = simp_y_labs, x = -2.5) %>% 
+  mutate(y = fct_relevel(y, "Intercept", "Int. wh-", "Dec. narrow focus", 
+      "Dec. broad focus", "LexTALE", "EQ", "Int. wh- x LexTALE", 
+      "Dec. narrow focus x LexTALE", "Dec. broad focus x LexTALE", "Int. wh- x EQ", 
+      "Dec. narrow focus x EQ", "Dec. broad focus x EQ", 
+      "LexTALE x EQ", "Int. wh- x LexTALE x EQ", 
+      "Dec. narrow focus x LexTALE x EQ", "Dec. broad focus x LexTALE x EQ"))
+
+learner_accuracy_forest <- as_tibble(learner_response_01) %>% 
+  select(starts_with("b_")) %>% 
+  pivot_longer(everything(), names_to = "Parameter", values_to = "Estimate") %>% 
+  mutate(Parameter = case_when(
+    Parameter == "b_Intercept" ~ "Intercept", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Int. wh-", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Dec. narrow focus", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Dec. broad focus", 
+    Parameter == "b_lextale_std" ~ "LexTALE", 
+    Parameter == "b_eq_std" ~ "EQ", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std" ~ "Int. wh- x LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std" ~ "Dec. narrow focus x LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std" ~ "Dec. broad focus x LexTALE", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:eq_std" ~ "Int. wh- x EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:eq_std" ~ "Dec. narrow focus x EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:eq_std" ~ "Dec. broad focus x EQ", 
+    Parameter == "b_lextale_std:eq_std" ~ "LexTALE x EQ", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std" ~ "Int. wh- x LexTALE x EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std" ~ "Dec. narrow focus x LexTALE x EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std" ~ "Dec. broad focus x LexTALE x EQ"), 
+    Parameter = fct_relevel(Parameter, "Intercept", "Int. wh-", 
+      "Dec. narrow focus", "Dec. broad focus", "LexTALE", "EQ", 
+      "Int. wh- x LexTALE", "Dec. narrow focus x LexTALE", 
+      "Dec. broad focus x LexTALE", "Int. wh- x EQ", "Dec. narrow focus x EQ", 
+      "Dec. broad focus x EQ", "LexTALE x EQ", "Int. wh- x LexTALE x EQ", 
+      "Dec. narrow focus x LexTALE x EQ", "Dec. broad focus x LexTALE x EQ")) %>% 
+  ggplot(., aes(x = Estimate, y = Parameter)) + 
+    coord_cartesian(xlim = c(-2.75, 2.75)) + 
+    scale_x_continuous(expand = c(0, 0)) + 
+    geom_vline(xintercept = 0, lty = 3) + 
+    geom_text(data = simp_labs_tib, hjust = 0, vjust = 0.5, size = 2.5, 
+      aes(y = y, x = x, label = y), family = "Times") + 
+    stat_halfeye(slab_alpha = 0.5, pch = 21, point_fill = "white", 
+      slab_fill = viridis::viridis_pal(option = "B", begin = 0.25)(1), 
+      point_size = 1.5) + 
+    scale_y_discrete(limits = rev) + 
+    ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+    theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Accuracy by utterance type --------------------------------------------------
 
 learner_accuracy_by_utterance_type <- learner_response_01 %>% 
   as_tibble() %>% 
@@ -56,16 +112,22 @@ learner_accuracy_by_utterance_type <- learner_response_01 %>%
     stat_pointinterval(pch = 21, fill = "white", point_size = 2.2, 
       .width = c(0.95, 0.65)) +
     ggdist::scale_fill_ramp_discrete(range = c(1, 0.3), na.translate = F) +
-    labs(y = "P(correct)", x = NULL) + 
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
-    theme(legend.position = c(0.5, 0.1), legend.direction = "horizontal", 
-      legend.title = element_text(size = 8, color = "grey45"), 
+    scale_y_continuous(position = "right") + 
+    labs(y = "P(correct)", x = "Utterance type") + 
+    ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+    theme(axis.title.y = element_text(size = rel(.9), hjust = 0.05), 
+      axis.text.x = element_text(size = rel(0.9)), 
+      legend.position = c(0.5, 0.1), legend.direction = "horizontal", 
+      legend.title = element_text(size = 8.5, color = "grey45"), 
       legend.spacing.x = unit(0,"cm"), legend.background = element_blank(), 
       strip.background = element_rect(fill = NA)) + 
-    guides(fill_ramp = guide_legend(keywidth = 0.5, keyheight = 0.1, 
+    guides(fill_ramp = guide_legend(keywidth = 0.5, keyheight = 0.12, 
       default.unit = "inch", title.hjust = 0.5, reverse = T, 
       title = "of participant accuracy falls in this range",
       label.position = "bottom", title.position = "bottom")) 
+
+learner_accuracy_forest_utterance_type <- 
+  learner_accuracy_forest + learner_accuracy_by_utterance_type
 
 # -----------------------------------------------------------------------------
 
@@ -244,6 +306,15 @@ learner_accuracy_lt_eq_by_utterance_type <-
 
 # Lextale x Empathy interaction for questions ---------------------------------
 
+# Facet labels
+facet_replace_3way <- tibble(
+  is_correct = 0.95, 
+  lextale_std = -0.9, 
+  cond__ = c("Interrogative\ny/n", "Interrogative\nWh-"), 
+  labs = c("Interrogative y/n", "Interrogative Wh-")
+) %>% 
+  mutate(cond__ = fct_relevel(cond__, "Interrogative\ny/n"))
+
 # Set conditions for facetting
 conditions <- data.frame(
   q_type = setNames(c(1, -1), c("Interrogative\ny/n", "Interrogative\nWh-"))
@@ -277,6 +348,8 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
   scale_color_manual(
     name = "Empathy\nquotient", 
     values = alpha(viridis::viridis_pal(option = "B", end = 0.8)(3), 0.1)) + 
+  geom_text(inherit.aes = F, data = facet_replace_3way, hjust = 0, 
+    aes(x = lextale_std, y = is_correct, label = labs), family = "Times") + 
   labs(y = "P(correct)", x = "LexTALE score") + 
   ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
   theme(
@@ -287,7 +360,7 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
     legend.text.align = 0.5, 
     legend.title = element_text(size = 10, color = "grey45"), 
     legend.spacing.x = unit(0,"cm"), 
-    strip.background = element_rect(fill = NA)) + 
+    strip.background = element_blank(), strip.text = element_blank()) + 
   guides(color = guide_legend(keywidth = 0.5, keyheight = 0.1, 
       default.unit = "inch", title.hjust = 0.5, reverse = T, 
       title = "Empathy quotient",
@@ -322,14 +395,17 @@ ddm_bs_dr_estimates <- bind_rows(
     labs = fct_relevel(labs, "Intercept", "Question type", "LexTALE", "EQ", 
       "Question type x\nLexTALE", "Question type x\nEQ"))%>% 
   ggplot(., aes(x = estimate, y = labs, shape = effect)) + 
-    stat_halfeye(aes(fill = effect), point_fill = "white", point_size = 1.5, 
-       slab_alpha = 0.7, position = position_dodge(0.5)) +
+    scale_x_continuous(expand = c(0, 0)) + 
+    coord_cartesian(xlim = c(-0.25, 2.05)) + 
+    geom_vline(xintercept = 0, lty = 3) + 
+    stat_halfeye(aes(fill = effect), point_size = 1.5, stroke = 0.5, 
+      position = position_dodge(0.5), point_fill = "white") +
     scale_shape_manual(name = NULL, values = c(21, 24), 
       labels = c("Boundary shift", "Drift rate")) + 
-    scale_fill_viridis_d(name = NULL, option = "B", begin = 0.2, end = 0.8, 
+    scale_fill_viridis_d(name = NULL, option = "B", begin = 0.3, end = 0.75, 
       labels = c("Boundary shift", "Drift rate")) + 
     scale_y_discrete(limits = rev, position = "left") + 
-    labs(y = NULL, x = expression(beta)) + 
+    labs(y = NULL, x = "Estimate") + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
     theme(legend.position = c(0.8, 0.2), legend.background = element_blank())
 
@@ -346,7 +422,7 @@ my_skewed_x <- fGarch::rsnorm(100, mean = 2.5, sd = 1.5, xi = 3.5)
 # Correct response dist
 inset_top <- tibble(x = my_skewed_x) %>%
   ggplot(., aes(x = x)) + 
-    geom_density(fill = viridis::viridis_pal(option = "B", begin = 0.25)(1)) + 
+    geom_density(fill = viridis::viridis_pal(option = "B", begin = 0.3)(1)) + 
     theme_void()
 
 # Incorrect response dist
@@ -355,6 +431,11 @@ inset_bottom <- tibble(x = my_skewed_x) %>%
     geom_density(fill = viridis::viridis_pal(option = "B", begin = 0.75)(1)) + 
     scale_y_reverse() + 
     theme_void()
+
+threshold_labs <- tibble(
+  step = 80, value = c(1.4, -1.4), 
+  labs = c("Correct response", "Incorrect response")
+)
 
 # Main plot
 main_plot <- sim_ddm(q_type = "yn", eq = "low", lt = "low", seed = 20180119, 
@@ -383,9 +464,9 @@ main_plot <- sim_ddm(q_type = "yn", eq = "low", lt = "low", seed = 20180119,
     annotate("text", x = 32, y = 0.25, size = 5, label = expression(delta)) + 
     geom_segment(inherit.aes = F, aes(x = 30.5, y = 0.35, xend = 25, yend = 0.7), 
       arrow = arrow(length = unit(0.2, "cm"))) + 
-    annotate("text", x = 79, y = 1.4, size = 4, label = "Correct response", hjust = 0) + 
-    annotate("text", x = 79, y = -1.4, size = 4, label = "Incorrect response", hjust = 0) + 
-    scale_color_viridis_d(option = "B", begin = 0.25, end = 0.75) + 
+    geom_text(inherit.aes = F, data = threshold_labs, hjust = 0, 
+      aes(x = step, y = value, label = labs), family = "Times") + 
+    scale_color_viridis_d(option = "B", begin = 0.3, end = 0.75) + 
     theme_minimal(base_family = 'Times', base_size = 13) + 
     theme(panel.grid.major = element_line(size = 0.2),
           panel.grid.minor = element_blank(), 
@@ -519,19 +600,15 @@ sm_random_speaker_check <- learners %>%
 
 
 
-
-
-
-
 # Save plots ------------------------------------------------------------------
 
 devices     <- c('png', 'pdf')
 path_to_fig <- file.path(here("figs", "manuscript"))
 
 walk(devices, ~ ggsave(
-  filename = glue(path_to_fig, "/learner_accuracy_by_utterance_type.", .x), 
-  plot = learner_accuracy_by_utterance_type, 
-  device = .x, height = 4, width = 7, units = "in"))
+  filename = glue(path_to_fig, "/learner_accuracy_forest_utterance_type.", .x), 
+  plot = learner_accuracy_forest_utterance_type, 
+  device = .x, height = 4, width = 8.5, units = "in"))
 
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/learner_accuracy_rt_by_speaker_variety.", .x), 
@@ -541,11 +618,6 @@ walk(devices, ~ ggsave(
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/learner_accuracy_lt_eq_by_utterance_type.", .x), 
   plot = learner_accuracy_lt_eq_by_utterance_type, 
-  device = .x, height = 4, width = 7, units = "in"))
-
-walk(devices, ~ ggsave(
-  filename = glue(path_to_fig, "/learner_accuracy_3way.", .x), 
-  plot = learner_accuracy_3way, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(
