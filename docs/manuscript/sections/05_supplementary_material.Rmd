@@ -13,8 +13,10 @@
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-## Supplementary analyses
+## Learner accuracy
 
+This section contains tables reported but not included in the main text. 
+Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to Figure ???
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
 read_csv(here("tables", "learner_response_01.csv")) %>% 
@@ -28,7 +30,62 @@ read_csv(here("tables", "learner_response_01.csv")) %>%
 ```
 
 
+Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure X in the main document. 
 
+```{r, 'table-ddm-bs-dr'}
+read_csv(here("tables", "ddm_bs_dr.csv")) %>% 
+  mutate(Model = case_when(
+    Model == "Boundary separation" & Parameter == "Intercept" ~ "Boundary", 
+    Model == "Boundary separation" & Parameter == "Question type" ~ "separation", 
+    Model == "Boundary separation" & !(Parameter %in% c("Intercept", "Question type")) ~ " ", 
+    Model == "Drift rate" & Parameter == "Intercept" ~ "Drift rate", 
+    Model == "Drift rate" & Parameter != "Intercept" ~ " ", 
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 5)), 
+    caption = "Summary of the posterior distribution modeling 
+    boundary separation and drift rate as a function of question type, 
+    LexTALE, and Empathy quotient. The table includes posterior medians, 
+    the 95% HDI, the percentage of the HDI within the ROPE, and the maximum 
+    probability of effect (MPE).",
+    label = "table-ddm-bs-dr")
+```
+
+
+
+
+
+## Supplementary analyses
+
+In this section we present supplementary analyses, all of which are exploratory in nature. 
+*D'*. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
+One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
+
+(ref:plot-learner-dp-utterance-variety) Exploratory analysis of d' as a function of utterance type and speaker variety. Points represent posterior medians &pm;66% and 95% credible intervals.
+
+```{r, 'plot-learner-dp-utterance-variety', fig.cap="(ref:plot-learner-dp-utterance-variety)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_dp_utterance_variety.pdf")
+  )
+```
+
+
+```{r, 'table-dp-utterance-variety'}
+read_csv(here("tables", "dp_utterance_variety.csv")) %>% 
+  mutate(Model = case_when(
+    Model == "Utterance type" & Parameter == "Declarative broad focus" ~ "Utterance type", 
+    Model == "Utterance type" & Parameter != "Declarative broad focus" ~ " ", 
+    Model == "Variety" & Parameter == "Andalusian" ~ "Variety", 
+    Model == "Variety" & Parameter != "Andalusian" ~ " " 
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 3)), 
+    caption = "Summary of the posterior distribution modeling 
+    d' as a function of question type or speaker variety. The table 
+    includes posterior medians, the 95% HDI, and the maximum 
+    probability of effect (MPE).",
+    label = "table-dp-utterance-variety")
+```
+
+*Randomization check across participants*. 
 
 This is Figure \@ref(fig:plot-sm-random-speaker-check)
 
@@ -40,7 +97,7 @@ knitr::include_graphics(
   )
 ```
 
-This is Figure \@ref(fig:plot-sm-random-speech-rate)
+*Speech rate*. This is Figure \@ref(fig:plot-sm-random-speech-rate)
 
 (ref:plot-sm-random-speech-rate) Make sure each variety represented equally over course of experiment.
 

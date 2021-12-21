@@ -1,0 +1,17 @@
+Model,Parameter,Median,HDI,% in ROPE,MPE,ESS
+Boundary separation,Intercept,1.92,"[1.83, 2.00]",0.00,1.00,616
+Boundary separation,Question type,&minus;0.14,"[&minus;0.19, &minus;0.09]",0.00,1.00,1973
+Boundary separation,LexTALE,0.20,"[0.08, 0.31]",0.01,1.00,1011
+Boundary separation,EQ,0.09,"[0.01, 0.17]",0.44,0.98,842
+Boundary separation,Question type:LexTALE,&minus;0.11,"[&minus;0.19, &minus;0.03]",0.27,1.00,2953
+Boundary separation,Question type:EQ,&minus;0.06,"[&minus;0.11, 0.00]",0.85,0.98,2083
+Boundary separation,LexTALE:EQ,0.15,"[0.04, 0.28]",0.10,0.99,1940
+Boundary separation,Question type:LexTALE:EQ,&minus;0.08,"[&minus;0.17, 0.01]",0.51,0.97,2625
+Drift rate,Intercept,1.24,"[1.21, 1.27]",0.00,1.00,1290
+Drift rate,Question type,0.08,"[0.06, 0.10]",0.00,1.00,3040
+Drift rate,LexTALE,0.02,"[&minus;0.01, 0.06]",0.69,0.89,1676
+Drift rate,EQ,&minus;0.01,"[&minus;0.04, 0.03]",0.95,0.61,1630
+Drift rate,Question type:LexTALE,0.01,"[&minus;0.02, 0.05]",0.86,0.77,2565
+Drift rate,Question type:EQ,0.00,"[&minus;0.02, 0.02]",1.00,0.55,3075
+Drift rate,LexTALE:EQ,&minus;0.06,"[&minus;0.10, &minus;0.02]",0.08,0.99,1950
+Drift rate,Question type:LexTALE:EQ,0.01,"[&minus;0.03, 0.05]",0.90,0.65,2741
