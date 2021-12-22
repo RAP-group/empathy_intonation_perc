@@ -1,4 +1,7 @@
-# Models ----------------------------------------------------------------------
+# Bayesian regression models --------------------------------------------------
+#
+# Author: Joseph V. Casillas
+# Last update: 20211221
 #
 # - In this script we fit all of the Bayesian regression models for the learner 
 #   accuracy data

@@ -1,5 +1,8 @@
 # Small data ------------------------------------------------------------------
 #
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
 # - script to be loaded in main.Rmd
 # - used for reporting "smaller" descriptives (such as N, means, etc.)
 # - tables and model summaries are also loaded here for in-prose reporting

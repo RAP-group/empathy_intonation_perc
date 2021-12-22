@@ -1,8 +1,12 @@
 # Load all data ---------------------------------------------------------------
 #
-# This script sources libraries and helpers and loads all tidy data
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
+# - This script sources libraries and helpers and loads all tidy data
 #
 # -----------------------------------------------------------------------------
+
 
 
 
@@ -11,6 +15,7 @@
 source(here::here("scripts", "r", "01_helpers.R"))
 
 # -----------------------------------------------------------------------------
+
 
 
 

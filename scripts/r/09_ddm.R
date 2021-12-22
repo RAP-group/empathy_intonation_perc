@@ -1,6 +1,13 @@
 # DDM ------------------------------------------------------------------------
 #
-# This script sources libraries and helpers and loads all tidy data
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
+# - This script does the following: 
+#   - Fits a DDM model to each participant
+#   - Fits a linear regression model to the boundary separation and 
+#     drift rate data
+#   - Runs simulations based on the DDM parameters
 #
 # -----------------------------------------------------------------------------
 

@@ -1,14 +1,17 @@
 # Tidy empathy quotient data --------------------------------------------------
 #
-# Get empathy quotient data from exp directory by loading all .csv's
-# Filter for empathy block and score according to the following criteria: 
-# - 'agree' scoring items (is_agree_score == 1)
-#    - “strongly agree” responses scored 2 points 
-#    - “slightly agree” responses scored 1 point 
-# - 'disagree' scoring items (is_disagree_score == 1)
-#    - “strongly disagree” responses scored 2 points
-#    - “slightly disagree” responses scored 1 point
-# - All other responses scored as 0
+# Author: Joseph V. Casillas
+# Last update: 20211221
+# 
+# - Get empathy quotient data from exp directory by loading all .csv's
+# - Filter for empathy block and score according to the following criteria: 
+#   - 'agree' scoring items (is_agree_score == 1)
+#     - “strongly agree” responses scored 2 points 
+#     - “slightly agree” responses scored 1 point 
+#   - 'disagree' scoring items (is_disagree_score == 1)
+#     - “strongly disagree” responses scored 2 points
+#     - “slightly disagree” responses scored 1 point
+#   - All other responses scored as 0
 #
 # -----------------------------------------------------------------------------
 

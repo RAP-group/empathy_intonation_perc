@@ -1,8 +1,11 @@
 # Tidy 2afc data --------------------------------------------------------------
 #
-# Get 2afc data from exp directory by loading all .csv's
-# Select relevant rows and Filter for 2afc block
-# Correct columns names and combine monolingual and L2 data
+# Author: Joseph V. Casillas
+# Last update: 20211221
+# 
+# - Get 2afc data from exp directory by loading all .csv's
+# - Select relevant rows and Filter for 2afc block
+# - Correct columns names and combine monolingual and L2 data
 #
 # -----------------------------------------------------------------------------
 

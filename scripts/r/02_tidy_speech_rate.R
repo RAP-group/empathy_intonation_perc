@@ -1,10 +1,22 @@
-# -
+# Tidy speech rate data -------------------------------------------------------
+#
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
+# - This script will tidy the speech rate data of the 2AFC stimuli
+#
+# -----------------------------------------------------------------------------
+
+
+
 
 # Source libs  and helpers ----------------------------------------------------
 
 source(here::here("scripts", "r","01_helpers.R"))
 
 # -----------------------------------------------------------------------------
+
+
 
 
 # Load Speech rate data -------------------------------------------------------

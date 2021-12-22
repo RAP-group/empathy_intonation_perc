@@ -1,7 +1,7 @@
 # Plots -----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211218
+# Last update: 20211221
 #
 # - All plots presented in slides and manuscripts are generated from this file
 #   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.

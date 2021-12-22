@@ -1,7 +1,10 @@
 # Project details -------------------------------------------------------------
 #
+# Author: Joseph V. Casillas
+# Last update: 20211221
 #
-#
+# - This scripts provides a Gantt chart of the project timeline
+#   and a CREDiT contributors plot
 #
 # -----------------------------------------------------------------------------
 
