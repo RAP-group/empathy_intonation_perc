@@ -582,18 +582,19 @@ sm_random_speaker_check <- learners %>%
   ungroup() %>% 
   mutate(prop = n / 8, 
          speaker_variety = tools::toTitleCase(speaker_variety)) %>% 
-  ggplot(., aes(x = speaker_variety, y = n)) + 
+  ggplot(., aes(x = speaker_variety, y = n, fill = speaker_variety)) + 
     geom_hline(yintercept = 8, lty = 3, color = "black") + 
-    geom_violin(alpha = 0.3) + 
     stat_summary(fun.data = mean_sdl, geom = "pointrange", pch = 21, 
-      color = "black", fill = "white", size = 1, fun.args = list(mult = 1)) + 
-    coord_cartesian(ylim = c(-5, 20))  + 
-    labs(y = "Mean", x = "Speaker variety", 
+      color = "black", size = 1, fun.args = list(mult = 1), 
+      show.legend = F) + 
+    scale_fill_viridis_d(option = "B", begin = 0.3) + 
+    scale_y_continuous(breaks = seq(0, 20, 4)) + 
+    coord_cartesian(ylim = c(0, 20))  + 
+    labs(y = "Avg. tokens", x = "Speaker variety", 
       title = "Average stimuli tokens from each variety.", 
-      subtitle = glue("(n = {n_learners})"), 
-      caption = "Mean +/- SD") + 
-    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") + 
-    NULL
+      subtitle = glue("(n participants = {length(unique(learners$participant))}, n trials = {nrow(learners)})"), 
+      caption = "Mean ±1SD") + 
+    ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times")
 
 # -----------------------------------------------------------------------------
 

@@ -2,11 +2,17 @@
 
 ## Drift diffusion models
 
-
-
-
-
-
+Drift Diffusion Models (DDM), also referred to as Wiener Diffusion Models and Decision Diffusion Models, represent our preferred method for analyzing the data from our 2AFC task. 
+DDMs are rarely used in SLA research, though they are commonplace in psychology. 
+The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
+Together these parameters give rich information about the processes believed to underpin decision making. 
+Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
+In traditional 2AFC tasks in linguistics, particularly in psycholinguistics, data of this nature are often analyzed using separate models, one for responses, and another for response times. 
+Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known. 
+As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
+The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulation purposes. 
+For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
+We then summarize and report these posterior distributions for statistical inferences. 
 
 
 ```{=openxml}
@@ -16,7 +22,7 @@
 ## Learner accuracy
 
 This section contains tables reported but not included in the main text. 
-Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to Figure ???
+Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type). 
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
 read_csv(here("tables", "learner_response_01.csv")) %>% 
@@ -30,7 +36,7 @@ read_csv(here("tables", "learner_response_01.csv")) %>%
 ```
 
 
-Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure X in the main document. 
+Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-ddm-bs-dr-estimates) in the main document. 
 
 ```{r, 'table-ddm-bs-dr'}
 read_csv(here("tables", "ddm_bs_dr.csv")) %>% 
@@ -57,8 +63,13 @@ read_csv(here("tables", "ddm_bs_dr.csv")) %>%
 ## Supplementary analyses
 
 In this section we present supplementary analyses, all of which are exploratory in nature. 
-*D'*. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
+
+**D'**. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
 One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
+The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that their accuracy. 
+That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative y/n) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
+Learner sensitivity to the different Spanish varieties represented in the stimuli pattern in the same manner, i.e., more sensitivity to the Peninsular variety and less sensitivity to the Cuban variety (right panel of Figure \@ref(fig:plot-learner-dp-utterance-variety)).
+Table \@ref(tab:table-dp-utterance-variety) summarizes the posterior of these exploratory analyses. 
 
 (ref:plot-learner-dp-utterance-variety) Exploratory analysis of d' as a function of utterance type and speaker variety. Points represent posterior medians &pm;66% and 95% credible intervals.
 
@@ -85,9 +96,10 @@ read_csv(here("tables", "dp_utterance_variety.csv")) %>%
     label = "table-dp-utterance-variety")
 ```
 
-*Randomization check across participants*. 
-
-This is Figure \@ref(fig:plot-sm-random-speaker-check)
+**Randomization check across participants**. For the purposes of our research questions, it was important that every participant be presented with stimuli from all of the Spanish varieties to which we had access. 
+Recall that the 2AFC task contained 64 items, 16 of each utterance type. Using javascript we assigned each variety an equal probability of being selected in a given trial (0.125). 
+To ensure that our randomization worked as planned (i.e., with each variety represented approximately equally across all trials and all participants), we calculated the average number of times each variety was presented in the data set (n = `r n_learners`, and `r nrow(learners)` trials). 
+One can observe in Figure \@ref(fig:plot-sm-random-speaker-check) that this is indeed the case. 
 
 (ref:plot-sm-random-speaker-check) Make sure each variety represented equally over course of experiment.
 
