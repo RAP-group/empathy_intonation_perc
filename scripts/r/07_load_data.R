@@ -59,7 +59,6 @@ all_mods <- load_models(path = here("models"), obj_type = "rds")
 
 # Load posteriors -------------------------------------------------------------
 
-ddm_summarized_posterior <- 
-  read_csv(here("data", "tidy", "ddm_summarized_posterior.csv"))
+ddm_estimates <- read_csv(here("data", "tidy", "ddm_estimates.csv"))
 
 # -----------------------------------------------------------------------------

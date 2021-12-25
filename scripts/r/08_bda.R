@@ -1,13 +1,14 @@
 # Bayesian regression models --------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211221
+# Last update: 20211225
 #
 # - In this script we fit all of the Bayesian regression models for the learner 
 #   accuracy data
 # - There are exploratory analyses of the monolingual Spanish speakers as well
 #
 # -----------------------------------------------------------------------------
+
 
 
 
@@ -50,21 +51,6 @@ learner_response_01 <- brm(
   file = here("models", "learner_response_01")
 )
 
-# Model of questions vs statements
-learner_response_q_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + is_question * lextale_std * eq_std + 
-    (1 + is_question | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10, is_question %in% c(-1, 1)),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  file = here("models", "learner_response_q_01")
-)
-
 # Model of yes/no vs. wh questions
 learner_response_qonly_01 <- brm(
   formula = is_correct ~ 0 + Intercept + q_type * lextale_std * eq_std + 
@@ -79,24 +65,6 @@ learner_response_qonly_01 <- brm(
   control = list(adapt_delta = 0.99, max_treedepth = 20), 
   file = here("models", "learner_response_qonly_01")
 )
-
-# Subset to just y/n questions
-learner_response_yn_01 <- brm(
-  formula = is_correct ~ 0 + Intercept + lextale_std * eq_std + 
-    (1 | participant) + 
-    (1 + lextale_std * eq_std | speaker_variety) + 
-    (1 | item), 
-  data = learners %>% filter(rt_adj < 10, sentence_type == "interrogative-total-yn"),
-  prior = l2_response_priors, 
-  warmup = 2000, iter = 4000, chains = 4, 
-  family = "bernoulli", 
-  cores = 4, 
-  control = list(adapt_delta = 0.99, max_treedepth = 20), 
-  backend = "cmdstanr", 
-  file = here("models", "learner_response_yn_01")
-)
-
-
 
 #
 # RT analysis
@@ -128,7 +96,6 @@ learner_rt_01 <- brm(
   control = list(adapt_delta = 0.99, max_treedepth = 15), 
   file = here("models", "learner_rt_01")
 )
-
 
 # -----------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 # Plots -----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211221
+# Last update: 20211225
 #
 # - All plots presented in slides and manuscripts are generated from this file
 #   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.
@@ -375,11 +375,11 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
 # DDM Boundary separation and drift rate --------------------------------------
 
 ddm_bs_dr_estimates <- bind_rows(
-  as_draws_df(ddm_drift_rate) %>% 
+  as_tibble(mem_drift_rate) %>% 
     select(starts_with("b_")) %>% 
     pivot_longer(everything(), names_to = "params", values_to = "estimate") %>% 
     mutate(effect = "dr"),
-  as_draws_df(ddm_boundary_separation) %>% 
+  as_tibble(mem_boundary_separation) %>% 
     select(starts_with("b_")) %>% 
     pivot_longer(everything(), names_to = "params", values_to = "estimate") %>% 
     mutate(effect = "bs")) %>% 
@@ -488,7 +488,7 @@ ddm_explanation <- main_plot + annotation_custom(
 # DDM simulations -------------------------------------------------------------
 
 ddm_yn <- ddm_sims %>% 
-  filter(q_type == "yn", step < 20) %>% 
+  filter(q_type == "yn") %>% 
   ggplot(., aes(x = step, y = value)) + 
     facet_wrap(~ facet_lab) + 
     scale_y_continuous(breaks = seq(-1.5, 1.5, 1), 

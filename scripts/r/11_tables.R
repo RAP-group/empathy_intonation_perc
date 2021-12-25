@@ -1,7 +1,7 @@
 # Tables ----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211220
+# Last update: 20211225
 #
 # - This script loads all models and generates summary tables
 # - Tables are save as CSV files (tables/) and can be referenced
@@ -20,8 +20,8 @@ learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
 learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
 learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
-ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
-ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
+mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds"))
+mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
 learner_dp_01 <- readRDS(here("models", "learner_dp_01.rds"))
 
 # -----------------------------------------------------------------------------
@@ -67,13 +67,13 @@ describe_posterior(learner_response_01, rope_range = c(-0.1, 0.1)) %>%
 # Boundary separation and drift rate ------------------------------------------
 
 bind_rows(
-  describe_posterior(ddm_boundary_separation) %>% 
+  describe_posterior(mem_boundary_separation, test = c("p_direction")) %>% 
     as_tibble() %>% 
-    select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high", "Rhat")) %>% 
+    select(-CI) %>% 
     mutate(Model = "Boundary separation"), 
-  describe_posterior(ddm_drift_rate) %>% 
+  describe_posterior(mem_drift_rate, test = c("p_direction")) %>% 
     as_tibble() %>% 
-    select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high", "Rhat")) %>% 
+    select(-CI) %>% 
     mutate(Model = "Drift rate")
   ) %>% 
   mutate(Parameter = case_when(
@@ -90,7 +90,7 @@ bind_rows(
   mutate(ESS = round(ESS)) %>% 
   mutate(across(-c("Parameter", "ESS", "Model"), printy::fmt_minus_sign)) %>% 
   mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
-  select(Model, Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd, ESS) %>% 
+  select(Model, Parameter, Median, HDI, MPE = pd, Rhat, ESS) %>% 
   write_csv(here("tables", "ddm_bs_dr.csv"))
 
 # -----------------------------------------------------------------------------

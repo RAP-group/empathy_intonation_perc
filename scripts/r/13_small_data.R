@@ -101,6 +101,10 @@ lt_eq_descriptives <- read_csv(here("tables", "lextale_empathy_descriptives.csv"
 
 # RT stuff --------------------------------------------------------------------
 
+#
+# This is the justification for using adjusted RTs
+#
+
 # N trials in which RT > 10
 n_rt_10_plus <- learners %>% filter(rt_adj > 10) %>% nrow
 
