@@ -25,7 +25,7 @@ This section contains tables reported but not included in the main text.
 Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type). 
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
-read_csv(here("tables", "learner_response_01.csv")) %>% 
+read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = "c")) %>% 
   knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
     caption = "Summary of the posterior distribution modeling 
     response accuracy as a function of utterance type, LexTALE, and 
@@ -39,7 +39,7 @@ read_csv(here("tables", "learner_response_01.csv")) %>%
 Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-ddm-bs-dr-estimates) in the main document. 
 
 ```{r, 'table-ddm-bs-dr'}
-read_csv(here("tables", "ddm_bs_dr.csv")) %>% 
+read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
   mutate(Model = case_when(
     Model == "Boundary separation" & Parameter == "Intercept" ~ "Boundary", 
     Model == "Boundary separation" & Parameter == "Question type" ~ "separation", 
@@ -81,7 +81,7 @@ knitr::include_graphics(
 
 
 ```{r, 'table-dp-utterance-variety'}
-read_csv(here("tables", "dp_utterance_variety.csv")) %>% 
+read_csv(here("tables", "dp_utterance_variety.csv"), col_types = cols(.default = "c")) %>% 
   mutate(Model = case_when(
     Model == "Utterance type" & Parameter == "Declarative broad focus" ~ "Utterance type", 
     Model == "Utterance type" & Parameter != "Declarative broad focus" ~ " ", 
