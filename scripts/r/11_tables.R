@@ -17,9 +17,7 @@
 source(here::here("scripts", "r", "07_load_data.R"))
 
 learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
-learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
 learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
-learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
 mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds"))
 mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
 learner_dp_01 <- readRDS(here("models", "learner_dp_01.rds"))
@@ -33,7 +31,7 @@ learner_dp_01 <- readRDS(here("models", "learner_dp_01.rds"))
 
 describe_posterior(learner_response_01, rope_range = c(-0.1, 0.1)) %>% 
   as_tibble() %>% 
-  select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high", "Rhat")) %>% 
+  select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high")) %>% 
   mutate(Parameter = case_when(
     Parameter == "b_Intercept" ~ "Intercept", 
     Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Int. wh-", 
@@ -56,7 +54,7 @@ describe_posterior(learner_response_01, rope_range = c(-0.1, 0.1)) %>%
   mutate(ESS = round(ESS)) %>% 
   mutate(across(-Parameter, printy::fmt_minus_sign)) %>% 
   mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
-  select(Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd, ESS) %>% 
+  select(Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd, Rhat, ESS) %>% 
   write_csv(here("tables", "learner_response_01.csv"))
 
 # -----------------------------------------------------------------------------

@@ -169,7 +169,7 @@ ddm_estimates <- load_models(path = here("models", "ddm"), "rds") %>%
 
 # Model formula
 ddm_mem_formula <- bf(
-  estimate | se(se) ~ 1 + q_sum * lextale_std * eq_std + 
+  estimate | resp_se(se, sigma = TRUE) ~ 1 + q_sum * lextale_std * eq_std + 
     (1 + q_sum * lextale_std * eq_std | participant)
   )
 
@@ -183,6 +183,7 @@ dr_priors <- c(
   prior(normal(1, 0.5), class = "Intercept"), 
   prior(normal(0, 0.3), class = "b"), 
   prior(cauchy(0, 0.3), class = "sd"), 
+  prior(cauchy(0, 0.1), class = "sigma"), 
   prior(lkj(2), class = "cor")
 )
 
@@ -191,6 +192,7 @@ bs_priors <- c(
   prior(normal(2, 0.5), class = "Intercept"), 
   prior(normal(0, 0.5), class = "b"), 
   prior(cauchy(0, 0.3), class = "sd"), 
+  prior(cauchy(0, 0.1), class = "sigma"), 
   prior(lkj(2), class = "cor")
 )
 
@@ -199,7 +201,7 @@ mem_drift_rate <- brm(
   formula = ddm_mem_formula, 
   prior = dr_priors, 
   family = gaussian(), 
-  cores = 4, chains = 4, 
+  cores = 4, chains = 4, iter = 12000, warmup = 2000, thin = 10, 
   control = list(max_treedepth = 15, adapt_delta = 0.99), 
   backend = "cmdstanr", 
   data = filter(ddm_estimates, effect == "drift_rate"), 
@@ -211,7 +213,7 @@ mem_boundary_separation <- brm(
   formula = ddm_mem_formula, 
   prior = bs_priors, 
   family = gaussian(), 
-  cores = 4, chains = 4, 
+  cores = 4, chains = 4, iter = 12000, warmup = 2000, thin = 10, 
   control = list(max_treedepth = 15, adapt_delta = 0.99), 
   backend = "cmdstanr", 
   data = filter(ddm_estimates, effect == "boundary_separation"), 
@@ -243,17 +245,19 @@ mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds")
 mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
 
 # Create new data to predict
+# se = 0.388
 bs_new_dat <- expand_grid(
   q_sum = c(-1, 1), 
   lextale_std = c(-1, 1), 
   eq_std = c(-1, 1)) %>% 
-  mutate(participant = "pop", se = 0.388)
+  mutate(participant = "pop")
 
+# se = 0.089
 dr_new_dat <- expand_grid(
   q_sum = c(-1, 1), 
   lextale_std = c(-1, 1), 
   eq_std = c(-1, 1)) %>% 
-  mutate(participant = "pop", se = 0.089)
+  mutate(participant = "pop")
 
 # Get predictions, store in list
 dr_bs_est <- bind_rows(
