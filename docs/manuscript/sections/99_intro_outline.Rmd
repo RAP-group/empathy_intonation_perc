@@ -4,6 +4,9 @@ chen2013empathy
 - proposes that understanding who we are culturally is the first step to becoming empathetic towards other cultures. 
 - The second step is to realize the differences between one's own culture and foreign cultures. 
 
+
+
+
 guiora_1968
 
 - first to hypothesize that the capacity for empathy contributes to the mastery of the pronunciation of a second language
@@ -13,12 +16,33 @@ guiora_1968
 - Small sample size (n = 10, n = 30), does not present results (this is a report about a presentation)
 
 
+
+
 guiora1972empathy
 
-- Empathy linked to L2 pronunciation
-- Learners of Japanese w/ higher empathy (measured as seeing more changes in facial expressions in film clip) sounded more authentically Japanese than individuals with lower empathy (later failed to replicate. see taylor1971psychological)
+- Empathy linked to L2 pronunciation (series of studies we investigated the hypothesis that empathy plays a significant role in the ability to authentically pronounce a second language.)
+- 411 Learners of Japanese, Chinese-Mandarin, Thai, Spanish and Russian from Defense Language Institute 
+- Given battery of tests to measure empathy (TAT, PPT, LET, MME)
+- Low overall correlation, split data by language
+- found positive correlation between MME and pronunciation authenticity for some languages 
+- higher empathy measured as seeing more changes in facial expressions in film clip (later failed to replicate. see taylor1971psychological)
 
 About this research: cognitive aspects of language talent: "empathy in speaker and learning a foreign accent is perhaps not a myth, but a must to be further elucidated" p 73
+
+More tidbits: 
+
+the earliest attempts to measure empathy: 
+  Dymond (1948) (score TAT responses, Thematic Apperception Test)
+  Dymond, Hughes, & Raabe (1952)
+  Feffer (1959)
+  Mahoney (1960)
+Approaches from clinical research (motivation for Guiora's MME technique): 
+  Wallach and Strupp (1960)
+  Truax (1963)
+  Haggard and Isaacs (1966)
+
+
+
 
 guiora1972effects
 
@@ -27,17 +51,25 @@ guiora1972effects
 - 87 students, half given alcohol
 - Study touted as evidence that empathy affects L2 pronunciation, but didn't measure empathy directly
 
-guiora1979personality
-
-liu2017
 
 
 brown1973affective
+
+- 
+
+
+
+
+guiora1979personality
+
+
+
 
 HU2013366
 
 rota2009cognitive
 
+liu2017
 
 gholamrezapour2019empathy
 
