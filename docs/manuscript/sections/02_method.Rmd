@@ -6,12 +6,12 @@
 Participants were recruited using the Prolific.ac online experimental platform and were compensated at a rate of $9.52 per hour for their time. 
 We estimated the task would take approximately 15 minutes to complete, thus each participant was paid $2.70 for completing all three tasks.
 The mean time to completion was approximately `r round(t_mean)` minutes. 
-The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the US with no knowledge of any languages other than English or Spanish.
+The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the Northeastern US with no knowledge of any languages other than English or Spanish.
 They reported no hearing difficulties and were required to use headphones on a desktop computer. 
 Upon beginning the experiment, all participants responded to the following screening questions: 
 1) What part of the US are you from?
 2) At what age did you begin learning Spanish?
-3) Are you proficient in any languages other than English/Spanish?. 
+3) Are you proficient in any languages other than English/Spanish? 
 Additionally, participants responded to the prompt "I am most familiar with Spanish from..." and using a pull-down window they selected a variety of Spanish or "I am not familiar with any variety of Spanish". 
 We excluded data from any participant that responded that they were not from the US Northeast, that they began learning Spanish before the age of 13, or that they were proficient in a language other than English/Spanish.
 Participants responding categorically across all trials were also excluded.
@@ -20,30 +20,30 @@ All participants with knowledge of Spanish were adult L2 learners, operationally
 
 ## Tasks
 
-The study consisted of three tasks: a two-alternative forced choice task (2AFC), a lexical decision vocabulary assessment, and a lykert-type questionnaire to assess empathy. 
+The study consisted of three tasks: a 2AFC task, a lexical decision vocabulary assessment, and a lykert-type questionnaire to assess empathy. 
 The tasks were programmed in Python using Pyschopy3 [@Peirce:2019] and presented online via Pavlovia. 
 All code and materials used to generate the tasks are freely available on the Open Science Framework (https://osf.io/dh4zp/?view_only=162d6d13e5814417bcb9de349f18cb62). 
 
 **2AFC**. In the 2AFC task participants were presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
 Their task was to determine, as quickly and as accurately as possible, if the utterance they heard was a question or a statement. 
 Specifically, they responded to an on-screen prompt asking "Is this a question?" using the keyboard. 
-To respond participants typed '1' for "yes" (i.e., "yes, this is a question") and '0' for 'no' (i.e., "no, this is not a question"). 
+To respond participants typed '1' for 'yes' (i.e., "yes, this is a question") and '0' for 'no' (i.e., "no, this is not a question"). 
 
-The auditory stimuli consisted of 64 critical items, 16 of each sentence type. 
+The auditory stimuli consisted of 64 critical items, 16 of each utterance type. 
 To generate the stimuli, we recorded native Spanish speakers of eight different varieties (Cuban, standard Peninsular, Andalusian, Puerto Rican, Chilean, Argentinean, Mexican, and Peruvian). 
 The eight native speakers all produced the same 64 critical items. 
 All utterances were segmented using Praat [@praat] and normalized for peak intensity. 
 The 2AFC task included 64 trials in which the stimuli presented were randomized across speaker variety. 
-Each variety had the same probability of being selected on a given trial, such that, on average, a given participant heard each variety approximately eight times.^[See online supplementary materials for more information.]
-Prior to pre-registering our research questions and hypotheses we piloted the 2AFC experiment on 100 native Spanish speakers to assure the quality of the items and assess the difficulty of the task. 
+Each variety had the same probability of being selected on a given trial, such that, on average, a given participant heard each variety approximately eight times (See online supplementary materials for more information).
+Prior to pre-registering our research questions and hypotheses we piloted the 2AFC experiment on 100 monolingual Spanish speakers to assure the quality of the items and assess the difficulty of the task. 
 We did not come across any issues.
 
 **LexTALE**. To assess Spanish proficiency we administered the Lexical Test for Advanced Learners of Spanish (LexTALE-ESP, henceforth LexTALE) [@izura2014lextale; @lemhofer2012introducing]. 
-The LexTALE is a lexical decision experiment used provide a standardized assessment of proficiency/vocabulary size in Spanish. 
-In this task participants are presented words on the computer screen and must decide if it is real or not using the keyboard ('1' for real, '0' for fake). 
+The LexTALE is a lexical decision experiment used to provide a standardized assessment of proficiency/vocabulary size in Spanish. 
+In this task participants see a series of words on the computer screen and must decide if they are real or fake using the keyboard ('1' for real, '0' for fake). 
 LexTALE scores can range from &minus;20 to 60. 
 Monolingual Spanish speakers generally score above 50. 
-Scores from individuals with little or no knowledge of Spanish typically fall in the range of &minus;20 to 0. 
+Scores from individuals with little or no knowledge of Spanish tend to be negative. 
 Adult learners with low to medium proficiency can range from 0 to 25, and advanced learners generally score above 25. 
 We conceive of proficiency as a continuous variable, thus we consider a monolingual English speaker to have little to no proficiency in Spanish (i.e., a negative value on the LexTALE). 
 In our data set participant scores ranged from `r learners$lextale_tra %>% min %>% unicode_minus` to `r learners$lextale_tra %>% max`, suggesting all proficiency levels were likely represented in the sample. 
@@ -57,7 +57,8 @@ In order to avoid response bias, choices indicating empathic responses are coded
 The target items are scored with 2 or 1 points based on if the participant responds "strongly" or "slightly". 
 Finally, the EQ is scored by summing the total points to produce a single value indicating an individual's level of empathy. 
 Thus the minimum possible value is 0 (low empathy) and the maximum is 80 (high empathy). 
-In our data set the average empathy quotient was `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg)` (Range: [`r learners$eq_score %>% min`, `r learners$eq_score %>% max`], 95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg_hdi)`, SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd)`, 95% CrI of SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd_hdi)`).
+In our data set the average empathy quotient was `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg)` (Range: [`r learners$eq_score %>% min`, `r learners$eq_score %>% max`], 95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg_hdi)`, SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd)`, 95% CrI of SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd_hdi)`). 
+The empathy quotient in its entirety is available in the supplementary materials. 
 
 
 ## Procedure
@@ -70,43 +71,46 @@ Based on this assumption, we estimated that we would need 94 participants to hav
 Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature and thus we did not base our sample size estimate on any parameter estimates related to this effect. 
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
-We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, participants with knowledge of language other and English and Spanish. 
+We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of language other and English and Spanish. 
 Data from a total of `r n_returned` participants was discarded because the experimental session timed out and/or data was incomplete. 
 An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
 A total of `r n_learners` participants met the criteria for inclusion. 
 
 ## Statistical analyses
 
-We report two primary statistical analyses that were pre-registered prior to collecting the learner data. 
+We report three primary statistical analyses that were pre-registered prior to collecting the learner data: response accuracy, response times, and drift diffusion models. 
+All additional analyses are exploratory in nature and explicitly described as such. 
 First, we analyzed response accuracy using Bayesian multilevel logistic regression. 
 The model considered response accuracy for the population effects *utterance type* (declarative broad focus, declarative narrow focus, interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
 The likelihood of the model was Bernoulli distributed with a logit link function. 
-The criterion, *response*, was coded as "1" for correct responses and "0" for incorrect responses. 
+The criterion, *response*, was coded as '1' for correct responses and '0' for incorrect responses. 
 Thus, the first analysis modeled the probability of responding correctly to the prompt "Is this a question?". 
 We specified group-level effects for participants, speaker variety, and items.
 The slope for *utterance type* varied for the participant effect, as did the *LexTALE* by *empathy quotient* interaction for the speaker variety effect. 
 All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represented the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
-The second analysis utilized Bayesian drift diffusion modeling [DDM, @ratcliff2008diffusion]. 
-This approach to analyzing behavioral data models decision-making using a random-walk decision process.
+The same model was fit to the response time data with the exception of the model likelihood, which was assumed to be distributed as lognormal. 
+We also fit an additional exploratory model with the same population- and grouping-effects structure using d' (d prime) as the outcome variable. 
+
+The third analysis utilized Bayesian drift diffusion modeling [DDM, @ratcliff2008diffusion]. 
+This approach to analyzing behavioral data models decision-making as a random-walk decision process.
 DDMs can simultaneously take into account responses and response times in two-choice tasks in a single model, thus they are particularly beneficial when analyzing tasks in which speed-accuracy tradeoffs may be present. 
-We estimate the parameters off the DDM using a Bayesian methods and subsequently do regression on the posterior samples of the resulting parameters. 
+We estimate the parameters off the DDM using a Bayesian methods and subsequently fit measurement error models on the posterior estimates of the resulting parameters. 
 
 A DDM estimates four parameters: boundary separation, bias, drift rate and non-decision time. 
 Boundary separation, &alpha;, quantifies the amount of information necessary to make a decision. 
 The boundaries represent the thresholds for the two alternatives in the task, which, in our case, implies correct and incorrect responses. 
 Bias, &beta;, gives an indication of a preference for one of the choices at the beginning of the decision making process. 
-A bias positive value indicates a preference for the upper boundary, whereas a negative bias is an indicator of a preference for the lower boundary. 
+A positive bias value indicates a preference for the upper boundary, whereas a negative bias is an indicator of a preference for the lower boundary. 
 The drift rate, &delta;, provides an assessment of the rate at which information is accumulated. 
 A higher &delta; implies a random walk that arrives at one of the thresholds faster and is interpreted as indication that the participant finds the task to be easier. 
-Conversely a lower drift rate is an indication of a more difficult task. 
+Conversely a lower drift rate is interpreted as indicating a more difficult task. 
 The sign of the value is also relevant. 
 Positive drift rate refers to evidence accumulation for the upper boundary and negative drift rate for the lower boundary. 
 Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision making (e.g., the time necessary to perceive a stimuli prior to evidence accumulation). 
-Our analyses focus primarily on boundary separation (&alpha;) and drift rate (&delta;). 
 Figure \@ref(fig:plot-ddm-explanation) provides an example of a hypothetical DDM for the 2AFC task in the present project. 
 
-(ref:plot-ddm-explanation) A drift diffusion model of the present study. The upper and lower bounds represent correct and incorrect responses, respectively. The boundary separation (&alpha;) is the distance between the two thresholds and indicates the evidence required to make a decision. Non-decision time (&tau;) represents the time course before evidence accumulation begins, i.e., time used for any process except decision making. Bias (&beta;) is the starting point for the evidence accumulation in the vertical plane (i.e., closer or further away from a given threshold), and drift rate (&delta;) quantifies the rate of evidence accumulation. The purple and orange lines represent examples a decision resulting in a correct (purple) and incorrect (orange) decision. The corresponding density curves represent the distribution of response times at either threshold.
+(ref:plot-ddm-explanation) A drift diffusion model of the present study. The upper and lower bounds represent correct and incorrect responses, respectively. The boundary separation (&alpha;) is the distance between the two thresholds and indicates the evidence required to make a decision. Non-decision time (&tau;) represents the time course before evidence accumulation begins, i.e., time used for any process except decision making. Bias (&beta;) is the starting point for the evidence accumulation in the vertical plane (i.e., closer or further away from a given threshold), and drift rate (&delta;) quantifies the rate of evidence accumulation. The purple and orange lines represent examples of a decision resulting in a correct (purple) and incorrect (orange) decision. The corresponding density curves represent the distribution of response times at either threshold.
 
 ```{r, 'plot-ddm-explanation', fig.cap="(ref:plot-ddm-explanation)"}
 knitr::include_graphics(
@@ -114,13 +118,24 @@ knitr::include_graphics(
   )
 ```
 
+We estimated the aforementioned parameters by fitting a DDM to the response and response time data of each participant independently. 
+We opted for this approach, as opposed to fitting a single model including all participants, for computational reasons. 
+Put simply, the model likely would have taken weeks to fit, whereas the no-pooling (i.e., by-participant) method took approximately 26 hours. 
+Thus after fitting the DDMs, we obtained a posterior distribution of plausible values for boundary separation, drift rate, bias, and non-decision time for each participant. 
+Next, we used measurement-error models to analyze boundary separation (&alpha;) and drift rate (&delta;) independently. 
+These models followed the same functional form as the response accuracy model described above. 
+That is, in two separate models, we analysed the boundary separation and drift rate data as a function of *utterance type* (interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
+The primary difference between the measurement-error models and the traditional regression analyses described for the response data is that the former can incorporate a measure of uncertainty around a point estimate. 
+To give a concrete example, the analysis of the boundary separation data included the posterior median and the standard error for each participant as the outcome variable, as opposed to using just a single point estimate. 
+
 For all models, we included regularizing, weakly informative priors [@Gelman_2017].
-We sample the posterior distribution of the model for statistical inferences. 
+Generally, we sample the posterior distribution of a given model for statistical inferences. 
 To assess our pre-registered hypotheses we established a region of practical equivalence (ROPE) around a point null value of 0 [see @kruschke2018rejecting] using the following formula:
 
 $$\frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
 For statistical inferences, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
-All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI and the MPE. 
-We conducted the analyses using R and fit all models using the probabilistic programming language `stan` via the R package `brms` [@R_brms_a; @R_brms_b].
+All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI, and the MPE. 
+We conducted all analyses using R and fit all models using the probabilistic programming language `stan` via the R package `brms` [@R_brms_a; @R_brms_b]. 
+Finally, we provide more information for all analyses in the supplementary materials.
