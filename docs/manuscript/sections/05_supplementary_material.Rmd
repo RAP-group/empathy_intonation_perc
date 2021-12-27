@@ -1,27 +1,20 @@
 # On-line supplementary material
 
-## Drift diffusion models
+## Traditional analyses
 
-Drift Diffusion Models (DDM), also referred to as Wiener Diffusion Models and Decision Diffusion Models, represent our preferred method for analyzing the data from our 2AFC task. 
-DDMs are rarely used in SLA research, though they are commonplace in psychology. 
-The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
-Together these parameters give rich information about the processes believed to underpin decision making. 
-Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
-In traditional 2AFC tasks in linguistics, particularly in psycholinguistics, data of this nature are often analyzed using separate models, one for responses, and another for response times. 
-Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known. 
-As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
-The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulation purposes. 
-For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
-We then summarize and report these posterior distributions for statistical inferences. 
+**Learner response accuracy**. This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text. 
 
+The response accuracy model was specified in the following manner: 
 
-```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```
+$$
+\begin{aligned}
+\text{is_correct}_i & \sim \text{Bernoulli}(\theta_i, \sigma_i = \text{se}_i) \\
+\theta_i     & \sim \text{Normal} (\mu, \tau) \\
+\mu          & \sim \text{Normal} (0, 1) \\
+\tau         & \sim \text{HalfCauchy} (0, 1)
+\end{aligned}
+$$
 
-## Learner accuracy
-
-This section contains tables reported but not included in the main text. 
 Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type). 
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
@@ -58,6 +51,84 @@ read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>%
 
 
 
+## Drift diffusion models
+
+Drift Diffusion Models (DDM), also referred to as Wiener Diffusion Models and Decision Diffusion Models, represent our preferred method for analyzing the data from our 2AFC task. 
+DDMs are rarely used in SLA research, though they are commonplace in psychology. 
+The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
+Together these parameters give rich information about the processes believed to underpin decision making. 
+Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
+In traditional 2AFC tasks in linguistics, particularly in psycholinguistics, data of this nature are often analyzed using separate models, one for responses, and another for response times. 
+Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known. 
+As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
+The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulation purposes. 
+For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
+We then summarize and report these posterior distributions for statistical inferences. 
+
+The no-pooling models were fit using the following specification in `brms`: 
+
+```r
+  rt_raw | dec(is_correct) ~ 0 + sentence_type,
+  bs ~ 0 + sentence_type, 
+  ndt ~ 0 + sentence_type, 
+  bias ~ 0 + sentence_type
+```
+
+and the priors were: 
+
+```r
+prior("normal(0, 1)", class = "b"),
+prior("normal(0, 5)", class = "b", dpar = "bs"),
+prior("normal(0.2, 1)", class = "b", dpar = "ndt"),
+prior("normal(0.5, 1)", class = "b", dpar = "bias")
+```
+
+The complete code used to fit the models are available in `09_ddm.R` in the r scripts directory. 
+
+**Measurement-error models**. The measurement error models fit to the boundary separation and drift rate data were specified to include the standard error around each posterior median for &alpha; and &delta;: 
+
+$$
+\begin{aligned}
+\alpha & \sim Normal(\alpha_{n,TRUE}, SE_{\alpha}) \\
+\delta & \sim Normal(\delta_{n,TRUE}, SE_{\delta})
+\end{aligned}
+$$
+
+The priors for the drift rate model were: 
+
+$$
+\begin{aligned}
+\alpha & \sim Normal(1, 0.5) \\
+\beta & \sim Normal(0, 0.3)  \\
+\tau & \sim Cauchy(0, 0.3) \\
+\sigma & \sim Cauchy(0, 0.1) \\
+\rho & \sim LKJcorr(2)
+\end{aligned}
+$$
+
+and the priors for the boundary separation model were: 
+
+$$
+\begin{aligned}
+\alpha & \sim Normal(2, 0.5) \\
+\beta & \sim Normal(0, 0.5)  \\
+\tau & \sim Cauchy(0, 0.3) \\
+\sigma & \sim Cauchy(0, 0.1) \\
+\rho & \sim LKJcorr(2)
+\end{aligned}
+$$
+
+To specify this type of model in `brms` we use the `resp_se` function, as follows: 
+
+```r
+estimate | resp_se(se, sigma = TRUE) ~ 1 + # Criterion
+  q_sum * lextale_std * eq_std +           # Population-level effects
+  (1 + q_sum * lextale_std * eq_std | participant) # Group-level effects
+```
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
 
 
 ## Supplementary analyses
