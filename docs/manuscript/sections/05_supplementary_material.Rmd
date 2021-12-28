@@ -2,20 +2,30 @@
 
 ## Traditional analyses
 
-**Learner response accuracy**. This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text. 
+This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
 
-The response accuracy model was specified in the following manner: 
+**Learner response accuracy**. The population effects of the response accuracy model were specified in the following manner: 
 
 $$
 \begin{aligned}
-\text{is_correct}_i & \sim \text{Bernoulli}(\theta_i, \sigma_i = \text{se}_i) \\
-\theta_i     & \sim \text{Normal} (\mu, \tau) \\
-\mu          & \sim \text{Normal} (0, 1) \\
-\tau         & \sim \text{HalfCauchy} (0, 1)
+\text{is_correct}_{ij} & \sim \text{Bernoulli}(p_{ij}, m_{ij}) \\
+logit(p_{ij}) & = \beta_{0} + \beta_{1} * question\_type + \beta_{2} * LexTALE + \beta_{3} * EQ + \\ 
+ & \beta_{4} * question\_type * LexTALE * EQ 
 \end{aligned}
 $$
 
-Table \@ref(tab:table-learner-accuracy-by-utterance-type) is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type). 
+We employed the `0 + Intercept` syntax of `brms` and set weakly informative priors as follows: 
+
+$$
+\begin{aligned}
+\beta & \sim Normal(0, 0.3) \\
+\sigma & \sim Cauchy(0, 0.1) \\
+\rho & \sim LKJcorr(2)
+\end{aligned}
+$$
+
+The summary of the response accuracy model is avaibale in Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
+The information provided in this table is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) in the manuscript. 
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
 read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = "c")) %>% 
@@ -29,26 +39,9 @@ read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = 
 ```
 
 
-Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-ddm-bs-dr-estimates) in the main document. 
-
-```{r, 'table-ddm-bs-dr'}
-read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
-  mutate(Model = case_when(
-    Model == "Boundary separation" & Parameter == "Intercept" ~ "Boundary", 
-    Model == "Boundary separation" & Parameter == "Question type" ~ "separation", 
-    Model == "Boundary separation" & !(Parameter %in% c("Intercept", "Question type")) ~ " ", 
-    Model == "Drift rate" & Parameter == "Intercept" ~ "Drift rate", 
-    Model == "Drift rate" & Parameter != "Intercept" ~ " ", 
-  )) %>% 
-  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 5)), 
-    caption = "Summary of the posterior distribution modeling 
-    boundary separation and drift rate as a function of question type, 
-    LexTALE, and Empathy quotient. The table includes posterior medians, 
-    the 95% HDI, the percentage of the HDI within the ROPE, and the maximum 
-    probability of effect (MPE).",
-    label = "table-ddm-bs-dr")
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
-
 
 
 ## Drift diffusion models
@@ -58,10 +51,9 @@ DDMs are rarely used in SLA research, though they are commonplace in psychology.
 The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
 Together these parameters give rich information about the processes believed to underpin decision making. 
 Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
-In traditional 2AFC tasks in linguistics, particularly in psycholinguistics, data of this nature are often analyzed using separate models, one for responses, and another for response times. 
-Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known. 
+In linguistics, particularly in psycholinguistics, data of this nature derived from 2AFC tasks are often analyzed using separate models, one for responses, and another for response times (as we have done in our so-called 'traditional analyses').^[Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known and the resources for implementing become more user-friendly.] 
 As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
-The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulation purposes. 
+The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulations. 
 For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
 We then summarize and report these posterior distributions for statistical inferences. 
 
@@ -125,6 +117,28 @@ estimate | resp_se(se, sigma = TRUE) ~ 1 + # Criterion
   q_sum * lextale_std * eq_std +           # Population-level effects
   (1 + q_sum * lextale_std * eq_std | participant) # Group-level effects
 ```
+
+
+Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-ddm-bs-dr-estimates) in the main document. 
+
+```{r, 'table-ddm-bs-dr'}
+read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
+  mutate(Model = case_when(
+    Model == "Boundary separation" & Parameter == "Intercept" ~ "Boundary", 
+    Model == "Boundary separation" & Parameter == "Question type" ~ "separation", 
+    Model == "Boundary separation" & !(Parameter %in% c("Intercept", "Question type")) ~ " ", 
+    Model == "Drift rate" & Parameter == "Intercept" ~ "Drift rate", 
+    Model == "Drift rate" & Parameter != "Intercept" ~ " ", 
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 5)), 
+    caption = "Summary of the posterior distribution modeling 
+    boundary separation and drift rate as a function of question type, 
+    LexTALE, and Empathy quotient. The table includes posterior medians, 
+    the 95% HDI, the percentage of the HDI within the ROPE, and the maximum 
+    probability of effect (MPE).",
+    label = "table-ddm-bs-dr")
+```
+
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
