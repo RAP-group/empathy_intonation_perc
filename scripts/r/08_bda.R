@@ -23,16 +23,10 @@ source(here::here("scripts", "r", "07_load_data.R"))
 
 # L2 models -------------------------------------------------------------------
 
-# Set weakly informative priors (not sure what this was for)
-l2_response_priors <- c(
-  prior(normal(0, 2), class = "Intercept"), 
-  prior(normal(0, 1.5), class = "sd")
-)
-
 # Set weakly informative priors
 l2_response_priors <- c(
   prior(normal(0, 0.3), class = b),
-  prior(normal(0, 0.1), class = sd), 
+  prior(cauchy(0, 0.1), class = sd), 
   prior(lkj(8), class = cor)
 )
 
