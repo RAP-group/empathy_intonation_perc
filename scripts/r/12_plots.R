@@ -1,7 +1,7 @@
 # Plots -----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211225
+# Last update: 20220101
 #
 # - All plots presented in slides and manuscripts are generated from this file
 #   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.
@@ -17,12 +17,10 @@
 source(here::here("scripts", "r", "07_load_data.R"))
 
 learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
-learner_response_q_01 <- readRDS(here("models", "learner_response_q_01.rds"))
 learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.rds"))
-learner_response_yn_01 <- readRDS(here("models", "learner_response_yn_01.rds"))
 learner_rt_01 <- readRDS(here("models", "learner_rt_01.rds"))
-ddm_boundary_separation <- readRDS(here("models", "ddm_boundary_separation.rds"))
-ddm_drift_rate <- readRDS(here("models", "ddm_drift_rate.rds"))
+mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds"))
+mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
 
 # -----------------------------------------------------------------------------
 
@@ -372,9 +370,9 @@ learner_accuracy_3way <- plot(lt_eq_3way, plot = F,
 
 
 
-# DDM Boundary separation and drift rate --------------------------------------
+# MEM Boundary separation and drift rate --------------------------------------
 
-ddm_bs_dr_estimates <- bind_rows(
+mem_bs_dr_estimates <- bind_rows(
   as_tibble(mem_drift_rate) %>% 
     select(starts_with("b_")) %>% 
     pivot_longer(everything(), names_to = "params", values_to = "estimate") %>% 
@@ -532,22 +530,35 @@ ddm_simulations <- ddm_yn + ddm_wh
 
 # Speech rate by variety ------------------------------------------------------
 
+sr_subset <- select(sr, speaker_variety, articulation_rate) %>% 
+  mutate(val = (articulation_rate - mean(articulation_rate)) / sd(articulation_rate))
+
+native_stim_sr <- brm(
+  formula = val ~ 1 + (1|speaker_variety), 
+  prior = c(
+    prior(normal(0,1), class = Intercept), 
+    prior(cauchy(0, 0.1), class = sd), 
+    prior(cauchy(0, 0.1), class = sigma)
+  ), 
+  data = sr_subset, 
+  backend = "cmdstanr", 
+  file = here("models", "native_stim_sr")
+)
+
 # Plot speech rate for supplementary materials
-sm_speech_rate <- sr %>% 
-  pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
-  names_to = "metric", values_to = "val") %>% 
-  select(speaker_variety, metric, val) %>% 
-  filter(metric == "articulation_rate") %>% 
+sm_speech_rate <- as_tibble(native_stim_sr) %>% 
+  select(starts_with("r_")) %>% 
+  pivot_longer(everything(), names_to = "speaker_variety", values_to = "val") %>% 
   mutate(
     speaker_variety = case_when(
-      speaker_variety == "andalusian" ~ "Andalusian", 
-      speaker_variety == "argentine" ~ "Argentine", 
-      speaker_variety == "castilian" ~ "Peninsular", 
-      speaker_variety == "chilean" ~ "Chilean", 
-      speaker_variety == "cuban" ~ "Cuban", 
-      speaker_variety == "mexican" ~ "Mexican", 
-      speaker_variety == "peruvian" ~ "Peruvian", 
-      speaker_variety == "puertorican" ~ "Puerto Rican"
+      speaker_variety == "r_speaker_variety[andalusian,Intercept]" ~ "Andalusian", 
+      speaker_variety == "r_speaker_variety[argentine,Intercept]" ~ "Argentine", 
+      speaker_variety == "r_speaker_variety[castilian,Intercept]" ~ "Peninsular", 
+      speaker_variety == "r_speaker_variety[chilean,Intercept]" ~ "Chilean", 
+      speaker_variety == "r_speaker_variety[cuban,Intercept]" ~ "Cuban", 
+      speaker_variety == "r_speaker_variety[mexican,Intercept]" ~ "Mexican", 
+      speaker_variety == "r_speaker_variety[peruvian,Intercept]" ~ "Peruvian", 
+      speaker_variety == "r_speaker_variety[puertorican,Intercept]" ~ "Puerto Rican"
   ), 
     speaker_variety = fct_reorder(speaker_variety, val, .fun = mean), 
     val = (val - mean(val)) / sd(val)) %>% 
@@ -628,12 +639,12 @@ walk(devices, ~ ggsave(
 
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/ddm_bs_dr_estimates.", .x), 
-  plot = ddm_bs_dr_estimates, 
+  plot = mem_bs_dr_estimates, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/ddm_explanation.", .x), 
-  plot = ddm_explanation, 
+  plot = mem_explanation, 
   device = .x, height = 4, width = 7, units = "in"))
 
 walk(devices, ~ ggsave(

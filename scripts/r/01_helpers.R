@@ -161,16 +161,6 @@ load_models <- function(path, obj_type) {
 
 # Plotting functions ----------------------------------------------------------
 
-# change the default scales to include unicode minus
-scale_x_continuous <- function(..., labels = unicode_minus) {
-  ggplot2::scale_x_continuous(..., labels = labels)
-}
-
-# change the default scales to include unicode minus
-scale_y_continuous <- function(..., labels = unicode_minus) {
-  ggplot2::scale_y_continuous(..., labels = labels)
-}
-
 # Calculate binwidth for histograms
 fd_bw <- function(x) {
   out <- 2 * IQR(x) / length(x)^(1/3)
