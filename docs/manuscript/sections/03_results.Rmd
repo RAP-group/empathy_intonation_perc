@@ -66,13 +66,13 @@ knitr::include_graphics(
 
 
 
-This is Figure \@ref(fig:plot-ddm-bs-dr-estimates)
+This is Figure \@ref(fig:plot-mem-bs-dr-estimates)
 
-(ref:plot-ddm-bs-dr-estimates) Need a caption.
+(ref:plot-mem-bs-dr-estimates) Need a caption.
 
-```{r, 'plot-ddm-bs-dr-estimates', fig.cap="(ref:plot-ddm-bs-dr-estimates)"}
+```{r, 'plot-mem-bs-dr-estimates', fig.cap="(ref:plot-mem-bs-dr-estimates)"}
 knitr::include_graphics(
-  here("figs", "manuscript", "ddm_bs_dr_estimates.pdf")
+  here("figs", "manuscript", "mem_bs_dr_estimates.pdf")
   )
 ```
 
