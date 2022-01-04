@@ -1,17 +1,8 @@
-chen2013empathy
-
-- talks about the role of empathy as a contributor to intercultural communicative competence. 
-- proposes that understanding who we are culturally is the first step to becoming empathetic towards other cultures. 
-- The second step is to realize the differences between one's own culture and foreign cultures. 
-
-
-
-
 guiora_1968
 
 - first to hypothesize that the capacity for empathy contributes to the mastery of the pronunciation of a second language
 - empathy test scores compared with ratings of pronunciation authenticity 
-- Empathy measured as accuracy recognizing changes in micro-momentary facial expresions in video clips
+- Empathy measured as accuracy recognizing changes in micro-momentary facial expressions in video clips
 - Dubious operationalization of empathy and questionable external validity
 - Small sample size (n = 10, n = 30), does not present results (this is a report about a presentation)
 
@@ -68,28 +59,70 @@ brown1973affective
 
 guiora1979personality
 
-- 
+- theoretical paper, pushing for construct validity in SLA
+- rehashes language ego ideas from previous work, focus on L2 pronunciation
+- rehashes MME test of empathy from 1972empathy paper
+- concludes that follow ups suggest MME was unreliable measure of empathy, questionable internal validity
+
+
+
+
+
+
+rota2009cognitive
+
+- investigated crucial cognitive factors and tested their relevance in groups of subjects classified on the basis of their proficiency and talent in L2 pronunciation
+- empathy: the ability to perceive and feel the emotional states of others, the emotional resonance that takes place in an individual when he/she engages in an affective communication or in an emotional exchange
+- alternative perspective: emphasizes the cognitive components of empathy, defines it as cognitive understanding of the other’s situation, based on the capacity of assuming his/her point of view on things (the perspective taking hypothesis, Hogan 1969)
+- in study: 
+  - used E-Scale, a psychometrically sound instrument devised by Leibetseder and colleagues (2001)
+  - operationalize empathy as the effort to identify with persons in fictitious or real-life situations (Leibetseder et al. 2007)
+  - assess L2 german pronunciation, search for correlations with a battery of measures (proficiency, talent, scores on the Modern Language Aptitude Test (MLAT), Hindi (as an unknown language) imitation and E-IQs scores) 
+  - arbitrarily partition subjs into 3 groups based on E-IQ (talented, average talent, anti-talent)
+  - found correlations described as being in the "weak-middle" range 
+  - conclude: the theory of Empathy in speaking and learning a foreign accent is perhaps not a myth, but a must to be further elucidated (p. 73)
+
+
+
+
+chen2013empathy
+
+- talks about the role of empathy as a contributor to intercultural communicative competence. 
+- proposes that understanding who we are culturally is the first step to becoming empathetic towards other cultures. 
+- The second step is to realize the differences between one's own culture and foreign cultures. 
+
+
+
 
 
 HU2013366
 
-rota2009cognitive
+- revisits individual differences in L2 pronunciation
+- goal is to investigate behavioural and neurobiological predictors of advanced L2 learning
+- phonetic coding ability and empathy, but not phonological working memory, predict L2 pronunciation aptitude in advanced learners
+- acquisition of L2 pronunciation aptitude is dynamic process, requiring variety of neural resources at different processing stages over time
+- used empathy quotient
+- 2 tasks: sentence imitation and sentence discrimination
+
+
+
+
 
 liu2017
 
+- proposes that emotion factors (motivation, attitude, interest, self-confidence, self-esteem, anxiety and empathy) directly influence the acquisition behavior of second language learners. 
+- proposes countermeasures for mobilizing positive emotion in L2 classroom
+- nothing great here, but considers the construct in the context of teachers being more empathetic towards beginning learners
+
+
+
 gholamrezapour2019empathy
 
+- investigated the relationship between empathy and authentic pronunciation
+- 69 Iranian undergraduate EFL learners
+- Basic Empathy Scale (BES: Jolliffe & Farrington, 2006)
+- oral interview twice (before and after segmental form-focused instruction)
+- those in the high-level group (i.e., more empathic learners) were more successful in acquiring authentic pronunciation than those in the low-level group
+- sketchy evaluation of pronunciation, sketchy stats (averaged ratings, t-test of arbitrarily dichotemized groups)
 
 
-
-
-
-research on affective variables in SLA is not new, however the focus has centered on a few variables, such as attitude, motivation, and more recently grit, among others. 
-Empathy received attention from scholars in SLA as early as the 70's, when guiora and colleagues considered XXXX... 
-Empircle work on the subject is scant. 
-Studies on L2 phonological acquisition are non-existant to the best of our knowledge, though XXX has associated empathy with better outcomes in L2 pronunciation. 
-
-The work on connecting empathy and pronunciation which Guiora led had some limited success but was criticized for experiments which sought to improve L2 pronunciation by enhancing ego permeability and empathy through use of alcohol and relaxant drugs
-
-
-knowledge of more languages is not linked to cognitive empathy (dewaele_2012)
