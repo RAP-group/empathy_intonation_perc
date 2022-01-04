@@ -1,24 +1,37 @@
 # Discussion
 
 <!--
-topics to hit
+- discussion
+  - summary of findings
+    - rehash stats in leymans terms
+    - contributions
+      - understudied construct
+      - analytic strategy (DDM)
+    - revisit RQs
+        - proficiency
+        - empathy
+        - speaker familiarity (cuban variety)
+  - comparison with previous SLA research on acquisition of prosody
+    - perception of prosody increases with proficiency (bustin)
+    - variety matters, but not because of familiarity
+      - familiarity exploratory
+      - speech rate
+    - why are y/n questions harder (transition?, talk about D'Imperio)
+  - comparison with previous empathy research
+  	- monolinguals
+  	- L2 (producuction)
+  - L2 models of phonology
+    - don't talk about prosody
+    - don't account for IDs
+    - causal prediction/imputation
+  - Future research
+    - correlation, causation, and learning empathy (knowledge of more languages is not linked to cognitive empathy (dewaele_2012))
+    - why y/n
+    - variety differences
+    - empathy and segments?
+    - true longitudinal data
+-->
 
-- review findings
-- revisit RQs
-  - proficiency
-  - empathy
-  - speaker familiarity (cuban variety)
-- why wh- questions?
-- why are y/n questions harder
-- contributions
-  - understudied construct
-  - analytic strategy (DDM)
-
-shortcomings
-- speaker familiarity
-- low number of highly advanced learners
-
---> 
 
 <!-- 
 bustin study details: 
@@ -34,4 +47,6 @@ Learners with lower proficiency processed statements faster than questions.
 Bustin crit
 Importantly, the authors stated that the study had some limitations. First, the nature of the task may have raised participants’ metalinguistic awareness of intonational differences since they were explicitly asked to compare the aural and visual stimuli. Additionally, the fact that participants were presented with two types of input (aural and visual) at the same time may have influenced their perception, considering that visual input has been shown to influence aural perception (Shook and Marian, 2013, NEED MORE REFS). Besides, the items used in the wh-question mismatch condition contained syntactic differences apart from intonational differences (e.g., ¿Por qué iba Daniel a Bolivia? vs Daniel iba a Bolivia). In this condition, participants may have been able to identify the mismatch since the beginning of the sentence by comparing the syntactic structure and word order without the need of intonational discrimination. This flaw may have influenced participants’ perception of wh-questions, which may explain why the results showed that wh-questions had the highest accuracy rate. Second, the authors mentioned that it is possible that dialectal or sociolectal variation could have influenced participants’ responses. In fact, the stimuli sentences included recordings of 8 different varieties of Spanish, but dialectal variation was not included in the analysis. Whether intonation perception varies across Spanish varieties still remains unclear. Lastly, the study did not include an objective measure of L2 proficiency. L2 proficiency was established based on the course that English-Spanish learners were enrolled in, which may not provide an accurate representation of L2 proficiency level. In spite of this, the proficiency effects reported in the study were found as expected. 
 -->
+
+
 # Conclusion
