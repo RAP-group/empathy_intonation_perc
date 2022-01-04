@@ -8,9 +8,9 @@ This section contains additional information regarding the response accuracy and
 
 $$
 \begin{aligned}
-\text{is_correct}_{ij} & \sim \text{Bernoulli}(p_{ij}, m_{ij}) \\
-logit(p_{ij}) & = \beta_{0} + \beta_{1} * question\_type + \beta_{2} * LexTALE + \beta_{3} * EQ + \\ 
- & \beta_{4} * question\_type * LexTALE * EQ 
+\text{is_correct}_{ij} &\sim Bernoulli\left(p_{ij}, m_{ij}\right) \\
+\text{logit}\left(p_{ij}\right) &= \beta_{0} + \beta_{1} * question\_type + \beta_{2} * LexTALE + \beta_{3} * EQ + \\ 
+ & \ \ \ \ \beta_{4} * question\_type * LexTALE * EQ 
 \end{aligned}
 $$
 
@@ -18,9 +18,9 @@ We employed the `0 + Intercept` syntax of `brms` and set weakly informative prio
 
 $$
 \begin{aligned}
-\beta & \sim Normal(0, 0.3) \\
-\sigma & \sim Cauchy(0, 0.1) \\
-\rho & \sim LKJcorr(2)
+\beta  &\sim Normal(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
 \end{aligned}
 $$
 
@@ -80,21 +80,21 @@ The complete code used to fit the models are available in `09_ddm.R` in the r sc
 **Measurement-error models**. The measurement error models fit to the boundary separation and drift rate data were specified to include the standard error around each posterior median for &alpha; and &delta;: 
 
 $$
-\begin{aligned}
-\alpha & \sim Normal(\alpha_{n,TRUE}, SE_{\alpha}) \\
-\delta & \sim Normal(\delta_{n,TRUE}, SE_{\delta})
-\end{aligned}
+\begin{split}
+\alpha &\sim Normal\left(\alpha_{n,TRUE}, SE_{\alpha}\right) \\
+\delta &\sim Normal(\delta_{n,TRUE}, SE_{\delta})
+\end{split}
 $$
 
 The priors for the drift rate model were: 
 
 $$
 \begin{aligned}
-\alpha & \sim Normal(1, 0.5) \\
-\beta & \sim Normal(0, 0.3)  \\
-\tau & \sim Cauchy(0, 0.3) \\
-\sigma & \sim Cauchy(0, 0.1) \\
-\rho & \sim LKJcorr(2)
+\alpha &\sim Normal(1, 0.5) \\
+\beta  &\sim Normal(0, 0.3)  \\
+\tau   &\sim Cauchy(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
 \end{aligned}
 $$
 
@@ -102,11 +102,11 @@ and the priors for the boundary separation model were:
 
 $$
 \begin{aligned}
-\alpha & \sim Normal(2, 0.5) \\
-\beta & \sim Normal(0, 0.5)  \\
-\tau & \sim Cauchy(0, 0.3) \\
-\sigma & \sim Cauchy(0, 0.1) \\
-\rho & \sim LKJcorr(2)
+\alpha &\sim Normal(2, 0.5) \\
+\beta  &\sim Normal(0, 0.5)  \\
+\tau   &\sim Cauchy(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
 \end{aligned}
 $$
 
@@ -119,7 +119,7 @@ estimate | resp_se(se, sigma = TRUE) ~ 1 + # Criterion
 ```
 
 
-Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-ddm-bs-dr-estimates) in the main document. 
+Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-mem-bs-dr-estimates) in the main document. 
 
 ```{r, 'table-ddm-bs-dr'}
 read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
