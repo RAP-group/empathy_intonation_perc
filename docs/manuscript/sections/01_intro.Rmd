@@ -6,7 +6,7 @@ The present study investigates how the comprehension of intonation develops in a
 
 Recent research on monolingual populations suggests that individual differences in pragmatic skills, such as empathy, may play a role in meaning disambiguation [@bishop2016individual; @esteve2016role; @esteve2020empathy; @orrico2020individual]. 
 Concretely, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to the intonational cues of speech during the process of forming sound-meaning associations. 
-Furthermore, increased attention has been given to how individual differences in learner backgrounds play a role in the process of L2 acquisition. 
+Furthermore, increased attention has been given to how individual differences in learner backgrounds play a role in the process of L2 acquisition [@rota2009cognitive; @HU2013366; @liu2017]. 
 The present study contributes to these lines of research by examining how individual differences in pragmatic skills affect the development and processing of intonation during sentence comprehension. 
 Specifically, we investigated the interplay between language proficiency and an individual pragmatic skill (empathy) when learning an L2. 
 We focus on the role of empathy in the development of L2 prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
