@@ -132,7 +132,7 @@ For all models, we included regularizing, weakly informative priors [@Gelman_201
 Generally, we sample the posterior distribution of a given model for statistical inferences. 
 To assess our pre-registered hypotheses we established a region of practical equivalence (ROPE) around a point null value of 0 [see @kruschke2018rejecting] using the following formula:
 
-$$\frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
+$$ROPE = \frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
 For statistical inferences, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
