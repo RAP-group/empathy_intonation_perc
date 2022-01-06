@@ -24,50 +24,51 @@ Intonation has a semantic function and through adequate cognitive decoding of in
 For example, an intonational contour can indicate to a listener whether the utterance of an interlocutor is declarative or interrogative in nature. 
 As touched upon above, a speaker can use prosody to signal numerous additional pragmatic functions as well. 
 Given the rich variation in pragmatic uses, it is unsurprising that interpreting and decoding intonational contours in a non-native language represents a particularly challenging aspect of speech comprehension for the language learner.
-Moreover, the use of L1 prosodic features when speaking the target language can result in misunderstandings due to the fact that the same prosodic features may be employed to convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
+Moreover, the use of L1 prosodic features when speaking the target language can result in misunderstandings due to the fact that the same prosodic features may convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
 As noted by @levis2016accent prosody is also "[...] critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity"  (p. 154). 
 
-For learners interested obtaining native-like pronunciation, intonation is particularly relevant, as prosodic features have been found to be important cues in the perception of non-target-like accents, above and beyond other features of language [@munro1995nonsegmental; @jilka2000testing, @pettorino2014transplanting] Nonetheless, intonation is not traditionally taught in the L2 classroom, perhaps because it not common knowledge that proper control of prosody allows the learner not only to produce speech that is more intelligible, but also to comprehend speech in varied communicative settings [@sp_pronunciation_ch08]. 
+For learners interested in obtaining native-like pronunciation, intonation is particularly relevant, as prosodic features have been found to be important cues in the perception of non-target-like accents, above and beyond other features of language [@munro1995nonsegmental; @jilka2000testing; @pettorino2014transplanting]. 
+Nonetheless, intonation is not traditionally taught in the L2 classroom, perhaps because it not common knowledge that proper control of prosody allows the learner not only to produce speech that is more intelligible, but also to comprehend speech in varied communicative settings [@sp_pronunciation_ch08]. 
 Primary focus is generally placed on syntax and morphology, with target language phonology receiving much less, if any, attention [@sp_pronunciation_ch00]. 
 When target language pronunciation is addressed, it often focuses on segmental elements [@sp_pronunciation_ch08], despite the fact that merely being intelligible at the segmental level does not necessarily imply one will be pragmatically understood. 
 As a result, some research has found that intonation is one of the last aspects of L2 phonology that learners acquire [e.g., @kvavik1974theories]. 
 
 Research on L2 intonation has been concerned primarily with speech production. 
 Learner difficulties tend to be ascribed to L1 transfer, and models of L2 phonology by and large focus on the speech segment, as in the Speech Learning Model revised [@flege2021revised], or contrasts between segments, i.e., PAM-L2, L2LP [@Best2007; @VanLeussen2015, respectively]. 
-Theoretical work that specifically considers prosody in the acquisition of L2 phonology is virtually non-existent, though some researchers have considered how the aforementioned models might account for suprasegmental phenomena [See @trofimovich2006learning]
+Theoretical work that specifically considers prosody in the acquisition of L2 phonology is virtually non-existent, though some researchers have considered how the aforementioned models might account for suprasegmental phenomena [See @trofimovich2006learning]. 
 Nevertheless, a dearth of knowledge remains with regard to how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes.
 The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
 
 **Acquisition of Spanish prosody**. As with all phonetic phenomena, a lack of invariance in the acoustic content of prosodic realizations also increases the difficulty of the learners task. 
-Beyond the level of the individual, howeer, dialectal differences can account for more difficulties.
+Beyond the level of the individual, however, dialectal differences can account for more difficulties.
 Spanish is extensively spoken across the world, with relatively small geolectal differences between varieties when compared with other languages, such that speakers from distinct regions can still generally understand each other. 
-That being said, phonetic variation is abundant, as is the case with the declarative rise–fall contour of Mexican Spanish, the long fall associated with Argentinian Spanish, or the nuclear hat pattern in total interrogatives (i.e., yes–no questions) in Caribbean Spanish, to cite just a few examples [See @hualde2015intonational]. 
-<!--
-For instance, the pitch accent of a given utterance type may be realized differently with regard to pitch movement and syllabic duration depending on the variety. 
--->
+That being said, phonetic variation is abundant. 
+For instance, depending on the variety, for the same utterance type the pitch accent may be realized differently with regard to pitch movement and/or syllable duration. 
+Prosodic strategies can be different altogether, e.g., absolute interrogatives in Caribbean and Argentine Spanish, which are produced with a nuclear hat pattern in the former and a final falling F0 contour in the latter, both of which differ from the more common final rise found in many varieties [See @hualde2015intonational].
 
+<!-- production --> 
 Previous research on the acquisition of Spanish prosody attests that learners gradually acquire target-language intonation as they gain proficiency in the language. 
 Research in this area has focused on speech production. 
+@henriksen2010development (learners get better in study abroad).
+@thornberry2014l2 (learners that develop meaningful relationships get better at absolute interrogatives in Argentine Spanish after SA program). 
+@craft2015acquisition (beginners only improve slightly in 6 week SA program in Valencia, Spain). 
 For instance, @trimble2013acquiring analyzed L2 Spanish learners' production of intonational patterns for broad focus declaratives and absolute interrogatives after a semester-long study abroad program. 
-<!-- add findings and more studies -->
+For the majority of the learners production was more target-like at the end of the program, particularly for declaratives. 
+The author also noted better outcomes in informal production and increased use of Spanish and high social integration were associated with production gains. 
 
-
-
+<!-- perception --> 
 Research on perception of Spanish intonation is much less common, but also supports the notion that mastery is indeed possible for adult learners. 
+@nibert2005acquisition and @nibert2006acquisition (perception of intonation develops gradually in conjunction with proficiency). 
 @trimble2013perceiving examined the perception of intonational cues ... <!-- add sentence or two about study -->
 @trimble2013perceiving found that intonational cues that were absent form participants' L1 were difficult to perceive. 
-Unsurprisingly, the study suggests the L2 intonation system develops in tandem with proficiency in Spanish, which was positively correlated with time spent studying abroad. 
+Unsurprisingly, the study suggests the L2 intonation system develops in tandem with proficiency in Spanish, which was positively correlated with time spent studying abroad. ADD FAMILIARITY PART
 
-<!-- 
-NIbert study 
-Familiarity
---> 
 
 In a similar vein, @bustin_2020 investigated the perceptual development of intonation in questions and statements in L2 Spanish. 
 Specifically, @bustin_2020 examined the effect of L2 proficiency on the perception of broad-focus and narrow-focus declaratives and polar and total interrogatives in adult L2 learners of Spanish.
 The learners completed an AX discrimination task in which they were presented audio and visual stimuli in matched and mismatched conditions. 
-The matched condition included auditory stimuli that were prosodically congruent with written text (e.g., declarative intonation with a declarative sentence). 
-The mismatched condition included auditory stimuli that were prosodically incongruent with the written text (e.g., interrogative intonation with a declarative sentence). 
+<!-- The matched condition included auditory stimuli that were prosodically congruent with written text (e.g., declarative intonation with a declarative sentence). 
+The mismatched condition included auditory stimuli that were prosodically incongruent with the written text (e.g., interrogative intonation with a declarative sentence). -->
 The participants' task was to determine whether the sentence presented aurally was the same as the sentence presented visually. 
 @bustin_2020 found that perception and processing of L2 intonation improved in conjunction with proficiency in Spanish, though it was conditional on the utterance type, with polar ('yes/no') interrogatives being more difficult to process and acquire when compared with simple statements. 
 The authors concluded that perception of L2 intonation develops gradually in conjunction with L2 proficiency.
