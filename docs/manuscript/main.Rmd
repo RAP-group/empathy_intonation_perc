@@ -91,7 +91,7 @@ abstract: |
   We extend this research to L2 acquisition in order to determine if 
   individual differences in pragmatic skills affect the development of 
   intonation in L2 processing and sentence comprehension. 
-  A total of 224 adult L2 Spanish learners (L1 English) from the 
+  A total of 225 adult L2 Spanish learners (L1 English) from the 
   Northeastern United States completed a two-alternative forced choice (2AFC) 
   task in which they listened to four utterance types and categorized them as 
   either questions or statements. 

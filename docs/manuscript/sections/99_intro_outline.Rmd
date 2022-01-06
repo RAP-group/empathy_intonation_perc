@@ -126,3 +126,40 @@ gholamrezapour2019empathy
 - sketchy evaluation of pronunciation, sketchy stats (averaged ratings, t-test of arbitrarily dichotemized groups)
 
 
+
+
+
+- prod
+  - Henriksen, Geeslin, and Willis (2010) +
+    - production study, study abroad in Leon Spain, pre/post
+    - declaratives, absolute interrogatives, and pronominal interrogatives
+    - most learners modify intonational patterns (pitch accent and boundary movements) through an increase in frequency of use of their more dominant intonation patterns and/or changes in their final boundary tone inventory
+  - Thornberry (2014)
+    - pre/post study abroad, 11 adult learners
+    - production of absolute interrogatives and declarative statements
+    - some of the learners begin to produce the final fall associated with absolute interrogatives in Argentine Spanish (those that developed meaningful relationships with natives)
+  - Craft (2015)
+    - 6 week study abroad program in Valencia Spain
+    - production of declarative and absolute interrogatives
+    - learners improved but did not become native-like
+  - Trimble (2013)
+    - production of broad focus declaratives and absolute interrogatives during study abroad in Venezuela
+    - intonation was different at end of program for most learners, 
+    - most improved declaratives, only one improved interrogatives
+    - better outcomes in informal production, 
+    - increased use of spanish and high social integration associated with production gains
+
+- perception
+  - Nibert (2005): 
+    - perception of intonational phrasing patterns (en, sp) : 
+    - interpret meaning contrasts created through intermediate phrasing (lilas y lirio amarillos)
+    - shows gradual development, native-like perception possible
+    - "L2 learner’s perception and interpretation of utterance-medial H- in Spanish develop gradually over time"
+  - Nibert (2006): 
+    - same as Nibert (2005) but with beginners
+    - aims to shed light on full access full transfer vs. full access without transfer (she goes with full access full transfer)
+    - learners show some (but limited) accuracy, completing developmental picture: perception of intonation develops gradual with proficiency 
+  - Trimble (2013): 
+    - statements vs. yes-no questions, gating task, indicate whether utterance was statement or y/n question, 
+    - statements more accurate, familiarity with variety improved accuracy (american english and peninsular spanish more similar in intonational characteristics in y/n questions than am eng and venezuelan spanish)
+  - Brandle et al (2020)

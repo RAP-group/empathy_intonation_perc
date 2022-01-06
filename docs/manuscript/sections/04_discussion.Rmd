@@ -49,4 +49,11 @@ Importantly, the authors stated that the study had some limitations. First, the 
 -->
 
 
+<!-- trimble production 
+For instance, @trimble2013acquiring analyzed L2 Spanish learners' production of intonational patterns for broad focus declaratives and absolute interrogatives after a semester-long study abroad program in Venezuela. 
+For the majority of the learners production was more target-like at the end of the program, particularly for declaratives. 
+The author also noted better outcomes in informal production and increased use of Spanish and high social integration were associated with production gains. 
+
+-->
+
 # Conclusion
