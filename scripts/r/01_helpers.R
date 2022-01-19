@@ -269,4 +269,16 @@ report_posterior <- function(df, param, is_exp = TRUE) {
   }
 }
 
+# Report manually calculated effects (takes a col of a df)
+my_posterior_summary <- . %>% 
+  pull() %>% 
+  describe_posterior(., rope_range = c(-0.1, 0.1)) %>% 
+  as_tibble() %>% 
+  select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high")) %>% 
+  mutate(across(-c("Parameter"), specify_decimal, k = 2)) %>% 
+  mutate(across(-Parameter, printy::fmt_minus_sign)) %>% 
+  mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
+  select(Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd) %>% 
+  report_posterior(., param = "Posterior")
+
 # -----------------------------------------------------------------------------

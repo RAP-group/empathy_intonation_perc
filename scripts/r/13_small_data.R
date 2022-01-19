@@ -15,6 +15,7 @@
 
 source(here::here("scripts", "r", "07_load_data.R"))
 accuracy_summary <- read_csv(here("tables", "learner_response_01.csv"))
+learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 
 # -----------------------------------------------------------------------------
 
@@ -25,6 +26,55 @@ accuracy_summary <- read_csv(here("tables", "learner_response_01.csv"))
 n_learners <- learners$participant %>% unique %>% length
 n_returned <- id_return %>% length
 n_removed  <- id_remove$learners %>% nrow
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Learner accuracy mod descriptives -------------------------------------------
+
+# Get model posterior
+lr01_post <- as_tibble(learner_response_01)
+
+# Get lextale effect posterior for wh- questions and declaratives
+lt_wh <- transmute(lr01_post, 
+  lex_wh = b_lextale_std + `b_sentence_typeinterrogativeMpartialMwh:lextale_std`) %>% 
+  my_posterior_summary()
+
+lt_bf <- transmute(lr01_post, 
+  lex_wh = b_lextale_std + `b_sentence_typedeclarativeMbroadMfocus:lextale_std`) %>% 
+  my_posterior_summary()
+
+lt_nf <- transmute(lr01_post, 
+  lex_wh = b_lextale_std + `b_sentence_typedeclarativeMnarrowMfocus:lextale_std`) %>% 
+  my_posterior_summary()
+
+# Get EQ effect posterior for wh- questions and declaratives
+eq_wh <- transmute(lr01_post, 
+  eq_wh = b_eq_std + `b_sentence_typeinterrogativeMpartialMwh:eq_std`) %>% 
+  my_posterior_summary()
+
+eq_bf <- transmute(lr01_post, 
+  eq_wh = b_eq_std + `b_sentence_typedeclarativeMbroadMfocus:eq_std`) %>% 
+  my_posterior_summary()
+
+eq_nf <- transmute(lr01_post, 
+  eq_wh = b_eq_std + `b_sentence_typedeclarativeMnarrowMfocus:eq_std`) %>% 
+  my_posterior_summary()
+
+# Get LT x EQ effect posterior for wh- questions and declaratives
+lt_eq_wh <- transmute(lr01_post, 
+  lt_eq_wh = `b_lextale_std:eq_std` + `b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std`) %>% 
+  my_posterior_summary()
+
+lt_eq_bf <- transmute(lr01_post, 
+  lt_eq_bf = `b_lextale_std:eq_std` + `b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std`) %>% 
+  my_posterior_summary()
+
+lt_eq_nf <- transmute(lr01_post, 
+  lt_eq_nf = `b_lextale_std:eq_std` + `b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std`) %>% 
+  my_posterior_summary()
 
 # -----------------------------------------------------------------------------
 
