@@ -145,7 +145,7 @@ read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>%
 ```
 
 
-## Supplementary analyses
+## Supplementary analyses {#supplementary-analyses}
 
 In this section we present supplementary analyses, all of which are exploratory in nature. 
 
