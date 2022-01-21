@@ -86,10 +86,12 @@ Target objects were homophones in French (e.g., *cane*, Eng. "female duck"; *can
 @esteve2020empathy found that processing of the lexical ambiguity (the homophones *cane*/*canne*) was modulated by empathy level when intonation was the only cue available. 
 Specifically, highly empathic individuals varied their looking behavior as a function of intonational cues while less empathic individuals did not. 
 That is, higher empathy individuals, in comparison with lower empathy individuals, were found to be more sensitive to intonation cues in the process of forming sound-meaning associations. 
-
 In short, individuals with more pragmatic skill (higher empathy) appear to be able to use intonation to resolve temporary lexical ambiguity that can lead to confirmatory vs. contrasting interpretations. 
 This research underscores the importance of considering individual pragmatic differences when examining intonational meaning processing and sentence comprehension. 
-<!-- L2 EMPATHY HERE --> 
+
+Related research in the SLA context is scant, though early studies included affective variables---such as attitude, motivation, empathy, and, more recently, grit, among others---as they pertain to individual differences. 
+Empirical work on empathy is limited, though the construct received attention from scholars as early as the 60's and 70's [See @guiora_1968; @guiora1972empathy; @guiora1972effects; @brown1973affective; guiora1979personality]. 
+The particular body of work linking empathy with SLA has focused on speech production, or more specifically what early scholars considered 'authentic pronunciation' and more recently 'pronunciation aptitude' [See @rota2009cognitive], though no strong associations have been found. 
 To the best of our knowledge, no studies have explored the construct empathy as it pertains to L2 perceptual development. 
 Thus, we extend this research to the SLA context in order to determine if individual differences in this pragmatic skill affect the development of intonation in L2 processing and sentence comprehension.
 
