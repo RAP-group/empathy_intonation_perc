@@ -16,6 +16,7 @@
 source(here::here("scripts", "r", "07_load_data.R"))
 accuracy_summary <- read_csv(here("tables", "learner_response_01.csv"))
 learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
+ddm_summary <- read_csv(here("tables", "ddm_bs_dr.csv"))
 
 # -----------------------------------------------------------------------------
 
@@ -76,6 +77,17 @@ lt_eq_nf <- transmute(lr01_post,
   lt_eq_nf = `b_lextale_std:eq_std` + `b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std`) %>% 
   my_posterior_summary()
 
+# Mean difference in accuracy between wh- and y/n questions
+wh_yn_diff <- transmute(lr01_post, 
+  yn = plogis(b_Intercept), 
+  wh = plogis(b_Intercept + b_sentence_typeinterrogativeMpartialMwh), 
+  diff = (wh - yn) * 100
+  ) %>% 
+  select(diff) %>% 
+  my_posterior_summary() %>% 
+  str_replace("\\(", "(Mean difference: ")
+
+
 # -----------------------------------------------------------------------------
 
 
@@ -113,6 +125,21 @@ mono_speech_rates_printy <- sr %>%
 # -----------------------------------------------------------------------------
 
 
+
+
+# Variety familiarity ---------------------------------------------------------
+
+familiarity <- learners %>% 
+  group_by(participant, spn_variety) %>% 
+  distinct(spn_variety) %>% 
+  group_by(spn_variety) %>% 
+  summarize(n_v = n()) %>% 
+  mutate(sum_n = sum(n_v), perc = round((n_v / sum_n) * 100, 2), 
+    spn_variety = str_replace(spn_variety, " ", "")) %>% 
+  arrange(desc(perc)) %>% 
+  split(.$spn_variety)
+
+# -----------------------------------------------------------------------------
 
 
 

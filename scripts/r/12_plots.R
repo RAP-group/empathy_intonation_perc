@@ -1,7 +1,7 @@
 # Plots -----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20220101
+# Last update: 202201120
 #
 # - All plots presented in slides and manuscripts are generated from this file
 #   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.
@@ -21,6 +21,7 @@ learner_response_qonly_01 <- readRDS(here("models", "learner_response_qonly_01.r
 learner_rt_01 <- readRDS(here("models", "learner_rt_01.rds"))
 mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds"))
 mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
+ddm_sims <- read_csv(here("data", "tidy", "ddm_sims.csv"))
 
 # -----------------------------------------------------------------------------
 
@@ -485,8 +486,20 @@ ddm_explanation <- main_plot + annotation_custom(
 
 # DDM simulations -------------------------------------------------------------
 
+# Calculate mean decision thresholds
+bs_means <- ddm_sims %>% 
+  group_by(q_type, eq, lt, facet_lab) %>% 
+  summarize(bs_max = max(value), bs_min = min(value), .groups = "drop") %>% 
+  pivot_longer(cols = c("bs_max", "bs_min"), 
+    names_to = "bound", values_to = "threshold") %>% 
+  mutate(facet_lab = fct_relevel(facet_lab, "EQ: Low, LexTALE: low", "EQ: low, LexTALE: high", "EQ: high, LexTALE: low"))
+
+
+
 ddm_yn <- ddm_sims %>% 
   filter(q_type == "yn") %>% 
+  mutate(facet_lab = fct_relevel(facet_lab, "EQ: Low, LexTALE: low", 
+    "EQ: low, LexTALE: high", "EQ: high, LexTALE: low")) %>% 
   ggplot(., aes(x = step, y = value)) + 
     facet_wrap(~ facet_lab) + 
     scale_y_continuous(breaks = seq(-1.5, 1.5, 1), 
@@ -498,13 +511,17 @@ ddm_yn <- ddm_sims %>%
       color = "white", size = 2) +
     stat_summary(aes(group = response), fun = mean, geom = "line", 
       color = "#cc0033", size = 1) +
-    geom_hline(yintercept = 0) + 
-    geom_vline(xintercept = 0) + 
+    geom_hline(yintercept = 0, color = "black") + 
+    geom_vline(xintercept = 0, color = "black") + 
+    geom_hline(data = filter(bs_means, q_type == "yn"), 
+      aes(yintercept = threshold), color = "grey", lty = 3) + 
     labs(title = "y/n questions", y = "Boundary separation", x = "Time step") + 
     minimal_adj(base_size = 13)
 
 ddm_wh <- ddm_sims %>% 
   filter(q_type == "wh") %>% 
+  mutate(facet_lab = fct_relevel(facet_lab, "EQ: Low, LexTALE: low", 
+    "EQ: low, LexTALE: high", "EQ: high, LexTALE: low")) %>% 
   ggplot(., aes(x = step, y = value)) + 
     facet_wrap(~ facet_lab) + 
     scale_y_continuous(position = "right", breaks = seq(-1.5, 1.5, 1), 
@@ -516,8 +533,10 @@ ddm_wh <- ddm_sims %>%
       color = "white", size = 2) +
     stat_summary(aes(group = response), fun = mean, geom = "line", 
       color = "#cc0033", size = 1) +
-    geom_hline(yintercept = 0) + 
-    geom_vline(xintercept = 0) + 
+    geom_hline(yintercept = 0, color = "black") + 
+    geom_vline(xintercept = 0, color = "black") + 
+    geom_hline(data = filter(bs_means, q_type == "wh"), 
+      aes(yintercept = threshold), color = "grey", lty = 3) + 
     labs(title = "wh- questions", y = NULL, x = "Time step") + 
     minimal_adj(base_size = 13)
 
