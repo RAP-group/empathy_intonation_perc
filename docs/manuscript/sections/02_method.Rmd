@@ -22,6 +22,7 @@ All participants with knowledge of Spanish were adult L2 learners, operationally
 
 The study consisted of three tasks: a 2AFC task, a lexical decision vocabulary assessment, and a lykert-type questionnaire to assess empathy. 
 The tasks were programmed in Python using Pyschopy3 [@Peirce:2019] and presented online via Pavlovia. 
+<!--- Should this say "Likert-type? --->
 All code and materials used to generate the tasks are freely available on the Open Science Framework (https://osf.io/dh4zp/?view_only=162d6d13e5814417bcb9de349f18cb62). 
 
 **2AFC**. In the 2AFC task participants were presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
@@ -52,6 +53,7 @@ The mean score was `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg)` (95%
 
 **Empathy Questionnaire**. The construct empathy was assessed using the Empathy Quotient [EQ, @baron2004empathy]. 
 The EQ is a 60-item questionnaire that presents four point likert-type items ranging from 'strongly agree' to 'strongly disagree'. 
+<!-- Should "Likert" be capitalized? -->
 Forty of the questions assess empathy and 20 are filler items. 
 In order to avoid response bias, choices indicating empathic responses are coded to elicit "agree" responses in half the target items and "disagree" responses in the other half. 
 The target items are scored with 2 or 1 points based on if the participant responds "strongly" or "slightly". 
