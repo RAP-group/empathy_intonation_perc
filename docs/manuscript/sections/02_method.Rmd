@@ -78,7 +78,7 @@ A total of `r n_learners` participants met the criteria for inclusion.
 
 ## Statistical analyses
 
-We report three primary statistical analyses that were pre-registered prior to collecting the learner data: response accuracy, response times, and drift diffusion models. 
+We report two primary statistical analyses that were pre-registered prior to collecting the learner data: response accuracy and drift diffusion models. 
 All additional analyses are exploratory in nature and explicitly described as such. 
 First, we analyzed response accuracy using Bayesian multilevel logistic regression. 
 The model considered response accuracy for the population effects *utterance type* (declarative broad focus, declarative narrow focus, interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
@@ -90,12 +90,18 @@ The slope for *utterance type* varied for the participant effect, as did the *Le
 All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represented the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
 The same model was fit to the response time data with the exception of the model likelihood, which was assumed to be distributed as lognormal. 
+Response time was measured from the offset of the auditory stimuli. 
+We arbitrarily excluded response times longer than ten seconds, which represented `r n_rt_10_plus` tokens of `r prettyNum(nrow(learners), big.mark = ",")` (`r perc_rt_10_plus`%). 
+Participants were able to respond at any time after the onset of the auditory stimuli. 
+There was a total of `r n_rt_0_minus` (`r perc_rt_neg`%) tokens with negative response times. 
+Of this subset, learners responded with `r perc_rt_neg_correct`% accuracy, therefore, we added the minimum value of the data set as a constant to all response times. 
+As a result, the response time distribution comprised only positive values, a requirement of drift diffusion models (see below). 
 We also fit an additional exploratory model with the same population- and grouping-effects structure using d' (d prime) as the outcome variable. 
 
-The third analysis utilized Bayesian drift diffusion modeling [DDM, @ratcliff2008diffusion]. 
+The second primary analysis utilized Bayesian drift diffusion modeling [DDM, @ratcliff2008diffusion]. 
 This approach to analyzing behavioral data models decision-making as a random-walk decision process.
 DDMs can simultaneously take into account responses and response times in two-choice tasks in a single model, thus they are particularly beneficial when analyzing tasks in which speed-accuracy tradeoffs may be present. 
-We estimate the parameters off the DDM using a Bayesian methods and subsequently fit measurement error models on the posterior estimates of the resulting parameters. 
+We estimate the parameters of the DDM using Bayesian methods and subsequently fit measurement error models on the posterior estimates of the resulting parameters. 
 
 A DDM estimates four parameters: boundary separation, bias, drift rate and non-decision time. 
 Boundary separation, &alpha;, quantifies the amount of information necessary to make a decision. 
@@ -129,13 +135,13 @@ The primary difference between the measurement-error models and the traditional 
 To give a concrete example, the analysis of the boundary separation data included the posterior median and the standard error for each participant as the outcome variable, as opposed to using just a single point estimate. 
 
 For all models, we included regularizing, weakly informative priors [@Gelman_2017].
-Generally, we sample the posterior distribution of a given model for statistical inferences. 
+Generally, we sample from the posterior distribution of a given model for statistical inferences. 
 To assess our pre-registered hypotheses we established a region of practical equivalence (ROPE) around a point null value of 0 [see @kruschke2018rejecting] using the following formula:
 
 $$ROPE = \frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
-For statistical inferences, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) were taken as compelling evidence for a given effect. 
+For statistical inferences, we focus on estimation rather than decision making rules, though, generally, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) are taken as compelling evidence for a given effect. 
 All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI, and the MPE. 
 We conducted all analyses using R and fit all models using the probabilistic programming language `stan` via the R package `brms` [@R_brms_a; @R_brms_b]. 
 Finally, we provide more information for all analyses in the supplementary materials.
