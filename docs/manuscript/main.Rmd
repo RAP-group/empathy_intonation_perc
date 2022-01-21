@@ -72,7 +72,7 @@ affiliation:
   - id            : "1"
     institution   : "Rutgers University"
   - id            : "2"
-    institution   : "Poznan"
+    institution   : "Adam Mickiewicz University"
   - id            : "3"
     institution   : "Duo-lingo"
 
