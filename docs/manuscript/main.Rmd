@@ -1,0 +1,180 @@
+---
+title             : |
+  Using intonation to disambiguate meaning: The role of empathy and 
+  proficiency in L2 perceptual development
+shorttitle        : "Individual differences in L2 perception of intonation"
+
+author: 
+  - name          : "Joseph V. Casillas"
+    corresponding : yes
+    affiliation   : "1"
+    address       : |
+      Rutgers University - Department of Spanish and Portuguese, 15 Seminary 
+      place, New Brunswick, NJ 08904, USA
+    email         : "joseph.casillas@rutgers.edu"
+    role:
+      - Conceptualization
+      - Writing - Original Draft Preparation
+      - Writing - Review & Editing
+  - name          : "Juan José Garrido Pozú"
+    affiliation   : "1"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Kyle Parrish"
+    affiliation   : "1"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Laura Fernández Arroyo"
+    affiliation   : "1"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Nicole Rodríguez"
+    affiliation   : "2"
+    role:         
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Robert Esposito"
+    affiliation   : "3"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Isabelle Chang"
+    affiliation   : "1"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Kimberly Gómez"
+    affiliation   : "1"
+    role:
+      - Conceptualization
+      - Writing - Review & Editing
+  - name          : "Gabriela Constantin-Dureci"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Jiawei Shao"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Iván Andreu"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+  - name          : "Katherine Taveras"
+    affiliation   : "1"
+    role:
+      - Writing - Review & Editing
+
+affiliation:
+  - id            : "1"
+    institution   : "Rutgers University"
+  - id            : "2"
+    institution   : "Poznan"
+  - id            : "3"
+    institution   : "Duo-lingo"
+
+authornote: |
+  We express our gratitude to all the haters. 
+
+abstract: |
+  The present study investigates the interplay between proficiency and 
+  individual pragmatic skill in the process of learning a new language. 
+  Notably, we focus on the role of empathy in the development of second 
+  language (L2) prosody by analyzing the perception and processing of 
+  intonation in questions and statements in L2 Spanish. 
+  The construct empathy has been shown to influence native language processing 
+  in how listeners interpret intonation and meaning when words are ambiguous 
+  [@esteve2020empathy]. 
+  We extend this research to L2 acquisition in order to determine if 
+  individual differences in pragmatic skills affect the development of 
+  intonation in L2 processing and sentence comprehension. 
+  A total of 225 adult L2 Spanish learners (L1 English) from the 
+  Northeastern United States completed a two-alternative forced choice (2AFC) 
+  task in which they listened to four utterance types and categorized them as 
+  either questions or statements. 
+  We used Bayesian multilevel regression and Drift Diffusion modeling to 
+  analyze the 2AFC data as a function of proficiency and empathy scores.
+  The results showed that learner response accuracy and sensitivity to 
+  intonation improved as a function of proficiency.
+  Importantly, in high proficiency, high empathy learners (1) more information 
+  was necessary to reach a decision and (2) responses came at a slower rate 
+  when compared with low empathy learners at any proficiency level.
+  Higher empathic individuals, in comparison with lower empathic 
+  individuals, appear to be more sensitive to intonation cues in the process 
+  of forming sound-meaning associations, though increased sensitivity does 
+  not necessarily imply increased processing speed. 
+  The results motivate the inclusion of measures of pragmatic skill, such as 
+  empathy, to better account for intonational meaning processing and sentence 
+  comprehension in second language acquisition.
+  
+keywords          : "Second language acquisition, Intonation, Empathy, Prosody"
+wordcount         : "10,093"
+
+bibliography      : ["../bib/empathy.bib"]
+
+appendix          : 
+  - "./sections/05_supplementary_material.Rmd"
+  
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_word
+---
+
+
+
+```{r setup, include = FALSE}
+library("papaja")
+source(here::here("scripts", "r", "13_small_data.R"))
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+<!-- INTRODUCTION -->
+```{r, 'include-intro', child='./sections/01_intro.Rmd'}
+```
+
+<!-- METHOD -->
+```{r, 'include-method', child='./sections/02_method.Rmd'}
+```
+
+<!-- RESULTS -->
+```{r, 'include-results', child='./sections/03_results.Rmd'}
+```
+
+<!-- DISCUSSION/CONCLUSION -->
+```{r, 'include-disc', child='./sections/04_discussion.Rmd'}
+```
+
+
+<!-- Pagebreak for refs -->
+```{=openxml}
+<w:p>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
+</w:p>
+```
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup

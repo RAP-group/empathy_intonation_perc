@@ -1,0 +1,113 @@
+# Discussion
+
+<!--
+- discussion
+  - What we did
+  - summary of findings
+    - rehash stats in leymans terms
+    - contributions
+      - understudied construct
+      - analytic strategy (DDM)
+    - revisit RQs
+        - proficiency
+        - empathy
+        - speaker familiarity (cuban variety)
+  - comparison with previous SLA research on acquisition of prosody
+    - perception of prosody increases with proficiency (bustin)
+    - variety matters, but not because of familiarity
+      - familiarity exploratory
+      - speech rate
+    - why are y/n questions harder (transition?, talk about D'Imperio)
+  - comparison with previous empathy research
+  	- monolinguals
+  	- L2 (producuction)
+  - L2 models of phonology
+    - don't talk about prosody
+    - don't account for IDs
+    - causal prediction/imputation
+  - Future research
+    - correlation, causation, and learning empathy (knowledge of more languages is not linked to cognitive empathy (dewaele_2012))
+    - why y/n
+    - variety differences
+    - empathy and segments?
+    - true longitudinal data
+-->
+
+The present work explored how the comprehension of intonation develops in adult L2 learners of Spanish. 
+We used a two-alternative forced-choice task in which participants determined whether or not utterances presented in auditory stimuli were questions. 
+Our study represents a conceptual replication of @bustin_2020, but extends this research to address recent findings suggesting that individual pragmatic skill---in the context of the present work, empathy---plays a role in the process of forming sound-meaning associations. 
+We used Bayesian methods, in particular Drift Diffusion modelling [@ratcliff2008diffusion], to analyze data from `r n_learners` L2 learners. 
+We find that perception and processing of intonation develops in tandem with proficiency in the target language and is, to some degree, modulated by the construct empathy. 
+This study set out to address three pre-registered research questions that we will now revisit. 
+
+The first question, *Is perceptional development in L2 Spanish modulated by proficiency and intonation type [i.e., @bustin_2020]?*, was developed as a direct result of the previous literature examining the acquisition of Spanish prosody [i.e., @trimble2013perceiving; @bustin_2020]. 
+Response accuracy to all utterance types was positively correlated with proficiency, as measured by LexTALE scores. 
+This corroborates the general finding that development of L2 intonation is positively correlated with target language proficiency, for both production [@henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others] and perception [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
+In contrast with previous studies, our analyses conceptualized proficiency as a continuous variable, obviating the need to arbitrarily assign learners to proficiency groups. 
+This operationalization will benefit future research interested in quantifying the effect of proficiency on perceptual development by allowing for more transparent designs with regard to statistical power and sample sizes. 
+In line with previous studies [e.g., @bustin_2020], we found that total interrogatives (i.e., yes-no questions) were most difficult for L2 learners of Spanish, followed by partial interrogatives (i.e., wh-questions) and declarative broad focus and narrow focus statements. 
+An exploratory analysis using d' found that learner sensitivity to the utterance types followed the same pattern. 
+
+Additionally, our study addressed the question *Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?* 
+This question was motivated by a line of research showing that empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual].
+Though the construct *empathy* has been considered in the SLA literature, the current body of research is limited to studies on pronunciation accuracy [i.e., @guiora_1968; @guiora1972empathy; @rota2009cognitive, among others]. 
+Thus, we extend research on empathy to L2 phonological acquisition of as it relates to speech perception. 
+Using a cross-sectional design, we show (1) that empathy, as measured by the empathy quotient [@baron2004empathy], did indeed modulate response accuracy and the decision making process, and (2) *how* empathy affected sentence processing was related to L2 proficiency. 
+Specifically, we found response accuracy increased as a function of proficiency, independent of empathy for yes/no questions, but not wh- questions. 
+In the case of the latter, empathy had a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 
+This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody. 
+That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals. 
+
+Aside from addressing response accuracy, we also show that in high proficiency, high empathy learners (1) more information was necessary to reach a decision and (2) responses came at a slower rate when compared with low empathy learners at any proficiency level.
+This interaction effect on sentence processing was found for both partial and absolute interrogatives. 
+Previous research on monolingual populations has shown that higher empathy individuals are more sensitive to intonation cues in the process of forming sound-meaning associations than lower empathy individuals. 
+Our findings support the notion that this is also true for adult L2 learners, though we show that increased sensitivity does not necessarily imply increased processing speed. 
+Given that empathy comprises the cognitive process of identifying the emotional state of another living being as well as the affective process of experiencing a similar sensation within onself, higher empathy individuals might show more sensitivity to intonation cues out of a general tendency to be more willing to devote their cognitive efforts to this area, which, consequently, may require more time than not devoting that effort. 
+
+Our third research question addressed the effect of speaker variety on L2 perceptual development. 
+Specifically, we asked *Does speaker variety affect perception accuracy and processing speed?* 
+This question was motivated by @bustin_2020, who raised the possibility that dialectal or sociolectal variation could have influenced participants' responses in their data. 
+Their study included stimuli from eight varieties of Spanish, though this factor was not considered in their analysis. 
+Building on @bustin_2020, our auditory stimuli also included eight distinct varieties of Spanish. 
+We found that, generally, speaker variety did indeed affect response accuracy. 
+As was the case with our pilot data from monolingual Spanish speakers, learners were most accurate responding to stimuli from the speaker of standard Peninsular Spanish, and least accurate when responding to the Cuban variety.
+Interestingly, accuracy with a given variety did not correlate with response times in a straightforward way. 
+For instance, participants did not respond faster to the standard Peninsular variety even though they were more accurate in their responses to this speaker. 
+
+The results of our study suggest that speaker variety does affect perception accuracy, though this does not necessarily map directly on to processing speed. 
+One possibility put forward in the literature is that the variety matters insomuch that it is familiar to the listener [see @perry2018influences; @trimble2013perceiving]. 
+In other words, learners may be more accurate and process speech faster when listening to a variety they know well. 
+Our study took into consideration familiarity, though the variety that was cited as being the most familiar, U.S. Spanish (`r familiarity$UnitedStates$perc`% of `r n_learners` responses), was not one of the varieties presented in the stimuli. 
+Mexican (`r familiarity$Mexico$perc`%) and Peninsular (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. Thus, familiarity with the target variety may account for variety-specific response accuracy. 
+
+Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
+Absolute interrogatives in Standard Peninsular Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
+Caribbean Spanish, on the other hand, has a distinctive nuclear hat pattern [See @hualde2015intonational].
+Our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
+
+A final possibility is that speech rate differences associated with the speakers of the stimuli we used may have resulted in some varieties being more or less difficult for the learners [See @baese2019perceptual]. 
+In an exploratory analysis of the auditory stimuli, we found that speech rate had no effect on response accuracy, as some of the varieties to which participants responded most accurately were also the fastest (e.g., the stimuli from our Mexican speaker). 
+See Figure \@ref(fig:plot-sm-random-speech-rate) of the supplementary materials for visualizations and further discussion.
+
+In sum, the present work contributes to our knowledge of an understudied construct, empathy, as it pertains to speech. 
+Additionally, this is the first time, to our knowledge, that drift diffusion models have been used to analyze behavioral data relating to empathy in SLA. 
+We also underscore the general need for models of L2 phonology, such as the SLM-r [@flege2021revised], PAM-L2 [@Best2007], L2LP [@VanLeussen2015], etc., to address the acquisition process beyond the level of the segment. 
+There is still a paucity of research with regard to how perception of intonation develops in L2 learning, particularly with regard to how individual pragmatic differences account for learner outcomes. 
+A complete model of speech learning should account for both causal prediction and imputation at the segmental and suprasegmental levels. 
+The present study aimed to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition. 
+
+While the findings of our research suggest there is a relationship between target language proficiency and empathy, it is important to underscore that we do not make any claims about causality. 
+Future research would benefit from considering the learnability of empathy [i.e., @lam2011empathy; @bertrand2018learning] as it relates to L2 outcomes. 
+Furthermore, the cross-sectional design of the present work is not ideal for addressing how empathy levels affect the rate at which perception of L2 intonation develops. 
+Only longitudinal data can appropriately address this issue. 
+On that note, at this time, research on speech perception and empathy is limited to intonation. 
+A fruitful avenue for novel research ought to examine how empathy is related to perception and spoken word recognition at the segmental level. 
+Other topics of interest include the relationship between empathy and variation in speech processing with regard to dialectal differences in monolinguals and L2 learners.
+
+# Conclusion
+
+The present study investigated the development of L2 perception of intonation. 
+Specifically, this study explored the relationship between target language proficiency and an individual pragmatic skill, empathy, in the process of learning Spanish as a second language by analyzing the perception and processing of intonation in questions and statements. 
+We find that perception and processing of intonation develops in tandem with proficiency in the target language and interacts with individual empathy levels, supporting the general conclusion that higher empathic individuals, in comparison with lower empathic individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations.
+Importantly, increased sensitivity does not necessarily entail increased processing speed. 
+The results motivate the inclusion of measures of pragmatic skill, such as empathy, to better account for intonational meaning processing and sentence comprehension in second language acquisition research.

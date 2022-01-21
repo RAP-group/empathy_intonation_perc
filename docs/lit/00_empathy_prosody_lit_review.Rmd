@@ -1,0 +1,165 @@
+guiora_1968
+
+- first to hypothesize that the capacity for empathy contributes to the mastery of the pronunciation of a second language
+- empathy test scores compared with ratings of pronunciation authenticity 
+- Empathy measured as accuracy recognizing changes in micro-momentary facial expressions in video clips
+- Dubious operationalization of empathy and questionable external validity
+- Small sample size (n = 10, n = 30), does not present results (this is a report about a presentation)
+
+
+
+
+guiora1972empathy
+
+- Empathy linked to L2 pronunciation (series of studies we investigated the hypothesis that empathy plays a significant role in the ability to authentically pronounce a second language.)
+- 411 Learners of Japanese, Chinese-Mandarin, Thai, Spanish and Russian from Defense Language Institute 
+- Given battery of tests to measure empathy (TAT, PPT, LET, MME)
+- Low overall correlation, split data by language
+- found positive correlation between MME and pronunciation authenticity for some languages 
+- higher empathy measured as seeing more changes in facial expressions in film clip (later failed to replicate. see taylor1971psychological)
+
+About this research: cognitive aspects of language talent: "empathy in speaker and learning a foreign accent is perhaps not a myth, but a must to be further elucidated" p 73
+
+More tidbits: 
+
+the earliest attempts to measure empathy: 
+  Dymond (1948) (score TAT responses, Thematic Apperception Test)
+  Dymond, Hughes, & Raabe (1952)
+  Feffer (1959)
+  Mahoney (1960)
+Approaches from clinical research (motivation for Guiora's MME technique): 
+  Wallach and Strupp (1960)
+  Truax (1963)
+  Haggard and Isaacs (1966)
+
+
+
+
+guiora1972effects
+
+- Empathy: can be conceptualized as a comprehending modality alongside inference and intuition 
+- Empathy: a process of comprehending in which a temporary fusion of self-object boundaries permits an immediate emotional apprehension of the affective experience of another, this sensing being used by the cognitive functions to gain understanding of the other.
+- 87 students, half given alcohol
+- Study touted as evidence that empathy affects L2 pronunciation, but didn't measure empathy directly
+
+
+
+brown1973affective
+
+- call for study of affective variables
+- at time (1973), understudied in SLA
+- 'Empathy is the process of “putting yourself into someone else's shoes,” of reaching beyond the self and understanding and feeling what another person is understanding or feeling'
+- language is one of the primary means of empathizing
+- need to discover if empathy is something one can learn (for discussion)
+- may be a relationship for speaking only (based on Guiora's work), and not for comprehending
+
+
+
+
+
+guiora1979personality
+
+- theoretical paper, pushing for construct validity in SLA
+- rehashes language ego ideas from previous work, focus on L2 pronunciation
+- rehashes MME test of empathy from 1972empathy paper
+- concludes that follow ups suggest MME was unreliable measure of empathy, questionable internal validity
+
+
+
+
+
+
+rota2009cognitive
+
+- investigated crucial cognitive factors and tested their relevance in groups of subjects classified on the basis of their proficiency and talent in L2 pronunciation
+- empathy: the ability to perceive and feel the emotional states of others, the emotional resonance that takes place in an individual when he/she engages in an affective communication or in an emotional exchange
+- alternative perspective: emphasizes the cognitive components of empathy, defines it as cognitive understanding of the other’s situation, based on the capacity of assuming his/her point of view on things (the perspective taking hypothesis, Hogan 1969)
+- in study: 
+  - used E-Scale, a psychometrically sound instrument devised by Leibetseder and colleagues (2001)
+  - operationalize empathy as the effort to identify with persons in fictitious or real-life situations (Leibetseder et al. 2007)
+  - assess L2 german pronunciation, search for correlations with a battery of measures (proficiency, talent, scores on the Modern Language Aptitude Test (MLAT), Hindi (as an unknown language) imitation and E-IQs scores) 
+  - arbitrarily partition subjs into 3 groups based on E-IQ (talented, average talent, anti-talent)
+  - found correlations described as being in the "weak-middle" range 
+  - conclude: the theory of Empathy in speaking and learning a foreign accent is perhaps not a myth, but a must to be further elucidated (p. 73)
+
+
+
+
+chen2013empathy
+
+- talks about the role of empathy as a contributor to intercultural communicative competence. 
+- proposes that understanding who we are culturally is the first step to becoming empathetic towards other cultures. 
+- The second step is to realize the differences between one's own culture and foreign cultures. 
+
+
+
+
+
+HU2013366
+
+- revisits individual differences in L2 pronunciation
+- goal is to investigate behavioural and neurobiological predictors of advanced L2 learning
+- phonetic coding ability and empathy, but not phonological working memory, predict L2 pronunciation aptitude in advanced learners
+- acquisition of L2 pronunciation aptitude is dynamic process, requiring variety of neural resources at different processing stages over time
+- used empathy quotient
+- 2 tasks: sentence imitation and sentence discrimination
+
+
+
+
+
+liu2017
+
+- proposes that emotion factors (motivation, attitude, interest, self-confidence, self-esteem, anxiety and empathy) directly influence the acquisition behavior of second language learners. 
+- proposes countermeasures for mobilizing positive emotion in L2 classroom
+- nothing great here, but considers the construct in the context of teachers being more empathetic towards beginning learners
+
+
+
+gholamrezapour2019empathy
+
+- investigated the relationship between empathy and authentic pronunciation
+- 69 Iranian undergraduate EFL learners
+- Basic Empathy Scale (BES: Jolliffe & Farrington, 2006)
+- oral interview twice (before and after segmental form-focused instruction)
+- those in the high-level group (i.e., more empathic learners) were more successful in acquiring authentic pronunciation than those in the low-level group
+- sketchy evaluation of pronunciation, sketchy stats (averaged ratings, t-test of arbitrarily dichotemized groups)
+
+
+
+
+
+- prod
+  - Henriksen, Geeslin, and Willis (2010) +
+    - production study, study abroad in Leon Spain, pre/post
+    - declaratives, absolute interrogatives, and pronominal interrogatives
+    - most learners modify intonational patterns (pitch accent and boundary movements) through an increase in frequency of use of their more dominant intonation patterns and/or changes in their final boundary tone inventory
+  - Thornberry (2014)
+    - pre/post study abroad, 11 adult learners
+    - production of absolute interrogatives and declarative statements
+    - some of the learners begin to produce the final fall associated with absolute interrogatives in Argentine Spanish (those that developed meaningful relationships with natives)
+  - Craft (2015)
+    - 6 week study abroad program in Valencia Spain
+    - production of declarative and absolute interrogatives
+    - learners improved but did not become native-like
+  - Trimble (2013)
+    - production of broad focus declaratives and absolute interrogatives during study abroad in Venezuela
+    - intonation was different at end of program for most learners, 
+    - most improved declaratives, only one improved interrogatives
+    - better outcomes in informal production, 
+    - increased use of spanish and high social integration associated with production gains
+
+- perception
+  - Nibert (2005): 
+    - perception of intonational phrasing patterns (en, sp) : 
+    - interpret meaning contrasts created through intermediate phrasing (lilas y lirio amarillos)
+    - shows gradual development, native-like perception possible
+    - "L2 learner’s perception and interpretation of utterance-medial H- in Spanish develop gradually over time"
+  - Nibert (2006): 
+    - same as Nibert (2005) but with beginners
+    - aims to shed light on full access full transfer vs. full access without transfer (she goes with full access full transfer)
+    - learners show some (but limited) accuracy, completing developmental picture: perception of intonation develops gradual with proficiency 
+  - Trimble (2013): 
+    - statements vs. yes-no questions, gating task, indicate whether utterance was statement or y/n question, 
+    - statements more accurate, familiarity with variety improved accuracy (american english and peninsular spanish more similar in intonational characteristics in y/n questions than am eng and venezuelan spanish)
+  - Brandle et al (2020)

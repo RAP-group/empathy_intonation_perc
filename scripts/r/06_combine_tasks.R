@@ -1,7 +1,10 @@
 # Combine tasks ---------------------------------------------------------------
 #
-# This script takes the empathy quotient, lextale, and 2afc data and combines 
-# it into a single dataframe for learners. 
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
+# - This script takes the empathy quotient, lextale, and 2afc data and 
+#   combines it into a single dataframe for learners.
 #
 # -----------------------------------------------------------------------------
 

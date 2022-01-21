@@ -1,7 +1,10 @@
 # Tidy lexTALE data -----------------------------------------------------------
 #
-# Get empathy quotient data from exp directory by loading all .csv's
-# Filter for empathy block and score according to the following criteria: 
+# Author: Joseph V. Casillas
+# Last update: 20211221
+# 
+# - Get empathy quotient data from exp directory by loading all .csv's
+# - Filter for empathy block and score according to the following criteria: 
 # 
 # -----------------------------------------------------------------------------
 

@@ -1,8 +1,12 @@
 # Load all data ---------------------------------------------------------------
 #
-# This script sources libraries and helpers and loads all tidy data
+# Author: Joseph V. Casillas
+# Last update: 20211221
+#
+# - This script sources libraries and helpers and loads all tidy data
 #
 # -----------------------------------------------------------------------------
+
 
 
 
@@ -11,6 +15,7 @@
 source(here::here("scripts", "r", "01_helpers.R"))
 
 # -----------------------------------------------------------------------------
+
 
 
 
@@ -36,13 +41,24 @@ learners  <- read_csv(here("data", "tidy", "learners_all_tasks_tidy.csv")) %>%
 natives   <- read_csv(here("data", "tidy", "natives_2afc_tidy.csv"))
 full_2afc <- read_csv(here("data", "tidy", "complete_2afc_tidy.csv"))
 id_remove <- readRDS(here("data", "tidy", "participants_removed_list.Rds"))
+id_return <- readRDS(here("data", "tidy", "participants_returned_vector.Rds"))
 
 # -----------------------------------------------------------------------------
+
 
 
 
 # Load all mods ---------------------------------------------------------------
 
 all_mods <- load_models(path = here("models"), obj_type = "rds")
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Load posteriors -------------------------------------------------------------
+
+ddm_estimates <- read_csv(here("data", "tidy", "ddm_estimates.csv"))
 
 # -----------------------------------------------------------------------------

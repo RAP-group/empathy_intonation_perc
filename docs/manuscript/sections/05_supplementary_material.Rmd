@@ -1,0 +1,232 @@
+# On-line supplementary material
+
+## Traditional analyses
+
+This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
+
+**Learner response accuracy**. The population effects of the response accuracy model were specified in the following manner: 
+
+$$
+\begin{aligned}
+\text{is_correct}_{ij} &\sim Bernoulli\left(p_{ij}, m_{ij}\right) \\
+\text{logit}\left(p_{ij}\right) &= \beta_{0} + \beta_{1} * question\_type + \beta_{2} * LexTALE + \beta_{3} * EQ + \\ 
+ & \ \ \ \ \beta_{4} * question\_type * LexTALE * EQ 
+\end{aligned}
+$$
+
+We employed the `0 + Intercept` syntax of `brms` and set weakly informative priors as follows: 
+
+$$
+\begin{aligned}
+\beta  &\sim Normal(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
+\end{aligned}
+$$
+
+The summary of the response accuracy model is avaibale in Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
+The information provided in this table is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) in the manuscript. 
+
+```{r, 'table-learner-accuracy-by-utterance-type'}
+read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = "c")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
+    caption = "Summary of the posterior distribution modeling 
+    response accuracy as a function of utterance type, LexTALE, and 
+    Empathy quotient. The table includes posterior medians, the 95% HDI, 
+    the percentage of the HDI within the ROPE, and the maximum probability 
+    of effect (MPE).",
+    label = "table-learner-accuracy-by-utterance-type")
+```
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+
+## Drift diffusion models
+
+Drift Diffusion Models (DDM), also referred to as Wiener Diffusion Models and Decision Diffusion Models, represent our preferred method for analyzing the data from our 2AFC task. 
+DDMs are rarely used in SLA research, though they are commonplace in psychology. 
+The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
+Together these parameters give rich information about the processes believed to underpin decision making. 
+Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
+In linguistics, particularly in psycholinguistics, data of this nature derived from 2AFC tasks are often analyzed using separate models, one for responses, and another for response times (as we have done in our so-called 'traditional analyses').^[Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known and the resources for implementing become more user-friendly.] 
+As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
+The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulations. 
+For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
+We then summarize and report these posterior distributions for statistical inferences. 
+
+The no-pooling models were fit using the following specification in `brms`: 
+
+```r
+  rt_raw | dec(is_correct) ~ 0 + sentence_type,
+  bs ~ 0 + sentence_type, 
+  ndt ~ 0 + sentence_type, 
+  bias ~ 0 + sentence_type
+```
+
+and the priors were: 
+
+```r
+prior("normal(0, 1)", class = "b"),
+prior("normal(0, 5)", class = "b", dpar = "bs"),
+prior("normal(0.2, 1)", class = "b", dpar = "ndt"),
+prior("normal(0.5, 1)", class = "b", dpar = "bias")
+```
+
+The complete code used to fit the models are available in `09_ddm.R` in the r scripts directory. 
+
+**Measurement-error models**. The measurement error models fit to the boundary separation and drift rate data were specified to include the standard error around each posterior median for &alpha; and &delta;: 
+
+$$
+\begin{split}
+\alpha &\sim Normal\left(\alpha_{n,TRUE}, SE_{\alpha}\right) \\
+\delta &\sim Normal(\delta_{n,TRUE}, SE_{\delta})
+\end{split}
+$$
+
+The priors for the drift rate model were: 
+
+$$
+\begin{aligned}
+\alpha &\sim Normal(1, 0.5) \\
+\beta  &\sim Normal(0, 0.3)  \\
+\tau   &\sim Cauchy(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
+\end{aligned}
+$$
+
+and the priors for the boundary separation model were: 
+
+$$
+\begin{aligned}
+\alpha &\sim Normal(2, 0.5) \\
+\beta  &\sim Normal(0, 0.5)  \\
+\tau   &\sim Cauchy(0, 0.3) \\
+\sigma &\sim Cauchy(0, 0.1) \\
+\rho   &\sim LKJcorr(2)
+\end{aligned}
+$$
+
+To specify this type of model in `brms` we use the `resp_se` function, as follows: 
+
+```r
+estimate | resp_se(se, sigma = TRUE) ~ 1 + # Criterion
+  q_sum * lextale_std * eq_std +           # Population-level effects
+  (1 + q_sum * lextale_std * eq_std | participant) # Group-level effects
+```
+
+
+Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-mem-bs-dr-estimates) in the main document. 
+
+```{r, 'table-ddm-bs-dr'}
+read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
+  mutate(Model = case_when(
+    Model == "Boundary separation" & Parameter == "Intercept" ~ "Boundary", 
+    Model == "Boundary separation" & Parameter == "Question type" ~ "separation", 
+    Model == "Boundary separation" & !(Parameter %in% c("Intercept", "Question type")) ~ " ", 
+    Model == "Drift rate" & Parameter == "Intercept" ~ "Drift rate", 
+    Model == "Drift rate" & Parameter != "Intercept" ~ " ", 
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 5)), 
+    caption = "Summary of the posterior distribution modeling 
+    boundary separation and drift rate as a function of question type, 
+    LexTALE, and Empathy quotient. The table includes posterior medians, 
+    the 95% HDI, the percentage of the HDI within the ROPE, and the maximum 
+    probability of effect (MPE).",
+    label = "table-ddm-bs-dr")
+```
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+
+## Supplementary analyses {#supplementary-analyses}
+
+In this section we present supplementary analyses, all of which are exploratory in nature. 
+
+**D'**. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
+One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
+The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that their accuracy. 
+That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative y/n) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
+Learner sensitivity to the different Spanish varieties represented in the stimuli pattern in the same manner, i.e., more sensitivity to the Peninsular variety and less sensitivity to the Cuban variety (right panel of Figure \@ref(fig:plot-learner-dp-utterance-variety)).
+Table \@ref(tab:table-dp-utterance-variety) summarizes the posterior of these exploratory analyses. 
+
+(ref:plot-learner-dp-utterance-variety) Exploratory analysis of d' as a function of utterance type and speaker variety. Points represent posterior medians &pm;66% and 95% credible intervals.
+
+```{r, 'plot-learner-dp-utterance-variety', fig.cap="(ref:plot-learner-dp-utterance-variety)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_dp_utterance_variety.pdf")
+  )
+```
+
+
+```{r, 'table-dp-utterance-variety'}
+read_csv(here("tables", "dp_utterance_variety.csv"), col_types = cols(.default = "c")) %>% 
+  mutate(Model = case_when(
+    Model == "Utterance type" & Parameter == "Declarative broad focus" ~ "Utterance type", 
+    Model == "Utterance type" & Parameter != "Declarative broad focus" ~ " ", 
+    Model == "Variety" & Parameter == "Andalusian" ~ "Variety", 
+    Model == "Variety" & Parameter != "Andalusian" ~ " " 
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 3)), 
+    caption = "Summary of the posterior distribution modeling 
+    d' as a function of question type or speaker variety. The table 
+    includes posterior medians, the 95% HDI, and the maximum 
+    probability of effect (MPE).",
+    label = "table-dp-utterance-variety")
+```
+
+**Randomization check across participants**. For the purposes of our research questions, it was important that every participant be presented with stimuli from all of the Spanish varieties to which we had access. 
+Recall that the 2AFC task contained 64 items, 16 of each utterance type. Using javascript we assigned each variety an equal probability of being selected in a given trial (0.125). 
+To ensure that our randomization worked as planned (i.e., with each variety represented approximately equally across all trials and all participants), we calculated the average number of times each variety was presented in the data set (n = `r n_learners`, and `r nrow(learners)` trials). 
+One can observe in Figure \@ref(fig:plot-sm-random-speaker-check) that this is indeed the case. 
+
+(ref:plot-sm-random-speaker-check) Average number of tokens (&pm;1 SD) presented from each speaker variety across all 14,400 trials. The experiment was programmed such that each of the 8 varieties had an equal probability of being presented (`r 1/8 * 100`%) across 64 experimental trials.
+
+```{r, 'plot-sm-random-speaker-check', fig.cap="(ref:plot-sm-random-speaker-check)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_random_speaker_check.pdf")
+  )
+```
+
+*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
+Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians &pm;66% and 95% HDI of standardized articulation rate for each variety. 
+The plot shows that generally there was not a lot of variability between varieties. 
+Though some of the slower varieties coincide with those associated with higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), the opposite is also true, e.g., Mexican Spanish. 
+
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians &pm;66% and 95% HDI.
+
+```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_speech_rate.pdf")
+  )
+```
+
+
+
+
+
+
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Reproducibility information
+
+**About this document**  
+
+This document was written in RMarkdown using `papaja` [@R-papaja].
+
+**Session info**  
+
+```{r, 'session-info', comment=""}
+devtools::session_info()$platform
+as.data.frame(devtools::package_info())[, c(3, 8)]
+```

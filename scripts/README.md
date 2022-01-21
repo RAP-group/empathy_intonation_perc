@@ -14,18 +14,24 @@ Directory containing Praat and R scripts.
     └── r
         ├── 00_libs.R
         ├── 01_helpers.R
-        ├── 02_tidy_empathy.R
-        ├── 03_tidy_lextale.R
-        ├── 04_tidy_2afc.R
-        ├── 05_tidy_speech_rate.R
+        ├── 02_tidy_speech_rate.R
+        ├── 03_tidy_empathy.R
+        ├── 04_tidy_lextale.R
+        ├── 05_tidy_2afc.R
         ├── 06_combine_tasks.R
         ├── 07_load_data.R
         ├── 08_bda.R
-        ├── 09_tables.R
-        ├── 10_plots.R
-        ├── 11_small_data.R
+        ├── 09_ddm.R
+        ├── 10_dprime.R
+        ├── 11_tables.R
+        ├── 12_plots.R
+        ├── 13_small_data.R
         ├── 99_build_2afc_stimuli.R
         ├── 99_build_2afc_trials.R
         ├── 99_build_empathy_quotient_trials.R
         ├── 99_build_lextale_trials.R
+        ├── 99_explore_learners.R
+        ├── 99_explore_natives.R
+        ├── 99_explore_natives.html
+        ├── 99_explore_speech_rate.R
         └── 99_project_details.R

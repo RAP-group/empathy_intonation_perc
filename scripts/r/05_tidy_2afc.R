@@ -1,8 +1,11 @@
 # Tidy 2afc data --------------------------------------------------------------
 #
-# Get 2afc data from exp directory by loading all .csv's
-# Select relevant rows and Filter for 2afc block
-# Correct columns names and combine monolingual and L2 data
+# Author: Joseph V. Casillas
+# Last update: 20211221
+# 
+# - Get 2afc data from exp directory by loading all .csv's
+# - Select relevant rows and Filter for 2afc block
+# - Correct columns names and combine monolingual and L2 data
 #
 # -----------------------------------------------------------------------------
 
@@ -126,6 +129,8 @@ returned <- c(
   "PARTICIPANT_empathy_intonation_perc2_2021-03-20_21h54.32.690.csv"
   )
 
+# Save "returned" files for bookkeeping
+saveRDS(returned, here("data", "tidy", "participants_returned_vector.Rds"))
 
 # Combine path and file names to filter them out
 path_returned <- paste0(path, returned)

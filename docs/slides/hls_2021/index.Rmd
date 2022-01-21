@@ -25,7 +25,7 @@ options(htmltools.dir.version = FALSE)
 ```
 
 ```{r, 'source-libs', message=F, echo=F}
-source(here::here("scripts", "r", "12_small_data.R"))
+source(here::here("scripts", "r", "13_small_data.R"))
 library("fontawesome")
 library("RefManageR")
 ```
