@@ -14,10 +14,10 @@ We focus on the role of empathy in the development of L2 prosody by analyzing th
 ## Background and motivation 
 
 **L2 acquisition of prosody**. The difficulties associated with learning an additional language in adulthood are numerous. 
-More often than not the focus falls on individual sounds, or segments, though we know that adults who learn an L2 are faced with suprasegmental challenges as well. <!-- kp: In general, I am not the biggest fan of "We know that XYZ". I would have said "There is evidence that". -->
+More often than not the focus falls on individual sounds, or segments, though there is evidence that adults who learn an L2 are faced with suprasegmental challenges as well [@henriksen2010development; @thornberry2014l2; @craft2015acquisition, among others]. 
 Concretely, L2 learners often struggle with intonation, i.e., melodic variation at the utterance level. 
 In normal discourse, speakers use intonation to indicate syntactic structure, whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
-Notably, the manner in which intonation is mapped to meaning is often language-specific. <!---- Do we need refs for 19 and 20? ---->
+Notably, the manner in which intonation is mapped to meaning is often language-specific. 
 For these reasons, the development of L2 intonation represents a facet of L2 phonological learning that often results in comprehension and communication difficulties [@trofimovich2006learning]. 
 
 Intonation has a semantic function and through adequate cognitive decoding of of the signal a listener can interpret the intention of a given utterance. 
@@ -28,7 +28,7 @@ Moreover, the use of L1 prosodic features when speaking the target language can 
 As noted by @levis2016accent prosody is also "[...] critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity"  (p. 154). 
 
 For learners interested in obtaining native-like pronunciation, intonation is particularly relevant, as prosodic features have been found to be important cues in the perception of non-target-like accents, above and beyond other features of language [@munro1995nonsegmental; @jilka2000testing; @pettorino2014transplanting]. 
-Nonetheless, intonation is not traditionally taught in the L2 classroom, perhaps because it not common knowledge that proper control of prosody allows the learner not only to produce speech that is more intelligible, but also to comprehend speech in varied communicative settings [@sp_pronunciation_ch08]. <!--- possible missing word - "perhaps because it IS not", ---->
+Nonetheless, intonation is not traditionally taught in the L2 classroom, perhaps because it is not common knowledge that proper control of prosody allows the learner not only to produce speech that is more intelligible, but also to comprehend speech in varied communicative settings [@sp_pronunciation_ch08]. 
 Primary focus is generally placed on syntax and morphology, with target language phonology receiving much less, if any, attention [@sp_pronunciation_ch00]. 
 When target language pronunciation is addressed, it often focuses on segmental elements [@sp_pronunciation_ch08], despite the fact that merely being intelligible at the segmental level does not necessarily imply one will be pragmatically understood. 
 As a result, some research has found that intonation is one of the last aspects of L2 phonology that learners acquire [e.g., @kvavik1974theories]. 
@@ -56,10 +56,7 @@ The investigation lends support to the general notion that the L2 intonation sys
 
 In a similar vein, @bustin_2020 also investigated the perceptual development of intonation in questions and statements in L2 Spanish. 
 Specifically, @bustin_2020 examined the effect of L2 proficiency on the perception of broad-focus and narrow-focus declaratives and polar and absolute interrogatives in adult L2 learners of Spanish.
-The learners completed an AX discrimination task in which they were presented audio and visual stimuli in matched and mismatched conditions. 
-<!-- kp: Was the task used in the Bustin study a true AX discrimination task, given that it was asking whether audio and visual stimuli matched, rather than two auditory stimuli? -->
-<!-- The matched condition included auditory stimuli that were prosodically congruent with written text (e.g., declarative intonation with a declarative sentence). 
-The mismatched condition included auditory stimuli that were prosodically incongruent with the written text (e.g., interrogative intonation with a declarative sentence). -->
+The learners completed a forced-choice task in which they were presented audio and visual stimuli in matched and mismatched conditions. 
 The participants' task was to determine whether the sentence presented aurally was the same as the sentence presented visually. 
 @bustin_2020 found that perception and processing of L2 intonation improved in conjunction with proficiency in Spanish, though it was conditional on the utterance type, with polar ('yes/no') interrogatives being more difficult to process and acquire when compared with simple statements. 
 The authors concluded that perception of L2 intonation develops gradually in conjunction with L2 proficiency.
