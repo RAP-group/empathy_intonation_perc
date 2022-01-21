@@ -186,7 +186,7 @@ Recall that the 2AFC task contained 64 items, 16 of each utterance type. Using j
 To ensure that our randomization worked as planned (i.e., with each variety represented approximately equally across all trials and all participants), we calculated the average number of times each variety was presented in the data set (n = `r n_learners`, and `r nrow(learners)` trials). 
 One can observe in Figure \@ref(fig:plot-sm-random-speaker-check) that this is indeed the case. 
 
-(ref:plot-sm-random-speaker-check) Make sure each variety represented equally over course of experiment.
+(ref:plot-sm-random-speaker-check) Average number of tokens (&pm;1 SD) presented from each speaker variety across all 14,400 trials. The experiment was programmed such that each of the 8 varieties had an equal probability of being presented (`r 1/8 * 100`%) across 64 experimental trials.
 
 ```{r, 'plot-sm-random-speaker-check', fig.cap="(ref:plot-sm-random-speaker-check)"}
 knitr::include_graphics(
@@ -194,9 +194,12 @@ knitr::include_graphics(
   )
 ```
 
-*Speech rate*. This is Figure \@ref(fig:plot-sm-random-speech-rate)
+*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
+Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians &pm;66% and 95% HDI of standardized articulation rate for each variety. 
+The plot shows that generally there was not a lot of variability between varieties. 
+Though some of the slower varieties coincide with those associated with higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), the opposite is also true, e.g., Mexican Spanish. 
 
-(ref:plot-sm-random-speech-rate) Make sure each variety represented equally over course of experiment.
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians &pm;66% and 95% HDI.
 
 ```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)"}
 knitr::include_graphics(
@@ -223,7 +226,7 @@ This document was written in RMarkdown using `papaja` [@R-papaja].
 
 **Session info**  
 
-```{r, session-info, comment=""}
+```{r, 'session-info', comment=""}
 devtools::session_info()$platform
 as.data.frame(devtools::package_info())[, c(3, 8)]
 ```
