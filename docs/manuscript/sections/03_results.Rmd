@@ -1,6 +1,6 @@
 # Results
 
-## Response accuracy and response times
+## Response accuracy
 
 Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) (left panel) summarizes the posterior distribution of the omnibus response accuracy model, illustrating point estimates &pm;66% and 95% HDIs in graphical form. 
 An equivalent summary of the posterior distribution in table format is provided in the supplementary materials (See Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
@@ -27,7 +27,7 @@ For all utterance types response accuracy increased as proficiency increased.
 Though the proficiency effect was most visually obvious for y/n questions `r report_posterior(accuracy_summary, param = "LexTALE")` and wh- questions `r lt_wh`, this was also the case for broad focus `r lt_bf` and narrow focus `r lt_nf` declaratives. 
 There was no evidence that empathy level predicted response accuracy for y/n questions `r report_posterior(accuracy_summary, param = "Empathy quotient")`, however for wh- questions `r eq_wh`, broad focus declaratives `r eq_bf`, and narrow focus `r eq_nf` declaratives we find compelling evidence that the effect is positive. 
 
-(ref:plot-learner-accuracy-lt-eq-by-utterance-type) Response accuracy: Probability of a correct response in the logistic space as a function of LexTALE score (left panel) and empathy quotient (right panel) for each utterance type. Thin lines represent 300 draws from the posterior distribution for each condition.
+(ref:plot-learner-accuracy-lt-eq-by-utterance-type) Conditional effects of a correct response as a function of proficiency (LexTALE score) (left panel) and empathy quotient (right panel) for each utterance type. Thin lines represent 300 draws from the posterior distribution for each condition and illustrate uncertainty (95% HDI) around the posterior medians (thick lines).
 
 ```{r, 'plot-learner-accuracy-lt-eq-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-lt-eq-by-utterance-type)"}
 knitr::include_graphics(
@@ -40,11 +40,11 @@ We used the posterior distribution to estimate the probability that this effect 
 We found evidence that the proficiency effect was modulated by empathy quotient scores for wh- questions `r lt_eq_wh`, though not for y/n questions `r report_posterior(accuracy_summary, param = "LexTALE:EQ")`, broad focus declaratives `r lt_eq_bf`, nor narrow focus declaratives `r lt_eq_nf`. 
 This relationship is illustrated in Figure \@ref(fig:plot-learner-accuracy-3way). 
 Specifically, we plot conditional effects of response accuracy as a function of proficiency and empathy quotient for the y/n and wh- interrogatives.
-In the left panel of Figure \@ref(fig:plot-learner-accuracy-3way), one observes a positive correlation between response accuracy and proficiency that remains constant at standardized empathy quotient values of -1, 0 and +1 for the y/n questions. 
-For the wh- questions (right panel), on the other hand, we see that the slope of the proficiency effect increases for higher empathy quotient values.  
+In the left panel of Figure \@ref(fig:plot-learner-accuracy-3way), one observes a positive correlation between response accuracy and proficiency that remains constant at standardized empathy quotient values of &minus;1, 0 and &plus;1 for the y/n questions. 
+For the wh- questions (right panel), on the other hand, we see that the slope of the proficiency effect increases for higher empathy quotient values. 
 That is to say, for wh- questions, at a given proficiency level, learners with higher empathy (black lines) tended to respond more accurately. 
 
-(ref:plot-learner-accuracy-3way) Response accuracy: Probability of a correct response as a function of empathy quotient and LexTALE score for each question type.
+(ref:plot-learner-accuracy-3way) Probability of a correct response as a function of LexTALE score while holding empathy quotient scores constant at &minus;1, 0 and &plus;1 standard deviations from th mean for each question type. Thin lines represent 300 draws from the posterior distribution and indicate uncertainty (95% HDI) around the posterior medians (thick lines).
 
 ```{r, 'plot-learner-accuracy-3way', fig.cap="(ref:plot-learner-accuracy-3way)"}
 knitr::include_graphics(
@@ -52,17 +52,12 @@ knitr::include_graphics(
   )
 ```
 
-
-
-
-
-
-The speaker variety grouping effect from the omnibus model provided estimates of overall participant accuracy for each speaker variety (See Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)). 
+With regard to response accuracy and response time differences based on speaker variety, we used the speaker variety grouping effect from the omnibus model to obtain posterior estimates (See Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)).
 As was the case with the monolingual Spanish pilot data, learners were least accurate when responding to the Cuban variety and most accurate when responding to the standard Peninsular and Mexican varieties. 
 Response accuracy to a given variety did not correlate with response times. 
-For instance, as mentioned, learners were least accurate when responding to the Cuban stimuli, but had average response times similar to the grand mean for this variety. 
+For instance, although learners were least accurate when responding to the Cuban stimuli, they had average response times similar to the grand mean for this variety. 
 
-(ref:plot-learner-accuracy-rt-by-speaker-variety) Group-level estimates of response accuracy and response time as a function of speaker variety. Red points represent posterior medians &pm;66% and 95% highest density credible intervals. The vertical dotted lines indicate the grand mean.
+(ref:plot-learner-accuracy-rt-by-speaker-variety) Grouping-level estimates of response accuracy and response time as a function of speaker variety. Red points represent posterior medians &pm;66% and 95% highest density credible intervals. The vertical dotted lines indicate the grand mean.
 
 ```{r, 'plot-learner-accuracy-rt-by-speaker-variety', fig.cap="(ref:plot-learner-accuracy-rt-by-speaker-variety)"}
 knitr::include_graphics(
@@ -82,9 +77,12 @@ knitr::include_graphics(
 
 ## Drift diffusion models
 
-This is Figure \@ref(fig:plot-mem-bs-dr-estimates)
+As described previously, we fit a drift diffusion model to each participants' data in order to obtain estimates for boundary separation (&alpha;) and drift rate (&delta;). 
+Specifically, we fit two Bayesian measurement error models with the same functional form: boundary separation or drift rate as a function of utterance type, proficiency (LexTALE score), and empathy quotient. 
+Given the high accuracy on declarative utterances, we focus our analyses on y/n and wh- interrogatives. 
+Figure \@ref(fig:plot-mem-bs-dr-estimates) provides a forest plot summarizing the two models. 
 
-(ref:plot-mem-bs-dr-estimates) Need a caption.
+(ref:plot-mem-bs-dr-estimates) Forest plot summary of boundary separation (&alpha;, white circles under purple distributions) and drift rate (&delta;, white triangles under orange distributions) error measurement models.
 
 ```{r, 'plot-mem-bs-dr-estimates', fig.cap="(ref:plot-mem-bs-dr-estimates)"}
 knitr::include_graphics(
@@ -92,12 +90,26 @@ knitr::include_graphics(
   )
 ```
 
+Averaging over utterance type and holding proficiency and empathy quotient constant at the distribution means, posterior medians were positive for both boundary separation `r report_posterior(ddm_summary, param = "Intercept", is_exp = F, mod = "Boundary separation")` and drift rate `r report_posterior(ddm_summary, param = "Intercept", is_exp = F, mod = "Drift rate")`. 
+Boundary separation was slightly lower in wh- questions `r report_posterior(ddm_summary, param = "Question type", is_exp = F, mod = "Boundary separation")`, suggesting that, overall, learners needed less information in order to make a decision when presented with interrogatives of this type. 
+Drift rate, on the other hand, was higher for wh- questions `r report_posterior(ddm_summary, param = "Question type", is_exp = F, mod = "Drift rate")`, which indicates that learners arrived at the decision threshold at a faster rate, and, thus, found this type of utterance to be easier. 
+This corresponds with the finding that overall learners were more accurate responding to wh- questions than y/n questions by approximately 10% `r wh_yn_diff`. 
+Taken together, we can surmise that the 'average' learner has a lower threshold of required information in order to make a decision and arrives at this threshold at a faster rate for wh- questions in comparison with y/n questions. 
 
+Crucially, in both models we also find evidence for a proficiency &times; empathy quotient interaction. 
+For both question types, boundary separation increased as a function of proficiency, but the association was conditional on empathy quotient score `r report_posterior(ddm_summary, param = "LexTALE:EQ", is_exp = F, mod = "Boundary separation")`, with low empathy individuals seeing little to no change in estimated &alpha;. 
+The effect was reversed for drift rate. 
+In this case, estimated &delta; increased as a function of proficiency in low empathy individuals, and higher empathy individuals, particularly those with higher proficiency levels, saw decreases in drift rate `r report_posterior(ddm_summary, param = "LexTALE:EQ", is_exp = F, mod = "Drift rate")`. 
+To illustrate more clearly the practical relevance of these interactions, we ran 2,000 simulations from the drift diffusion model. 
+Figure \@ref(fig:plot-ddm-simulations) plots the simulations for each interrogative type at low/high proficiency and empathy levels (&pm;2 standard deviations). 
+Individual lines represent random walks. 
+The walk ends when enough evidence is accumulated and a decision threshold (horizontal, discontinuous grey lines) is reached. 
+The upper threshold indicates a decision leading to a correct response and the lower threshold an incorrect response. 
+Thick red lines indicate the simulation average for correct/incorrect responses in each condition. 
+Focusing on the lower row of plots (high empathy), moving from left to right (low proficiency to high proficiency) within each question type, one observes (a) an increase in boundary separation (&alpha;), i.e. a greater distance between thresholds, via the horizontal grey lines, and (b) a decrease in drift rate (&delta;), i.e., a slower rate of information accumulation leading to a decision, via the horizontal distance of the red lines. 
+In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level. 
 
-
-This is Figure \@ref(fig:plot-ddm-simulations)
-
-(ref:plot-ddm-simulations) Two-thousand simulations of the drift diffusion model for interrogative utterances as a function of empathy quotient (low/high) and LexTALE score (low/high). Low and high levels represent &pm;2 standard deviations above/below the mean. Dark red lines represent the average decision time course.
+(ref:plot-ddm-simulations) Two-thousand simulations of the drift diffusion model for interrogative utterances as a function of empathy quotient (low/high) and LexTALE score (low/high). Low and high levels represent &pm;2 standard deviations above/below the mean. Horizontal, discontinuous grey lines indicate decision thresholds and dark red lines represent the simulation averages.
 
 ```{r, 'plot-ddm-simulations', fig.cap="(ref:plot-ddm-simulations)"}
 knitr::include_graphics(
