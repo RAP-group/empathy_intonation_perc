@@ -1,7 +1,7 @@
 # Dprime Models ---------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211220
+# Last update: 20220123
 #
 # - This script contains exploratory d' analyses, plots, and tables
 #
@@ -130,7 +130,7 @@ learner_dp_02 <- brm(
 plot_dp_variety <- as_tibble(learner_dp_01) %>% 
   select("b_Intercept", starts_with("b_speaker_variety"), -contains(":")) %>% 
   transmute(
-    Peninsular = b_Intercept, 
+    Madrileño = b_Intercept, 
     Andalusian = b_Intercept + b_speaker_varietyandalusian, 
     Argentine = b_Intercept + b_speaker_varietyargentine, 
     Chilean = b_Intercept + b_speaker_varietychilean, 

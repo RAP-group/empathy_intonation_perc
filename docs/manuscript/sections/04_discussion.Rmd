@@ -70,18 +70,18 @@ This question was motivated by @bustin_2020, who raised the possibility that dia
 Their study included stimuli from eight varieties of Spanish, though this factor was not considered in their analysis. 
 Building on @bustin_2020, our auditory stimuli also included eight distinct varieties of Spanish. 
 We found that, generally, speaker variety did indeed affect response accuracy. 
-As was the case with our pilot data from monolingual Spanish speakers, learners were most accurate responding to stimuli from the speaker of standard Peninsular Spanish, and least accurate when responding to the Cuban variety.
+As was the case with our pilot data from monolingual Spanish speakers, learners were most accurate responding to stimuli from the speaker of Peninsular-Madrileño Spanish, and least accurate when responding to the Cuban variety.
 Interestingly, accuracy with a given variety did not correlate with response times in a straightforward way. 
-For instance, participants did not respond faster to the standard Peninsular variety even though they were more accurate in their responses to this speaker. 
+For instance, participants did not respond faster to the Peninsular-Madrileño variety even though they were more accurate in their responses to this speaker. 
 
 The results of our study suggest that speaker variety does affect perception accuracy, though this does not necessarily map directly on to processing speed. 
 One possibility put forward in the literature is that the variety matters insomuch that it is familiar to the listener [see @perry2018influences; @trimble2013perceiving]. 
 In other words, learners may be more accurate and process speech faster when listening to a variety they know well. 
 Our study took into consideration familiarity, though the variety that was cited as being the most familiar, U.S. Spanish (`r familiarity$UnitedStates$perc`% of `r n_learners` responses), was not one of the varieties presented in the stimuli. 
-Mexican (`r familiarity$Mexico$perc`%) and Peninsular (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. Thus, familiarity with the target variety may account for variety-specific response accuracy. 
+Mexican (`r familiarity$Mexico$perc`%) and Peninsular-Madrileño (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. Thus, familiarity with the target variety may account for variety-specific response accuracy. 
 
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
-Absolute interrogatives in Standard Peninsular Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
+Absolute interrogatives in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
 Caribbean Spanish, on the other hand, has a distinctive nuclear hat pattern [See @hualde2015intonational].
 Our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
 

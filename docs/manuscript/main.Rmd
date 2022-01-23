@@ -59,7 +59,7 @@ author:
     affiliation   : "1"
     role:
       - Writing - Review & Editing
-  - name          : "Iván Andreu"
+  - name          : "Iván Andreu Rascón"
     affiliation   : "1"
     role:
       - Writing - Review & Editing

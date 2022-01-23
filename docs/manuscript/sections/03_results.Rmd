@@ -3,7 +3,7 @@
 ## Response accuracy
 
 Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) (left panel) summarizes the posterior distribution of the omnibus response accuracy model, illustrating point estimates &pm;66% and 95% HDIs in graphical form. 
-An equivalent summary of the posterior distribution in table format is provided in the supplementary materials (See Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
+An equivalent summary of the posterior distribution in table format is provided in the supplementary materials (See Table \@ref(tab:table-learner-accuracy-by-utterance-type)). 
 The log-odds of a correct response to an absolute interrogative utterance at the average proficiency and EQ levels was `r pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)`, or approximately `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median))) * 100, k = 2)`% `r report_posterior(accuracy_summary, param = "Intercept")`. 
 In comparison, all other utterance types were associated with an increase in the log odds of responding correctly. 
 The right panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) plots response accuracy of each utterance type in the probability space. 
@@ -53,7 +53,7 @@ knitr::include_graphics(
 ```
 
 With regard to response accuracy and response time differences based on speaker variety, we used the speaker variety grouping effect from the omnibus model to obtain posterior estimates (See Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)).
-As was the case with the monolingual Spanish pilot data, learners were least accurate when responding to the Cuban variety and most accurate when responding to the standard Peninsular and Mexican varieties. 
+As was the case with the monolingual Spanish pilot data, learners were least accurate when responding to the Cuban variety and most accurate when responding to the Peninsular-Madrileño and Mexican varieties. 
 Response accuracy to a given variety did not correlate with response times. 
 For instance, although learners were least accurate when responding to the Cuban stimuli, they had average response times similar to the grand mean for this variety. 
 

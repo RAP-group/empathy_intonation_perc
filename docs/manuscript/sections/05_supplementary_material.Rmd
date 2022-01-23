@@ -10,6 +10,8 @@ knitr::include_graphics(
   )
 ```
 
+
+
 ## Traditional analyses
 
 This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
@@ -203,6 +205,29 @@ knitr::include_graphics(
   here("figs", "manuscript", "sm_random_speaker_check.pdf")
   )
 ```
+
+
+**Auditory stimuli**. The auditory stimuli consisted of 8 varieties of Spanish: Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian.
+Table \@ref(tab:table-stimuli-descriptives) contains demographic information about the speakers. 
+
+```{r, speakers}
+tribble(
+  ~'Country', ~'City/Variety', ~'Gender', ~'Age', 
+  "Argentina", "Buenos Aires", "Male", 27, 
+  "Chile", "Santiago de Chile", "Female", 40, 
+  "Cuba", "Havana", "Female", 55, 
+  "Mexico", "Mexico City", "Female", 30, 
+  "Peru", "Lima", "Male", 30, 
+  "Puerto Rico", "Ponce", "Female", 35, 
+  "Spain", "Cádiz (Andalusia)", "Female", 35, 
+  "Spain", "Madrid", "Female", 27
+  ) %>% 
+  knitr::kable(format = "pandoc", 
+    caption = "Demographic information for the eight varieties of Spanish 
+    represented in the auditory stimuli.",
+    label = "table-stimuli-descriptives")
+```
+
 
 *Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
 Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians &pm;66% and 95% HDI of standardized articulation rate for each variety. 

@@ -7,7 +7,7 @@ Participants were recruited using the Prolific.ac online experimental platform a
 We estimated the task would take approximately 15 minutes to complete, thus each participant was paid $2.70 for completing all three tasks.
 The mean time to completion was approximately `r round(t_mean)` minutes. 
 The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the Northeastern US with no knowledge of any languages other than English or Spanish.
-They reported no hearing difficulties and were required to use headphones on a desktop computer. 
+They reported no hearing difficulties and were required to use headphones on a personal computer. 
 Upon beginning the experiment, all participants responded to the following screening questions: 
 1) What part of the US are you from?
 2) At what age did you begin learning Spanish?
@@ -30,7 +30,7 @@ Specifically, they responded to an on-screen prompt asking "Is this a question?"
 To respond participants typed '1' for 'yes' (i.e., "yes, this is a question") and '0' for 'no' (i.e., "no, this is not a question"). 
 
 The auditory stimuli consisted of 64 critical items, 16 of each utterance type. 
-To generate the stimuli, we recorded native Spanish speakers of eight different varieties (Cuban, standard Peninsular, Andalusian, Puerto Rican, Chilean, Argentinean, Mexican, and Peruvian). 
+To generate the stimuli, we recorded native Spanish speakers of eight different varieties (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
 The eight native speakers all produced the same 64 critical items. 
 All utterances were segmented using Praat [@praat] and normalized for peak intensity. 
 The 2AFC task included 64 trials in which the stimuli presented were randomized across speaker variety. 

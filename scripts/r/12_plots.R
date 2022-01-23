@@ -142,7 +142,7 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
   transmute(
     Andalusian    = `r_speaker_variety[andalusian,Intercept]`, 
     Argentine     = `r_speaker_variety[argentine,Intercept]`, 
-    Peninsular    = `r_speaker_variety[castilian,Intercept]`, 
+    Madrileño     = `r_speaker_variety[castilian,Intercept]`, 
     Chilean       = `r_speaker_variety[chilean,Intercept]`, 
     Cuban         = `r_speaker_variety[cuban,Intercept]`, 
     Mexican       = `r_speaker_variety[mexican,Intercept]`, 
@@ -181,7 +181,7 @@ learner_rt_by_speaker_variety <- learner_rt_01 %>%
   transmute(
     Andalusian    = `r_speaker_variety[andalusian,Intercept]`, 
     Argentine     = `r_speaker_variety[argentine,Intercept]`, 
-    Peninsular    = `r_speaker_variety[castilian,Intercept]`, 
+    Madrileño     = `r_speaker_variety[castilian,Intercept]`, 
     Chilean       = `r_speaker_variety[chilean,Intercept]`, 
     Cuban         = `r_speaker_variety[cuban,Intercept]`, 
     Mexican       = `r_speaker_variety[mexican,Intercept]`, 
@@ -191,7 +191,7 @@ learner_rt_by_speaker_variety <- learner_rt_01 %>%
   pivot_longer(everything(), names_to = "parameter", values_to = "estimate") %>% 
   mutate(parameter = fct_relevel(parameter, "Cuban", "Puerto Rican", 
     "Argentine", "Peruvian", "Andalusian", "Chilean", "Mexican", 
-    "Peninsular")) %>% 
+    "Madrileño")) %>% 
   ggplot(., aes(x = estimate, y = parameter)) + 
     coord_cartesian(xlim = c(-0.12, 0.12)) + 
     scale_y_discrete(position = "right") + 
@@ -514,7 +514,7 @@ ddm_yn <- ddm_sims %>%
     geom_hline(yintercept = 0, color = "black") + 
     geom_vline(xintercept = 0, color = "black") + 
     geom_hline(data = filter(bs_means, q_type == "yn"), 
-      aes(yintercept = threshold), color = "grey", lty = 3) + 
+      aes(yintercept = threshold), color = "grey35", lty = 3) + 
     labs(title = "y/n questions", y = "Boundary separation", x = "Time step") + 
     minimal_adj(base_size = 13)
 
@@ -536,7 +536,7 @@ ddm_wh <- ddm_sims %>%
     geom_hline(yintercept = 0, color = "black") + 
     geom_vline(xintercept = 0, color = "black") + 
     geom_hline(data = filter(bs_means, q_type == "wh"), 
-      aes(yintercept = threshold), color = "grey", lty = 3) + 
+      aes(yintercept = threshold), color = "grey35", lty = 3) + 
     labs(title = "wh- questions", y = NULL, x = "Time step") + 
     minimal_adj(base_size = 13)
 
@@ -572,7 +572,7 @@ sm_speech_rate <- as_tibble(native_stim_sr) %>%
     speaker_variety = case_when(
       speaker_variety == "r_speaker_variety[andalusian,Intercept]" ~ "Andalusian", 
       speaker_variety == "r_speaker_variety[argentine,Intercept]" ~ "Argentine", 
-      speaker_variety == "r_speaker_variety[castilian,Intercept]" ~ "Peninsular", 
+      speaker_variety == "r_speaker_variety[castilian,Intercept]" ~ "Madrileño", 
       speaker_variety == "r_speaker_variety[chilean,Intercept]" ~ "Chilean", 
       speaker_variety == "r_speaker_variety[cuban,Intercept]" ~ "Cuban", 
       speaker_variety == "r_speaker_variety[mexican,Intercept]" ~ "Mexican", 
@@ -611,7 +611,8 @@ sm_random_speaker_check <- learners %>%
   tally() %>% 
   ungroup() %>% 
   mutate(prop = n / 8, 
-         speaker_variety = tools::toTitleCase(speaker_variety)) %>% 
+         speaker_variety = tools::toTitleCase(speaker_variety), 
+         speaker_variety = str_replace(speaker_variety, "Castilian", "Madrileño")) %>% 
   ggplot(., aes(x = speaker_variety, y = n, fill = speaker_variety)) + 
     geom_hline(yintercept = 8, lty = 3, color = "black") + 
     stat_summary(fun.data = mean_sdl, geom = "pointrange", pch = 21, 
