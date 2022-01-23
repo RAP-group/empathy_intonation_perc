@@ -44,7 +44,7 @@ In the left panel of Figure \@ref(fig:plot-learner-accuracy-3way), one observes 
 For the wh- questions (right panel), on the other hand, we see that the slope of the proficiency effect increases for higher empathy quotient values. 
 That is to say, for wh- questions, at a given proficiency level, learners with higher empathy (black lines) tended to respond more accurately. 
 
-(ref:plot-learner-accuracy-3way) Probability of a correct response as a function of LexTALE score while holding empathy quotient scores constant at &minus;1, 0 and &plus;1 standard deviations from th mean for each question type. Thin lines represent 300 draws from the posterior distribution and indicate uncertainty (95% HDI) around the posterior medians (thick lines).
+(ref:plot-learner-accuracy-3way) Probability of a correct response as a function of LexTALE score while holding empathy quotient scores constant at &minus;1, 0 and &plus;1 standard deviations from the mean for each question type. Thin lines represent 300 draws from the posterior distribution and indicate uncertainty (95% HDI) around the posterior medians (thick lines).
 
 ```{r, 'plot-learner-accuracy-3way', fig.cap="(ref:plot-learner-accuracy-3way)"}
 knitr::include_graphics(

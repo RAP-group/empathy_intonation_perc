@@ -1,5 +1,15 @@
 # On-line supplementary material
 
+## Author contributions
+
+(ref:plot-credit) Author contributions according to the CREDiT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds).
+
+```{r, 'plot-credit', fig.cap="(ref:plot-credit)"}
+knitr::include_graphics(
+  here("figs", "project_contributors.pdf")
+  )
+```
+
 ## Traditional analyses
 
 This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
@@ -24,7 +34,7 @@ $$
 \end{aligned}
 $$
 
-The summary of the response accuracy model is avaibale in Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
+The summary of the response accuracy model is available in Table \@ref(tab:table-learner-accuracy-by-utterance-type). 
 The information provided in this table is equivalent to the left panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) in the manuscript. 
 
 ```{r, 'table-learner-accuracy-by-utterance-type'}
@@ -51,7 +61,7 @@ DDMs are rarely used in SLA research, though they are commonplace in psychology.
 The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
 Together these parameters give rich information about the processes believed to underpin decision making. 
 Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
-In linguistics, particularly in psycholinguistics, data of this nature derived from 2AFC tasks are often analyzed using separate models, one for responses, and another for response times (as we have done in our so-called 'traditional analyses').^[Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known and the resources for implementing become more user-friendly.] 
+In linguistics, particularly in psycholinguistics, data of this nature derived from 2AFC tasks are often analyzed using separate models, one for responses, and another for response times (as we have done in our so-called 'traditional analyses').^[Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known and the resources for implementing them become more user-friendly.] 
 As mentioned, a DDM uses both of these dependent variables---responses and repsonse times---to estimate the 4 aforementioned parameters. 
 The estimates can then be scrutinized in subsequent models, if one estimates the parameters for each participant (i.e., the approach taken in the present work), and/or used for simulations. 
 For our purposes, we employ the Bayesian implementation of the DDM, thus we sample from a posterior distribution of plausible estimates for &alpha;, &delta;, &beta;, and &tau; for each participant. 
@@ -151,7 +161,7 @@ In this section we present supplementary analyses, all of which are exploratory 
 
 **D'**. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
 One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
-The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that their accuracy. 
+The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that of their accuracy. 
 That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative y/n) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
 Learner sensitivity to the different Spanish varieties represented in the stimuli pattern in the same manner, i.e., more sensitivity to the Peninsular variety and less sensitivity to the Cuban variety (right panel of Figure \@ref(fig:plot-learner-dp-utterance-variety)).
 Table \@ref(tab:table-dp-utterance-variety) summarizes the posterior of these exploratory analyses. 

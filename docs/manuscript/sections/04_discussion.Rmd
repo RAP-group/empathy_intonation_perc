@@ -51,7 +51,7 @@ An exploratory analysis using d' found that learner sensitivity to the utterance
 Additionally, our study addressed the question *Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?* 
 This question was motivated by a line of research showing that empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual].
 Though the construct *empathy* has been considered in the SLA literature, the current body of research is limited to studies on pronunciation accuracy [i.e., @guiora_1968; @guiora1972empathy; @rota2009cognitive, among others]. 
-Thus, we extend research on empathy to L2 phonological acquisition of as it relates to speech perception. 
+Thus, we extend research on empathy to L2 phonological acquisition as it relates to speech perception. 
 Using a cross-sectional design, we show (1) that empathy, as measured by the empathy quotient [@baron2004empathy], did indeed modulate response accuracy and the decision making process, and (2) *how* empathy affected sentence processing was related to L2 proficiency. 
 Specifically, we found response accuracy increased as a function of proficiency, independent of empathy for yes/no questions, but not wh- questions. 
 In the case of the latter, empathy had a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 

@@ -101,6 +101,6 @@ walk(devices, ~ ggsave(filename = glue(path_gantt, .x),
 
 walk(devices, ~ ggsave(filename = glue(path_contributors, .x), 
                        plot = p_project_contributors, device = .x, 
-                       height = 5, width = 9, units = "in"))
+                       height = 4, width = 7, units = "in"))
 
 # -----------------------------------------------------------------------------

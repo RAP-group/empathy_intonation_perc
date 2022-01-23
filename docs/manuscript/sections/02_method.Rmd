@@ -65,13 +65,13 @@ The empathy quotient in its entirety is available in the supplementary materials
 
 Participants recruited via Prolific.ac completed the all three tasks in a single session. 
 The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy quotient questionnaire. 
-We planed to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
+We planned to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
 Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).
 Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
 Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature and thus we did not base our sample size estimate on any parameter estimates related to this effect. 
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
-We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of language other and English and Spanish. 
+We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of languages other and English and Spanish. 
 Data from a total of `r n_returned` participants was discarded because the experimental session timed out and/or data was incomplete. 
 An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
 A total of `r n_learners` participants met the criteria for inclusion. 
@@ -113,7 +113,7 @@ A higher &delta; implies a random walk that arrives at one of the thresholds fas
 Conversely a lower drift rate is interpreted as indicating a more difficult task. 
 The sign of the value is also relevant. 
 Positive drift rate refers to evidence accumulation for the upper boundary and negative drift rate for the lower boundary. 
-Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision making (e.g., the time necessary to perceive a stimuli prior to evidence accumulation). 
+Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision making (e.g., the time necessary to perceive a stimulus prior to evidence accumulation). 
 Figure \@ref(fig:plot-ddm-explanation) provides an example of a hypothetical DDM for the 2AFC task in the present project. 
 
 (ref:plot-ddm-explanation) A drift diffusion model of the present study. The upper and lower bounds represent correct and incorrect responses, respectively. The boundary separation (&alpha;) is the distance between the two thresholds and indicates the evidence required to make a decision. Non-decision time (&tau;) represents the time course before evidence accumulation begins, i.e., time used for any process except decision making. Bias (&beta;) is the starting point for the evidence accumulation in the vertical plane (i.e., closer or further away from a given threshold), and drift rate (&delta;) quantifies the rate of evidence accumulation. The purple and orange lines represent examples of a decision resulting in a correct (purple) and incorrect (orange) decision. The corresponding density curves represent the distribution of response times at either threshold.
@@ -130,7 +130,7 @@ Put simply, the model likely would have taken weeks to fit, whereas the no-pooli
 Thus after fitting the DDMs, we obtained a posterior distribution of plausible values for boundary separation, drift rate, bias, and non-decision time for each participant. 
 Next, we used measurement-error models to analyze boundary separation (&alpha;) and drift rate (&delta;) independently. 
 These models followed the same functional form as the response accuracy model described above. 
-That is, in two separate models, we analysed the boundary separation and drift rate data as a function of *utterance type* (interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
+That is, in two separate models, we analyzed the boundary separation and drift rate data as a function of *utterance type* (interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
 The primary difference between the measurement-error models and the traditional regression analyses described for the response data is that the former can incorporate a measure of uncertainty around a point estimate. 
 To give a concrete example, the analysis of the boundary separation data included the posterior median and the standard error for each participant as the outcome variable, as opposed to using just a single point estimate. 
 
