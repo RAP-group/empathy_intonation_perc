@@ -2,14 +2,14 @@ A fundamental difficulty of speech comprehension is that listeners can come to u
 This can be especially problematic when one begins the endeavor of learning a new language. 
 In particular, it is common for second language (L2) learners to struggle with intonation---i.e., the melodic contour of an utterance---in the target language [@trofimovich2006learning]. 
 The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information, e.g., utterance type or syntactic constituency, but also pragmatic information, e.g., polite discourse [@astruc2016cost], bias, or presupposition [@henriksen2016intonational]. 
-The present study investigates how the comprehension of intonation develops in adult L2 learners. 
+The present study investigated how the comprehension of intonation develops in adult L2 learners. 
 
 Recent research on monolingual populations suggests that individual differences in pragmatic skills, such as empathy, may play a role in meaning disambiguation [@bishop2016individual; @esteve2016role; @esteve2020empathy; @orrico2020individual]. 
 Concretely, higher empathy individuals, in comparison with lower empathy individuals, appear to be more sensitive to the intonational cues of speech during the process of forming sound-meaning associations. 
 Furthermore, increased attention has been given to how individual differences in learner backgrounds play a role in the process of L2 acquisition [@rota2009cognitive; @HU2013366; @liu2017]. 
 The present study contributes to these lines of research by examining how individual differences in pragmatic skills affect the development and processing of intonation during sentence comprehension. 
 Specifically, we investigated the interplay between language proficiency and an individual pragmatic skill (empathy) when learning an L2. 
-We focus on the role of empathy in the development of L2 prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
+We focused on the role of empathy in the development of L2 prosody by analyzing the perception and processing of intonation in questions and statements in L2 Spanish. 
 
 ## Background and motivation 
 
@@ -39,7 +39,7 @@ Theoretical work that specifically considers prosody in the acquisition of L2 ph
 Nevertheless, a dearth of knowledge remains with regard to how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes.
 The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
 
-**Acquisition of Spanish prosody**. As with all phonetic phenomena, a lack of invariance in the acoustic content of prosodic realizations also increases the difficulty of the learners task. 
+**Acquisition of Spanish prosody**. As with all phonetic phenomena, a lack of invariance in the acoustic content of prosodic realizations also increases the difficulty of the learner's task. 
 Beyond the level of the individual, however, dialectal differences can account for more difficulties.
 Spanish is extensively spoken across the world, with relatively small geolectal differences between varieties when compared with other languages, such that speakers from distinct regions can still generally understand each other. 
 That being said, phonetic variation is abundant. 
@@ -78,7 +78,7 @@ A series of studies has investigated how empathy influences language processing 
 This work operationalizes the construct empathy as a pragmatic skill and has focused on it as a source of individual differences. 
 
 For instance, @esteve2020empathy examined how listeners with different levels of empathy interpreted intonation and meaning in contexts in which a temporary lexical ambiguity could only be resolved through intonation. 
-Empathy was measured using a self-report Empathy Quotient (EQ) questionnaire [@baron2004empathy] and participants were partitioned into groups corresponding with low or high empathy. 
+Empathy was measured using the Empathy Quotient [EQ, @baron2004empathy], a self-report questionnaire, and participants were partitioned into groups corresponding with low or high empathy. 
 @esteve2020empathy tested French monolinguals in a visual-world paradigm eye-tracking task that resembled a card guessing game. 
 Target objects were homophones in French (e.g., *cane*, Eng. "female duck"; *canne*, Eng. "walking stick"). 
 @esteve2020empathy found that processing of the lexical ambiguity (the homophones *cane*/*canne*) was modulated by empathy level when intonation was the only cue available. 

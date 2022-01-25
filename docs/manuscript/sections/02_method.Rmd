@@ -63,7 +63,7 @@ The empathy quotient in its entirety is available in the supplementary materials
 
 ## Procedure
 
-Participants recruited via Prolific.ac completed the all three tasks in a single session. 
+Participants recruited via Prolific.ac completed all three tasks in a single session. 
 The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy quotient questionnaire. 
 We planned to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
 Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).

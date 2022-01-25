@@ -37,7 +37,7 @@ author:
       - Conceptualization
       - Writing - Review & Editing
   - name          : "Robert Esposito"
-    affiliation   : "3"
+    affiliation   : "1"
     role:
       - Conceptualization
       - Writing - Review & Editing
@@ -73,8 +73,6 @@ affiliation:
     institution   : "Rutgers University"
   - id            : "2"
     institution   : "Adam Mickiewicz University"
-  - id            : "3"
-    institution   : "Duo-lingo"
 
 authornote: |
   We express our gratitude to all the haters. 

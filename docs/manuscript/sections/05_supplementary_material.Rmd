@@ -214,13 +214,13 @@ Table \@ref(tab:table-stimuli-descriptives) contains demographic information abo
 tribble(
   ~'Country', ~'City/Variety', ~'Gender', ~'Age', 
   "Argentina", "Buenos Aires", "Male", 27, 
-  "Chile", "Santiago de Chile", "Female", 40, 
+  "Chile", "Valparaíso", "Female", 42, 
   "Cuba", "Havana", "Female", 55, 
   "Mexico", "Mexico City", "Female", 30, 
   "Peru", "Lima", "Male", 30, 
   "Puerto Rico", "Ponce", "Female", 35, 
   "Spain", "Cádiz (Andalusia)", "Female", 35, 
-  "Spain", "Madrid", "Female", 27
+  "Spain", "Madrid", "Female", 29
   ) %>% 
   knitr::kable(format = "pandoc", 
     caption = "Demographic information for the eight varieties of Spanish 
