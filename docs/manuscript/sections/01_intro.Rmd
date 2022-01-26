@@ -47,7 +47,7 @@ For instance, depending on the variety, for the same utterance type a pitch acce
 Intonational strategies can be different altogether. 
 Consider absolute interrogatives in Caribbean and Argentine Spanish, which are produced with a nuclear hat pattern in the former and a final falling F0 contour in the latter, both of which differ from the more common final rise found in many other varieties [See @hualde2015intonational].
 
-Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using a pre-, post-test designs [See @henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others]. 
+Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using pre-, post-test designs [See @henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others]. 
 Though the degree of improvement is variable based on a myriad of factors---such as context formality [@trimble2013acquiring], use of Spanish [@henriksen2010development; @trimble2013acquiring], social integration [@trimble2013acquiring], or the development of meaningful social relationships with native speakers [@thornberry2014l2]---this line of research suggests that learners gradually acquire target-like intonation as they gain experience in the L2. 
 There is a paucity of research on the perception of Spanish intonation, but limited studies corroborate the general finding in speech production that mastery is indeed possible for adult learners [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
 For instance, @trimble2013perceiving examined the perception of intonational cues in statements and absolute interrogatives in L1 English L2 Spanish adult learners that had studied abroad in Venezuela, Spain, or not at all. 
@@ -55,7 +55,7 @@ Using a gating task, @trimble2013perceiving found that intonational cues that we
 The investigation lends support to the general notion that the L2 intonation system develops in tandem with proficiency in Spanish, which was positively correlated with time spent studying abroad. 
 
 In a similar vein, @bustin_2020 also investigated the perceptual development of intonation in questions and statements in L2 Spanish. 
-Specifically, @bustin_2020 examined the effect of L2 proficiency on the perception of broad-focus and narrow-focus declaratives and polar and absolute interrogatives in adult L2 learners of Spanish.
+Specifically, @bustin_2020 examined the effect of L2 proficiency on the perception of broad-focus and narrow-focus declaratives and polar and absolute interrogatives in adult L1 English L2 Spanish learners.
 The learners completed a forced-choice task in which they were presented audio and visual stimuli in matched and mismatched conditions. 
 The participants' task was to determine whether the sentence presented aurally was the same as the sentence presented visually. 
 @bustin_2020 found that perception and processing of L2 intonation improved in conjunction with proficiency in Spanish, though it was conditional on the utterance type, with polar ('yes/no') interrogatives being more difficult to process and acquire when compared with simple statements. 

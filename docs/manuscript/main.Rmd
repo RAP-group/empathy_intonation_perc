@@ -14,58 +14,92 @@ author:
     email         : "joseph.casillas@rutgers.edu"
     role:
       - Conceptualization
+      - Data curation
+      - Formal analysis
+      - Funding acquisition
+      - Investigation
+      - Methodology
+      - Project administration
+      - Resources
+      - Software
+      - Supervision
+      - Validation
+      - Visualization
       - Writing - Original Draft Preparation
       - Writing - Review & Editing
   - name          : "Juan José Garrido Pozú"
     affiliation   : "1"
     role:
       - Conceptualization
+      - Investigation
+      - Methodology
+      - Resources
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Kyle Parrish"
     affiliation   : "1"
     role:
       - Conceptualization
+      - Investigation
+      - Methodology
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Laura Fernández Arroyo"
     affiliation   : "1"
     role:
       - Conceptualization
+      - Investigation
+      - Methodology
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Nicole Rodríguez"
     affiliation   : "2"
     role:         
       - Conceptualization
+      - Investigation
+      - Methodology
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Robert Esposito"
     affiliation   : "1"
     role:
       - Conceptualization
-      - Writing - Review & Editing
+      - Investigation
+      - Methodology
   - name          : "Isabelle Chang"
     affiliation   : "1"
     role:
       - Conceptualization
+      - Investigation
+      - Methodology
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Kimberly Gómez"
     affiliation   : "1"
     role:
       - Conceptualization
-      - Writing - Review & Editing
+      - Investigation
+      - Methodology
+      - Writing - original draft
   - name          : "Gabriela Constantin-Dureci"
     affiliation   : "1"
     role:
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Jiawei Shao"
     affiliation   : "1"
     role:
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Iván Andreu Rascón"
     affiliation   : "1"
     role:
+      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Katherine Taveras"
     affiliation   : "1"
     role:
+      - Writing - original draft
       - Writing - Review & Editing
 
 affiliation:
