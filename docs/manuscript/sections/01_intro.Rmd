@@ -24,7 +24,7 @@ Intonation has a semantic function and through adequate cognitive decoding of th
 For example, an intonational contour can indicate to a listener whether the utterance of an interlocutor is declarative or interrogative in nature. 
 As touched upon above, a speaker can use prosody to signal numerous additional pragmatic functions as well. 
 Given the rich variation in pragmatic uses, it is unsurprising that interpreting and decoding intonational contours in a non-native language represents a particularly challenging aspect of speech comprehension for the language learner.
-Moreover, the use of L1 prosodic features when speaking the target language can result in misunderstandings due to the fact that the same prosodic features may convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
+Moreover, the use of first language (L1) prosodic features when speaking the target language can result in misunderstandings due to the fact that the same prosodic features may convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
 As noted by @levis2016accent prosody is also "[...] critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity"  (p. 154). 
 
 For learners interested in obtaining native-like pronunciation, intonation is particularly relevant, as prosodic features have been found to be important cues in the perception of non-target-like accents, above and beyond other features of language [@munro1995nonsegmental; @jilka2000testing; @pettorino2014transplanting]. 
