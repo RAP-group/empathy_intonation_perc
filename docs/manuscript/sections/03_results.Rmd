@@ -23,7 +23,7 @@ knitr::include_graphics(
 ```
 
 Figure \@ref(fig:plot-learner-accuracy-lt-eq-by-utterance-type) plots response accuracy as a function of utterance type and proficiency (left panel) and empathy quotient (right panel). 
-For all utterance types response accuracy increased as proficiency increased. 
+For all utterance types, response accuracy increased as proficiency increased. 
 Though the proficiency effect was most visually obvious for yes/no questions `r report_posterior(accuracy_summary, param = "LexTALE")` and wh- questions `r lt_wh`, this was also the case for broad focus `r lt_bf` and narrow focus `r lt_nf` declaratives. 
 There was no evidence that empathy level predicted response accuracy for yes/no questions `r report_posterior(accuracy_summary, param = "Empathy quotient")`, however for wh- questions `r eq_wh`, broad focus declaratives `r eq_bf`, and narrow focus `r eq_nf` declaratives we find compelling evidence that the effect is positive. 
 

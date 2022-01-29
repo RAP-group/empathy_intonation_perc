@@ -14,17 +14,17 @@ We focused on the role of empathy in the development of L2 prosody by analyzing 
 ## Background and motivation 
 
 **L2 acquisition of prosody**. The difficulties associated with learning an additional language in adulthood are numerous. 
-More often than not the focus falls on individual sounds, or segments, though there is evidence that adults who learn an L2 are faced with suprasegmental challenges as well [@henriksen2010development; @thornberry2014l2; @craft2015acquisition, among others]. 
+More often than not the focus falls on individual sounds, or segments, though there is evidence that adults who learn an L2 are faced with suprasegmental challenges as well [@trofimovich2006learning; @thornberry2014l2; @craft2015acquisition, among others]. 
 Concretely, L2 learners often struggle with intonation, i.e., melodic variation at the utterance level. 
 In normal discourse, speakers use intonation to indicate syntactic structure, whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
 Notably, the manner in which intonation is mapped to meaning is often language-specific. 
 For these reasons, the development of L2 intonation represents a facet of L2 phonological learning that often results in comprehension and communication difficulties [@trofimovich2006learning]. 
 
-Intonation has a semantic function and through adequate cognitive decoding of the signal a listener can interpret the intention of a given utterance. 
+Intonation has a semantic function and through adequate cognitive decoding of the signal a listener can interpret the intended meaning of a given utterance. 
 For example, an intonational contour can indicate to a listener whether the utterance of an interlocutor is declarative or interrogative in nature. 
 As touched upon above, a speaker can use prosody to signal numerous additional pragmatic functions as well. 
-Given the rich variation in pragmatic uses, it is unsurprising that interpreting and decoding intonational contours in a non-native language represents a particularly challenging aspect of speech comprehension for the language learner.
-Moreover, the use of first language (L1) prosodic features when speaking the target language can result in misunderstandings due to the fact that the same prosodic features may convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
+Given the rich variation in pragmatic uses, it is unsurprising that interpreting and decoding intonational contours in a new language represents a particularly challenging aspect of speech comprehension for the language learner.
+Moreover, the use of first language (L1) prosodic features when speaking the target language can result in misunderstandings because the same prosodic features can convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
 As noted by @levis2016accent prosody is also "[...] critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity"  (p. 154). 
 
 For learners interested in obtaining native-like pronunciation, intonation is particularly relevant, as prosodic features have been found to be important cues in the perception of non-target-like accents, above and beyond other features of language [@munro1995nonsegmental; @jilka2000testing; @pettorino2014transplanting]. 
@@ -40,14 +40,14 @@ Nevertheless, a dearth of knowledge remains with regard to how perception of int
 The purpose of the present project is to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition.  
 
 **Acquisition of Spanish prosody**. As with all phonetic phenomena, a lack of invariance in the acoustic content of prosodic realizations also increases the difficulty of the learner's task. 
-Beyond the level of the individual, however, dialectal differences can account for more difficulties.
+Beyond the level of the individual, however, dialectal differences can account for additional difficulties.
 Spanish is extensively spoken across the world, with relatively small geolectal differences between varieties when compared with other languages, such that speakers from distinct regions can still generally understand each other. 
 That being said, phonetic variation is abundant. 
 For instance, depending on the variety, for the same utterance type a pitch accent may be realized differently with regard to pitch movement and/or syllable duration. <!-- awkward... reword --> 
 Intonational strategies can be different altogether. 
 Consider absolute interrogatives in Caribbean and Argentine Spanish, which are produced with a nuclear hat pattern in the former and a final falling F0 contour in the latter, both of which differ from the more common final rise found in many other varieties [See @hualde2015intonational].
 
-Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using pre-, post-test designs [See @henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others]. 
+Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using pre-, post-test designs [See @craft2015acquisition; @henriksen2010development; @thornberry2014l2; @trimble2013acquiring, among others]. 
 Though the degree of improvement is variable based on a myriad of factors---such as context formality [@trimble2013acquiring], use of Spanish [@henriksen2010development; @trimble2013acquiring], social integration [@trimble2013acquiring], or the development of meaningful social relationships with native speakers [@thornberry2014l2]---this line of research suggests that learners gradually acquire target-like intonation as they gain experience in the L2. 
 There is a paucity of research on the perception of Spanish intonation, but limited studies corroborate the general finding in speech production that mastery is indeed possible for adult learners [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
 For instance, @trimble2013perceiving examined the perception of intonational cues in statements and absolute interrogatives in L1 English L2 Spanish adult learners that had studied abroad in Venezuela, Spain, or not at all. 
@@ -71,8 +71,9 @@ It is associated with understanding the feelings and emotions of those with whom
 Research on empathy has associated the construct with Theory of Mind and perspective-taking [@baron2011zero; @carruthers2009we; @frith2003development]. 
 Importantly, in recent years empathy has served a proxy for investigating individual pragmatic skill. 
 
-Studies on monolingual populations suggest that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items, with more pragmatic individuals preferring pragmatically enriched interpretations and less pragmatic individuals preferring literal/semantic interpretations [e.g., @degen2016availability; @nieuwland2010incrementality]. 
-In addition, more pragmatically skilled individuals tend to rely on different phonetic cues to parse syntactically ambiguous sentences with regard to less pragmatically skilled individuals [@bishop2016individual]. 
+Studies on monolingual populations suggest that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items [e.g., @degen2016availability; @nieuwland2010incrementality]. 
+That is, in this line of research, individuals described as having higher pragmatic skill tended to prefer pragmatically enriched interpretations and individuals described as having less pragmatic skill tended to prefer more literal/semantic interpretations. 
+In addition, more pragmatically skilled individuals have also been found to rely on different phonetic cues to parse syntactically ambiguous sentences when compared with less pragmatically skilled individuals [@bishop2016individual]. 
 Thus, one possibility is that variability in intonation processing is also linked to individual differences in pragmatic skills.
 A series of studies has investigated how empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual]. 
 This work operationalizes the construct empathy as a pragmatic skill and has focused on it as a source of individual differences. 

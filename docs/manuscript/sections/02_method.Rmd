@@ -6,7 +6,7 @@
 Participants were recruited using the Prolific.ac online experimental platform and were compensated at a rate of $9.52 per hour for their time. 
 We estimated the task would take approximately 15 minutes to complete, thus each participant was paid $2.70 for completing all three tasks.
 The mean time to completion was approximately `r round(t_mean)` minutes. 
-The pool of participants was filtered using criteria set in Prolific.ac to insure participants self-reported as being L1 English speakers born, raised, and currently living in the Northeastern US with no knowledge of any languages other than English or Spanish.
+The pool of participants was filtered using criteria set in Prolific.ac to ensure participants self-reported as being L1 English speakers born, raised, and currently living in the Northeastern US with no knowledge of any languages other than English or Spanish.
 They reported no hearing difficulties and were required to use headphones on a personal computer. 
 Upon beginning the experiment, all participants responded to the following screening questions: 
 1) What part of the US are you from?
@@ -56,7 +56,7 @@ Forty of the questions assess empathy and 20 are filler items.
 In order to avoid response bias, choices indicating empathic responses are coded to elicit "agree" responses in half the target items and "disagree" responses in the other half. 
 The target items are scored with 2 or 1 points based on if the participant responds "strongly" or "slightly". 
 Finally, the EQ is scored by summing the total points to produce a single value indicating an individual's level of empathy. 
-Thus the minimum possible value is 0 (low empathy) and the maximum is 80 (high empathy). 
+Thus, the minimum possible value is 0 (low empathy) and the maximum is 80 (high empathy). 
 In our data set the average empathy quotient was `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg)` (Range: [`r learners$eq_score %>% min`, `r learners$eq_score %>% max`], 95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "eq", avg_hdi)`, SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd)`, 95% CrI of SD: `r pull_from_tib(lt_eq_descriptives, metric, "eq", sd_hdi)`). 
 The empathy quotient in its entirety is available in the supplementary materials. 
 
@@ -68,7 +68,7 @@ The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy
 We planned to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
 Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).
 Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
-Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature and thus we did not base our sample size estimate on any parameter estimates related to this effect. 
+Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect. 
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
 We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of languages other than English and Spanish. 
@@ -127,7 +127,7 @@ knitr::include_graphics(
 We estimated the aforementioned parameters by fitting a DDM to the response and response time data of each participant independently. 
 We opted for this approach, as opposed to fitting a single model including all participants, for computational reasons. 
 Put simply, the model likely would have taken weeks to fit, whereas the no-pooling (i.e., by-participant) method took approximately 26 hours. 
-Thus after fitting the DDMs, we obtained a posterior distribution of plausible values for boundary separation, drift rate, bias, and non-decision time for each participant. 
+Thus, after fitting the DDMs, we obtained a posterior distribution of plausible values for boundary separation, drift rate, bias, and non-decision time for each participant. 
 Next, we used measurement-error models to analyze boundary separation (&alpha;) and drift rate (&delta;) independently. 
 These models followed the same functional form as the response accuracy model described above. 
 That is, in two separate models, we analyzed the boundary separation and drift rate data as a function of *utterance type* (interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
