@@ -45,7 +45,7 @@ LexTALE scores can range from &minus;20 to 60.
 Monolingual Spanish speakers generally score above 50. 
 Scores from individuals with little or no knowledge of Spanish tend to be negative. 
 Adult learners with low to medium proficiency can range from 0 to 25, and advanced learners generally score above 25. 
-We conceive of proficiency as a continuous variable, thus we consider a monolingual English speaker to have little to no proficiency in Spanish (i.e., a negative value on the LexTALE). 
+We conceive of proficiency as a continuous variable and therefore consider a monolingual English speaker to have little to no proficiency in Spanish (i.e., a negative value on the LexTALE). 
 In our data set participant scores ranged from `r learners$lextale_tra %>% min %>% unicode_minus` to `r learners$lextale_tra %>% max`, suggesting all proficiency levels were likely represented in the sample. 
 The mean score was `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg_hdi)`) with a standard deviation of `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd_hdi)`. 
 
@@ -110,7 +110,7 @@ Bias, &beta;, gives an indication of a preference for one of the choices at the 
 A positive bias value indicates a preference for the upper boundary, whereas a negative bias is an indicator of a preference for the lower boundary. 
 The drift rate, &delta;, provides an assessment of the rate at which information is accumulated. 
 A higher &delta; implies a random walk that arrives at one of the thresholds faster and is interpreted as indication that the participant finds the task to be easier. 
-Conversely a lower drift rate is interpreted as indicating a more difficult task. 
+Conversely, a lower drift rate is interpreted as indicating a more difficult task. 
 The sign of the value is also relevant. 
 Positive drift rate refers to evidence accumulation for the upper boundary and negative drift rate for the lower boundary. 
 Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision making (e.g., the time necessary to perceive a stimulus prior to evidence accumulation). 

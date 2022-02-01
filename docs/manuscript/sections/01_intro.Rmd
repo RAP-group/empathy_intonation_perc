@@ -16,7 +16,7 @@ We focused on the role of empathy in the development of L2 prosody by analyzing 
 **L2 acquisition of prosody**. The difficulties associated with learning an additional language in adulthood are numerous. 
 More often than not the focus falls on individual sounds, or segments, though there is evidence that adults who learn an L2 are faced with suprasegmental challenges as well [@trofimovich2006learning; @thornberry2014l2; @craft2015acquisition, among others]. 
 Concretely, L2 learners often struggle with intonation, i.e., melodic variation at the utterance level. 
-In normal discourse, speakers use intonation to indicate syntactic structure, whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
+This is, in part, because speakers can use intonation to indicate syntactic structure, to signal whether an utterance is a question or a statement, to focus constituents, as well as to convey affective meaning. 
 Notably, the manner in which intonation is mapped to meaning is often language-specific. 
 For these reasons, the development of L2 intonation represents a facet of L2 phonological learning that often results in comprehension and communication difficulties [@trofimovich2006learning]. 
 
@@ -69,7 +69,7 @@ Much less is known regarding how perceptual development is modulated by individu
 **Empathy and pragmatic skill**. The construct empathy refers to one's ability to infer the intentions of others. 
 It is associated with understanding the feelings and emotions of those with whom one interacts [@baron2004empathy]. 
 Research on empathy has associated the construct with Theory of Mind and perspective-taking [@baron2011zero; @carruthers2009we; @frith2003development]. 
-Importantly, in recent years empathy has served a proxy for investigating individual pragmatic skill. 
+Importantly, in recent years empathy has served as a proxy for investigating individual pragmatic skill. 
 
 Studies on monolingual populations suggest that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items [e.g., @degen2016availability; @nieuwland2010incrementality]. 
 That is, in this line of research, individuals described as having higher pragmatic skill tended to prefer pragmatically enriched interpretations and individuals described as having less pragmatic skill tended to prefer more literal/semantic interpretations. 

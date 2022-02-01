@@ -66,6 +66,7 @@ author:
       - Conceptualization
       - Investigation
       - Methodology
+      - Writing - Review & Editing
   - name          : "Isabelle Chang"
     affiliation   : "1"
     role:
@@ -84,7 +85,6 @@ author:
   - name          : "Gabriela Constantin-Dureci"
     affiliation   : "1"
     role:
-      - Writing - original draft
       - Writing - Review & Editing
   - name          : "Jiawei Shao"
     affiliation   : "1"
@@ -131,8 +131,10 @@ abstract: |
   for intonational meaning processing and sentence comprehension in second 
   language acquisition.
   
-keywords          : "Second language acquisition, Intonation, Empathy, Prosody"
-wordcount         : "10,038"
+keywords          : |
+  Second language acquisition, Sentence processing, Speech perception, 
+  Intonation, Empathy
+wordcount         : "8,299"
 
 bibliography      : ["../bib/empathy.bib"]
 
