@@ -72,7 +72,7 @@ contributor_list <- list(
   "NR"  = tibble(role = c(1, 5, 6, 13:14),    weight = c(rep("high", 4), "low")),
   "KP"  = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
   "LFA" = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
-  "RE"  = tibble(role = c(1, 5, 6),           weight = "high"),
+  "RE"  = tibble(role = c(1, 5, 6, 14),       weight = "high"),
   "IC"  = tibble(role = c(1, 5, 6, 13:14),    weight = "high"),
   "KG"  = tibble(role = c(1, 5, 6, 13),       weight = "high"),
   "GC"  = tibble(role = 13:14,                weight = "low"),
