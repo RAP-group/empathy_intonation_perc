@@ -2,7 +2,7 @@
 title             : |
   Using intonation to disambiguate meaning: The role of empathy and 
   proficiency in L2 perceptual development
-shorttitle        : "Individual differences in L2 perception of intonation"
+shorttitle        : "L2 PERCEPTUAL DEVELOPMENT OF INTONATION"
 
 author: 
   - name          : "Joseph V. Casillas"

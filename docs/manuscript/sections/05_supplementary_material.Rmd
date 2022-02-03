@@ -1,17 +1,5 @@
 # On-line supplementary material
 
-## Author contributions
-
-(ref:plot-credit) Author contributions according to the CREDiT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds).
-
-```{r, 'plot-credit', fig.cap="(ref:plot-credit)"}
-knitr::include_graphics(
-  here("figs", "project_contributors.pdf")
-  )
-```
-
-
-
 ## Traditional analyses
 
 This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
@@ -131,7 +119,7 @@ estimate | resp_se(se, sigma = TRUE) ~ 1 + # Criterion
 ```
 
 
-Table \@ref(tab:table-ddm-bs-dr) is equivalent to Figure \@ref(fig:plot-mem-bs-dr-estimates) in the main document. 
+The model summary is available in Table \@ref(tab:table-ddm-bs-dr), which is equivalent to Figure \@ref(fig:plot-mem-bs-dr-estimates) in the main document. 
 
 ```{r, 'table-ddm-bs-dr'}
 read_csv(here("tables", "ddm_bs_dr.csv"), col_types = cols(.default = "c")) %>% 
@@ -164,7 +152,7 @@ In this section we present supplementary analyses, all of which are exploratory 
 **D'**. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
 One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
 The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that of their accuracy. 
-That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative y/n) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
+That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative yes/no) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
 Learner sensitivity to the different Spanish varieties represented in the stimuli pattern in the same manner, i.e., more sensitivity to the Peninsular variety and less sensitivity to the Cuban variety (right panel of Figure \@ref(fig:plot-learner-dp-utterance-variety)).
 Table \@ref(tab:table-dp-utterance-variety) summarizes the posterior of these exploratory analyses. 
 
@@ -243,6 +231,15 @@ knitr::include_graphics(
   )
 ```
 
+## Author contributions
+
+(ref:plot-credit) Author contributions according to the CREDiT author roles taxonomy. Contributions are indicated as being substantial (dark diamonds) or moderate (light diamonds).
+
+```{r, 'plot-credit', fig.cap="(ref:plot-credit)"}
+knitr::include_graphics(
+  here("figs", "project_contributors.pdf")
+  )
+```
 
 
 
