@@ -15,7 +15,7 @@ Upon beginning the experiment, all participants responded to the following scree
 Additionally, participants responded to the prompt "I am most familiar with Spanish from..." and using a pull-down window they selected a variety of Spanish or "I am not familiar with any variety of Spanish". 
 We excluded data from any participant that responded that they were not from the US Northeast, that they began learning Spanish before the age of 13, or that they were proficient in a language other than English/Spanish.
 Participants responding categorically across all trials were also excluded.
-In sum, participants were adult native speakers of American English with varied levels of proficiency in Spanish, ranging from functionally monolingual to highly proficient. 
+In sum, participants were adult native speakers of American English with varying levels of proficiency in Spanish, ranging from functionally monolingual to highly proficient. 
 All participants with knowledge of Spanish were adult L2 learners, operationally defined as having begun the endeavor of learning Spanish after the age of 13. 
 
 ## Tasks
@@ -24,7 +24,7 @@ The study consisted of three tasks: a 2AFC task, a lexical decision vocabulary a
 The tasks were programmed in Python using Pyschopy3 [@Peirce:2019] and presented online via Pavlovia. 
 All code and materials used to generate the tasks are freely available on the Open Science Framework (https://osf.io/dh4zp/?view_only=162d6d13e5814417bcb9de349f18cb62). 
 
-**2AFC**. In the 2AFC task participants were presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
+**2AFC**. In the 2AFC, task participants were presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
 Their task was to determine, as quickly and as accurately as possible, if the utterance they heard was a question or a statement. 
 Specifically, they responded to an on-screen prompt asking "Is this a question?" using the keyboard. 
 To respond participants typed '1' for 'yes' (i.e., "yes, this is a question") and '0' for 'no' (i.e., "no, this is not a question"). 
@@ -35,7 +35,7 @@ The eight native speakers all produced the same 64 critical items.
 All utterances were segmented using Praat [@praat] and normalized for peak intensity. 
 The 2AFC task included 64 trials in which the stimuli presented were randomized across speaker variety. 
 Each variety had the same probability of being selected on a given trial, such that, on average, a given participant heard each variety approximately eight times (See online supplementary materials for more information).
-Prior to pre-registering our research questions and hypotheses we piloted the 2AFC experiment on 100 monolingual Spanish speakers to assure the quality of the items and assess the difficulty of the task. 
+Prior to pre-registering our research questions and hypotheses, we piloted the 2AFC experiment on 100 monolingual Spanish speakers to assure the quality of the items and assess the difficulty of the task. 
 We did not come across any issues.
 
 **LexTALE**. To assess Spanish proficiency we administered the Lexical Test for Advanced Learners of Spanish (LexTALE-ESP, henceforth LexTALE) [@izura2014lextale; @lemhofer2012introducing]. 
@@ -46,7 +46,7 @@ Monolingual Spanish speakers generally score above 50.
 Scores from individuals with little or no knowledge of Spanish tend to be negative. 
 Adult learners with low to medium proficiency can range from 0 to 25, and advanced learners generally score above 25. 
 We conceive of proficiency as a continuous variable and therefore consider a monolingual English speaker to have little to no proficiency in Spanish (i.e., a negative value on the LexTALE). 
-In our data set participant scores ranged from `r learners$lextale_tra %>% min %>% unicode_minus` to `r learners$lextale_tra %>% max`, suggesting all proficiency levels were likely represented in the sample. 
+In our data set, participant scores ranged from `r learners$lextale_tra %>% min %>% unicode_minus` to `r learners$lextale_tra %>% max`, suggesting all proficiency levels were likely represented in the sample. 
 The mean score was `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", avg_hdi)`) with a standard deviation of `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd)` (95% CrI: `r pull_from_tib(lt_eq_descriptives, metric, "lt", sd_hdi)`. 
 
 
@@ -72,7 +72,7 @@ Our hypothesis related to empathy as a possible mediator of perceptual learning 
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
 We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of languages other than English and Spanish. 
-Data from a total of `r n_returned` participants was discarded because the experimental session timed out and/or data was incomplete. 
+Data from a total of `r n_returned` participants were discarded because the experimental session timed out and/or data was incomplete. 
 An additional `r n_removed` participants were discarded due to low accuracy (n = `r filter(id_remove$learners, reason %in% c("too fast", "low_accuracy")) %>% nrow`), incomplete data (n = `r filter(id_remove$learners, reason %in% c("incomplete/slow", "no_code")) %>% nrow`), and failed attention checks (n = `r filter(id_remove$learners, reason == "attention_check") %>% nrow`). 
 A total of `r n_learners` participants met the criteria for inclusion. 
 
@@ -106,17 +106,17 @@ We estimate the parameters of the DDM using Bayesian methods and subsequently fi
 A DDM estimates four parameters: boundary separation, bias, drift rate and non-decision time. 
 Boundary separation, &alpha;, quantifies the amount of information necessary to make a decision. 
 The boundaries represent the thresholds for the two alternatives in the task, which, in our case, implies correct and incorrect responses. 
-Bias, &beta;, gives an indication of a preference for one of the choices at the beginning of the decision making process. 
+Bias, &beta;, gives an indication of a preference for one of the choices at the beginning of the decision-making process. 
 A positive bias value indicates a preference for the upper boundary, whereas a negative bias is an indicator of a preference for the lower boundary. 
 The drift rate, &delta;, provides an assessment of the rate at which information is accumulated. 
-A higher &delta; implies a random walk that arrives at one of the thresholds faster and is interpreted as indication that the participant finds the task to be easier. 
+A higher &delta; implies a random walk that arrives at one of the thresholds faster and is interpreted as an indication that the participant finds the task to be easier. 
 Conversely, a lower drift rate is interpreted as indicating a more difficult task. 
 The sign of the value is also relevant. 
 Positive drift rate refers to evidence accumulation for the upper boundary and negative drift rate for the lower boundary. 
-Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision making (e.g., the time necessary to perceive a stimulus prior to evidence accumulation). 
+Finally, non-decision time, &tau;, models the part of the time course that is not associated with decision-making (e.g., the time necessary to perceive a stimulus prior to evidence accumulation). 
 Figure \@ref(fig:plot-ddm-explanation) provides an example of a hypothetical DDM for the 2AFC task in the present project. 
 
-(ref:plot-ddm-explanation) A drift diffusion model of the present study. The upper and lower bounds represent correct and incorrect responses, respectively. The boundary separation (&alpha;) is the distance between the two thresholds and indicates the evidence required to make a decision. Non-decision time (&tau;) represents the time course before evidence accumulation begins, i.e., time used for any process except decision making. Bias (&beta;) is the starting point for the evidence accumulation in the vertical plane (i.e., closer or further away from a given threshold), and drift rate (&delta;) quantifies the rate of evidence accumulation. The purple and orange lines represent examples of a decision resulting in a correct (purple) and incorrect (orange) decision. The corresponding density curves represent the distribution of response times at either threshold.
+(ref:plot-ddm-explanation) A drift diffusion model of the present study. The upper and lower bounds represent correct and incorrect responses, respectively. The boundary separation (&alpha;) is the distance between the two thresholds and indicates the evidence required to make a decision. Non-decision time (&tau;) represents the time course before evidence accumulation begins, i.e., time used for any process except decision-making. Bias (&beta;) is the starting point for the evidence accumulation in the vertical plane (i.e., closer or further away from a given threshold), and drift rate (&delta;) quantifies the rate of evidence accumulation. The purple and orange lines represent examples of a decision resulting in a correct (purple) and incorrect (orange) decision. The corresponding density curves represent the distribution of response times at either threshold.
 
 ```{r, 'plot-ddm-explanation', fig.cap="(ref:plot-ddm-explanation)"}
 knitr::include_graphics(
@@ -141,7 +141,7 @@ To assess our pre-registered hypotheses we established a region of practical equ
 $$ROPE = \frac{\mu_1 - \mu_2}{\sqrt{\frac{\sigma_1^2 + \sigma_2^2}{2}}}$$
 
 For all models, median posterior point estimates are reported for each parameter of interest, along with the 95% highest density interval (HDI), the percent of the region of the HDI contained within the ROPE, and the maximum probability of effect (MPE). 
-For statistical inferences, we focus on estimation rather than decision making rules, though, generally, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) are taken as compelling evidence for a given effect. 
+For statistical inferences, we focus on estimation rather than decision-making rules, though, generally, a posterior distribution for a parameter &beta; in which 95% of the HDI falls outside the ROPE and a high MPE (i.e., values close to 1) are taken as compelling evidence for a given effect. 
 All exploratory analyses, explicitly described as such, include posterior point estimates, the 95% HDI, and the MPE. 
 We conducted all analyses using R and fit all models using the probabilistic programming language `stan` via the R package `brms` [@R_brms_a; @R_brms_b]. 
 Finally, we provide more information for all analyses in the supplementary materials.

@@ -61,7 +61,7 @@ read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = 
 Drift Diffusion Models (DDM), also referred to as Wiener Diffusion Models and Decision Diffusion Models, represent our preferred method for analyzing the data from our 2AFC task. 
 DDMs are rarely used in SLA research, though they are commonplace in psychology. 
 The primary selling point of using a DDM is related to the parameters the model estimates: boundary separation (&alpha;), drift rate (&delta;), bias (&beta;), and non-decision time (&tau;). 
-Together these parameters give rich information about the processes believed to underpin decision making. 
+Together these parameters give rich information about the processes believed to underpin decision-making. 
 Specifically, a DDM requires decision data, e.g., "left" or "right" choices, correct or incorrect responses, etc., and response times associated with said decisions. 
 In linguistics, particularly in psycholinguistics, data of this nature derived from 2AFC tasks are often analyzed using separate models, one for responses, and another for response times (as we have done in our so-called 'traditional analyses').^[Given how relatively uncommon DDMs are in linguistics, the present work includes both approaches, though it is reasonable to assume that this practice will diminish as DDMs become more well-known and the resources for implementing them become more user-friendly.] 
 As mentioned, a DDM uses both of these dependent variables---responses and response times---to estimate the 4 aforementioned parameters. 
@@ -229,10 +229,11 @@ tribble(
 ```
 
 
-*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
+*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
 Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians &pm;66% and 95% HDI of standardized articulation rate for each variety. 
-The plot shows that generally there was not a lot of variability between varieties. 
-Though some of the slower varieties coincide with those associated with higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), the opposite is also true, e.g., Mexican Spanish. 
+The plot shows that, generally, there was not a lot of variability between varieties. 
+Though some of the slower varieties are also those in which we see higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), that was not always the case. 
+That is, some of the faster varieties also had high response accuracy, e.g., Mexican Spanish. 
 
 (ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians &pm;66% and 95% HDI.
 

@@ -10,7 +10,7 @@ author:
     affiliation   : "1"
     address       : |
       Rutgers University - Department of Spanish and Portuguese, 15 Seminary 
-      place, New Brunswick, NJ 08904, USA
+      Place, New Brunswick, NJ 08904, USA
     email         : "joseph.casillas@rutgers.edu"
     role:
       - Conceptualization
@@ -99,7 +99,6 @@ author:
   - name          : "Katherine Taveras"
     affiliation   : "1"
     role:
-      - Writing - original draft
       - Writing - Review & Editing
 
 affiliation:
@@ -120,11 +119,12 @@ abstract: |
   task in which they listened to four utterance types and categorized them as 
   either questions or statements. We used Bayesian multilevel regression and 
   Drift Diffusion modeling to analyze the 2AFC data as a function of 
-  proficiency level and empathy scores for each utterance type. The results 
-  show (1) learner response accuracy and sensitivity to intonation improved 
-  as a function of proficiency, and (2) . 
-  Higher empathic individuals, in comparison with lower empathic individuals, 
-  appear to be more sensitive to intonation cues in the process of forming 
+  proficiency level and empathy scores for each utterance type. We show that 
+  learner response accuracy and sensitivity to intonation is positively 
+  correlated with proficiency, and this association is affected by individual 
+  empathy levels in both response accuracy and sentence processing. Higher 
+  empathic individuals, in comparison with lower empathic individuals, appear 
+  to be more sensitive to intonation cues in the process of forming 
   sound-meaning associations, though increased sensitivity does not 
   necessarily imply increased processing speed. The results motivate the 
   inclusion of measures of pragmatic skill, such as empathy, to better account 
@@ -134,7 +134,7 @@ abstract: |
 keywords          : |
   Second language acquisition, Sentence processing, Speech perception, 
   Intonation, Empathy
-wordcount         : "8,299"
+wordcount         : "8,319"
 
 bibliography      : ["../bib/empathy.bib"]
 
