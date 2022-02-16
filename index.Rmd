@@ -1,0 +1,17 @@
+---
+title: "The role of empathy and proficiency in the perception and processing of second language prosody"
+output: 
+  html_document: 
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+
+- [PsyArXiv preprint](https://psyarxiv.com/e5vk2/)
+- [OSF pre-reg](https://osf.io/dg64r)
+- [HLS 2021 slides](https://www.rap-group.jvcasillas.com/empathy_intonation_perc/docs/slides/hls_2021/index.html)
+- [CASPSLaP 2022 slides](https://www.rap-group.jvcasillas.com/empathy_intonation_perc/docs/slides/caspslap_2022/index.html)
