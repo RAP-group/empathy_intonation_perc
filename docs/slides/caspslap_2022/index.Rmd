@@ -161,9 +161,8 @@ the extant literature, for ex a study by brandl et al shows that statements are 
 Furthermore, familiarity with the variety also seems to be important, which makes since given that intonational contours for a given utterance type can vary from variety to variety
 
 ---
-background-image: url(https://www.psychalive.org/wp-content/uploads/2017/01/Empathy-300x200.png)
-background-size: 600px
-background-position: 50% 50%
+background-image: url(./libs/img/empathy.png)
+background-size: contain
 
 ???
 
