@@ -630,6 +630,8 @@ RQ2: Do pragmatic skills---specifically, empathy---modulate the rate of developm
 - Response accuracy was lowest for Cuban variety for L2 learners and monolingual Spanish speakers
 ]
 
+--
+
 ### But...
 
 .big[
@@ -717,9 +719,19 @@ background-position: 95% 50%
 
 ### Next steps
 
-- Empathy in other domains
-  - Segments
-  - y/n questions?
+.big[
+
+- Learnability of empathy
+
+- Longitudinal perceptual development
+
+- Empathy and variation in speech processing with regard to dialectal differences (L1, L2)
+
+- Segments
+
+- y/n questions?
+
+]
 
 ---
 background-image: url(https://acendahealth.org/wp-content/uploads/2021/02/empathy.jpg)
