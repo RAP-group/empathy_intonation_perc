@@ -595,7 +595,7 @@ Yes-no questions will present the most difficulty for L2 learners of Spanish, fo
 ### Probably. 
 
 - Evidence for 3-way interaction
-  - ↑ empathy quotient associated with increased accuracy for all utterance types except y/n questions
+  - **↑** empathy quotient associated with **↑** accuracy for all utterance types except y/n questions
   - Particularly true for intermediate/advanced learners
 ]
 
@@ -603,7 +603,7 @@ Yes-no questions will present the most difficulty for L2 learners of Spanish, fo
 
 .big[
 
-- Cross-sectional design suggests ↑ empathy individuals may progress at ealier stage of L2 development
+- Cross-sectional design suggests **↑** empathy individuals may progress at earlier stage of L2 development
 
 ]
 
@@ -626,8 +626,8 @@ RQ2: Do pragmatic skills---specifically, empathy---modulate the rate of developm
 
 .big[
 
-- Response accuracy was highest for Peninsular variety (most familiar)
-- Response accuracy was lowest for Cuban variety for L2 learners and monolingual Spanish speakers
+- **↑** accuracy for Madrileño variety (most familiar)
+- **.blue[↓]** accuracy for Cuban variety (L2 and monolingual listeners)
 ]
 
 --
@@ -637,15 +637,6 @@ RQ2: Do pragmatic skills---specifically, empathy---modulate the rate of developm
 .big[
 - High accuracy does not necessarily imply faster processing
 ]
-
-???
-
-RQ3: Does speaker variety affect perception accuracy and processing speed?  
-**Hypothesis**: L2 learners will have most difficulty (lower accuracy, slower RTs) with the Cuban variety. 
-
-
-
-
 
 ---
 
