@@ -401,7 +401,7 @@ background-position: 90% 20%
   - Argentine (M)
   - Puerto Rican (F)
   - Cuban (F)
-- Stimuli drawn randomly in single block
+- Stimuli drawn randomly in 1 block
 - Speaker variety also randomized (.125 prob)
 
 ]
