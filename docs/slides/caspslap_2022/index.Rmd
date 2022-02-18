@@ -1,5 +1,5 @@
 ---
-title: "Using intonation to disambiguate meaning:<br>The role of empathy and proficiency in L2 perceptual development"
+title: "Inferring meaning from intonation:<br>The effects of proficiency and empathy on L2 pragmatic skills"
 author: |
   Joseph V. Casillas, Juan José Garrido Pozú, Nicole Rodríguez<sup>*</sup>, Kyle Parrish, 
   Laura Fernández Arroyo, Robert Esposito, Isabelle Chang, Kimberly Gómez, 
@@ -268,6 +268,8 @@ class: title-slide-section-grey, middle
 
 ???
 
+**Hypothesis**: Prosodic development will occur sooner and at a faster rate in higher empathy individuals. 
+
 In this operationalization, 'sooner' refers to lower proficiency levels in a cross-sectional design, that is, at an earlier developmental stage than lower empathy individuals.
 
 ---
@@ -322,7 +324,10 @@ background-position: 90% 20%
 
 ???
 
-Participants were recruited online and were screened such English their L1, they started learning Spanish at the age of 13 or older?, and did not have significant knowledge of any languages other than English and Spanish
+Participants were recruited online 
+screened to have English as their L1, 
+they started learning Spanish at the age of 13 or older, 
+and did not have significant knowledge of any languages other than English and Spanish
 
 --
 
