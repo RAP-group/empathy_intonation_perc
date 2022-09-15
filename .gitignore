@@ -47,3 +47,6 @@ vignettes/*.pdf
 /exp/empathy_intonation_perc_sp/.git
 /exp/empathy_intonation_perc_sp/.Rproj.user
 /exp/empathy_intonation_perc_sp/.gitignore
+
+/models
+/docs/manuscript/submissions/osf_zip/
