@@ -1,0 +1,53 @@
+
+Reviewer: 3
+
+Comments to the Author
+The study analyses the influence of empathy in the perception and processing of intonation in questions and statements in L2 Spanish and shows that higher empathic individuals, in comparison with lower empathic individuals, appear to be more sensitive to intonation cues. In my opinion, the quality of the paper is very good and the conclusions make it a highly citable one and not only for the case of Spanish L2 but in general. 
+
+Below you can find a by-section review and some comments.
+
+The goals and hypothesis of the paper are clear and well-defined.
+
+As for the state of the art, page 29, line 6 states: "the current body of research is limited to studies on pronunciation accuracy." And I think that is not accurate, there are studies that include empathy as an important factor for intonation perception (in L1 and mostly from psychology that is true) 
+https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fjournals.plos.org%2Fplosone%2Farticle%3Fid%3D10.1371%2Fjournal.pone.0008759&amp;data=05%7C01%7Cjoseph.casillas%40rutgers.edu%7C084b1e56cfef4a91b42008da64dd3331%7Cb92d2b234d35447093ff69aca6632ffe%7C1%7C0%7C637933198462897121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=PTH7nLWtWTBPz2gd0mAgbHywpFOc7Wdwbmu2S2GnTqM%3D&amp;reserved=0 
+
+And, then, specifically for Spanish L2, a recent poster presented in New Sounds 2022 uses the Autism Spectrum Quotient (I don't know if they publish abstracts as short papers): https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F361371026_The_Role_of_Native_Language_Experience_and_Individual_Features_in_the_Cross-linguistic_Perception_of_Spanish_Intonation&amp;data=05%7C01%7Cjoseph.casillas%40rutgers.edu%7C084b1e56cfef4a91b42008da64dd3331%7Cb92d2b234d35447093ff69aca6632ffe%7C1%7C0%7C637933198462897121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=eyYOMmcc2oo6p8HkdBnYewQn8g8%2BWazuWirRNtqaAW4%3D&amp;reserved=0
+
+Maybe you can add this info in the introduction stating that it is a very recent and promising field of research and that it helps us to understand individual variation and that way you won't need to change much in your text.
+
+
+The methodology of the paper is outstanding, a great sample size (225 listeners), good materials (with several Spanish varieties included) and a state-of-the-art statistical analysis for fussy reviewers and an innovative one (at least for our discipline), that I don’t fully understand, so maybe it is a good idea to organize a workshop on that in a future congress.
+
+I have only have questions regarding those "64 critical items" that (I think) can be easily solved including examples or a description of the patterns the speakers used or better (and you will see why in the comments) how you elicited the data and saying something like "variation is wonderful, students must be exposed to a wide range of intonational patterns and we are not interested in their pragmatic meaning for this study". 
+
+
+First, silly question, why do the listeners need intonation in wh- questions? They have the marker "qué, quién, cómo"... That is all they need, so I don't understand why this type of question is included in the study.
+
+I know that the stimuli are in the supplementary materials, but I miss something in the text either an example (or two of them) or making explicit of the type of stress that you have included and why. The reason is that a lot of foreign speakers (that is the case for example for Dutch, Japanese and Chinese if I remember it correctly) find more difficult to distinguish between statements and questions when the last word of the sentence is stressed in the last syllable (aguda). And that has two main reasons, 1) compression and truncation of the tonal movements and 2) (and of special importance given the varieties included among your stimuli) most of Mexican, Peninsular Spanish, Chilean, Peruvian statements can be slightly rising. In pragmatic descriptions such as Prieto & Roseano (2010) that final contour is characterised as "statement of the obvious" but, in fact, that is the pattern that we find most of the times that we elicit statements that have the slightest hint of common ground information, for example, in narratives. Moreover, in some varieties of Mexico and Chile, slightly rising (L* !H%) is the standard neutral pattern. This has a direct implication in the perception of questions by native speakers that counterintuitively, need a higher F0 rise in order to say that something is a question than foreigners that speak usually speak languages where there are not rising statements (I would give you references but they are mine, so maybe when the paper is published, we can talk in a congress). Maybe you don't find that because English-speaking speakers are used to uptalk?
+
+Before I start criticizing your stimuli in the follow paragraphs, I want you to know that I very much appreciate that you made them public and that if every researcher did this we will find problems in every dataset. So, this does not diminish your work at all. Now, some of the things that I am going to say are not solvable in a reviewed version and I am aware of that, and I do not expect you to solve them, the paper is publishable as long as you include the sentence that I said before saying that the sentences have several contours and several pragmatic meanings.
+
+Firstly, eliciting real broad-focus sentences is not easy and not only because the tendency to the statement of the obvious, for example, your andalusian_match_declarative-broad-focus_David-leia-el-libro has a slightly (but audible and present in the pitch contour) narrow-focus intonation (rising stressed syllable) and the only narrow-focus that I could find among all your stimuli. So, maybe we are calling narrow-focus to different things, let me know if we are. 
+
+As for the wh- questions, Spanish has loads of patterns, for example in Argentina wh- questions can be rising or falling depending on politeness, in Peninsular Spanish are usually falling but they can be rising, and usually is the same for any dialect. And, then we have all the biased intonation patterns, for example, your Andalusian speaker is using the "surprised one" L+H*L%, which happens to coincide with the pattern for focus, in all the wh- questions except in “andalusian_match_interrogative-partial-wh_Por-que-ama-la-navidad”, where she uses the L*H%, the prototypical one for yes-no questions in standard Castilian Spanish.
+
+For the rest, most of your speakers have chosen rising patterns for their wh-questions but that is not the most frequent pattern.
+
+As for focus, all your speakers should be doing a rising stressed syllable and falling ending (L+H* L%), that is pretty much panhispanic and crosslinguistically really frequent. But they are not, the case of the Peruvian speaker is salient because is using a monotonous tone, just the opposite of what she should be doing.
+
+In the case of the Argentinian speaker if you look at the sentences side by side you will see that in the supposedly narrow sentence the peak is a bit earlier but it is still in the post-stressed syllable. We will expect here the Argentinian narrow-focus pattern, which is the most recognizable thing of their accent and the only case in which Spanish has a tritonal accent L+H*+L (peak in the middle of the stressed syllable surrounded by low tones) .
+
+And then your Andalusian speaker has been innovative and has chosen for most of the cases the statement of the obvious pattern (realised as L*H%) therefore using the y-n question pattern. The context that Prieto and Roseano (2010) have for that is:
+A: ¿De quién es el hijo?
+B: ¡De quién va a ser! de Guillermo
+So for your data would be something like: A: María bebe el vino. (while she is thinking: obvio, ¿por qué me lo preguntas?)
+
+In the rest of them I think that she is trying to put the focus on the verb, but the result is really strange. To do that, you would need something like “Mariano HAbla | del tiempo (and does not another thing)” and you will have a small pause with compressed post-focal material etc. What she does is just weird.
+
+And lastly, yes-no questions, in general rising (here the Andalusian speaker is using the Madrid standard Spanish), but falling in Cuba, Puerto Rico, all the Caribbean, North of Spain, Canary Islands... The good thing is that the falling patterns that you have are not easily mistaken with a statement (for example questions of Medellín (Colombia) are) and the bad thing again is that you have more than one pattern.
+
+Ok, so the message after this is that the choice of a pattern by the speakers has made that some of the stimuli are more difficult that others and that maybe you could solve that by adding a new variable "pattern used", which for most of the cases will be the interaction between variety and utterance type but for those speakers that use different patterns it won't. In fact, if you redo the analysis in order to see the effect of the contour, I would use this variable instead of utterance type because most of the supposedly narrow-focus sentences are broad-focus and will share the L*L% contour. And again, I am not saying that you do that for the current paper, you can prepare a new experiment to focus on intonational patterns.
+
+Results. Nothing to say, beautifully solved, I loved the inclusion of speech rate as a variable that could affect the results. 
+
+Congratulations on your work and I hope to see the reviewed version soon.
