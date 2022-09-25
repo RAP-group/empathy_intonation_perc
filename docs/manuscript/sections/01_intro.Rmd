@@ -100,7 +100,7 @@ Thus, we extend this research to the SLA context to determine if individual diff
 We investigate how proficiency and empathy are related to the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish.
 This study was pre-registered on the Open Science Framework^[See https://osf.io/dh4zp/?view_only=162d6d13e5814417bcb9de349f18cb62] and designed to address the following research questions: 
 
-1. Is perceptional development in L2 Spanish modulated by proficiency and intonation type [i.e., @bustin_2020]?  
+1. Is perceptual development in L2 Spanish modulated by proficiency and intonation type [i.e., @bustin_2020]?  
 2. Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?  
 3. Does speaker variety affect perception accuracy and processing speed?  
 
