@@ -1,21 +1,57 @@
 ---
-title       : "Manuscript title"
-authors     : "First Author & Second Author"
-journal     : "Journal title"
-manuscript  : "Manuscript number"
+title       : |
+  Using intonation to disambiguate meaning: The role of empathy and proficiency in L2 perceptual development
+authors     : "Joseph V. Casillas"
+journal     : "Applied Psycholinguistics"
+manuscript  : "APS-Feb-22-0015"
+
+bibliography: 
+  - "../../../bib/empathy.bib"
 
 class       : "draft"
 output      : papaja::revision_letter_pdf
+header-includes:
+  - \usepackage{tipa}
+  - \usepackage{booktabs}
 ---
 
-Dear Dr. Editor,
+Dear XXX, 
 
-thank you very much for taking the time to consider our manuscript for publication at _`r rmarkdown::metadata$journal`_.
-In the following we address your and each reviewers' concerns point-by-point.
 
+Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
+Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication.
+We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 
+In this letter we address the reviewers' concerns point-by-point. 
+Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant lines in the revised manuscript. 
+We thank you and the 3 anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
+
+
+Sincerely,  
+Joseph Casillas  
+(corresponding author)
+
+\clearpage
 
 # Reviewer \#1
 
+```{r, child="reviewer1.Rmd", eval = T}
+```
+
+\clearpage
+
+# Reviewer \#2
+
+```{r, child="reviewer2.Rmd", eval = T}
+```
+
+\clearpage
+
+# Reviewer \#3
+
+```{r, child="reviewer3.Rmd", eval = T}
+```
+
+<!--
 \RC
 This is a reviewer comment
 
@@ -50,6 +86,7 @@ This is our response
 \Hard
 \NotEstimated
 
+-->
 
 \newpage
 

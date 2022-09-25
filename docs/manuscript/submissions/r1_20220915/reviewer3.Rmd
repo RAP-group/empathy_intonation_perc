@@ -1,4 +1,3 @@
-
 Reviewer: 3
 
 Comments to the Author
@@ -9,9 +8,9 @@ Below you can find a by-section review and some comments.
 The goals and hypothesis of the paper are clear and well-defined.
 
 As for the state of the art, page 29, line 6 states: "the current body of research is limited to studies on pronunciation accuracy." And I think that is not accurate, there are studies that include empathy as an important factor for intonation perception (in L1 and mostly from psychology that is true) 
-https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fjournals.plos.org%2Fplosone%2Farticle%3Fid%3D10.1371%2Fjournal.pone.0008759&amp;data=05%7C01%7Cjoseph.casillas%40rutgers.edu%7C084b1e56cfef4a91b42008da64dd3331%7Cb92d2b234d35447093ff69aca6632ffe%7C1%7C0%7C637933198462897121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=PTH7nLWtWTBPz2gd0mAgbHywpFOc7Wdwbmu2S2GnTqM%3D&amp;reserved=0 
+<https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008759>
 
-And, then, specifically for Spanish L2, a recent poster presented in New Sounds 2022 uses the Autism Spectrum Quotient (I don't know if they publish abstracts as short papers): https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F361371026_The_Role_of_Native_Language_Experience_and_Individual_Features_in_the_Cross-linguistic_Perception_of_Spanish_Intonation&amp;data=05%7C01%7Cjoseph.casillas%40rutgers.edu%7C084b1e56cfef4a91b42008da64dd3331%7Cb92d2b234d35447093ff69aca6632ffe%7C1%7C0%7C637933198462897121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=eyYOMmcc2oo6p8HkdBnYewQn8g8%2BWazuWirRNtqaAW4%3D&amp;reserved=0
+And, then, specifically for Spanish L2, a recent poster presented in New Sounds 2022 uses the Autism Spectrum Quotient (I don't know if they publish abstracts as short papers): <https://www.researchgate.net/publication/361371026_The_Role_of_Native_Language_Experience_and_Individual_Features_in_the_Cross-linguistic_Perception_of_Spanish_Intonation>
 
 Maybe you can add this info in the introduction stating that it is a very recent and promising field of research and that it helps us to understand individual variation and that way you won't need to change much in your text.
 

@@ -1,4 +1,3 @@
-
 Reviewer: 2
 
 Comments to the Author
@@ -20,7 +19,7 @@ And specifically for the case of Spanish:
 
 Sánchez Alvarado, Covadonga. 2020. The production and perception of subject focus prosody in L2 Spanish. University of Massachusetts Amherst dissertation. 
 
-Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object Focus in L2 Spanish" Studies in Hispanic and Lusophone Linguistics, vol. 15, no. 1, 2022, pp. 211-250. https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdoi.org%2F10.1515%2Fshll-2022-2060&amp;data=05%7C01%7Cjoseph.casillas%40rutgers.edu%7C084b1e56cfef4a91b42008da64dd3331%7Cb92d2b234d35447093ff69aca6632ffe%7C1%7C0%7C637933198462897121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=KmCJy6w1jy1U61KpHoO4MhOQ2kCgjgA48BJxL0PCGzA%3D&amp;reserved=0
+Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object Focus in L2 Spanish" Studies in Hispanic and Lusophone Linguistics, vol. 15, no. 1, 2022, pp. 211-250. <https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html>
 
 
 
