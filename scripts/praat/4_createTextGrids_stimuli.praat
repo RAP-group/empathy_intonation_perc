@@ -22,7 +22,7 @@ numberOfFiles = Get number of strings
 clearinfo
 #### Begin loop
 
-for i from 216 to numberOfFiles
+for i from number to numberOfFiles
 	select Strings allFiles
 	fileName$ = Get string... i
 	prefix$ = fileName$ - ".wav"
