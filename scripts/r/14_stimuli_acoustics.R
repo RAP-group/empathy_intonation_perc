@@ -61,8 +61,13 @@ stim_data <- stim_data_raw %>%
     sep = "_"
     ) %>% 
   group_by(variety, type) %>% 
-  mutate(f0_log = log(f0), 
-         f0_log_z = (f0_log - mean(f0_log, na.rm = T)) / sd(f0_log, na.rm = T)) %>% 
+  mutate(time_bin = cut(time, seq(0, 100, 5), include.lowest = T, right = F), 
+    f0_log = log(f0), 
+    f0_log_z = (f0_log - mean(f0_log, na.rm = T)) / sd(f0_log, na.rm = T)) %>% 
+  separate(time_bin, into = c("time_bin", "trash"), ",") %>% 
+  mutate(time_bin = str_remove(time_bin, "\\["), 
+         time_bin = as.numeric(time_bin)) %>% 
+  select(-trash) %>% 
   write_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv"))
 
 # -----------------------------------------------------------------------------
@@ -76,21 +81,20 @@ stim_data <- read_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv"))
 
 # F0 as a function of sentence type and variety
 stim_data %>% 
-  #na.omit() %>% 
-  filter(type != "filler") %>% 
+  filter(type != "filler", f0_log_z <= 2.5, f0_log_z >= -2.5) %>% 
   ggplot() + 
-  aes(x = time, y = f0_log_z, color = variety, fill = variety) + 
-  facet_wrap(variety ~ type, scales = "free_y", ncol = 4, strip.position = "right") + 
-  geom_smooth(method = "loess", span = 0.85, formula = "y ~ x") + 
-  #stat_summary(fun = mean, geom = "line") + 
-  #stat_summary(fun = mean, geom = "point", color = "white", pch = 21, 
-  #  size = 3, stroke = 1.2) + 
-  #stat_summary(fun = mean_se, geom = "pointrange") + 
+  aes(x = time_bin, y = f0_log_z, color = variety, fill = variety) + 
+  facet_grid(variety ~ type) + 
+  geom_line(aes(group = item), stat = "smooth", alpha = 0.1, se = F, 
+    show.legend = F, formula = "y ~ x", method = "loess") + 
+  geom_smooth(method = "loess", span = 0.5, formula = "y ~ x", size = 1.2, 
+    show.legend = F) + 
   scale_color_manual(values = viridis::viridis_pal(
-    option = "B", begin = 0.25, end = 0.85)(stim_data$variety %>% unique %>% length)) + 
+    option = "B", begin = 0.3, end = 0.8)(8)) + 
   scale_fill_manual(values = viridis::viridis_pal(
-    option = "B", begin = 0.25, end = 0.85)(stim_data$variety %>% unique %>% length)) + 
+    option = "B", begin = 0.3, end = 0.8)(8)) + 
   scale_x_continuous(labels = scales::percent_format(scale = 1)) + 
+  labs(y = NULL, x = NULL) + 
   ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") 
 
 # Spectrogram
