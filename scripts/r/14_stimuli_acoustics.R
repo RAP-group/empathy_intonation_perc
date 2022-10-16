@@ -50,31 +50,19 @@ stim_data_raw <- speakr::praat_run(stim_script, capture = TRUE) %>%
 #
 stim_data <- stim_data_raw %>% 
   pivot_longer(
-    cols = f0_00:in_100, 
+    cols = f0_00:f0_100, 
     names_to = c(".value", "time"), 
     names_sep = "_"
     ) %>% 
-  transmute(filename, time = as.numeric(time), duration, f0, f1, f2, 
-    intensity = `in`) %>% 
+  transmute(filename, time = as.numeric(time), duration, f0) %>% 
   separate(
     col = filename, 
     into = c("variety", "condition", "type", "item"), 
     sep = "_"
     ) %>% 
-  group_by(variety) %>% 
-  mutate(across(
-    .cols = c("f0", "f1", "f2", "intensity"), 
-    .fns = log, 
-    .names = "{.col}_log")
-    ) %>% 
-  mutate(across(
-    .cols = c("f0_log", "f1_log", "f2_log", "intensity_log"), 
-    .fns = simple_scale, 
-    .names = "{.col}_z")
-    ) %>% 
-  pivot_longer(
-    cols = c("duration", "intensity", starts_with("f"), contains("_log")), 
-    names_to = "metric", values_to = "val") %>% 
+  group_by(variety, type) %>% 
+  mutate(f0_log = log(f0), 
+         f0_log_z = (f0_log - mean(f0_log, na.rm = T)) / sd(f0_log, na.rm = T)) %>% 
   write_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv"))
 
 # -----------------------------------------------------------------------------
@@ -84,15 +72,20 @@ stim_data <- stim_data_raw %>%
 
 # Data viz --------------------------------------------------------------------
 
+stim_data <- read_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv"))
+
 # F0 as a function of sentence type and variety
 stim_data %>% 
-  filter(metric == "f0_log_z", type != "filler") %>% 
+  #na.omit() %>% 
+  filter(type != "filler") %>% 
   ggplot() + 
-  aes(x = time, y = val, color = variety, fill = variety) + 
-  facet_grid(variety ~ type, scales = "free_y") + 
-  stat_summary(fun = mean, geom = "line") + 
-  stat_summary(fun = mean, geom = "point", color = "white", pch = 21, 
-    size = 3, stroke = 1.2) + 
+  aes(x = time, y = f0_log_z, color = variety, fill = variety) + 
+  facet_wrap(variety ~ type, scales = "free_y", ncol = 4, strip.position = "right") + 
+  geom_smooth(method = "loess", span = 0.85, formula = "y ~ x") + 
+  #stat_summary(fun = mean, geom = "line") + 
+  #stat_summary(fun = mean, geom = "point", color = "white", pch = 21, 
+  #  size = 3, stroke = 1.2) + 
+  #stat_summary(fun = mean_se, geom = "pointrange") + 
   scale_color_manual(values = viridis::viridis_pal(
     option = "B", begin = 0.25, end = 0.85)(stim_data$variety %>% unique %>% length)) + 
   scale_fill_manual(values = viridis::viridis_pal(
