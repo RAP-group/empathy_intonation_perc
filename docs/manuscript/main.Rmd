@@ -201,3 +201,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 <div id="refs" custom-style="Bibliography"></div>
 \endgroup
+
+
+\newpage
+
+# (APPENDIX) Appendix {-}
+
+```{r child = "./sections/05_supplementary_material.Rmd"}
+```
+
