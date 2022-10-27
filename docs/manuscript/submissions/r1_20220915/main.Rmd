@@ -13,6 +13,7 @@ output      : papaja::revision_letter_pdf
 header-includes:
   - \usepackage{tipa}
   - \usepackage{booktabs}
+  - \usepackage{hyperref}
 ---
 
 Dear XXX, 
