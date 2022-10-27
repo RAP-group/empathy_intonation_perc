@@ -171,7 +171,33 @@ t_mean <- time$min %>% mean
 
 # LexTALE and Empathy quotient descriptives -----------------------------------
 
-lt_eq_descriptives <- read_csv(here("tables", "lextale_empathy_descriptives.csv"))
+# Posterior means and HDIs
+lt_eq_descriptives <- 
+  read_csv(here("tables", "lextale_empathy_descriptives.csv"))
+
+# Just lextale and eq for each participant
+eq_lt_df <- learners %>% 
+  select(participant, eq_score, lextale_tra, lextale_std, eq_std) %>% 
+  distinct() 
+
+# Fit linear regression to estimate correlation
+eq_lt_mod <- brm(
+  data = eq_lt_df, 
+  family = gaussian,
+  formula = lextale_std ~ eq_std,
+  prior = c(prior(normal(0, 0.1), class = Intercept), 
+            prior(cauchy(0, 0.1), class = sigma)), 
+  chains = 4, cores = 4, seed = 1, 
+  file = here("models", "eq_lextale_cor")
+  )
+
+# Get posterior
+r_eq_lt_post <- eq_lt_mod %>% 
+  as_draws_df() %>% 
+  select(b_eq_std) %>% 
+  pull() %>% 
+  describe_posterior() %>% 
+  as_tibble()
 
 # -----------------------------------------------------------------------------
 

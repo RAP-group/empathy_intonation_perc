@@ -1,7 +1,7 @@
 # Helpers ---------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# LAST UPDATE: 12/25/2021
+# LAST UPDATE: 10/12/2022
 # - Helper function using for analyses, plotting and reporting results in
 #   the project manuscript
 # - This file is sourced automatically when the data are loaded via 
@@ -152,6 +152,12 @@ load_models <- function(path, obj_type) {
   # Rename objects
   names(the_objs) <- the_names
   return(the_objs)
+}
+
+# simple scale
+simple_scale <- function(x) {
+  out <- (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)
+  return(out)
 }
 
 # -----------------------------------------------------------------------------

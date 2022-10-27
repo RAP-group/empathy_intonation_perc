@@ -1,65 +1,130 @@
-Reviewer: 2
 
-Comments to the Author
-This is a very interesting study looking at the roles of proficiency and empathy in the development of L2 prosodic perception. The authors use sophisticated statistical methods to show that both proficiency and empathy seem to be at play in the development of L2 prosodic perception, as well as the specific type of prosody. The paper also considers the role of dialect, which is very often not dealt with in studies of L2 prosody. In paying attention to these aspects of prosodic acquisition, the paper is cutting edge. I think that the paper would benefit from a clear theoretical model with specific predictions based on that model, and perhaps the authors can investigated whether Mennen's LiLT model would help them do that or not. Below I present some general recommendations, followed by some specific comments. 
+## Comments to the Author
 
-Recommendations: 
+\RC This is a very interesting study looking at the roles of proficiency and empathy in the development of L2 prosodic perception. The authors use sophisticated statistical methods to show that both proficiency and empathy seem to be at play in the development of L2 prosodic perception, as well as the specific type of prosody. The paper also considers the role of dialect, which is very often not dealt with in studies of L2 prosody. In paying attention to these aspects of prosodic acquisition, the paper is cutting edge. I think that the paper would benefit from a clear theoretical model with specific predictions based on that model, and perhaps the authors can investigated whether Mennen's LiLT model would help them do that or not. Below I present some general recommendations, followed by some specific comments. 
 
-I would like to see more discussion about proficiency which as I understand was really about vocabulary. What do the authors think the relationship between vocabulary size and prosodic comprehension is? It would be interesting to see more discussion of this in the paper, since the authors made a decision to measure “proficiency” in this way. Is it that learners might be acquiring more “things” overall? More words but also more tunes? This could be explored further.
+\WorkInProgress
+\Easy
 
-As mentioned in the detailed comments, I don’t think it makes sense to conflate empathy and “pragmatic skills”. I know the authors claim that they are “operationalizing” empathy as pragmatic skills, but I don’t see a need to do this. While being highly empathetic might and probably does play a role in one’s pragmatic skills, I don’t think it makes sense to say they are the same thing. I think the authors can simply talk about empathy and leave it there, which is what they are doing in the analysis anyway. 
+## Recommendations: 
 
-This is also mentioned in the more detailed comments, but I would like to see some sort of description of the tunes (at least the nuclear configurations) for each variety and sentence type. At the very least a very phonetic description would do (e.g. a rise to a high tone in the nuclear stressed vowel, followed by a fall to a low boundary tone). But I think this would make for a better discussion of the findings. This might also help the authors to make sense of the finding about wh-questions and the role of proficiency and empathy for those. Why wh-questions? 
+\RC I would like to see more discussion about proficiency which as I understand was really about vocabulary. What do the authors think the relationship between vocabulary size and prosodic comprehension is? It would be interesting to see more discussion of this in the paper, since the authors made a decision to measure “proficiency” in this way. Is it that learners might be acquiring more “things” overall? More words but also more tunes? This could be explored further.
 
-While the paper points out the need for L2 models to account for levels further than the segment, the paper doesn’t make any suggestions about how to do so and does not mention the most recent proposal of a model for L2 intonation. Please check the following for the model more generally: 
+\WorkInProgress
+\Easy
 
-Mennen, I. (2015). Beyond segments: Towards a L2 intonation learning theory. In E. Delais-Roussaire, M. Avanzi, & S. Herment (Eds.), Prosody and language in contact (pp. 171–188). Heidelberg, Germany: Springer
+\RC As mentioned in the detailed comments, I don’t think it makes sense to conflate empathy and “pragmatic skills”. I know the authors claim that they are “operationalizing” empathy as pragmatic skills, but I don’t see a need to do this. While being highly empathetic might and probably does play a role in one’s pragmatic skills, I don’t think it makes sense to say they are the same thing. I think the authors can simply talk about empathy and leave it there, which is what they are doing in the analysis anyway. 
+
+\WorkInProgress
+\Easy
+
+\RC This is also mentioned in the more detailed comments, but I would like to see some sort of description of the tunes (at least the nuclear configurations) for each variety and sentence type. At the very least a very phonetic description would do (e.g. a rise to a high tone in the nuclear stressed vowel, followed by a fall to a low boundary tone). But I think this would make for a better discussion of the findings. This might also help the authors to make sense of the finding about wh-questions and the role of proficiency and empathy for those. Why wh-questions? 
+
+\WorkInProgress
+\Easy
+
+\RC{While the paper points out the need for L2 models to account for levels further than the segment, the paper doesn’t make any suggestions about how to do so and does not mention the most recent proposal of a model for L2 intonation. Please check the following for the model more generally: 
+
+Mennen, I. (2015). Beyond segments: Towards a L2 intonation learning theory. In E. Delais-Roussaire, M. Avanzi, \& S. Herment (Eds.), Prosody and language in contact (pp. 171–188). Heidelberg, Germany: Springer
 
 And specifically for the case of Spanish:
 
 Sánchez Alvarado, Covadonga. 2020. The production and perception of subject focus prosody in L2 Spanish. University of Massachusetts Amherst dissertation. 
 
 Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object Focus in L2 Spanish" Studies in Hispanic and Lusophone Linguistics, vol. 15, no. 1, 2022, pp. 211-250. <https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html>
+}
+
+
+\WorkInProgress
+\Easy
 
 
 
-p. 3, line 23-29
-Please also include literature on information structure (focus, givenness, etc.) as well as speaker belief states
+\RC{p. 3, line 23-29 - Please also include literature on information structure (focus, givenness, etc.) as well as speaker belief states
+}
 
-p. 4, 47-50
+\WorkInProgress
+\Easy
 
-I think it could be useful to include some concrete examples of the various meanings here, to demonstrate the plethora of meanings that can arise
+\RC{p. 4, 47-50 - I think it could be useful to include some concrete examples of the various meanings here, to demonstrate the plethora of meanings that can arise
+}
 
-p. 5, 23-29
-Also reference the discussion regarding the instruction of prosody in Durwing & Monroe 2015
+\WorkInProgress
+\Easy
 
-p. 6,paragraph beginning on line 47 - there should be some mention of Mennen’s LiLT (L2 intonational learning theory) model of L2 intonation and the recent work using this model
+\RC{p. 5, 23-29 - Also reference the discussion regarding the instruction of prosody in Durwing \& Monroe 2015
+}
 
-p. 6 line 39 - both Caribbean Spanish and Argentine (porteño?) Spanish use final f0 falls for yes-no questions (absolute interrogatives), I’m not sure this description actually captures the differences. Also, there are differences in the actual falls in different Caribbean Spanishes. Varieties of DR Spanish use what is best described as H+L* L% while Puerto Rican Spanish uses ¡H* L%. I think Hualde & Prieto also shows that question falls are actually rather common in Spanish, even if their pragmatic meanings are more restricted. 
+\WorkInProgress
+\Easy
 
-The author(s)might consider using the term polar or yes/no questions throughout, since these terms are more accessible outside the Hispanic Linguistics lit, which tends to use “absolute interrogatives” . 
+\RC{p. 6,paragraph beginning on line 47 - there should be some mention of Mennen’s LiLT (L2 intonational learning theory) model of L2 intonation and the recent work using this model
+}
 
-p. 9 line 4 - has empathy been “operationalized as pragmatic skill” in the past? Is it really possible to say that they are the same thing, vs. one leading to the other? 
+\WorkInProgress
+\Easy
+
+\RC{p. 6 line 39 - both Caribbean Spanish and Argentine (porteño?) Spanish use final f0 falls for yes-no questions (absolute interrogatives), I’m not sure this description actually captures the differences. Also, there are differences in the actual falls in different Caribbean Spanishes. Varieties of DR Spanish use what is best described as H+L* L% while Puerto Rican Spanish uses ¡H* L%. I think Hualde & Prieto also shows that question falls are actually rather common in Spanish, even if their pragmatic meanings are more restricted. 
+}
+
+\WorkInProgress
+\Easy
+
+\RC The author(s)might consider using the term polar or yes/no questions throughout, since these terms are more accessible outside the Hispanic Linguistics lit, which tends to use “absolute interrogatives” . 
+
+\WorkInProgress
+\Easy
+
+\RC{p. 9 line 4 - has empathy been “operationalized as pragmatic skill” in the past? Is it really possible to say that they are the same thing, vs. one leading to the other? 
+}
+
+\WorkInProgress
+\Easy
 
 
-p. 10 - line 45 - perceptional—> perceptual??
+\RC{p. 10 - line 45 - perceptional—> perceptual??}
 
-research question 2 - Again, it’s hard for me to buy empathy AS a pragmatic skill itself. I would say it’s an ability that could be helpful for pragmatic skills/pragmatic reasoning. But not the same thing. If the authors disagree I’d like to see this justified more. Given what the study does, I’m not sure you have to say anything about pragmatic skills at all, you can just call it empathy
+\WorkInProgress
+\Easy
 
-p. 11, line 8, again, why not just call them yes-no questions? 
+\RC research question 2 - Again, it’s hard for me to buy empathy AS a pragmatic skill itself. I would say it’s an ability that could be helpful for pragmatic skills/pragmatic reasoning. But not the same thing. If the authors disagree I’d like to see this justified more. Given what the study does, I’m not sure you have to say anything about pragmatic skills at all, you can just call it empathy
 
-p. 15, line 25 - I’m wondering what perceptual learning would mean here. We know that the encoding of narrow focus and question intonation differs across the varieties that are listed here. How would we know if these participants had experience with these varieties? It would be helpful to know what the tunes for each type of sentence were for each variety used in the stimuli as well. 
+\WorkInProgress
+\Easy
 
-p. 26, lines 53-6(on next page)- I’m not sure this makes sense” In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.”
+\RC{p. 11, line 8, again, why not just call them yes-no questions?}
 
+\WorkInProgress
+\Easy
+
+\RC p. 15, line 25 - I’m wondering what perceptual learning would mean here. We know that the encoding of narrow focus and question intonation differs across the varieties that are listed here. How would we know if these participants had experience with these varieties? It would be helpful to know what the tunes for each type of sentence were for each variety used in the stimuli as well. 
+
+\WorkInProgress
+\Easy
+
+\RC p. 26, lines 53-6 (on next page)- I’m not sure this makes sense” In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.”
 Do they mean “compared” to low empathy learners (as opposed to “particularly with regard to low empathy learners”)?
 
-p. 29, line 28 - "This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.” again, I don’t see a reason to call this pragmatic skill. It’s just empathy. better to say - "That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.”
+\WorkInProgress
+\Easy
 
-p. 31 - line 5 - The idea that there is one “US Spanish” is very controversial. US Spanishes still have the characteristics of the varieties of origin, so even though respondents are familiar with Spanish spoken in the U.S. they would be exposed to Mexican Spanish, Dominican Spanish, Puerto Rican Spanish, etc. as spoken in the US. Looking at which region of the country respondents were from could be helpful in understanding this. 
+\RC p. 29, line 28 - "This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.” again, I don’t see a reason to call this pragmatic skill. It’s just empathy. better to say - "That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.”
 
-p. 31 - line 20 - The authors discuss the possibilities of why the different varieties might have been perceived differently. I think it would be helpful for the authors to share what the tunes in their stimuli actually were, which would help them to better surmise here.  Puerto Rican Spanish (not mentioned in the discussion) and Cuban Spanish were the varieties people had the most difficulties with, but according to most descriptions PRS and CS use the same tune for ys questions (also again, NB that Dominican ynqs are not the same as PRS and CS ynqs, this description conflates all Caribbean Spanish questions, which are also not necessarily hat patterns). I would recommend an appendix with a description of the tunes in the stimuli for each variety, and for this to be brought into the discussion for research question #3.
+\WorkInProgress
+\Easy
 
-p. 32, line 7 - again, the LiLT model needs to be mentioned, since this reads as if no theory of L2 intonation has been proposed. 
+\RC p. 31 - line 5 - The idea that there is one “US Spanish” is very controversial. US Spanishes still have the characteristics of the varieties of origin, so even though respondents are familiar with Spanish spoken in the U.S. they would be exposed to Mexican Spanish, Dominican Spanish, Puerto Rican Spanish, etc. as spoken in the US. Looking at which region of the country respondents were from could be helpful in understanding this. 
 
+\WorkInProgress
+\Easy
+
+\RC p. 31 - line 20 - The authors discuss the possibilities of why the different varieties might have been perceived differently. I think it would be helpful for the authors to share what the tunes in their stimuli actually were, which would help them to better surmise here.  Puerto Rican Spanish (not mentioned in the discussion) and Cuban Spanish were the varieties people had the most difficulties with, but according to most descriptions PRS and CS use the same tune for ys questions (also again, NB that Dominican ynqs are not the same as PRS and CS ynqs, this description conflates all Caribbean Spanish questions, which are also not necessarily hat patterns). I would recommend an appendix with a description of the tunes in the stimuli for each variety, and for this to be brought into the discussion for research question #3.
+
+\WorkInProgress
+\Easy
+
+\RC p. 32, line 7 - again, the LiLT model needs to be mentioned, since this reads as if no theory of L2 intonation has been proposed. 
+
+\WorkInProgress
+\Easy
 
