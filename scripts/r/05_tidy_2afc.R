@@ -1,7 +1,7 @@
 # Tidy 2afc data --------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211221
+# Last update: 20221026
 # 
 # - Get 2afc data from exp directory by loading all .csv's
 # - Select relevant rows and Filter for 2afc block
@@ -178,7 +178,9 @@ learners <- dir_ls(path = here("exp", "empathy_intonation_perc", "data"),
     read_csv(here("data", "tidy", "speech_rate_tidy.csv")) %>% 
       select(speaker_variety:sentence, sentence_dur), 
       by = c("speaker_variety", "condition", "sentence_type", "sentence")) %>% 
-  mutate(rt_adj = rt_raw - sentence_dur) %>% 
+  mutate(rt_adj = rt_raw - sentence_dur) 
+
+learners %>% 
   write_csv(here("data", "tidy", "learners_2afc_tidy.csv"))
 
 
@@ -188,7 +190,8 @@ learners <- dir_ls(path = here("exp", "empathy_intonation_perc", "data"),
 # Native Spanish
 #
 
-natives <- dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"), 
+natives_original <- 
+  dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"), 
   regexp = "\\.csv$") %>%
   map_dfr(read_csv, .id = "source") %>% 
   left_join(., read_csv(
@@ -228,7 +231,57 @@ natives <- dir_ls(path = here("exp", "empathy_intonation_perc_sp", "data"),
     read_csv(here("data", "tidy", "speech_rate_tidy.csv")) %>% 
       select(speaker_variety:sentence, sentence_dur), 
       by = c("speaker_variety", "condition", "sentence_type", "sentence")) %>% 
-  mutate(rt_adj = rt_raw - sentence_dur) %>% 
+  mutate(rt_adj = rt_raw - sentence_dur) 
+
+# Load additional data
+natives_additional <- c(
+  dir_ls(path = here("exp", "empathy_intonation_perc_sp_cu", "data"), 
+    regexp = "\\.csv$"), 
+  dir_ls(path = here("exp", "empathy_intonation_perc_sp_pr", "data"), 
+    regexp = "\\.csv$"), 
+  dir_ls(path = here("exp", "empathy_intonation_perc_sp_and", "data"), 
+    regexp = "\\.csv$")
+  ) %>% 
+  map_dfr(read_csv, .id = "source", 
+    col_types = cols(.default = "?", participant = "c")) %>% 
+  select(expName, 
+    participant, 
+    have_ln = `¿Hablas con fluidez otra lengua (sí/no)?*`, 
+    trial_n = trials_2afc_loop.thisN, 
+    correct_response:key_resp_2afc_trial.rt, 
+    item = andalusian
+  ) %>% 
+  mutate(spn_variety = case_when(
+    expName == "empathy_intonation_perc_sp_cu" ~ "cuban", 
+    expName == "empathy_intonation_perc_sp_and" ~ "andalusian", 
+    expName == "empathy_intonation_perc_sp_pr" ~ "puertorican"
+    ), check_pass = NA, check_fails = NA, aoa = NA) %>%
+  filter(!is.na(key_resp_2afc_trial.keys)) %>% 
+  mutate(item = str_remove(item, "./stim/wavs/")) %>% 
+  separate(
+    col = item, 
+    into = c("speaker_variety", "condition", "sentence_type", "sentence"), 
+    sep = "_", 
+    remove = F) %>% 
+  mutate(
+    group = "native", 
+    eng_variety = NA, 
+    sentence = str_remove(sentence, ".wav"), 
+    sentence = str_replace_all(sentence, "-", " "), 
+    speaker_variety = spn_variety
+  ) %>% 
+  select(-expName, participant, group, eng_variety, spn_variety:have_ln, aoa, 
+    check_pass:check_fails, item, speaker_variety, condition:sentence,
+    correct_response, response = key_resp_2afc_trial.keys, 
+    is_correct = key_resp_2afc_trial.corr, rt_raw = key_resp_2afc_trial.rt, 
+    trial_n) %>% 
+  left_join(., 
+    read_csv(here("data", "tidy", "speech_rate_tidy.csv")) %>% 
+      select(speaker_variety:sentence, sentence_dur), 
+        by = c("speaker_variety", "condition", "sentence_type", "sentence")) %>% 
+  mutate(rt_adj = rt_raw - sentence_dur) 
+
+natives <- bind_rows(natives_original, natives_additional) %>% 
   write_csv(here("data", "tidy", "natives_2afc_tidy.csv"))
 
 bind_rows(learners, natives) %>% 

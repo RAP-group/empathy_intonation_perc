@@ -128,6 +128,7 @@ walk(c('png', 'pdf'), ~ ggsave(
 
 # Accuracy --------------------------------------------------------------------
 
+# Learner and monolingual accuracy plot
 l2_native_accuracy <- bind_rows(
   learners %>% 
     select(participant, speaker_variety, sentence_type, is_correct) %>% 
@@ -181,6 +182,7 @@ walk(c('png', 'pdf'), ~ ggsave(
   plot = learner_native_accuracy, 
   device = .x, height = 4, width = 8.5, units = "in"))
 
+# Learner and monolingual accuracy table
 l2_native_accuracy_tbl <- l2_native_accuracy %>% 
   pivot_wider(names_from = "group", values_from = "avg") %>% 
   transmute(
@@ -195,6 +197,57 @@ l2_native_accuracy_tbl <- l2_native_accuracy %>%
     Type == "declarative-broad-focus" ~ "Declarative broad focus"
   )) %>% 
   write_csv(here("tables", "learner_native_accuracy.csv"))
+
+# Monolingual listener/speaker match plot
+variety_matches <- natives %>% 
+  mutate(
+    variety_match = case_when(
+      spn_variety == "Mexico" & speaker_variety == "mexican" ~ 1, 
+      spn_variety == "Chile" & speaker_variety == "chilean" ~ 1, 
+      spn_variety == "Spain" & speaker_variety == "castilian" ~ 1, 
+      spn_variety == "cuban" & speaker_variety == "cuban" ~ 1, 
+      spn_variety == "puertorican" & speaker_variety == "puertorican" ~ 1, 
+      spn_variety == "andalusian" & speaker_variety == "andalusian" ~ 1, 
+      TRUE ~ 0
+    ), 
+    spn_variety = case_when(
+      speaker_variety == "andalusian" ~ "Andalusian", 
+      speaker_variety == "argentine" ~ "Argentine", 
+      speaker_variety == "castilian" ~ "Madrileño", 
+      speaker_variety == "chilean" ~ "Chilean", 
+      speaker_variety == "cuban" ~ "Cuban", 
+      speaker_variety == "mexican" ~ "Mexican", 
+      speaker_variety == "peruvian" ~ "Peruvian", 
+      speaker_variety == "puertorican" ~ "Puerto Rican"), 
+    Type = case_when(
+      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
+      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
+      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
+      sentence_type == "declarative-broad-focus" ~ "Declarative\nbroad focus")
+  ) %>% 
+  filter(variety_match == 1)
+
+native_variety_matched_accuracy <- variety_matches %>% 
+  ggplot() + 
+  aes(x = Type, y = is_correct, color = spn_variety) + 
+  geom_hline(yintercept = 0.5, lty = 3) + 
+  stat_summary(fun.data = mean_se, geom = "pointrange", 
+               position = position_dodge(0.5)) + 
+  scale_color_manual(name = NULL, 
+    values = viridis::viridis_pal(option = "C", begin = 0.2, end = 0.8)(6)) + 
+  coord_cartesian(ylim = c(0.48, 1.02), xlim = c(0.6, 4.4), expand = F) + 
+  scale_y_continuous(labels = scales::percent_format()) + 
+  labs(y = "Accuracy", x = NULL) + 
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+  theme(legend.position = c(0.1, 0.25), legend.background = element_blank(), 
+        legend.key.size = unit(0.35, "cm"), 
+        strip.background = element_rect(fill = NA))
+
+walk(c('png', 'pdf'), ~ ggsave(
+  filename = glue(file.path(here("figs", "manuscript")), "/native_variety_matched_accuracy.", .x), 
+  plot = native_variety_matched_accuracy, 
+  device = .x, height = 4, width = 8.5, units = "in"))
+
 
 # -----------------------------------------------------------------------------
 
