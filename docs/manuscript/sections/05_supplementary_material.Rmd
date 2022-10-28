@@ -1,40 +1,8 @@
-# On-line supplementary material
-
 ## Traditional analyses
 
 This section contains additional information regarding the response accuracy and response time analyses, as well as tables reported but not included in the main text.
 
 **Learner response accuracy**. 
-
-Raw accuracy plot \@ref(fig:plot-learner-native-accuracy)
-
-(ref:plot-learner-native-accuracy) Stuff they made me do.
-
-```{r, 'plot-learner-native-accuracy', fig.cap="(ref:plot-learner-native-accuracy)"}
-knitr::include_graphics(
-  here("figs", "manuscript", "learner_native_accuracy.pdf")
-  )
-```
-
-Raw accuracy table  \@ref(tab:table-learner-native-accuracy)
-
-```{r, 'table-learner-native-accuracy'}
-read_csv(here("tables", "learner_native_accuracy.csv")) %>% 
-  mutate(Type = case_when(
-    Variety != "Andalusian" & Type == "Declarative broad focus" ~ " ", 
-    Variety != "Andalusian" & Type == "Declarative narrow focus" ~ " ", 
-    Variety != "Andalusian" & Type == "Interrogative Wh-" ~ " ", 
-    Variety != "Andalusian" & Type == "Interrogative y/n" ~ " ", 
-    TRUE ~ Type
-  )) %>% 
-  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 2)), 
-    caption = "Summary of the.",
-    label = "table-learner-native-accuracy")
-```
-
-
-
-
 
 The population effects of the response accuracy model were specified in the following manner: 
 
@@ -247,6 +215,76 @@ tribble(
     represented in the auditory stimuli.",
     label = "table-stimuli-descriptives")
 ```
+
+*Acoustic analysis*. 
+
+Spectrograms \@ref(fig:plot-spectrogram-andalusian)
+
+(ref:plot-spectrogram-andalusian) Stuff they made me do.
+
+```{r, 'plot-spectrogram-andalusian', fig.cap="(ref:plot-spectrogram-andalusian)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_andaluz.png")
+  )
+
+```
+
+
+
+
+*Monolingual response accuracy*.
+
+Raw accuracy plot \@ref(fig:plot-learner-native-accuracy)
+
+(ref:plot-learner-native-accuracy) Stuff they made me do.
+
+```{r, 'plot-learner-native-accuracy', fig.cap="(ref:plot-learner-native-accuracy)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_native_accuracy.pdf")
+  )
+```
+
+Raw accuracy table  \@ref(tab:table-learner-native-accuracy)
+
+```{r, 'table-learner-native-accuracy'}
+read_csv(here("tables", "learner_native_accuracy.csv")) %>% 
+  mutate(Type = case_when(
+    Variety != "Andalusian" & Type == "Declarative broad focus" ~ " ", 
+    Variety != "Andalusian" & Type == "Declarative narrow focus" ~ " ", 
+    Variety != "Andalusian" & Type == "Interrogative Wh-" ~ " ", 
+    Variety != "Andalusian" & Type == "Interrogative y/n" ~ " ", 
+    TRUE ~ Type
+  )) %>% 
+  knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 2)), 
+    caption = "Summary of the.",
+    label = "table-learner-native-accuracy")
+```
+
+
+
+Variety matched Raw accuracy plot \@ref(fig:plot-variety-matched-native-accuracy)
+
+(ref:plot-variety-matched-native-accuracy) Stuff they made me do.
+
+```{r, 'plot-variety-matched-native-accuracy', fig.cap="(ref:plot-variety-matched-native-accuracy)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "native_variety_matched_accuracy.pdf")
+  )
+```
+
+
+Variety matched raw accuracy table \@ref(tab:table-variety-matched-native-accuracy)
+
+```{r, 'table-variety-matched-native-accuracy'}
+read_csv(here("tables", "variety_matched_native_accuracy.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r"), 
+    caption = "Variety-matched response accuracy as a function of utterance type. Accuracy refers to the proportion of correct responses along with the standard error of the mean.",
+  label = "table-variety-matched-native-accuracy")
+```
+
+
+
+
 
 
 *Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
