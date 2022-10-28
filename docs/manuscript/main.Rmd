@@ -205,7 +205,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 \newpage
 
-# (APPENDIX) Appendix {-}
+# (APPENDIX) Supplementary materials {-}
 
 ```{r child = "./sections/05_supplementary_material.Rmd"}
 ```
