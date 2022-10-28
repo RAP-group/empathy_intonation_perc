@@ -152,7 +152,7 @@ In this section we present supplementary analyses, all of which are exploratory 
 **D'**. Figure \@ref(fig:plot-learner-dp-utterance-variety) and Table \@ref(tab:table-dp-utterance-variety) represent an exploratory analysis of d' scores as a function of utterance type and speaker variety. 
 One observes similar patterns to those from the accuracy analysis presented in the manuscript. 
 The primary takeaway is that the analysis of learners' sensitivity to Spanish prosody mirrors that of their accuracy. 
-That is to say, learners are more sensitive to (and accurate with) statements (declarative broad focus, declarative narrow focus) than questions (interrogative wh-, interrogative yes/no) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
+That is to say, learners are more sensitive to (and accurate with) statements (broad focus, narrow focus) than questions (wh-, yes/no) (left panel of Figure \@ref(fig:plot-learner-dp-utterance-variety). 
 Learner sensitivity to the different Spanish varieties represented in the stimuli pattern in the same manner, i.e., more sensitivity to the Peninsular variety and less sensitivity to the Cuban variety (right panel of Figure \@ref(fig:plot-learner-dp-utterance-variety)).
 Table \@ref(tab:table-dp-utterance-variety) summarizes the posterior of these exploratory analyses. 
 
@@ -168,8 +168,8 @@ knitr::include_graphics(
 ```{r, 'table-dp-utterance-variety'}
 read_csv(here("tables", "dp_utterance_variety.csv"), col_types = cols(.default = "c")) %>% 
   mutate(Model = case_when(
-    Model == "Utterance type" & Parameter == "Declarative broad focus" ~ "Utterance type", 
-    Model == "Utterance type" & Parameter != "Declarative broad focus" ~ " ", 
+    Model == "Utterance type" & Parameter == "Broad focus statement" ~ "Utterance type", 
+    Model == "Utterance type" & Parameter != "Broad focus statement" ~ " ", 
     Model == "Variety" & Parameter == "Andalusian" ~ "Variety", 
     Model == "Variety" & Parameter != "Andalusian" ~ " " 
   )) %>% 
@@ -249,10 +249,10 @@ Raw accuracy table  \@ref(tab:table-learner-native-accuracy)
 ```{r, 'table-learner-native-accuracy'}
 read_csv(here("tables", "learner_native_accuracy.csv")) %>% 
   mutate(Type = case_when(
-    Variety != "Andalusian" & Type == "Declarative broad focus" ~ " ", 
-    Variety != "Andalusian" & Type == "Declarative narrow focus" ~ " ", 
-    Variety != "Andalusian" & Type == "Interrogative Wh-" ~ " ", 
-    Variety != "Andalusian" & Type == "Interrogative y/n" ~ " ", 
+    Variety != "Andalusian" & Type == "Broad focus statement" ~ " ", 
+    Variety != "Andalusian" & Type == "Narrow focus statement" ~ " ", 
+    Variety != "Andalusian" & Type == "Wh- question" ~ " ", 
+    Variety != "Andalusian" & Type == "y/n question" ~ " ", 
     TRUE ~ Type
   )) %>% 
   knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 2)), 
@@ -288,12 +288,12 @@ read_csv(here("tables", "variety_matched_native_accuracy.csv")) %>%
 
 
 *Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
-Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians &pm;66% and 95% HDI of standardized articulation rate for each variety. 
+Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians along with 66% and 95% HDI of standardized articulation rate for each variety. 
 The plot shows that, generally, there was not a lot of variability between varieties. 
 Though some of the slower varieties are also those in which we see higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), that was not always the case. 
 That is, some of the faster varieties also had high response accuracy, e.g., Mexican Spanish. 
 
-(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians &pm;66% and 95% HDI.
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians along with 66% and 95% HDI.
 
 ```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)"}
 knitr::include_graphics(

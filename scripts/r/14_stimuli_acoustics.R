@@ -88,10 +88,10 @@ stim_data <- read_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv")) %>%
     variety == "peruvian" ~ "Peruvian", 
     variety == "puertorican" ~ "Puerto Rican"), 
     type_lab = case_when(
-      type == "interrogative-total-yn" ~ "Interrogative y/n", 
-      type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-      type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-      type == "declarative-broad-focus" ~ "Declarative broad focus"
+      type == "interrogative-total-yn" ~ "y/n question", 
+      type == "interrogative-partial-wh" ~ "Wh- question", 
+      type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+      type == "declarative-broad-focus" ~ "Broad focus statement"
     ))
 
 # F0 as a function of sentence type and variety
@@ -217,10 +217,10 @@ l2_native_accuracy <- bind_rows(
 learner_native_accuracy <- l2_native_accuracy %>% 
   transmute(group = str_replace(group, "Native", "Monolingual"), 
     Type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      sentence_type == "declarative-broad-focus" ~ "Declarative\nbroad focus"), 
+      sentence_type == "interrogative-total-yn" ~ "y/n\nquestion", 
+      sentence_type == "interrogative-partial-wh" ~ "Wh-\nquestion", 
+      sentence_type == "declarative-narrow-focus" ~ "Narrow focus\nstatement", 
+      sentence_type == "declarative-broad-focus" ~ "Broad focus\nstatement"), 
     Variety = speaker_variety, 
     avg = avg$y, lower = .$avg$ymin, upper = .$avg$ymax) %>% 
   ggplot() + 
@@ -254,10 +254,10 @@ l2_native_accuracy_tbl <- l2_native_accuracy %>%
     Monolingual = glue("{specify_decimal(Native$y, 2)} [{specify_decimal(Native$ymin, 2)}, {specify_decimal(Native$ymax, 2)}]")
   ) %>% 
   mutate(Type = case_when(
-    Type == "interrogative-total-yn" ~ "Interrogative y/n", 
-    Type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-    Type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-    Type == "declarative-broad-focus" ~ "Declarative broad focus"
+    Type == "interrogative-total-yn" ~ "y/n question", 
+    Type == "interrogative-partial-wh" ~ "Wh- question", 
+    Type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+    Type == "declarative-broad-focus" ~ "Broad focus statement"
   )) %>% 
   write_csv(here("tables", "learner_native_accuracy.csv"))
 
@@ -283,10 +283,10 @@ variety_matches <- natives %>%
       speaker_variety == "peruvian" ~ "Peruvian", 
       speaker_variety == "puertorican" ~ "Puerto Rican"), 
     Type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      sentence_type == "declarative-broad-focus" ~ "Declarative\nbroad focus")
+      sentence_type == "interrogative-total-yn" ~ "y/n\nquestion", 
+      sentence_type == "interrogative-partial-wh" ~ "Wh-\nquestion", 
+      sentence_type == "declarative-narrow-focus" ~ "Narrow focus\nstatement", 
+      sentence_type == "declarative-broad-focus" ~ "Broad focus\nstatement")
   ) %>% 
   filter(variety_match == 1)
 
@@ -319,10 +319,10 @@ variety_matches %>%
     Accuracy = glue("{specify_decimal(avg$y, 2)} [{specify_decimal(avg$ymin, 2)}, {specify_decimal(avg$ymax, 2)}]")
   ) %>% 
   mutate(Type = case_when(
-    Type == "interrogative-total-yn" ~ "Interrogative y/n", 
-    Type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-    Type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-    Type == "declarative-broad-focus" ~ "Declarative broad focus"
+    Type == "interrogative-total-yn" ~ "y/n question", 
+    Type == "interrogative-partial-wh" ~ "Wh- question", 
+    Type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+    Type == "declarative-broad-focus" ~ "Broad focus statement"
   )) %>% 
   pivot_wider(names_from = Type, values_from = Accuracy) %>% 
   write_csv(here("tables", "variety_matched_native_accuracy.csv"))

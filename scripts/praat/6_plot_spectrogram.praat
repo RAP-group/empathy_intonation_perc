@@ -87,7 +87,10 @@ if pitch$ != "FALSE"
   Select inner viewport: 0, win_width, wav_height, wav_height + sp_height
 
   selectObject: pitch_obj
-  Line width: 7
+  Line width: 9
+  White
+  Draw: start, end, pitch_min, pitch_max, "no"
+  Line width: 6
   Blue
   Draw: start, end, pitch_min, pitch_max, "no"
   Line width: 1

@@ -4,17 +4,17 @@
 
 Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) (left panel) summarizes the posterior distribution of the omnibus response accuracy model, illustrating point estimates &pm;66% and 95% HDIs in graphical form. 
 An equivalent summary of the posterior distribution in table format is provided in the supplementary materials (See Table \@ref(tab:table-learner-accuracy-by-utterance-type)). 
-The log-odds of a correct response to an absolute interrogative utterance at the average proficiency and EQ levels was `r pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)`, or approximately `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median))) * 100, k = 2)`% `r report_posterior(accuracy_summary, param = "Intercept")`. 
+The log-odds of a correct response to a yes/no question at the average proficiency and EQ levels was `r pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)`, or approximately `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median))) * 100, k = 2)`% `r report_posterior(accuracy_summary, param = "Intercept")`. 
 In comparison, all other utterance types were associated with an increase in the log odds of responding correctly. 
 The right panel of Figure \@ref(fig:plot-learner-accuracy-forest-by-utterance-type) plots response accuracy of each utterance type in the probability space. 
-As illustrated in the plot, participants were slightly more accurate when responding to wh- questions `r report_posterior(accuracy_summary, param = "Int. wh-")` with approximately `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Int. wh-", Median))) * 100, k = 2)`% correct, and much more accurate when responding to declarative utterances (narrow focus:
-&beta; = `r pull_from_tib(accuracy_summary, Parameter, "Dec. narrow focus", Median)`, HDI = `r pull_from_tib(accuracy_summary, Parameter, "Dec. narrow focus", HDI)`, ROPE = `r pull_from_tib(accuracy_summary, Parameter, "Dec. narrow focus", "% in ROPE")`, MPE = `r pull_from_tib(accuracy_summary, Parameter, "Dec. narrow focus", MPE)`, Accuracy = `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Dec. narrow focus", Median))) * 100, k = 2)`%;  broad focus: 
-&beta; = `r pull_from_tib(accuracy_summary, Parameter, "Dec. broad focus", Median)`, HDI = `r pull_from_tib(accuracy_summary, Parameter, "Dec. broad focus", HDI)`, ROPE = `r pull_from_tib(accuracy_summary, Parameter, "Dec. broad focus", "% in ROPE")`, MPE = `r pull_from_tib(accuracy_summary, Parameter, "Dec. broad focus", MPE)`, Accuracy = `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Dec. broad focus", Median))) * 100, k = 2)`%).^[An exploratory (i.e., not pre-registered) analysis of sensitivity to utterance type was also conducted using d' in lieu of response accuracy. 
+As illustrated in the plot, participants were slightly more accurate when responding to wh- questions `r report_posterior(accuracy_summary, param = "Wh- question")` with approximately `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Wh- question", Median))) * 100, k = 2)`% correct, and much more accurate when responding to declarative statements (narrow focus:
+&beta; = `r pull_from_tib(accuracy_summary, Parameter, "Narrow focus", Median)`, HDI = `r pull_from_tib(accuracy_summary, Parameter, "Narrow focus", HDI)`, ROPE = `r pull_from_tib(accuracy_summary, Parameter, "Narrow focus", "% in ROPE")`, MPE = `r pull_from_tib(accuracy_summary, Parameter, "Narrow focus", MPE)`, Accuracy = `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Narrow focus", Median))) * 100, k = 2)`%;  broad focus: 
+&beta; = `r pull_from_tib(accuracy_summary, Parameter, "Broad focus", Median)`, HDI = `r pull_from_tib(accuracy_summary, Parameter, "Broad focus", HDI)`, ROPE = `r pull_from_tib(accuracy_summary, Parameter, "Broad focus", "% in ROPE")`, MPE = `r pull_from_tib(accuracy_summary, Parameter, "Broad focus", MPE)`, Accuracy = `r specify_decimal(plogis(as.numeric(pull_from_tib(accuracy_summary, Parameter, "Intercept", Median)) + as.numeric(pull_from_tib(accuracy_summary, Parameter, "Broad focus", Median))) * 100, k = 2)`%).^[An exploratory (i.e., not pre-registered) analysis of sensitivity to utterance type was also conducted using d' in lieu of response accuracy. 
 The results mirrored those found in the response accuracy model. 
-That is, participants showed highest sensitivity to the declarative utterances, followed by wh- and yes/no questions. 
+That is, participants showed highest sensitivity to the declarative statements, followed by wh- and yes/no questions. 
 These exploratory analyses are reported in the supplementary materials (See Table \@ref(tab:table-dp-utterance-variety) and Figure \@ref(fig:plot-learner-dp-utterance-variety)).]
 
-(ref:plot-learner-accuracy-forest-by-utterance-type) Forest plot summary of the response accuracy model (left panel) and posterior probability of a correct response for each utterance type (right panel). For both plots, white points represent posterior medians &pm;66% and 95% highest density credible intervals.
+(ref:plot-learner-accuracy-forest-by-utterance-type) Forest plot summary of the response accuracy model (left panel) and posterior probability of a correct response for each utterance type (right panel). For both plots, white points represent posterior medians along with 66% and 95% highest density credible intervals.
 
 ```{r, 'plot-learner-accuracy-forest-by-utterance-type', fig.cap="(ref:plot-learner-accuracy-forest-by-utterance-type)"}
 knitr::include_graphics(
@@ -24,8 +24,8 @@ knitr::include_graphics(
 
 Figure \@ref(fig:plot-learner-accuracy-lt-eq-by-utterance-type) plots response accuracy as a function of utterance type and proficiency (left panel) and empathy quotient (right panel). 
 For all utterance types, response accuracy increased as proficiency increased. 
-Though the proficiency effect was most visually obvious for yes/no questions `r report_posterior(accuracy_summary, param = "LexTALE")` and wh- questions `r lt_wh`, this was also the case for broad focus `r lt_bf` and narrow focus `r lt_nf` declaratives. 
-There was no evidence that empathy level predicted response accuracy for yes/no questions `r report_posterior(accuracy_summary, param = "Empathy quotient")`, however for wh- questions `r eq_wh`, broad focus declaratives `r eq_bf`, and narrow focus `r eq_nf` declaratives we find compelling evidence that the effect is positive. 
+Though the proficiency effect was most visually obvious for yes/no questions `r report_posterior(accuracy_summary, param = "LexTALE")` and wh- questions `r lt_wh`, this was also the case for broad focus `r lt_bf` and narrow focus `r lt_nf` statements. 
+There was no evidence that empathy level predicted response accuracy for yes/no questions `r report_posterior(accuracy_summary, param = "Empathy quotient")`, however for wh- questions `r eq_wh`, broad focus statements `r eq_bf`, and narrow focus `r eq_nf` statements we find compelling evidence that the effect is positive. 
 
 (ref:plot-learner-accuracy-lt-eq-by-utterance-type) Conditional effects of a correct response as a function of proficiency (LexTALE score) (left panel) and empathy quotient (right panel) for each utterance type. Thin lines represent 300 draws from the posterior distribution for each condition and illustrate uncertainty (95% HDI) around the posterior medians (thick lines).
 
@@ -37,9 +37,9 @@ knitr::include_graphics(
 
 The omnibus model also estimated the proficiency &times; empathy quotient simple interaction for each utterance type. 
 We used the posterior distribution to estimate the probability that this effect was non-zero for each utterance type. 
-We found evidence that the proficiency effect was modulated by empathy quotient scores for wh- questions `r lt_eq_wh`, though not for yes/no questions `r report_posterior(accuracy_summary, param = "LexTALE:EQ")`, broad focus declaratives `r lt_eq_bf`, nor narrow focus declaratives `r lt_eq_nf`. 
+We found evidence that the proficiency effect was modulated by empathy quotient scores for wh- questions `r lt_eq_wh`, though not for yes/no questions `r report_posterior(accuracy_summary, param = "LexTALE:EQ")`, broad focus statements `r lt_eq_bf`, nor narrow focus statements `r lt_eq_nf`. 
 This relationship is illustrated in Figure \@ref(fig:plot-learner-accuracy-3way). 
-Specifically, we plot conditional effects of response accuracy as a function of proficiency and empathy quotient for the yes/no and wh- interrogatives.
+Specifically, we plot conditional effects of response accuracy as a function of proficiency and empathy quotient for the yes/no and wh- questions.
 In the left panel of Figure \@ref(fig:plot-learner-accuracy-3way), one observes a positive correlation between response accuracy and proficiency that remains constant at standardized empathy quotient values of &minus;1, 0 and &plus;1 for the yes/no questions. 
 For the wh- questions (right panel), on the other hand, we see that the slope of the proficiency effect increases for higher empathy quotient values. 
 That is to say, for wh- questions, at a given proficiency level, learners with higher empathy (black lines) tended to respond more accurately. 
@@ -57,7 +57,7 @@ As was the case with the monolingual Spanish pilot data, learners were least acc
 Response accuracy to a given variety did not correlate with response times. 
 For instance, although learners were least accurate when responding to the Cuban stimuli, they had average response times similar to the grand mean for this variety. 
 
-(ref:plot-learner-accuracy-rt-by-speaker-variety) Grouping-level estimates of response accuracy and response time as a function of speaker variety. Red points represent posterior medians &pm;66% and 95% highest density credible intervals. The vertical dotted lines indicate the grand mean.
+(ref:plot-learner-accuracy-rt-by-speaker-variety) Grouping-level estimates of response accuracy and response time as a function of speaker variety. Red points represent posterior medians along with 66% and 95% highest density credible intervals. The vertical dotted lines indicate the grand mean.
 
 ```{r, 'plot-learner-accuracy-rt-by-speaker-variety', fig.cap="(ref:plot-learner-accuracy-rt-by-speaker-variety)"}
 knitr::include_graphics(
@@ -70,7 +70,7 @@ knitr::include_graphics(
 
 As described previously, we fit a drift diffusion model to each participants' data in order to obtain estimates for boundary separation (&alpha;) and drift rate (&delta;). 
 Specifically, we fit two Bayesian measurement error models with the same functional form: boundary separation or drift rate as a function of utterance type, proficiency (LexTALE score), and empathy quotient. 
-Given the high accuracy on declarative utterances, we focus our analyses on yes/no and wh- interrogatives. 
+Given the high accuracy on declarative statements, we focus our analyses on yes/no and wh- questions. 
 Figure \@ref(fig:plot-mem-bs-dr-estimates) provides a forest plot summarizing the two models. 
 
 (ref:plot-mem-bs-dr-estimates) Forest plot summary of boundary separation (&alpha;, white circles under purple distributions) and drift rate (&delta;, white triangles under orange distributions) error measurement models.
@@ -82,7 +82,7 @@ knitr::include_graphics(
 ```
 
 Averaging over utterance type and holding proficiency and empathy quotient constant at the distribution means, posterior medians were positive for both boundary separation `r report_posterior(ddm_summary, param = "Intercept", is_exp = F, mod = "Boundary separation")` and drift rate `r report_posterior(ddm_summary, param = "Intercept", is_exp = F, mod = "Drift rate")`. 
-Boundary separation was slightly lower in wh- questions `r report_posterior(ddm_summary, param = "Question type", is_exp = F, mod = "Boundary separation")`, suggesting that, overall, learners needed less information in order to make a decision when presented with interrogatives of this type. 
+Boundary separation was slightly lower in wh- questions `r report_posterior(ddm_summary, param = "Question type", is_exp = F, mod = "Boundary separation")`, suggesting that, overall, learners needed less information in order to make a decision when presented with questions of this type. 
 Drift rate, on the other hand, was higher for wh- questions `r report_posterior(ddm_summary, param = "Question type", is_exp = F, mod = "Drift rate")`, which indicates that learners arrived at the decision threshold at a faster rate, and, thus, found this type of utterance to be easier. 
 This corresponds with the finding that overall learners were more accurate responding to wh- questions than yes/no questions by approximately 10% `r wh_yn_diff`. 
 Taken together, we can surmise that the 'average' learner has a lower threshold of required information in order to make a decision and arrives at this threshold at a faster rate for wh- questions in comparison with yes/no questions. 
@@ -92,7 +92,7 @@ For both question types, boundary separation increased as a function of proficie
 The effect was reversed for drift rate. 
 In this case, estimated &delta; increased as a function of proficiency in low empathy individuals, and higher empathy individuals, particularly those with higher proficiency levels, saw decreases in drift rate `r report_posterior(ddm_summary, param = "LexTALE:EQ", is_exp = F, mod = "Drift rate")`. 
 To illustrate more clearly the practical relevance of these interactions, we ran 2,000 simulations from the drift diffusion model. 
-Figure \@ref(fig:plot-ddm-simulations) plots the simulations for each interrogative type at low/high proficiency and empathy levels (&pm;2 standard deviations). 
+Figure \@ref(fig:plot-ddm-simulations) plots the simulations for each question type at low/high proficiency and empathy levels (&pm;2 standard deviations). 
 Individual lines represent random walks. 
 The walk ends when enough evidence is accumulated and a decision threshold (horizontal, discontinuous grey lines) is reached. 
 The upper threshold indicates a decision leading to a correct response and the lower threshold an incorrect response. 

@@ -1,13 +1,27 @@
-
 ## INTRODUCTION AND OBJECTIVES
 
-\RC The terms perception, processing and comprehension are used in the manuscript not very systematically. In some cases the authors use “perception and processing” together, and in some others they seem to summarize them both in the term “comprehension”. A more systematic use of these terms is needed.
+\RC{The terms perception, processing and comprehension are used in the manuscript not very systematically. 
+In some cases the authors use “perception and processing” together, and in some others they seem to summarize them both in the term “comprehension”. 
+A more systematic use of these terms is needed.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/31
+-->
+
+Thank you for pointing out this inconsistency. 
+In the revised manuscript we have systematized this use and made clear how the terms are operationalized upon their first appearance in the prose. 
 
 \WorkInProgress
 \Easy
 
 
-\RC The authors used distinct terms to refer to the same sentence type: absolute interrogative, polar question, yes/no question, total interrogative… It also alternates between the term ‘statement’ and the term ‘declarative’. It recommends using one term in a systematic way and to describe and exemplify what these terms mean for readers that are not experts on intonation (or syntax or pragmatics). The authors now provide some general description of the intonational patterns in the introduction (e.g. ‘nuclear hat pattern’, ‘final rise’, but I doubt whether a reader that is not an expert on intonation will understand these descriptions). 
+\RC The authors used distinct terms to refer to the same sentence type: absolute interrogative, polar question, yes/no question, total interrogative... It also alternates between the term ‘statement’ and the term ‘declarative’. It recommends using one term in a systematic way and to describe and exemplify what these terms mean for readers that are not experts on intonation (or syntax or pragmatics). The authors now provide some general description of the intonational patterns in the introduction (e.g. ‘nuclear hat pattern’, ‘final rise’, but I doubt whether a reader that is not an expert on intonation will understand these descriptions). 
+
+This observation was also pointed out by reviewer 2. 
+We have systematized our use of these terms in the revised manuscript. 
+When we refer to questions (generally), we now say interrogative utterances, and, more specifically, 'yes/no questions' and 'wh- questions' instead of 'absolute interrogatives' and 'partial interrogatives', respectively. 
+When we refer to declarative utterances (generally) we now say 'declarative statements', and, more specifically, 'broad focus statements' and 'narrow focus statements'. 
+These changes are also reflected in all plots and tables. 
 
 \WorkInProgress
 \Easy
