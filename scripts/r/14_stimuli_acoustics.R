@@ -126,6 +126,69 @@ walk(c('png', 'pdf'), ~ ggsave(
 
 
 
+# Spectrogram stuff -----------------------------------------------------------
+
+# Path to script
+plot_script <- here("scripts", "praat", "6_plot_spectrogram.praat")
+
+wav1 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav")
+tg1  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.textgrid")
+out1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.pdf") 
+
+# Run script, capture output, read as csv
+speakr::praat_run(
+  plot_script, 
+  file = out1, 
+  caption = "\\ ", 
+  wav = wav1, 
+  tg = tg1, 
+  start = 0, 
+  end = 0, 
+  width = 5, 
+  format = "pdf", 
+  pitch = TRUE, 
+  pitch_min = 0, 
+  pitch_max = 500, 
+  hz_max = 5000
+)
+
+wav2 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav")
+tg2  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.textgrid")
+out2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.pdf") 
+
+speakr::praat_run(
+  script = plot_script, 
+  file = out2, 
+  caption = "\\ ", 
+  wav = wav2, 
+  tg = tg2, 
+  start = 0, 
+  end = 0, 
+  width = 5, 
+  format = "pdf", 
+  pitch = TRUE, 
+  pitch_min = 0, 
+  pitch_max = 500, 
+  hz_max = 5000
+)
+
+library("cowplot")
+path1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.png")
+path2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.png")
+plot1 <- ggdraw() + draw_image(path1)
+plot2 <- ggdraw() + draw_image(path2)
+spectrogram_analuz <- plot_grid(plot1, plot2, labels = "auto", label_y = 0.8)
+
+walk(c('png', 'pdf'), ~ ggsave(
+  filename = glue(file.path(here("figs", "stimuli")), "/spectrogram_andaluz.", .x), 
+  plot = spectrogram_analuz, 
+  device = .x, height = 4, width = 8.5, units = "in"))
+
+# -----------------------------------------------------------------------------
+
+
+
+
 # Accuracy --------------------------------------------------------------------
 
 # Learner and monolingual accuracy plot
@@ -180,7 +243,7 @@ learner_native_accuracy <- l2_native_accuracy %>%
 walk(c('png', 'pdf'), ~ ggsave(
   filename = glue(file.path(here("figs", "manuscript")), "/learner_native_accuracy.", .x), 
   plot = learner_native_accuracy, 
-  device = .x, height = 4, width = 8.5, units = "in"))
+  device = .x, height = 4, width = 7, units = "in"))
 
 # Learner and monolingual accuracy table
 l2_native_accuracy_tbl <- l2_native_accuracy %>% 
@@ -248,56 +311,21 @@ walk(c('png', 'pdf'), ~ ggsave(
   plot = native_variety_matched_accuracy, 
   device = .x, height = 4, width = 8.5, units = "in"))
 
+variety_matches %>% 
+  group_by(sentence_type, spn_variety) %>% 
+  summarize(avg = mean_se(is_correct), .groups = "drop") %>% 
+  transmute(
+    Type = sentence_type, Variety = spn_variety, 
+    Accuracy = glue("{specify_decimal(avg$y, 2)} [{specify_decimal(avg$ymin, 2)}, {specify_decimal(avg$ymax, 2)}]")
+  ) %>% 
+  mutate(Type = case_when(
+    Type == "interrogative-total-yn" ~ "Interrogative y/n", 
+    Type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
+    Type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
+    Type == "declarative-broad-focus" ~ "Declarative broad focus"
+  )) %>% 
+  pivot_wider(names_from = Type, values_from = Accuracy) %>% 
+  write_csv(here("tables", "variety_matched_native_accuracy.csv"))
 
-# -----------------------------------------------------------------------------
-
-
-
-
-# Spectrogram stuff -----------------------------------------------------------
-
-# Path to script
-plot_script <- here("scripts", "praat", "6_plot_spectrogram.praat")
-
-wav1 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav")
-tg1  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.textgrid")
-out1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.pdf") 
-
-# Run script, capture output, read as csv
-speakr::praat_run(
-  plot_script, 
-  file = out1, 
-  caption = "Andalusian\\ -\\ Partial\\ interrogative", 
-  wav = wav1, 
-  tg = tg1, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
-  )
-
-wav2 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav")
-tg2  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.textgrid")
-out2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.pdf") 
-
-speakr::praat_run(
-  script = plot_script, 
-  file = out2, 
-  caption = "Andalusian\\ -\\ Partial\\ interrogative", 
-  wav = wav2, 
-  tg = tg2, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
-)
 
 # -----------------------------------------------------------------------------
