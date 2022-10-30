@@ -1,4 +1,3 @@
-
 ## Comments to the Author
 
 \RC This is a very interesting study looking at the roles of proficiency and empathy in the development of L2 prosodic perception. The authors use sophisticated statistical methods to show that both proficiency and empathy seem to be at play in the development of L2 prosodic perception, as well as the specific type of prosody. The paper also considers the role of dialect, which is very often not dealt with in studies of L2 prosody. In paying attention to these aspects of prosodic acquisition, the paper is cutting edge. I think that the paper would benefit from a clear theoretical model with specific predictions based on that model, and perhaps the authors can investigated whether Mennen's LiLT model would help them do that or not. Below I present some general recommendations, followed by some specific comments. 
@@ -72,7 +71,10 @@ Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object 
 
 \RC The author(s)might consider using the term polar or yes/no questions throughout, since these terms are more accessible outside the Hispanic Linguistics lit, which tends to use “absolute interrogatives” . 
 
-\WorkInProgress
+Following this suggestion and that of reviewer 1, we have systematized how we refer to all utterance types throughout the revised manuscript. 
+We now refer to absolute interrogatives as 'yes/no questions'. 
+
+\Done
 \Easy
 
 \RC{p. 9 line 4 - has empathy been “operationalized as pragmatic skill” in the past? Is it really possible to say that they are the same thing, vs. one leading to the other? 
@@ -84,7 +86,9 @@ Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object 
 
 \RC{p. 10 - line 45 - perceptional—> perceptual??}
 
-\WorkInProgress
+Fixed. 
+
+\Done
 \Easy
 
 \RC research question 2 - Again, it’s hard for me to buy empathy AS a pragmatic skill itself. I would say it’s an ability that could be helpful for pragmatic skills/pragmatic reasoning. But not the same thing. If the authors disagree I’d like to see this justified more. Given what the study does, I’m not sure you have to say anything about pragmatic skills at all, you can just call it empathy
@@ -94,7 +98,13 @@ Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object 
 
 \RC{p. 11, line 8, again, why not just call them yes-no questions?}
 
-\WorkInProgress
+This issue was addressed previously. 
+We include our response again here for the sake of completeness. 
+
+Following this suggestion and that of reviewer 1, we have systematized how we refer to all utterance types throughout the revised manuscript. 
+We now refer to absolute interrogatives as 'yes/no questions'. 
+
+\Done
 \Easy
 
 \RC p. 15, line 25 - I’m wondering what perceptual learning would mean here. We know that the encoding of narrow focus and question intonation differs across the varieties that are listed here. How would we know if these participants had experience with these varieties? It would be helpful to know what the tunes for each type of sentence were for each variety used in the stimuli as well. 

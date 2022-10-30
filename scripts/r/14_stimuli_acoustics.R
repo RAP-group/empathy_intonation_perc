@@ -102,8 +102,8 @@ stimuli_pitch_contours <- stim_data %>%
   facet_grid(variety_lab ~ type_lab) + 
   geom_line(aes(group = item), stat = "smooth", alpha = 0.15, se = F, 
     show.legend = F, formula = "y ~ x", method = "loess") + 
-  geom_smooth(method = "loess", span = 0.5, formula = "y ~ x", size = 1.1, 
-    show.legend = F) + 
+  stat_smooth(geom = "line", method = "loess", span = 0.5, formula = "y ~ x", size = 1.1, 
+    show.legend = F, lineend = "round") + 
   scale_color_manual(values = viridis::viridis_pal(
     option = "B", begin = 0.3, end = 0.8)(8)) + 
   scale_fill_manual(values = viridis::viridis_pal(

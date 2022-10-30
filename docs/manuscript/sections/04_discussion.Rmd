@@ -79,7 +79,8 @@ The results of our study suggest that speaker variety does affect perception acc
 One possibility put forward in the literature is that the variety matters insomuch that it is familiar to the listener [see @perry2018influences; @trimble2013perceiving]. 
 In other words, learners may be more accurate and process speech faster when listening to a variety they know well. 
 Our study took into consideration familiarity, though the variety that was cited as being the most familiar, U.S. Spanish (`r familiarity$UnitedStates$perc`% of `r n_learners` responses), was not one of the varieties presented in the stimuli. 
-Mexican (`r familiarity$Mexico$perc`%) and Peninsular-Madrileño (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. Thus, familiarity with the target variety may account for variety-specific response accuracy. 
+Mexican (`r familiarity$Mexico$perc`%) and Peninsular-Madrileño (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. 
+Thus, familiarity with the target variety may account for variety-specific response accuracy; however, our data cannot speak to this possibility and this question is left for future research. 
 
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
 Yes/no questions in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
@@ -95,7 +96,7 @@ Additionally, this is the first time, to our knowledge, that drift diffusion mod
 We also underscore the general need for models of L2 phonology, such as the SLM-r [@flege2021revised], PAM-L2 [@Best2007], L2LP [@VanLeussen2015], etc., to address the acquisition process beyond the level of the segment. 
 There is still a paucity of research with regard to how perception of intonation develops in L2 learning, particularly with regard to how individual pragmatic differences account for learner outcomes. 
 A complete model of speech learning should account for both causal prediction and imputation at the segmental and suprasegmental levels. 
-The present study aimed to address this gap in the literature by examining the perception and processing of intonation during adult L2 phonological acquisition. 
+The present study aimed to address this gap in the literature by examining the perception of intonation during sentence processing in adult L2 phonological acquisition. 
 
 While the findings of our research suggest there is a relationship between target language proficiency and empathy, it is important to underscore that we do not make any claims about causality. 
 Future research would benefit from considering the learnability of empathy [i.e., @bertrand2018learning; @lam2011empathy] as it relates to L2 outcomes. 
@@ -103,12 +104,12 @@ Furthermore, the cross-sectional design of the present work is not ideal for add
 Only longitudinal data can appropriately address this issue. 
 On that note, at this time, research on speech perception and empathy is limited to intonation. 
 A fruitful avenue for novel research ought to examine how empathy is related to perception and spoken word recognition at the segmental level. 
-Other topics of interest include the relationship between empathy and variation in speech processing with regard to dialectal differences in monolinguals and L2 learners.
+Other topics of interest include the relationship between empathy and variation in sentence processing with regard to dialectal differences in monolinguals and L2 learners.
 
 # Conclusion
 
 The present study investigated the development of L2 perception of intonation. 
-Specifically, this study explored the relationship between target language proficiency and an individual pragmatic skill, empathy, in the process of learning Spanish as a second language by analyzing the perception and processing of intonation in questions and statements. 
-We find that perception and processing of intonation develops in tandem with proficiency in the target language and interacts with individual empathy levels, supporting the general conclusion that higher empathic individuals, in comparison with lower empathic individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations.
+Specifically, this study explored the relationship between target language proficiency and an individual pragmatic skill, empathy, in the process of learning Spanish as a second language by analyzing the perception of intonation in questions and statements. 
+We find that perception of intonation in sentence processing develops in tandem with proficiency in the target language and interacts with individual empathy levels, supporting the general conclusion that higher empathic individuals, in comparison with lower empathic individuals, appear to be more sensitive to intonation cues in the process of forming sound-meaning associations.
 Importantly, increased sensitivity does not necessarily entail increased processing speed. 
 The results motivate the inclusion of measures of pragmatic skill, such as empathy, to better account for intonational meaning processing and sentence comprehension in second language acquisition research.
