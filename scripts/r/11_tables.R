@@ -92,3 +92,31 @@ bind_rows(
   write_csv(here("tables", "ddm_bs_dr.csv"))
 
 # -----------------------------------------------------------------------------
+
+
+
+
+# Learner variety familiarity match model table -------------------------------
+
+# Model summary table
+describe_posterior(learner_variety_match_response, rope_range = c(-0.1, 0.1)) %>% 
+  as_tibble() %>% 
+  select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high")) %>% 
+  mutate(Parameter = case_when(
+    Parameter == "b_Intercept" ~ "Intercept", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Wh- question", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Narrow focus", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Broad focus", 
+    Parameter == "b_is_match_labfamiliar" ~ "Familiar", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:is_match_labfamiliar" ~ "Wh- question:Familiar", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:is_match_labfamiliar" ~ "Narrow focus:Familiar", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:is_match_labfamiliar" ~ "Broad focus:Famliar"
+  )) %>% 
+  mutate(across(-c("Parameter", "ESS"), specify_decimal, k = 2)) %>% 
+  mutate(ESS = round(ESS)) %>% 
+  mutate(across(-Parameter, printy::fmt_minus_sign)) %>% 
+  mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
+  select(Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd, Rhat, ESS) %>% 
+  write_csv(here("tables", "learner_variety_match_response_model_summary.csv"))
+
+# -----------------------------------------------------------------------------

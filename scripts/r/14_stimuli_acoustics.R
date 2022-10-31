@@ -327,5 +327,4 @@ variety_matches %>%
   pivot_wider(names_from = Type, values_from = Accuracy) %>% 
   write_csv(here("tables", "variety_matched_native_accuracy.csv"))
 
-
 # -----------------------------------------------------------------------------

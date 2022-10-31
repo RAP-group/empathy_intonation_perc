@@ -17,6 +17,8 @@ source(here::here("scripts", "r", "07_load_data.R"))
 accuracy_summary <- read_csv(here("tables", "learner_response_01.csv"))
 learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 ddm_summary <- read_csv(here("tables", "ddm_bs_dr.csv"))
+variety_familiarity_summary <- 
+  read_csv(here("tables", "learner_variety_match_response_model_summary.csv"))
 
 # -----------------------------------------------------------------------------
 
@@ -129,14 +131,28 @@ mono_speech_rates_printy <- sr %>%
 
 # Variety familiarity ---------------------------------------------------------
 
-familiarity <- learners %>% 
+familiarity_hold <- learners %>% 
   group_by(participant, spn_variety) %>% 
   distinct(spn_variety) %>% 
   group_by(spn_variety) %>% 
   summarize(n_v = n()) %>% 
-  mutate(sum_n = sum(n_v), perc = round((n_v / sum_n) * 100, 2), 
+  mutate(sum_n = sum(n_v), perc = round((n_v / sum_n), 2), 
     spn_variety = str_replace(spn_variety, " ", "")) %>% 
-  arrange(desc(perc)) %>% 
+  arrange(desc(perc)) 
+
+familiarity_table <- familiarity_hold %>% 
+  transmute(Variety = case_when(
+    spn_variety == "UnitedStates" ~ "U.S. Spanish", 
+    spn_variety == "Iam not familiar with Spanish" ~ "Not familiar", 
+    spn_variety == "CostaRica" ~ "Costa Rica", 
+    spn_variety == "PuertoRico" ~ "Puerto Rico", 
+    spn_variety == "DominicanRepublic" ~ "Dominican Republic", 
+    spn_variety == "Spain" ~ "Penninsular", 
+    TRUE ~ .$spn_variety), 
+    n = n_v, Proportion = perc)
+
+familiarity <- familiarity_hold %>% 
+  mutate(perc = perc * 100) %>% 
   split(.$spn_variety)
 
 # -----------------------------------------------------------------------------
@@ -191,13 +207,39 @@ eq_lt_mod <- brm(
   file = here("models", "eq_lextale_cor")
   )
 
-# Get posterior
+#
+# Lextale x EQ correleations
+#
+
+# From accuracy model
+r_eq_lt_bf <- report_posterior(accuracy_summary, param = "Broad focus:LexTALE:EQ")
+r_eq_lt_nf <- report_posterior(accuracy_summary, param = "Narrow focus:LexTALE:EQ")
+r_eq_lt_yn <- report_posterior(accuracy_summary, param = "LexTALE:EQ")
+r_eq_lt_wh <- report_posterior(accuracy_summary, param = "Wh- question:LexTALE:EQ")
+
+# Get posterior of lextale x eq correlation from grouping effects
+r_eq_lt_random_post <- learner_response_01 %>% 
+  as_draws_df() %>% 
+  select(r_lt_eq = cor_speaker_variety__lextale_std__eq_std) %>% 
+  pull() %>% 
+  describe_posterior() %>% 
+  as_tibble() %>% 
+  mutate_if(is.numeric, specify_decimal, k = 3) %>% 
+  transmute(Parameter, Median, HDI = glue("[{CI_low}, {CI_high}]"), 
+            `% in ROPE` = ROPE_Percentage, MPE = pd) %>% 
+  report_posterior(param = "Posterior")
+
+# Get posterior of lextale x eq correlation
 r_eq_lt_post <- eq_lt_mod %>% 
   as_draws_df() %>% 
   select(b_eq_std) %>% 
   pull() %>% 
   describe_posterior() %>% 
-  as_tibble()
+  as_tibble() %>% 
+  mutate_if(is.numeric, specify_decimal, k = 3) %>% 
+  transmute(Parameter, Median, HDI = glue("[{CI_low}, {CI_high}]"), 
+            `% in ROPE` = ROPE_Percentage, MPE = pd) %>% 
+  report_posterior(param = "Posterior")
 
 # -----------------------------------------------------------------------------
 
