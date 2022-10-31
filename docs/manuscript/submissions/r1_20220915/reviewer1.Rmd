@@ -124,6 +124,32 @@ While it is certainly interesting to know which tunes pose the most difficulties
 https://github.com/RAP-group/empathy_intonation_perc/issues/36
 -->
 
+These are excellent questions. 
+We appreciate the reviewer's critical eye in pointing out these missing elements in our motivation of empathy. 
+We have included more information in the introduction to address these points. 
+The basic idea proceeds as follows. 
+From the perspective of the listener, empathy is likely critical because it allows one to understand the intentions of others, predict their behavior, and understand their emotions [@baron2004empathy]. 
+Researchers that work on this construct have described two types of empathy that oftentimes might be difficult to distinguish. 
+*Affective empathy* represents one's ability to be emotionally aligned with the interlocutor and *cognitive empathy* refers to recognizing and understanding the feelings and thoughts of an interlocutor.
+Thus, we believe empathy, to some degree, is a necessary element when an individual seeks to understand and interact with its interlocutors. <!--in contexts were literal and nonliteral meaning-->
+
+When we apply this to everyday communication, we find that speakers' expressions and feelings cannot be only limited to lexical or semantic cues. 
+Speakers also make use of other strategies such as intonational cues with the intention to produce a meaningful expression that might include pragmatic connotations, mental states among other meaningful expressions.
+For instance, speakers can signal pragmatic information by modifying pitch accents. 
+A high tone at the end of a phrase can signal a yes/no question the same way as a final high tone preceded by a rising pitch accent can indicate unexpected information (in Spanish).
+The extant literature suggests that individual pragmatic skills modulate intonation processing [@bishop2016individual; @bishop2015individual; @bishop2016autistic; @diehl2008resolving] 
+The critical studies in the case that concerns us are @esteve2016role, @esteve2020empathy, which suggest that individuals with higher empathy (operationalized as a pragmatic skill) may be better at processing intonation-meaning associations. 
+
+Importantly, *why* and *how* particular cues lead to distinct processing accuracy on the part of the listener is still unclear. 
+In our data, we find that higher empathy is moderately associated with higher accuracy (holding proficiency constant) for all utterance types with the exception of yes/no questions. 
+Importantly, this also happens to be the most difficult utterance condition in our data---and that of @bustin_2020---as well as the condition for which the listeners show the least sensitivity (See d' analysis in the supplementary materials). 
+SAME SOMETHING ABOUT FAMILIARITY. 
+
+In the revised manuscript we have expanded on these issues in both the introduction and the discussion sections. 
+We do not copy the revised text here due to excessive length, but we direct the reviewer's attention to APPROX. PAGES. 
+
+
+
 
 \WorkInProgress
 \Easy
@@ -208,6 +234,18 @@ This hypothesis is grounded in exploratory analyses of pilot data collected from
 
 
 \RC Could you check whether individuals with higher empathy were not the ones with higher proficiency? How did these two factors correlate?
+
+<!-- From accuracy model --> 
+r_eq_lt_bf
+r_eq_lt_nf
+r_eq_lt_yn
+r_eq_lt_wh
+
+<!-- posterior of lextale x eq correlation from grouping effects -->
+r_eq_lt_random_post
+
+<!-- Get posterior of lextale x eq correlation -->
+r_eq_lt_post 
 
 \WorkInProgress
 \Easy
