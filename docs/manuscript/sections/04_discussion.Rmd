@@ -82,6 +82,16 @@ Our study took into consideration familiarity, though the variety that was cited
 Mexican (`r familiarity$Mexico$perc`%) and Peninsular-Madrileño (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. 
 Thus, familiarity with the target variety may account for variety-specific response accuracy; however, our data cannot speak to this possibility and this question is left for future research. 
 
+ADD INFO ABOUT NON PREREGIDTERED ANALYSIS
+
+(ref:plot-learner-variety-familiarity) CAPTION HERE.
+
+```{r, 'plot-learner-variety-familiarity', fig.cap="(ref:plot-learner-variety-familiarity)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "learner_variety_familiarity.pdf")
+  )
+```
+
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
 Yes/no questions in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
 Caribbean Spanish, on the other hand, has a distinctive nuclear hat pattern [See @hualde2015intonational].
