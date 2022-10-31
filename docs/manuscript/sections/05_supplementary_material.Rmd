@@ -38,6 +38,49 @@ read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = 
     label = "table-learner-accuracy-by-utterance-type")
 ```
 
+**Familiar vs. unfamiliar varieties**
+
+Participants responded to the prompt 'I am most familiar with Spanish from' and, using a drop-down window, made a selection from the following choices: I am not familiar with Spanish, Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Equatorial Guinea, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Philippines, Puerto Rico, Uruguay, Venezuela, Spain, and United States. 
+
+Table \@ref(tab:table-familiarity-summary). 
+
+```{r, 'table-familiarity-summary'}
+familiarity_table %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r"), 
+    caption = "Summary of participant self-reported familiarity with Spanish.",
+    label = "table-familiarity-summary")
+```
+
+Table \@ref(tab:table-learner-variety-familiarity-model-summary). 
+
+```{r, 'table-learner-variety-familiarity-model-summary'}
+read_csv(here("tables", "learner_variety_match_response_model_summary.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
+    caption = glue::glue("Summary of the posterior distribution modeling 
+    response accuracy as a function of utterance type and 
+    familiarity. The model only includes data from participants who claimed to 
+    be familiar with Mexican (n =  {familiarity$Mexico$n_v}) and Peninsular 
+    (n = {familiarity$Spain$n_v}) Spanish.
+    The table includes posterior medians, the 95% HDI, the percentage of the 
+    HDI within the ROPE, and the maximum probability of effect (MPE)."),
+    label = "table-learner-variety-familiarity-model-summary")
+```
+
+Table \@ref(tab:table-learner-variety-familiarity-conditional-effects). 
+
+```{r, 'table-learner-variety-familiarity-conditional-effects'}
+read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = glue::glue("Conditional effects of response accuracy as a 
+    function of sentence type and familiarity with the Spanish variety. 
+    Values represent posterior medians along with the 95% HDI for unfamiliar 
+    and familiar conditions, along with the posterior difference 
+    (familiar - unfamiliar). The posterior predictive distribution is based on 
+    data from participants who claimed to be familiar with Mexican 
+    (n =  {familiarity$Mexico$n_v}) and Peninsular 
+    (n = {familiarity$Spain$n_v}) Spanish."), 
+    label = "table-learner-variety-familiarity-conditional-effects")
+```
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
