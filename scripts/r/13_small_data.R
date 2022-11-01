@@ -29,6 +29,7 @@ variety_familiarity_summary <-
 n_learners <- learners$participant %>% unique %>% length
 n_returned <- id_return %>% length
 n_removed  <- id_remove$learners %>% nrow
+n_natives  <- natives$participant %>% unique %>% length
 
 # -----------------------------------------------------------------------------
 
