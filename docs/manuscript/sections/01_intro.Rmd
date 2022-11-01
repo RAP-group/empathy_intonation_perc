@@ -70,8 +70,18 @@ Much less is known regarding how perceptual development is modulated by individu
 It is associated with understanding the feelings and emotions of those with whom one interacts [@baron2004empathy]. 
 Research on empathy has associated the construct with Theory of Mind and perspective-taking [@baron2011zero; @carruthers2009we; @frith2003development]. 
 Importantly, in recent years empathy has served as a proxy for investigating individual pragmatic skill. 
+From the perspective of the listener, empathy is likely critical because it allows one to understand the intentions of others, predict their behavior, and understand their emotions [@baron2004empathy]. 
+Researchers that work on this construct have described two types of empathy that oftentimes might be difficult to distinguish. 
+On the one hand, *affective empathy* represents one's ability to be emotionally aligned with the interlocutor and, on the other, *cognitive empathy* refers to recognizing and understanding the feelings and thoughts of an interlocutor.
+This suggests empathy is, to some degree, a necessary element when an individual seeks to understand and interact with its interlocutors in contexts involving literal and nonliteral meaning.
 
-Studies on monolingual populations suggest that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items [e.g., @degen2016availability; @nieuwland2010incrementality]. 
+<!--
+For instance, speakers can signal pragmatic information via pitch accents. 
+A high tone at the end of a phrase can signal a yes/no question the same way as a final high tone preceded by a rising pitch accent can indicate unexpected information (in Spanish). -->
+The extant literature suggests that individual pragmatic skills modulate intonation processing [@bishop2016individual; @bishop2015individual; @bishop2016autistic; @diehl2008resolving]. 
+<!--
+The critical studies in the case that concerns us are @esteve2016role, @esteve2020empathy, which suggest that individuals with higher empathy (operationalized as a pragmatic skill) may be better at processing intonation-meaning associations. -->
+Studies on monolingual populations show that individual pragmatic skills correlate with variability in semantic/pragmatic interpretation of ambiguous linguistic items [e.g., @degen2016availability; @nieuwland2010incrementality]. 
 That is, in this line of research, individuals described as having higher pragmatic skill tended to prefer pragmatically enriched interpretations and individuals described as having less pragmatic skill tended to prefer more literal/semantic interpretations. 
 In addition, more pragmatically skilled individuals have also been found to rely on different phonetic cues to parse syntactically ambiguous sentences when compared with less pragmatically skilled individuals [@bishop2016individual]. 
 Thus, one possibility is that variability in intonation perception is also linked to individual differences in pragmatic skills.

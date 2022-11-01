@@ -8,13 +8,21 @@ manuscript  : "APS-Feb-22-0015"
 bibliography: 
   - "../../../bib/empathy.bib"
 
-class       : "draft"
 output      : papaja::revision_letter_pdf
 header-includes:
   - \usepackage{tipa}
   - \usepackage{booktabs}
   - \usepackage{hyperref}
+  - \usepackage{longtable}
 ---
+
+```{r}
+#| label: setup
+#| warning: false
+#| message: false
+library("papaja")
+source(here::here("scripts", "r", "13_small_data.R"))
+```
 
 Dear XXX, 
 
@@ -35,21 +43,27 @@ Joseph Casillas
 
 # Reviewer \#1
 
-```{r, child="reviewer1.Rmd", eval = T}
+```{r}
+#| child: "reviewer1.Rmd"
+#| eval: TRUE
 ```
 
 \clearpage
 
 # Reviewer \#2
 
-```{r, child="reviewer2.Rmd", eval = T}
+```{r}
+#| child: "reviewer2.Rmd"
+#| eval: TRUE
 ```
 
 \clearpage
 
 # Reviewer \#3
 
-```{r, child="reviewer3.Rmd", eval = T}
+```{r}
+#| child: "reviewer3.Rmd"
+#| eval: TRUE
 ```
 
 

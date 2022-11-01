@@ -84,7 +84,7 @@ Thus, familiarity with the target variety may account for variety-specific respo
 
 ADD INFO ABOUT NON PREREGIDTERED ANALYSIS
 
-(ref:plot-learner-variety-familiarity) CAPTION HERE.
+(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
 
 ```{r, 'plot-learner-variety-familiarity', fig.cap="(ref:plot-learner-variety-familiarity)"}
 knitr::include_graphics(
@@ -114,7 +114,10 @@ Furthermore, the cross-sectional design of the present work is not ideal for add
 Only longitudinal data can appropriately address this issue. 
 On that note, at this time, research on speech perception and empathy is limited to intonation. 
 A fruitful avenue for novel research ought to examine how empathy is related to perception and spoken word recognition at the segmental level. 
-Other topics of interest include the relationship between empathy and variation in sentence processing with regard to dialectal differences in monolinguals and L2 learners.
+A primary focus of the present project was to expand the line of research involving empathy and intonation perception in two ways: first, to individuals with different linguistic experience (specifically, L2 learners), and, second, to different communicative situations (utterance types). 
+This project was not concerned with understanding *why* different pitch contours affect intonation perception, particularly with regard to the role of empathy, primarily because there is inherent variability in how speakers realize their communicative intentions, at both the variety and individual-level, within utterance types. 
+This variability is also present in our stimuli. 
+Future research would benefit from exploring *why* and *how* particular acoustic realizations of pitch within utterance types lead to distinct processing outcomes and how they might interact with pragmatic skill. 
 
 # Conclusion
 
