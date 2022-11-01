@@ -35,9 +35,16 @@ As a result, some research has found that intonation is one of the last aspects 
 
 Research on L2 intonation has been concerned primarily with speech production. 
 Learner difficulties tend to be ascribed to L1 transfer, and models of L2 phonology, by and large, focus on the speech segment, as in the Speech Learning Model revised [@flege2021revised], or contrasts between segments, i.e., PAM-L2, L2LP [@Best2007; @VanLeussen2015, respectively]. 
-Theoretical work that specifically considers prosody in the acquisition of L2 phonology is virtually non-existent, though some researchers have considered how the aforementioned models might account for suprasegmental phenomena [See @trofimovich2006learning]. 
-Nevertheless, a dearth of knowledge remains regarding how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes.
-The purpose of the present project is to address this gap in the literature by examining the perception of intonation during adult L2 phonological acquisition.  
+Theoretical work centered on prosody in the acquisition of L2 phonology is relatively much less common, though some researchers have considered how the aforementioned models might account for suprasegmental phenomena [See @trofimovich2006learning]. 
+One clear example of this is the L2 Intonation Learning Theory [LILt, @mennen2015beyond]. 
+LILt incorporates the basic assumptions of the SLM and PAM-L2, that L2 categories similar to L1 categories may be assimilated, but L2 categories that are perceptually different may be incorporated as new categories. 
+Under this model, cross-language differences may occur along one or more intonation dimensions (systemic, realizational, semantic, and frequency) [See also @ladd2008intonational] and the age of onset of acquisition may influence the degree of success in acquiring elements in different dimensions of language variation. 
+
+A dearth of knowledge remains regarding how perception of intonation develops in L2 learning, and even less is known about how individual pragmatic differences account for learner outcomes. 
+Similar to the SLM, LILt focuses mostly on intonation production rather than perception, and adopts the assumption that difficulties in intonation production are perceptually motivated. 
+The purpose of the present project is to address this gap in the literature by examining the perception of intonation during adult L2 phonological acquisition. 
+For the present study, investigating L2 perception of intonation in statements and questions in L2 learners of Spanish provides an opportunity to examine how L2 perception develops and may differ from L1 perception, especially along the 'semantic dimension' of the LILt model, which focuses on how intonation is used to convey meaning. 
+Importantly, whereas LILt considers the influence of external factors such as age of acquisition on the success of learners, the present study investigates the role of empathy as a pragmatic skill on L2 acquisition of intonation, which contributes to our understanding of intonation development along a different dimension.
 
 **Acquisition of Spanish prosody**. As with all phonetic phenomena, a lack of invariance in the acoustic content of prosodic realizations also increases the difficulty of the learner's task. 
 Beyond the level of the individual, however, dialectal differences can account for additional difficulties.
