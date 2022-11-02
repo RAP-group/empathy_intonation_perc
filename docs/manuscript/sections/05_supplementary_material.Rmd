@@ -224,56 +224,6 @@ read_csv(here("tables", "dp_utterance_variety.csv"), col_types = cols(.default =
     label = "table-dp-utterance-variety")
 ```
 
-**Randomization check across participants**. For the purposes of our research questions, it was important that every participant be presented with stimuli from all of the Spanish varieties to which we had access. 
-Recall that the 2AFC task contained 64 items, 16 of each utterance type. Using javascript we assigned each variety an equal probability of being selected in a given trial (0.125). 
-To ensure that our randomization worked as planned (i.e., with each variety represented approximately equally across all trials and all participants), we calculated the average number of times each variety was presented in the data set (n = `r n_learners`, and `r nrow(learners)` trials). 
-One can observe in Figure \@ref(fig:plot-sm-random-speaker-check) that this is indeed the case. 
-
-(ref:plot-sm-random-speaker-check) Average number of tokens (&pm;1 SD) presented from each speaker variety across all 14,400 trials. The experiment was programmed such that each of the 8 varieties had an equal probability of being presented (`r 1/8 * 100`%) across 64 experimental trials.
-
-```{r, 'plot-sm-random-speaker-check', fig.cap="(ref:plot-sm-random-speaker-check)"}
-knitr::include_graphics(
-  here("figs", "manuscript", "sm_random_speaker_check.pdf")
-  )
-```
-
-
-**Auditory stimuli**. The auditory stimuli consisted of 8 varieties of Spanish: Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian.
-Table \@ref(tab:table-stimuli-descriptives) contains demographic information about the speakers. 
-
-```{r, speakers}
-tribble(
-  ~'Country', ~'City/Variety', ~'Gender', ~'Age', 
-  "Argentina", "Buenos Aires", "Male", 27, 
-  "Chile", "Valparaíso", "Female", 42, 
-  "Cuba", "Havana", "Female", 55, 
-  "Mexico", "Mexico City", "Female", 30, 
-  "Peru", "Lima", "Male", 30, 
-  "Puerto Rico", "Ponce", "Female", 35, 
-  "Spain", "Cádiz (Andalusia)", "Female", 35, 
-  "Spain", "Madrid", "Female", 29
-  ) %>% 
-  knitr::kable(format = "pandoc", 
-    caption = "Demographic information for the eight varieties of Spanish 
-    represented in the auditory stimuli.",
-    label = "table-stimuli-descriptives")
-```
-
-*Acoustic analysis*. 
-
-Spectrograms \@ref(fig:plot-spectrogram-andalusian)
-
-(ref:plot-spectrogram-andalusian) Stuff they made me do.
-
-```{r, 'plot-spectrogram-andalusian', fig.cap="(ref:plot-spectrogram-andalusian)"}
-knitr::include_graphics(
-    here("figs", "stimuli", "spectrogram_andaluz.png")
-  )
-
-```
-
-
-
 
 *Monolingual response accuracy*.
 
@@ -330,6 +280,34 @@ read_csv(here("tables", "variety_matched_native_accuracy.csv")) %>%
 
 
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## Auditory stimuli {#auditory-stimuli}
+
+*Speakers*. The auditory stimuli consisted of 8 varieties of Spanish: Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian.
+Table \@ref(tab:table-stimuli-descriptives) contains demographic information about the speakers.
+
+```{r, speakers}
+tribble(
+  ~'Country', ~'City/Variety', ~'Gender', ~'Age', 
+  "Argentina", "Buenos Aires", "Male", 27, 
+  "Chile", "Valparaíso", "Female", 42, 
+  "Cuba", "Havana", "Female", 55, 
+  "Mexico", "Mexico City", "Female", 30, 
+  "Peru", "Lima", "Male", 30, 
+  "Puerto Rico", "Ponce", "Female", 35, 
+  "Spain", "Cádiz (Andalusia)", "Female", 35, 
+  "Spain", "Madrid", "Female", 29
+  ) %>% 
+  knitr::kable(format = "pandoc", 
+    caption = "Demographic information for the eight varieties of Spanish 
+    represented in the auditory stimuli.",
+    label = "table-stimuli-descriptives")
+```
+
+
 *Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
 Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians along with 66% and 95% HDI of standardized articulation rate for each variety. 
 The plot shows that, generally, there was not a lot of variability between varieties. 
@@ -342,6 +320,93 @@ That is, some of the faster varieties also had high response accuracy, e.g., Mex
 knitr::include_graphics(
   here("figs", "manuscript", "sm_speech_rate.pdf")
   )
+```
+
+
+*Acoustic analysis*. 
+
+Spectrograms \@ref(fig:plot-spectrogram-andalusian)
+
+(ref:plot-spectrogram-andalusian) Stuff they made me do.
+
+```{r, 'plot-spectrogram-andalusian', fig.cap="(ref:plot-spectrogram-andalusian)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_andaluz.png")
+  )
+
+```
+
+
+**Randomization check across participants**. For the purposes of our research questions, it was important that every participant be presented with stimuli from all of the Spanish varieties to which we had access. 
+Recall that the 2AFC task contained 64 items, 16 of each utterance type. Using javascript we assigned each variety an equal probability of being selected in a given trial (0.125). 
+To ensure that our randomization worked as planned (i.e., with each variety represented approximately equally across all trials and all participants), we calculated the average number of times each variety was presented in the data set (n = `r n_learners`, and `r nrow(learners)` trials). 
+One can observe in Figure \@ref(fig:plot-sm-random-speaker-check) that this is indeed the case. 
+
+(ref:plot-sm-random-speaker-check) Average number of tokens (&pm;1 SD) presented from each speaker variety across all 14,400 trials. The experiment was programmed such that each of the 8 varieties had an equal probability of being presented (`r 1/8 * 100`%) across 64 experimental trials.
+
+```{r, 'plot-sm-random-speaker-check', fig.cap="(ref:plot-sm-random-speaker-check)"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_random_speaker_check.pdf")
+  )
+```
+
+
+*Sentences*. Table \@ref(tab:table-stimuli-items)
+
+
+
+```{r}
+#| label: print-stim
+
+learners %>% 
+  group_by(sentence_type, sentence) %>% 
+  summarize(.groups = "drop") %>% 
+  mutate(
+    sentence = str_replace_all(sentence, "leia", "leía"), 
+    sentence = str_replace_all(sentence, "comia", "comía"),
+    sentence = str_replace_all(sentence, "nino", "niño"),
+    sentence = str_replace_all(sentence, "rio", "río"),
+    sentence = str_replace_all(sentence, "nina", "niña"),
+    sentence = str_replace_all(sentence, "Maria", "María"),
+    sentence = str_replace_all(sentence, "tia", "tía"),
+    sentence = str_replace_all(sentence, "Cuando", "Cuándo"),
+    sentence = str_replace_all(sentence, "Por que", "Por qué"),
+    sentence = str_replace_all(sentence, "bebia", "bebía"),
+    `Utterance type` = case_when(
+      sentence_type == "declarative-broad-focus" ~ "Broad focus statement", 
+      sentence_type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+      sentence_type == "interrogative-partial-wh" ~ "Wh- question", 
+      sentence_type == "interrogative-total-yn" ~ "yes/no question"), 
+    Item = sentence) %>% 
+  mutate(
+    Item = if_else(`Utterance type` %in% c("Wh- question", "yes/no question"), 
+    glue("¿{.$Item}?"), .$Item)) %>% 
+  transmute(
+    `Utterance type` = case_when(
+      sentence == "Ana lleva el abrigo" & sentence_type == "declarative-broad-focus" ~ .$`Utterance type`, 
+      sentence == "Ana lleva el abrigo" & sentence_type == "declarative-narrow-focus" ~ .$`Utterance type`, 
+      sentence == "Cuándo bebía el vino" & sentence_type == "interrogative-partial-wh" ~ .$`Utterance type`, 
+      sentence == "Ana lleva el abrigo" & sentence_type == "interrogative-total-yn" ~ .$`Utterance type`, 
+      TRUE ~ " "
+    ), 
+    Item, 
+  ) %>% 
+  knitr::kable(format = "pandoc", 
+    caption = "Experimental items produced in auditory stimuli.",
+    label = "table-stimuli-items")
+
+```
+
+
+
+
+
+
+
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
 ## Author contributions
