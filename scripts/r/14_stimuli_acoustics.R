@@ -131,46 +131,43 @@ walk(c('png', 'pdf'), ~ ggsave(
 # Path to script
 plot_script <- here("scripts", "praat", "6_plot_spectrogram.praat")
 
-wav1 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav")
-tg1  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.textgrid")
-out1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.pdf") 
+wavs <- c(
+  here("data", "stimuli", "sounds", "andalusian_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav"), 
+  here("data", "stimuli", "sounds", "andalusian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav")
+  )
 
-# Run script, capture output, read as csv
-speakr::praat_run(
-  plot_script, 
-  file = out1, 
-  caption = "\\ ", 
-  wav = wav1, 
-  tg = tg1, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
-)
+tgds <- c(
+  here("data", "stimuli", "textgrids", "andalusian_match_declarative-broad-focus_Ana-lleva-el-abrigo.textgrid"), 
+  here("data", "stimuli", "textgrids", "andalusian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.textgrid")
+  )
 
-wav2 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav")
-tg2  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.textgrid")
-out2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.pdf") 
+outs <- c(
+  here("figs", "stimuli", "andalusian_match_declarative-broad-focus_Ana-lleva-el-abrigo.png"), 
+  here("figs", "stimuli", "andalusian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.png")
+  )
 
-speakr::praat_run(
-  script = plot_script, 
-  file = out2, 
-  caption = "\\ ", 
-  wav = wav2, 
-  tg = tg2, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
-)
+caps <- c(
+  "Andalusian\\ -\\ Broad\\ focus", 
+  "Andalusian\\ -\\ Narrow\\ focus"
+  )
+
+for (i in 1:length(an_wavs)) {
+  speakr::praat_run(
+    plot_script, 
+    file = outs[i], 
+    caption = caps[i], 
+    wav = wavs[i], 
+    tg = tgds[i], 
+    start = 0, 
+    end = 0, 
+    width = 7, 
+    format = "png", 
+    pitch = TRUE, 
+    pitch_min = 0, 
+    pitch_max = 500, 
+    hz_max = 5000
+  )
+}
 
 library("cowplot")
 path1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.png")

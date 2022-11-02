@@ -78,7 +78,7 @@ Times
 Select inner viewport: 0, win_width, wav_height, wav_height + sp_height
 
 selectObject: sp
-Paint: start, end, 0, 0, 100, "no", 50, 6, 0, "no"
+Paint: start, end, 0, 0, 100, "no", 40, 6, 0, "no"
 Draw inner box
 
 ### f0 track ########################################################
