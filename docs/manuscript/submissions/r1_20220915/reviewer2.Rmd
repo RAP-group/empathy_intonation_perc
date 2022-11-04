@@ -145,7 +145,13 @@ MUST ADD TO DISCUSSION TOO. STILL IN PROGRESS
 \RC{p. 5, 23-29 - Also reference the discussion regarding the instruction of prosody in Durwing \& Monroe 2015
 }
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/51
+-->
+
+This reference has been included in the revised manuscript. 
+
+\Done
 \Easy
 
 
@@ -248,8 +254,18 @@ We now refer to absolute interrogatives as 'yes/no questions'.
 \RC p. 26, lines 53-6 (on next page)- I’m not sure this makes sense” In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.”
 Do they mean “compared” to low empathy learners (as opposed to “particularly with regard to low empathy learners”)?
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/60
+-->
+
+We did indeed mean to say "compared" to lo empathy learners. 
+This has been changed in the revised manuscript. 
+
+\Done
 \Easy
+
+
+
 
 \RC p. 29, line 28 - "This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.” again, I don’t see a reason to call this pragmatic skill. It’s just empathy. better to say - "That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.”
 
