@@ -61,7 +61,7 @@ sp = To Spectrogram: 0.005, hz_max, 0.002, 20, "Gaussian"
 
 if pitch$ != "FALSE"
   selectObject: wav
-  pitch_obj = To Pitch: 0, 75, 600
+  pitch_obj = To Pitch: 0, pitch_min, pitch_max
 endif
 
 # Set up plotting params ############################################
@@ -95,8 +95,8 @@ if pitch$ != "FALSE"
   Draw: start, end, pitch_min, pitch_max, "no"
   Line width: 1
   Black
-  #Axes: start, end, pitch_min, pitch_max
-  #Marks right: 2, "yes", "yes", "no"
+  Axes: start, end, pitch_min, pitch_max
+  Marks left: 2, "yes", "yes", "no"
 endif
 
 ### Spectrogram box #################################################
@@ -131,15 +131,15 @@ int_min = Get minimum: start, end, "sinc70"
 int_max = Get maximum: start, end, "sinc70"
 
 Axes: start, end, int_min, int_max
-One mark right: int_min, "no", "yes", "no", fixed$(int_min, 2)
-One mark right: 0, "yes", "yes", "yes", ""
-One mark right: int_max, "no", "yes", "no", fixed$(int_max, 2)
+#One mark right: int_min, "no", "yes", "no", fixed$(int_min, 2)
+#One mark right: 0, "yes", "yes", "yes", ""
+#One mark right: int_max, "no", "yes", "no", fixed$(int_max, 2)
 
 Select inner viewport: 0, win_width, wav_height, wav_height + sp_height
 
 Axes: start, end, 0, hz_max
-Marks left: 2, "yes", "yes", "no"
-Text left: "no", "Hz"
+#Marks left: 2, "yes", "yes", "no"
+Text left: "no", "F0 (Hz)"
 
 Select inner viewport: 0, win_width, 0, inner_height
 
@@ -149,7 +149,7 @@ Text bottom: "no", caption$
 
 ### Select plot and save ###########################################
 
-Select inner viewport: 0, win_width, 0, inner_height
+Select inner viewport: 0.25, win_width - 0.25, 0.25, inner_height - 0.1
 
 if format$ == "png"
   Save as 600-dpi PNG file: file$
