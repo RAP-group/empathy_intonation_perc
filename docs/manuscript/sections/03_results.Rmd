@@ -98,7 +98,7 @@ The walk ends when enough evidence is accumulated and a decision threshold (hori
 The upper threshold indicates a decision leading to a correct response and the lower threshold an incorrect response. 
 Thick red lines indicate the simulation average for correct/incorrect responses in each condition. 
 Focusing on the lower row of plots (high empathy), moving from left to right (low proficiency to high proficiency) within each question type, one observes (a) an increase in boundary separation (&alpha;), i.e. a greater distance between thresholds, via the horizontal grey lines, and (b) a decrease in drift rate (&delta;), i.e., a slower rate of information accumulation leading to a decision, via the horizontal distance of the red lines. 
-In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level. 
+In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, compared to low empathy learners (top row), regardless of proficiency level. 
 
 (ref:plot-ddm-simulations) Two-thousand simulations of the drift diffusion model for interrogative utterances as a function of empathy quotient (low/high) and LexTALE score (low/high). Low and high levels represent &pm;2 standard deviations above/below the mean. Horizontal, discontinuous grey lines indicate decision thresholds and dark red lines represent the simulation averages.
 
