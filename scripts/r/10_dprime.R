@@ -151,10 +151,10 @@ plot_dp_variety <- as_tibble(learner_dp_01) %>%
 plot_dp_utterance <- as_tibble(learner_dp_02) %>% 
   select("b_Intercept", starts_with("b_sentence_type"), -contains(":")) %>% 
   transmute(
-    `Interrogative\ny/n` = b_Intercept, 
-    `Interrogative\nwh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
-    `Declarative\nnarrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
-    `Declarative\nbroad focus` = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
+    `y/n question` = b_Intercept, 
+    `Wh- question` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+    `Narrow focus\nstatement` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+    `Broad focus\nstatement` = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
   ) %>% 
   pivot_longer(everything(), names_to = "ut", values_to = "estimate") %>% 
   mutate(ut = fct_reorder(ut, estimate, max)) %>% 
@@ -191,10 +191,10 @@ bind_rows(
   as_tibble(learner_dp_02) %>% 
     select("b_Intercept", starts_with("b_sentence_type"), -contains(":")) %>% 
     transmute(
-      `Interrogative y/n` = b_Intercept, 
-      `Interrogative wh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
-      `Declarative narrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
-      `Declarative broad focus` = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
+      `y/n question` = b_Intercept, 
+      `Wh- question` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+      `Narrow focus statement` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+      `Broad focus statement` = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
     ) %>% 
     pivot_longer(everything(), names_to = "Parameter", values_to = "estimate") %>% 
     mutate(Model = "Utterance type"), 

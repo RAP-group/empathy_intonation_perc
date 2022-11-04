@@ -88,10 +88,10 @@ stim_data <- read_csv(here("data", "tidy", "stimuli_acoustics_tidy.csv")) %>%
     variety == "peruvian" ~ "Peruvian", 
     variety == "puertorican" ~ "Puerto Rican"), 
     type_lab = case_when(
-      type == "interrogative-total-yn" ~ "Interrogative y/n", 
-      type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-      type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-      type == "declarative-broad-focus" ~ "Declarative broad focus"
+      type == "interrogative-total-yn" ~ "y/n question", 
+      type == "interrogative-partial-wh" ~ "Wh- question", 
+      type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+      type == "declarative-broad-focus" ~ "Broad focus statement"
     ))
 
 # F0 as a function of sentence type and variety
@@ -102,8 +102,8 @@ stimuli_pitch_contours <- stim_data %>%
   facet_grid(variety_lab ~ type_lab) + 
   geom_line(aes(group = item), stat = "smooth", alpha = 0.15, se = F, 
     show.legend = F, formula = "y ~ x", method = "loess") + 
-  geom_smooth(method = "loess", span = 0.5, formula = "y ~ x", size = 1.1, 
-    show.legend = F) + 
+  stat_smooth(geom = "line", method = "loess", span = 0.5, formula = "y ~ x", size = 1.1, 
+    show.legend = F, lineend = "round") + 
   scale_color_manual(values = viridis::viridis_pal(
     option = "B", begin = 0.3, end = 0.8)(8)) + 
   scale_fill_manual(values = viridis::viridis_pal(
@@ -131,58 +131,90 @@ walk(c('png', 'pdf'), ~ ggsave(
 # Path to script
 plot_script <- here("scripts", "praat", "6_plot_spectrogram.praat")
 
-wav1 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav")
-tg1  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.textgrid")
-out1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.pdf") 
-
-# Run script, capture output, read as csv
-speakr::praat_run(
-  plot_script, 
-  file = out1, 
-  caption = "\\ ", 
-  wav = wav1, 
-  tg = tg1, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
+# Vector of variety names
+variety_names <- c(
+  "andalusian", "argentine", "castilian", "chilean", "cuban", "mexican", 
+  "peruvian", "puertorican"
 )
 
-wav2 <- here("data", "stimuli", "sounds", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav")
-tg2  <- here("data", "stimuli", "textgrids", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.textgrid")
-out2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.pdf") 
+# Vector of utterances
+utterances <- c(
+  "_match_declarative-broad-focus_Ana-lleva-el-abrigo",
+  "_match_declarative-narrow-focus_Ana-lleva-el-abrigo",
+  "_match_interrogative-partial-wh_Cuando-lleva-el-abrigo",
+  "_match_interrogative-total-yn_Ana-lleva-el-abrigo",
+  "_match_interrogative-total-yn_Mariano-habla-del-tiempo"
+  )
 
-speakr::praat_run(
-  script = plot_script, 
-  file = out2, 
-  caption = "\\ ", 
-  wav = wav2, 
-  tg = tg2, 
-  start = 0, 
-  end = 0, 
-  width = 5, 
-  format = "pdf", 
-  pitch = TRUE, 
-  pitch_min = 0, 
-  pitch_max = 500, 
-  hz_max = 5000
+# Generate vector of items
+make_vec_of_items <- function(variety) {
+  out <- as.character(glue("{variety}{utterances}"))
+  return(out)
+}
+
+example_items <- map(variety_names, make_vec_of_items) %>% unlist
+wavs <- glue('{here("data", "stimuli", "sounds")}/{example_items}.wav')
+tgds <- glue('{here("data", "stimuli", "textgrids")}/{example_items}.TextGrid')
+outs <- glue('{here("figs", "stimuli")}/{example_items}.png')
+
+cap_hold <- c(
+  "\\ -\\ Broad\\ focus", 
+  "\\ -\\ Narrow\\ focus", 
+  "\\ -\\ Wh-\\ question", 
+  "\\ -\\ yes/no\\ question", 
+  "\\ -\\ yes/no\\ question"
 )
 
-library("cowplot")
-path1 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.png")
-path2 <- here("figs", "stimuli", "andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.png")
-plot1 <- ggdraw() + draw_image(path1)
-plot2 <- ggdraw() + draw_image(path2)
-spectrogram_analuz <- plot_grid(plot1, plot2, labels = "auto", label_y = 0.8)
+variety_caps <- c("Andalusian", "Argentine", "Madrileño", "Chilean", 
+                  "Cuban", "Mexican", "Puerto\\ Rican")
 
-walk(c('png', 'pdf'), ~ ggsave(
-  filename = glue(file.path(here("figs", "stimuli")), "/spectrogram_andaluz.", .x), 
-  plot = spectrogram_analuz, 
-  device = .x, height = 4, width = 8.5, units = "in"))
+make_vec_of_caps <- function(variety) {
+  out <- as.character(glue("{variety}{cap_hold}"))
+  return(out)
+}
+
+caps <- map(variety_caps, make_vec_of_caps) %>% unlist
+
+f0_mins <- c(rep(75, 5), rep(50, 5), rep(75, 20), rep(50, 5), rep(75, 5))
+f0_maxs <- c(rep(500, 5), rep(350, 5), rep(500, 20), rep(350, 5), rep(500, 5))
+
+for (i in 1:length(wavs)) {
+  speakr::praat_run(
+    plot_script, 
+    file = outs[i], 
+    caption = caps[i], 
+    wav = wavs[i], 
+    tg = tgds[i], 
+    start = 0, 
+    end = 0, 
+    width = 7, 
+    format = "png", 
+    pitch = TRUE, 
+    pitch_min = f0_mins[i], 
+    pitch_max = f0_maxs[i], 
+    hz_max = 5500
+  )
+}
+
+# Items to plot
+img_ref <- glue("{utterances[1:4]}.png")
+
+# Function to generate plots
+combine_spectrograms <- function(variety) {
+  # Pull .png files of utterance types by variety in 2x2 grid
+  out <- reduce(map(glue('{here("figs", "stimuli")}/{variety}{img_ref}'), 
+        ~ cowplot::ggdraw() + cowplot::draw_image(.x)), `+`
+  )
+  
+  # Save as png and pdf
+  walk(c('png', 'pdf'), ~ ggsave(
+    filename = glue(here("figs", "stimuli"), glue("/spectrogram_{variety}."), .x), 
+    plot = out, 
+    device = .x, height = 6, width = 8.5, units = "in"))
+}
+
+# Generate plot for each variety
+walk(variety_names, ~ combine_spectrograms(variety = .x))
 
 # -----------------------------------------------------------------------------
 
@@ -217,10 +249,10 @@ l2_native_accuracy <- bind_rows(
 learner_native_accuracy <- l2_native_accuracy %>% 
   transmute(group = str_replace(group, "Native", "Monolingual"), 
     Type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      sentence_type == "declarative-broad-focus" ~ "Declarative\nbroad focus"), 
+      sentence_type == "interrogative-total-yn" ~ "y/n\nquestion", 
+      sentence_type == "interrogative-partial-wh" ~ "Wh-\nquestion", 
+      sentence_type == "declarative-narrow-focus" ~ "Narrow focus\nstatement", 
+      sentence_type == "declarative-broad-focus" ~ "Broad focus\nstatement"), 
     Variety = speaker_variety, 
     avg = avg$y, lower = .$avg$ymin, upper = .$avg$ymax) %>% 
   ggplot() + 
@@ -254,10 +286,10 @@ l2_native_accuracy_tbl <- l2_native_accuracy %>%
     Monolingual = glue("{specify_decimal(Native$y, 2)} [{specify_decimal(Native$ymin, 2)}, {specify_decimal(Native$ymax, 2)}]")
   ) %>% 
   mutate(Type = case_when(
-    Type == "interrogative-total-yn" ~ "Interrogative y/n", 
-    Type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-    Type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-    Type == "declarative-broad-focus" ~ "Declarative broad focus"
+    Type == "interrogative-total-yn" ~ "y/n question", 
+    Type == "interrogative-partial-wh" ~ "Wh- question", 
+    Type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+    Type == "declarative-broad-focus" ~ "Broad focus statement"
   )) %>% 
   write_csv(here("tables", "learner_native_accuracy.csv"))
 
@@ -283,10 +315,10 @@ variety_matches <- natives %>%
       speaker_variety == "peruvian" ~ "Peruvian", 
       speaker_variety == "puertorican" ~ "Puerto Rican"), 
     Type = case_when(
-      sentence_type == "interrogative-total-yn" ~ "Interrogative\ny/n", 
-      sentence_type == "interrogative-partial-wh" ~ "Interrogative\nWh-", 
-      sentence_type == "declarative-narrow-focus" ~ "Declarative\nnarrow focus", 
-      sentence_type == "declarative-broad-focus" ~ "Declarative\nbroad focus")
+      sentence_type == "interrogative-total-yn" ~ "y/n\nquestion", 
+      sentence_type == "interrogative-partial-wh" ~ "Wh-\nquestion", 
+      sentence_type == "declarative-narrow-focus" ~ "Narrow focus\nstatement", 
+      sentence_type == "declarative-broad-focus" ~ "Broad focus\nstatement")
   ) %>% 
   filter(variety_match == 1)
 
@@ -307,7 +339,7 @@ native_variety_matched_accuracy <- variety_matches %>%
         strip.background = element_rect(fill = NA))
 
 walk(c('png', 'pdf'), ~ ggsave(
-  filename = glue(file.path(here("figs", "manuscript")), "/native_variety_matched_accuracy.", .x), 
+  filename = glue(here("figs", "manuscript"), "/native_variety_matched_accuracy.", .x), 
   plot = native_variety_matched_accuracy, 
   device = .x, height = 4, width = 8.5, units = "in"))
 
@@ -319,13 +351,12 @@ variety_matches %>%
     Accuracy = glue("{specify_decimal(avg$y, 2)} [{specify_decimal(avg$ymin, 2)}, {specify_decimal(avg$ymax, 2)}]")
   ) %>% 
   mutate(Type = case_when(
-    Type == "interrogative-total-yn" ~ "Interrogative y/n", 
-    Type == "interrogative-partial-wh" ~ "Interrogative Wh-", 
-    Type == "declarative-narrow-focus" ~ "Declarative narrow focus", 
-    Type == "declarative-broad-focus" ~ "Declarative broad focus"
+    Type == "interrogative-total-yn" ~ "y/n question", 
+    Type == "interrogative-partial-wh" ~ "Wh- question", 
+    Type == "declarative-narrow-focus" ~ "Narrow focus statement", 
+    Type == "declarative-broad-focus" ~ "Broad focus statement"
   )) %>% 
   pivot_wider(names_from = Type, values_from = Accuracy) %>% 
   write_csv(here("tables", "variety_matched_native_accuracy.csv"))
-
 
 # -----------------------------------------------------------------------------

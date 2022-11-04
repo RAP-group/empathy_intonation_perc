@@ -34,21 +34,21 @@ describe_posterior(learner_response_01, rope_range = c(-0.1, 0.1)) %>%
   select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high")) %>% 
   mutate(Parameter = case_when(
     Parameter == "b_Intercept" ~ "Intercept", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Int. wh-", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Dec. narrow focus", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Dec. broad focus", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Wh- question", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Narrow focus", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Broad focus", 
     Parameter == "b_lextale_std" ~ "LexTALE", 
     Parameter == "b_eq_std" ~ "Empathy quotient", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std" ~ "Int. wh-:LexTALE", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std" ~ "Dec. narrow focus:LexTALE", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std" ~ "Dec. broad focus:LexTALE", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:eq_std" ~ "Int. wh-:EQ", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:eq_std" ~ "Dec. narrow focus:EQ", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:eq_std" ~ "Dec. broad focus:EQ", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std" ~ "Wh- question:LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std" ~ "Narrow focus:LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std" ~ "Broad focus:LexTALE", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:eq_std" ~ "Wh- question:EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:eq_std" ~ "Narrow focus:EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:eq_std" ~ "Broad focus:EQ", 
     Parameter == "b_lextale_std:eq_std" ~ "LexTALE:EQ", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std" ~ "Int. wh-:LexTALE:EQ", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std" ~ "Dec. narrow focus:LexTALE:EQ", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std" ~ "Dec. broad focus:LexTALE:EQ"
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std" ~ "Wh- question:LexTALE:EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std" ~ "Narrow focus:LexTALE:EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std" ~ "Broad focus:LexTALE:EQ"
   )) %>% 
   mutate(across(-c("Parameter", "ESS"), specify_decimal, k = 2)) %>% 
   mutate(ESS = round(ESS)) %>% 
@@ -90,5 +90,33 @@ bind_rows(
   mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
   select(Model, Parameter, Median, HDI, MPE = pd, Rhat, ESS) %>% 
   write_csv(here("tables", "ddm_bs_dr.csv"))
+
+# -----------------------------------------------------------------------------
+
+
+
+
+# Learner variety familiarity match model table -------------------------------
+
+# Model summary table
+describe_posterior(learner_variety_match_response, rope_range = c(-0.1, 0.1)) %>% 
+  as_tibble() %>% 
+  select(-c("CI", "ROPE_CI", "ROPE_low", "ROPE_high")) %>% 
+  mutate(Parameter = case_when(
+    Parameter == "b_Intercept" ~ "Intercept", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Wh- question", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Narrow focus", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Broad focus", 
+    Parameter == "b_is_match_labfamiliar" ~ "Familiar", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:is_match_labfamiliar" ~ "Wh- question:Familiar", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:is_match_labfamiliar" ~ "Narrow focus:Familiar", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:is_match_labfamiliar" ~ "Broad focus:Famliar"
+  )) %>% 
+  mutate(across(-c("Parameter", "ESS"), specify_decimal, k = 2)) %>% 
+  mutate(ESS = round(ESS)) %>% 
+  mutate(across(-Parameter, printy::fmt_minus_sign)) %>% 
+  mutate(HDI = glue("[{CI_low}, {CI_high}]")) %>% 
+  select(Parameter, Median, HDI, `% in ROPE` = ROPE_Percentage, MPE = pd, Rhat, ESS) %>% 
+  write_csv(here("tables", "learner_variety_match_response_model_summary.csv"))
 
 # -----------------------------------------------------------------------------
