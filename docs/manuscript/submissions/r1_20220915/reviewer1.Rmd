@@ -234,23 +234,46 @@ This hypothesis is grounded in exploratory analyses of pilot data collected from
 
 \RC{Details on the stimuli used for the experimental task are much needed. Please describe the sentences used at the acoustic and phonological level, for all varieties, and provide a list of these sentences. Importantly, were they controlled at the syntactic and lexical levels to ensure that potential differences in processing speed were not due to syntactic or lexical factors? On a related note, and crucially to interpret your results, how can we be sure that listeners responded based on the intonational cues they perceived and not on potential syntactic and lexical cues in the sentences?}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/38
+-->
+
+We have included acoustic and phonological descriptions of the stimuli along with a complete list of items in the supplementary materials of the revised manuscript. 
+All items within an utterance type followed the same syntactic structure. 
+
+\Done
 \Easy
 
 
 
 
-\RC Please provide the results of the 100 monolingual Spanish speakers rating the quality of items.
+\RC{Please provide the results of the 100 monolingual Spanish speakers rating the quality of items.}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/39
+-->
+
+The data from `r n_natives` monolingual Spanish speakers was used to pilot the items/task. 
+In other words, these listeners did not rate the quality of the items. 
+We have included our exploratory analyses of the pilot data in the supplementary materials. 
+As mentioned previously, accuracy was high (lowest for the Cuban and Puerto Rican varieties when responding to questions). 
+Unsurprisingly (though of interest), when looking at the monolingual listeners' accuracy when responding to stimuli from their own variety, e.g., Andalusian listeners responding to stimuli from the Andalusian speaker, accuracy was at ceiling for all the variety matches for which we have data (Andalusian, Chilean, Cuban, Madrileño, Mexican, and Puerto Rican). 
+
+\Done
 \Easy
 
 
 
 
-\RC Please provide details on which variety the listeners were familiar with, and put these data in relation to the participants’ responses in the results in a more systematic way.
+\RC{Please provide details on which variety the listeners were familiar with, and put these data in relation to the participants' responses in the results in a more systematic way.}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/40
+-->
+
+This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)) and has been included in the revised manuscript. 
+
+\Done
 \Easy
 
 
@@ -258,7 +281,11 @@ This hypothesis is grounded in exploratory analyses of pilot data collected from
 
 ## RESULTS & DISCUSSION
 
-\RC Results show that proficiency and empathy interact in wh-questions but not in yes/no questions or declaratives, and that empathy had an effect in all sentence types except for yes/no question. There is no discussion on how these findings relate to previous literature on sentence comprehension, or even on what may originate these differences across sentence types. Instead, the discussion and conclusion now seem to mask these differences across sentence types. 
+\RC{Results show that proficiency and empathy interact in wh-questions but not in yes/no questions or declaratives, and that empathy had an effect in all sentence types except for yes/no question. There is no discussion on how these findings relate to previous literature on sentence comprehension, or even on what may originate these differences across sentence types. Instead, the discussion and conclusion now seem to mask these differences across sentence types.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/41
+-->
 
 \WorkInProgress
 \Easy
@@ -267,6 +294,10 @@ This hypothesis is grounded in exploratory analyses of pilot data collected from
 
 
 \RC Could you check whether individuals with higher empathy were not the ones with higher proficiency? How did these two factors correlate?
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/42
+-->
 
 <!-- From accuracy model --> 
 r_eq_lt_bf
@@ -296,6 +327,7 @@ The use of proficiency as a continuous variable is not an innovation of our stud
 The reason continuous variables are discretized in other research likely results from the choice of analysis, e.g., analysis of variance (ANOVA), which requires a continuous outcome variable be predicted by factors (categorical variables). 
 While we do believe that the common practice of discretization of continuous variables is less than ideal, it is not our intention to speak to this topic in the manuscript. 
 The description regarding how the variable is coded is included (a) for the sake of completeness and reproducibility, and (b) to highlight our departure from @bustin_2020, which our study replicates conceptually. 
+
 \Done
 \Easy
 
@@ -303,7 +335,11 @@ The description regarding how the variable is coded is included (a) for the sake
 
 
 
-\RC The authors try to explain the variety-specific responses by providing three hypotheses. However, I think that none of these hypotheses are sufficiently motivated or explained. First, they state that “familiarity with the target variety may account for variety-specific response accuracy”, although this cannot be derived from the results you obtained since most of your listeners were most familiar with US Spanish (which was not in the stimuli). Second, they state that they may derive from the fact that distinct varieties produce each sentence type using distinct intonational patterns, although it is impossible to evaluate if this hypothesis is plausible because details on the intonational features of the stimuli are missing and because results are never matched to the nature of the contour that was perceived. Finally, the authors propose an explanation linked to the distinct speech rate used in distinct varieties. The authors should provide a detailed description of the speech rate of the stimuli, by variety, in order for the reader to be able to evaluate if this explanation is indeed plausible. All in all, I recommend the authors to adjust the discussion of the effect of listener/speaker variety to the results that were actually obtained, and to provide enough details of the stimuli to ensure the reader can assess the validity of these explanations. 
+\RC{The authors try to explain the variety-specific responses by providing three hypotheses. However, I think that none of these hypotheses are sufficiently motivated or explained. First, they state that “familiarity with the target variety may account for variety-specific response accuracy”, although this cannot be derived from the results you obtained since most of your listeners were most familiar with US Spanish (which was not in the stimuli). Second, they state that they may derive from the fact that distinct varieties produce each sentence type using distinct intonational patterns, although it is impossible to evaluate if this hypothesis is plausible because details on the intonational features of the stimuli are missing and because results are never matched to the nature of the contour that was perceived. Finally, the authors propose an explanation linked to the distinct speech rate used in distinct varieties. The authors should provide a detailed description of the speech rate of the stimuli, by variety, in order for the reader to be able to evaluate if this explanation is indeed plausible. All in all, I recommend the authors to adjust the discussion of the effect of listener/speaker variety to the results that were actually obtained, and to provide enough details of the stimuli to ensure the reader can assess the validity of these explanations.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/44
+-->
 
 \WorkInProgress
 \Easy
