@@ -139,7 +139,7 @@ When we apply this to everyday communication, we find that speakers' expressions
 Speakers employ other strategies, such as using intonational cues, with the intention of producing a meaningful expressions that can include pragmatic connotations, and mental states, among other meaningful expressions.
 For instance, speakers can signal pragmatic information via pitch accents. 
 A high tone at the end of a phrase can signal a yes/no question the same way as a final high tone preceded by a rising pitch accent can indicate unexpected information (in Spanish).
-The extant literature suggests that individual pragmatic skills modulate intonation processing [@bishop2016individual; @bishop2015individual; @bishop2016autistic; @diehl2008resolving] 
+The extant literature suggests that individual pragmatic skills modulate intonation processing [@bishop2016individual; @bishop2015individual; @bishop2016autistic; @diehl2008resolving]. 
 The critical studies in the case that concerns us are @esteve2016role, @esteve2020empathy, and @orrico2020individual, which suggest that individuals with higher empathy (operationalized as a pragmatic skill) may be better at processing intonation-meaning associations. 
 
 Importantly, *why* and *how* particular acoustic cues lead to distinct processing outcomes on the part of the listener is still unclear. 
@@ -173,8 +173,8 @@ Recent studies related to monolingual sentence processing find that empathy infl
 This line of work operationalizes the construct empathy as a pragmatic skill and has focused on it as a source of individual differences. 
 To elaborate on just one example, @esteve2020empathy shows that listeners with different levels of empathy interpret intonation and meaning in contexts in which a temporary lexical ambiguity could only be resolved through intonation. 
 The higher empathy group was more sensitive to intonation cues in the process of forming sound-meaning associations. 
-In other words they used intonation to resolve temporary lexical ambiguities. 
-As mentioned, there is limited research in SLA involving empathy, and there are no studies, as far as we know, dealing with empathy and speech perception. 
+In other words, they used intonation to resolve temporary lexical ambiguities. 
+As mentioned, there is limited research in SLA involving empathy, and there are no studies, as far as we know, dealing with empathy and L2 speech perception. 
 That being said, if empathy plays a role in monolingual sentence processing, a valid question is to ask if this is also the case in second language sentence processing. 
 We have tried to make this clear in the revised manuscript and include below a relevant section illustrating the logic explained above. 
 
@@ -187,7 +187,7 @@ With regard to research question 3, our hypothesis that learners will have more 
 We found that participants were much less accurate in the 2afc task when responding to the stimuli provided by the Cuban speaker (and to a lesser extent the Puerto Rican speaker). 
 A priori we would have had no justification for this hypothesis had we not collected the pilot data. 
 In hindsight, it would have made sense to pre-register a hypothesis stating that participants would be more accurate responding to speakers of varieties with which they were more familiar. 
-However, we would not have been able to answer this question--at least not to the extent one would hope---as the listeners in the data we collected mainly stated being most familiar with U.S. Spanish (See pp. 32-33 for brief discussion). 
+However, we would not have been able to answer this question---at least not to the extent one would hope---as the listeners in the data we collected mainly stated being most familiar with U.S. Spanish (See pp. 32-33 for brief discussion). 
 We now offer an additional plausible explanation based on familiarity with Spanish.  
 Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties (Peninsular and Mexican Spanish). 
 We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data (complete details provided in the manuscript). 
