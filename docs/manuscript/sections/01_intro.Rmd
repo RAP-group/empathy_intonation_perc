@@ -127,7 +127,7 @@ As shown in previous studies, yes/no questions (i.e., absolute interrogatives) w
 Based on the findings of @esteve2020empathy, we posit that prosodic development will occur sooner and at a faster rate in higher empathy individuals (RQ2). 
 In this operationalization, 'sooner' refers to lower proficiency levels in a cross-sectional design, that is, at an earlier developmental stage when compared with lower empathy individuals.
 Finally, with regard to RQ3, we hypothesize that, overall, L2 learners will have the most difficulty (lower accuracy, slower response time) with the Cuban variety. 
-This hypothesis is grounded in exploratory analyses of pilot data collected from `r natives$participant %>% unique() %>% length()` monolingual Spanish speakers (See Supplementary Materials for more information). 
+This hypothesis is grounded in exploratory analyses of pilot data collected from `r natives$participant %>% unique() %>% length()` monolingual Spanish speakers in which responses to the Cuban variety were the least accurate (See Supplementary Materials for more information). 
 
 This project presents a conceptual replication of @bustin_2020 in that we employ a similar experimental paradigm using similar stimuli in order to analyze the relationship between proficiency and L2 perception of intonation. 
 We extend this research by taking into account pragmatic skill, specifically empathy, in L2 sentence processing. 
