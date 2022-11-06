@@ -189,7 +189,7 @@ A priori we would have had no justification for this hypothesis had we not colle
 In hindsight, it would have made sense to pre-register a hypothesis stating that participants would be more accurate responding to speakers of varieties with which they were more familiar. 
 However, we would not have been able to answer this question---at least not to the extent one would hope---as the listeners in the data we collected mainly stated being most familiar with U.S. Spanish (See pp. 32-33 for brief discussion). 
 We now offer an additional plausible explanation based on familiarity with Spanish.  
-Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties (Peninsular and Mexican Spanish). 
+Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties: Peninsular and Mexican Spanish (note: we make the assumption that 'Peninsular' is most closely associated with the Madrileño speaker). 
 We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data (complete details provided in the manuscript). 
 In short, we find that, marginalizing over proficiency and empathy, participants were indeed more accurate when responding to a familiar variety. 
 This is true for all utterance types to some degree, but more clearly the case for questions (likely because responses to declarative utterances were near ceiling). 
@@ -222,7 +222,7 @@ This was the only motivation for this hypothesis and precisely what was preregis
 Copied below is the relevant change to the introduction. 
 
 > Finally, with regard to RQ3, we hypothesize that, overall, L2 learners will have the most difficulty (lower accuracy, slower response time) with the Cuban variety. 
-This hypothesis is grounded in exploratory analyses of pilot data collected from `r n_natives` monolingual Spanish speakers (See Supplementary Materials for more information). 
+This hypothesis is grounded in exploratory analyses of pilot data collected from `r n_natives` monolingual Spanish speakers in which responses to the Cuban variety were the least accurate (See Supplementary Materials for more information). 
 
 \Done
 \Easy
@@ -239,7 +239,22 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/38
 -->
 
 We have included acoustic and phonological descriptions of the stimuli along with a complete list of items in the supplementary materials of the revised manuscript. 
-All items within an utterance type followed the same syntactic structure. 
+All items within an utterance type followed the same syntactic structure, as shown in Table \@ref(tab:item-ex-table). 
+
+\footnotesize
+```{r}
+#| label: ex-stim-table
+tribble(
+~'Utterance type', ~'Prompt', ~'Item', ~'Translation', 
+ "Broad focus statement", "n/a", "\\emph{Marta abre el regalo}", "Marta opens the gift.", 
+ "Narrow focus statement", "¿Qué abre Marta?", "\\emph{Marta abre el regalo}", "(What does Marta open?) Marta opens the gift.",
+ "Wh- question", "n/a", "\\emph{¿Por qué abre el regalo?}", "Why does she open the gift?", 
+ "y/n question", "n/a", "\\emph{¿Marta abre el regalo?}", "Does Marta open the gift?") %>% 
+  knitr::kable(format = "pandoc", escape = F, label = "item-ex-table", 
+    caption = "Example stimuli from the 2AFC task.")
+```
+
+\normalsize
 
 \Done
 \Easy
@@ -253,7 +268,7 @@ All items within an utterance type followed the same syntactic structure.
 https://github.com/RAP-group/empathy_intonation_perc/issues/39
 -->
 
-The data from `r n_natives` monolingual Spanish speakers was used to pilot the items/task. 
+The data from `r n_natives` monolingual Spanish speakers were used to pilot the items/task. 
 In other words, these listeners did not rate the quality of the items. 
 We have included our exploratory analyses of the pilot data in the supplementary materials. 
 As mentioned previously, accuracy was high (lowest for the Cuban and Puerto Rican varieties when responding to questions). 
@@ -271,7 +286,7 @@ Unsurprisingly (though of interest), when looking at the monolingual listeners' 
 https://github.com/RAP-group/empathy_intonation_perc/issues/40
 -->
 
-This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)) and has been included in the revised manuscript. 
+This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)) and has been included in the revised manuscript and the supplementary materials. 
 
 \Done
 \Easy
@@ -299,19 +314,17 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/41
 https://github.com/RAP-group/empathy_intonation_perc/issues/42
 -->
 
-<!-- From accuracy model --> 
-r_eq_lt_bf
-r_eq_lt_nf
-r_eq_lt_yn
-r_eq_lt_wh
+The relationship between empathy and proficiency is estimated in a number of ways. 
+First, the effect of the interaction between the two predictors on response accuracy is estimated for each utterance type and are reported in the manuscript. 
+Second, our model also estimated this correlation in the grouping effects and provided no compelling evidence that the two predictors are correlated ($\beta$ = `r r_eq_lt_random_post$Median`, HDI = `r r_eq_lt_random_post$HDI`, ROPE = `r pull(r_eq_lt_random_post[, 4])`, MPE = `r r_eq_lt_random_post$MPE`). 
+Specifically, we can see that the most plausible estimate is quite small, that the distribution of plausible values is quite wide, and that there is only approximately a 58% chance the correlation is positive (it is almost equally likely to be negative). 
+Thus, we feel confident that the participants with higher proficiency are not necessarily the same ones with higher empathy. 
 
-<!-- posterior of lextale x eq correlation from grouping effects -->
-r_eq_lt_random_post
+<!-- Get posterior of lextale x eq correlation 
+`r r_eq_lt_post`
+-->
 
-<!-- Get posterior of lextale x eq correlation -->
-r_eq_lt_post 
-
-\WorkInProgress
+\Done
 \Easy
 
 

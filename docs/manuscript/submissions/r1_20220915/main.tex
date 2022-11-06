@@ -331,7 +331,7 @@ A priori we would have had no justification for this hypothesis had we not colle
 In hindsight, it would have made sense to pre-register a hypothesis stating that participants would be more accurate responding to speakers of varieties with which they were more familiar.
 However, we would not have been able to answer this question---at least not to the extent one would hope---as the listeners in the data we collected mainly stated being most familiar with U.S. Spanish (See pp.~32-33 for brief discussion).
 We now offer an additional plausible explanation based on familiarity with Spanish.\\
-Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties (Peninsular and Mexican Spanish).
+Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties: Peninsular and Mexican Spanish (note: we make the assumption that `Peninsular' is most closely associated with the Madrileño speaker).
 We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data (complete details provided in the manuscript).
 In short, we find that, marginalizing over proficiency and empathy, participants were indeed more accurate when responding to a familiar variety.
 This is true for all utterance types to some degree, but more clearly the case for questions (likely because responses to declarative utterances were near ceiling).
@@ -375,7 +375,7 @@ Copied below is the relevant change to the introduction.
 
 \begin{quote}
 Finally, with regard to RQ3, we hypothesize that, overall, L2 learners will have the most difficulty (lower accuracy, slower response time) with the Cuban variety.
-This hypothesis is grounded in exploratory analyses of pilot data collected from 119 monolingual Spanish speakers (See Supplementary Materials for more information).
+This hypothesis is grounded in exploratory analyses of pilot data collected from 119 monolingual Spanish speakers in which responses to the Cuban variety were the least accurate (See Supplementary Materials for more information).
 \end{quote}
 
 \Done
@@ -387,14 +387,35 @@ This hypothesis is grounded in exploratory analyses of pilot data collected from
 \RC{Details on the stimuli used for the experimental task are much needed. Please describe the sentences used at the acoustic and phonological level, for all varieties, and provide a list of these sentences. Importantly, were they controlled at the syntactic and lexical levels to ensure that potential differences in processing speed were not due to syntactic or lexical factors? On a related note, and crucially to interpret your results, how can we be sure that listeners responded based on the intonational cues they perceived and not on potential syntactic and lexical cues in the sentences?}
 
 We have included acoustic and phonological descriptions of the stimuli along with a complete list of items in the supplementary materials of the revised manuscript.
-All items within an utterance type followed the same syntactic structure.
+All items within an utterance type followed the same syntactic structure, as shown in Table \ref{tab:item-ex-table}.
+
+\footnotesize
+
+\begin{longtable}[]{@{}llll@{}}
+\caption{\label{tab:item-ex-table}Example stimuli from the 2AFC task.}\tabularnewline
+\toprule()
+Utterance type & Prompt & Item & Translation \\
+\midrule()
+\endfirsthead
+\toprule()
+Utterance type & Prompt & Item & Translation \\
+\midrule()
+\endhead
+Broad focus statement & n/a & \emph{Marta abre el regalo} & Marta opens the gift. \\
+Narrow focus statement & ¿Qué abre Marta? & \emph{Marta abre el regalo} & (What does Marta open?) Marta opens the gift. \\
+Wh- question & n/a & \emph{¿Por qué abre el regalo?} & Why does she open the gift? \\
+y/n question & n/a & \emph{¿Marta abre el regalo?} & Does Marta open the gift? \\
+\bottomrule()
+\end{longtable}
+
+\normalsize
 
 \Done
 \Easy
 
 \RC{Please provide the results of the 100 monolingual Spanish speakers rating the quality of items.}
 
-The data from 119 monolingual Spanish speakers was used to pilot the items/task.
+The data from 119 monolingual Spanish speakers were used to pilot the items/task.
 In other words, these listeners did not rate the quality of the items.
 We have included our exploratory analyses of the pilot data in the supplementary materials.
 As mentioned previously, accuracy was high (lowest for the Cuban and Puerto Rican varieties when responding to questions).
@@ -405,7 +426,7 @@ Unsurprisingly (though of interest), when looking at the monolingual listeners' 
 
 \RC{Please provide details on which variety the listeners were familiar with, and put these data in relation to the participants' responses in the results in a more systematic way.}
 
-This issue was addressed above (See Figure \ref{fig:plot-learner-variety-familiarity} and Table \ref{tab:table-learner-variety-familiarity-conditional-effects}) and has been included in the revised manuscript.
+This issue was addressed above (See Figure \ref{fig:plot-learner-variety-familiarity} and Table \ref{tab:table-learner-variety-familiarity-conditional-effects}) and has been included in the revised manuscript and the supplementary materials.
 
 \Done
 \Easy
@@ -420,16 +441,13 @@ This issue was addressed above (See Figure \ref{fig:plot-learner-variety-familia
 
 \RC Could you check whether individuals with higher empathy were not the ones with higher proficiency? How did these two factors correlate?
 
-r\_eq\_lt\_bf
-r\_eq\_lt\_nf
-r\_eq\_lt\_yn
-r\_eq\_lt\_wh
+The relationship between empathy and proficiency is estimated in a number of ways.
+First, the effect of the interaction between the two predictors on response accuracy is estimated for each utterance type and are reported in the manuscript.
+Second, our model also estimated this correlation in the grouping effects and provided no compelling evidence that the two predictors are correlated (\(\beta\) = 0.056, HDI = {[}-0.403, 0.494{]}, ROPE = 0.326, MPE = 0.589).
+Specifically, we can see that the most plausible estimate is quite small, that the distribution of plausible values is quite wide, and that there is only approximately a 58\% chance the correlation is positive (it is almost equally likely to be negative).
+Thus, we feel confident that the participants with higher proficiency are not necessarily the same ones with higher empathy.
 
-r\_eq\_lt\_random\_post
-
-r\_eq\_lt\_post
-
-\WorkInProgress
+\Done
 \Easy
 
 \RC{In the discussion the authors highlight the fact that proficiency was treated as a continuous variable, and the reader would benefit from knowing whether this is actually an innovation of the present study or if, instead, other studies have done it before (now it seems that it is an innovation).}
@@ -557,7 +575,9 @@ MUST ADD TO DISCUSSION TOO. STILL IN PROGRESS
 \RC{p. 5, 23-29 - Also reference the discussion regarding the instruction of prosody in Durwing \& Monroe 2015
 }
 
-\WorkInProgress
+This reference has been included in the revised manuscript.
+
+\Done
 \Easy
 
 \RC{p. 6,paragraph beginning on line 47 - there should be some mention of Mennen’s LiLT (L2 intonational learning theory) model of L2 intonation and the recent work using this model
@@ -623,7 +643,10 @@ We now refer to absolute interrogatives as `yes/no questions'.
 \RC p.~26, lines 53-6 (on next page)- I'm not sure this makes sense'' In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.''
 Do they mean ``compared'' to low empathy learners (as opposed to ``particularly with regard to low empathy learners'')?
 
-\WorkInProgress
+We did indeed mean to say ``compared'' to lo empathy learners.
+This has been changed in the revised manuscript.
+
+\Done
 \Easy
 
 \RC p.~29, line 28 - ``This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.'' again, I don't see a reason to call this pragmatic skill. It's just empathy. better to say - ``That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.''
