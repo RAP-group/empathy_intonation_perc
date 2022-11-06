@@ -227,8 +227,7 @@ r_eq_lt_random_post <- learner_response_01 %>%
   as_tibble() %>% 
   mutate_if(is.numeric, specify_decimal, k = 3) %>% 
   transmute(Parameter, Median, HDI = glue("[{CI_low}, {CI_high}]"), 
-            `% in ROPE` = ROPE_Percentage, MPE = pd) %>% 
-  report_posterior(param = "Posterior")
+            `% in ROPE` = ROPE_Percentage, MPE = pd)
 
 # Get posterior of lextale x eq correlation
 r_eq_lt_post <- eq_lt_mod %>% 
