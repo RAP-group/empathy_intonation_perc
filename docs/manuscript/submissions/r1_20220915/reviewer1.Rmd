@@ -146,7 +146,7 @@ Importantly, *why* and *how* particular acoustic cues lead to distinct processin
 A priori, one would have reason to believe that the effects of empathy on processing intonation-meaning associations would be present across the board, i.e., for any utterance type. 
 In our data, we find that higher empathy is moderately associated with higher accuracy (holding proficiency constant) for all utterance types, with the exception of yes/no questions. 
 Importantly, this also happens to be the most difficult utterance condition in our data---and that of @bustin_2020---as well as the condition for which the listeners show the least sensitivity (See d' analysis in the supplementary materials). 
-At this juncture, our focus is on expanding this line of research in two ways: (1) to individuals with different linguistic experience (specifically, second language learners), and (2) to different communicative situations (utterance types). 
+At this juncture, our focus is on expanding this line of research in two ways: (1) to individuals with different linguistic experience (specifically, second language learners), and (2) to different communicative/pragmatic situations (utterance types). 
 We are not concerned (yet) with understanding *why* different pitch contours affect intonation perception, particularly with regard to the role of empathy, because there is inherent variability in how speakers realize their communicative intentions, at the variety-level and at the individual-level, within utterance types. 
 This variability is present in our stimuli. 
 We believe a fruitful avenue for future research is to explore *why* and *how* particular acoustic realizations of pitch within utterance types lead to distinct processing outcomes, though this is not the specific goal of this paper.
@@ -197,7 +197,7 @@ Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-lea
 
 \clearpage
 
-(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
+(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from `r familiarity$Mexico$n_v + familiarity$Spain$n_v` participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
 
 ```{r, 'plot-learner-variety-familiarity', fig.cap="(ref:plot-learner-variety-familiarity)", out.width="100%"}
 knitr::include_graphics(here("figs", "manuscript", "learner_variety_familiarity.pdf"))
@@ -211,9 +211,9 @@ read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>%
     Values represent posterior medians along with the 95% HDI for unfamiliar 
     and familiar conditions, along with the posterior difference 
     (familiar - unfamiliar). The posterior predictive distribution is based on 
-    data from participants who claimed to be familiar with Mexican 
-    (n =  {familiarity$Mexico$n_v}) and Peninsular 
-    (n = {familiarity$Spain$n_v}) Spanish."), 
+    data from {familiarity$Mexico$n_v + familiarity$Spain$n_v} participants 
+    who claimed to be familiar with Mexican (n =  {familiarity$Mexico$n_v}) 
+    and Peninsular (n = {familiarity$Spain$n_v}) Spanish."),
     label = "table-learner-variety-familiarity-conditional-effects")
 ```
 
@@ -239,7 +239,11 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/38
 -->
 
 We have included acoustic and phonological descriptions of the stimuli along with a complete list of items in the supplementary materials of the revised manuscript. 
-All items within an utterance type followed the same syntactic structure, as shown in Table \@ref(tab:item-ex-table). 
+All items within an utterance type followed the same syntactic structure, with the exception of the wh- questions, which require a wh- word. 
+In theory, the presence alone of the wh- word could sway the listener to believing they are hearing a question, however, these words are also present in statements. 
+The intonational contour is necessary for one to differentiate between the two. 
+Importantly, the participants were generally not accurate for either question type (approx. 63% for yes/no questions and approx. 72% wh- questions, marginalizing over proficiency and empathy). 
+We provide an example in Table \@ref(tab:item-ex-table). 
 
 \footnotesize
 ```{r}
@@ -302,7 +306,38 @@ This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-famili
 https://github.com/RAP-group/empathy_intonation_perc/issues/41
 -->
 
-\WorkInProgress
+In the revised manuscript we have focused our discussion on what we believe to be the most relevant studies with regard to sentence comprehension and empathy. 
+We have also expanded our discussion concerning why we don't find an effect for empathy with regard to yes/no questions. 
+Of particular interest to the reviewer are pages 31-33.
+For convenience, we include relevant excerpts below. 
+
+> In line with previous studies [e.g., @bustin_2020], we found that yes/no questions were most difficult for L2 learners of Spanish, followed by wh- questions and broad focus and narrow focus statements. 
+An exploratory analysis using d' found that learner sensitivity to the utterance types followed the same pattern. 
+While it is not clear exactly why yes/no question are the most difficult, one possibility is that wh- questions pose less of a challenge because they contain a wh- word (e.g., *cuándo*, *cómo*, etc.). 
+In other words, it might be the presence of a lexical cue in our task [and that of @bustin_2020] that facilitates the interpretation of a wh- question in addition to intonation. 
+At this juncture this possibility cannot be discarded, though it is worth noting that the presence of these words alone does not imply a question. 
+That is to say, in specific contexts these same words appear in statements as well, e.g., *Que bebe María*, *Que beba María*, etc. 
+A specific intonation contour is obligatory to force a question interpretation. 
+Moreover, apart from the propositional content, a wh- question also implies a presupposition, and, thus, is more pragmatically complex. 
+On the other hand, the yes/no questions in our experimental task have the same syntactic structure as the declarative statements. 
+Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task.
+
+As well as...
+
+> Additionally, our study addressed the question *Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?* 
+This question was motivated by a line of research showing that empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual].
+Though the construct *empathy* has been considered in the SLA literature, the current body of research is limited to studies on pronunciation accuracy [i.e., @guiora1972empathy; @rota2009cognitive, among others]. 
+Thus, we extend research on empathy to L2 phonological acquisition as it relates to speech perception. 
+Using a cross-sectional design, we show (1) that empathy, as measured by the empathy quotient [@baron2004empathy], did indeed modulate response accuracy and the decision-making process, and (2) *how* empathy affected sentence processing was related to L2 proficiency. 
+Specifically, we found response accuracy increased as a function of proficiency, independent of empathy for yes/no questions, but not wh- questions. 
+In the case of the latter, we found empathy to have a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 
+This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody. 
+That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals. 
+That being said, we do not find the same effect with yes/no questions. 
+This finding is quite puzzling, particularly because previous research on sentence processing has found an effect for empathy in yes/no questions, e.g., in Salerno Italian [@orrico2020individual]. 
+At this time, we are uncertain as to why our results differ in this regard, though the nature of the outcome variable measured in the task used in @orrico2020individual (certainty scores bounded at 0 and 100) may have provided a more fine-grained window into the effect of empathy. 
+
+\Done
 \Easy
 
 

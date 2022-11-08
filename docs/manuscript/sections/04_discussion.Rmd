@@ -47,6 +47,14 @@ In contrast with previous studies, our analyses conceptualized proficiency as a 
 This operationalization will benefit future research interested in quantifying the effect of proficiency on perceptual development by allowing for more transparent designs with regard to statistical power and sample sizes. 
 In line with previous studies [e.g., @bustin_2020], we found that yes/no questions were most difficult for L2 learners of Spanish, followed by wh- questions and broad focus and narrow focus statements. 
 An exploratory analysis using d' found that learner sensitivity to the utterance types followed the same pattern. 
+While it is not clear exactly why yes/no question are the most difficult, one possibility is that wh- questions pose less of a challenge because they contain a wh- word (e.g., *cuándo*, *cómo*, etc.). 
+In other words, it might be the presence of a lexical cue in our task [and that of @bustin_2020] that facilitates the interpretation of a wh- question in addition to intonation. 
+At this juncture this possibility cannot be discarded, though it is worth noting that the presence of these words alone does not imply a question. 
+That is to say, in specific contexts these same words appear in statements as well, e.g., *Que bebe María*, *Que beba María*, etc. 
+A specific intonation contour is obligatory to force a question interpretation. 
+Moreover, apart from the propositional content, a wh- question also implies a presupposition, and, thus, is more pragmatically complex. 
+On the other hand, the yes/no questions in our experimental task have the same syntactic structure as the declarative statements. 
+Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task.
 
 Additionally, our study addressed the question *Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?* 
 This question was motivated by a line of research showing that empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual].
@@ -54,9 +62,12 @@ Though the construct *empathy* has been considered in the SLA literature, the cu
 Thus, we extend research on empathy to L2 phonological acquisition as it relates to speech perception. 
 Using a cross-sectional design, we show (1) that empathy, as measured by the empathy quotient [@baron2004empathy], did indeed modulate response accuracy and the decision-making process, and (2) *how* empathy affected sentence processing was related to L2 proficiency. 
 Specifically, we found response accuracy increased as a function of proficiency, independent of empathy for yes/no questions, but not wh- questions. 
-In the case of the latter, empathy had a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 
+In the case of the latter, we found empathy to have a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 
 This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody. 
 That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals. 
+That being said, we do not find the same effect with yes/no questions. 
+This finding is quite puzzling, particularly because previous research on sentence processing has found an effect for empathy in yes/no questions, e.g., in Salerno Italian [@orrico2020individual]. 
+At this time, we are uncertain as to why our results differ in this regard, though the nature of the outcome variable measured in the task used in @orrico2020individual (certainty scores bounded at 0 and 100) may have provided a more fine-grained window into the effect of empathy. 
 
 In addition to addressing response accuracy, we also show that for high proficiency, high empathy learners (1) more information was necessary to reach a decision and (2) responses came at a slower rate when compared with low empathy learners at any proficiency level. <!-- this sentence was a little hard to parse for me, we might consider changing the (1) to "firstly" and (2) to "secondly" or something similar -->
 This interaction effect on sentence processing was found for both types of interrogative utterances. 
@@ -84,7 +95,7 @@ Thus, familiarity with the target variety may account for variety-specific respo
 
 ADD INFO ABOUT NON PREREGIDTERED ANALYSIS
 
-(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
+(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from `r familiarity$Mexico$n_v + familiarity$Spain$n_v` participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
 
 ```{r, 'plot-learner-variety-familiarity', fig.cap="(ref:plot-learner-variety-familiarity)"}
 knitr::include_graphics(
