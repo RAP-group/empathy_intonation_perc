@@ -389,6 +389,59 @@ The description regarding how the variable is coded is included (a) for the sake
 https://github.com/RAP-group/empathy_intonation_perc/issues/44
 -->
 
-\WorkInProgress
+We thank the reviewer for this comment. 
+Respectfully, we believe the reviewer may has missinterpreted our intentions in this section of the discussion. 
+We are not providing hypotheses with the intention of testing them, but rather we are proving plausible explanations for what we have found in our study. 
+Our pre-registered hypotheses are explained in the introduction and revisited in light of the results in the discussion. 
+Having said that, we would like to address the three points made by the reviewer. 
+The reviewer states: 
+
+\textbf{"First, they state that “familiarity with the target variety may account for variety-specific response accuracy”, although this cannot be derived from the results you obtained since most of your listeners were most familiar with US Spanish (which was not in the stimuli)."}
+
+We agree with the reviewer that we cannot determine this with the data we have collected. 
+We did not anticipate that our learners would identify U.S. Spanish as the variety they were most familiar with as frequently as they did. 
+Nonetheless, we did include a familiarity analysis based on a subset of the data (See explanation above, as well as Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)). 
+This information has been included in the discussion of the revised manuscript and additional details are available in the supplementary materials. 
+
+\textbf{"Second, they state that they may derive from the fact that distinct varieties produce each sentence type using distinct intonational patterns, although it is impossible to evaluate if this hypothesis is plausible because details on the intonational features of the stimuli are missing and because results are never matched to the nature of the contour that was perceived."}
+
+Again, we would like to stress that this is not a hypothesis we intend to test in our project. 
+We are primarily focused on how pragmatic meaning is inferred with regard to proficiency and empathy. 
+We put forth the aforementioned explanation for this very reason. 
+Future research should control the pitch contours of the utterance types in order to say *why*/*how* certain contours may (or may not) be more difficult than others. 
+Nonetheless, we have included extensive acoustic detail regarding our stimuli, which are freely available for future researchers to use. 
+
+\textbf{"Finally, the authors propose an explanation linked to the distinct speech rate used in distinct varieties. The authors should provide a detailed description of the speech rate of the stimuli, by variety, in order for the reader to be able to evaluate if this explanation is indeed plausible."}
+
+We agree with the reviewer that more information regarding the speech rate of each variety should have been included. 
+The revised manuscript includes more detail, particularly Table \@ref(tab:table-stimuli-sr) and Figure \@ref(fig:plot-sm-random-speech-rate), which we also include here for convenience. 
+
+```{r}
+#| label: speech-rate-table
+mono_speech_rates_avg %>% 
+  mutate(`Syllable duration` = round(`Avg. syllable duration` * 1000), 
+    Variety = case_when(
+      Variety == "Penninsular" ~ "Madrileño", 
+      Variety == "Puertorican" ~ "Puerto Rican", 
+      TRUE ~ .$Variety), 
+    across(c("Articulation rate", "Speech rate"), specify_decimal, k = 2)) %>% 
+  select(Variety, `Articulation rate`, `Syllable duration`, `Speech rate`) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+  caption = "Average articulation rate (number of syllables divided by total 
+  phonation time), syllable duration (in milliseconds), and speech rate (number 
+  of syllables divided by total time) for each variety of the acoustic stimuli 
+  presented to listeners.",
+    label = "table-stimuli-sr")
+```
+
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians along with 66% and 95% HDI.
+
+```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)", out.width="100%"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_speech_rate.pdf")
+  )
+```
+
+\Done
 \Easy
 
