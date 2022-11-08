@@ -68,7 +68,7 @@ The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy
 We planned to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
 Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).
 Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
-Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect. 
+Our hypothesis related to empathy as a possible mediator of intonation processing is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect.
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
 We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of languages other than English and Spanish. 

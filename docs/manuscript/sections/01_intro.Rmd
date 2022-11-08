@@ -1,7 +1,7 @@
 A fundamental difficulty of speech comprehension is that listeners can come to understand different messages when presented with the same linguistic information [@cain2004individual]. 
 This can be especially problematic when one begins the endeavor of learning a new language. 
 In particular, it is common for second language (L2) learners to struggle with intonation---i.e., the melodic contour of an utterance---in the target language [@trofimovich2006learning]. 
-The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information, e.g., utterance type or syntactic constituency, but also pragmatic information, e.g., polite discourse [@astruc2016cost], bias, or presupposition [@henriksen2016intonational]. 
+The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information, e.g., utterance type or syntactic constituency, but also pragmatic information, e.g., information structure [@erteschik2007information; @casielles2004syntax], speaker belief states [@pierrehumbert1990meaning], polite discourse [@astruc2016cost], bias, or presupposition [@henriksen2016intonational]. 
 The present study investigated how the perception of intonation during sentence processing develops in adult L2 learners. 
 
 Recent research on monolingual populations suggests that individual differences in pragmatic skills, such as empathy, may play a role in meaning disambiguation [@bishop2016individual; @esteve2016role; @esteve2020empathy; @orrico2020individual]. 
@@ -23,6 +23,7 @@ As a consequence, L2 intonation is often produced in a non-target-like fashion d
 Intonation has a semantic function and through adequate cognitive decoding of the signal a listener can interpret the intended meaning of a given utterance. 
 For example, an intonational contour can indicate to a listener whether the utterance of an interlocutor is a question or a statement. 
 As touched upon above, a speaker can use prosody to signal numerous additional pragmatic functions as well. 
+For example, an information-seeking yes-no question can be contrasted with an echo yes-no question in Chilean Spanish by using L+H\* HH\% or L\* HH\% nuclear contour, respectively.
 This rich variation in pragmatic uses makes the interpretation and decoding of intonational contours during speech comprehension a non-trivial task for the language learner. 
 Moreover, the use of first language (L1) prosodic features when speaking the target language can result in misunderstandings because the same prosodic features can convey different linguistic and paralinguistic meaning in the target language [@cruz1987; @pickering2001role; @chen2005universal; @mennen2008phonological]. 
 As noted by @levis2016accent, prosody is also "[...] critical for L2 pronunciation because it plays a major role in cementing social bonds as a key marker of social identity" (p. 154). 
@@ -52,10 +53,13 @@ Spanish is extensively spoken across the world, with relatively small geolectal 
 That being said, phonetic variation is abundant. 
 For instance, the pitch accent of the same utterance type---e.g., a broad focus statement---may be realized differently with regard to pitch movement and/or syllable duration depending on the variety.
 Intonational strategies can be different altogether. 
-Consider absolute interrogatives (henceforth 'yes/no questions') in Caribbean and Argentine Spanish, which are produced with a nuclear hat pattern in the former and a final falling F0 contour in the latter, both of which differ from the more common final rise found in many other varieties [See @hualde2015intonational].
+Consider information-seeking yes/no questions, which, in some varieties like Puerto Rican, Dominican, and Argentine Spanish, can be produced with a falling F0 contour. 
+These examples illustrate between-variety variability because they can differ from the more common final rise found in many other varieties of Spanish [see @hualde2015intonational].
 
 Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using pre-, post-test designs [See @craft2015acquisition; @henriksen2010development; @thornberry2014l2; @trimble2013acquiring, among others]. 
 Though the degree of improvement is variable based on a myriad of factors---such as context formality [@trimble2013acquiring], use of Spanish [@henriksen2010development; @trimble2013acquiring], social integration [@trimble2013acquiring], or the development of meaningful social relationships with native speakers [@thornberry2014l2]---this line of research suggests that learners gradually acquire target-like intonation as they gain experience in the L2. 
+
+
 There is a paucity of research on the perception of Spanish intonation, but limited studies corroborate the general finding in speech production that mastery is indeed possible for adult learners [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
 For instance, @trimble2013perceiving examined the perception of intonational cues in statements and yes/no questions in L1 English L2 Spanish adult learners that had studied abroad in Venezuela, Spain, or not at all. 
 Using a gating task, @trimble2013perceiving found that intonational cues that were absent from participants' L1 were difficult to perceive, though learners were more accurate with statements than questions, and that familiarity with the target variety improved accuracy. 
