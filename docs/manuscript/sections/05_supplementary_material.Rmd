@@ -385,15 +385,22 @@ knitr::include_graphics(
 
 *Acoustic description*. In this subsection we provide examples of intonation contours for the four utterance types (broad focus state, narrow focus statement, wh- question, yes/no question) from the speakers of our eight varieties of Spanish (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
 Using the recordings, we generated figures that display the waveform, spectrogram, and fundamental frequency contours. 
-The figure are accompanied with two annotation tiers: the orthographic tier and the tone tier. 
+The figures are accompanied with two annotation tiers: an orthographic tier and a tone tier. 
 We use this information together to identify associations between tonal targets and specific structure within example utterances following the Autosegmental Metrical model [@pierrehumbert1980phonology]. 
 We follow the conventions of the Spanish Tones and Break Indices (Sp_ToBI) and its revisions [@beckman2002intonation; @sosa2003notacion; @face2007rising; @vilaplana2008notacion]. 
+Our description is not meant to be exhaustive, but rather to give the interested reader an idea of how some of the contours included in our stimuli looked. 
+Here we provide a single example of each utterance type from each speaker (Figures \@ref(fig:plot-spectrogram-castilian)-\@ref(fig:plot-spectrogram-puertorican)), though we encourage the interested reader to take a look/listen to all items, which are freely available on the OSF in the `data/stimuli` directory. 
 
+The statement utterances from our speaker of Madrid Spanish included a nuclear configuration of L\* L\%. 
+The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-castilian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
+Wh- and yes/no question had a similar prenuclear distinction, respectively. 
+Our speaker also tended to use a final rise (L\* HH\%) in wh- questions, which differs from the more common final fall. 
+This is often associated with politeness [@quilis1993; @sosa2003], or possibly "[...] a nuance of interest and greater speaker involvement in the speech act" [@estebas_prieto2010, p. 35]. 
+We believe we may have obtained more formal utterances, or possibly 'lab' speech due to the context in which the stimuli were recorded, i.e., in a lab.^[For more information on lab speech, see @face2003intonation and @xu2010defense.]
+For more examples, see <http://prosodia.upf.edu/atlasentonacion/enquestes/espanol/madrid/index-english.html#maptask> ("¿Dónde está tu gasolina?", minute: -3:18). 
+For more description of Madrileño Spanish see also @quilis1981, @quilis1987, and @sosa1999.
 
-
-Spectrograms \@ref(fig:plot-spectrogram-castilian)-\@ref(fig:plot-spectrogram-puertorican)
-
-(ref:plot-spectrogram-castilian) Stuff they made me do.
+(ref:plot-spectrogram-castilian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 29 year old female speaker of Madrileño Spanish.
 
 ```{r, 'plot-spectrogram-castilian', fig.cap="(ref:plot-spectrogram-castilian)"}
 knitr::include_graphics(
@@ -401,8 +408,15 @@ knitr::include_graphics(
   )
 ```
 
+Figure \@ref(fig:plot-spectrogram-andalusian) plots the four utterance types as spoken by the Andalusian speaker. 
+Similar to speaker of Madrileño Spanish, we do not see a major distinction between declaratives in nuclear position (H+L\* L\%). 
+We found a tendency for this speaker to a use statement-of-the-obvious pattern where we elicited narrow focus. 
+We show the nuclear configuration for wh- questions as L+¡H\* L\%, but this speaker also used L+H\* L\%. 
+A final rise for wh- questions is also documented in this variety [@henriksen2010development] and is associated with formality. 
+For yes-no questions, the boundary tone was typlically HH\%. 
+More information on Western Andalusian intonation is available @sosa1999 and @henriksen2012transcription. 
 
-(ref:plot-spectrogram-andalusian) Stuff they made me do.
+(ref:plot-spectrogram-andalusian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Andalusian (San Fernando, Cádiz) Spanish.
 
 ```{r, 'plot-spectrogram-andalusian', fig.cap="(ref:plot-spectrogram-andalusian)"}
 knitr::include_graphics(
@@ -410,8 +424,12 @@ knitr::include_graphics(
   )
 ```
 
+The Argentine speaker (Figure \@ref(fig:plot-spectrogram-argentine)) generally produced declaratives with L\* L\% nuclear configurations. 
+Notably absent from the narrow focus stimuli is the tritonal accent, L+H\*+L [See @sosa1999; @labastia2006prosodic, among others]. 
+For wh- and yes/no questions, we see L\% and HL\% nuclear boundary tones, respectively. 
+For more information on Argentine intonation we recommend @colantoni2004convergence,  @colantoni2011broad, and @labastia2011procedural. 
 
-(ref:plot-spectrogram-argentine) Stuff they made me do.
+(ref:plot-spectrogram-argentine) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 27 year old male speaker of Argentine (Buenos Aires) Spanish.
 
 ```{r, 'plot-spectrogram-argentine', fig.cap="(ref:plot-spectrogram-argentine)"}
 knitr::include_graphics(
@@ -420,7 +438,12 @@ knitr::include_graphics(
 ```
 
 
-(ref:plot-spectrogram-chilean) Stuff they made me do.
+Figure \@ref(fig:plot-spectrogram-chilean) illustrates example utterances from the Chilean speaker. 
+We found that broad and narrow focus statements differed in their nuclear configuration (H+L\* L\% vs. L+H\* L\%, respectively). 
+We also noted that wh- and yes/no questions differed in the nuclear pitch accents (L\* vs. H+L\*, respectively). 
+For more information on Chilean intonation, we refer the reader to @lira2000prosodia and @ortiz2003acentos. 
+
+(ref:plot-spectrogram-chilean) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 42 year old female speaker of Chilean (Valparaíso) Spanish.
 
 ```{r, 'plot-spectrogram-chilean', fig.cap="(ref:plot-spectrogram-chilean)"}
 knitr::include_graphics(
@@ -428,8 +451,14 @@ knitr::include_graphics(
   )
 ```
 
+In Figure \@ref(fig:plot-spectrogram-cuban) we see example utterances from the Cuban speaker. 
+We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and L+>H\*, respectively). 
+Both questions showed followed falling patterns in nuclear position. 
+For example, we found L\* L\% in wh- questions and L+H\* L\% in yes/no questions. 
+In prenuclear position, our speaker also used L+>H\* in yes/no questions. 
+For more information, the interested reader can consult @sosa1999, or @alvord2006spanish for an account of Cuban Spanish in contact with English in Miami, Florida. 
 
-(ref:plot-spectrogram-cuban) Stuff they made me do.
+(ref:plot-spectrogram-cuban) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 55 year old female speaker of Cuban (Havana) Spanish.
 
 ```{r, 'plot-spectrogram-cuban', fig.cap="(ref:plot-spectrogram-cuban)"}
 knitr::include_graphics(
@@ -438,7 +467,13 @@ knitr::include_graphics(
 ```
 
 
-(ref:plot-spectrogram-mexican) Stuff they made me do.
+The Mexican speaker distinguished between broad and narrow focus using a L\* L\% pattern in the former and L+H\* H\% in the latter. 
+For wh- questions in this variety, final falls are considered the unmarked configuration [@sosa2003], though we observed some rises, as in Figure \@ref(fig:plot-spectrogram-mexican) (bottom left plot). 
+For yes/no questions this speaker produced a L\* HH\% nuclear configuration. 
+Mexican Spanish is well-documented. 
+We refer the reader to @quilis1981, @quilis1987, @quilis1993, @sosa1999, @butragueno2003hacia, and @butragueno2004configuraciones for more information.
+
+(ref:plot-spectrogram-mexican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old female speaker of Mexican (Mexico City) Spanish.
 
 ```{r, 'plot-spectrogram-mexican', fig.cap="(ref:plot-spectrogram-mexican)"}
 knitr::include_graphics(
@@ -447,7 +482,12 @@ knitr::include_graphics(
 ```
 
 
-(ref:plot-spectrogram-peruvian) Stuff they made me do.
+The statement utterances from our speaker of Peruvian Spanish included a nuclear configuration of L\* L\%. 
+The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-peruvian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
+With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* HH\% for yes-no questions. 
+More information on Peruvian intonation is available in @sosa1999 and @orourke2005intonation. 
+
+(ref:plot-spectrogram-peruvian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old male speaker of Peruvian (Lima) Spanish.
 
 ```{r, 'plot-spectrogram-peruvian', fig.cap="(ref:plot-spectrogram-peruvian)"}
 knitr::include_graphics(
@@ -455,8 +495,13 @@ knitr::include_graphics(
   )
 ```
 
+In Figure \@ref(fig:plot-spectrogram-puertorican) we see example utterances from the Puerto Rican speaker. 
+We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and H\*, respectively). 
+On occasion this speaker produced final rises for wh- questions (L\* HH\%), but also often used a falling contour. 
+For yes/no questions, this speaker produced H+L\* L\% configurations. 
+More information on Puerto Rican intonation is available to the reader in @quilis1981, @quilis1987, @quilis1993, @sosa1999, @sosa2003, @armstrong2010puerto, and @armstrong2012development, among many others.
 
-(ref:plot-spectrogram-puertorican) Stuff they made me do.
+(ref:plot-spectrogram-puertorican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Puerto Rican (Ponce) Spanish.
 
 ```{r, 'plot-spectrogram-puertorican', fig.cap="(ref:plot-spectrogram-puertorican)"}
 knitr::include_graphics(
@@ -464,18 +509,14 @@ knitr::include_graphics(
   )
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-\@ref(fig:plot-stimuli-pitch-contours)
+In sum, we see that the acoustic stimuli used for the 2AFC task of the present project presents a large amount of between-variety and within-speaker variability. 
+Most notably, our declarative utterances are often difficult to distinguish and we do not often see the typical L+H\* L\%) nuclear configuration that most commonly seen in the extant literature. 
+We believe this is likely due to the fact that the manner in which we elicited narrow focus differs from other studies, which tend to use more specific pragmatic contexts (narrow focus correction, narrow focus contradiction), as opposed to a narrow focus utterance produced from answering an information seeking wh- question. 
+That is, it may be the case that the use of a different pragmatic context and lab speech may result in contours different from those attested in other studies. 
+This likely resulted in our narrow focus condition being easier than we initially intended. 
+Our method of eliciting narrow focus follows that of @bustin_2020, of which our study is a conceptual replication. 
+We do not have access to their auditory stimuli, thus we cannot confirm which pitch contours were most common in their narrow focus condition. 
+To illustrate the panhispanic and within-speaker variability of statements and questions, we plot the individual pitch contours from each utterance type by variety in Figure \@ref(fig:plot-stimuli-pitch-contours). 
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
