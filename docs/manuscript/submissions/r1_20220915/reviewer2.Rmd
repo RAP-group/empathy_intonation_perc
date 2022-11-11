@@ -402,10 +402,10 @@ The reviewer is referred to Figure \@ref(fig:plot-learner-variety-familiarity) a
 https://github.com/RAP-group/empathy_intonation_perc/issues/63
 -->
 
-Following the suggestion of all three reviewers, we have included information about the stimuli in the supplementary materials and incorporated relevant information where necessary throughout the revised manuscript (particularly in the method and discussion sections). 
+Following the suggestion of all three reviewers, we have included more information about the stimuli in the supplementary materials and incorporated relevant information where necessary throughout the revised manuscript (particularly in the method and discussion sections). 
 
 
-\WorkInProgress
+\Done
 \Easy
 
 

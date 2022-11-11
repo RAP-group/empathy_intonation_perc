@@ -101,12 +101,12 @@ We believe this makes our paper stronger and promoting open science only pushes 
 
 \RC{Firstly, eliciting real broad-focus sentences is not easy and not only because the tendency to the statement of the obvious, for example, your andalusian\_match\_declarative-broad-focus\_David-leia-el-libro has a slightly (but audible and present in the pitch contour) narrow-focus intonation (rising stressed syllable) and the only narrow-focus that I could find among all your stimuli. So, maybe we are calling narrow-focus to different things, let me know if we are.}
 
-Our elicitation of narrow focus is indeed slightly different from what is generally found in the literature and this is clear when comparing our narrow focus utterances with most of the documented tunes in the extant literature. 
-Most investigations do this XXX
-We did this XXX
-We have made sure to explain how we elicited the utterances from our speakers in the revised manuscript and provide additional detail in the supplementary materials. 
+Our elicitation of narrow focus is indeed slightly different from what is generally found in the extant literature and this is clear when comparing our narrow focus utterances with most of the documented tunes. 
+Most investigations elicit narrow focus using more specific pragmatic contexts (narrow focus correction, narrow focus contradiction), and not just narrow focus from answering an information seeking wh- question, which is what we did [following @bustin_2020, which we replicate]. 
+We believe that this difference, along with our stimuli being 'lab speech' likely account for the contours we observed. 
+We have made sure to (a) explain how we elicited the utterances from our speakers in the revised manuscript, (b) provide additional detail in the supplementary materials, and (c) make clear that our stimuli contains between-variety and within-speaker variability. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -117,59 +117,52 @@ We have made sure to explain how we elicited the utterances from our speakers in
 For the rest, most of your speakers have chosen rising patterns for their wh-questions but that is not the most frequent pattern.
 }
 
-\WorkInProgress
+We have also noticed the abundance of rising patterns in the wh- questions. 
+As you mention, in most, if not all Spanish varieties, interrogatives can have both final rises and final falls, with geolectal differences regarding how frequent they are and whether or not they are marked/unmarked pragmatically.
+We believe these may be indications of 'politeness' (Navarro Tomás 1944; Quilis 1993; Sosa 2003) or perhaps 'interest' [@estebas_prieto2010] or 'formality' [@henriksen2010development], likely due to our stimuli being 'lab' speech. 
+
+\Done
 \Easy
 
 
 
 
-\RC{As for focus, all your speakers should be doing a rising stressed syllable and falling ending (L+H\* L\%), that is pretty much panhispanic and crosslinguistically really frequent. But they are not, the case of the Peruvian speaker is salient because is using a monotonous tone, just the opposite of what she should be doing.}
+\RC{As for focus, all your speakers should be doing a rising stressed syllable and falling ending (L+H\* L\%), that is pretty much panhispanic and crosslinguistically really frequent. But they are not, the case of the Peruvian speaker is salient because is using a monotonous tone, just the opposite of what she should be doing.
 
-\WorkInProgress
-\Easy
+In the case of the Argentinian speaker if you look at the sentences side by side you will see that in the supposedly narrow sentence the peak is a bit earlier but it is still in the post-stressed syllable. We will expect here the Argentinian narrow-focus pattern, which is the most recognizable thing of their accent and the only case in which Spanish has a tritonal accent L+H\*+L (peak in the middle of the stressed syllable surrounded by low tones).
 
-
-
-
-\RC{In the case of the Argentinian speaker if you look at the sentences side by side you will see that in the supposedly narrow sentence the peak is a bit earlier but it is still in the post-stressed syllable. We will expect here the Argentinian narrow-focus pattern, which is the most recognizable thing of their accent and the only case in which Spanish has a tritonal accent L+H\*+L (peak in the middle of the stressed syllable surrounded by low tones).}
-
-\WorkInProgress
-\Easy
-
-
-
-
-\RC{And then your Andalusian speaker has been innovative and has chosen for most of the cases the statement of the obvious pattern (realised as L\*H\%) therefore using the y-n question pattern. The context that Prieto and Roseano (2010) have for that is:
+And then your Andalusian speaker has been innovative and has chosen for most of the cases the statement of the obvious pattern (realised as L\*H\%) therefore using the y-n question pattern. The context that Prieto and Roseano (2010) have for that is:
 A: ¿De quién es el hijo?
 B: ¡De quién va a ser! de Guillermo
-So for your data would be something like: A: María bebe el vino. (while she is thinking: obvio, ¿por qué me lo preguntas?)
+So for your data would be something like: A: María bebe el vino. (while she is thinking: obvio, ¿por qué me lo preguntas?
+
+In the rest of them I think that she is trying to put the focus on the verb, but the result is really strange. To do that, you would need something like “Mariano HAbla | del tiempo (and does not another thing)” and you will have a small pause with compressed post-focal material etc. What she does is just weird.
+
 }
 
-\WorkInProgress
+As mentioned above, we believe the narrow focus we elicited might not coincide with the most documented contours because they tend to use more specific pragmatic contexts (narrow focus correction, narrow focus contradiction), and not just narrow focus from answering an information seeking wh- question. 
+That is, it may be the case that the use of a different pragmatic context and lab speech may result in contours different from those attested in other studies. 
+Our Peruvian speaker (a male, and co-author of this paper) considers his productions to be an accurate portrayal of his variety, though we have not consulted with the speakers of the other varieties mentioned in the previous comment. 
+Be that as it may, a priori we expected learners to be less accurate and respond slower to the narrow focus condition (with regard to the broad focus condition) and this is precisely what we see in the data. 
+
+\Done
 \Easy
 
 
 
 
-\RC{In the rest of them I think that she is trying to put the focus on the verb, but the result is really strange. To do that, you would need something like “Mariano HAbla | del tiempo (and does not another thing)” and you will have a small pause with compressed post-focal material etc. What she does is just weird.}
+\RC{And lastly, yes-no questions, in general rising (here the Andalusian speaker is using the Madrid standard Spanish), but falling in Cuba, Puerto Rico, all the Caribbean, North of Spain, Canary Islands... The good thing is that the falling patterns that you have are not easily mistaken with a statement (for example questions of Medellín (Colombia) are) and the bad thing again is that you have more than one pattern.
 
-\WorkInProgress
-\Easy
+Ok, so the message after this is that the choice of a pattern by the speakers has made that some of the stimuli are more difficult that others and that maybe you could solve that by adding a new variable "pattern used", which for most of the cases will be the interaction between variety and utterance type but for those speakers that use different patterns it won't. In fact, if you redo the analysis in order to see the effect of the contour, I would use this variable instead of utterance type because most of the supposedly narrow-focus sentences are broad-focus and will share the L\*L\% contour. And again, I am not saying that you do that for the current paper, you can prepare a new experiment to focus on intonational patterns.}
 
+As we alluded to above, we believe that if the goal of this paper was to determine why/how certain contours were more or less difficult and how that relates to empathy, it would be necessary to have strict control over the contours associated with each utterance type. 
+In this case it would make perfect sense to include "pattern used" as a variable in our models. 
+Importantly, we do not intend to respond to that question at this time. 
+We believe that the patterns we have elicited are illustrate the variability present both between varieties and within speakers. 
+As we know, the lack of invariance is inherent to all aspects of speech. 
+At this stage in our project (in this article) we opted to focus on the learners' ability to extract pragmatic meaning in a general sense. 
 
-
-
-\RC{And lastly, yes-no questions, in general rising (here the Andalusian speaker is using the Madrid standard Spanish), but falling in Cuba, Puerto Rico, all the Caribbean, North of Spain, Canary Islands... The good thing is that the falling patterns that you have are not easily mistaken with a statement (for example questions of Medellín (Colombia) are) and the bad thing again is that you have more than one pattern.}
-
-\WorkInProgress
-\Easy
-
-
-
-
-\RC{Ok, so the message after this is that the choice of a pattern by the speakers has made that some of the stimuli are more difficult that others and that maybe you could solve that by adding a new variable "pattern used", which for most of the cases will be the interaction between variety and utterance type but for those speakers that use different patterns it won't. In fact, if you redo the analysis in order to see the effect of the contour, I would use this variable instead of utterance type because most of the supposedly narrow-focus sentences are broad-focus and will share the L\*L\% contour. And again, I am not saying that you do that for the current paper, you can prepare a new experiment to focus on intonational patterns.}
-
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -180,5 +173,8 @@ So for your data would be something like: A: María bebe el vino. (while she is 
 Congratulations on your work and I hope to see the reviewed version soon.
 }
 
-\WorkInProgress
+Once again, we thank the reviewer for the kind words and for taking the time to go above and beyond in their review of our materials. 
+Their comments have given us many ideas with regard to our next steps and future projects. 
+
+\Done
 \Easy

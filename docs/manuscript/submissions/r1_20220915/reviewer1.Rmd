@@ -97,7 +97,7 @@ This information is also included in the discussion section and the supplementar
 https://github.com/RAP-group/empathy_intonation_perc/issues/35
 -->
 
-At the recommendation of all three reviewers we have included more information about the stimuli used in our study (please see the introduction section and the supplementary materials, as it is too much information to include here). 
+At the recommendation of all three reviewers we have included more information about the stimuli used in our study (please see the introduction and methods sections as well as the supplementary materials, as it is too much information to include here). 
 The 4 sentence types, while not exhaustive, were selected for two reasons. 
 First, they are the most commonly analyzed utterances in the intonational phonology literature. 
 Thus, these tunes represent the intonational contours about which we know the most. 

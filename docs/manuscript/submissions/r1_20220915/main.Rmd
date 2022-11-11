@@ -24,15 +24,16 @@ library("papaja")
 source(here::here("scripts", "r", "13_small_data.R"))
 ```
 
-Dear XXX, 
+Dear Dr. Joan Mora, 
 
 
 Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
-Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication.
+Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication. 
+We noted three specific areas that were consistently highlighted by the reviewers as needing improvement: use of terminology, motivation of the construct empathy as it pertains to our research questions, and description of the auditory stimuli. 
 We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 
 In this letter we address the reviewers' concerns point-by-point. 
-Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant lines in the revised manuscript. 
-We thank you and the 3 anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
+Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript. 
+We thank you and the three anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
 
 
 Sincerely,  
@@ -65,61 +66,6 @@ Joseph Casillas
 #| child: "reviewer3.Rmd"
 #| eval: TRUE
 ```
-
-
-
-\newpage
-
-From @hualde2015intonational
-
-Andalusian
-  - @sosa1999
-  - @henriksen2012transcription
-
-Argentine
-  - @sosa1999
-  - @colantoni2004convergence
-  - @colantoni2011broad
-  - @labastia2006prosodic
-  - @labastia2011procedural
-
-Chilean
-  - @lira2000prosodia
-  - @ortiz2003acentos
-
-Cuban
-  - @sosa1999
-  - @alvord2006spanish
-
-Madrileño
-  - @quilis1981 
-  - @quilis1987 
-  - @quilis1993
-  - @sosa1999
-  - @estebas_prieto2010
-
-Mexican
-  - @quilis1981 
-  - @quilis1987 
-  - @quilis1993
-  - @sosa1999
-  - @sosa2003
-  - @butragueno2003hacia
-  - @butragueno2004configuraciones
-
-Peruvian
-  - @sosa1999
-  - @orourke2005intonation
-
-Puerto Rican
-  - @quilis1981 
-  - @quilis1987 
-  - @quilis1993
-  - @sosa1999
-  - @sosa2003
-  - @armstrong2010puerto
-  - @armstrong2012development
-
 
 \newpage
 
