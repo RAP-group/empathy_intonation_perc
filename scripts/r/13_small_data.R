@@ -98,6 +98,13 @@ wh_yn_diff <- transmute(lr01_post,
 
 # Speech rate info ------------------------------------------------------------
 
+# Grand mean 
+sr_grand_mean <- sr %>% 
+  summarize(avg = mean(articulation_rate)) %>% 
+  pull() %>% 
+  round(digits = 2)
+
+# Pivot to long form
 mono_speech_rates_df <- sr %>% 
   pivot_longer(cols = c("speech_rate", "articulation_rate", "avg_syll_dur"), 
   names_to = "metric", values_to = "val") 
@@ -148,7 +155,7 @@ familiarity_table <- familiarity_hold %>%
     spn_variety == "CostaRica" ~ "Costa Rica", 
     spn_variety == "PuertoRico" ~ "Puerto Rico", 
     spn_variety == "DominicanRepublic" ~ "Dominican Republic", 
-    spn_variety == "Spain" ~ "Penninsular", 
+    spn_variety == "Spain" ~ "Peninsular", 
     TRUE ~ .$spn_variety), 
     n = n_v, Proportion = perc)
 
