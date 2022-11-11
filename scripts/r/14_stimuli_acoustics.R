@@ -111,15 +111,14 @@ stimuli_pitch_contours <- stim_data %>%
   scale_x_continuous(labels = scales::label_percent(scale = 1)) + 
   coord_cartesian(xlim = c(0, 100)) + 
   labs(y = NULL, x = NULL) + 
-  ds4ling::ds4ling_bw_theme(base_size = 8, base_family = "Times") + 
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
   theme(strip.background = element_rect(fill = NA), 
-        axis.text.x = element_text(size = rel(0.75)), 
-        axis.text.y = element_text(size = rel(0.75)))
+        axis.text.x = element_text(size = rel(0.75)))
 
 walk(c('png', 'pdf'), ~ ggsave(
   filename = glue(file.path(here("figs", "manuscript")), "/stimuli_pitch_contours.", .x), 
   plot = stimuli_pitch_contours, 
-  device = .x, height = 6, width = 5, units = "in"))
+  device = .x, height = 7.5, width = 6.5, units = "in"))
 
 # -----------------------------------------------------------------------------
 
@@ -142,8 +141,7 @@ utterances <- c(
   "_match_declarative-broad-focus_Ana-lleva-el-abrigo",
   "_match_declarative-narrow-focus_Ana-lleva-el-abrigo",
   "_match_interrogative-partial-wh_Cuando-lleva-el-abrigo",
-  "_match_interrogative-total-yn_Ana-lleva-el-abrigo",
-  "_match_interrogative-total-yn_Mariano-habla-del-tiempo"
+  "_match_interrogative-total-yn_Ana-lleva-el-abrigo"
   )
 
 # Generate vector of items
@@ -161,12 +159,11 @@ cap_hold <- c(
   "\\ -\\ Broad\\ focus", 
   "\\ -\\ Narrow\\ focus", 
   "\\ -\\ Wh-\\ question", 
-  "\\ -\\ yes/no\\ question", 
-  "\\ -\\ yes/no\\ question"
+  "\\ -\\ yes/no\\ question" 
 )
 
 variety_caps <- c("Andalusian", "Argentine", "Madrileño", "Chilean", 
-                  "Cuban", "Mexican", "Puerto\\ Rican")
+  "Cuban", "Mexican", "Peruvian", "Puerto\\ Rican")
 
 make_vec_of_caps <- function(variety) {
   out <- as.character(glue("{variety}{cap_hold}"))
@@ -175,8 +172,28 @@ make_vec_of_caps <- function(variety) {
 
 caps <- map(variety_caps, make_vec_of_caps) %>% unlist
 
-f0_mins <- c(rep(75, 5), rep(50, 5), rep(75, 20), rep(50, 5), rep(75, 5))
-f0_maxs <- c(rep(500, 5), rep(350, 5), rep(500, 20), rep(350, 5), rep(500, 5))
+f0_mins <- c(
+  100, 100, 50, 75,   # andalusian
+  50, 50, 50, 50,     # argentine  
+  10, 100, 50, 30,    # castilian
+  70, 70, 70, 70,     # chilean
+  100, 100, 100, 100, # cuban
+  25, 75, 50, 50,     # mexican
+  25, 25, 50, 75,     # peruvian
+  100, 100, 50, 50    # puerto rican
+  )
+f0_maxs <- c(
+  500, 300, 350, 500, # andalusian
+  200, 200, 200, 200, # argentine 
+  350, 350, 400, 450, # castilian
+  250, 250, 350, 350, # chilean
+  250, 250, 350, 350, # cuban
+  400, 300, 550, 550, # mexican
+  200, 200, 200, 350, # peruvian
+  275, 275, 400, 400  # peurto rican
+  )
+
+hz_maxs <- c(rep(5000, 28), rep(4000, 4))
 
 for (i in 1:length(wavs)) {
   speakr::praat_run(
@@ -187,12 +204,12 @@ for (i in 1:length(wavs)) {
     tg = tgds[i], 
     start = 0, 
     end = 0, 
-    width = 7, 
+    width = 6, 
     format = "png", 
     pitch = TRUE, 
     pitch_min = f0_mins[i], 
     pitch_max = f0_maxs[i], 
-    hz_max = 5500
+    hz_max = hz_maxs[i]
   )
 }
 
