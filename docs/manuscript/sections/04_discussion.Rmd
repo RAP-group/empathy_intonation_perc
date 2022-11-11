@@ -69,7 +69,7 @@ That being said, we do not find the same effect with yes/no questions.
 This finding is quite puzzling, particularly because previous research on sentence processing has found an effect for empathy in yes/no questions, e.g., in Salerno Italian [@orrico2020individual]. 
 At this time, we are uncertain as to why our results differ in this regard, though the nature of the outcome variable measured in the task used in @orrico2020individual (certainty scores bounded at 0 and 100) may have provided a more fine-grained window into the effect of empathy. 
 
-In addition to addressing response accuracy, we also show that for high proficiency, high empathy learners (1) more information was necessary to reach a decision and (2) responses came at a slower rate when compared with low empathy learners at any proficiency level. <!-- this sentence was a little hard to parse for me, we might consider changing the (1) to "firstly" and (2) to "secondly" or something similar -->
+In addition to addressing response accuracy, we also show that for high proficiency, high empathy learners (1) more information was necessary to reach a decision and (2) responses came at a slower rate when compared with low empathy learners at any proficiency level. 
 This interaction effect on sentence processing was found for both types of interrogative utterances. 
 Previous research on monolingual populations has shown that higher empathy individuals are more sensitive to intonation cues in the process of forming sound-meaning associations than lower empathy individuals. 
 Our findings support the notion that this is also true for adult L2 learners, though we show that increased sensitivity does not necessarily imply increased processing speed. 
@@ -91,9 +91,11 @@ One possibility put forward in the literature is that the variety matters insomu
 In other words, learners may be more accurate and process speech faster when listening to a variety they know well. 
 Our study took into consideration familiarity, though the variety that was cited as being the most familiar, U.S. Spanish (`r familiarity$UnitedStates$perc`% of `r n_learners` responses), was not one of the varieties presented in the stimuli.^[While participants mentioned familiarity with U.S. Spanish, it should be noted that this variety is not a monolith, but rather carries traits of the original Spanish variety (e.g., Mexican, Puerto Rican) that is in contact with English.]
 Mexican (`r familiarity$Mexico$perc`%) and Peninsular-Madrileño (`r familiarity$Spain$perc`%) Spanish were reported as being the second and third most familiar varieties, and no participants indicated Cuban Spanish as being the variety they were most familiar with. 
-Thus, familiarity with the target variety may account for variety-specific response accuracy; however, our data cannot speak to this possibility and this question is left for future research. 
-
-ADD INFO ABOUT NON PREREGIDTERED ANALYSIS
+To explore the effect of familiarity further, we conducted a non-preregistered analyses of the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties: Peninsular and Mexican Spanish.^[We make the assumption that 'Peninsular' is most closely associated with the Madrileño speaker.]
+We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data (See online supplementary materials for details). 
+In short, we find that, marginalizing over proficiency and empathy, participants were indeed more accurate when responding to a familiar variety. 
+This is true for all utterance types to a certain extent, but is more clearly the case for questions, likely because responses to declarative utterances were near ceiling. 
+Figure \@ref(fig:plot-learner-variety-familiarity) plots the familiarity effect for this subset of the data. 
 
 (ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from `r familiarity$Mexico$n_v + familiarity$Spain$n_v` participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
 
@@ -105,7 +107,7 @@ knitr::include_graphics(
 
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
 Yes/no questions in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
-Caribbean Spanish, on the other hand, has a distinctive nuclear hat pattern [See @hualde2015intonational].
+Cuban and Puerto Rican Spanish, on the other hand, typically have a final fall [See @alvord2006spanish; @armstrong2012development; @hualde2015intonational; @armstrong2010puerto; @sosa1999, among others].
 Our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
 
 A final possibility is that speech rate differences associated with the speakers of the stimuli we used may have resulted in some varieties being more or less difficult for the learners [See @baese2019perceptual]. 
