@@ -65,7 +65,7 @@ We see this as the next step in our research on empathy.
 
 \RC{First, silly question, why do the listeners need intonation in wh- questions? They have the marker "qué, quién, cómo"... That is all they need, so I don't understand why this type of question is included in the study.}
 
-In theory this is true, though these same lexical items can also be present in statements (or parts of statements), e.g., "Cuando empieza el partido...", "Cuando empiece el partido...", "¿Cuándo empieza el partido?". 
+In theory this is true, though these same lexical items can also be present in statements (or parts of statements), e.g., "Cuando empieza el partido...", "Cuando empiece el partido..." vs. "¿Cuándo empieza el partido?". 
 Initially, we had the same concern with the stimuli, which are the exact stimuli used in @bustin_2020. 
 In other words, we feared that the task would be too easy for learners. 
 However, the results from our study, as well as those of @bustin_2020, in both accuracy and reaction time, make it clear that, regardless of the presence of the wh- word, the task is still difficult for learners. 
@@ -79,6 +79,7 @@ However, the results from our study, as well as those of @bustin_2020, in both a
 \RC{I know that the stimuli are in the supplementary materials, but I miss something in the text either an example (or two of them) or making explicit of the type of stress that you have included and why. The reason is that a lot of foreign speakers (that is the case for example for Dutch, Japanese and Chinese if I remember it correctly) find more difficult to distinguish between statements and questions when the last word of the sentence is stressed in the last syllable (aguda). And that has two main reasons, 1) compression and truncation of the tonal movements and 2) (and of special importance given the varieties included among your stimuli) most of Mexican, Peninsular Spanish, Chilean, Peruvian statements can be slightly rising. In pragmatic descriptions such as Prieto \& Roseano (2010) that final contour is characterised as "statement of the obvious" but, in fact, that is the pattern that we find most of the times that we elicit statements that have the slightest hint of common ground information, for example, in narratives. Moreover, in some varieties of Mexico and Chile, slightly rising (L* !H\%) is the standard neutral pattern. This has a direct implication in the perception of questions by native speakers that counterintuitively, need a higher F0 rise in order to say that something is a question than foreigners that speak usually speak languages where there are not rising statements (I would give you references but they are mine, so maybe when the paper is published, we can talk in a congress). Maybe you don't find that because English-speaking speakers are used to uptalk?}
 
 These are great insights. 
+Extremely informative. 
 We agree that a few clear examples are necessary. 
 We have provided this information in the method section of the revised manuscript. 
 
@@ -105,6 +106,7 @@ Our elicitation of narrow focus is indeed slightly different from what is genera
 Most investigations elicit narrow focus using more specific pragmatic contexts (narrow focus correction, narrow focus contradiction), and not just narrow focus from answering an information seeking wh- question, which is what we did [following @bustin_2020, which we replicate]. 
 We believe that this difference, along with our stimuli being 'lab speech' likely account for the contours we observed. 
 We have made sure to (a) explain how we elicited the utterances from our speakers in the revised manuscript, (b) provide additional detail in the supplementary materials, and (c) make clear that our stimuli contains between-variety and within-speaker variability. 
+Moving forward, we think it would be a good idea to elicit narrow focus using more contexts in order to see what effect this might have on the difficulty of the task.
 
 \Done
 \Easy
@@ -158,10 +160,10 @@ Ok, so the message after this is that the choice of a pattern by the speakers ha
 As we alluded to above, we believe that if the goal of this paper was to determine why/how certain contours were more or less difficult and how that relates to empathy, it would be necessary to have strict control over the contours associated with each utterance type. 
 In this case it would make perfect sense to include "pattern used" as a variable in our models. 
 Importantly, we do not intend to respond to that question at this time. 
-We believe that the patterns we have elicited are illustrate the variability present both between varieties and within speakers. 
+We believe that the patterns we have elicited illustrate the variability present both between varieties and within speakers, and, indeed, some patterns are likely more difficult than others. 
 As we know, the lack of invariance is inherent to all aspects of speech. 
-At this stage in our project (in this article) we opted to focus on the learners' ability to extract pragmatic meaning in a general sense. 
-
+Importantly, our models include grouping variables for items and items nested within speakers, thus we account this type of variability via shrinkage of the parameter estimates. 
+This allows us to focus on our main goal (in this article) of analyzing the learners' ability to extract pragmatic meaning in a general sense (i.e., is this a question or not?). 
 \Done
 \Easy
 
