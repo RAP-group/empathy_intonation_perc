@@ -1,6 +1,6 @@
 ## Comments to the Author
 
-\RC This is a very interesting study looking at the roles of proficiency and empathy in the development of L2 prosodic perception. The authors use sophisticated statistical methods to show that both proficiency and empathy seem to be at play in the development of L2 prosodic perception, as well as the specific type of prosody. The paper also considers the role of dialect, which is very often not dealt with in studies of L2 prosody. In paying attention to these aspects of prosodic acquisition, the paper is cutting edge. I think that the paper would benefit from a clear theoretical model with specific predictions based on that model, and perhaps the authors can investigated whether Mennen's LiLT model would help them do that or not. Below I present some general recommendations, followed by some specific comments. 
+\RC{This is a very interesting study looking at the roles of proficiency and empathy in the development of L2 prosodic perception. The authors use sophisticated statistical methods to show that both proficiency and empathy seem to be at play in the development of L2 prosodic perception, as well as the specific type of prosody. The paper also considers the role of dialect, which is very often not dealt with in studies of L2 prosody. In paying attention to these aspects of prosodic acquisition, the paper is cutting edge. I think that the paper would benefit from a clear theoretical model with specific predictions based on that model, and perhaps the authors can investigated whether Mennen's LiLT model would help them do that or not. Below I present some general recommendations, followed by some specific comments.}
 
 We thank the reviewer for these kind words and their insightful comments, which we have responded to below. 
 We are confident that the revised manuscript is much stronger after taking them into consideration. 
@@ -20,12 +20,13 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/45
 -->
 
 We thank the reviewer for this comment. 
-The LexTALE measures vocabulary size as a proxy for general proficiency. 
+As they have noted, the LexTALE measures vocabulary size as a proxy for general proficiency. 
 This assumption is based on evidence reported in @lemhofer2012introducing, who found that L2 English speakers performance on the LexTALE was correlated with their English vocabulary size and general proficiency, and was overall a better predictor of language proficiency than self-ratings.
-In our case, we expected (and found) an association between higher general proficiency and prosodic development (an increase in LexTALE score was be associated in general with a higher probability of a correct response), and this general finding is consistent with @bustin_2020 using an experimental paradigm similar to the one we use.
+In our case, we expected (and found) an association between higher general proficiency and prosodic development (an increase in LexTALE score was associated, in general, with a higher probability of a correct response), and this general finding is consistent with @bustin_2020 using an experimental paradigm similar to the one we use.
 There are also many studies in the SLA/Bilingualism literature that use the LexTALE in a similar way [see @casillas_dpbe_l2_2020; @garrido2022super for recent examples].
-While we completely agree that it would be interesting to explore the relationship between growing vocabulary size and specific tunes, we believe this is beyond the scope of this paper. 
 We are primarily concerned with using vocabulary size as a proxy for general proficiency, which allows us to control this variable and explore how it interacts with empathy. 
+In short, using the LexTALE as a proxy for general proficiency gives us the same information we would obtain by using a traditional method of measuring proficiency, e.g., the DELE, or any other standardized exam, but requires a fraction of the participants' time. 
+While we completely agree that it would be interesting to explore the relationship between growing vocabulary size and specific tunes, we believe a more in-depth analysis exploring this relationship is beyond the scope of *this* paper, however, we do not discard this possibility for our next paper. 
 
 \Done
 \Easy
@@ -43,23 +44,24 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/61
 
 This issue is referenced several times. 
 We respond here and subsequent comments refer back to this response. 
-As we understand it, the reviewer's comments touch on two important issues: (1) whether or not empathy is a pragmatic skill itself and (2) whether our study has anything to do with pragmatic skills in the firstplace. 
+As we understand it, the reviewer's comments touch on two important issues: (1) whether or not empathy is a pragmatic skill itself and (2) whether our study has anything to do with pragmatic skills in the first place. 
 First, empathy has previously been treated as a pragmatic skill in recent studies. 
 @esteve2020empathy explain that empathy is part of the set of pragmatic abilities known as theory of mind, and they add that empathy is one of the pragmatic skills that enable listeners to understand the communicative intentions encoded in the interlocutor's words. 
 Their research found that listeners with better pragmatic skills (i.e., higher empathy) are more sensitive to intonation cues when forming sound-meaning associations and using intonation to disambiguate meaning. 
 We operationalized empathy as a pragmatic skill following @esteve2020empathy, whose stance follows research in psychology on the construct [See @baron2011zero; @carruthers2009we; @frith2003development]. 
 We agree that empathy "[...] is part of the set of pragmatic abilities that enable listeners to understand the communicative intentions and feelings behind the interlocutor’s words [@baron2004empathy]" (p. 577). 
+
 We accept that the reviewer may not agree with this particular operationalization. 
-That being said, we don't believe that implementing it affects the main points of our manuscript. 
-Given that our study builds upon the findings of @esteve2020empathy and builds upon their findings, we feel it is appropriate to operationalize empathy as a pragmatic skill to be consistent with the previous research.
-Second, regardless of whether we agree that empathy is a pragmatic skill itself or an ability that helps pragmatic skills/pragmatic reasoning, as the reviewer suggests, our study does indeed relate to how pragmatic skills are used to interpret meaning through intonation. 
-Therefore we be believe a discussion about pragmatic skills is warrented in the context of our study. 
+That being said, we don't believe that implementing it affects the main points of our manuscript, and, importantly, it allows us to adhere to our pre-registered hypotheses, which follow this same line of reasoning put forth in the previous literature. 
+Given that our study builds upon the findings of @esteve2020empathy, we feel it is appropriate to operationalize empathy as a pragmatic skill to be consistent with the previous research.
+Second, although we may not agree that empathy is a pragmatic skill itself or an ability that helps pragmatic skills/pragmatic reasoning, our study does indeed relate to how pragmatic skills are used to interpret meaning through intonation. 
+Therefore, we be believe a discussion about pragmatic skills is warranted in the context of our study. 
 As we discuss in the manuscript, previous research has reported that speakers make use of intonational cues of speech to express pragmatic meaning, mental states, among others, and to structure information in speech [See also @esteve2020empathy; @ladd2008intonational; @prieto2015intonational]. 
 In our experimental task, participants were required to decide whether the utterances they listened to were questions or statements solely on the basis of the intonation they perceived, which directly taps into their pragmatic abilities (including empathy). 
-According to Esteve Gibert et al. (2020), empathy is a pragmatic skill that allows listeners to interpret the intentions behind the interlocutor's message, which is exactly the focus of our study.
+According to @esteve2020empathy, empathy is a pragmatic skill that allows listeners to interpret the intentions behind the interlocutor's message, which is exactly the focus of our study.
 
-
-
+In short, we agree with the reviewer that we could probably simply 'talk about empathy and leave it there', and little or nothing would change regarding what the reader takes from our manuscript. 
+Nonetheless, we don't believe this would be consistent with the previous research on the topic. 
 
 \Done
 \Easy
@@ -67,10 +69,28 @@ According to Esteve Gibert et al. (2020), empathy is a pragmatic skill that allo
 
 
 
+\RC{This is also mentioned in the more detailed comments, but I would like to see some sort of description of the tunes (at least the nuclear configurations) for each variety and sentence type. At the very least a very phonetic description would do (e.g. a rise to a high tone in the nuclear stressed vowel, followed by a fall to a low boundary tone). But I think this would make for a better discussion of the findings. This might also help the authors to make sense of the finding about wh- questions and the role of proficiency and empathy for those. Why wh-questions?}
 
-\RC{This is also mentioned in the more detailed comments, but I would like to see some sort of description of the tunes (at least the nuclear configurations) for each variety and sentence type. At the very least a very phonetic description would do (e.g. a rise to a high tone in the nuclear stressed vowel, followed by a fall to a low boundary tone). But I think this would make for a better discussion of the findings. This might also help the authors to make sense of the finding about wh-questions and the role of proficiency and empathy for those. Why wh-questions?}
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/47
+-->
 
-\WorkInProgress
+All three reviewers coincide on the need for a description of the acoustic stimuli used in the task. 
+In the revised manuscript we have included this information. 
+Importantly, we do not attempt to ascribe learner difficulty to particular realizations of the four utterance types. 
+The reasoning behind this decision is as follows. 
+It is well attested that there is inherent variability in how a given utterance is realized and multiple strategies can co-exist to convey the same meaning in the same context. 
+We observe this variability both between varieties of Spanish and within individual speakers of these varieties. 
+Importantly, we also observe this variability in our stimuli and this is so by design. 
+In other words, the particular tune used in a specific pragmatic context is not always the same, though there are certain strategies that are more common than others. 
+We believe this is a feature, not a bug. 
+In essence, our project is concerned with the L2 learners' general ability to extract pragmatic meaning from the plethora of tunes available in Spanish, and not with one particular tune most commonly associated with a specific utterance type.
+In a future study that is already planned (though not yet underway), we intend to limit/control the specific tunes presented to the learners with the intention of determining *what* makes particular tunes more or less difficult. 
+We believe this will also make a sound contribution to the LILt model the reviewer brought to our attention. 
+In sum, as is, we cannot make definitive determinations regarding what about specific utterance types may make them more or less difficult, or more or less likely to correlate with empathy levels. 
+In the revised manuscript we provide plausible explanations for this and set the groundwork for future research. 
+
+\Done
 \Easy
 
 
@@ -87,10 +107,14 @@ Sánchez Alvarado, Covadonga. 2020. The production and perception of subject foc
 Alvarado, Covadonga Sánchez and Armstrong, Meghan. "Prosodic Marking of Object Focus in L2 Spanish" Studies in Hispanic and Lusophone Linguistics, vol. 15, no. 1, 2022, pp. 211-250. <https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html>
 }
 
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/48
+-->
+
 We were unaware of Mennen's model and these additional references.
 We thank the reviewer for bringing them to our attention. 
-We have included a brief summary of the model in the introduction of the revised manuscript (and revisit the model in the discussion). 
-We include the relevant portion referenced in the reviewer's comment below: 
+We have included a brief summary of the model in the introduction of the revised manuscript and we have removed the text in which we point out the need for a specific model. 
+We include the relevant portion referenced in the reviewer's comment below and we refer back to this response in the subsequent comments suggesting we include the LILt model. 
 
 > Research on L2 intonation has been concerned primarily with speech production. 
 Learner difficulties tend to be ascribed to L1 transfer, and models of L2 phonology, by and large, focus on the speech segment, as in the Speech Learning Model revised [@flege2021revised], or contrasts between segments, i.e., PAM-L2, L2LP [@Best2007; @VanLeussen2015, respectively]. 
@@ -116,54 +140,106 @@ While LILt (Mennen, 2015) focuses mostly on intonation production rather than pe
 
 -->
 
-MUST ADD TO DISCUSSION TOO. STILL IN PROGRESS
-
-\WorkInProgress
+\Done
 \Easy
 
 
 
 
-\RC{p. 3, line 23-29 - Please also include literature on information structure (focus, givenness, etc.) as well as speaker belief states
-}
+\RC{p. 3, line 23-29 - Please also include literature on information structure (focus, givenness, etc.) as well as speaker belief states.}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/49
+-->
+
+Following the suggestion of the reviewer we have included references to @erteschik2007information and @casielles2004syntax for information structure and @pierrehumbert1990meaning for speaker belief states.
+There relevant text now reads as follows: 
+
+> The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated not only with linguistic information, e.g., utterance type or syntactic constituency, but also pragmatic information, e.g., information structure [@erteschik2007information; @casielles2004syntax], speaker belief states [@pierrehumbert1990meaning], polite discourse [@astruc2016cost], bias, or presupposition [@henriksen2016intonational]. 
+The present study investigated how the perception of intonation during sentence processing develops in adult L2 learners. 
+
+\Done
 \Easy
 
 
 
 
-\RC{p. 4, 47-50 - I think it could be useful to include some concrete examples of the various meanings here, to demonstrate the plethora of meanings that can arise
-}
+\RC{p. 4, 47-50 - I think it could be useful to include some concrete examples of the various meanings here, to demonstrate the plethora of meanings that can arise}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/50
+-->
+
+Following the reviewers suggestion, we have included a concrete example in this section of the introduction. 
+The relevant excerpt now reads as follows: 
+
+> As touched upon above, a speaker can use prosody to signal numerous additional pragmatic functions as well. 
+For example, an information-seeking yes-no question can be contrasted with an echo yes-no question in Chilean Spanish by using L+H\* HH\% or L\* HH\% nuclear contour, respectively.
+
+\Done
 \Easy
 
 
 
 
-\RC{p. 5, 23-29 - Also reference the discussion regarding the instruction of prosody in Durwing \& Monroe 2015
-}
+\RC{p. 5, 23-29 - Also reference the discussion regarding the instruction of prosody in Durwing \& Monroe 2015}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/51
+-->
+
+This reference has been included in the revised manuscript. 
+
+\Done
 \Easy
 
 
 
 
-\RC{p. 6,paragraph beginning on line 47 - there should be some mention of Mennen’s LiLT (L2 intonational learning theory) model of L2 intonation and the recent work using this model
-}
+\RC{p. 6,paragraph beginning on line 47 - there should be some mention of Mennen’s LiLT (L2 intonational learning theory) model of L2 intonation and the recent work using this model.}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/52
+-->
+
+We again thank the reviewer for bringing to our attention the LILt model and the work of @alvarado2022prosodic. 
+We have included the relevant citation and contextualized it further referencing the LILt model.
+The revised text is included below. 
+
+> Previous research on the acquisition of Spanish prosody has primarily focused on the production of statements and questions, particularly in the study abroad context, using pre-, post-test designs [See @craft2015acquisition; @henriksen2010development; @thornberry2014l2; @trimble2013acquiring, among others]. 
+Though the degree of improvement is variable based on a myriad of factors---such as context formality [@trimble2013acquiring], use of Spanish [@henriksen2010development; @trimble2013acquiring], social integration [@trimble2013acquiring], or the development of meaningful social relationships with native speakers [@thornberry2014l2]---this line of research suggests that learners gradually acquire target-like intonation as they gain experience in the L2. 
+Importantly, recent work on the production of prosodic marking to signal object focus in L2 Spanish suggests that while English-speaking learners of Spanish exhibit target-like implementation of focal accents, L1 English features are still observed in their L2 production [@alvarado2022prosodic]. 
+The findings show that there is cross-language interaction between L1 and L2 intonation categories, and that over time learners can acquire L2 intonation that falls within the norms of target-like intonation, which is in line with the assumptions of the LILt model [@mennen2015beyond].
+>
+> There is a paucity of research on the perception of Spanish intonation, but limited studies corroborate the general finding in speech production that mastery is indeed possible for adult learners [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
+For instance, @trimble2013perceiving examined the perception of intonational cues in statements and yes/no questions in L1 English L2 Spanish adult learners that had studied abroad in Venezuela, Spain, or not at all. 
+Using a gating task, @trimble2013perceiving found that intonational cues that were absent from participants' L1 were difficult to perceive, though learners were more accurate with statements than questions, and that familiarity with the target variety improved accuracy. 
+The investigation lends support to the general notion that the L2 intonation system develops in tandem with proficiency in Spanish, which was positively correlated with time spent studying abroad. 
+
+\Done
 \Easy
 
 
 
 
-\RC{p. 6 line 39 - both Caribbean Spanish and Argentine (porteño?) Spanish use final f0 falls for yes-no questions (absolute interrogatives), I’m not sure this description actually captures the differences. Also, there are differences in the actual falls in different Caribbean Spanishes. Varieties of DR Spanish use what is best described as H+L* L% while Puerto Rican Spanish uses ¡H* L%. I think Hualde & Prieto also shows that question falls are actually rather common in Spanish, even if their pragmatic meanings are more restricted. 
-}
+\RC{p. 6 line 39 - both Caribbean Spanish and Argentine (porteño?) Spanish use final f0 falls for yes-no questions (absolute interrogatives), I’m not sure this description actually captures the differences. 
+Also, there are differences in the actual falls in different Caribbean Spanishes. 
+Varieties of DR Spanish use what is best described as H+L* L\% while Puerto Rican Spanish uses ¡H* L\%. 
+I think Hualde \& Prieto also shows that question falls are actually rather common in Spanish, even if their pragmatic meanings are more restricted.}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/53
+-->
+
+We thank the reviewer for this suggestions. 
+It was not our intention to misrepresent the differences between Caribbean and Argentine Spanish. 
+In this case we simple intend to illustrate prosodic variability in Spanish. 
+We have been more precise in our wording of this sentence, which we include below. 
+
+> Consider information-seeking yes/no questions, which, in some varieties like Puerto Rican, Dominican, and Argentine Spanish, can be produced with a falling F0 contour. 
+These examples illustrate between-variety variability because they can differ from the more common final rise found in many other varieties of Spanish [see @hualde2015intonational].
+
+\Done
 \Easy
 
 
@@ -184,15 +260,14 @@ We now refer to absolute interrogatives as 'yes/no questions'.
 
 
 
-\RC{p. 9 line 4 - has empathy been “operationalized as pragmatic skill” in the past? Is it really possible to say that they are the same thing, vs. one leading to the other? 
-}
+\RC{p. 9 line 4 - has empathy been “operationalized as pragmatic skill” in the past? Is it really possible to say that they are the same thing, vs. one leading to the other?}
 
 <!--
 https://github.com/RAP-group/empathy_intonation_perc/issues/55
 -->
 
 We have responded with more detail to this issue above. 
-To the point brought up here, indeed, there is a line a research that operationalizes empathy as a pragmatic skill [See @baron2004empathy; @baron2011zero; @carruthers2009we; @esteve2020empathy; @frith2003development, among others].
+To the point brought up here, indeed, there is a line a research that operationalizes empathy as a pragmatic skill [See @baron2011zero;  @baron2004empathy; @carruthers2009we; @esteve2020empathy; @frith2003development, among others].
 
 \Done
 \Easy
@@ -221,7 +296,7 @@ This mistake has been fixed in the revised manuscript.
 https://github.com/RAP-group/empathy_intonation_perc/issues/57
 -->
 
-We refer the reviewer to our previous comment on this issue, which we addressed here.
+We refer the reviewer to our previous comment on this issue.
 
 \Done
 \Easy
@@ -231,8 +306,12 @@ We refer the reviewer to our previous comment on this issue, which we addressed 
 
 \RC{p. 11, line 8, again, why not just call them yes-no questions?}
 
-This issue was addressed previously. 
-We include our response again here for the sake of completeness. 
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/58
+-->
+
+This issue has been addressed previously. 
+We include our response again here for convenience. 
 
 Following this suggestion and that of reviewer 1, we have systematized how we refer to all utterance types throughout the revised manuscript. 
 We now refer to absolute interrogatives as 'yes/no questions'. 
@@ -240,43 +319,116 @@ We now refer to absolute interrogatives as 'yes/no questions'.
 \Done
 \Easy
 
-\RC p. 15, line 25 - I’m wondering what perceptual learning would mean here. We know that the encoding of narrow focus and question intonation differs across the varieties that are listed here. How would we know if these participants had experience with these varieties? It would be helpful to know what the tunes for each type of sentence were for each variety used in the stimuli as well. 
 
-\WorkInProgress
-\Easy
 
-\RC p. 26, lines 53-6 (on next page)- I’m not sure this makes sense” In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.”
-Do they mean “compared” to low empathy learners (as opposed to “particularly with regard to low empathy learners”)?
 
-\WorkInProgress
-\Easy
-
-\RC p. 29, line 28 - "This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.” again, I don’t see a reason to call this pragmatic skill. It’s just empathy. better to say - "That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.”
+\RC{p. 15, line 25 - I’m wondering what perceptual learning would mean here. We know that the encoding of narrow focus and question intonation differs across the varieties that are listed here. How would we know if these participants had experience with these varieties? It would be helpful to know what the tunes for each type of sentence were for each variety used in the stimuli as well.}
 
 <!--
-https://github.com/RAP-group/empathy_intonation_perc/issues/61
+https://github.com/RAP-group/empathy_intonation_perc/issues/59
 -->
 
-As mentioned previously, this issue is addressed HERE. 
-In this particular instance, we have opted to replace "pragmatic skill" with "empathy" in the revised manuscript. 
+In the context of our study and specifically with regard to the two-alternative forced-choice task, perceptual learning is inferred via increased response accuracy and reduced reaction times (increased processing speed) as a function of proficiency and empathy. 
+In hindsight, we see that we did not intend to refer to learning in this sentence. 
+Importantly, with the data we have collected we do not (and cannot) go as far as to assume that participants have learned all of the specific tunes related to the utterance types produced by the 8 Spanish speakers. 
+Instead, we focus on the participants' ability to comprehend the intended pragmatic meanings of the stimuli they have heard. 
+To the reviewer's point, we have provided more detailed information about the stimuli used in this task and revised the relevant sentence in the prose. 
+Specifically, we avoid talking about learning in our description of the sampling procedures and now say 'intonation processing'. 
+In context, the sentence in its entirety reads as follows: 
+
+> Our hypothesis related to empathy as a possible mediator of intonation processing is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect.
+
 \Done
 \Easy
 
 
 
 
-\RC p. 31 - line 5 - The idea that there is one “US Spanish” is very controversial. US Spanishes still have the characteristics of the varieties of origin, so even though respondents are familiar with Spanish spoken in the U.S. they would be exposed to Mexican Spanish, Dominican Spanish, Puerto Rican Spanish, etc. as spoken in the US. Looking at which region of the country respondents were from could be helpful in understanding this. 
+\RC{p. 26, lines 53-6 (on next page)- I’m not sure this makes sense” In practical terms, this implies that high proficiency, high empathy learners required more information to reach a decision and responded at a slower rate, particularly with regard to low empathy learners (top row), regardless of proficiency level.”
+Do they mean “compared” to low empathy learners (as opposed to “particularly with regard to low empathy learners”)?}
 
-\WorkInProgress
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/60
+-->
+
+Indeed we meant to say "compared" to low empathy learners. 
+This has been changed in the revised manuscript. 
+
+\Done
 \Easy
 
-\RC p. 31 - line 20 - The authors discuss the possibilities of why the different varieties might have been perceived differently. I think it would be helpful for the authors to share what the tunes in their stimuli actually were, which would help them to better surmise here.  Puerto Rican Spanish (not mentioned in the discussion) and Cuban Spanish were the varieties people had the most difficulties with, but according to most descriptions PRS and CS use the same tune for ys questions (also again, NB that Dominican ynqs are not the same as PRS and CS ynqs, this description conflates all Caribbean Spanish questions, which are also not necessarily hat patterns). I would recommend an appendix with a description of the tunes in the stimuli for each variety, and for this to be brought into the discussion for research question #3.
 
-\WorkInProgress
+
+
+\RC{p. 29, line 28 - "This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody.” again, I don’t see a reason to call this pragmatic skill. It’s just empathy. better to say - "That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals.”}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/61
+-->
+
+This issue has been addressed in a previous response to the reviewer. 
+In this particular instance, we have opted to replace "pragmatic skill" with "empathy" in the revised manuscript. 
+
+\Done
 \Easy
 
-\RC p. 32, line 7 - again, the LiLT model needs to be mentioned, since this reads as if no theory of L2 intonation has been proposed. 
 
-\WorkInProgress
+
+
+\RC{p. 31 - line 5 - The idea that there is one “US Spanish” is very controversial. US Spanishes still have the characteristics of the varieties of origin, so even though respondents are familiar with Spanish spoken in the U.S. they would be exposed to Mexican Spanish, Dominican Spanish, Puerto Rican Spanish, etc. as spoken in the US. Looking at which region of the country respondents were from could be helpful in understanding this.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/62
+-->
+
+We agree with the point made by the reviewer. 
+We did not expect to obtain "US Spanish" as the most familiar variety from our participants. 
+We have added a footnote after the referred sentence to reflect some of the points made by the reviewer. 
+
+> While participants mentioned familiarity with U.S. Spanish, it should be noted that this variety is not a monolith, but rather carries traits of the original Spanish variety (e.g., Mexican, Puerto Rican) that is in contact with English.
+
+Additionally, we have included an exploratory analysis of variety familiarity in the revised discussion. 
+The reviewer is referred to Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects) above, as well as the discussion section and the supplementary materials. 
+
+\Done
+\Easy
+
+
+
+
+\RC{p. 31 - line 20 - The authors discuss the possibilities of why the different varieties might have been perceived differently. I think it would be helpful for the authors to share what the tunes in their stimuli actually were, which would help them to better surmise here.  Puerto Rican Spanish (not mentioned in the discussion) and Cuban Spanish were the varieties people had the most difficulties with, but according to most descriptions PRS and CS use the same tune for ys questions (also again, NB that Dominican ynqs are not the same as PRS and CS ynqs, this description conflates all Caribbean Spanish questions, which are also not necessarily hat patterns). I would recommend an appendix with a description of the tunes in the stimuli for each variety, and for this to be brought into the discussion for research question \#3.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/63
+-->
+
+Following the suggestion of all three reviewers, we have included more information about the stimuli in the supplementary materials and incorporated relevant information where necessary throughout the revised manuscript (particularly in the method and discussion sections). 
+
+
+\Done
+\Easy
+
+
+
+
+\RC{p. 32, line 7 - again, the LiLT model needs to be mentioned, since this reads as if no theory of L2 intonation has been proposed.}
+
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/64
+-->
+
+In the revised manuscript we have mentioned the LILt where suggested by the reviewer. 
+The relevant text is included below. 
+
+> In sum, the present work contributes to our knowledge of an understudied construct, empathy, as it pertains to speech. 
+Additionally, this is the first time, to our knowledge, that drift diffusion models have been used to analyze behavioral data relating to empathy in SLA. 
+We also underscore the general need for models of L2 phonology, such as the SLM-r [@flege2021revised], PAM-L2 [@Best2007], L2LP [@VanLeussen2015], etc., to address the acquisition process beyond the level of the segment. 
+The LILt model [@mennen2015beyond] has served as a starting point in the analysis of intonation across languages and L2 acquisition of intonation, framing the process of L2 acquisition of intonation along different developmental and structural dimensions. 
+The findings of the present study are in line with LILt since they show that perception of intonation in an L2 progresses with higher proficiency. 
+In addition, these findings also emphasize the need for models like LILt to account for how individual differences pragmatic skills, such as empathy, can influence learner outcomes.
+A complete model of speech learning should account for both causal prediction and imputation at the segmental and suprasegmental levels. 
+The present study aimed to address this gap in the literature by examining the role of proficiency and empathy on the perception of intonation during sentence processing in adult L2 phonological acquisition. 
+
+\Done
 \Easy
 

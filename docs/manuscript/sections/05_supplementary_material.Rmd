@@ -38,49 +38,6 @@ read_csv(here("tables", "learner_response_01.csv"), col_types = cols(.default = 
     label = "table-learner-accuracy-by-utterance-type")
 ```
 
-**Familiar vs. unfamiliar varieties**
-
-Participants responded to the prompt 'I am most familiar with Spanish from' and, using a drop-down window, made a selection from the following choices: I am not familiar with Spanish, Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Equatorial Guinea, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Philippines, Puerto Rico, Uruguay, Venezuela, Spain, and United States. 
-
-Table \@ref(tab:table-familiarity-summary). 
-
-```{r, 'table-familiarity-summary'}
-familiarity_table %>% 
-  knitr::kable(format = "pandoc", align = c("l", "r", "r"), 
-    caption = "Summary of participant self-reported familiarity with Spanish.",
-    label = "table-familiarity-summary")
-```
-
-Table \@ref(tab:table-learner-variety-familiarity-model-summary). 
-
-```{r, 'table-learner-variety-familiarity-model-summary'}
-read_csv(here("tables", "learner_variety_match_response_model_summary.csv")) %>% 
-  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
-    caption = glue::glue("Summary of the posterior distribution modeling 
-    response accuracy as a function of utterance type and 
-    familiarity. The model only includes data from participants who claimed to 
-    be familiar with Mexican (n =  {familiarity$Mexico$n_v}) and Peninsular 
-    (n = {familiarity$Spain$n_v}) Spanish.
-    The table includes posterior medians, the 95% HDI, the percentage of the 
-    HDI within the ROPE, and the maximum probability of effect (MPE)."),
-    label = "table-learner-variety-familiarity-model-summary")
-```
-
-Table \@ref(tab:table-learner-variety-familiarity-conditional-effects). 
-
-```{r, 'table-learner-variety-familiarity-conditional-effects'}
-read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>% 
-  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
-    caption = glue::glue("Conditional effects of response accuracy as a 
-    function of sentence type and familiarity with the Spanish variety. 
-    Values represent posterior medians along with the 95% HDI for unfamiliar 
-    and familiar conditions, along with the posterior difference 
-    (familiar - unfamiliar). The posterior predictive distribution is based on 
-    data from participants who claimed to be familiar with Mexican 
-    (n =  {familiarity$Mexico$n_v}) and Peninsular 
-    (n = {familiarity$Spain$n_v}) Spanish."), 
-    label = "table-learner-variety-familiarity-conditional-effects")
-```
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
@@ -225,19 +182,97 @@ read_csv(here("tables", "dp_utterance_variety.csv"), col_types = cols(.default =
 ```
 
 
-*Monolingual response accuracy*.
 
-Raw accuracy plot \@ref(fig:plot-learner-native-accuracy)
+**Familiar vs. unfamiliar varieties**. At the beginning of the experimental session, participants responded to the prompt 'I am most familiar with Spanish from' and, using a drop-down window, made a selection from the following choices: I am not familiar with Spanish, Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Equatorial Guinea, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Philippines, Puerto Rico, Uruguay, Venezuela, Spain, and United States. 
+These choices represent the countries/territories/commonwealths where Spanish is spoken as an official or co-official language with the exception of Andorra, Belize, Gibraltar, and the Philippines, which were not included by mistake. 
+Table \@ref(tab:table-familiarity-summary) below summarizes the participants' responses to this question. 
+Of note, participants overwhelmingly selected 'U.S. Spanish', followed by 'Mexico', 'Peninsular', and 'Not familiar'. 
 
-(ref:plot-learner-native-accuracy) Stuff they made me do.
+```{r, 'table-familiarity-summary'}
+familiarity_table %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r"), 
+    caption = "Summary of participant self-reported familiarity with Spanish.",
+    label = "table-familiarity-summary")
+```
+
+We did not pre-register a hypothesis regarding participant familiarity with Spanish. 
+The following analysis is exploratory in nature. 
+We analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties: Peninsular and Mexican Spanish (note: we make the assumption that 'Peninsular' is most closely associated with the Madrileño speaker). 
+We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data. 
+The model was specified similar to previous models: 
+
+$$
+\begin{aligned}
+\text{is_correct}_{ij} &\sim Bernoulli\left(p_{ij}, m_{ij}\right) \\
+\text{logit}\left(p_{ij}\right) &= \beta_{0} + \beta_{1} * question\_type + \beta_{2} * Familiarity \\ 
+ & \ \ \ \ \beta_{3} * question\_type * Familiarity
+\end{aligned}
+$$
+
+We specified grouping variables for participant, speaker variety, and individual items. 
+The models estimated varying slopes for the sentence type effect for each participant and the familiarity effect for each item. 
+Again, we used the `0 + Intercept` syntax of `brms` and set weakly informative priors as follows: 
+
+$$
+\begin{aligned}
+\beta  &\sim Normal(0, 1) \\
+\sigma &\sim Cauchy(0, 0.2) \\
+\rho   &\sim LKJcorr(1)
+\end{aligned}
+$$
+
+In short, we find that, marginalizing over proficiency and empathy, participants were more accurate when responding to a familiar variety. 
+This is true for all utterance types to some degree, but more clearly the case for questions (likely because responses to declarative utterances were near ceiling). 
+Figure \@ref(fig:plot-learner-variety-familiarity) included in the manuscript illustrates the familiarity effect.
+Table \@ref(tab:table-learner-variety-familiarity-model-summary) summarizes the model output. 
+For convenience, we also provide the conditional effects of response accuracy in Table \@ref(tab:table-learner-variety-familiarity-conditional-effects). 
+
+```{r, 'table-learner-variety-familiarity-model-summary'}
+read_csv(here("tables", "learner_variety_match_response_model_summary.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r", "r"), 
+    caption = glue::glue("Summary of the posterior distribution modeling 
+    response accuracy as a function of utterance type and 
+    familiarity. The model only includes data from participants who claimed to 
+    be familiar with Mexican (n =  {familiarity$Mexico$n_v}) and Peninsular 
+    (n = {familiarity$Spain$n_v}) Spanish.
+    The table includes posterior medians, the 95% HDI, the percentage of the 
+    HDI within the ROPE, and the maximum probability of effect (MPE)."),
+    label = "table-learner-variety-familiarity-model-summary")
+```
+
+
+```{r, 'table-learner-variety-familiarity-conditional-effects'}
+read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = glue::glue("Conditional effects of response accuracy as a 
+    function of sentence type and familiarity with the Spanish variety. 
+    Values represent posterior medians along with the 95% HDI for unfamiliar 
+    and familiar conditions, along with the posterior difference 
+    (familiar - unfamiliar). The posterior predictive distribution is based on 
+    data from participants who claimed to be familiar with Mexican 
+    (n =  {familiarity$Mexico$n_v}) and Peninsular 
+    (n = {familiarity$Spain$n_v}) Spanish."), 
+    label = "table-learner-variety-familiarity-conditional-effects")
+```
+
+
+
+
+
+*Monolingual response accuracy*. In preparing our materials before official data collection, we piloted the 2AFC task and the auditory stimuli on monolingual Spanish speakers. 
+The purpose of collecting this pilot data was to get an assessment of task difficulty---overall and as a function of speaker variety---and to have an idea what reasonable priors would be with regard to response times. 
+From this pilot, we learned that, overall, monolingual speakers were least accuracy when responding to the Cuban variety, and to some degree the Puerto Rican variety as well. 
+This finding led us to hypothesize that L2 learners would also have difficulties when responding to stimuli from the same varieties.
+Figure \@ref(fig:plot-learner-native-accuracy) plots the monolingual accuracy data (right panel) next to the learner accuracy data (left panel). 
+The same information is also provided in numeric form in Table \@ref(tab:table-learner-native-accuracy).
+
+(ref:plot-learner-native-accuracy) Response accuracy as a function of group (L2 learner, monolingual Spanish speaker), speaker variety (Andalusian, Argentine, Chilean, Cuban, Madrileño, Mexican, Peruvian, Puerto Rican), and utterance type (broad focus statement, narrow focus statement, wh- question, y/n question). Points represent means of the raw data surrounded by the standard error of the mean.
 
 ```{r, 'plot-learner-native-accuracy', fig.cap="(ref:plot-learner-native-accuracy)"}
 knitr::include_graphics(
   here("figs", "manuscript", "learner_native_accuracy.pdf")
   )
 ```
-
-Raw accuracy table  \@ref(tab:table-learner-native-accuracy)
 
 ```{r, 'table-learner-native-accuracy'}
 read_csv(here("tables", "learner_native_accuracy.csv")) %>% 
@@ -249,15 +284,23 @@ read_csv(here("tables", "learner_native_accuracy.csv")) %>%
     TRUE ~ Type
   )) %>% 
   knitr::kable(format = "pandoc", align = c(rep("l", 2), rep("r", 2)), 
-    caption = "Summary of the.",
+    caption = "Response accuracy as a function of group (L2 learner, 
+    monolingual Spanish speaker), speaker variety (Andalusian, Argentine, 
+    Chilean, Cuban, Madrileño, Mexican, Peruvian, Puerto Rican), and 
+    utterance type (broad focus statement, narrow focus statement, 
+    wh- question, y/n question). Each column provides the mean and standard 
+    error.",
     label = "table-learner-native-accuracy")
 ```
 
+As a check on the low accuracy with the Cuban and Puerto Rican varieties, we decided to explore monolingual response accuracy further. 
+To this end, we looked at the monolinguals' responses when they were presented with stimuli from their own variety, e.g., an Andalusian listener responding to stimuli from the Andalusian speaker. 
+In our data, this implied a subset of Andalusian, Chilean, Cuban, Madrileño, Mexican, and Puerto Rican listeners.
+Figure \@ref(fig:plot-variety-matched-native-accuracy) plots the variety-matched raw accuracy scores as a function of utterance type and Table \@ref(tab:table-variety-matched-native-accuracy) provides the same information in numeric form. 
+Of note, all the monolinguals in our sample were at ceiling for all utterance types when responding to speakers from their own variety.
+This is taken as evidence that the auditory stimuli are accurate representations of questions and statements for these varieties.
 
-
-Variety matched Raw accuracy plot \@ref(fig:plot-variety-matched-native-accuracy)
-
-(ref:plot-variety-matched-native-accuracy) Stuff they made me do.
+(ref:plot-variety-matched-native-accuracy) Variety-matched accuracy of monolingual listeners as a function of utterance type (broad focus statement, narrow focus statement, wh- question, y/n question). Points represent means of the raw data surrounded by the standard error of the mean.
 
 ```{r, 'plot-variety-matched-native-accuracy', fig.cap="(ref:plot-variety-matched-native-accuracy)"}
 knitr::include_graphics(
@@ -265,18 +308,14 @@ knitr::include_graphics(
   )
 ```
 
-
-Variety matched raw accuracy table \@ref(tab:table-variety-matched-native-accuracy)
-
 ```{r, 'table-variety-matched-native-accuracy'}
 read_csv(here("tables", "variety_matched_native_accuracy.csv")) %>% 
   knitr::kable(format = "pandoc", align = c("l", "r", "r", "r", "r"), 
-    caption = "Variety-matched response accuracy as a function of utterance type. Accuracy refers to the proportion of correct responses along with the standard error of the mean.",
+    caption = "Variety-matched response accuracy as a function of utterance 
+    type. Accuracy refers to the proportion of correct responses along with 
+    the standard error of the mean.",
   label = "table-variety-matched-native-accuracy")
 ```
-
-
-
 
 
 
@@ -286,8 +325,9 @@ read_csv(here("tables", "variety_matched_native_accuracy.csv")) %>%
 
 ## Auditory stimuli {#auditory-stimuli}
 
-*Speakers*. The auditory stimuli consisted of 8 varieties of Spanish: Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian.
-Table \@ref(tab:table-stimuli-descriptives) contains demographic information about the speakers.
+*Speakers*. The auditory stimuli consisted of eight varieties of Spanish: Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian. 
+The speakers from Argentina, Chile, Peru, and Spain are linguists. 
+Table \@ref(tab:table-stimuli-descriptives) contains demographic information about the speakers. 
 
 ```{r, speakers}
 tribble(
@@ -308,13 +348,33 @@ tribble(
 ```
 
 
-*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
+*Speech rate*. In order to evaluate the possibility that the speech rate of the talkers in our stimuli may have affected response accuracy, we calculated the articulation rate (syllables spoken per second during phonation time), average syllable duration (in milliseconds), and speech rate (number of syllables divided by total time) for all items (64 items &times; 8 speakers = `r 64 * 8` utterances). 
+These values are provided in Table \@ref(tab:table-stimuli-sr). 
+
+```{r}
+#| label: speech-rate-table
+mono_speech_rates_avg %>% 
+  mutate(`Syllable duration` = round(`Avg. syllable duration` * 1000), 
+    Variety = case_when(
+      Variety == "Penninsular" ~ "Madrileño", 
+      Variety == "Puertorican" ~ "Puerto Rican", 
+      TRUE ~ .$Variety), 
+    across(c("Articulation rate", "Speech rate"), specify_decimal, k = 2)) %>% 
+  select(Variety, `Articulation rate`, `Syllable duration`, `Speech rate`) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+  caption = "Average articulation rate (number of syllables divided by total 
+  phonation time), syllables duration (in milliseconds), and speech rate (number 
+  of syllable divided by total time) for each variety of the acoustic stimuli 
+  presented to listeners.",
+    label = "table-stimuli-sr")
+```
+
 Figure \@ref(fig:plot-sm-random-speech-rate) plots the posterior medians along with 66% and 95% HDI of standardized articulation rate for each variety. 
 The plot shows that, generally, there was not a lot of variability between varieties. 
 Though some of the slower varieties are also those in which we see higher response accuracy (compare with Figure \@ref(fig:plot-learner-accuracy-rt-by-speaker-variety)), that was not always the case. 
 That is, some of the faster varieties also had high response accuracy, e.g., Mexican Spanish. 
 
-(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians along with 66% and 95% HDI.
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians along with 66% and 95% HDI. The value '0' on the horizontal axis represents the grand mean in the standardized space, which is equivalent to `r sr_grand_mean` syllables per second.
 
 ```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)"}
 knitr::include_graphics(
@@ -323,18 +383,154 @@ knitr::include_graphics(
 ```
 
 
-*Acoustic analysis*. 
+*Acoustic description*. In this subsection we provide examples of intonation contours for the four utterance types (broad focus state, narrow focus statement, wh- question, yes/no question) from the speakers of our eight varieties of Spanish (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
+Using the recordings, we generated figures that display the waveform, spectrogram, and fundamental frequency contours. 
+The figures are accompanied with two annotation tiers: an orthographic tier and a tone tier. 
+We use this information together to identify associations between tonal targets and specific structure within example utterances following the Autosegmental Metrical model [@pierrehumbert1980phonology]. 
+We follow the conventions of the Spanish Tones and Break Indices (Sp_ToBI) and its revisions [@beckman2002intonation; @sosa2003notacion; @face2007rising; @vilaplana2008notacion]. 
+Our description is not meant to be exhaustive, but rather to give the interested reader an idea of how some of the contours included in our stimuli looked. 
+Here we provide a single example of each utterance type from each speaker (Figures \@ref(fig:plot-spectrogram-castilian)-\@ref(fig:plot-spectrogram-puertorican)), though we encourage the interested reader to take a look/listen to all items, which are freely available on the OSF in the `data/stimuli` directory. 
 
-Spectrograms \@ref(fig:plot-spectrogram-andalusian)
+The statement utterances from our speaker of Madrid Spanish included a nuclear configuration of L\* L\%. 
+The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-castilian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
+Wh- and yes/no question had a similar prenuclear distinction, respectively. 
+Our speaker also tended to use a final rise (L\* HH\%) in wh- questions, which differs from the more common final fall. 
+This is often associated with politeness [@quilis1993; @sosa2003], or possibly "[...] a nuance of interest and greater speaker involvement in the speech act" [@estebas_prieto2010, p. 35]. 
+We believe we may have obtained more formal utterances, or possibly 'lab' speech due to the context in which the stimuli were recorded, i.e., in a lab.^[For more information on lab speech, see @face2003intonation and @xu2010defense.]
+For more examples, see <http://prosodia.upf.edu/atlasentonacion/enquestes/espanol/madrid/index-english.html#maptask> ("¿Dónde está tu gasolina?", minute: -3:18). 
+For more description of Madrileño Spanish see also @quilis1981, @quilis1987, and @sosa1999.
 
-(ref:plot-spectrogram-andalusian) Stuff they made me do.
+(ref:plot-spectrogram-castilian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 29 year old female speaker of Madrileño Spanish.
+
+```{r, 'plot-spectrogram-castilian', fig.cap="(ref:plot-spectrogram-castilian)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_castilian.pdf")
+  )
+```
+
+Figure \@ref(fig:plot-spectrogram-andalusian) plots the four utterance types as spoken by the Andalusian speaker. 
+Similar to speaker of Madrileño Spanish, we do not see a major distinction between declaratives in nuclear position (H+L\* L\%). 
+We found a tendency for this speaker to a use statement-of-the-obvious pattern where we elicited narrow focus. 
+We show the nuclear configuration for wh- questions as L+¡H\* L\%, but this speaker also used L+H\* L\%. 
+A final rise for wh- questions is also documented in this variety [@henriksen2010development] and is associated with formality. 
+For yes-no questions, the boundary tone was typlically HH\%. 
+More information on Western Andalusian intonation is available @sosa1999 and @henriksen2012transcription. 
+
+(ref:plot-spectrogram-andalusian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Andalusian (San Fernando, Cádiz) Spanish.
 
 ```{r, 'plot-spectrogram-andalusian', fig.cap="(ref:plot-spectrogram-andalusian)"}
 knitr::include_graphics(
-    here("figs", "stimuli", "spectrogram_andaluz.png")
+    here("figs", "stimuli", "spectrogram_andalusian.pdf")
   )
-
 ```
+
+The Argentine speaker (Figure \@ref(fig:plot-spectrogram-argentine)) generally produced declaratives with L\* L\% nuclear configurations. 
+Notably absent from the narrow focus stimuli is the tritonal accent, L+H\*+L [See @sosa1999; @labastia2006prosodic, among others]. 
+For wh- and yes/no questions, we see L\% and HL\% nuclear boundary tones, respectively. 
+For more information on Argentine intonation we recommend @colantoni2004convergence,  @colantoni2011broad, and @labastia2011procedural. 
+
+(ref:plot-spectrogram-argentine) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 27 year old male speaker of Argentine (Buenos Aires) Spanish.
+
+```{r, 'plot-spectrogram-argentine', fig.cap="(ref:plot-spectrogram-argentine)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_argentine.pdf")
+  )
+```
+
+
+Figure \@ref(fig:plot-spectrogram-chilean) illustrates example utterances from the Chilean speaker. 
+We found that broad and narrow focus statements differed in their nuclear configuration (H+L\* L\% vs. L+H\* L\%, respectively). 
+We also noted that wh- and yes/no questions differed in the nuclear pitch accents (L\* vs. H+L\*, respectively). 
+For more information on Chilean intonation, we refer the reader to @lira2000prosodia and @ortiz2003acentos. 
+
+(ref:plot-spectrogram-chilean) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 42 year old female speaker of Chilean (Valparaíso) Spanish.
+
+```{r, 'plot-spectrogram-chilean', fig.cap="(ref:plot-spectrogram-chilean)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_chilean.pdf")
+  )
+```
+
+In Figure \@ref(fig:plot-spectrogram-cuban) we see example utterances from the Cuban speaker. 
+We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and L+>H\*, respectively). 
+Both questions showed followed falling patterns in nuclear position. 
+For example, we found L\* L\% in wh- questions and L+H\* L\% in yes/no questions. 
+In prenuclear position, our speaker also used L+>H\* in yes/no questions. 
+For more information, the interested reader can consult @sosa1999, or @alvord2006spanish for an account of Cuban Spanish in contact with English in Miami, Florida. 
+
+(ref:plot-spectrogram-cuban) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 55 year old female speaker of Cuban (Havana) Spanish.
+
+```{r, 'plot-spectrogram-cuban', fig.cap="(ref:plot-spectrogram-cuban)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_cuban.pdf")
+  )
+```
+
+
+The Mexican speaker distinguished between broad and narrow focus using a L\* L\% pattern in the former and L+H\* H\% in the latter. 
+For wh- questions in this variety, final falls are considered the unmarked configuration [@sosa2003], though we observed some rises, as in Figure \@ref(fig:plot-spectrogram-mexican) (bottom left plot). 
+For yes/no questions this speaker produced a L\* HH\% nuclear configuration. 
+Mexican Spanish is well-documented. 
+We refer the reader to @quilis1981, @quilis1987, @quilis1993, @sosa1999, @butragueno2003hacia, and @butragueno2004configuraciones for more information.
+
+(ref:plot-spectrogram-mexican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old female speaker of Mexican (Mexico City) Spanish.
+
+```{r, 'plot-spectrogram-mexican', fig.cap="(ref:plot-spectrogram-mexican)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_mexican.pdf")
+  )
+```
+
+
+The statement utterances from our speaker of Peruvian Spanish included a nuclear configuration of L\* L\%. 
+The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-peruvian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
+With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* HH\% for yes-no questions. 
+More information on Peruvian intonation is available in @sosa1999 and @orourke2005intonation. 
+
+(ref:plot-spectrogram-peruvian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old male speaker of Peruvian (Lima) Spanish.
+
+```{r, 'plot-spectrogram-peruvian', fig.cap="(ref:plot-spectrogram-peruvian)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_peruvian.pdf")
+  )
+```
+
+In Figure \@ref(fig:plot-spectrogram-puertorican) we see example utterances from the Puerto Rican speaker. 
+We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and H\*, respectively). 
+On occasion this speaker produced final rises for wh- questions (L\* HH\%), but also often used a falling contour. 
+For yes/no questions, this speaker produced H+L\* L\% configurations. 
+More information on Puerto Rican intonation is available to the reader in @quilis1981, @quilis1987, @quilis1993, @sosa1999, @sosa2003, @armstrong2010puerto, and @armstrong2012development, among many others.
+
+(ref:plot-spectrogram-puertorican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Puerto Rican (Ponce) Spanish.
+
+```{r, 'plot-spectrogram-puertorican', fig.cap="(ref:plot-spectrogram-puertorican)"}
+knitr::include_graphics(
+    here("figs", "stimuli", "spectrogram_puertorican.pdf")
+  )
+```
+
+In sum, we see that the acoustic stimuli used for the 2AFC task of the present project presents a large amount of between-variety and within-speaker variability. 
+Most notably, our declarative utterances are often difficult to distinguish and we do not often see the typical L+H\* L\%) nuclear configuration that most commonly seen in the extant literature. 
+We believe this is likely due to the fact that the manner in which we elicited narrow focus differs from other studies, which tend to use more specific pragmatic contexts (narrow focus correction, narrow focus contradiction), as opposed to a narrow focus utterance produced from answering an information seeking wh- question. 
+That is, it may be the case that the use of a different pragmatic context and lab speech may result in contours different from those attested in other studies. 
+This likely resulted in our narrow focus condition being easier than we initially intended. 
+Our method of eliciting narrow focus follows that of @bustin_2020, of which our study is a conceptual replication. 
+We do not have access to their auditory stimuli, thus we cannot confirm which pitch contours were most common in their narrow focus condition. 
+To illustrate the panhispanic and within-speaker variability of statements and questions, we plot the individual pitch contours from each utterance type by variety in Figure \@ref(fig:plot-stimuli-pitch-contours). 
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+(ref:plot-stimuli-pitch-contours) Pitch contours as function of time for utterance type and variety of Spanish. Thinner, opaque lines represent individual items, and thicker, dark lines represent the average contour trajectory. F0 values were log transformed and standardized for between speaker/variety comparability.
+
+```{r, 'plot-stimuli-pitch-contours', fig.cap="(ref:plot-stimuli-pitch-contours)"}
+knitr::include_graphics(
+    here("figs", "manuscript", "stimuli_pitch_contours.pdf")
+  )
+```
+
+
 
 
 **Randomization check across participants**. For the purposes of our research questions, it was important that every participant be presented with stimuli from all of the Spanish varieties to which we had access. 
@@ -351,9 +547,7 @@ knitr::include_graphics(
 ```
 
 
-*Sentences*. Table \@ref(tab:table-stimuli-items)
-
-
+*Items*. Table \@ref(tab:table-stimuli-items) provides a list of all of the target items used for each utterance type.
 
 ```{r}
 #| label: print-stim
@@ -378,9 +572,44 @@ learners %>%
       sentence_type == "interrogative-partial-wh" ~ "Wh- question", 
       sentence_type == "interrogative-total-yn" ~ "yes/no question"), 
     Item = sentence) %>% 
+  mutate(Item = case_when(
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Ana lleva el abrigo" ~ "(¿Qué lleva Ana?) Ana lleva el abrigo",
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Daniel iba a Bolivia" ~ "(¿A dónde iba Daniel?) Daniel iba a Bolivia", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "David leía el libro" ~ "(¿Qué leía David?) David leía el libro", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "El bebe comía muy bien" ~ "(¿Cómo comía el bebé?) El bebe comía muy bien", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "El hombre mira la luna" ~ "(¿Qué mira el hombre?) El hombre mira la luna", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "El niño oye el río" ~ "(¿Qué oye el niño?) El niño oye el río", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Emilio ama la marcha" ~ "(¿Qué ama Emilio?) Emilio ama la marcha", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "La maestra vive en Paris" ~ "(¿Dónde vive la maestra?) La maestra vive en Paris", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "La niña lava el plato" ~ "(¿Qué lava la niña?) La niña lava el plato", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Manuela vende el carro" ~ "(¿Qué vende Manuela?) Manuela vende el carro", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "María bebe el vino" ~ "(¿Qué bebe María?) María bebe el vino", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Maríano habla del tiempo" ~ "(¿De qué habla Mariano?) Maríano habla del tiempo", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Marta abre el regalo" ~ "(¿Qué abre Marta?) Marta abre el regalo", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Mi madre come la fruta" ~ "(¿Qué come tu madre?) Mi madre come la fruta", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Mi novio viene del lago" ~ "(¿De dónde viene tu novio?) Mi novio viene del lago", 
+    `Utterance type` == "Narrow focus statement" & 
+      Item == "Mi tía odia la lluvia" ~ "(¿Qué odia tu tía?) Mi tía odia la lluvia", 
+    TRUE ~ .$sentence)) %>% 
   mutate(
     Item = if_else(`Utterance type` %in% c("Wh- question", "yes/no question"), 
     glue("¿{.$Item}?"), .$Item)) %>% 
+  arrange(`Utterance type`) %>% 
   transmute(
     `Utterance type` = case_when(
       sentence == "Ana lleva el abrigo" & sentence_type == "declarative-broad-focus" ~ .$`Utterance type`, 

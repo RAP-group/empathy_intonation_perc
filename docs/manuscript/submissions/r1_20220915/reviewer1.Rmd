@@ -97,7 +97,7 @@ This information is also included in the discussion section and the supplementar
 https://github.com/RAP-group/empathy_intonation_perc/issues/35
 -->
 
-At the recommendation of all three reviewers we have included more information about the stimuli used in our study (please see the introduction section and the supplementary materials, as it is too much information to include here). 
+At the recommendation of all three reviewers we have included more information about the stimuli used in our study (please see the introduction and methods sections as well as the supplementary materials, as it is too much information to include here). 
 The 4 sentence types, while not exhaustive, were selected for two reasons. 
 First, they are the most commonly analyzed utterances in the intonational phonology literature. 
 Thus, these tunes represent the intonational contours about which we know the most. 
@@ -146,7 +146,7 @@ Importantly, *why* and *how* particular acoustic cues lead to distinct processin
 A priori, one would have reason to believe that the effects of empathy on processing intonation-meaning associations would be present across the board, i.e., for any utterance type. 
 In our data, we find that higher empathy is moderately associated with higher accuracy (holding proficiency constant) for all utterance types, with the exception of yes/no questions. 
 Importantly, this also happens to be the most difficult utterance condition in our data---and that of @bustin_2020---as well as the condition for which the listeners show the least sensitivity (See d' analysis in the supplementary materials). 
-At this juncture, our focus is on expanding this line of research in two ways: (1) to individuals with different linguistic experience (specifically, second language learners), and (2) to different communicative situations (utterance types). 
+At this juncture, our focus is on expanding this line of research in two ways: (1) to individuals with different linguistic experience (specifically, second language learners), and (2) to different communicative/pragmatic situations (utterance types). 
 We are not concerned (yet) with understanding *why* different pitch contours affect intonation perception, particularly with regard to the role of empathy, because there is inherent variability in how speakers realize their communicative intentions, at the variety-level and at the individual-level, within utterance types. 
 This variability is present in our stimuli. 
 We believe a fruitful avenue for future research is to explore *why* and *how* particular acoustic realizations of pitch within utterance types lead to distinct processing outcomes, though this is not the specific goal of this paper.
@@ -189,7 +189,7 @@ A priori we would have had no justification for this hypothesis had we not colle
 In hindsight, it would have made sense to pre-register a hypothesis stating that participants would be more accurate responding to speakers of varieties with which they were more familiar. 
 However, we would not have been able to answer this question---at least not to the extent one would hope---as the listeners in the data we collected mainly stated being most familiar with U.S. Spanish (See pp. 32-33 for brief discussion). 
 We now offer an additional plausible explanation based on familiarity with Spanish.  
-Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties (Peninsular and Mexican Spanish). 
+Specifically, we analyzed the data from the participants who claimed to be most familiar with a Spanish variety that was included in our speaker varieties: Peninsular and Mexican Spanish (note: we make the assumption that 'Peninsular' is most closely associated with the Madrileño speaker). 
 We coded the participants' responses to familiar versus unfamiliar varieties and fit a Bayesian logistic regression model to the data (complete details provided in the manuscript). 
 In short, we find that, marginalizing over proficiency and empathy, participants were indeed more accurate when responding to a familiar variety. 
 This is true for all utterance types to some degree, but more clearly the case for questions (likely because responses to declarative utterances were near ceiling). 
@@ -197,7 +197,7 @@ Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-lea
 
 \clearpage
 
-(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
+(ref:plot-learner-variety-familiarity) Response accuracy as a function of utterance type for unfamiliar and familiar Spanish varieties. Values represent posterior medians along with the 95% HDI for unfamiliar and familiar conditions (left panel), as well as the posterior difference (familiar - unfamiliar; right panel). The posterior predictive distribution is based on data from `r familiarity$Mexico$n_v + familiarity$Spain$n_v` participants who claimed to be familiar with Mexican (n = `r familiarity$Mexico$n_v`) and Peninsular (n = `r familiarity$Spain$n_v`) Spanish.
 
 ```{r, 'plot-learner-variety-familiarity', fig.cap="(ref:plot-learner-variety-familiarity)", out.width="100%"}
 knitr::include_graphics(here("figs", "manuscript", "learner_variety_familiarity.pdf"))
@@ -211,9 +211,9 @@ read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>%
     Values represent posterior medians along with the 95% HDI for unfamiliar 
     and familiar conditions, along with the posterior difference 
     (familiar - unfamiliar). The posterior predictive distribution is based on 
-    data from participants who claimed to be familiar with Mexican 
-    (n =  {familiarity$Mexico$n_v}) and Peninsular 
-    (n = {familiarity$Spain$n_v}) Spanish."), 
+    data from {familiarity$Mexico$n_v + familiarity$Spain$n_v} participants 
+    who claimed to be familiar with Mexican (n =  {familiarity$Mexico$n_v}) 
+    and Peninsular (n = {familiarity$Spain$n_v}) Spanish."),
     label = "table-learner-variety-familiarity-conditional-effects")
 ```
 
@@ -222,7 +222,7 @@ This was the only motivation for this hypothesis and precisely what was preregis
 Copied below is the relevant change to the introduction. 
 
 > Finally, with regard to RQ3, we hypothesize that, overall, L2 learners will have the most difficulty (lower accuracy, slower response time) with the Cuban variety. 
-This hypothesis is grounded in exploratory analyses of pilot data collected from `r n_natives` monolingual Spanish speakers (See Supplementary Materials for more information). 
+This hypothesis is grounded in exploratory analyses of pilot data collected from `r n_natives` monolingual Spanish speakers in which responses to the Cuban variety were the least accurate (See Supplementary Materials for more information). 
 
 \Done
 \Easy
@@ -239,7 +239,26 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/38
 -->
 
 We have included acoustic and phonological descriptions of the stimuli along with a complete list of items in the supplementary materials of the revised manuscript. 
-All items within an utterance type followed the same syntactic structure. 
+All items within an utterance type followed the same syntactic structure, with the exception of the wh- questions, which require a wh- word. 
+In theory, the presence alone of the wh- word could sway the listener to believing they are hearing a question, however, these words are also present in statements. 
+The intonational contour is necessary for one to differentiate between the two. 
+Importantly, the participants were generally not accurate for either question type (approx. 63% for yes/no questions and approx. 72% wh- questions, marginalizing over proficiency and empathy). 
+We provide an example in Table \@ref(tab:item-ex-table). 
+
+\footnotesize
+```{r}
+#| label: ex-stim-table
+tribble(
+~'Utterance type', ~'Prompt', ~'Item', ~'Translation', 
+ "Broad focus statement", "n/a", "\\emph{Marta abre el regalo}", "Marta opens the gift.", 
+ "Narrow focus statement", "¿Qué abre Marta?", "\\emph{Marta abre el regalo}", "(What does Marta open?) Marta opens the gift.",
+ "Wh- question", "n/a", "\\emph{¿Por qué abre el regalo?}", "Why does she open the gift?", 
+ "y/n question", "n/a", "\\emph{¿Marta abre el regalo?}", "Does Marta open the gift?") %>% 
+  knitr::kable(format = "pandoc", escape = F, label = "item-ex-table", 
+    caption = "Example stimuli from the 2AFC task.")
+```
+
+\normalsize
 
 \Done
 \Easy
@@ -253,7 +272,7 @@ All items within an utterance type followed the same syntactic structure.
 https://github.com/RAP-group/empathy_intonation_perc/issues/39
 -->
 
-The data from `r n_natives` monolingual Spanish speakers was used to pilot the items/task. 
+The data from `r n_natives` monolingual Spanish speakers were used to pilot the items/task. 
 In other words, these listeners did not rate the quality of the items. 
 We have included our exploratory analyses of the pilot data in the supplementary materials. 
 As mentioned previously, accuracy was high (lowest for the Cuban and Puerto Rican varieties when responding to questions). 
@@ -271,7 +290,7 @@ Unsurprisingly (though of interest), when looking at the monolingual listeners' 
 https://github.com/RAP-group/empathy_intonation_perc/issues/40
 -->
 
-This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)) and has been included in the revised manuscript. 
+This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)) and has been included in the revised manuscript and the supplementary materials. 
 
 \Done
 \Easy
@@ -287,7 +306,38 @@ This issue was addressed above (See Figure \@ref(fig:plot-learner-variety-famili
 https://github.com/RAP-group/empathy_intonation_perc/issues/41
 -->
 
-\WorkInProgress
+In the revised manuscript we have focused our discussion on what we believe to be the most relevant studies with regard to sentence comprehension and empathy. 
+We have also expanded our discussion concerning why we don't find an effect for empathy with regard to yes/no questions. 
+Of particular interest to the reviewer are pages 31-33.
+For convenience, we include relevant excerpts below. 
+
+> In line with previous studies [e.g., @bustin_2020], we found that yes/no questions were most difficult for L2 learners of Spanish, followed by wh- questions and broad focus and narrow focus statements. 
+An exploratory analysis using d' found that learner sensitivity to the utterance types followed the same pattern. 
+While it is not clear exactly why yes/no question are the most difficult, one possibility is that wh- questions pose less of a challenge because they contain a wh- word (e.g., *cuándo*, *cómo*, etc.). 
+In other words, it might be the presence of a lexical cue in our task [and that of @bustin_2020] that facilitates the interpretation of a wh- question in addition to intonation. 
+At this juncture this possibility cannot be discarded, though it is worth noting that the presence of these words alone does not imply a question. 
+That is to say, in specific contexts these same words appear in statements as well, e.g., *Que bebe María*, *Que beba María*, etc. 
+A specific intonation contour is obligatory to force a question interpretation. 
+Moreover, apart from the propositional content, a wh- question also implies a presupposition, and, thus, is more pragmatically complex. 
+On the other hand, the yes/no questions in our experimental task have the same syntactic structure as the declarative statements. 
+Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task.
+
+As well as...
+
+> Additionally, our study addressed the question *Do pragmatic skills---specifically, empathy---modulate the rate of development in L2 prosody?* 
+This question was motivated by a line of research showing that empathy influences language processing in monolingual populations [@esteve2016role; @esteve2020empathy; @orrico2020individual].
+Though the construct *empathy* has been considered in the SLA literature, the current body of research is limited to studies on pronunciation accuracy [i.e., @guiora1972empathy; @rota2009cognitive, among others]. 
+Thus, we extend research on empathy to L2 phonological acquisition as it relates to speech perception. 
+Using a cross-sectional design, we show (1) that empathy, as measured by the empathy quotient [@baron2004empathy], did indeed modulate response accuracy and the decision-making process, and (2) *how* empathy affected sentence processing was related to L2 proficiency. 
+Specifically, we found response accuracy increased as a function of proficiency, independent of empathy for yes/no questions, but not wh- questions. 
+In the case of the latter, we found empathy to have a compounding effect on the correlation between accuracy and proficiency, such that higher empathy individuals showed more accuracy at lower proficiency levels when compared with their lower empathy counterparts. 
+This is taken as evidence suggesting that pragmatic skill can modulate the rate of development in L2 prosody. 
+That is to say, higher empathy individuals may develop L2 prosody at an earlier stage than lower empathy individuals. 
+That being said, we do not find the same effect with yes/no questions. 
+This finding is quite puzzling, particularly because previous research on sentence processing has found an effect for empathy in yes/no questions, e.g., in Salerno Italian [@orrico2020individual]. 
+At this time, we are uncertain as to why our results differ in this regard, though the nature of the outcome variable measured in the task used in @orrico2020individual (certainty scores bounded at 0 and 100) may have provided a more fine-grained window into the effect of empathy. 
+
+\Done
 \Easy
 
 
@@ -299,19 +349,17 @@ https://github.com/RAP-group/empathy_intonation_perc/issues/41
 https://github.com/RAP-group/empathy_intonation_perc/issues/42
 -->
 
-<!-- From accuracy model --> 
-r_eq_lt_bf
-r_eq_lt_nf
-r_eq_lt_yn
-r_eq_lt_wh
+The relationship between empathy and proficiency is estimated in a number of ways. 
+First, the effect of the interaction between the two predictors on response accuracy is estimated for each utterance type and are reported in the manuscript. 
+Second, our model also estimated this correlation in the grouping effects and provided no compelling evidence that the two predictors are correlated ($\beta$ = `r r_eq_lt_random_post$Median`, HDI = `r r_eq_lt_random_post$HDI`, ROPE = `r pull(r_eq_lt_random_post[, 4])`, MPE = `r r_eq_lt_random_post$MPE`). 
+Specifically, we can see that the most plausible estimate is quite small, that the distribution of plausible values is quite wide, and that there is only approximately a 58% chance the correlation is positive (it is almost equally likely to be negative). 
+Thus, we feel confident that the participants with higher proficiency are not necessarily the same ones with higher empathy. 
 
-<!-- posterior of lextale x eq correlation from grouping effects -->
-r_eq_lt_random_post
+<!-- Get posterior of lextale x eq correlation 
+`r r_eq_lt_post`
+-->
 
-<!-- Get posterior of lextale x eq correlation -->
-r_eq_lt_post 
-
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -341,6 +389,59 @@ The description regarding how the variable is coded is included (a) for the sake
 https://github.com/RAP-group/empathy_intonation_perc/issues/44
 -->
 
-\WorkInProgress
+We thank the reviewer for this comment. 
+Respectfully, we believe the reviewer may has missinterpreted our intentions in this section of the discussion. 
+We are not providing hypotheses with the intention of testing them, but rather we are proving plausible explanations for what we have found in our study. 
+Our pre-registered hypotheses are explained in the introduction and revisited in light of the results in the discussion. 
+Having said that, we would like to address the three points made by the reviewer. 
+The reviewer states: 
+
+\textbf{"First, they state that “familiarity with the target variety may account for variety-specific response accuracy”, although this cannot be derived from the results you obtained since most of your listeners were most familiar with US Spanish (which was not in the stimuli)."}
+
+We agree with the reviewer that we cannot determine this with the data we have collected. 
+We did not anticipate that our learners would identify U.S. Spanish as the variety they were most familiar with as frequently as they did. 
+Nonetheless, we did include a familiarity analysis based on a subset of the data (See explanation above, as well as Figure \@ref(fig:plot-learner-variety-familiarity) and Table \@ref(tab:table-learner-variety-familiarity-conditional-effects)). 
+This information has been included in the discussion of the revised manuscript and additional details are available in the supplementary materials. 
+
+\textbf{"Second, they state that they may derive from the fact that distinct varieties produce each sentence type using distinct intonational patterns, although it is impossible to evaluate if this hypothesis is plausible because details on the intonational features of the stimuli are missing and because results are never matched to the nature of the contour that was perceived."}
+
+Again, we would like to stress that this is not a hypothesis we intend to test in our project. 
+We are primarily focused on how pragmatic meaning is inferred with regard to proficiency and empathy. 
+We put forth the aforementioned explanation for this very reason. 
+Future research should control the pitch contours of the utterance types in order to say *why*/*how* certain contours may (or may not) be more difficult than others. 
+Nonetheless, we have included extensive acoustic detail regarding our stimuli, which are freely available for future researchers to use. 
+
+\textbf{"Finally, the authors propose an explanation linked to the distinct speech rate used in distinct varieties. The authors should provide a detailed description of the speech rate of the stimuli, by variety, in order for the reader to be able to evaluate if this explanation is indeed plausible."}
+
+We agree with the reviewer that more information regarding the speech rate of each variety should have been included. 
+The revised manuscript includes more detail, particularly Table \@ref(tab:table-stimuli-sr) and Figure \@ref(fig:plot-sm-random-speech-rate), which we also include here for convenience. 
+
+```{r}
+#| label: speech-rate-table
+mono_speech_rates_avg %>% 
+  mutate(`Syllable duration` = round(`Avg. syllable duration` * 1000), 
+    Variety = case_when(
+      Variety == "Penninsular" ~ "Madrileño", 
+      Variety == "Puertorican" ~ "Puerto Rican", 
+      TRUE ~ .$Variety), 
+    across(c("Articulation rate", "Speech rate"), specify_decimal, k = 2)) %>% 
+  select(Variety, `Articulation rate`, `Syllable duration`, `Speech rate`) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+  caption = "Average articulation rate (number of syllables divided by total 
+  phonation time), syllable duration (in milliseconds), and speech rate (number 
+  of syllables divided by total time) for each variety of the acoustic stimuli 
+  presented to listeners.",
+    label = "table-stimuli-sr")
+```
+
+(ref:plot-sm-random-speech-rate) Standardized articulation rate as a function of speaker variety. Points represent posterior medians along with 66% and 95% HDI.
+
+```{r, 'plot-sm-random-speech-rate', fig.cap="(ref:plot-sm-random-speech-rate)", out.width="100%"}
+knitr::include_graphics(
+  here("figs", "manuscript", "sm_speech_rate.pdf")
+  )
+```
+
+\Done
 \Easy
 

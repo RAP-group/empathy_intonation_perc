@@ -62,6 +62,7 @@ sp = To Spectrogram: 0.005, hz_max, 0.002, 20, "Gaussian"
 if pitch$ != "FALSE"
   selectObject: wav
   pitch_obj = To Pitch: 0, pitch_min, pitch_max
+  #pitch_obj = To Pitch (cc): 0, pitch_min, 15, "no", 0.03, 0.45, 0.01, 0.35, 0.14, pitch_max
 endif
 
 # Set up plotting params ############################################

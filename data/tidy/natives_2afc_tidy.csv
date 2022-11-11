@@ -6399,6 +6399,70 @@ participant,group,eng_variety,spn_variety,have_ln,aoa,check_pass,check_fails,ite
 601948b0dc1e1f01728fda05,native,NA,Spain,no,NA,NA,NA,andalusian_match_declarative-narrow-focus_Maria-bebe-el-vino.wav,mexican,match,declarative-narrow-focus,Maria bebe el vino,0,0,1,1.4027,61,1.08,0.3227
 601948b0dc1e1f01728fda05,native,NA,Spain,no,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav,mexican,mismatch,interrogative-total-yn,La maestra vive en Paris,1,1,1,1.91955,62,1.43,0.48955000000000015
 601948b0dc1e1f01728fda05,native,NA,Spain,no,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav,chilean,mismatch,declarative-broad-focus,El nino oye el rio,0,0,1,2.135815,63,1.39,0.7458150000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Por-que-abre-el-regalo.wav,cuban,match,interrogative-partial-wh,Por que abre el regalo,1,1,1,4.2746,0,1.22,3.0546000000000006
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_Mi-novio-viene-del-lago.wav,cuban,mismatch,declarative-broad-focus,Mi novio viene del lago,0,0,1,3.0256,1,1.4,1.6256
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Cuando-lleva-el-abrigo.wav,cuban,match,interrogative-partial-wh,Cuando lleva el abrigo,1,1,1,3.3083,2,1.18,2.1283000000000003
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Por-que-hablaba-del-agua.wav,cuban,match,interrogative-partial-wh,Por que hablaba del agua,1,1,1,3.7316,3,1.38,2.3516
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Marta-abre-el-regalo.wav,cuban,match,declarative-broad-focus,Marta abre el regalo,0,0,1,2.4697,4,1.33,1.1397
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_David-leia-el-libro.wav,cuban,match,declarative-narrow-focus,David leia el libro,0,0,1,3.5239,5,1.35,2.1738999999999997
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Daniel-iba-a-Bolivia.wav,cuban,match,declarative-narrow-focus,Daniel iba a Bolivia,0,0,1,2.3001,6,1.29,1.0101
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Por-que-ama-la-navidad.wav,cuban,match,interrogative-partial-wh,Por que ama la navidad,1,1,1,2.5004,7,1.17,1.3304
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Mariano-habla-del-tiempo.wav,cuban,match,declarative-narrow-focus,Mariano habla del tiempo,0,0,1,2.5521,8,1.24,1.3120999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Maria-bebe-el-vino.wav,cuban,match,declarative-narrow-focus,Maria bebe el vino,0,0,1,1.9545,9,1.09,0.8644999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Por-que-oia-el-rio.wav,cuban,mismatch,interrogative-partial-wh,Por que oia el rio,1,1,1,4.4517,10,1.29,3.1616999999999997
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_El-hombre-mira-la-luna.wav,cuban,mismatch,declarative-narrow-focus,El hombre mira la luna,0,0,1,3.1861,11,1.22,1.9661000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Cuando-comia-la-fruta.wav,cuban,mismatch,interrogative-partial-wh,Cuando comia la fruta,1,1,1,1.9122,12,1.03,0.8821999999999999
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_Mi-madre-come-la-fruta.wav,cuban,mismatch,declarative-broad-focus,Mi madre come la fruta,0,0,1,1.5454,13,1.37,0.1754
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav,cuban,mismatch,declarative-broad-focus,El hombre mira la luna,0,0,1,1.6487,14,1.13,0.5187000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_El-hombre-mira-la-luna.wav,cuban,mismatch,interrogative-total-yn,El hombre mira la luna,1,1,1,2.2756,15,1.11,1.1655999999999997
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Daniel-iba-a-Bolivia.wav,cuban,match,interrogative-total-yn,Daniel iba a Bolivia,1,1,1,4.2745,16,1.31,2.9644999999999997
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Emilio-ama-la-marcha.wav,cuban,match,declarative-narrow-focus,Emilio ama la marcha,0,0,1,1.8703,17,1.26,0.6103000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_La-maestra-vive-en-Paris.wav,cuban,mismatch,declarative-narrow-focus,La maestra vive en Paris,0,0,1,1.7616,18,1.21,0.5516000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_Mi-tia-odia-la-lluvia.wav,cuban,mismatch,interrogative-total-yn,Mi tia odia la lluvia,1,1,1,3.4742,19,1.22,2.2542
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_El-nino-oye-el-rio.wav,cuban,mismatch,declarative-narrow-focus,El nino oye el rio,0,0,1,3.0571,20,1.24,1.8171000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Ana-lleva-el-abrigo.wav,cuban,match,declarative-narrow-focus,Ana lleva el abrigo,0,0,1,1.6828,21,1.08,0.6028
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_La-maestra-vive-en-Paris.wav,cuban,mismatch,interrogative-total-yn,La maestra vive en Paris,1,1,1,6.2475,22,1.4,4.8475
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Mariano-habla-del-tiempo.wav,cuban,match,declarative-broad-focus,Mariano habla del tiempo,0,0,1,7.6076,23,1.46,6.1476
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_El-bebe-comia-muy-bien.wav,cuban,mismatch,interrogative-total-yn,El bebe comia muy bien,1,1,1,2.8547,24,1.29,1.5646999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Ana-lleva-el-abrigo.wav,cuban,match,interrogative-total-yn,Ana lleva el abrigo,1,1,1,2.4335,25,1.13,1.3035
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Por-que-iba-a-Bolivia.wav,cuban,match,interrogative-partial-wh,Por que iba a Bolivia,1,1,1,2.6006,26,1.2,1.4006
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_La-nina-lava-el-plato.wav,cuban,mismatch,declarative-broad-focus,La nina lava el plato,0,0,1,6.0522,27,1.22,4.8322
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Manuela-vende-el-carro.wav,cuban,match,declarative-broad-focus,Manuela vende el carro,0,0,1,2.2532,28,1.39,0.8632000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Por-que-desayuna-muy-bien.wav,cuban,mismatch,interrogative-partial-wh,Por que desayuna muy bien,1,1,1,3.2571,29,1.36,1.8970999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Emilio-ama-la-marcha.wav,cuban,match,declarative-broad-focus,Emilio ama la marcha,0,0,1,2.3902,30,1.23,1.1602000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_El-nino-oye-el-rio.wav,cuban,mismatch,declarative-broad-focus,El nino oye el rio,0,0,1,3.264,31,1.39,1.8739999999999999
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_David-leia-el-libro.wav,cuban,match,declarative-broad-focus,David leia el libro,0,0,1,2.7451,32,1.41,1.3351
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Manuela-vende-el-carro.wav,cuban,match,declarative-narrow-focus,Manuela vende el carro,0,0,1,2.5174,33,1.38,1.1374
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_Mi-madre-come-la-fruta.wav,cuban,mismatch,declarative-narrow-focus,Mi madre come la fruta,0,0,1,1.8407,34,1.26,0.5807
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Emilio-ama-la-marcha.wav,cuban,match,interrogative-total-yn,Emilio ama la marcha,1,1,1,3.2005,35,1.28,1.9204999999999999
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_La-nina-lava-el-plato.wav,cuban,mismatch,interrogative-total-yn,La nina lava el plato,1,1,1,1.6683,36,1.19,0.47829999999999995
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-narrow-focus_Marta-abre-el-regalo.wav,cuban,match,declarative-narrow-focus,Marta abre el regalo,0,0,1,1.8929,37,1.18,0.7129000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Cuando-bebia-el-vino.wav,cuban,match,interrogative-partial-wh,Cuando bebia el vino,1,1,1,2.3286,38,1.12,1.2085999999999997
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Por-que-venia-del-lago.wav,cuban,mismatch,interrogative-partial-wh,Por que venia del lago,1,1,1,1.6029,39,1.04,0.5629
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Por-que-vivia-en-Paris.wav,cuban,mismatch,interrogative-partial-wh,Por que vivia en Paris,1,1,1,1.6399,40,1.09,0.5498999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_Mi-tia-odia-la-lluvia.wav,cuban,mismatch,declarative-broad-focus,Mi tia odia la lluvia,0,0,1,1.9045,41,1.47,0.4345000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_La-nina-lava-el-plato.wav,cuban,mismatch,declarative-narrow-focus,La nina lava el plato,0,0,1,1.8499,42,1.16,0.6899000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Cuando-vendia-el-carro.wav,cuban,match,interrogative-partial-wh,Cuando vendia el carro,1,1,1,2.32,43,1.16,1.16
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Maria-bebe-el-vino.wav,cuban,match,interrogative-total-yn,Maria bebe el vino,1,1,1,1.7654,44,1.33,0.4354
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_Mi-madre-come-la-fruta.wav,cuban,mismatch,interrogative-total-yn,Mi madre come la fruta,1,1,1,2.0215,45,1.27,0.7515000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Manuela-vende-el-carro.wav,cuban,match,interrogative-total-yn,Manuela vende el carro,1,1,1,2.9698,46,1.22,1.7498000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_David-leia-el-libro.wav,cuban,match,interrogative-total-yn,David leia el libro,1,1,1,6.0823,47,1.32,4.7623
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Cuando-lavaba-el-plato.wav,cuban,mismatch,interrogative-partial-wh,Cuando lavaba el plato,1,1,1,2.8241,48,1.22,1.6041
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_Mi-tia-odia-la-lluvia.wav,cuban,mismatch,declarative-narrow-focus,Mi tia odia la lluvia,0,0,1,1.586,49,1.3,0.28600000000000003
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Cuando-miraba-la-luna.wav,cuban,mismatch,interrogative-partial-wh,Cuando miraba la luna,1,1,1,2.4475,50,1.17,1.2774999999999999
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_Mi-novio-viene-del-lago.wav,cuban,mismatch,declarative-narrow-focus,Mi novio viene del lago,0,0,1,1.8887,51,1.32,0.5687
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Maria-bebe-el-vino.wav,cuban,match,declarative-broad-focus,Maria bebe el vino,0,0,1,2.3978,52,1.25,1.1478000000000002
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-partial-wh_Cuando-leia-el-libro.wav,cuban,match,interrogative-partial-wh,Cuando leia el libro,1,1,1,1.5661,53,1.18,0.3861000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Ana-lleva-el-abrigo.wav,cuban,match,declarative-broad-focus,Ana lleva el abrigo,0,0,1,1.705,54,1.24,0.4650000000000001
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-narrow-focus_El-bebe-comia-muy-bien.wav,cuban,mismatch,declarative-narrow-focus,El bebe comia muy bien,0,0,1,1.4884,55,1.1,0.38839999999999986
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Mariano-habla-del-tiempo.wav,cuban,match,interrogative-total-yn,Mariano habla del tiempo,1,1,1,2.4139,56,1.44,0.9739
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_El-bebe-comia-muy-bien.wav,cuban,mismatch,declarative-broad-focus,El bebe comia muy bien,0,0,1,1.4649,57,1.32,0.14490000000000003
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_La-maestra-vive-en-Paris.wav,cuban,mismatch,declarative-broad-focus,La maestra vive en Paris,0,0,1,1.6511,58,1.29,0.3611
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_interrogative-total-yn_Marta-abre-el-regalo.wav,cuban,match,interrogative-total-yn,Marta abre el regalo,1,1,1,8.5299,59,1.25,7.2799
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_El-nino-oye-el-rio.wav,cuban,mismatch,interrogative-total-yn,El nino oye el rio,1,1,1,3.1059,60,1.06,2.0459
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-partial-wh_Por-que-odiaba-la-lluvia.wav,cuban,mismatch,interrogative-partial-wh,Por que odiaba la lluvia,1,1,1,1.4844,61,1.38,0.10440000000000005
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav,cuban,mismatch,interrogative-total-yn,Mi novio viene del lago,1,1,1,2.7546,62,1.36,1.3945999999999998
+199386,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Daniel-iba-a-Bolivia.wav,cuban,match,declarative-broad-focus,Daniel iba a Bolivia,0,0,1,1.8471,63,1.58,0.2670999999999999
 258075,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_declarative-broad-focus_El-hombre-mira-la-luna.wav,cuban,mismatch,declarative-broad-focus,El hombre mira la luna,0,0,1,2.3961,0,1.13,1.2661000000000002
 258075,native,NA,cuban,si,NA,NA,NA,andalusian_mismatch_interrogative-total-yn_Mi-novio-viene-del-lago.wav,cuban,mismatch,interrogative-total-yn,Mi novio viene del lago,1,1,1,1.8518,1,1.36,0.4917999999999998
 258075,native,NA,cuban,si,NA,NA,NA,andalusian_match_declarative-broad-focus_Manuela-vende-el-carro.wav,cuban,match,declarative-broad-focus,Manuela vende el carro,0,0,1,2.601,2,1.39,1.211
