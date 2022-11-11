@@ -1,0 +1,62 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.3550625 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "text/word" 
+        xmin = 0 
+        xmax = 1.3550625 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.005776569886334166 
+            text = "" 
+        intervals [2]:
+            xmin = 0.005776569886334166 
+            xmax = 0.38933413526957017 
+            text = "Mariano" 
+        intervals [3]:
+            xmin = 0.38933413526957017 
+            xmax = 0.711734375 
+            text = "hablaba" 
+        intervals [4]:
+            xmin = 0.711734375 
+            xmax = 0.8892578125000001 
+            text = "del" 
+        intervals [5]:
+            xmin = 0.8892578125000001 
+            xmax = 1.349588181938239 
+            text = "tiempo?" 
+        intervals [6]:
+            xmin = 1.349588181938239 
+            xmax = 1.3550625 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "BI" 
+        xmin = 0 
+        xmax = 1.3550625 
+        points: size = 1 
+        points [1]:
+            number = 1.349588181938239 
+            mark = "4" 
+    item [3]:
+        class = "TextTier" 
+        name = "ToBI" 
+        xmin = 0 
+        xmax = 1.3550625 
+        points: size = 3 
+        points [1]:
+            number = 0.22702490547382725 
+            mark = "L+H*" 
+        points [2]:
+            number = 0.9986738136088954 
+            mark = "L*" 
+        points [3]:
+            number = 1.349588181938239 
+            mark = "HH%" 

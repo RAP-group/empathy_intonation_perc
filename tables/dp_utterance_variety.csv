@@ -1,13 +1,13 @@
 Model,Parameter,Median,HDI,MPE
-Utterance type,Declarative broad focus,1.18,"[1.14, 1.23]",1.00
-Utterance type,Declarative narrow focus,1.14,"[1.10, 1.19]",1.00
-Utterance type,Interrogative wh-,0.54,"[0.47, 0.61]",1.00
-Utterance type,Interrogative y/n,0.25,"[0.19, 0.31]",1.00
+Utterance type,Broad focus statement,1.18,"[1.14, 1.23]",1.00
+Utterance type,Narrow focus statement,1.14,"[1.10, 1.19]",1.00
+Utterance type,Wh- question,0.54,"[0.47, 0.61]",1.00
+Utterance type,y/n question,0.25,"[0.19, 0.31]",1.00
 Variety,Andalusian,1.48,"[1.38, 1.59]",1.00
 Variety,Argentine,1.32,"[1.22, 1.42]",1.00
 Variety,Chilean,1.49,"[1.40, 1.59]",1.00
 Variety,Cuban,0.76,"[0.67, 0.86]",1.00
 Variety,Mexican,1.70,"[1.61, 1.80]",1.00
-Variety,Madrileño,2.07,"[1.98, 2.15]",1.00
+Variety,Peninsular,2.07,"[1.98, 2.15]",1.00
 Variety,Peruvian,1.51,"[1.42, 1.61]",1.00
 Variety,Puerto Rican,0.95,"[0.85, 1.05]",1.00

@@ -24,19 +24,41 @@ The study consisted of three tasks: a 2AFC task, a lexical decision vocabulary a
 The tasks were programmed in Python using Pyschopy3 [@Peirce:2019] and presented online via Pavlovia. 
 All code and materials used to generate the tasks are freely available on the Open Science Framework (https://osf.io/dh4zp/?view_only=162d6d13e5814417bcb9de349f18cb62). 
 
-**2AFC**. In the 2AFC, task participants were presented with an audio file containing a statement (declarative: broad focus or narrow focus) or a question (yes-no or wh-). 
+**2AFC**. In the 2AFC task participants were presented an audio file containing a statement (broad focus or narrow focus) or a question (yes/no or wh-). 
 Their task was to determine, as quickly and as accurately as possible, if the utterance they heard was a question or a statement. 
 Specifically, they responded to an on-screen prompt asking "Is this a question?" using the keyboard. 
-To respond participants typed '1' for 'yes' (i.e., "yes, this is a question") and '0' for 'no' (i.e., "no, this is not a question"). 
+Participants typed '1' for 'yes' (i.e., "yes, this is a question") or '0' for 'no' (i.e., "no, this is not a question"). 
 
 The auditory stimuli consisted of 64 critical items, 16 of each utterance type. 
+The sentences were made up of three function words following SVO word order, which is the default in Spanish. 
+The object was a noun with penultimate stress in all but three items. 
+Subject pronouns were omitted in wh- questions. 
 To generate the stimuli, we recorded native Spanish speakers of eight different varieties (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
-The eight native speakers all produced the same 64 critical items. 
+The eight native speakers all produced the same 64 critical items in a quiet room using professional recording equipment. 
+The items were presented to the speaker on a screen. 
+They were asked to read the item in silence to familiarize themselves with the context and to then read it aloud. 
+To elicit narrow focus statements, one of the initiating authors read a question to the speaker and they responded. 
+Table \@ref(tab:item-ex-table) provides an example of each utterance type. 
+
+```{r}
+#| label: ex-stim-table
+tribble(
+~'Utterance type', ~'Prompt', ~'Item', ~'Translation', 
+ "Broad focus statement", "n/a", "*Marta abre el regalo*", "Marta opens the gift.", 
+ "Narrow focus statement", "¿Qué abre Marta?", "*Marta abre el regalo*", "(What does Marta open?) Marta opens the gift.",
+ "Wh- question", "n/a", "*¿Por qué abre el regalo?*", "Why does she open the gift?", 
+ "y/n question", "n/a", "*¿Marta abre el regalo?*", "Does Marta open the gift?") %>% 
+  knitr::kable(format = "pandoc", escape = F, label = "item-ex-table", 
+    caption = "Example stimuli from the 2AFC task.")
+```
+
 All utterances were segmented using Praat [@praat] and normalized for peak intensity. 
+A detailed description of the auditory stimuli is provided in the supplementary materials. 
 The 2AFC task included 64 trials in which the stimuli presented were randomized across speaker variety. 
 Each variety had the same probability of being selected on a given trial, such that, on average, a given participant heard each variety approximately eight times (See online supplementary materials for more information).
-Prior to pre-registering our research questions and hypotheses, we piloted the 2AFC experiment on 100 monolingual Spanish speakers to assure the quality of the items and assess the difficulty of the task. 
-We did not come across any issues.
+Prior to pre-registering our research questions and hypotheses, we piloted the 2AFC experiment on `r n_natives` monolingual Spanish speakers to assess the difficulty of the task and establish a baseline for response times. 
+We did not come across any issues. 
+An exploratory analysis of the monolingual data is provided in the supplementary materials.
 
 **LexTALE**. To assess Spanish proficiency we administered the Lexical Test for Advanced Learners of Spanish (LexTALE-ESP, henceforth LexTALE) [@izura2014lextale; @lemhofer2012introducing]. 
 The LexTALE is a lexical decision experiment used to provide a standardized assessment of proficiency/vocabulary size in Spanish. 
@@ -68,7 +90,7 @@ The 2AFC task was first, followed by the LexTALE task, and, finally, the empathy
 We planned to collect data from approximately 300 individuals: 100 monolingual Spanish speakers not reported here and 200 L2 learners). 
 Following @bustin_2020, we assumed the effect size for perceptual learning was moderate in terms of the criteria set forth for L2 research by @plonsky2014big (Cohen's D = 0.600, Pearson's r = 0.287).
 Based on this assumption, we estimated that we would need 94 participants to have an 80% chance of capturing the proficiency effect with a type II error rate of 5%. 
-Our hypothesis related to empathy as a possible mediator of perceptual learning is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect. 
+Our hypothesis related to empathy as a possible mediator of intonation processing is exploratory in nature; therefore, we did not base our sample size estimate on any parameter estimates related to this effect.
 That said, we believed the aforementioned exploratory effect was likely to be small, and, considering the resources necessary and available to us, planned to recruit 100 additional participants.
 
 We excluded data from participants in the following circumstances: error during data collection, clear lack of understanding or engagement during the task (i.e., all '1' responses, failed three attention checks, etc.), participants reporting having learned Spanish before the age of 13, or participants with knowledge of languages other than English and Spanish. 
@@ -81,13 +103,13 @@ A total of `r n_learners` participants met the criteria for inclusion.
 We report two primary statistical analyses that were pre-registered prior to collecting the learner data: response accuracy and drift diffusion models. 
 All additional analyses are exploratory in nature and explicitly described as such. 
 First, we analyzed response accuracy using Bayesian multilevel logistic regression. 
-The model considered response accuracy for the population effects *utterance type* (declarative broad focus, declarative narrow focus, interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
+The model considered response accuracy for the population effects *utterance type* (broad focus statement, narrow focus statement, yes/no question, wh- question), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
 The likelihood of the model was Bernoulli distributed with a logit link function. 
 The criterion, *response*, was coded as '1' for correct responses and '0' for incorrect responses. 
 Thus, the first analysis modeled the probability of responding correctly to the prompt "Is this a question?". 
 We specified group-level effects for participants, speaker variety, and items.
 The slope for *utterance type* varied for the participant effect, as did the *LexTALE* by *empathy quotient* interaction for the speaker variety effect. 
-All continuous variables were standardized and 'interrogative yes/no' was set as the baseline for *utterance type*, thus the model intercept represented the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
+All continuous variables were standardized and 'yes/no questions' was set as the baseline for *utterance type*, thus the model intercept represented the probability of a learner with average proficiency and average empathy responding correctly to a yes/no question. 
 
 The same model was fit to the response time data with the exception of the model likelihood, which was assumed to be distributed as lognormal. 
 Response time was measured from the offset of the auditory stimuli. 
@@ -130,7 +152,7 @@ Put simply, the model likely would have taken weeks to fit, whereas the no-pooli
 Thus, after fitting the DDMs, we obtained a posterior distribution of plausible values for boundary separation, drift rate, bias, and non-decision time for each participant. 
 Next, we used measurement-error models to analyze boundary separation (&alpha;) and drift rate (&delta;) independently. 
 These models followed the same functional form as the response accuracy model described above. 
-That is, in two separate models, we analyzed the boundary separation and drift rate data as a function of *utterance type* (interrogative yes/no, interrogative -wh), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
+That is, in two separate models, we analyzed the boundary separation and drift rate data as a function of *utterance type* (yes/no question, wh- question), *LexTALE score* (i.e., proficiency), *empathy quotient*, and the higher order interactions. 
 The primary difference between the measurement-error models and the traditional regression analyses described for the response data is that the former can incorporate a measure of uncertainty around a point estimate. 
 To give a concrete example, the analysis of the boundary separation data included the posterior median and the standard error for each participant as the outcome variable, as opposed to using just a single point estimate. 
 

@@ -22,6 +22,7 @@ learner_rt_01 <- readRDS(here("models", "learner_rt_01.rds"))
 mem_boundary_separation <- readRDS(here("models", "mem_boundary_separation.rds"))
 mem_drift_rate <- readRDS(here("models", "mem_drift_rate.rds"))
 ddm_sims <- read_csv(here("data", "tidy", "ddm_sims.csv"))
+learner_variety_match_response <- readRDS(here("models", "learner_variety_match_response.rds"))
 
 # -----------------------------------------------------------------------------
 
@@ -31,52 +32,52 @@ ddm_sims <- read_csv(here("data", "tidy", "ddm_sims.csv"))
 
 # Accuracy model forest plot --------------------------------------------------
 
-simp_y_labs <- c("Intercept", "Int. wh-", "Dec. narrow focus", 
-  "Dec. broad focus", "LexTALE", "EQ", "Int. wh- x LexTALE", 
-  "Dec. narrow focus x LexTALE", "Dec. broad focus x LexTALE", 
-  "Int. wh- x EQ", "Dec. narrow focus x EQ", "Dec. broad focus x EQ", 
-  "LexTALE x EQ", "Int. wh- x LexTALE x EQ", "Dec. narrow focus x LexTALE x EQ", 
-  "Dec. broad focus x LexTALE x EQ")
+simp_y_labs <- c("Intercept", "Wh- question", "Narrow focus statement", 
+  "Broad focus statement", "LexTALE", "EQ", "Wh- question x LexTALE", 
+  "Narrow focus statement x LexTALE", "Broad focus statement x LexTALE", 
+  "Wh- question x EQ", "Narrow focus statement x EQ", "Broad focus statement x EQ", 
+  "LexTALE x EQ", "Wh- question x LexTALE x EQ", "Narrow focus statement x LexTALE x EQ", 
+  "Broad focus statement x LexTALE x EQ")
 
 simp_labs_tib <- tibble(y = simp_y_labs, x = -2.5) %>% 
-  mutate(y = fct_relevel(y, "Intercept", "Int. wh-", "Dec. narrow focus", 
-      "Dec. broad focus", "LexTALE", "EQ", "Int. wh- x LexTALE", 
-      "Dec. narrow focus x LexTALE", "Dec. broad focus x LexTALE", "Int. wh- x EQ", 
-      "Dec. narrow focus x EQ", "Dec. broad focus x EQ", 
-      "LexTALE x EQ", "Int. wh- x LexTALE x EQ", 
-      "Dec. narrow focus x LexTALE x EQ", "Dec. broad focus x LexTALE x EQ"))
+  mutate(y = fct_relevel(y, "Intercept", "Wh- question", "Narrow focus statement", 
+      "Broad focus statement", "LexTALE", "EQ", "Wh- question x LexTALE", 
+      "Narrow focus statement x LexTALE", "Broad focus statement x LexTALE", "Wh- question x EQ", 
+      "Narrow focus statement x EQ", "Broad focus statement x EQ", 
+      "LexTALE x EQ", "Wh- question x LexTALE x EQ", 
+      "Narrow focus statement x LexTALE x EQ", "Broad focus statement x LexTALE x EQ"))
 
 learner_accuracy_forest <- as_tibble(learner_response_01) %>% 
   select(starts_with("b_")) %>% 
   pivot_longer(everything(), names_to = "Parameter", values_to = "Estimate") %>% 
   mutate(Parameter = case_when(
     Parameter == "b_Intercept" ~ "Intercept", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Int. wh-", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Dec. narrow focus", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Dec. broad focus", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh" ~ "Wh- question", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus" ~ "Narrow focus statement", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus" ~ "Broad focus statement", 
     Parameter == "b_lextale_std" ~ "LexTALE", 
     Parameter == "b_eq_std" ~ "EQ", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std" ~ "Int. wh- x LexTALE", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std" ~ "Dec. narrow focus x LexTALE", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std" ~ "Dec. broad focus x LexTALE", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:eq_std" ~ "Int. wh- x EQ", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:eq_std" ~ "Dec. narrow focus x EQ", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:eq_std" ~ "Dec. broad focus x EQ", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std" ~ "Wh- question x LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std" ~ "Narrow focus statement x LexTALE", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std" ~ "Broad focus statement x LexTALE", 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:eq_std" ~ "Wh- question x EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:eq_std" ~ "Narrow focus statement x EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:eq_std" ~ "Broad focus statement x EQ", 
     Parameter == "b_lextale_std:eq_std" ~ "LexTALE x EQ", 
-    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std" ~ "Int. wh- x LexTALE x EQ", 
-    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std" ~ "Dec. narrow focus x LexTALE x EQ", 
-    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std" ~ "Dec. broad focus x LexTALE x EQ"), 
-    Parameter = fct_relevel(Parameter, "Intercept", "Int. wh-", 
-      "Dec. narrow focus", "Dec. broad focus", "LexTALE", "EQ", 
-      "Int. wh- x LexTALE", "Dec. narrow focus x LexTALE", 
-      "Dec. broad focus x LexTALE", "Int. wh- x EQ", "Dec. narrow focus x EQ", 
-      "Dec. broad focus x EQ", "LexTALE x EQ", "Int. wh- x LexTALE x EQ", 
-      "Dec. narrow focus x LexTALE x EQ", "Dec. broad focus x LexTALE x EQ")) %>% 
+    Parameter == "b_sentence_typeinterrogativeMpartialMwh:lextale_std:eq_std" ~ "Wh- question x LexTALE x EQ", 
+    Parameter == "b_sentence_typedeclarativeMnarrowMfocus:lextale_std:eq_std" ~ "Narrow focus statement x LexTALE x EQ", 
+    Parameter == "b_sentence_typedeclarativeMbroadMfocus:lextale_std:eq_std" ~ "Broad focus statement x LexTALE x EQ"), 
+    Parameter = fct_relevel(Parameter, "Intercept", "Wh- question", 
+      "Narrow focus statement", "Broad focus statement", "LexTALE", "EQ", 
+      "Wh- question x LexTALE", "Narrow focus statement x LexTALE", 
+      "Broad focus statement x LexTALE", "Wh- question x EQ", "Narrow focus statement x EQ", 
+      "Broad focus statement x EQ", "LexTALE x EQ", "Wh- question x LexTALE x EQ", 
+      "Narrow focus statement x LexTALE x EQ", "Broad focus statement x LexTALE x EQ")) %>% 
   ggplot(., aes(x = Estimate, y = Parameter)) + 
     coord_cartesian(xlim = c(-2.75, 2.75)) + 
     scale_x_continuous(expand = c(0, 0)) + 
     geom_vline(xintercept = 0, lty = 3) + 
-    geom_text(data = simp_labs_tib, hjust = 0, vjust = 0.5, size = 2.5, 
+    geom_text(data = simp_labs_tib, hjust = 0, vjust = 0.5, size = 2.25, 
       aes(y = y, x = x, label = y), family = "Times") + 
     stat_halfeye(slab_alpha = 0.5, pch = 21, point_fill = "white", 
       slab_fill = viridis::viridis_pal(option = "B", begin = 0.25)(1), 
@@ -96,10 +97,10 @@ learner_accuracy_by_utterance_type <- learner_response_01 %>%
   as_tibble() %>% 
   select(b_Intercept, starts_with("b_sentence_type")) %>% 
   transmute(
-    `Interrogative\ny/n` = b_Intercept, 
-    `Interrogative\nWh-` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
-    `Declarative\nNarrow focus` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
-    `Declarative\nBroad focus`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
+    `y/n\nquestion` = b_Intercept, 
+    `Wh-\nquestion` = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+    `Narrow focus\nstatement` = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+    `Broad focus\nstatement`  = b_Intercept + b_sentence_typedeclarativeMbroadMfocus
   ) %>% 
   pivot_longer(cols = everything(), names_to = "parameter", values_to = "estimate") %>% 
   mutate(estimate = plogis(estimate)) %>% 
@@ -232,10 +233,10 @@ lt_st_me <- conditional_effects(learner_response_01,
 
 # Set labs for plot
 sentence_labs <- c(
-  "Interrogative\ny/n", 
-  "Interrogative\nWh-", 
-  "Declarative\nnarrow focus", 
-  "Declarative\nbroad focus")
+  "y/n\nquestion", 
+  "Wh-\nquestion", 
+  "Narrow focus\nstatement", 
+  "Broad focus\nstatement")
 
 # Main plot
 learner_accuracy_lextale_by_utterance_type <- plot(lt_st_me, plot = F, 
@@ -310,7 +311,7 @@ facet_replace_3way <- tibble(
   is_correct = 0.95, 
   lextale_std = -0.9, 
   cond__ = c("Interrogative\ny/n", "Interrogative\nWh-"), 
-  labs = c("Interrogative y/n", "Interrogative Wh-")
+  labs = c("y/n question", "Wh- question")
 ) %>% 
   mutate(cond__ = fct_relevel(cond__, "Interrogative\ny/n"))
 
@@ -632,6 +633,95 @@ sm_random_speaker_check <- learners %>%
 
 
 
+# Plot learner variety familiarity analyses -----------------------------------
+
+# Get posterior and tidy
+learner_matches_post <- learner_variety_match_response %>% 
+  as_draws_df() %>% 
+  select(contains("b_")) %>% 
+  transmute(
+    un_yn = b_Intercept, 
+    un_wh = b_Intercept + b_sentence_typeinterrogativeMpartialMwh, 
+    un_nf = b_Intercept + b_sentence_typedeclarativeMnarrowMfocus, 
+    un_bf = b_Intercept + b_sentence_typedeclarativeMbroadMfocus, 
+    fm_yn = b_Intercept + b_is_match_labfamiliar, 
+    fm_wh = b_Intercept + b_is_match_labfamiliar + b_sentence_typeinterrogativeMpartialMwh + `b_sentence_typeinterrogativeMpartialMwh:is_match_labfamiliar`, 
+    fm_nf = b_Intercept + b_is_match_labfamiliar + b_sentence_typedeclarativeMnarrowMfocus + `b_sentence_typedeclarativeMnarrowMfocus:is_match_labfamiliar`, 
+    fm_bf = b_Intercept + b_is_match_labfamiliar + b_sentence_typedeclarativeMbroadMfocus + `b_sentence_typedeclarativeMbroadMfocus:is_match_labfamiliar` 
+  ) %>% 
+  mutate(across(everything(), plogis)) %>% 
+  pivot_longer(cols = everything(), names_to = "metric", values_to = "estimate") %>% 
+  separate(metric, into = c("familiarity", "type"), sep = "_") %>% 
+  group_by(familiarity, type) %>% 
+  mutate(draw = seq_along(familiarity)) %>% 
+  pivot_wider(names_from = "familiarity", values_from = "estimate") %>% 
+  mutate(diff = fm - un, 
+         type = case_when(
+           type == "yn" ~ "y/n question", 
+           type == "wh" ~ "Wh- question", 
+           type == "nf" ~ "Narrow focus statement", 
+           type == "bf" ~ "Broad focus statement"), 
+         type_plot = case_when(
+           type == "y/n question" ~ "y/n\nquestion", 
+           type == "Wh- question" ~ "Wh-\nquestion", 
+           type == "Narrow focus statement" ~ "Narrow focus\nstatement", 
+           type == "Broad focus statement" ~ "Broad focus\nstatement")
+  )
+
+# Plot posterior conditional effects
+learner_variety_familiarity_accuracy <- learner_matches_post %>% 
+  pivot_longer(cols = c("un", "fm"), names_to = "familiarity", values_to = "estimate") %>% 
+  mutate(familiarity = if_else(familiarity == "un", "Unfamiliar", "Familiar"), 
+         familiarity = fct_relevel(familiarity, "Unfamiliar")) %>% 
+  ggplot() + 
+  aes(x = type_plot, y = estimate, color = familiarity, shape = familiarity) + 
+  geom_hline(yintercept = 0.5, lty = 3) + 
+  stat_pointinterval(position = position_dodge(0.5), fill = "white") + 
+  scale_shape_manual(name = NULL, values = c(21, 23)) + 
+  scale_color_manual(name = NULL, 
+    values = viridis::viridis_pal(option = "C", begin = 0.2, end = 0.8)(4)) + 
+  scale_y_continuous(labels = scales::percent_format()) + 
+  labs(y = "Accuracy", x = NULL) + 
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+  theme(legend.position = c(0.15, 0.25), legend.background = element_blank()) + 
+  guides(color = guide_legend(override.aes = list(size = 5)))
+
+# Plot posterior differences
+learner_variety_familiarity_diff <- learner_matches_post %>% 
+  ggplot() + 
+  aes(y = diff, x = type_plot, fill = type) + 
+  geom_hline(yintercept = 0, lty = 3) + 
+  stat_eye(show.legend = F, pch = 21, point_fill = "white", slab_alpha = 0.7) + 
+  scale_fill_manual(name = NULL, 
+    values = viridis::viridis_pal(option = "C", begin = 0.2, end = 0.8)(4)) + 
+  scale_y_continuous(position = "right") + 
+  labs(y = "Posterior difference\n(familiar - unfamiliar)", x = NULL) + 
+  ds4ling::ds4ling_bw_theme(base_size = 12, base_family = "Times") + 
+  theme(axis.title.y = element_text(size = rel(.9), hjust = 0.05))
+
+learner_variety_familiarity <- 
+  learner_variety_familiarity_accuracy + learner_variety_familiarity_diff
+
+# Posterior conditional effects summary table
+# (this is the above plot in table format)
+learner_matches_post %>% 
+  select(-draw, -type_plot, -draw) %>% 
+  group_by(type) %>% 
+  median_hdi() %>% 
+  mutate_if(is.numeric, specify_decimal, k = 2) %>% 
+  transmute(
+    `Sentence type` = type, 
+    Unfamiliar = glue("{un} [{un.lower}, {un.upper}]"), 
+    Familiar = glue("{fm} [{fm.lower}, {fm.upper}]"), 
+    Difference = glue("{diff} [{diff.lower}, {diff.upper}]")
+  ) %>% 
+  write_csv(here("tables", "learner_variety_match_response_cond_effects.csv"))
+
+# -----------------------------------------------------------------------------
+
+
+
+
 # Save plots ------------------------------------------------------------------
 
 devices     <- c('png', 'pdf')
@@ -681,5 +771,10 @@ walk(devices, ~ ggsave(
   filename = glue(path_to_fig, "/sm_random_speaker_check.", .x), 
   plot = sm_random_speaker_check, 
   device = .x, height = 4, width = 7, units = "in"))
+
+walk(devices, ~ ggsave(
+  filename = glue(path_to_fig, "/learner_variety_familiarity.", .x), 
+  plot = learner_variety_familiarity, 
+  device = .x, height = 4, width = 8.5, units = "in"))
 
 # -----------------------------------------------------------------------------

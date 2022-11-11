@@ -1,0 +1,53 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.0974375 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "text/word" 
+        xmin = 0 
+        xmax = 1.0974375 
+        intervals: size = 6 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.034751936962798234 
+            text = "" 
+        intervals [2]:
+            xmin = 0.034751936962798234 
+            xmax = 0.29915779969612055 
+            text = "Ana" 
+        intervals [3]:
+            xmin = 0.29915779969612055 
+            xmax = 0.5334195254840682 
+            text = "lleva" 
+        intervals [4]:
+            xmin = 0.5334195254840682 
+            xmax = 0.6097932542675998 
+            text = "el" 
+        intervals [5]:
+            xmin = 0.6097932542675998 
+            xmax = 1.0069122238681307 
+            text = "abrigo" 
+        intervals [6]:
+            xmin = 1.0069122238681307 
+            xmax = 1.0974375 
+            text = "" 
+    item [2]:
+        class = "TextTier" 
+        name = "ToBI" 
+        xmin = 0 
+        xmax = 1.0974375 
+        points: size = 3 
+        points [1]:
+            number = 0.12217637049582153 
+            mark = "L+H*" 
+        points [2]:
+            number = 0.8411175289484886 
+            mark = "L*" 
+        points [3]:
+            number = 1.0069122238681307 
+            mark = "L\% " 

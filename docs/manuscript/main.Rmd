@@ -7,7 +7,7 @@ shorttitle        : "L2 PERCEPTUAL DEVELOPMENT OF INTONATION"
 author: 
   - name          : "Joseph V. Casillas"
     corresponding : yes
-    affiliation   : "1"
+    affiliation   : ""
     address       : |
       Rutgers University - Department of Spanish and Portuguese, 15 Seminary 
       Place, New Brunswick, NJ 08904, USA
@@ -28,7 +28,7 @@ author:
       - Writing - Original Draft Preparation
       - Writing - Review & Editing
   - name          : "Juan José Garrido Pozú"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
@@ -37,7 +37,7 @@ author:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Kyle Parrish"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
@@ -45,7 +45,7 @@ author:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Laura Fernández Arroyo"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
@@ -53,7 +53,7 @@ author:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Nicole Rodríguez"
-    affiliation   : "2"
+    affiliation   : ""
     role:         
       - Conceptualization
       - Investigation
@@ -61,14 +61,14 @@ author:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Robert Esposito"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
       - Methodology
       - Writing - Review & Editing
   - name          : "Isabelle Chang"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
@@ -76,36 +76,34 @@ author:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Kimberly Gómez"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Conceptualization
       - Investigation
       - Methodology
       - Writing - original draft
   - name          : "Gabriela Constantin-Dureci"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Writing - Review & Editing
   - name          : "Jiawei Shao"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Iván Andreu Rascón"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Writing - original draft
       - Writing - Review & Editing
   - name          : "Katherine Taveras"
-    affiliation   : "1"
+    affiliation   : ""
     role:
       - Writing - Review & Editing
 
 affiliation:
-  - id            : "1"
+  - id            : ""
     institution   : "Rutgers University"
-  - id            : "2"
-    institution   : "Adam Mickiewicz University"
 
 authornote: |
   We express our gratitude to all the haters. 
@@ -201,3 +199,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 <div id="refs" custom-style="Bibliography"></div>
 \endgroup
+
+
+\newpage
+
+# (APPENDIX) Supplementary materials {-}
+
+```{r child = "./sections/05_supplementary_material.Rmd"}
+```
+

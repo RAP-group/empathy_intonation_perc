@@ -287,3 +287,53 @@ post_rt_samples_natives %>%
   facet_wrap(~ term, scales = "free")
 
 # -----------------------------------------------------------------------------
+
+
+
+
+# Post-hoc exploratory analysis of familiarity --------------------------------
+
+# Learner familiarity matches
+learner_matches <- learners %>% 
+  filter(spn_variety %in% c("Spain", "Mexico")) %>% 
+  mutate(
+    is_match = if_else(speaker_variety %in% c("castilian", "mexican"), 1, 0), 
+    is_match_lab = if_else(speaker_variety %in% c("castilian", "mexican"), 
+                           "familiar", "unfamiliar"), 
+    is_match_lab = fct_relevel(is_match_lab, "unfamiliar"), 
+    sentence_type = fct_relevel(sentence_type, "interrogative-total-yn")) 
+
+matches_formula <- bf(
+  is_correct ~ 0 + Intercept + sentence_type * is_match_lab + 
+    (1 + sentence_type | participant) + 
+    (1 | speaker_variety) + 
+    (1 + is_match_lab | item)
+)
+
+# Get priors
+get_prior(
+  formula = matches_formula, 
+  family = bernoulli(link = "logit"), 
+  data = learner_matches
+) %>% 
+  as_tibble() %>% 
+  select(prior, class, coef) %>% 
+  knitr::kable(format = "pandoc")
+
+prior_matches <- c(
+  prior(normal(0, 1), class = "b"), 
+  prior(cauchy(0, 0.2), class = "sd"), 
+  prior(lkj(1), class = "cor")
+)
+
+learner_variety_match_response <- brm(
+  formula = matches_formula, 
+  data = learner_matches, 
+  prior = prior_matches, 
+  warmup = 2000, iter = 4000, chains = 4, 
+  family = bernoulli(link = "logit"), 
+  cores = 4, 
+  file = here("models", "learner_variety_match_response")
+)
+
+# -----------------------------------------------------------------------------
