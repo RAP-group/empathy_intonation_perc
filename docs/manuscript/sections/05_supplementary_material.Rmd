@@ -481,7 +481,7 @@ knitr::include_graphics(
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-(ref:plot-stimuli-pitch-contours) Stuff they made me do.
+(ref:plot-stimuli-pitch-contours) Pitch contours as function of time for utterance type and variety of Spanish. Thinner, opaque lines represent individual items, and thicker, dark lines represent the average contour trajectory. F0 values were log transformed and standardized for between speaker/variety comparability.
 
 ```{r, 'plot-stimuli-pitch-contours', fig.cap="(ref:plot-stimuli-pitch-contours)"}
 knitr::include_graphics(
