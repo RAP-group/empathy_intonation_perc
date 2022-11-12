@@ -26,6 +26,7 @@
     │   ├── quotes
     │   └── rCR Anonymous Data Collection Consent Form.docx
     ├── lit
+    │   ├── 00_empathy_prosody_lit_review.Rmd
     │   ├── README.Rmd
     │   ├── README.md
     │   ├── alvord_2010.pdf
@@ -43,12 +44,15 @@
     │   ├── guiora_et_al_1972.pdf
     │   ├── guiora_et_al_1972b.pdf
     │   ├── guiora_et_al_1979.pdf
+    │   ├── henriksen_2010.pdf
     │   ├── hu_et_al_2013.pdf
     │   ├── hualde_prieto.pdf
     │   ├── jilka_2000.pdf
     │   ├── kvavik_1974.pdf
     │   ├── liu_2017.pdf
     │   ├── munro_1995.pdf
+    │   ├── nibert_2005.pdf
+    │   ├── nibert_2006.pdf
     │   ├── orrico_dimperio_2020.pdf
     │   ├── orrico_etal_2019.pdf
     │   ├── rota_reiterer_2009.pdf
@@ -60,7 +64,9 @@
     │   ├── README.md
     │   ├── main.Rmd
     │   ├── main.docx
-    │   └── sections
+    │   ├── pre_print
+    │   ├── sections
+    │   └── submissions
     ├── pre_reg
     │   ├── preregistration_empathy.Rmd
     │   └── preregistration_empathy.md

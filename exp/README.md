@@ -24,8 +24,29 @@ experimental items to the native speakers during recording.
     │   ├── instructions
     │   ├── stim
     │   └── trials
+    ├── empathy_intonation_perc_sp_and
+    │   ├── data
+    │   ├── empathy_intonation_perc_sp_and.psyexp
+    │   ├── empathy_intonation_perc_sp_and_lastrun.py
+    │   ├── instructions
+    │   ├── stim
+    │   └── trials
+    ├── empathy_intonation_perc_sp_cu
+    │   ├── data
+    │   ├── empathy_intonation_perc_sp_cu.psyexp
+    │   ├── empathy_intonation_perc_sp_cu_lastrun.py
+    │   ├── instructions
+    │   ├── stim
+    │   └── trials
+    ├── empathy_intonation_perc_sp_pr
+    │   ├── data
+    │   ├── empathy_intonation_perc_sp_pr.psyexp
+    │   ├── empathy_intonation_perc_sp_pr_lastrun.py
+    │   ├── instructions
+    │   ├── stim
+    │   └── trials
     └── text_stim_for_audio
-        ├── data
+        ├── readme.md
         ├── text_stim_for_audio.psyexp
         ├── text_stim_for_audio_lastrun.py
         └── trials

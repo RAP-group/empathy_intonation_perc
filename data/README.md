@@ -13,7 +13,26 @@ This is the data directory containing raw and tidy data.
     │   ├── prolific_export_6057c54e64b0b4e5c128b4f9_l2_ne.csv
     │   ├── prolific_export_605b45a4d25f287719a41696_l2_e.csv
     │   ├── speech_rate_raw.csv
-    │   └── speech_rate_raw_w_fillers.csv
+    │   ├── speech_rate_raw_w_fillers.csv
+    │   └── stimuli_acoustics.csv
+    ├── stimuli
+    │   ├── contours.png
+    │   ├── csvs
+    │   ├── file_information.csv
+    │   ├── formants
+    │   ├── formants_winners
+    │   ├── images_comparison
+    │   ├── images_winners
+    │   ├── infos
+    │   ├── infos_aggregated
+    │   ├── label.png
+    │   ├── number.png
+    │   ├── processed_data
+    │   ├── regression_infos
+    │   ├── sounds
+    │   ├── textgrids
+    │   ├── winners.csv
+    │   └── winners_backup.csv
     └── tidy
         ├── complete_2afc_tidy.csv
         ├── ddm_estimates.csv
@@ -25,7 +44,8 @@ This is the data directory containing raw and tidy data.
         ├── natives_2afc_tidy.csv
         ├── participants_removed_list.Rds
         ├── participants_returned_vector.Rds
-        └── speech_rate_tidy.csv
+        ├── speech_rate_tidy.csv
+        └── stimuli_acoustics_tidy.csv
 
 The `speech_rate` files (raw and tidy) contain acoustic measurements of
 the experimental items. The remaining tidy csv’s are the following:
@@ -45,3 +65,4 @@ the experimental items. The remaining tidy csv’s are the following:
 -   **participants_returned_vector.Rds**: Vector of participant IDs that
     were returned because they timed out
 -   **speech_rate_tidy.csv**: Native speaker stimuli speech rate info
+-   **stimuli_acoustics_tidy.csv**: Pitch data from acoustic stimuli

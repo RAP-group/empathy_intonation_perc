@@ -1,7 +1,7 @@
 # Project details -------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211221
+# Last update: 20221111
 #
 # - This scripts provides a Gantt chart of the project timeline
 #   and a CREDiT contributors plot
@@ -23,34 +23,37 @@ source(here::here("scripts", "r","01_helpers.R"))
 
 # This is proof of concept, will change
 time_line_df <- tribble(
- ~"wp",          ~"activity",              ~"start_date",  ~"end_date", 
-#  "Preparation",  "Winter break",          "2020-12-20",   "2021-01-08", 
-#  "Preparation",  "Winter break",          "2021-12-20",   "2022-01-08", 
-#  "Preparation",  "Summer break",          "2021-06-01",   "2021-10-01", 
-  "Preparation",  "Pre-registration",      "2020-09-16",   "2021-03-15",
-  "Preparation",  "Materials prep.",       "2020-09-16",   "2021-02-14",
-  "Preparation",  "Recruting",             "2021-02-17",   "2021-02-25",
-  "Preparation",  "Analyses",              "2021-12-12",   "2021-12-17", 
-  "Presentation", "Manuscript prep.",      "2021-10-23",   "2021-12-01", 
-  "Presentation", "Manuscript submission", "2021-12-21",   "2021-12-21", 
-  "Presentation", "Deadline - HLS",        "2021-04-01",   "2021-04-28", 
-  "Presentation", "Conference - HLS",      "2021-10-07",   "2021-10-07", 
-  "Presentation", "Deadline - CASPSLaP",   "2021-10-30",   "2021-10-30", 
-  "Presentation", "Conference - CASPSLaP", "2022-02-17",   "2022-02-19", 
+ ~"wp",                ~"activity",             ~"start_date",  ~"end_date", 
+  "Preparation phase",  "Pre-registration",      "2020-09-16",   "2021-03-15",
+  "Preparation phase",  "Materials prep.",       "2020-09-16",   "2021-02-14",
+  "Preparation phase",  "Recruting",             "2021-02-17",   "2021-02-25",
+  "Preparation phase",  "Recruting",             "2022-10-17",   "2022-10-25",
+  "Preparation phase",  "Analyses",              "2021-10-05",   "2021-12-17", 
+  "Preparation phase",  "Analyses",              "2022-10-01",   "2022-11-11", 
+  "Presentation phase", "HLS",                   "2021-04-01",   "2021-10-07", 
+  "Presentation phase", "CASPSLaP",              "2021-10-30",   "2022-02-19", 
+  "Manuscript phase",   "V1",                    "2021-10-23",   "2022-02-03", 
+  "Manuscript phase",   "Review 1",              "2022-02-03",   "2022-07-13", 
+  "Manuscript phase",   "V2",                    "2022-07-13",   "2022-11-11", 
 )
 
 # "Spots" can be used to mark when things actually occur on expected timeline
 # Not used for now ("X" implies something is finished)
 time_line_spots <- tribble(
-  ~"activity",           ~"spot_type", ~"spot_date", 
-   "Materials prep.",     "X",          "2021-02-13", 
-   #"Writing",             "X",          "2020-10-31"
+  ~"activity",          ~"spot_type",    ~"spot_date", 
+   "HLS",                "deadline",      "2021-04-28", 
+   "HLS",                "presentation",  "2021-10-07", 
+   "CASPSLaP",           "deadline",      "2021-10-30", 
+   "CASPSLaP",           "presentation",  "2022-02-19",
+   "V1",                 "submit",        "2022-02-03", 
+   "V2",                 "start",       "2022-10-01", 
+   "V2",                 "submit",        "2022-11-11", 
 )
 
 # Generate plot 
 p_project_timeline <- ganttrify(
   project = time_line_df,
- # spots = time_line_spots,
+  spots = time_line_spots,
   by_date = TRUE,
   exact_date = TRUE,
   size_text_relative = 1,

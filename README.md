@@ -22,6 +22,7 @@ in questions and statements in L2 Spanish.
     ├── LICENSE
     ├── data
     │   ├── raw
+    │   ├── stimuli
     │   └── tidy
     ├── docs
     │   ├── Brandl et al. Stimuli
@@ -31,30 +32,47 @@ in questions and statements in L2 Spanish.
     │   ├── lit
     │   ├── manuscript
     │   ├── pre_reg
+    │   ├── slides
     │   └── templates
     ├── exp
     │   ├── empathy_intonation_perc
     │   ├── empathy_intonation_perc_sp
+    │   ├── empathy_intonation_perc_sp_and
+    │   ├── empathy_intonation_perc_sp_cu
+    │   ├── empathy_intonation_perc_sp_pr
     │   └── text_stim_for_audio
     ├── figs
     │   ├── abstract
+    │   ├── manuscript
     │   ├── poster
     │   ├── project_contributors.pdf
     │   ├── project_contributors.png
     │   ├── project_timeline.pdf
-    │   └── project_timeline.png
+    │   ├── project_timeline.png
+    │   ├── slides
+    │   └── stimuli
+    ├── index.html
     ├── models
+    │   ├── ddm
+    │   ├── eq_lextale_cor.rds
+    │   ├── learner_dp_01.rds
+    │   ├── learner_dp_02.rds
     │   ├── learner_response_01.rds
-    │   ├── learner_response_01_max.rds
-    │   ├── learner_response_01_noint.rds
-    │   ├── learner_response_01_noslope.rds
-    │   ├── learner_response_q_01.rds
     │   ├── learner_response_qonly_01.rds
-    │   ├── learner_response_qonly_norslope_01.rds
-    │   ├── native_ppred_response_00.rds
-    │   ├── native_ppred_rt_00.rds
-    │   ├── native_response_01.rds
-    │   └── native_rt_01.rds
-    └── scripts
-        ├── praat
-        └── r
+    │   ├── learner_rt_01.rds
+    │   ├── learner_variety_match_response.rds
+    │   ├── mem_boundary_separation.rds
+    │   ├── mem_drift_rate.rds
+    │   └── native_stim_sr.rds
+    ├── scripts
+    │   ├── praat
+    │   └── r
+    └── tables
+        ├── ddm_bs_dr.csv
+        ├── dp_utterance_variety.csv
+        ├── learner_native_accuracy.csv
+        ├── learner_response_01.csv
+        ├── learner_variety_match_response_cond_effects.csv
+        ├── learner_variety_match_response_model_summary.csv
+        ├── lextale_empathy_descriptives.csv
+        └── variety_matched_native_accuracy.csv

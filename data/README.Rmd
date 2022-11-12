@@ -24,3 +24,4 @@ The remaining tidy csv's are the following:
 - **participants_removed.list.Rds**: List of participants whose data was excluded
 - **participants_returned_vector.Rds**: Vector of participant IDs that were returned because they timed out
 - **speech_rate_tidy.csv**: Native speaker stimuli speech rate info
+- **stimuli_acoustics_tidy.csv**: Pitch data from acoustic stimuli
