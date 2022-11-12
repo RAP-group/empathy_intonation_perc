@@ -8,11 +8,18 @@ The purpose of this project is to study the production, perception, and processi
 
 ## Project timeline
 
-![](./figs/project_timeline.png)
+- Project start: 2020-09-16
+- Initial submission: 2022-02-03
+- Decision: 2022-07-13, revise and resubmit, major revisions 
+- Begin r1 revisions: 2022-10-01
+- Submit V2: 2022-11-11
+
+
+![](./figs/project_timeline.pdf)
 
 ## Contributor roles
 
-![](./figs/project_contributors.png)
+![](./figs/project_contributors.pdf)
 
 ## Basic organization
 

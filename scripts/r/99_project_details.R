@@ -46,7 +46,7 @@ time_line_spots <- tribble(
    "CASPSLaP",           "deadline",      "2021-10-30", 
    "CASPSLaP",           "presentation",  "2022-02-19",
    "V1",                 "submit",        "2022-02-03", 
-   "V2",                 "start",       "2022-10-01", 
+   "V2",                 "start",         "2022-10-01", 
    "V2",                 "submit",        "2022-11-11", 
 )
 
