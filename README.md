@@ -16,11 +16,11 @@ in questions and statements in L2 Spanish.
 -   Begin r1 revisions: 2022-10-01
 -   Submit V2: 2022-11-11
 
-![](./figs/project_timeline.pdf)
+![](./figs/project_timeline.png)
 
 ## Contributor roles
 
-![](./figs/project_contributors.pdf)
+![](./figs/project_contributors.png)
 
 ## Basic organization
 
