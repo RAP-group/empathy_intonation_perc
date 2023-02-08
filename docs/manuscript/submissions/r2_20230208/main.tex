@@ -1,0 +1,441 @@
+% Taken from https://github.com/mschroen/review_response_letter
+% GNU General Public License v3.0
+
+\documentclass[]{article}
+
+\usepackage[includeheadfoot,top=20mm, bottom=20mm, footskip=2.5cm]{geometry}
+
+% Typography
+\usepackage[T1]{fontenc}
+\usepackage{times}
+%\usepackage{mathptmx} % math also in times font
+\usepackage{amssymb,amsmath}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+
+% Misc
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref} %textopdfstring from pandoc
+\usepackage{soul} % Highlight using \hl{}
+
+% Table
+
+\usepackage{adjustbox} % center large tables across textwidth by surrounding tabular with \begin{adjustbox}{center}
+\renewcommand{\arraystretch}{1.5} % enlarge spacing between rows
+\usepackage{caption}
+\captionsetup[table]{skip=10pt} % enlarge spacing between caption and table
+
+% Section styles
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large}{\makebox[0pt][r]{\bf \thesection.\hspace{4mm}}}{0em}{\bfseries}
+\titleformat{\subsection}{\normalfont}{\makebox[0pt][r]{\bf \thesubsection.\hspace{4mm}}}{0em}{\bfseries}
+\titlespacing{\subsection}{0em}{1em}{-0.3em} % left before after
+
+% Paragraph styles
+
+\setlength{\parskip}{0.6\baselineskip}%
+\setlength{\parindent}{0pt}%
+
+% Quotation styles
+
+\usepackage{framed}
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\renewenvironment{quote}{\begin{fquote}\advance\leftmargini -2.4em\begin{oldquote}}{\end{oldquote}\end{fquote}}
+
+% \usepackage{xcolor}
+\newenvironment{fquote}
+  {\def\FrameCommand{
+	\fboxsep=0.6em % box to text padding
+	\fcolorbox{black}{white}}%
+	% the "2" can be changed to make the box smaller
+    \MakeFramed {\advance\hsize-2\width \FrameRestore}
+    \begin{minipage}{\linewidth}
+  }
+  {\end{minipage}\endMakeFramed}
+
+% Table styles
+
+\let\oldtabular=\tabular
+\let\endoldtabular=\endtabular
+\renewenvironment{tabular}[1]{\begin{adjustbox}{center}\begin{oldtabular}{#1}}{\end{oldtabular}\end{adjustbox}}
+
+
+% Shortcuts
+
+%% Let textbf be both, bold and italic
+%\DeclareTextFontCommand{\textbf}{\bfseries\em}
+
+%% Add RC and AR to the left of a paragraph
+%\def\RC{\makebox[0pt][r]{\bf RC:\hspace{4mm}}}
+%\def\AR{\makebox[0pt][r]{AR:\hspace{4mm}}}
+
+%% Define that \RC and \AR should start and format the whole paragraph
+\usepackage{suffix}
+\long\def\RC#1\par{\makebox[0pt][r]{\bf RC:\hspace{4mm}}{\bf #1}\par\makebox[0pt][r]{AR:\hspace{10pt}}} %\RC
+\WithSuffix\long\def\RC*#1\par{{\bf #1}\par} %\RC*
+% \long\def\AR#1\par{\makebox[0pt][r]{AR:\hspace{10pt}}#1\par} %\AR
+\WithSuffix\long\def\AR*#1\par{#1\par} %\AR*
+
+
+%%%
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\definecolor{offred}{rgb}{0.867, 0.153, 0.153} %DIF PREAMBLE
+\definecolor{offblue}{rgb}{0.0705882352941176, 0.168627450980392, 0.717647058823529} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{offred}\sout{#1}}} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{offblue}\uwave{#1}}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+% Fix pandoc related tight-list error
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Add task difficulty and assignment commands from https://github.com/cdc08x/letter-2-reviewers-LaTeX-template
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{ifdraft}
+
+\newcommand{\TaskEstimationBox}[2]{%
+\ifoptiondraft{\parbox{1.0\linewidth}{\hfill \hfill {\colorbox{#2}{\color{White} \textbf{#1}}}}}%
+{}%
+}
+%
+\def\WorkInProgress {\TaskEstimationBox{Work in progress}{Cyan}}
+\def\AlmostDone {\TaskEstimationBox{Almost there}{NavyBlue}}
+\def\Done {\TaskEstimationBox{Done}{Blue}}
+%
+\def\NotEstimated {\TaskEstimationBox{Effort not estimated}{Gray}}
+\def\Easy {\TaskEstimationBox{Feasible}{ForestGreen}}
+\def\Medium {\TaskEstimationBox{Medium effort}{Orange}}
+\def\TimeConsuming {\TaskEstimationBox{Time-consuming}{Bittersweet}}
+\def\Hard {\TaskEstimationBox{Infeasible}{Black}}
+%
+\newcommand{\Assignment}[1]{
+%
+\ifoptiondraft{%
+\vspace{.25\baselineskip} \parbox{1.0\linewidth}{\hfill \hfill \vspace{.25\baselineskip} \normalfont{Assignment:} \normalfont{\textbf{#1}}}%
+}{}%
+}
+
+
+  \usepackage{tipa}
+  \usepackage{booktabs}
+  \usepackage{hyperref}
+  \usepackage{longtable}
+
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+{\Large\bf Author response to reviews of}\\[1em]
+Manuscript APS-Feb-22-0015\\ \\
+{\Large Using intonation to disambiguate meaning: The role of empathy and proficiency in L2 perceptual development}\\[1em]
+{Joseph V. Casillas}\\
+{submitted to \it Applied Psycholinguistics }\\
+\hrule
+
+\hfill {\bfseries RC:} \textbf{\textit{Reviewer Comment}}\(\quad\) AR: Author Response \(\quad\square\) Manuscript text
+
+\vspace{2em}
+
+Dear Dr.~Joan Mora,
+
+Thank you for taking the time to consider our manuscript \emph{Using intonation to disambiguate meaning: The role of empathy and proficiency in L2 perceptual development
+} (APS-Feb-22-0015) for publication in \emph{Applied Psycholinguistics}.
+Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication.
+We noted three specific areas that were consistently highlighted by the reviewers as needing improvement: use of terminology, motivation of the construct empathy as it pertains to our research questions, and description of the auditory stimuli.
+We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript.
+In this letter we address the reviewers' concerns point-by-point.
+Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript.
+We thank you and the three anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in \emph{Applied Psycholinguistics}.
+
+Sincerely,\\
+Joseph Casillas\\
+(corresponding author)
+
+\clearpage
+
+\hypertarget{reviewer-1}{%
+\section{Reviewer \#1}\label{reviewer-1}}
+
+\hypertarget{introduction-and-objectives}{%
+\subsection{INTRODUCTION AND OBJECTIVES}\label{introduction-and-objectives}}
+
+\RC{All my concerns have been resolved.}
+
+Response
+
+\Done
+\Easy
+
+\clearpage
+
+\hypertarget{reviewer-2}{%
+\section{Reviewer \#2}\label{reviewer-2}}
+
+\hypertarget{overview}{%
+\subsection{Overview}\label{overview}}
+
+\RC{This paper has improved substantially and the authors have done an excellent job of integrating the comments and suggestions of the reviewers. 
+The majority of my suggestions are minor, but I still think discussion can be developed a bit to better explain the lack of effect for yes-no questions. 
+I understand that the authors did not have the goal of explaining “understanding why different pitch contours affect intonation perception”, however, I think it would be a more satisfying discussion of the results that is already hinted at in the paper and could be developed more fully since the relevant information is available.
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 5, line 32: "to signal whether an utterance is a question or a statement" - can this be broader since intonation goes beyond this? - there are other sentence types that can be signaled by intonation}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 5, line 37: is often language-specific —> is language-specific}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 5, line 54: please cite reference for Chilean Spanish questions - might also be worth citing Hualde \& Prieto (2015) for discussion of pragmatic nuances in Spanish intonation for questions in varieties of Spanish}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 7, line 10: Please add following references for Spanish intonation applying the LiLT model: 
+
+Sánchez-Alvarado, 2022 https://www.jbe-platform.com/content/journals/10.1075/jslp.20041.san
+
+Sánchez-Alvarado \& Armstrong 2022 https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 8: Review is missing Sánchez Alvarado 2022 and Sánchez Alvarado \& Armstrong 2022 (Also see Sánchez Alvarado’s 2020 dissertation)}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 8: The paper talks about concepts such as pitch accents and boundary tones, which assume a specific framework. 
+There should be a short section devoted to the Autosegmental Metrical Framework and the ToBI system of labeling intonation for Spanish specifically where the basic concepts (e.g. pitch accent) are explained. 
+This is standard for papers that use these terms, which involve theoretical assumptions.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 8, line 24: missing reference for varieties with falling intonation - Gabriel et al. 2010 for Argentine Spanish, Willis 2010 for Dominican and Armstrong 2010 for Puerto Rican Spanish}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 8, line 28: note that in fact most varieties of Spanish have some sort of question fall}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 9: Please cite Sánchez Alvarado’s perception work: [LINK]}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 9: Marasco's 2020 dissertation also looks at perception (not sure if she has published any of this): https://tspace.library.utoronto.ca/handle/1807/103553}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 31, line 9: perceptional—> perceptual?}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 31: For discussion on wh- questions, "A specific intonation contour is obligatory to force a question interpretation” - can you discuss the differences between wh intonation and declarative intonation in your stimuli?}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 31, Line 57: note that there are prosodic differences between Que bebe María and Qué beba María (e.g. absence vs. presence of a pitch accent on [ke]) which in theory would help guide the listener to the intended interpretation.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Page 32: "Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task." 
+So here the authors are indeed intending to make sense of why it might take more effort to distinguish YNQs from statements. But I think this discussion oversimplifies what we see in the stimuli. The authors have rich information in their ToBI transcriptions and it would be helpful to dig into the melodic differences between varieties and how those differ from American English in order to explain the lack of an effect for YNQs. I understand that the intention was not to get into specific melodies and explain results in this way, but I think at least a cursory attempt is necessary to try to explain the results. More on this below.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Supplementary materials, Sp\_ToBI labelling:
+Note that the Sp\_ToBI labels used do not reflect the most current labeling conventions (see Hualde \& Prieto 2015) - for example HH\% is now !H\% if the authors aren’t using the most updated conventions, they should cite which version of Sp\_ToBI they are using. Note label change for PRS YNQ below.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{
+Supplementary materials, Suggestions for discussion re: YNQs:
+In the stimuli we see lots of variation in terms of yn questions, and less variation for declaratives (seems like H+L\* L\% or L\*L\%) - analysis should take this into account. Not only is there a ton of variation for the YNQs, three varieties (Argentine, Cuban and PRS) use tunes that differ greatly from the Mainstream American English in the Northeast, so we might expect for these to be harder to identify.
+
+Final rises in red, final falls in green
+
+Madrid: L\* HH\% (L\* !H\%) \\
+Andalusian: L+H\* HH\% (L+H\* !H\%) \\
+Argentine: L+!H\* HL\% \\
+Chilean: H+L\* HH\% (H+L\* !H\%) \\
+Cuban: L+H\* L\% (I would label this L+¡H\* L\%) \\
+Mexican: L\* HH\% (L\* !H\%) \\
+Peruvian: L\* HH\% (L\* !H\%) \\
+Puerto Rican: H+L\* L\% (this is actually not H+L\*, should be ¡H\* L\%, following Armstrong 2017: \\ https://www.degruyter.com/document/doi/10.1515/probus-2014-0016/html)
+
+I wonder what would happen if the authors either removed these varieties from the analysis or did an additional analysis that divided the YNQs between rises and falls (falls being Arg, Cub, PR), though if we look at Figure 10 and Table 8 it looks like it might just make sense to do this for Cuban and Puerto Rican). Perhaps responses for rising YNQs would pattern more with the other sentence types. I realize this goes beyond the scope of the paper though. But I think the possible reasons for the finding are readily available in the supplemental data, so why not have a stronger justification for the results?
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{Supplementary materials: 
+In sum it would be great to see the authors discuss the variation and the challenges the YNQ variation presents for learners. We see way less variation for the other sentence types in terms of general directionality of the contour (rise vs. fall). So while again, I know the point of the paper is not to get into tunes, it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results. The YNQs included here present different challenges compared to the other sentence types. I do see this mentioned in the variety- specific portion of the analysis, but should also be incorporated into the discussion of the lack of an effect for empathy for YNQS.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\clearpage
+
+\hypertarget{reviewer-3}{%
+\section{Reviewer \#3}\label{reviewer-3}}
+
+\hypertarget{comments-to-the-author}{%
+\subsection{Comments to the Author}\label{comments-to-the-author}}
+
+\RC{I think the authors did a great job taking into account our comments and suggestions. The revised version of the manuscript is now much more solid, but I still have some suggestions that I hope can be useful in a new revised version of the manuscript.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{The authors now include a lot more details on the listener and speaker dialectal variability and familiarity, but I still feel that this factor is  not well integrated into the manuscript. Here my specific suggestions:
+1) The effect of “speaker variety” on perception accuracy is one of the three research questions of the study, but it is not mentioned in various places in the manuscript where authors summarize their goals. For instance, in p.5, l.5-13 (“we investigated the interplay [...] in L2 Spanish”) the authors include RQ1 and RQ2, but not RQ3. Or in p. 14, l. 815, where the authors state that they aim at extending previous research by considering empathy in L2 sentence processing, but they do not mention the speaker variability/listener familiarity effect.}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{
+2) It still feels strange to have a specific hypothesis about the Cuban variety in the introduction (p. 13, l. 44-45) without any information yet on the pilot or the nature of Cuban intonation. I think it would make more sense to make hypothesis about familiarity. I mean: instead of saying “we hypothesize that L2 learners will have the most difficulty with the Cuban variety”, to say that they will have more difficulty with the variety they are less familiar with, and then in the methods and results we will already learn that this is the Cuban variety.
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\hypertarget{minor-points}{%
+\subsection{Minor points:}\label{minor-points}}
+
+\RC{
+1) Introduction, p.4, l. 23-25: The authors contrast linguistic information to pragmatic information. Why do the authors think that pragmatics is not part of the linguistic system?
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{
+2) Figure 5, left panel: should the title of the graph be “b-accuracy” instead of “b-response”?
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\RC{
+3) p. 31, last line: change “que” for “qué” in “Qué bebe María?”. While the same pronoun is used, one is tonic and the other one not, so the nature of the “que” could have guided participants’ choices.
+}
+
+Response
+
+\WorkInProgress
+\Easy
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
+
+
+\end{document}\grid
