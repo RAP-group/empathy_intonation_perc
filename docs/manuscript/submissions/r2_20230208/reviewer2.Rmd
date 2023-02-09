@@ -1,11 +1,18 @@
-## Overview
 
-\RC{This paper has improved substantially and the authors have done an excellent job of integrating the comments and suggestions of the reviewers. 
+\RC{
+This paper has improved substantially and the authors have done an excellent job of integrating the comments and suggestions of the reviewers. 
 The majority of my suggestions are minor, but I still think discussion can be developed a bit to better explain the lack of effect for yes-no questions. 
-I understand that the authors did not have the goal of explaining “understanding why different pitch contours affect intonation perception”, however, I think it would be a more satisfying discussion of the results that is already hinted at in the paper and could be developed more fully since the relevant information is available.
+I understand that the authors did not have the goal of explaining "understanding why different pitch contours affect intonation perception", however, I think it would be a more satisfying discussion of the results that is already hinted at in the paper and could be developed more fully since the relevant information is available.
 }
 
-Response
+We thank the reviewer for their comments. 
+After careful consideration, we have opted not to investigate further the 'lack of effect' regarding yes-no questions. 
+Our reasoning is as follows. 
+We went to painstaking efforts a priori to carefully develop our preregistered hypotheses, which we believe we have accurately and faithfully tested. 
+We believe that further (exploratory) analyses to assess new hypotheses arising from our planned analytic strategy are warranted and important, but, again, beyond the scope of this manuscript. 
+We have already began work on follow up studies to consider these very questions. 
+That being said, we also wholeheartedly encourage *anybody* interested to use our data to run any analyses they consider interesting and relevant. 
+Importantly, and to the reviewer's point, we have dedicated more of the discussion to the yes-no questions and we specifically point out this topic as an avenue for interesting future investigations. 
 
 \WorkInProgress
 \Easy
@@ -13,24 +20,37 @@ Response
 
 \RC{Page 5, line 32: "to signal whether an utterance is a question or a statement" - can this be broader since intonation goes beyond this? - there are other sentence types that can be signaled by intonation}
 
-Response
+We have revised this sentence to make it clear that we refer the use of intonation to signal whether an utterance is a question or statement as merely one (relevant) possibility. 
+The revised sentence is included here for the reviewer's convenience. 
 
-\WorkInProgress
+> This is, in part, because in everyday discourse speakers can use intonation for numerous communicative functions, such as indicating syntactic structure, signaling pragmatic meaning, e.g., whether an utterance is a question or a statement, focusing constituents, conveying affective meaning, etc. 
+
+\Done
 \Easy
+
+
+
 
 \RC{Page 5, line 37: is often language-specific —> is language-specific}
 
-Response
+We have included this change in the revised manuscript.
 
-\WorkInProgress
+\Done
 \Easy
+
+
+
+
 
 \RC{Page 5, line 54: please cite reference for Chilean Spanish questions - might also be worth citing Hualde \& Prieto (2015) for discussion of pragmatic nuances in Spanish intonation for questions in varieties of Spanish}
 
-Response
+We have included references to @lira2000prosodia and @ortiz2003acentos. 
 
-\WorkInProgress
+\Done
 \Easy
+
+
+
 
 \RC{Page 7, line 10: Please add following references for Spanish intonation applying the LiLT model: 
 
@@ -39,9 +59,13 @@ Sánchez-Alvarado, 2022 https://www.jbe-platform.com/content/journals/10.1075/js
 Sánchez-Alvarado \& Armstrong 2022 https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html
 }
 
-Response
+We do not believe that these references would be appropriate at this juncture of the manuscript. 
+Our reasoning is because the purpose of this paragraph is to introduce the relevant L2 models, and, therefore, we only cite the authors of said models, not examples in which the models have been used. 
+In this particular case, in line with the previous sentences, we reference the author of the LILt model [i.e., @mennen2015beyond], not examples using the LILt model. 
+That being said, the reviewer's suggestions are clearly relevant to our manuscript. 
+Thus, in addition to @alvarado2022prosodic, the revised manuscript now also includes @sanchez2022acquisition in the discussion section. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -49,9 +73,11 @@ Response
 
 \RC{Page 8: Review is missing Sánchez Alvarado 2022 and Sánchez Alvarado \& Armstrong 2022 (Also see Sánchez Alvarado’s 2020 dissertation)}
 
-Response
+As mentioned above, the articles to which the reviewer refers have been included in the manuscript. 
+However, they are not mentioned in the description of the LILt model because they are not relevant with regard to the development of the model. 
+That is not to say that they are not important/relevant to the manuscript in general, and, for this reason, they appear in other parts of the introduction and discussion sections. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -61,7 +87,16 @@ Response
 There should be a short section devoted to the Autosegmental Metrical Framework and the ToBI system of labeling intonation for Spanish specifically where the basic concepts (e.g. pitch accent) are explained. 
 This is standard for papers that use these terms, which involve theoretical assumptions.}
 
-Response
+We thank the reviewer for pointing out this oversight. 
+In the revised manuscript we have included a subsection in which we describe the Autosegmental Metrical Framework and the ToBI system. 
+The relevant additions are included here for convenience. 
+
+> PROSE HERE
+
+<!--
+get 1-2 para summary
+find relevant place to include it
+--> 
 
 \WorkInProgress
 \Easy
@@ -71,9 +106,10 @@ Response
 
 \RC{Page 8, line 24: missing reference for varieties with falling intonation - Gabriel et al. 2010 for Argentine Spanish, Willis 2010 for Dominican and Armstrong 2010 for Puerto Rican Spanish}
 
-Response
+We thank the reviewer for pointing out this oversight. 
+In the revised manuscript we have included references to @gabriel2010argentine, @willis2010dominican, and @armstrong2010puerto where the reviewer has suggested.
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -81,9 +117,10 @@ Response
 
 \RC{Page 8, line 28: note that in fact most varieties of Spanish have some sort of question fall}
 
-Response
+The reviewer's point is duly noted. 
+No changes have been included in the revised manuscript with regard to this point (as is, or description doesn't imply that this isn't indeed the case).
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -96,17 +133,21 @@ Response
 https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=2906&context=dissertations_2
 -->
 
-Response
+While we acknowledge the fantastic quality of Sánchez Alvarado's work, the perception chapter from the above referenced dissertation is not in fact about L2 speech perception, but rather L2 speech production and how it is rated ("perceived") by native Spanish speakers. 
+Thus we do not believe this work is relevant at this particular juncture of the manuscript. 
 
-\WorkInProgress
+\Done
 \Easy
+
+
 
 
 \RC{Page 9: Marasco's 2020 dissertation also looks at perception (not sure if she has published any of this): https://tspace.library.utoronto.ca/handle/1807/103553}
 
-Response
+We thank the reviewer for bringing this dissertation to our attention. 
+We have included the reference in the revised manuscript [@marasco2020you], as we were unable to find a published article. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -114,9 +155,9 @@ Response
 
 \RC{Page 31, line 9: perceptional—> perceptual?}
 
-Response
+This mistake has been corrected in the revised manuscript. 
 
-\WorkInProgress
+\Done
 \Easy
 
 

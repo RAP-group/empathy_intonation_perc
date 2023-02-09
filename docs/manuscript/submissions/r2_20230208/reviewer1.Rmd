@@ -1,8 +1,5 @@
-## INTRODUCTION AND OBJECTIVES
 
 \RC{All my concerns have been resolved.}
-
-Response
 
 \Done
 \Easy

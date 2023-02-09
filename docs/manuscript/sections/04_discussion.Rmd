@@ -40,7 +40,7 @@ We used Bayesian methods, in particular Drift Diffusion modeling [@ratcliff2008d
 We find that perception and processing of intonation develops in tandem with proficiency in the target language and is, to some degree, modulated by the construct empathy. 
 This study set out to address three pre-registered research questions that we will now revisit. 
 
-The first question, *Is perceptional development in L2 Spanish modulated by proficiency and intonation type?*, was developed as a direct result of the previous literature examining the acquisition of Spanish prosody [i.e., @bustin_2020; @trimble2013perceiving]. 
+The first question, *Is perceptual development in L2 Spanish modulated by proficiency and intonation type?*, was developed as a direct result of the previous literature examining the acquisition of Spanish prosody [i.e., @bustin_2020; @trimble2013perceiving]. 
 Response accuracy to all utterance types was positively correlated with proficiency, as measured by LexTALE scores. 
 This corroborates the general finding that development of L2 intonation is positively correlated with target language proficiency, for both production [@henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others] and perception [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
 In contrast with previous studies, our analyses conceptualized proficiency as a continuous variable, obviating the need to arbitrarily assign learners to proficiency groups. 
@@ -117,7 +117,7 @@ See Figure \@ref(fig:plot-sm-random-speech-rate) of the supplementary materials 
 In sum, the present work contributes to our knowledge of an understudied construct, empathy, as it pertains to speech. 
 Additionally, this is the first time, to our knowledge, that drift diffusion models have been used to analyze behavioral data relating to empathy in SLA. 
 We also underscore the general need for models of L2 phonology, such as the SLM-r [@flege2021revised], PAM-L2 [@Best2007], L2LP [@VanLeussen2015], etc., to address the acquisition process beyond the level of the segment. 
-The LILt model [@mennen2015beyond] has served as a starting point in the analysis of intonation across languages and L2 acquisition of intonation, framing the process of L2 acquisition of intonation along different developmental and structural dimensions. 
+The LILt model [@mennen2015beyond] has served as a starting point in the analysis of intonation across languages and L2 acquisition of intonation, framing the process of L2 acquisition of intonation along different developmental and structural dimensions, and has provided the theoretical grounding for numerous L2 studies [See @alvarado2022prosodic; @sanchez2022acquisition, among others]. 
 The findings of the present study are in line with LILt since they show that perception of intonation in an L2 progresses with higher proficiency. 
 In addition, these findings also emphasize the need for models like LILt to account for how individual differences pragmatic skills, such as empathy, can influence learner outcomes.
 A complete model of speech learning should account for both causal prediction and imputation at the segmental and suprasegmental levels. 

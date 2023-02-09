@@ -3,7 +3,7 @@ title       : |
   Using intonation to disambiguate meaning: The role of empathy and proficiency in L2 perceptual development
 authors     : "Joseph V. Casillas"
 journal     : "Applied Psycholinguistics"
-manuscript  : "APS-Feb-22-0015"
+manuscript  : "APS-Feb-22-0015.R1"
 
 bibliography: 
   - "../../../bib/empathy.bib"
@@ -48,8 +48,6 @@ Joseph Casillas
 #| child: "reviewer1.Rmd"
 #| eval: TRUE
 ```
-
-\clearpage
 
 # Reviewer \#2
 
