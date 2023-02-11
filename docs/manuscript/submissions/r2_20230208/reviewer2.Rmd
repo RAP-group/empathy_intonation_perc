@@ -118,7 +118,7 @@ In the revised manuscript we have included references to @gabriel2010argentine, 
 \RC{Page 8, line 28: note that in fact most varieties of Spanish have some sort of question fall}
 
 The reviewer's point is duly noted. 
-No changes have been included in the revised manuscript with regard to this point (as is, or description doesn't imply that this isn't indeed the case).
+No changes have been included in the revised manuscript with regard to this point (as is, our description doesn't imply that this isn't indeed the case).
 
 \Done
 \Easy
@@ -165,9 +165,11 @@ This mistake has been corrected in the revised manuscript.
 
 \RC{Page 31: For discussion on wh- questions, "A specific intonation contour is obligatory to force a question interpretation” - can you discuss the differences between wh intonation and declarative intonation in your stimuli?}
 
-Response
+In the revised manuscript we discuss the most common patterns observed in the stimuli of each utterance type (for each variety) in the Supplementary Materials. We have modified the sentence referenced above to make it clear that intonation contours associated with wh- questions can vary and we have added a footnote indicating to the reader where to find this information. 
 
-\WorkInProgress
+> A particular intonation contour is typically present to force a question interpretation and said contour can vary between and even within varieties. [FOOTNOTE: See Supplementary Materials for more information regarding the intonation contours observed in the stimuli of the present work.] 
+
+\Done
 \Easy
 
 
@@ -175,9 +177,12 @@ Response
 
 \RC{Page 31, Line 57: note that there are prosodic differences between Que bebe María and Qué beba María (e.g. absence vs. presence of a pitch accent on [ke]) which in theory would help guide the listener to the intended interpretation.}
 
-Response
+We thank the reviewer for pointing out this incomplete explanation. 
+The revised manuscript now reads as follows: 
 
-\WorkInProgress
+> That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*). 
+
+\Done
 \Easy
 
 
@@ -187,9 +192,9 @@ Response
 \RC{Page 32: "Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task." 
 So here the authors are indeed intending to make sense of why it might take more effort to distinguish YNQs from statements. But I think this discussion oversimplifies what we see in the stimuli. The authors have rich information in their ToBI transcriptions and it would be helpful to dig into the melodic differences between varieties and how those differ from American English in order to explain the lack of an effect for YNQs. I understand that the intention was not to get into specific melodies and explain results in this way, but I think at least a cursory attempt is necessary to try to explain the results. More on this below.}
 
-Response
+We address this issue below. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -199,9 +204,11 @@ Response
 \RC{Supplementary materials, Sp\_ToBI labelling:
 Note that the Sp\_ToBI labels used do not reflect the most current labeling conventions (see Hualde \& Prieto 2015) - for example HH\% is now !H\% if the authors aren’t using the most updated conventions, they should cite which version of Sp\_ToBI they are using. Note label change for PRS YNQ below.}
 
-Response
+We thank the reviewer for pointing out this important oversight. 
+We did indeed intend to use the updated conventions for Sp\_ToBI. 
+We have double-checked and corrected all discrepancies throughout the revised manuscript, including changes to y/n questions in Puerto Rican Spanish following @Armstrong2017. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -223,20 +230,46 @@ Peruvian: L\* HH\% (L\* !H\%) \\
 Puerto Rican: H+L\* L\% (this is actually not H+L\*, should be ¡H\* L\%, following Armstrong 2017: \\ https://www.degruyter.com/document/doi/10.1515/probus-2014-0016/html)
 
 I wonder what would happen if the authors either removed these varieties from the analysis or did an additional analysis that divided the YNQs between rises and falls (falls being Arg, Cub, PR), though if we look at Figure 10 and Table 8 it looks like it might just make sense to do this for Cuban and Puerto Rican). Perhaps responses for rising YNQs would pattern more with the other sentence types. I realize this goes beyond the scope of the paper though. But I think the possible reasons for the finding are readily available in the supplemental data, so why not have a stronger justification for the results?
+
+In sum it would be great to see the authors discuss the variation and the challenges the YNQ variation presents for learners. We see way less variation for the other sentence types in terms of general directionality of the contour (rise vs. fall). So while again, I know the point of the paper is not to get into tunes, it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results. The YNQs included here present different challenges compared to the other sentence types. I do see this mentioned in the variety- specific portion of the analysis, but should also be incorporated into the discussion of the lack of an effect for empathy for YNQS.
 }
 
-Response
+We again thank the reviewer for going above and beyond in their assessment of our manuscript. 
+We will address each of the points brought up regarding our analyses and the stimuli. 
 
-\WorkInProgress
-\Easy
+"In the stimuli we see lots of variation in terms of yn questions, and less variation for declaratives (seems like H+L\* L\% or L\*L\%) - analysis should take this into account."
 
+Our response:  
+Our analyses do take into account variability, that related to our participants, as well as that related to experimental items. 
+Specifically, our modeling strategy includes grouping variables (effects for varying intercepts and slopes) for individual listeners, items (i.e., each individual audio file), utterance type, and speaker variety. 
+This was also the case for our pilot analyses on data from monolingual Spanish speakers. 
+A primary goal of our experimental design was to allow us to make inferences about the role of empathy on speech perception when accounting for variability at all of the aforementioned levels. 
+This is precisely what the model structure intends to do. 
 
+The reviewer suggests subsetting the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with raises and falls might explain the absense of an effect for y/n questions. 
+Our view is that what the reviewer is asking for is ad-hoc exploratory analysis, which they acknowledge "go beyond scope of paper". 
+We did not preregister research questions aimed at determining how variability in intonational contours contribute to learner difficulties, nor did we conduct power analyses with these additional questions in mind. 
+Therefore, we also disagree with the reviewer that having this information would "have stronger justification of the results". 
+Put simply, we have done the analyses necessary to respond to our preregistered research questions. 
+We believe that exploring *why* certain tunes might be more or less difficult for learners--while interesting--would not "justify" our results in any way, it would merely address a different research question.
+It is also important to keep in mind that there are many other phonetic differences between the varieties included in our stimuli (as well as between items). 
+To give just one example, perhaps the realization of /s/ (aspiration or elision) is also a contributing factor in the Caribbean varieties. 
+We could include factors for this variable as well. 
+Where should one draw the line? 
 
+The reviewer also states: 
 
-\RC{Supplementary materials: 
-In sum it would be great to see the authors discuss the variation and the challenges the YNQ variation presents for learners. We see way less variation for the other sentence types in terms of general directionality of the contour (rise vs. fall). So while again, I know the point of the paper is not to get into tunes, it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results. The YNQs included here present different challenges compared to the other sentence types. I do see this mentioned in the variety- specific portion of the analysis, but should also be incorporated into the discussion of the lack of an effect for empathy for YNQS.}
+"...it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results."
 
-Response
+We acknowledge the variability of speech, in general and in our stimuli, in the introduction, the method section, the discussion, and especially in the supplementary materials. 
+Our perspective is that variability is a feature, not a bug.
+Inferring pragmatic meaning is one of many tasks of the L2 learner and we designed an experiment to better understand how the learner does this in spite of variability in speech. 
+In our view, the next logical step is to explore systematically the role of variability in an experiment designed to respond to this specific question. 
+For this reason, we make the point to mention that this is an exciting avenue for future research (and we have already begun work to fill this gap). 
 
-\WorkInProgress
+In sum, we acknowledge that our response is likely not what the reviewer wants, but we hope they will understand why we prioritize adhering to our preregistered research protocol. 
+That being said, we also invite the reviewer (and any future readers) to use our data to run any analyses they deem relevant. 
+It is precisely for this reason we adhere to principles of open science. 
+
+\Done
 \Easy
