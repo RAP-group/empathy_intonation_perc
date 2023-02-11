@@ -394,7 +394,7 @@ Here we provide a single example of each utterance type from each speaker (Figur
 The statement utterances from our speaker of Madrid Spanish included a nuclear configuration of L\* L\%. 
 The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-castilian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
 Wh- and yes/no question had a similar prenuclear distinction, respectively. 
-Our speaker also tended to use a final rise (L\* HH\%) in wh- questions, which differs from the more common final fall. 
+Our speaker also tended to use a final rise (L\* ¡H\%) in wh- questions, which differs from the more common final fall. 
 This is often associated with politeness [@quilis1993; @sosa2003], or possibly "[...] a nuance of interest and greater speaker involvement in the speech act" [@estebas_prieto2010, p. 35]. 
 We believe we may have obtained more formal utterances, or possibly 'lab' speech due to the context in which the stimuli were recorded, i.e., in a lab.^[For more information on lab speech, see @face2003intonation and @xu2010defense.]
 For more examples, see <http://prosodia.upf.edu/atlasentonacion/enquestes/espanol/madrid/index-english.html#maptask> ("¿Dónde está tu gasolina?", minute: -3:18). 
@@ -413,7 +413,7 @@ Similar to speaker of Madrileño Spanish, we do not see a major distinction betw
 We found a tendency for this speaker to a use statement-of-the-obvious pattern where we elicited narrow focus. 
 We show the nuclear configuration for wh- questions as L+¡H\* L\%, but this speaker also used L+H\* L\%. 
 A final rise for wh- questions is also documented in this variety [@henriksen2010development] and is associated with formality. 
-For yes-no questions, the boundary tone was typlically HH\%. 
+For yes-no questions, the boundary tone was typlically ¡H\%. 
 More information on Western Andalusian intonation is available @sosa1999 and @henriksen2012transcription. 
 
 (ref:plot-spectrogram-andalusian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Andalusian (San Fernando, Cádiz) Spanish.
@@ -469,7 +469,7 @@ knitr::include_graphics(
 
 The Mexican speaker distinguished between broad and narrow focus using a L\* L\% pattern in the former and L+H\* H\% in the latter. 
 For wh- questions in this variety, final falls are considered the unmarked configuration [@sosa2003], though we observed some rises, as in Figure \@ref(fig:plot-spectrogram-mexican) (bottom left plot). 
-For yes/no questions this speaker produced a L\* HH\% nuclear configuration. 
+For yes/no questions this speaker produced a L\* ¡H\% nuclear configuration. 
 Mexican Spanish is well-documented. 
 We refer the reader to @quilis1981, @quilis1987, @quilis1993, @sosa1999, @butragueno2003hacia, and @butragueno2004configuraciones for more information.
 
@@ -484,7 +484,7 @@ knitr::include_graphics(
 
 The statement utterances from our speaker of Peruvian Spanish included a nuclear configuration of L\* L\%. 
 The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-peruvian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
-With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* HH\% for yes-no questions. 
+With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* ¡H\% for yes-no questions. 
 More information on Peruvian intonation is available in @sosa1999 and @orourke2005intonation. 
 
 (ref:plot-spectrogram-peruvian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old male speaker of Peruvian (Lima) Spanish.
@@ -497,8 +497,8 @@ knitr::include_graphics(
 
 In Figure \@ref(fig:plot-spectrogram-puertorican) we see example utterances from the Puerto Rican speaker. 
 We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and H\*, respectively). 
-On occasion this speaker produced final rises for wh- questions (L\* HH\%), but also often used a falling contour. 
-For yes/no questions, this speaker produced H+L\* L\% configurations. 
+On occasion this speaker produced final rises for wh- questions (L\* ¡H\%), but also often used a falling contour. 
+For yes/no questions, this speaker produced ¡H\* L\% configurations. 
 More information on Puerto Rican intonation is available to the reader in @quilis1981, @quilis1987, @quilis1993, @sosa1999, @sosa2003, @armstrong2010puerto, and @armstrong2012development, among many others.
 
 (ref:plot-spectrogram-puertorican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Puerto Rican (Ponce) Spanish.

@@ -50,8 +50,8 @@ An exploratory analysis using d' found that learner sensitivity to the utterance
 While it is not clear exactly why yes/no question are the most difficult, one possibility is that wh- questions pose less of a challenge because they contain a wh- word (e.g., *cuándo*, *cómo*, etc.). 
 In other words, it might be the presence of a lexical cue in our task [and that of @bustin_2020] that facilitates the interpretation of a wh- question in addition to intonation. 
 At this juncture this possibility cannot be discarded, though it is worth noting that the presence of these words alone does not imply a question. 
-That is to say, in specific contexts these same words appear in statements as well, e.g., *Que bebe María*, *Que beba María*, etc. 
-A specific intonation contour is obligatory to force a question interpretation. 
+That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*).
+A particular intonation contour is typically present to force a question interpretation and said contour can vary between and even within varieties.^[See Supplementary Materials for more information regarding the intonation contours observed in the stimuli of the present work.] 
 Moreover, apart from the propositional content, a wh- question also implies a presupposition, and, thus, is more pragmatically complex. 
 On the other hand, the yes/no questions in our experimental task have the same syntactic structure as the declarative statements. 
 Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task.
