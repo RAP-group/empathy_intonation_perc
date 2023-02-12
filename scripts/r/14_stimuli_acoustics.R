@@ -1,7 +1,7 @@
 # Stimuli acoustics analysis --------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20221012
+# Last update: 20230212
 #
 # This script will:
 #   - run `5_extractVals_stimuli.praat` to get acoustic data from stimuli

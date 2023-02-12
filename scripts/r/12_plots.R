@@ -1,7 +1,7 @@
 # Plots -----------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 202201120
+# Last update: 202302112
 #
 # - All plots presented in slides and manuscripts are generated from this file
 #   and saved in their own folder, i.e., figs/slides, figs/manuscript, etc.
@@ -165,7 +165,7 @@ learner_accuracy_by_speaker_variety <- learner_response_01 %>%
       curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
     geom_curve(aes(x = 0.69, xend = 0.99, y = 0.025, yend = 0.03), size = 0.3, 
       curvature = 0, color = "black", arrow = arrow(length = unit(0.15, "cm"))) + 
-    labs(x = expression(paste(beta, "-Response")), y = NULL) + 
+    labs(x = expression(paste(beta, "-Accuracy")), y = NULL) + 
     ds4ling::ds4ling_bw_theme(base_size = 13, base_family = "Times") 
 
 # -----------------------------------------------------------------------------
