@@ -102,8 +102,8 @@ stimuli_pitch_contours <- stim_data %>%
   facet_grid(variety_lab ~ type_lab) + 
   geom_line(aes(group = item), stat = "smooth", alpha = 0.15, se = F, 
     show.legend = F, formula = "y ~ x", method = "loess") + 
-  stat_smooth(geom = "line", method = "loess", span = 0.5, formula = "y ~ x", size = 1.1, 
-    show.legend = F, lineend = "round") + 
+  stat_smooth(geom = "line", method = "loess", span = 0.5, formula = "y ~ x", 
+    linewidth = 1.1, show.legend = F, lineend = "round") +
   scale_color_manual(values = viridis::viridis_pal(
     option = "B", begin = 0.3, end = 0.8)(8)) + 
   scale_fill_manual(values = viridis::viridis_pal(
@@ -119,6 +119,32 @@ walk(c('png', 'pdf'), ~ ggsave(
   filename = glue(file.path(here("figs", "manuscript")), "/stimuli_pitch_contours.", .x), 
   plot = stimuli_pitch_contours, 
   device = .x, height = 7.5, width = 6.5, units = "in"))
+
+# Cuban and PR yn
+post_hoc_subset_stim <- stim_data %>% 
+  filter(
+    type  == "interrogative-total-yn", 
+    variety %in% c("cuban", "puertorican"), 
+    f0_log_z <= 2.5, f0_log_z >= -2.5
+  ) %>% 
+  mutate(tune = case_when(
+      variety == "cuban" & item == "El-bebe-comia-muy-bien" ~ "rise", 
+      variety == "cuban" & item == "La-maestra-vive-en-Paris" ~ "rise", 
+      variety == "puertorican" & item == "Mi-madre-come-la-fruta" ~ "rise", 
+      TRUE ~ "fall"
+    )
+  )
+
+# Get items
+post_hoc_subset_stim$item %>% unique
+
+# Check rises
+post_hoc_subset_stim %>% 
+  ggplot() + 
+  aes(x = time_bin, y = f0_log_z, color = variety_lab, fill = variety_lab) + 
+  facet_grid(variety_lab ~ tune) + 
+  geom_line(aes(group = item), stat = "smooth", se = F, 
+            show.legend = F, formula = "y ~ x", method = "loess")
 
 # -----------------------------------------------------------------------------
 

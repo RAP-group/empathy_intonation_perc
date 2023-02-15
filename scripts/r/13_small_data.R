@@ -1,7 +1,7 @@
 # Small data ------------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20211221
+# Last update: 20230215
 #
 # - script to be loaded in main.Rmd
 # - used for reporting "smaller" descriptives (such as N, means, etc.)
@@ -19,6 +19,8 @@ learner_response_01 <- readRDS(here("models", "learner_response_01.rds"))
 ddm_summary <- read_csv(here("tables", "ddm_bs_dr.csv"))
 variety_familiarity_summary <- 
   read_csv(here("tables", "learner_variety_match_response_model_summary.csv"))
+learner_native_risefall_accuracy <- 
+  read_csv(here("tables", "learner_native_risefall_accuracy.csv"))
 
 # -----------------------------------------------------------------------------
 
