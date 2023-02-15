@@ -1,6 +1,7 @@
 \RC{I think the authors did a great job taking into account our comments and suggestions. The revised version of the manuscript is now much more solid, but I still have some suggestions that I hope can be useful in a new revised version of the manuscript.
 
-The authors now include a lot more details on the listener and speaker dialectal variability and familiarity, but I still feel that this factor is  not well integrated into the manuscript. Here my specific suggestions:
+The authors now include a lot more details on the listener and speaker dialectal variability and familiarity, but I still feel that this factor is  not well integrated into the manuscript. Here my specific suggestions: 
+
 1) The effect of “speaker variety” on perception accuracy is one of the three research questions of the study, but it is not mentioned in various places in the manuscript where authors summarize their goals. For instance, in p.5, l.5-13 (“we investigated the interplay [...] in L2 Spanish”) the authors include RQ1 and RQ2, but not RQ3. Or in p. 14, l. 815, where the authors state that they aim at extending previous research by considering empathy in L2 sentence processing, but they do not mention the speaker variability/listener familiarity effect.
 }
 
@@ -61,7 +62,11 @@ We have included this change in the revised manuscript.
 3) p. 31, last line: change “que” for “qué” in “Qué bebe María?”. While the same pronoun is used, one is tonic and the other one not, so the nature of the “que” could have guided participants’ choices.
 }
 
+This oversight was also pointed out by reviewer 2. 
 We have included this change in the revised manuscript. 
+The sentence in question now reads as follows: 
+
+> That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*). 
 
 \Done
 \Easy

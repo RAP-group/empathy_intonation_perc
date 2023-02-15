@@ -28,12 +28,11 @@ Dear Dr. Joan Mora,
 
 
 Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
-Our understanding is that we needed to consider the reviewers' comments and revise accordingly before the manuscript could be reevaluated for publication. 
-We noted three specific areas that were consistently highlighted by the reviewers as needing improvement: use of terminology, motivation of the construct empathy as it pertains to our research questions, and description of the auditory stimuli. 
-We have considered thoroughly the detailed feedback provided by all three reviewers and resubmit what we believe to be a much improved version of the manuscript. 
-In this letter we address the reviewers' concerns point-by-point. 
+For the second round of revisions we have taken into consideration the suggestions from reviewer 2 and reviewer 3 and revised the manuscript accordingly. 
+We believe the revisions, while minor in scope, have helped to make the manuscript stronger. 
+In this letter we again address the reviewers' concerns point-by-point. 
 Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript. 
-We thank you and the three anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
+We thank you and the anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
 
 
 Sincerely,  

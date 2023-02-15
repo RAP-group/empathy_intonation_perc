@@ -6,13 +6,8 @@ I understand that the authors did not have the goal of explaining "understanding
 }
 
 We thank the reviewer for their comments. 
-After careful consideration, we have opted not to investigate further the 'lack of effect' regarding yes-no questions. 
-Our reasoning is as follows. 
-We went to painstaking efforts a priori to carefully develop our preregistered hypotheses, which we believe we have accurately and faithfully tested. 
-We believe that further (exploratory) analyses to assess new hypotheses arising from our planned analytic strategy are warranted and important, but, again, beyond the scope of this manuscript. 
-We have already began work on follow up studies to consider these very questions. 
-That being said, we also wholeheartedly encourage *anybody* interested to use our data to run any analyses they consider interesting and relevant. 
-Importantly, and to the reviewer's point, we have dedicated more of the discussion to the yes-no questions and we specifically point out this topic as an avenue for interesting future investigations. 
+We address the topic of yes/no questions in more detail below where it is brought up (specifically at the end of this section). 
+We will say here that we have considered further the yes-no questions and have included more text, tables and figures to them in the revised manuscript. 
 
 \WorkInProgress
 \Easy
@@ -246,7 +241,7 @@ This was also the case for our pilot analyses on data from monolingual Spanish s
 A primary goal of our experimental design was to allow us to make inferences about the role of empathy on speech perception when accounting for variability at all of the aforementioned levels. 
 This is precisely what the model structure intends to do. 
 
-That being said, we understand the point being made by the reviewer, which we interpret as a suggestion to subset the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with raises and falls might explain the absence of an effect for y/n questions. 
+That being said, we understand the point being made by the reviewer, which we interpret as a suggestion to subset the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with rises and falls might explain the absence of an effect for y/n questions. 
 We believe that we may have already conducted pos-hoc analyses that would satisfy the reviewer, but we have not done a sufficient job in explaining them, nor incorporating them into the narrative of the discussion (and supplementary materials). 
 Here we will explain some of the information to which we are referring, as well as highlight a few complementary plots and tables to underscore our point.
 
@@ -262,19 +257,19 @@ We calculated response accuracy for L2 and native listeners to yes/no questions 
 Table \@ref(tab:table-learner-native-caribbean) displays the means and standard deviations for the L2 and native listeners.
 Both groups were more accurate when responding to rising intonation, followed by utterances with falling intonation as produced by the Puerto Rican speaker, and, finally, the Cuban speaker. 
 This closely aligns with what we initially reported (i.e., lowest accuracy to Cuban stimuli, regardless of native language). 
-What is novel, is separating out the Puerto Rican variety (which we also reported as having lower accuracy) due to the falling contours. 
+What is novel, is separating out the Puerto Rican variety, which we also reported as having lower accuracy, presumably due to the falling contours. 
 
 ```{r, 'table-learner-native-caribbean'}
 learner_native_risefall_accuracy %>% 
   select(Group, Cuban, `Puerto Rican`, Other) %>% 
   knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
-    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety (Caribbean, Non-Caribbean). The stimuli from the Caribbean varieties include falling intonational contours.",
+    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety, which have been labelled as *Cuban*, *Puerto Rican* (i.e., Caribbean) or *Other* (i.e., non-Caribbean). The stimuli from the Caribbean varieties were produced with falling intonational contours.",
     label = "table-learner-native-caribbean")
 ```
 
 Importantly, we already considered the role of empathy in our primary analyses. 
 However, for the sake of completeness, we now also include Figure \@ref(fig:plot-learner-native-caribbean-accuracy), which plots response accuracy as a function of variety (Caribbean, Non-Caribbean) and empathy quotient (for learners). 
-We can see that there is no effect of empathy, regarding of the intonational contour. 
+We can see that there is no effect of empathy, regardless of the intonational contour (i.e., falling or rising). 
 This also reflects what we report in the manuscript. 
 
 (ref:plot-learner-native-caribbean-accuracy) L2 and native listener response accuracy to Caribbean (Cuban, Puerto Rican) and non-Caribbean varieties for yes/no questions. Points represent by-participant means (learners) or posterior means (natives). For learners, the horizontal axis plots empathy quotient scores.
