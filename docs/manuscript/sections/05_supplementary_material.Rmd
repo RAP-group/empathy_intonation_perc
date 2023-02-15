@@ -259,7 +259,43 @@ read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>%
 
 
 
-*Monolingual response accuracy*. In preparing our materials before official data collection, we piloted the 2AFC task and the auditory stimuli on monolingual Spanish speakers. 
+
+
+
+**Rising vs. falling contours in yes/no questions**. As pointed out by one of the anonymous reviewers, in our stimuli, the yes/no questions have rising intonation for all varieties except Cuban and Puerto Rican (see *Auditory stimuli* below). 
+We calculated response accuracy as a function of intonational contour (falling: Cuban, Puerto Rican; rising: other) for yes/no questions using L2 and native listener data. 
+Table \@ref(tab:table-learner-native-caribbean) provides descriptive statistics. 
+One can see that both listener types were least accurate when responding to the falling contours, though this is particularly true for the Cuban variety. 
+This finding is illustrated in the previous section with regard to familiarity and is seen again in the following section regarding native listener data. 
+
+```{r, 'table-learner-native-caribbean'}
+learner_native_risefall_accuracy %>% 
+  select(Group, Cuban, `Puerto Rican`, Other) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety (Caribbean, Non-Caribbean). The stimuli from the Caribbean varieties include falling intonational contours.",
+    label = "table-learner-native-caribbean")
+```
+
+Similar to what was found in our primary analyses regarding yes/no questions, in this subset of the data, empathy had no effect on response accuracy regardless of whether the stimuli was produced with falling (i.e., Caribbean: Cuban, Puerto Rican) or rising (other) intonation (Figure \@ref(fig:plot-learner-native-caribbean-accuracy)).
+
+(ref:plot-learner-native-caribbean-accuracy) L2 and native listener response accuracy to Caribbean (Cuban, Puerto Rican) and non-Caribbean varieties for yes/no questions. Points represent by-participant means (learners) or posterior means (natives). For learners, the horizontal axis plots empathy quotient scores.
+
+```{r, 'plot-learner-native-caribbean-accuracy', fig.cap="(ref:plot-learner-native-caribbean-accuracy)", out.width="100%"}
+knitr::include_graphics(
+    here("figs", "manuscript", "learner_native_caribbean_accuracy.png")
+  )
+```
+
+
+
+
+
+
+
+
+
+
+**Monolingual response accuracy**. In preparing our materials before official data collection, we piloted the 2AFC task and the auditory stimuli on monolingual Spanish speakers. 
 The purpose of collecting this pilot data was to get an assessment of task difficulty---overall and as a function of speaker variety---and to have an idea what reasonable priors would be with regard to response times. 
 From this pilot, we learned that, overall, monolingual speakers were least accuracy when responding to the Cuban variety, and to some degree the Puerto Rican variety as well. 
 This finding led us to hypothesize that L2 learners would also have difficulties when responding to stimuli from the same varieties.

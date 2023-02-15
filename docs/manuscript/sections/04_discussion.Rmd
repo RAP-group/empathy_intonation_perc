@@ -107,8 +107,9 @@ knitr::include_graphics(
 
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
 Yes/no questions in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
-Cuban and Puerto Rican Spanish, on the other hand, typically have a final fall [See @alvord2006spanish; @armstrong2012development; @hualde2015intonational; @armstrong2010puerto; @sosa1999, among others].
-Our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
+Cuban and Puerto Rican Spanish, on the other hand, typically have a final fall [See @alvord2006spanish; @armstrong2012development; @hualde2015intonational; @armstrong2010puerto; @sosa1999, among others]. 
+In our data, we do indeed find that L2 and native listeners are less accurate when responding to stimuli with final falls (See online supplementary materials for exploratory analyses), though these varieties were also considered to be less familiar. 
+Ultimately our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
 
 A final possibility is that speech rate differences associated with the speakers of the stimuli we used may have resulted in some varieties being more or less difficult for the learners [See @baese2019perceptual]. 
 In an exploratory analysis of the auditory stimuli, we found that speech rate had no effect on response accuracy, as some of the varieties to which participants responded most accurately were also the fastest (e.g., the stimuli from our Mexican speaker). 

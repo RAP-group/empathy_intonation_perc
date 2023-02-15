@@ -235,41 +235,61 @@ In sum it would be great to see the authors discuss the variation and the challe
 }
 
 We again thank the reviewer for going above and beyond in their assessment of our manuscript. 
-We will address each of the points brought up regarding our analyses and the stimuli. 
+The reviewer brings up numerous important points, which we will address one by one.
+Firstly, the reviewer states the following: 
 
 "In the stimuli we see lots of variation in terms of yn questions, and less variation for declaratives (seems like H+L\* L\% or L\*L\%) - analysis should take this into account."
 
-Our response:  
-Our analyses do take into account variability, that related to our participants, as well as that related to experimental items. 
+We would like to point out that our analyses do take into account variability, that related to our participants, as well as that related to experimental items. 
 Specifically, our modeling strategy includes grouping variables (effects for varying intercepts and slopes) for individual listeners, items (i.e., each individual audio file), utterance type, and speaker variety. 
 This was also the case for our pilot analyses on data from monolingual Spanish speakers. 
 A primary goal of our experimental design was to allow us to make inferences about the role of empathy on speech perception when accounting for variability at all of the aforementioned levels. 
 This is precisely what the model structure intends to do. 
 
-The reviewer suggests subsetting the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with raises and falls might explain the absense of an effect for y/n questions. 
-Our view is that what the reviewer is asking for is ad-hoc exploratory analysis, which they acknowledge "go beyond scope of paper". 
-We did not preregister research questions aimed at determining how variability in intonational contours contribute to learner difficulties, nor did we conduct power analyses with these additional questions in mind. 
-Therefore, we also disagree with the reviewer that having this information would "have stronger justification of the results". 
+That being said, we understand the point being made by the reviewer, which we interpret as a suggestion to subset the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with raises and falls might explain the absence of an effect for y/n questions. 
+We believe that we may have already conducted pos-hoc analyses that would satisfy the reviewer, but we have not done a sufficient job in explaining them, nor incorporating them into the narrative of the discussion (and supplementary materials). 
+Here we will explain some of the information to which we are referring, as well as highlight a few complementary plots and tables to underscore our point.
+
+Importantly, we also would like to emphasize that we did not preregister research questions aimed at determining how variability in intonational contours contribute to learner difficulties, nor did we conduct power analyses with these additional questions in mind. 
+Therefore, on the surface we also disagree with the reviewer that having this information would "have stronger justification of the results". 
 Put simply, we have done the analyses necessary to respond to our preregistered research questions. 
 We believe that exploring *why* certain tunes might be more or less difficult for learners--while interesting--would not "justify" our results in any way, it would merely address a different research question.
-It is also important to keep in mind that there are many other phonetic differences between the varieties included in our stimuli (as well as between items). 
-To give just one example, perhaps the realization of /s/ (aspiration or elision) is also a contributing factor in the Caribbean varieties. 
-We could include factors for this variable as well. 
-Where should one draw the line? 
 
-The reviewer also states: 
+As suggested by the reviewer, for yes/no questions, we considered utterances with falling versus rising intonation. 
+Specifically, we reviewed the contour of every utterance in the data set and labelled them as falling or rising. 
+As can be seen in Figure 21 of the previous version of the manuscript (and as pointed out by the reviewer), the yes/no questions primarily show rises in all of our stimuli with the exception of the Cuban and Puerto Rican varieties. 
+We calculated response accuracy for L2 and native listeners to yes/no questions based on whether they were listening to a Caribbean (Cuban, Puerto Rican) or non-Caribbean (other) variety. 
+Table \@ref(tab:table-learner-native-caribbean) displays the means and standard deviations for the L2 and native listeners.
+Both groups were more accurate when responding to rising intonation, followed by utterances with falling intonation as produced by the Puerto Rican speaker, and, finally, the Cuban speaker. 
+This closely aligns with what we initially reported (i.e., lowest accuracy to Cuban stimuli, regardless of native language). 
+What is novel, is separating out the Puerto Rican variety (which we also reported as having lower accuracy) due to the falling contours. 
 
-"...it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results."
+```{r, 'table-learner-native-caribbean'}
+learner_native_risefall_accuracy %>% 
+  select(Group, Cuban, `Puerto Rican`, Other) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety (Caribbean, Non-Caribbean). The stimuli from the Caribbean varieties include falling intonational contours.",
+    label = "table-learner-native-caribbean")
+```
 
-We acknowledge the variability of speech, in general and in our stimuli, in the introduction, the method section, the discussion, and especially in the supplementary materials. 
-Our perspective is that variability is a feature, not a bug.
-Inferring pragmatic meaning is one of many tasks of the L2 learner and we designed an experiment to better understand how the learner does this in spite of variability in speech. 
-In our view, the next logical step is to explore systematically the role of variability in an experiment designed to respond to this specific question. 
-For this reason, we make the point to mention that this is an exciting avenue for future research (and we have already begun work to fill this gap). 
+Importantly, we already considered the role of empathy in our primary analyses. 
+However, for the sake of completeness, we now also include Figure \@ref(fig:plot-learner-native-caribbean-accuracy), which plots response accuracy as a function of variety (Caribbean, Non-Caribbean) and empathy quotient (for learners). 
+We can see that there is no effect of empathy, regarding of the intonational contour. 
+This also reflects what we report in the manuscript. 
 
-In sum, we acknowledge that our response is likely not what the reviewer wants, but we hope they will understand why we prioritize adhering to our preregistered research protocol. 
-That being said, we also invite the reviewer (and any future readers) to use our data to run any analyses they deem relevant. 
-It is precisely for this reason we adhere to principles of open science. 
+(ref:plot-learner-native-caribbean-accuracy) L2 and native listener response accuracy to Caribbean (Cuban, Puerto Rican) and non-Caribbean varieties for yes/no questions. Points represent by-participant means (learners) or posterior means (natives). For learners, the horizontal axis plots empathy quotient scores.
 
+```{r, 'plot-learner-native-caribbean-accuracy', fig.cap="(ref:plot-learner-native-caribbean-accuracy)", out.width="100%"}
+knitr::include_graphics(
+    here("figs", "manuscript", "learner_native_caribbean_accuracy.png")
+  )
+```
+
+\clearpage
+
+The aforementioned information has been incorporated into the discussion section and supplementary materials of the revised manuscript (Table 8 and Figure 10). 
+We also would like to explicitly acknowledge that while there are still myriad possibilities for further exploratory analyses, we prioritize adhering to our preregistered research protocol. 
+That being said, we also invite the reviewer (and all future readers) to use our data to run any analyses they deem relevant. 
+It is precisely for this reason that we make our code and data publicly available. 
 \Done
 \Easy
