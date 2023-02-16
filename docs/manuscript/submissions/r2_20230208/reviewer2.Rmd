@@ -9,7 +9,7 @@ We thank the reviewer for their comments.
 We address the topic of yes/no questions in more detail below where it is brought up (specifically at the end of this section). 
 We will say here that we have considered further the yes-no questions and have included more text, tables and figures to them in the revised manuscript. 
 
-\WorkInProgress
+\Done
 \Easy
 
 
@@ -86,14 +86,28 @@ We thank the reviewer for pointing out this oversight.
 In the revised manuscript we have included a subsection in which we describe the Autosegmental Metrical Framework and the ToBI system. 
 The relevant additions are included here for convenience. 
 
-> PROSE HERE
+> In this subsection we provide examples of intonation contours for the four utterance types (broad focus state, narrow focus statement, wh- question, yes/no question) from the speakers of our eight varieties of Spanish (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
+Before proceeding to the acoustic descriptions, we will first provide an overview of the theoretical framework underpinning the descriptions. 
+>
+> The Autosegmental Metrical (AM) framework, developed by researchers like @pierrehumbert1980phonology and @ladd2008intonational, aims to map the instrumentally-derived F0 values onto sequential, discrete and categorically-distinct intonational events. 
+Within the AM framework, F0 is mapped onto pitch targets. 
+Pitch targets can be monotonal, H(igh) and L(ow), or bitonal combinations of H and L, which represent rises (e.g., L+H\*) or falls (e.g., H+L\*).
+>
+> Pitch targets are identified at three points in an utterance: \* indicates a pitch accent, which is associated and aligned with a stressed syllable; - indicates a phrase accent, which is associated with the boundary of an intermediate phrase; and \% indicates a boundary tone or intonational phrase. 
+It is important to note that an H at any prosodic level is the same H. 
+The symbol that comes associated with it, whether *, -, or %, is merely giving information about how that tone is aligned with a specific event or boundary, not about the phonetic realization of that tone.
+>
+>These abstract representations are mapped individually to instances of phonetic realizations specific to each language, similar to how /t/ has different acoustic properties in English and Spanish, as well as different phonetic realizations within a language depending on the context, similar to allophones. 
+This is further complicated by dialect, as different dialects may present different relationship mappings.
+>
+> The Tones and Breaks Indices (ToBI) labeling system is used within the AM framework to annotate utterances for intonation. 
+ToBI has two obligatory tiers: an orthographic tier, on which the utterance is recorded in IPA; and a tone tier, on which the pitch targets are recorded. 
+A third, optional tier is the break-index tier, on which prosodic breaks and their relative strengths are recorded on a scale of 0 (no break) to 4 (Intonation Phrase break). 
+It is idealized that each variety of a language should have its own ToBI system due to different varieties having distinct, but similar, intonational inventories.
+For example, in Dominican and Puerto Rican Spanish varieties, intonational phonologists may identify a bitonal fall H+L\*, but the phonetic realization and pragmatic contexts in which that tone is produced may differ.
+For the present work we adopt the Spanish Tones and Breaks Indices (Sp\_ToBI) as described in @hualde2015intonational. 
 
-<!--
-get 1-2 para summary
-find relevant place to include it
---> 
-
-\WorkInProgress
+\Done
 \Easy
 
 
