@@ -132,7 +132,7 @@ abstract: |
 keywords          : |
   Second language acquisition, Sentence processing, Speech perception, 
   Intonation, Empathy
-wordcount         : "8,319"
+wordcount         : "9,875"
 
 bibliography      : ["../bib/empathy.bib"]
 
