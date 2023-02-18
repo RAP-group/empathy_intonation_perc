@@ -10,6 +10,7 @@ Furthermore, increased attention has been given to how individual differences in
 The present study contributes to these lines of research by examining how individual differences in pragmatic skills affect the development of intonation during sentence comprehension. 
 Specifically, we investigated the interplay between language proficiency and an individual pragmatic skill (empathy) when learning an L2. 
 We focused on the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish. 
+In addition, we considered the role of dialectal variation by exposing listeners to utterances from eight varieties of Spanish.
 
 ## Background and motivation 
 
@@ -133,6 +134,7 @@ In this operationalization, 'sooner' refers to lower proficiency levels in a cro
 Finally, with regard to RQ3, we hypothesize that, overall, L2 learners will have the most difficulty (lower accuracy, slower response time) with the Cuban variety. 
 This hypothesis is grounded in exploratory analyses of pilot data collected from `r natives$participant %>% unique() %>% length()` monolingual Spanish speakers in which responses to the Cuban variety were the least accurate (See Supplementary Materials for more information). 
 
-This project presents a conceptual replication of @bustin_2020 in that we employ a similar experimental paradigm using similar stimuli in order to analyze the relationship between proficiency and L2 perception of intonation. 
+This project presents a conceptual replication of @bustin_2020 in that we employ a similar experimental paradigm using similar stimuli in order to analyze the relationship between proficiency and L2 perception of intonation.
+Similar to @bustin_2020, we include speakers from eight different varieties of Spanish in order to consider how dialectal variation influences perceptual development.
 We extend this research by taking into account pragmatic skill, specifically empathy, in L2 sentence processing. 
 Importantly, this research builds on recent studies looking at the role of individual pragmatic skills in language comprehension and extends them to the field of SLA. 
