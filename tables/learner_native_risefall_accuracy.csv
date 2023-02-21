@@ -1,0 +1,3 @@
+avg_cuban,avg_other,avg_puertorican,sd_cuban,sd_other,sd_puertorican,Group,Cuban,Puerto Rican,Other
+0.55,0.93,0.8,0.5,0.25,0.4,Native listeners,0.55 (0.5),0.8 (0.4),0.93 (0.25)
+0.13,0.73,0.28,0.33,0.44,0.45,L2 learners,0.13 (0.33),0.28 (0.45),0.73 (0.44)

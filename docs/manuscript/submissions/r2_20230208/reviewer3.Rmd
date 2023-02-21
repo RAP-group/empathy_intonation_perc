@@ -1,0 +1,82 @@
+\RC{I think the authors did a great job taking into account our comments and suggestions. The revised version of the manuscript is now much more solid, but I still have some suggestions that I hope can be useful in a new revised version of the manuscript.
+
+The authors now include a lot more details on the listener and speaker dialectal variability and familiarity, but I still feel that this factor is  not well integrated into the manuscript. Here my specific suggestions: 
+
+1) The effect of “speaker variety” on perception accuracy is one of the three research questions of the study, but it is not mentioned in various places in the manuscript where authors summarize their goals. For instance, in p.5, l.5-13 (“we investigated the interplay [...] in L2 Spanish”) the authors include RQ1 and RQ2, but not RQ3. Or in p. 14, l. 815, where the authors state that they aim at extending previous research by considering empathy in L2 sentence processing, but they do not mention the speaker variability/listener familiarity effect.
+}
+
+We agree with the reviewer's observations and have modified the introduction as suggested in order to better integrate RQ3 into the revised manuscript. 
+We include the relevant changes below. 
+
+> Specifically, we investigated the interplay between language proficiency and an individual pragmatic skill (empathy) when learning an L2. 
+We focused on the role of empathy in the development of L2 prosody by analyzing the perception of intonation in questions and statements in L2 Spanish. 
+In addition, we considered the role of dialectal variation by exposing listeners to utterances from eight varieties of Spanish.
+
+> This project presents a conceptual replication of @bustin_2020 in that we employ a similar experimental paradigm using similar stimuli in order to analyze the relationship between proficiency and L2 perception of intonation.
+Similar to @bustin_2020, we include speakers from eight different varieties of Spanish in order to consider how dialectal variation influences perceptual development.
+We extend this research by taking into account pragmatic skill, specifically empathy, in L2 sentence processing. 
+Importantly, this research builds on recent studies looking at the role of individual pragmatic skills in language comprehension and extends them to the field of SLA. 
+
+\Done
+\Easy
+
+
+
+
+\RC{
+2) It still feels strange to have a specific hypothesis about the Cuban variety in the introduction (p. 13, l. 44-45) without any information yet on the pilot or the nature of Cuban intonation. I think it would make more sense to make hypothesis about familiarity. I mean: instead of saying “we hypothesize that L2 learners will have the most difficulty with the Cuban variety”, to say that they will have more difficulty with the variety they are less familiar with, and then in the methods and results we will already learn that this is the Cuban variety.
+}
+
+While we agree that the reviewer's suggestion certainly lends itself to a more elegant transition from the research question to the results, collectively we are not comfortable with the idea of hypothesizing after the results are known. 
+We recognize the temptation to refocus the research question on familiarity, as this seems much more logical *a posteriori*. 
+Nonetheless, we preregistered our hypothesis about the Cuban variety based on pilot data from monolingual Spanish listeners. 
+In that sense, we feel that it is sufficiently motivated. 
+To the reviewer's point, familiarity is clearly relevant and for this reason we expand on it's role on perceptual development in the discussion and the supplementary materials. 
+
+\Done
+\Easy
+
+
+
+
+\RC{
+1) Introduction, p.4, l. 23-25: The authors contrast linguistic information to pragmatic information. Why do the authors think that pragmatics is not part of the linguistic system?
+}
+
+The reviewer makes an important point. 
+We agree that pragmatics is indeed part of the linguistic system and did not intend to suggest otherwise. 
+In the revised manuscript we have rewritten this sentence to make this more clear. 
+It now reads as follows: 
+
+> The difficulties associated with intonation can result in comprehension and communication mishaps because the tune is associated with numerous parts of the linguistic system, such as sentence function, e.g., utterance type, syntactic constituency, as well as pragmatic function, e.g., information structure [@erteschik2007information; @casielles2004syntax], speaker belief states [@pierrehumbert1990meaning], polite discourse [@astruc2016cost], bias, or presupposition [@henriksen2016intonational]. 
+
+\Done
+\Easy
+
+
+
+
+\RC{
+2) Figure 5, left panel: should the title of the graph be “b-accuracy” instead of “b-response”?
+}
+
+We have included this change in the revised manuscript.
+
+\Done
+\Easy
+
+
+
+
+\RC{
+3) p. 31, last line: change “que” for “qué” in “Qué bebe María?”. While the same pronoun is used, one is tonic and the other one not, so the nature of the “que” could have guided participants’ choices.
+}
+
+This oversight was also pointed out by reviewer 2. 
+We have included this change in the revised manuscript. 
+The sentence in question now reads as follows: 
+
+> That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*). 
+
+\Done
+\Easy

@@ -1,0 +1,304 @@
+
+\RC{
+This paper has improved substantially and the authors have done an excellent job of integrating the comments and suggestions of the reviewers. 
+The majority of my suggestions are minor, but I still think discussion can be developed a bit to better explain the lack of effect for yes-no questions. 
+I understand that the authors did not have the goal of explaining "understanding why different pitch contours affect intonation perception", however, I think it would be a more satisfying discussion of the results that is already hinted at in the paper and could be developed more fully since the relevant information is available.
+}
+
+We thank the reviewer for their comments. 
+We address the topic of yes/no questions in more detail below where it is brought up (specifically at the end of this section). 
+We will say here that we have considered further the yes-no questions and have included more text, tables and figures to them in the revised manuscript. 
+
+\Done
+\Easy
+
+
+\RC{Page 5, line 32: "to signal whether an utterance is a question or a statement" - can this be broader since intonation goes beyond this? - there are other sentence types that can be signaled by intonation}
+
+We have revised this sentence to make it clear that we refer the use of intonation to signal whether an utterance is a question or statement as merely one (relevant) possibility. 
+The revised sentence is included here for the reviewer's convenience. 
+
+> This is, in part, because in everyday discourse speakers can use intonation for numerous communicative functions, such as indicating syntactic structure, signaling pragmatic meaning, e.g., whether an utterance is a question or a statement, focusing constituents, conveying affective meaning, etc. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 5, line 37: is often language-specific —> is language-specific}
+
+We have included this change in the revised manuscript.
+
+\Done
+\Easy
+
+
+
+
+
+\RC{Page 5, line 54: please cite reference for Chilean Spanish questions - might also be worth citing Hualde \& Prieto (2015) for discussion of pragmatic nuances in Spanish intonation for questions in varieties of Spanish}
+
+We have included references to @lira2000prosodia and @ortiz2003acentos. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 7, line 10: Please add following references for Spanish intonation applying the LiLT model: 
+
+Sánchez-Alvarado, 2022 https://www.jbe-platform.com/content/journals/10.1075/jslp.20041.san
+
+Sánchez-Alvarado \& Armstrong 2022 https://www.degruyter.com/document/doi/10.1515/shll-2022-2060/html
+}
+
+We do not believe that these references would be appropriate at this juncture of the manuscript. 
+Our reasoning is because the purpose of this paragraph is to introduce the relevant L2 models, and, therefore, we only cite the authors of said models, not examples in which the models have been used. 
+In this particular case, in line with the previous sentences, we reference the author of the LILt model [i.e., @mennen2015beyond], not examples using the LILt model. 
+That being said, the reviewer's suggestions are clearly relevant to our manuscript. 
+Thus, in addition to @alvarado2022prosodic, the revised manuscript now also includes @sanchez2022acquisition in the discussion section. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 8: Review is missing Sánchez Alvarado 2022 and Sánchez Alvarado \& Armstrong 2022 (Also see Sánchez Alvarado’s 2020 dissertation)}
+
+As mentioned above, the articles to which the reviewer refers have been included in the manuscript. 
+However, they are not mentioned in the description of the LILt model because they are not relevant with regard to the development of the model. 
+That is not to say that they are not important/relevant to the manuscript in general, and, for this reason, they appear in other parts of the introduction and discussion sections. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 8: The paper talks about concepts such as pitch accents and boundary tones, which assume a specific framework. 
+There should be a short section devoted to the Autosegmental Metrical Framework and the ToBI system of labeling intonation for Spanish specifically where the basic concepts (e.g. pitch accent) are explained. 
+This is standard for papers that use these terms, which involve theoretical assumptions.}
+
+We thank the reviewer for pointing out this oversight. 
+In the revised manuscript we have included a subsection in which we describe the Autosegmental Metrical Framework and the ToBI system. 
+The relevant additions are included here for convenience. 
+
+> In this subsection we provide examples of intonation contours for the four utterance types (broad focus state, narrow focus statement, wh- question, yes/no question) from the speakers of our eight varieties of Spanish (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
+Before proceeding to the acoustic descriptions, we will first provide an overview of the theoretical framework underpinning the descriptions. 
+>
+> The Autosegmental Metrical (AM) framework, developed by researchers like @pierrehumbert1980phonology and @ladd2008intonational, aims to map the instrumentally-derived F0 values onto sequential, discrete and categorically-distinct intonational events. 
+Within the AM framework, F0 is mapped onto pitch targets. 
+Pitch targets can be monotonal, H(igh) and L(ow), or bitonal combinations of H and L, which represent rises (e.g., L+H\*) or falls (e.g., H+L\*).
+>
+> Pitch targets are identified at three points in an utterance: \* indicates a pitch accent, which is associated and aligned with a stressed syllable; - indicates a phrase accent, which is associated with the boundary of an intermediate phrase; and \% indicates a boundary tone or intonational phrase. 
+It is important to note that an H at any prosodic level is the same H. 
+The symbol that comes associated with it, whether *, -, or %, is merely giving information about how that tone is aligned with a specific event or boundary, not about the phonetic realization of that tone.
+>
+>These abstract representations are mapped individually to instances of phonetic realizations specific to each language, similar to how /t/ has different acoustic properties in English and Spanish, as well as different phonetic realizations within a language depending on the context, similar to allophones. 
+This is further complicated by dialect, as different dialects may present different relationship mappings.
+>
+> The Tones and Breaks Indices (ToBI) labeling system is used within the AM framework to annotate utterances for intonation. 
+ToBI has two obligatory tiers: an orthographic tier, on which the utterance is recorded in IPA; and a tone tier, on which the pitch targets are recorded. 
+A third, optional tier is the break-index tier, on which prosodic breaks and their relative strengths are recorded on a scale of 0 (no break) to 4 (Intonation Phrase break). 
+It is idealized that each variety of a language should have its own ToBI system due to different varieties having distinct, but similar, intonational inventories.
+For example, in Dominican and Puerto Rican Spanish varieties, intonational phonologists may identify a bitonal fall H+L\*, but the phonetic realization and pragmatic contexts in which that tone is produced may differ.
+For the present work we adopt the Spanish Tones and Breaks Indices (Sp\_ToBI) as described in @hualde2015intonational. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 8, line 24: missing reference for varieties with falling intonation - Gabriel et al. 2010 for Argentine Spanish, Willis 2010 for Dominican and Armstrong 2010 for Puerto Rican Spanish}
+
+We thank the reviewer for pointing out this oversight. 
+In the revised manuscript we have included references to @gabriel2010argentine, @willis2010dominican, and @armstrong2010puerto where the reviewer has suggested.
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 8, line 28: note that in fact most varieties of Spanish have some sort of question fall}
+
+The reviewer's point is duly noted. 
+No changes have been included in the revised manuscript with regard to this point (as is, our description doesn't imply that this isn't indeed the case).
+
+\Done
+\Easy
+
+
+
+
+
+\RC{Page 9: Please cite Sánchez Alvarado’s perception work: [LINK]}
+
+<!-- 
+https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=2906&context=dissertations_2
+-->
+
+While we acknowledge the fantastic quality of Sánchez Alvarado's work, the perception chapter from the above referenced dissertation is not in fact about L2 speech perception, but rather L2 speech production and how it is rated ("perceived") by native Spanish speakers. 
+Thus we do not believe this work is relevant at this particular juncture of the manuscript. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 9: Marasco's 2020 dissertation also looks at perception (not sure if she has published any of this): https://tspace.library.utoronto.ca/handle/1807/103553}
+
+We thank the reviewer for bringing this dissertation to our attention. 
+We have included the reference in the revised manuscript [@marasco2020you], as we were unable to find a published article. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 31, line 9: perceptional—> perceptual?}
+
+This mistake has been corrected in the revised manuscript. 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 31: For discussion on wh- questions, "A specific intonation contour is obligatory to force a question interpretation” - can you discuss the differences between wh intonation and declarative intonation in your stimuli?}
+
+In the revised manuscript we discuss the most common patterns observed in the stimuli of each utterance type (for each variety) in the Supplementary Materials. We have modified the sentence referenced above to make it clear that intonation contours associated with wh- questions can vary and we have added a footnote indicating to the reader where to find this information. 
+
+> A particular intonation contour is typically present to force a question interpretation and said contour can vary between and even within varieties. [FOOTNOTE: See Supplementary Materials for more information regarding the intonation contours observed in the stimuli of the present work.] 
+
+\Done
+\Easy
+
+
+
+
+\RC{Page 31, Line 57: note that there are prosodic differences between Que bebe María and Qué beba María (e.g. absence vs. presence of a pitch accent on [ke]) which in theory would help guide the listener to the intended interpretation.}
+
+We thank the reviewer for pointing out this incomplete explanation. 
+The revised manuscript now reads as follows: 
+
+> That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*). 
+
+\Done
+\Easy
+
+
+
+
+
+\RC{Page 32: "Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task." 
+So here the authors are indeed intending to make sense of why it might take more effort to distinguish YNQs from statements. But I think this discussion oversimplifies what we see in the stimuli. The authors have rich information in their ToBI transcriptions and it would be helpful to dig into the melodic differences between varieties and how those differ from American English in order to explain the lack of an effect for YNQs. I understand that the intention was not to get into specific melodies and explain results in this way, but I think at least a cursory attempt is necessary to try to explain the results. More on this below.}
+
+We address this issue below. 
+
+\Done
+\Easy
+
+
+
+
+
+\RC{Supplementary materials, Sp\_ToBI labelling:
+Note that the Sp\_ToBI labels used do not reflect the most current labeling conventions (see Hualde \& Prieto 2015) - for example HH\% is now !H\% if the authors aren’t using the most updated conventions, they should cite which version of Sp\_ToBI they are using. Note label change for PRS YNQ below.}
+
+We thank the reviewer for pointing out this important oversight. 
+We did indeed intend to use the updated conventions for Sp\_ToBI. 
+We have double-checked and corrected all discrepancies throughout the revised manuscript, including changes to y/n questions in Puerto Rican Spanish following @Armstrong2017. 
+
+\Done
+\Easy
+
+
+
+
+\RC{
+Supplementary materials, Suggestions for discussion re: YNQs:
+In the stimuli we see lots of variation in terms of yn questions, and less variation for declaratives (seems like H+L\* L\% or L\*L\%) - analysis should take this into account. Not only is there a ton of variation for the YNQs, three varieties (Argentine, Cuban and PRS) use tunes that differ greatly from the Mainstream American English in the Northeast, so we might expect for these to be harder to identify.
+
+Final rises in red, final falls in green
+
+Madrid: L\* HH\% (L\* !H\%) \\
+Andalusian: L+H\* HH\% (L+H\* !H\%) \\
+Argentine: L+!H\* HL\% \\
+Chilean: H+L\* HH\% (H+L\* !H\%) \\
+Cuban: L+H\* L\% (I would label this L+¡H\* L\%) \\
+Mexican: L\* HH\% (L\* !H\%) \\
+Peruvian: L\* HH\% (L\* !H\%) \\
+Puerto Rican: H+L\* L\% (this is actually not H+L\*, should be ¡H\* L\%, following Armstrong 2017: \\ https://www.degruyter.com/document/doi/10.1515/probus-2014-0016/html)
+
+I wonder what would happen if the authors either removed these varieties from the analysis or did an additional analysis that divided the YNQs between rises and falls (falls being Arg, Cub, PR), though if we look at Figure 10 and Table 8 it looks like it might just make sense to do this for Cuban and Puerto Rican). Perhaps responses for rising YNQs would pattern more with the other sentence types. I realize this goes beyond the scope of the paper though. But I think the possible reasons for the finding are readily available in the supplemental data, so why not have a stronger justification for the results?
+
+In sum it would be great to see the authors discuss the variation and the challenges the YNQ variation presents for learners. We see way less variation for the other sentence types in terms of general directionality of the contour (rise vs. fall). So while again, I know the point of the paper is not to get into tunes, it would really help to at least superficially acknowledge these differences in the stimuli to make better sense of the results. The YNQs included here present different challenges compared to the other sentence types. I do see this mentioned in the variety- specific portion of the analysis, but should also be incorporated into the discussion of the lack of an effect for empathy for YNQS.
+}
+
+We again thank the reviewer for going above and beyond in their assessment of our manuscript. 
+The reviewer brings up numerous important points, which we will address one by one.
+Firstly, the reviewer states the following: 
+
+"In the stimuli we see lots of variation in terms of yn questions, and less variation for declaratives (seems like H+L\* L\% or L\*L\%) - analysis should take this into account."
+
+We would like to point out that our analyses do take into account variability, that related to our participants, as well as that related to experimental items. 
+Specifically, our modeling strategy includes grouping variables (effects for varying intercepts and slopes) for individual listeners, items (i.e., each individual audio file), utterance type, and speaker variety. 
+This was also the case for our pilot analyses on data from monolingual Spanish speakers. 
+A primary goal of our experimental design was to allow us to make inferences about the role of empathy on speech perception when accounting for variability at all of the aforementioned levels. 
+This is precisely what the model structure intends to do. 
+
+That being said, we understand the point being made by the reviewer, which we interpret as a suggestion to subset the data in different ways, by removing varieties or adding factors, in order to determine if acoustic differences associated with rises and falls might explain the absence of an effect for y/n questions. 
+We believe that we may have already conducted pos-hoc analyses that would satisfy the reviewer, but we have not done a sufficient job in explaining them, nor incorporating them into the narrative of the discussion (and supplementary materials). 
+Here we will explain some of the information to which we are referring, as well as highlight a few complementary plots and tables to underscore our point.
+
+Importantly, we also would like to emphasize that we did not preregister research questions aimed at determining how variability in intonational contours contribute to learner difficulties, nor did we conduct power analyses with these additional questions in mind. 
+Therefore, on the surface we also disagree with the reviewer that having this information would "have stronger justification of the results". 
+Put simply, we have done the analyses necessary to respond to our preregistered research questions. 
+We believe that exploring *why* certain tunes might be more or less difficult for learners--while interesting--would not "justify" our results in any way, it would merely address a different research question.
+
+As suggested by the reviewer, for yes/no questions, we considered utterances with falling versus rising intonation. 
+Specifically, we reviewed the contour of every utterance in the data set and labelled them as falling or rising. 
+As can be seen in Figure 21 of the previous version of the manuscript (and as pointed out by the reviewer), the yes/no questions primarily show rises in all of our stimuli with the exception of the Cuban and Puerto Rican varieties. 
+We calculated response accuracy for L2 and native listeners to yes/no questions based on whether they were listening to a Caribbean (Cuban, Puerto Rican) or non-Caribbean (other) variety. 
+Table \@ref(tab:table-learner-native-caribbean) displays the means and standard deviations for the L2 and native listeners.
+Both groups were more accurate when responding to rising intonation, followed by utterances with falling intonation as produced by the Puerto Rican speaker, and, finally, the Cuban speaker. 
+This closely aligns with what we initially reported (i.e., lowest accuracy to Cuban stimuli, regardless of native language). 
+What is novel, is separating out the Puerto Rican variety, which we also reported as having lower accuracy, presumably due to the falling contours. 
+
+```{r, 'table-learner-native-caribbean'}
+learner_native_risefall_accuracy %>% 
+  select(Group, Cuban, `Puerto Rican`, Other) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety, which have been labelled as *Cuban*, *Puerto Rican* (i.e., Caribbean) or *Other* (i.e., non-Caribbean). The stimuli from the Caribbean varieties were produced with falling intonational contours.",
+    label = "table-learner-native-caribbean")
+```
+
+Importantly, we already considered the role of empathy in our primary analyses. 
+However, for the sake of completeness, we now also include Figure \@ref(fig:plot-learner-native-caribbean-accuracy), which plots response accuracy as a function of variety (Caribbean, Non-Caribbean) and empathy quotient (for learners). 
+We can see that there is no effect of empathy, regardless of the intonational contour (i.e., falling or rising). 
+This also reflects what we report in the manuscript. 
+
+(ref:plot-learner-native-caribbean-accuracy) L2 and native listener response accuracy to Caribbean (Cuban, Puerto Rican) and non-Caribbean varieties for yes/no questions. Points represent by-participant means (learners) or posterior means (natives). For learners, the horizontal axis plots empathy quotient scores.
+
+```{r, 'plot-learner-native-caribbean-accuracy', fig.cap="(ref:plot-learner-native-caribbean-accuracy)", out.width="100%"}
+knitr::include_graphics(
+    here("figs", "manuscript", "learner_native_caribbean_accuracy.png")
+  )
+```
+
+\clearpage
+
+The aforementioned information has been incorporated into the discussion section and supplementary materials of the revised manuscript (Table 8 and Figure 10). 
+We also would like to explicitly acknowledge that while there are still myriad possibilities for further exploratory analyses, we prioritize adhering to our preregistered research protocol. 
+That being said, we also invite the reviewer (and all future readers) to use our data to run any analyses they deem relevant. 
+It is precisely for this reason that we make our code and data publicly available. 
+\Done
+\Easy

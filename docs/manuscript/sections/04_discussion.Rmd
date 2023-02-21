@@ -40,7 +40,7 @@ We used Bayesian methods, in particular Drift Diffusion modeling [@ratcliff2008d
 We find that perception and processing of intonation develops in tandem with proficiency in the target language and is, to some degree, modulated by the construct empathy. 
 This study set out to address three pre-registered research questions that we will now revisit. 
 
-The first question, *Is perceptional development in L2 Spanish modulated by proficiency and intonation type?*, was developed as a direct result of the previous literature examining the acquisition of Spanish prosody [i.e., @bustin_2020; @trimble2013perceiving]. 
+The first question, *Is perceptual development in L2 Spanish modulated by proficiency and intonation type?*, was developed as a direct result of the previous literature examining the acquisition of Spanish prosody [i.e., @bustin_2020; @trimble2013perceiving]. 
 Response accuracy to all utterance types was positively correlated with proficiency, as measured by LexTALE scores. 
 This corroborates the general finding that development of L2 intonation is positively correlated with target language proficiency, for both production [@henriksen2010development; @thornberry2014l2; @craft2015acquisition; @trimble2013acquiring, among others] and perception [@nibert2005acquisition; @nibert2006acquisition; @trimble2013perceiving; @bustin_2020]. 
 In contrast with previous studies, our analyses conceptualized proficiency as a continuous variable, obviating the need to arbitrarily assign learners to proficiency groups. 
@@ -50,8 +50,8 @@ An exploratory analysis using d' found that learner sensitivity to the utterance
 While it is not clear exactly why yes/no question are the most difficult, one possibility is that wh- questions pose less of a challenge because they contain a wh- word (e.g., *cuándo*, *cómo*, etc.). 
 In other words, it might be the presence of a lexical cue in our task [and that of @bustin_2020] that facilitates the interpretation of a wh- question in addition to intonation. 
 At this juncture this possibility cannot be discarded, though it is worth noting that the presence of these words alone does not imply a question. 
-That is to say, in specific contexts these same words appear in statements as well, e.g., *Que bebe María*, *Que beba María*, etc. 
-A specific intonation contour is obligatory to force a question interpretation. 
+That is to say, in specific contexts these same words can appear in statements as well, in some cases with a pitch accent (i.e., *Qué beba María*) and in others without (i.e., *Que bebe María*).
+A particular intonation contour is typically present to force a question interpretation and said contour can vary between and even within varieties.^[See Supplementary Materials for more information regarding the intonation contours observed in the stimuli of the present work.] 
 Moreover, apart from the propositional content, a wh- question also implies a presupposition, and, thus, is more pragmatically complex. 
 On the other hand, the yes/no questions in our experimental task have the same syntactic structure as the declarative statements. 
 Perhaps for this reason yes/no questions require more effort and attention to intonation in order to distinguish them from statements in our task.
@@ -107,8 +107,9 @@ knitr::include_graphics(
 
 Another plausible explanation for variety-specific difficulties lies in cross-linguistic differences in the prosodic realizations of the distinct utterance types. 
 Yes/no questions in Peninsular-Madrileño Spanish, for example, have the common final rise found in many other varieties of Spanish, as well as Standard American English. 
-Cuban and Puerto Rican Spanish, on the other hand, typically have a final fall [See @alvord2006spanish; @armstrong2012development; @hualde2015intonational; @armstrong2010puerto; @sosa1999, among others].
-Our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
+Cuban and Puerto Rican Spanish, on the other hand, typically have a final fall [See @alvord2006spanish; @armstrong2012development; @hualde2015intonational; @armstrong2010puerto; @sosa1999, among others]. 
+In our data, we do indeed find that L2 and native listeners are less accurate when responding to stimuli with final falls (See online supplementary materials for exploratory analyses), though these varieties were also considered to be less familiar. 
+Ultimately our experimental design does not allow us to say definitively whether dialectal variation at the suprasegmental level accounts for variety-specific difficulties (as opposed to additional variation at the level of the segment, for example), though this reasoning is in line with previous studies, i.e., @trimble2013perceiving. 
 
 A final possibility is that speech rate differences associated with the speakers of the stimuli we used may have resulted in some varieties being more or less difficult for the learners [See @baese2019perceptual]. 
 In an exploratory analysis of the auditory stimuli, we found that speech rate had no effect on response accuracy, as some of the varieties to which participants responded most accurately were also the fastest (e.g., the stimuli from our Mexican speaker). 
@@ -117,7 +118,7 @@ See Figure \@ref(fig:plot-sm-random-speech-rate) of the supplementary materials 
 In sum, the present work contributes to our knowledge of an understudied construct, empathy, as it pertains to speech. 
 Additionally, this is the first time, to our knowledge, that drift diffusion models have been used to analyze behavioral data relating to empathy in SLA. 
 We also underscore the general need for models of L2 phonology, such as the SLM-r [@flege2021revised], PAM-L2 [@Best2007], L2LP [@VanLeussen2015], etc., to address the acquisition process beyond the level of the segment. 
-The LILt model [@mennen2015beyond] has served as a starting point in the analysis of intonation across languages and L2 acquisition of intonation, framing the process of L2 acquisition of intonation along different developmental and structural dimensions. 
+The LILt model [@mennen2015beyond] has served as a starting point in the analysis of intonation across languages and L2 acquisition of intonation, framing the process of L2 acquisition of intonation along different developmental and structural dimensions, and has provided the theoretical grounding for numerous L2 studies [See @alvarado2022prosodic; @sanchez2022acquisition, among others]. 
 The findings of the present study are in line with LILt since they show that perception of intonation in an L2 progresses with higher proficiency. 
 In addition, these findings also emphasize the need for models like LILt to account for how individual differences pragmatic skills, such as empathy, can influence learner outcomes.
 A complete model of speech learning should account for both causal prediction and imputation at the segmental and suprasegmental levels. 

@@ -1,0 +1,73 @@
+---
+title       : |
+  Using intonation to disambiguate meaning: The role of empathy and proficiency in L2 perceptual development
+authors     : "Joseph V. Casillas"
+journal     : "Applied Psycholinguistics"
+manuscript  : "APS-Feb-22-0015.R1"
+
+bibliography: 
+  - "../../../bib/empathy.bib"
+
+output      : papaja::revision_letter_pdf
+header-includes:
+  - \usepackage{tipa}
+  - \usepackage{booktabs}
+  - \usepackage{hyperref}
+  - \usepackage{longtable}
+---
+
+```{r}
+#| label: setup
+#| warning: false
+#| message: false
+library("papaja")
+source(here::here("scripts", "r", "13_small_data.R"))
+```
+
+Dear Dr. Joan Mora, 
+
+
+Thank you for taking the time to consider our manuscript _`r rmarkdown::metadata$title`_ (`r rmarkdown::metadata$manuscript`) for publication in _`r rmarkdown::metadata$journal`_. 
+For the second round of revisions we have taken into consideration the suggestions from reviewer 2 and reviewer 3 and revised the manuscript accordingly. 
+We believe the revisions, while minor in scope, have helped to make the manuscript stronger. 
+In this letter we again address the reviewers' concerns point-by-point. 
+Where feasible, we quote all revised text in this document, otherwise, we refer the reader to the relevant sections of the revised manuscript. 
+We thank you and the anonymous reviewers for all comments and suggestions and again enthusiastically submit the revised manuscript for consideration in _`r rmarkdown::metadata$journal`_.
+
+
+Sincerely,  
+Joseph Casillas  
+(corresponding author)
+
+\clearpage
+
+# Reviewer \#1
+
+```{r}
+#| child: "reviewer1.Rmd"
+#| eval: TRUE
+```
+
+# Reviewer \#2
+
+```{r}
+#| child: "reviewer2.Rmd"
+#| eval: TRUE
+```
+
+\clearpage
+
+# Reviewer \#3
+
+```{r}
+#| child: "reviewer3.Rmd"
+#| eval: TRUE
+```
+
+\newpage
+
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::

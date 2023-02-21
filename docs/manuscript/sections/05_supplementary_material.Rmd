@@ -259,7 +259,43 @@ read_csv(here("tables", "learner_variety_match_response_cond_effects.csv")) %>%
 
 
 
-*Monolingual response accuracy*. In preparing our materials before official data collection, we piloted the 2AFC task and the auditory stimuli on monolingual Spanish speakers. 
+
+
+
+**Rising vs. falling contours in yes/no questions**. As pointed out by one of the anonymous reviewers, in our stimuli, the yes/no questions have rising intonation for all varieties except Cuban and Puerto Rican (see *Auditory stimuli* below). 
+We calculated response accuracy as a function of intonational contour (falling: Cuban, Puerto Rican; rising: other) for yes/no questions using L2 and native listener data. 
+Table \@ref(tab:table-learner-native-caribbean) provides descriptive statistics. 
+One can see that both listener types were least accurate when responding to the falling contours, though this is particularly true for the Cuban variety. 
+This finding is illustrated in the previous section with regard to familiarity and is seen again in the following section regarding native listener data. 
+
+```{r, 'table-learner-native-caribbean'}
+learner_native_risefall_accuracy %>% 
+  select(Group, Cuban, `Puerto Rican`, Other) %>% 
+  knitr::kable(format = "pandoc", align = c("l", "r", "r", "r"), 
+    caption = "L2 and native listener response accuracy to yes/no questions as a function of variety (Caribbean, Non-Caribbean). The stimuli from the Caribbean varieties include falling intonational contours.",
+    label = "table-learner-native-caribbean")
+```
+
+Similar to what was found in our primary analyses regarding yes/no questions, in this subset of the data, empathy had no effect on response accuracy regardless of whether the stimuli was produced with falling (i.e., Caribbean: Cuban, Puerto Rican) or rising (other) intonation (Figure \@ref(fig:plot-learner-native-caribbean-accuracy)).
+
+(ref:plot-learner-native-caribbean-accuracy) L2 and native listener response accuracy to Caribbean (Cuban, Puerto Rican) and non-Caribbean varieties for yes/no questions. Points represent by-participant means (learners) or posterior means (natives). For learners, the horizontal axis plots empathy quotient scores.
+
+```{r, 'plot-learner-native-caribbean-accuracy', fig.cap="(ref:plot-learner-native-caribbean-accuracy)", out.width="100%"}
+knitr::include_graphics(
+    here("figs", "manuscript", "learner_native_caribbean_accuracy.png")
+  )
+```
+
+
+
+
+
+
+
+
+
+
+**Monolingual response accuracy**. In preparing our materials before official data collection, we piloted the 2AFC task and the auditory stimuli on monolingual Spanish speakers. 
 The purpose of collecting this pilot data was to get an assessment of task difficulty---overall and as a function of speaker variety---and to have an idea what reasonable priors would be with regard to response times. 
 From this pilot, we learned that, overall, monolingual speakers were least accuracy when responding to the Cuban variety, and to some degree the Puerto Rican variety as well. 
 This finding led us to hypothesize that L2 learners would also have difficulties when responding to stimuli from the same varieties.
@@ -384,6 +420,26 @@ knitr::include_graphics(
 
 
 *Acoustic description*. In this subsection we provide examples of intonation contours for the four utterance types (broad focus state, narrow focus statement, wh- question, yes/no question) from the speakers of our eight varieties of Spanish (Cuban, Peninsular-Madrileño, Peninsular-Andalusian, Puerto Rican, Chilean, Argentine, Mexican, and Peruvian). 
+Before proceeding to the acoustic descriptions, we will first provide an overview of the theoretical framework underpinning the descriptions. 
+
+The Autosegmental Metrical (AM) framework, developed by researchers like @pierrehumbert1980phonology and @ladd2008intonational, aims to map the instrumentally-derived F0 values onto sequential, discrete and categorically-distinct intonational events. 
+Within the AM framework, F0 is mapped onto pitch targets. 
+Pitch targets can be monotonal, H(igh) and L(ow), or bitonal combinations of H and L, which represent rises (e.g., L+H\*) or falls (e.g., H+L\*).
+
+Pitch targets are identified at three points in an utterance: \* indicates a pitch accent, which is associated and aligned with a stressed syllable; - indicates a phrase accent, which is associated with the boundary of an intermediate phrase; and \% indicates a boundary tone or intonational phrase. 
+It is important to note that an H at any prosodic level is the same H. 
+The symbol that comes associated with it, whether *, -, or %, is merely giving information about how that tone is aligned with a specific event or boundary, not about the phonetic realization of that tone.
+
+These abstract representations are mapped individually to instances of phonetic realizations specific to each language, similar to how /t/ has different acoustic properties in English and Spanish, as well as different phonetic realizations within a language depending on the context, similar to allophones. 
+This is further complicated by dialect, as different dialects may present different relationship mappings.
+
+The Tones and Breaks Indices (ToBI) labeling system is used within the AM framework to annotate utterances for intonation. 
+ToBI has two obligatory tiers: an orthographic tier, on which the utterance is recorded in IPA; and a tone tier, on which the pitch targets are recorded. 
+A third, optional tier is the break-index tier, on which prosodic breaks and their relative strengths are recorded on a scale of 0 (no break) to 4 (Intonation Phrase break). 
+It is idealized that each variety of a language should have its own ToBI system due to different varieties having distinct, but similar, intonational inventories.
+For example, in Dominican and Puerto Rican Spanish varieties, intonational phonologists may identify a bitonal fall H+L\*, but the phonetic realization and pragmatic contexts in which that tone is produced may differ.
+For the present work we adopt the Spanish Tones and Breaks Indices (Sp\_ToBI) as described in @hualde2015intonational. 
+
 Using the recordings, we generated figures that display the waveform, spectrogram, and fundamental frequency contours. 
 The figures are accompanied with two annotation tiers: an orthographic tier and a tone tier. 
 We use this information together to identify associations between tonal targets and specific structure within example utterances following the Autosegmental Metrical model [@pierrehumbert1980phonology]. 
@@ -394,7 +450,7 @@ Here we provide a single example of each utterance type from each speaker (Figur
 The statement utterances from our speaker of Madrid Spanish included a nuclear configuration of L\* L\%. 
 The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-castilian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
 Wh- and yes/no question had a similar prenuclear distinction, respectively. 
-Our speaker also tended to use a final rise (L\* HH\%) in wh- questions, which differs from the more common final fall. 
+Our speaker also tended to use a final rise (L\* ¡H\%) in wh- questions, which differs from the more common final fall. 
 This is often associated with politeness [@quilis1993; @sosa2003], or possibly "[...] a nuance of interest and greater speaker involvement in the speech act" [@estebas_prieto2010, p. 35]. 
 We believe we may have obtained more formal utterances, or possibly 'lab' speech due to the context in which the stimuli were recorded, i.e., in a lab.^[For more information on lab speech, see @face2003intonation and @xu2010defense.]
 For more examples, see <http://prosodia.upf.edu/atlasentonacion/enquestes/espanol/madrid/index-english.html#maptask> ("¿Dónde está tu gasolina?", minute: -3:18). 
@@ -413,7 +469,7 @@ Similar to speaker of Madrileño Spanish, we do not see a major distinction betw
 We found a tendency for this speaker to a use statement-of-the-obvious pattern where we elicited narrow focus. 
 We show the nuclear configuration for wh- questions as L+¡H\* L\%, but this speaker also used L+H\* L\%. 
 A final rise for wh- questions is also documented in this variety [@henriksen2010development] and is associated with formality. 
-For yes-no questions, the boundary tone was typlically HH\%. 
+For yes-no questions, the boundary tone was typlically ¡H\%. 
 More information on Western Andalusian intonation is available @sosa1999 and @henriksen2012transcription. 
 
 (ref:plot-spectrogram-andalusian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Andalusian (San Fernando, Cádiz) Spanish.
@@ -469,7 +525,7 @@ knitr::include_graphics(
 
 The Mexican speaker distinguished between broad and narrow focus using a L\* L\% pattern in the former and L+H\* H\% in the latter. 
 For wh- questions in this variety, final falls are considered the unmarked configuration [@sosa2003], though we observed some rises, as in Figure \@ref(fig:plot-spectrogram-mexican) (bottom left plot). 
-For yes/no questions this speaker produced a L\* HH\% nuclear configuration. 
+For yes/no questions this speaker produced a L\* ¡H\% nuclear configuration. 
 Mexican Spanish is well-documented. 
 We refer the reader to @quilis1981, @quilis1987, @quilis1993, @sosa1999, @butragueno2003hacia, and @butragueno2004configuraciones for more information.
 
@@ -484,7 +540,7 @@ knitr::include_graphics(
 
 The statement utterances from our speaker of Peruvian Spanish included a nuclear configuration of L\* L\%. 
 The examples provided in the top row of Figure \@ref(fig:plot-spectrogram-peruvian) are primarily differentiated by a prenuclear L+>H\* in the broad focus condition and L+H\* in the narrow focus condition. 
-With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* HH\% for yes-no questions. 
+With regard to questions, this speaker often used a L+H\* L\% nuclear configuration for wh- questions, and L\* ¡H\% for yes-no questions. 
 More information on Peruvian intonation is available in @sosa1999 and @orourke2005intonation. 
 
 (ref:plot-spectrogram-peruvian) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 30 year old male speaker of Peruvian (Lima) Spanish.
@@ -497,8 +553,8 @@ knitr::include_graphics(
 
 In Figure \@ref(fig:plot-spectrogram-puertorican) we see example utterances from the Puerto Rican speaker. 
 We typically only found a distinction in broad and narrow focus items in the prenuclear pitch accents (L+H\* and H\*, respectively). 
-On occasion this speaker produced final rises for wh- questions (L\* HH\%), but also often used a falling contour. 
-For yes/no questions, this speaker produced H+L\* L\% configurations. 
+On occasion this speaker produced final rises for wh- questions (L\* ¡H\%), but also often used a falling contour. 
+For yes/no questions, this speaker produced ¡H\* L\% configurations. 
 More information on Puerto Rican intonation is available to the reader in @quilis1981, @quilis1987, @quilis1993, @sosa1999, @sosa2003, @armstrong2010puerto, and @armstrong2012development, among many others.
 
 (ref:plot-spectrogram-puertorican) Waveform, spectrogram, and F0 trace exemplifying a broad focus (top left), narrow focus (top right), wh- question (bottom left), and yes/no question (bottom right) from a 35 year old female speaker of Puerto Rican (Ponce) Spanish.
