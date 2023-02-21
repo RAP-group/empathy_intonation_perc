@@ -8,6 +8,10 @@ This directory contains the experiments.
 Two, `empathy_intonation_perc` and `empathy_intonation_perc_sp`, are git sub-modules hosted on gitlab. 
 The directory `text_stim_for_audio` is the script used to present the experimental items to the native speakers during recording. 
 
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/10
+-->
+
 ```{r, 'exp-structure', comment=NA, echo=F}
 fs::dir_tree(recurse = 1)
 ```

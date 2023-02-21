@@ -50,19 +50,19 @@ This is the data directory containing raw and tidy data.
 The `speech_rate` files (raw and tidy) contain acoustic measurements of
 the experimental items. The remaining tidy csv’s are the following:
 
--   **complete_2afc_tidy.csv**: combined learners and natives 2afc data
--   **ddm_estimates.csv**: Parameter estimates from the drift diffusion
-    models
--   **ddm_sims.csv**: Simulations (n = 1000) pero condition for
-    understanding drift rate and boundary separation estimates
--   **learners_2afc_tidy.csv**: learners 2afc data
--   **learners_all_tasks_tidy.csv**: learners data from all tasks
--   **learners_eq_tidy.csv**: learners empathy quotient data
--   **learners_lextale_tidy.csv**: learners LexTALE data
--   **natives_2afc_tidy.csv**: natives 2afc data
--   **participants_removed.list.Rds**: List of participants whose data
-    was excluded
--   **participants_returned_vector.Rds**: Vector of participant IDs that
-    were returned because they timed out
--   **speech_rate_tidy.csv**: Native speaker stimuli speech rate info
--   **stimuli_acoustics_tidy.csv**: Pitch data from acoustic stimuli
+- **complete_2afc_tidy.csv**: combined learners and natives 2afc data
+- **ddm_estimates.csv**: Parameter estimates from the drift diffusion
+  models
+- **ddm_sims.csv**: Simulations (n = 1000) pero condition for
+  understanding drift rate and boundary separation estimates
+- **learners_2afc_tidy.csv**: learners 2afc data
+- **learners_all_tasks_tidy.csv**: learners data from all tasks
+- **learners_eq_tidy.csv**: learners empathy quotient data
+- **learners_lextale_tidy.csv**: learners LexTALE data
+- **natives_2afc_tidy.csv**: natives 2afc data
+- **participants_removed.list.Rds**: List of participants whose data was
+  excluded
+- **participants_returned_vector.Rds**: Vector of participant IDs that
+  were returned because they timed out
+- **speech_rate_tidy.csv**: Native speaker stimuli speech rate info
+- **stimuli_acoustics_tidy.csv**: Pitch data from acoustic stimuli

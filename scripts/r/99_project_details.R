@@ -35,6 +35,8 @@ time_line_df <- tribble(
   "Manuscript phase",   "V1",                    "2021-10-23",   "2022-02-03", 
   "Manuscript phase",   "Review 1",              "2022-02-03",   "2022-07-13", 
   "Manuscript phase",   "V2",                    "2022-07-13",   "2022-11-11", 
+  "Manuscript phase",   "Review 2",              "2022-11-11",   "2023-02-08", 
+  "Manuscript phase",   "V3",                    "2023-03-08",   "2023-02-20",
 )
 
 # "Spots" can be used to mark when things actually occur on expected timeline
@@ -48,6 +50,8 @@ time_line_spots <- tribble(
    "V1",                 "submit",        "2022-02-03", 
    "V2",                 "start",         "2022-10-01", 
    "V2",                 "submit",        "2022-11-11", 
+   "V3",                 "start",         "2023-02-08", 
+   "V3",                 "submit",        "2023-02-20", 
 )
 
 # Generate plot 

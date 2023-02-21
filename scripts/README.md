@@ -30,6 +30,7 @@ Directory containing Praat and R scripts.
         ├── 12_plots.R
         ├── 13_small_data.R
         ├── 14_stimuli_acoustics.R
+        ├── 15_post_hoc_eda.R
         ├── 99_build_2afc_stimuli.R
         ├── 99_build_2afc_trials.R
         ├── 99_build_empathy_quotient_trials.R

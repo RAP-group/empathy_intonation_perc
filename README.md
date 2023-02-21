@@ -10,11 +10,13 @@ in questions and statements in L2 Spanish.
 
 ## Project timeline
 
--   Project start: 2020-09-16
--   Initial submission: 2022-02-03
--   Decision: 2022-07-13, revise and resubmit, major revisions
--   Begin r1 revisions: 2022-10-01
--   Submit V2: 2022-11-11
+- Project start: 2020-09-16
+- Initial submission: 2022-02-03
+- Decision: 2022-07-13, revise and resubmit, major revisions
+- Begin r1 revisions: 2022-10-01
+- Submit V2: 2022-11-11
+- Begin r2 revisions: 2023-02-08
+- Submit V3: 2023-02-20
 
 ![](./figs/project_timeline.png)
 
@@ -69,7 +71,8 @@ in questions and statements in L2 Spanish.
     │   ├── learner_variety_match_response.rds
     │   ├── mem_boundary_separation.rds
     │   ├── mem_drift_rate.rds
-    │   └── native_stim_sr.rds
+    │   ├── native_stim_sr.rds
+    │   └── post_hoc_eda_natives_tune.rds
     ├── scripts
     │   ├── praat
     │   └── r
@@ -77,6 +80,7 @@ in questions and statements in L2 Spanish.
         ├── ddm_bs_dr.csv
         ├── dp_utterance_variety.csv
         ├── learner_native_accuracy.csv
+        ├── learner_native_risefall_accuracy.csv
         ├── learner_response_01.csv
         ├── learner_variety_match_response_cond_effects.csv
         ├── learner_variety_match_response_model_summary.csv

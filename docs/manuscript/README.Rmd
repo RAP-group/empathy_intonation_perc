@@ -3,3 +3,7 @@ output: github_document
 ---
 
 # manuscript
+
+```{r, 'manuscript-structure', comment=NA, echo=F}
+fs::dir_tree(recurse = 2)
+```

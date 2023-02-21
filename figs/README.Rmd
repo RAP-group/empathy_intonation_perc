@@ -5,5 +5,5 @@ output: github_document
 # figs
 
 ```{r, 'figs-structure', comment=NA, echo=F}
-fs::dir_tree(recurse = 0)
+fs::dir_tree(recurse = 1)
 ```

@@ -6,6 +6,10 @@ and `empathy_intonation_perc_sp`, are git sub-modules hosted on gitlab.
 The directory `text_stim_for_audio` is the script used to present the
 experimental items to the native speakers during recording.
 
+<!--
+https://github.com/RAP-group/empathy_intonation_perc/issues/10
+-->
+
     .
     ├── README.Rmd
     ├── README.md
@@ -15,6 +19,7 @@ experimental items to the native speakers during recording.
     │   ├── empathy_intonation_perc.py
     │   ├── empathy_intonation_perc_lastrun.py
     │   ├── instructions
+    │   ├── readme.md
     │   ├── stim
     │   └── trials
     ├── empathy_intonation_perc_sp
