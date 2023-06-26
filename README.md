@@ -17,6 +17,7 @@ in questions and statements in L2 Spanish.
 - Submit V2: 2022-11-11
 - Begin r2 revisions: 2023-02-08
 - Submit V3: 2023-02-20
+- Accepted: 2023-06-23
 
 ![](./figs/project_timeline.png)
 
