@@ -18,6 +18,8 @@ in questions and statements in L2 Spanish.
 - Begin r2 revisions: 2023-02-08
 - Submit V3: 2023-02-20
 - Accepted: 2023-06-23
+- Published online: 2023-08-17
+  ([link](https://www.cambridge.org/core/journals/applied-psycholinguistics/article/using-intonation-to-disambiguate-meaning-the-role-of-empathy-and-proficiency-in-l2-perceptual-development/400E01442ACC5B361ED53B076D38114B))
 
 ![](./figs/project_timeline.png)
 

@@ -1,7 +1,7 @@
 # Project details -------------------------------------------------------------
 #
 # Author: Joseph V. Casillas
-# Last update: 20221111
+# Last update: 20230823
 #
 # - This scripts provides a Gantt chart of the project timeline
 #   and a CREDiT contributors plot
@@ -36,7 +36,8 @@ time_line_df <- tribble(
   "Manuscript phase",   "Review 1",              "2022-02-03",   "2022-07-13", 
   "Manuscript phase",   "V2",                    "2022-07-13",   "2022-11-11", 
   "Manuscript phase",   "Review 2",              "2022-11-11",   "2023-02-08", 
-  "Manuscript phase",   "V3",                    "2023-03-08",   "2023-02-20",
+  "Manuscript phase",   "V3",                    "2023-03-08",   "2023-02-20", 
+  "Manuscript phase",   "Typesetting",           "2023-02-20",   "2023-08-17"
 )
 
 # "Spots" can be used to mark when things actually occur on expected timeline
@@ -52,6 +53,7 @@ time_line_spots <- tribble(
    "V2",                 "submit",        "2022-11-11", 
    "V3",                 "start",         "2023-02-08", 
    "V3",                 "submit",        "2023-02-20", 
+   "Typesetting",        "published",     "2023-08-23"
 )
 
 # Generate plot 
@@ -104,7 +106,7 @@ path_contributors <- file.path(here("figs"), "project_contributors.")
 
 walk(devices, ~ ggsave(filename = glue(path_gantt, .x), 
                        plot = p_project_timeline, device = .x, 
-                       height = 5, width = 9, units = "in"))
+                       height = 5, width = 13, units = "in"))
 
 walk(devices, ~ ggsave(filename = glue(path_contributors, .x), 
                        plot = p_project_contributors, device = .x, 
