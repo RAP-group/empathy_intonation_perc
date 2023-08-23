@@ -4,6 +4,13 @@
     .
     ├── README.Rmd
     ├── README.md
+    ├── final
+    │   ├── 2023_casillas_et_al_ap.pdf
+    │   ├── Publishing_agreement_for_article_in__Applied_Psycholinguistics_.pdf
+    │   └── proofs
+    │       ├── APS-2300031.pdf
+    │       ├── APS-2300031_07262023062821.pdf
+    │       └── APS-2300031_AUTHOR-galley.pdf
     ├── main.Rmd
     ├── main.docx
     ├── pre_print
@@ -78,18 +85,23 @@
         │   ├── supplementary_materials4.docx
         │   ├── supplementary_materials5.docx
         │   └── title_page.docx
-        └── v3_20230219
-            ├── cover_letter.txt
-            ├── ddm_explanation.pdf
-            ├── ddm_simulations.pdf
-            ├── learner_accuracy_3way.pdf
-            ├── learner_accuracy_forest_utterance_type.pdf
-            ├── learner_accuracy_lt_eq_by_utterance_type.pdf
-            ├── learner_accuracy_rt_by_speaker_variety.pdf
-            ├── learner_variety_familiarity.pdf
-            ├── main.docx
-            ├── mem_bs_dr_estimates.pdf
-            ├── response_letter.pdf
+        ├── v3_20230219
+        │   ├── cover_letter.txt
+        │   ├── ddm_explanation.pdf
+        │   ├── ddm_simulations.pdf
+        │   ├── learner_accuracy_3way.pdf
+        │   ├── learner_accuracy_forest_utterance_type.pdf
+        │   ├── learner_accuracy_lt_eq_by_utterance_type.pdf
+        │   ├── learner_accuracy_rt_by_speaker_variety.pdf
+        │   ├── learner_variety_familiarity.pdf
+        │   ├── main.docx
+        │   ├── mem_bs_dr_estimates.pdf
+        │   ├── response_letter.pdf
+        │   ├── supplementary_materials.pdf
+        │   └── title_page.docx
+        ├── v4_20230626
+        │   ├── Final Manuscript (unblinded).docx
+        │   └── supplementary_materials.pdf
+        └── v5_20230726
             ├── supplementary_materials.pdf
-            ├── title_page.docx
-            └── ~$pplementary_materials.docx
+            └── supplementary_materials_refs.docx

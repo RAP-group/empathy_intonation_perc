@@ -62,6 +62,7 @@
     ├── manuscript
     │   ├── README.Rmd
     │   ├── README.md
+    │   ├── final
     │   ├── main.Rmd
     │   ├── main.docx
     │   ├── pre_print
